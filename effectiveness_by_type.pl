@@ -1,5878 +1,5838 @@
-/*
-normalmente_efetivo - O pokemon atacante não possui vantagem ou desvantagem em relação ao pokemon atacado. Isso implica que o dano realizado será potencialmente igual ao dano recebido.
-vantagem - O pokemon atacante possui vantagem em relação ao(s) tipo(s) do pokemon atavado. Isso implica que o dano será dobrado(x2).
-desvantagem - O pokemon atacante possui desvantagem em relação ao(s) tipo(s) do pokemon atacado. Isso implica que o dano é reduzido pela metade(x1/2).
-super_vantagem - O pokemon atacante é super efetivo em relação ao(s) tipo(s) do pokemon atacado. Isso implica que o dano será quadruplicado(x4).
-super_desvantagem - O pokemon atacante possui muita desvantagem ao(s) tipo(s) do pokemon atacado. Isso implica que o dano será reduzido à um quarto deste(x1/4).
-dano_zero - O pokemon atacante não aplicado dano em relação ao(s) tipo(s) do pokemon atacado. Isso implica que o dano é zerado(x0).
-*/
+mega_effectiveness(fire,grass-ice).
+mega_effectiveness(fire,grass-bug).
+mega_effectiveness(fire,grass-steel).
+mega_effectiveness(fire,ice-grass).
+mega_effectiveness(fire,ice-bug).
+mega_effectiveness(fire,ice-steel).
+mega_effectiveness(fire,bug-grass).
+mega_effectiveness(fire,bug-ice).
+mega_effectiveness(fire,bug-steel).
+mega_effectiveness(fire,steel-grass).
+mega_effectiveness(fire,steel-ice).
+mega_effectiveness(fire,steel-bug).
+mega_effectiveness(water,fire-ground).
+mega_effectiveness(water,fire-rock).
+mega_effectiveness(water,ground-fire).
+mega_effectiveness(water,ground-rock).
+mega_effectiveness(water,rock-fire).
+mega_effectiveness(water,rock-ground).
+mega_effectiveness(electric,water-flying).
+mega_effectiveness(electric,flying-water).
+mega_effectiveness(grass,water-ground).
+mega_effectiveness(grass,water-rock).
+mega_effectiveness(grass,ground-water).
+mega_effectiveness(grass,ground-rock).
+mega_effectiveness(grass,rock-water).
+mega_effectiveness(grass,rock-ground).
+mega_effectiveness(ice,grass-ground).
+mega_effectiveness(ice,grass-flying).
+mega_effectiveness(ice,grass-dragon).
+mega_effectiveness(ice,ground-grass).
+mega_effectiveness(ice,ground-flying).
+mega_effectiveness(ice,ground-dragon).
+mega_effectiveness(ice,flying-grass).
+mega_effectiveness(ice,flying-ground).
+mega_effectiveness(ice,flying-dragon).
+mega_effectiveness(ice,dragon-grass).
+mega_effectiveness(ice,dragon-ground).
+mega_effectiveness(ice,dragon-flying).
+mega_effectiveness(fighting,normal-ice).
+mega_effectiveness(fighting,normal-rock).
+mega_effectiveness(fighting,normal-dark).
+mega_effectiveness(fighting,normal-steel).
+mega_effectiveness(fighting,ice-normal).
+mega_effectiveness(fighting,ice-rock).
+mega_effectiveness(fighting,ice-dark).
+mega_effectiveness(fighting,ice-steel).
+mega_effectiveness(fighting,rock-normal).
+mega_effectiveness(fighting,rock-ice).
+mega_effectiveness(fighting,rock-dark).
+mega_effectiveness(fighting,rock-steel).
+mega_effectiveness(fighting,dark-normal).
+mega_effectiveness(fighting,dark-ice).
+mega_effectiveness(fighting,dark-rock).
+mega_effectiveness(fighting,dark-steel).
+mega_effectiveness(fighting,steel-normal).
+mega_effectiveness(fighting,steel-ice).
+mega_effectiveness(fighting,steel-rock).
+mega_effectiveness(fighting,steel-dark).
+mega_effectiveness(poison,grass-fairy).
+mega_effectiveness(poison,fairy-grass).
+mega_effectiveness(ground,fire-electric).
+mega_effectiveness(ground,fire-poison).
+mega_effectiveness(ground,fire-rock).
+mega_effectiveness(ground,fire-steel).
+mega_effectiveness(ground,electric-fire).
+mega_effectiveness(ground,electric-poison).
+mega_effectiveness(ground,electric-rock).
+mega_effectiveness(ground,electric-steel).
+mega_effectiveness(ground,poison-fire).
+mega_effectiveness(ground,poison-electric).
+mega_effectiveness(ground,poison-rock).
+mega_effectiveness(ground,poison-steel).
+mega_effectiveness(ground,rock-fire).
+mega_effectiveness(ground,rock-electric).
+mega_effectiveness(ground,rock-poison).
+mega_effectiveness(ground,rock-steel).
+mega_effectiveness(ground,steel-fire).
+mega_effectiveness(ground,steel-electric).
+mega_effectiveness(ground,steel-poison).
+mega_effectiveness(ground,steel-rock).
+mega_effectiveness(flying,grass-fighting).
+mega_effectiveness(flying,grass-bug).
+mega_effectiveness(flying,fighting-grass).
+mega_effectiveness(flying,fighting-bug).
+mega_effectiveness(flying,bug-grass).
+mega_effectiveness(flying,bug-fighting).
+mega_effectiveness(bug,grass-psychic).
+mega_effectiveness(bug,grass-dark).
+mega_effectiveness(bug,psychic-grass).
+mega_effectiveness(bug,psychic-dark).
+mega_effectiveness(bug,dark-grass).
+mega_effectiveness(bug,dark-psychic).
+mega_effectiveness(rock,fire-ice).
+mega_effectiveness(rock,fire-flying).
+mega_effectiveness(rock,fire-bug).
+mega_effectiveness(rock,ice-fire).
+mega_effectiveness(rock,ice-flying).
+mega_effectiveness(rock,ice-bug).
+mega_effectiveness(rock,flying-fire).
+mega_effectiveness(rock,flying-ice).
+mega_effectiveness(rock,flying-bug).
+mega_effectiveness(rock,bug-fire).
+mega_effectiveness(rock,bug-ice).
+mega_effectiveness(rock,bug-flying).
+mega_effectiveness(ghost,psychic-ghost).
+mega_effectiveness(ghost,ghost-psychic).
+mega_effectiveness(dark,psychic-ghost).
+mega_effectiveness(dark,ghost-psychic).
+mega_effectiveness(steel,ice-rock).
+mega_effectiveness(steel,ice-fairy).
+mega_effectiveness(steel,rock-ice).
+mega_effectiveness(steel,rock-fairy).
+mega_effectiveness(steel,fairy-ice).
+mega_effectiveness(steel,fairy-rock).
+mega_effectiveness(fairy,fighting-dragon).
+mega_effectiveness(fairy,fighting-dark).
+mega_effectiveness(fairy,dragon-fighting).
+mega_effectiveness(fairy,dragon-dark).
+mega_effectiveness(fairy,dark-fighting).
+mega_effectiveness(fairy,dark-dragon).
 
-/* Efetividade tipo normal */
-normalmente_efetivo(normal,normal)
-normalmente_efetivo(normal,fogo)
-normalmente_efetivo(normal,agua)
-normalmente_efetivo(normal,eletrico)
-normalmente_efetivo(normal,planta)
-normalmente_efetivo(normal,gelo)
-normalmente_efetivo(normal,lutador)
-normalmente_efetivo(normal,veneno)
-normalmente_efetivo(normal,terra)
-normalmente_efetivo(normal,voador)
-normalmente_efetivo(normal,psiquico)
-normalmente_efetivo(normal,inseto)
-desvantagem(normal,pedra)
-dano_zero(normal,fantasma)
-normalmente_efetivo(normal,dragao)
-normalmente_efetivo(normal,noturno)
-desvantagem(normal,metalico)
-normalmente_efetivo(normal,fada)
-normalmente_efetivo(normal,normal-fogo)
-normalmente_efetivo(normal, normal-agua)
-normalmente_efetivo(normal, normal-eletrico)
-normalmente_efetivo(normal, normal-planta)
-normalmente_efetivo(normal, normal-gelo)
-normalmente_efetivo(normal, normal-lutador)
-normalmente_efetivo(normal, normal-veneno)
-normalmente_efetivo(normal, normal-terra)
-normalmente_efetivo(normal, normal-voador)
-normalmente_efetivo(normal, normal-psiquico)
-normalmente_efetivo(normal, normal-inseto)
-desvantagem(normal, normal-pedra)
-dano_zero(normal, normal-fantasma)
-normalmente_efetivo(normal, normal-dragao)
-normalmente_efetivo(normal, normal-noturno)
-desvantagem(normal, normal-metalico)
-normalmente_efetivo(normal, normal-fada)
-normalmente_efetivo(normal, fogo-normal)
-normalmente_efetivo(normal, fogo-agua)
-normalmente_efetivo(normal, fogo-eletrico)
-normalmente_efetivo(normal, fogo-planta)
-normalmente_efetivo(normal, fogo-gelo)
-normalmente_efetivo(normal, fogo-lutador)
-normalmente_efetivo(normal, fogo-veneno)
-normalmente_efetivo(normal, fogo-terra)
-normalmente_efetivo(normal, fogo-voador)
-normalmente_efetivo(normal, fogo-psiquico)
-normalmente_efetivo(normal, fogo-inseto)
-desvantagem(normal, fogo-pedra)
-dano_zero(normal, fogo-fantasma)
-normalmente_efetivo(normal, fogo-dragao)
-normalmente_efetivo(normal, fogo-noturno)
-desvantagem(normal, fogo-metalico)
-normalmente_efetivo(normal, fogo-fada)
-normalmente_efetivo(normal, agua-normal)
-normalmente_efetivo(normal, agua-fogo)
-normalmente_efetivo(normal, agua-eletrico)
-normalmente_efetivo(normal, agua-planta)
-normalmente_efetivo(normal, agua-gelo)
-normalmente_efetivo(normal, agua-lutador)
-normalmente_efetivo(normal, agua-veneno)
-normalmente_efetivo(normal, agua-terra)
-normalmente_efetivo(normal, agua-voador)
-normalmente_efetivo(normal, agua-psiquico)
-normalmente_efetivo(normal, agua-inseto)
-desvantagem(normal, agua-pedra)
-dano_zero(normal, agua-fantasma)
-normalmente_efetivo(normal, agua-dragao)
-normalmente_efetivo(normal, agua-noturno)
-desvantagem(normal, agua-metalico)
-normalmente_efetivo(normal, agua-fada)
-normalmente_efetivo(normal, eletrico-normal)
-normalmente_efetivo(normal, eletrico-fogo)
-normalmente_efetivo(normal, eletrico-agua)
-normalmente_efetivo(normal, eletrico-planta)
-normalmente_efetivo(normal, eletrico-gelo)
-normalmente_efetivo(normal, eletrico-lutador)
-normalmente_efetivo(normal, eletrico-veneno)
-normalmente_efetivo(normal, eletrico-terra)
-normalmente_efetivo(normal, eletrico-voador)
-normalmente_efetivo(normal, eletrico-psiquico)
-normalmente_efetivo(normal, eletrico-inseto)
-desvantagem(normal, eletrico-pedra)
-dano_zero(normal, eletrico-fantasma)
-normalmente_efetivo(normal, eletrico-dragao)
-normalmente_efetivo(normal, eletrico-noturno)
-desvantagem(normal, eletrico-metalico)
-normalmente_efetivo(normal, eletrico-fada)
-normalmente_efetivo(normal, planta-normal)
-normalmente_efetivo(normal, planta-fogo)
-normalmente_efetivo(normal, planta-agua)
-normalmente_efetivo(normal, planta-eletrico)
-normalmente_efetivo(normal, planta-gelo)
-normalmente_efetivo(normal, planta-lutador)
-normalmente_efetivo(normal, planta-veneno)
-normalmente_efetivo(normal, planta-terra)
-normalmente_efetivo(normal, planta-voador)
-normalmente_efetivo(normal, planta-psiquico)
-normalmente_efetivo(normal, planta-inseto)
-desvantagem(normal, planta-pedra)
-dano_zero(normal, planta-fantasma)
-normalmente_efetivo(normal, planta-dragao)
-normalmente_efetivo(normal, planta-noturno)
-desvantagem(normal, planta-metalico)
-normalmente_efetivo(normal, planta-fada)
-normalmente_efetivo(normal, gelo-normal)
-normalmente_efetivo(normal, gelo-fogo)
-normalmente_efetivo(normal, gelo-agua)
-normalmente_efetivo(normal, gelo-eletrico)
-normalmente_efetivo(normal, gelo-planta)
-normalmente_efetivo(normal, gelo-lutador)
-normalmente_efetivo(normal, gelo-veneno)
-normalmente_efetivo(normal, gelo-terra)
-normalmente_efetivo(normal, gelo-voador)
-normalmente_efetivo(normal, gelo-psiquico)
-normalmente_efetivo(normal, gelo-inseto)
-desvantagem(normal, gelo-pedra)
-dano_zero(normal, gelo-fantasma)
-normalmente_efetivo(normal, gelo-dragao)
-normalmente_efetivo(normal, gelo-noturno)
-desvantagem(normal, gelo-metalico)
-normalmente_efetivo(normal, gelo-fada)
-normalmente_efetivo(normal, lutador-normal)
-normalmente_efetivo(normal, lutador-fogo)
-normalmente_efetivo(normal, lutador-agua)
-normalmente_efetivo(normal, lutador-eletrico)
-normalmente_efetivo(normal, lutador-planta)
-normalmente_efetivo(normal, lutador-gelo)
-normalmente_efetivo(normal, lutador-veneno)
-normalmente_efetivo(normal, lutador-terra)
-normalmente_efetivo(normal, lutador-voador)
-normalmente_efetivo(normal, lutador-psiquico)
-normalmente_efetivo(normal, lutador-inseto)
-desvantagem(normal, lutador-pedra)
-dano_zero(normal, lutador-fantasma)
-normalmente_efetivo(normal, lutador-dragao)
-normalmente_efetivo(normal, lutador-noturno)
-desvantagem(normal, lutador-metalico)
-normalmente_efetivo(normal, lutador-fada)
-normalmente_efetivo(normal, veneno-normal)
-normalmente_efetivo(normal, veneno-fogo)
-normalmente_efetivo(normal, veneno-agua)
-normalmente_efetivo(normal, veneno-eletrico)
-normalmente_efetivo(normal, veneno-planta)
-normalmente_efetivo(normal, veneno-gelo)
-normalmente_efetivo(normal, veneno-lutador)
-normalmente_efetivo(normal, veneno-terra)
-normalmente_efetivo(normal, veneno-voador)
-normalmente_efetivo(normal, veneno-psiquico)
-normalmente_efetivo(normal, veneno-inseto)
-desvantagem(normal, veneno-pedra)
-dano_zero(normal, veneno-fantasma)
-normalmente_efetivo(normal, veneno-dragao)
-normalmente_efetivo(normal, veneno-noturno)
-desvantagem(normal, veneno-metalico)
-normalmente_efetivo(normal, veneno-fada)
-normalmente_efetivo(normal, terra-normal)
-normalmente_efetivo(normal, terra-fogo)
-normalmente_efetivo(normal, terra-agua)
-normalmente_efetivo(normal, terra-eletrico)
-normalmente_efetivo(normal, terra-planta)
-normalmente_efetivo(normal, terra-gelo)
-normalmente_efetivo(normal, terra-lutador)
-normalmente_efetivo(normal, terra-veneno)
-normalmente_efetivo(normal, terra-voador)
-normalmente_efetivo(normal, terra-psiquico)
-normalmente_efetivo(normal, terra-inseto)
-desvantagem(normal, terra-pedra)
-dano_zero(normal, terra-fantasma)
-normalmente_efetivo(normal, terra-dragao)
-normalmente_efetivo(normal, terra-noturno)
-desvantagem(normal, terra-metalico)
-normalmente_efetivo(normal, terra-fada)
-normalmente_efetivo(normal, voador-normal)
-normalmente_efetivo(normal, voador-fogo)
-normalmente_efetivo(normal, voador-agua)
-normalmente_efetivo(normal, voador-eletrico)
-normalmente_efetivo(normal, voador-planta)
-normalmente_efetivo(normal, voador-gelo)
-normalmente_efetivo(normal, voador-lutador)
-normalmente_efetivo(normal, voador-veneno)
-normalmente_efetivo(normal, voador-terra)
-normalmente_efetivo(normal, voador-psiquico)
-normalmente_efetivo(normal, voador-inseto)
-desvantagem(normal, voador-pedra)
-dano_zero(normal, voador-fantasma)
-normalmente_efetivo(normal, voador-dragao)
-normalmente_efetivo(normal, voador-noturno)
-desvantagem(normal, voador-metalico)
-normalmente_efetivo(normal, voador-fada)
-normalmente_efetivo(normal, psiquico-normal)
-normalmente_efetivo(normal, psiquico-fogo)
-normalmente_efetivo(normal, psiquico-agua)
-normalmente_efetivo(normal, psiquico-eletrico)
-normalmente_efetivo(normal, psiquico-planta)
-normalmente_efetivo(normal, psiquico-gelo)
-normalmente_efetivo(normal, psiquico-lutador)
-normalmente_efetivo(normal, psiquico-veneno)
-normalmente_efetivo(normal, psiquico-terra)
-normalmente_efetivo(normal, psiquico-voador)
-normalmente_efetivo(normal, psiquico-inseto)
-desvantagem(normal, psiquico-pedra)
-dano_zero(normal, psiquico-fantasma)
-normalmente_efetivo(normal, psiquico-dragao)
-normalmente_efetivo(normal, psiquico-noturno)
-desvantagem(normal, psiquico-metalico)
-normalmente_efetivo(normal, psiquico-fada)
-normalmente_efetivo(normal, inseto-normal)
-normalmente_efetivo(normal, inseto-fogo)
-normalmente_efetivo(normal, inseto-agua)
-normalmente_efetivo(normal, inseto-eletrico)
-normalmente_efetivo(normal, inseto-planta)
-normalmente_efetivo(normal, inseto-gelo)
-normalmente_efetivo(normal, inseto-lutador)
-normalmente_efetivo(normal, inseto-veneno)
-normalmente_efetivo(normal, inseto-terra)
-normalmente_efetivo(normal, inseto-voador)
-normalmente_efetivo(normal, inseto-psiquico)
-desvantagem(normal, inseto-pedra)
-dano_zero(normal, inseto-fantasma)
-normalmente_efetivo(normal, inseto-dragao)
-normalmente_efetivo(normal, inseto-noturno)
-desvantagem(normal, inseto-metalico)
-normalmente_efetivo(normal, inseto-fada)
-desvantagem(normal, pedra-normal)
-desvantagem(normal, pedra-fogo)
-desvantagem(normal, pedra-agua)
-desvantagem(normal, pedra-eletrico)
-desvantagem(normal, pedra-planta)
-desvantagem(normal, pedra-gelo)
-desvantagem(normal, pedra-lutador)
-desvantagem(normal, pedra-veneno)
-desvantagem(normal, pedra-terra)
-desvantagem(normal, pedra-voador)
-desvantagem(normal, pedra-psiquico)
-desvantagem(normal, pedra-inseto)
-dano_zero(normal, pedra-fantasma)
-desvantagem(normal, pedra-dragao)
-desvantagem(normal, pedra-noturno)
-super_desvantagem(normal, pedra-metalico)
-desvantagem(normal, pedra-fada)
-dano_zero(normal, fantasma-normal)
-dano_zero(normal, fantasma-fogo)
-dano_zero(normal, fantasma-agua)
-dano_zero(normal, fantasma-eletrico)
-dano_zero(normal, fantasma-planta)
-dano_zero(normal, fantasma-gelo)
-dano_zero(normal, fantasma-lutador)
-dano_zero(normal, fantasma-veneno)
-dano_zero(normal, fantasma-terra)
-dano_zero(normal, fantasma-voador)
-dano_zero(normal, fantasma-psiquico)
-dano_zero(normal, fantasma-inseto)
-dano_zero(normal, fantasma-pedra)
-dano_zero(normal, fantasma-dragao)
-dano_zero(normal, fantasma-noturno)
-dano_zero(normal, fantasma-metalico)
-dano_zero(normal, fantasma-fada)
-normalmente_efetivo(normal, dragao-normal)
-normalmente_efetivo(normal, dragao-fogo)
-normalmente_efetivo(normal, dragao-agua)
-normalmente_efetivo(normal, dragao-eletrico)
-normalmente_efetivo(normal, dragao-planta)
-normalmente_efetivo(normal, dragao-gelo)
-normalmente_efetivo(normal, dragao-lutador)
-normalmente_efetivo(normal, dragao-veneno)
-normalmente_efetivo(normal, dragao-terra)
-normalmente_efetivo(normal, dragao-voador)
-normalmente_efetivo(normal, dragao-psiquico)
-normalmente_efetivo(normal, dragao-inseto)
-desvantagem(normal, dragao-pedra)
-dano_zero(normal, dragao-fantasma)
-normalmente_efetivo(normal, dragao-noturno)
-desvantagem(normal, dragao-metalico)
-normalmente_efetivo(normal, dragao-fada)
-normalmente_efetivo(normal, noturno-normal)
-normalmente_efetivo(normal, noturno-fogo)
-normalmente_efetivo(normal, noturno-agua)
-normalmente_efetivo(normal, noturno-eletrico)
-normalmente_efetivo(normal, noturno-planta)
-normalmente_efetivo(normal, noturno-gelo)
-normalmente_efetivo(normal, noturno-lutador)
-normalmente_efetivo(normal, noturno-veneno)
-normalmente_efetivo(normal, noturno-terra)
-normalmente_efetivo(normal, noturno-voador)
-normalmente_efetivo(normal, noturno-psiquico)
-normalmente_efetivo(normal, noturno-inseto)
-desvantagem(normal, noturno-pedra)
-dano_zero(normal, noturno-fantasma)
-normalmente_efetivo(normal, noturno-dragao)
-desvantagem(normal, noturno-metalico)
-normalmente_efetivo(normal, noturno-fada)
-desvantagem(normal, metalico-normal)
-desvantagem(normal, metalico-fogo)
-desvantagem(normal, metalico-agua)
-desvantagem(normal, metalico-eletrico)
-desvantagem(normal, metalico-planta)
-desvantagem(normal, metalico-gelo)
-desvantagem(normal, metalico-lutador)
-desvantagem(normal, metalico-veneno)
-desvantagem(normal, metalico-terra)
-desvantagem(normal, metalico-voador)
-desvantagem(normal, metalico-psiquico)
-desvantagem(normal, metalico-inseto)
-super_desvantagem(normal, metalico-pedra)
-dano_zero(normal, metalico-fantasma)
-desvantagem(normal, metalico-dragao)
-desvantagem(normal, metalico-noturno)
-desvantagem(normal, metalico-fada)
-normalmente_efetivo(normal, fada-normal)
-normalmente_efetivo(normal, fada-fogo)
-normalmente_efetivo(normal, fada-agua)
-normalmente_efetivo(normal, fada-eletrico)
-normalmente_efetivo(normal, fada-planta)
-normalmente_efetivo(normal, fada-gelo)
-normalmente_efetivo(normal, fada-lutador)
-normalmente_efetivo(normal, fada-veneno)
-normalmente_efetivo(normal, fada-terra)
-normalmente_efetivo(normal, fada-voador)
-normalmente_efetivo(normal, fada-psiquico)
-normalmente_efetivo(normal, fada-inseto)
-desvantagem(normal, fada-pedra)
-dano_zero(normal, fada-fantasma)
-normalmente_efetivo(normal, fada-dragao)
-normalmente_efetivo(normal, fada-noturno)
-desvantagem(normal, fada-metalico)
+super_effectiveness(fire,grass).
+super_effectiveness(fire,ice).
+super_effectiveness(fire,bug).
+super_effectiveness(fire,steel).
+super_effectiveness(fire,normal-grass).
+super_effectiveness(fire,normal-ice).
+super_effectiveness(fire,normal-bug).
+super_effectiveness(fire,normal-steel).
+super_effectiveness(fire,electric-grass).
+super_effectiveness(fire,electric-ice).
+super_effectiveness(fire,electric-bug).
+super_effectiveness(fire,electric-steel).
+super_effectiveness(fire,grass-normal).
+super_effectiveness(fire,grass-electric).
+super_effectiveness(fire,grass-fighting).
+super_effectiveness(fire,grass-poison).
+super_effectiveness(fire,grass-ground).
+super_effectiveness(fire,grass-flying).
+super_effectiveness(fire,grass-psychic).
+super_effectiveness(fire,grass-ghost).
+super_effectiveness(fire,grass-dark).
+super_effectiveness(fire,grass-fairy).
+super_effectiveness(fire,ice-normal).
+super_effectiveness(fire,ice-electric).
+super_effectiveness(fire,ice-fighting).
+super_effectiveness(fire,ice-poison).
+super_effectiveness(fire,ice-ground).
+super_effectiveness(fire,ice-flying).
+super_effectiveness(fire,ice-psychic).
+super_effectiveness(fire,ice-ghost).
+super_effectiveness(fire,ice-dark).
+super_effectiveness(fire,ice-fairy).
+super_effectiveness(fire,fighting-grass).
+super_effectiveness(fire,fighting-ice).
+super_effectiveness(fire,fighting-poison).
+super_effectiveness(fire,fighting-bug).
+super_effectiveness(fire,fighting-steel).
+super_effectiveness(fire,poison-grass).
+super_effectiveness(fire,poison-ice).
+super_effectiveness(fire,poison-fighting).
+super_effectiveness(fire,poison-bug).
+super_effectiveness(fire,poison-steel).
+super_effectiveness(fire,ground-grass).
+super_effectiveness(fire,ground-ice).
+super_effectiveness(fire,ground-bug).
+super_effectiveness(fire,ground-steel).
+super_effectiveness(fire,flying-grass).
+super_effectiveness(fire,flying-ice).
+super_effectiveness(fire,flying-bug).
+super_effectiveness(fire,flying-steel).
+super_effectiveness(fire,psychic-grass).
+super_effectiveness(fire,psychic-ice).
+super_effectiveness(fire,psychic-bug).
+super_effectiveness(fire,psychic-steel).
+super_effectiveness(fire,bug-normal).
+super_effectiveness(fire,bug-electric).
+super_effectiveness(fire,bug-fighting).
+super_effectiveness(fire,bug-poison).
+super_effectiveness(fire,bug-ground).
+super_effectiveness(fire,bug-flying).
+super_effectiveness(fire,bug-psychic).
+super_effectiveness(fire,bug-ghost).
+super_effectiveness(fire,bug-dark).
+super_effectiveness(fire,bug-fairy).
+super_effectiveness(fire,ghost-grass).
+super_effectiveness(fire,ghost-ice).
+super_effectiveness(fire,ghost-bug).
+super_effectiveness(fire,ghost-steel).
+super_effectiveness(fire,dark-grass).
+super_effectiveness(fire,dark-ice).
+super_effectiveness(fire,dark-bug).
+super_effectiveness(fire,dark-steel).
+super_effectiveness(fire,steel-normal).
+super_effectiveness(fire,steel-electric).
+super_effectiveness(fire,steel-fighting).
+super_effectiveness(fire,steel-poison).
+super_effectiveness(fire,steel-ground).
+super_effectiveness(fire,steel-flying).
+super_effectiveness(fire,steel-psychic).
+super_effectiveness(fire,steel-ghost).
+super_effectiveness(fire,steel-dark).
+super_effectiveness(fire,steel-fairy).
+super_effectiveness(fire,fairy-grass).
+super_effectiveness(fire,fairy-ice).
+super_effectiveness(fire,fairy-bug).
+super_effectiveness(fire,fairy-steel).
+super_effectiveness(water,fire).
+super_effectiveness(water,ground).
+super_effectiveness(water,rock).
+super_effectiveness(water,normal-fire).
+super_effectiveness(water,normal-ground).
+super_effectiveness(water,normal-rock).
+super_effectiveness(water,fire-normal).
+super_effectiveness(water,fire-electric).
+super_effectiveness(water,fire-ice).
+super_effectiveness(water,fire-fighting).
+super_effectiveness(water,fire-poison).
+super_effectiveness(water,fire-flying).
+super_effectiveness(water,fire-psychic).
+super_effectiveness(water,fire-bug).
+super_effectiveness(water,fire-ghost).
+super_effectiveness(water,fire-dark).
+super_effectiveness(water,fire-steel).
+super_effectiveness(water,fire-fairy).
+super_effectiveness(water,electric-fire).
+super_effectiveness(water,electric-ground).
+super_effectiveness(water,electric-rock).
+super_effectiveness(water,ice-fire).
+super_effectiveness(water,ice-ground).
+super_effectiveness(water,ice-rock).
+super_effectiveness(water,fighting-fire).
+super_effectiveness(water,fighting-ground).
+super_effectiveness(water,fighting-rock).
+super_effectiveness(water,poison-fire).
+super_effectiveness(water,poison-ground).
+super_effectiveness(water,poison-rock).
+super_effectiveness(water,ground-normal).
+super_effectiveness(water,ground-electric).
+super_effectiveness(water,ground-ice).
+super_effectiveness(water,ground-fighting).
+super_effectiveness(water,ground-poison).
+super_effectiveness(water,ground-flying).
+super_effectiveness(water,ground-psychic).
+super_effectiveness(water,ground-bug).
+super_effectiveness(water,ground-ghost).
+super_effectiveness(water,ground-dark).
+super_effectiveness(water,ground-steel).
+super_effectiveness(water,ground-fairy).
+super_effectiveness(water,flying-fire).
+super_effectiveness(water,flying-ground).
+super_effectiveness(water,flying-rock).
+super_effectiveness(water,psychic-fire).
+super_effectiveness(water,psychic-ground).
+super_effectiveness(water,psychic-rock).
+super_effectiveness(water,bug-fire).
+super_effectiveness(water,bug-ground).
+super_effectiveness(water,bug-rock).
+super_effectiveness(water,rock-normal).
+super_effectiveness(water,rock-electric).
+super_effectiveness(water,rock-ice).
+super_effectiveness(water,rock-fighting).
+super_effectiveness(water,rock-poison).
+super_effectiveness(water,rock-flying).
+super_effectiveness(water,rock-psychic).
+super_effectiveness(water,rock-bug).
+super_effectiveness(water,rock-ghost).
+super_effectiveness(water,rock-dark).
+super_effectiveness(water,rock-steel).
+super_effectiveness(water,rock-fairy).
+super_effectiveness(water,ghost-fire).
+super_effectiveness(water,ghost-ground).
+super_effectiveness(water,ghost-rock).
+super_effectiveness(water,dark-fire).
+super_effectiveness(water,dark-ground).
+super_effectiveness(water,dark-rock).
+super_effectiveness(water,steel-fire).
+super_effectiveness(water,steel-ground).
+super_effectiveness(water,steel-rock).
+super_effectiveness(water,fairy-fire).
+super_effectiveness(water,fairy-ground).
+super_effectiveness(water,fairy-rock).
+super_effectiveness(electric,water).
+super_effectiveness(electric,flying).
+super_effectiveness(electric,normal-water).
+super_effectiveness(electric,normal-flying).
+super_effectiveness(electric,fire-water).
+super_effectiveness(electric,fire-flying).
+super_effectiveness(electric,water-normal).
+super_effectiveness(electric,water-fire).
+super_effectiveness(electric,water-fighting).
+super_effectiveness(electric,water-poison).
+super_effectiveness(electric,water-psychic).
+super_effectiveness(electric,water-bug).
+super_effectiveness(electric,water-rock).
+super_effectiveness(electric,water-ghost).
+super_effectiveness(electric,water-dark).
+super_effectiveness(electric,water-steel).
+super_effectiveness(electric,water-fairy).
+super_effectiveness(electric,ice-flying).
+super_effectiveness(electric,fighting-water).
+super_effectiveness(electric,fighting-flying).
+super_effectiveness(electric,poison-water).
+super_effectiveness(electric,poison-flying).
+super_effectiveness(electric,flying-normal).
+super_effectiveness(electric,flying-fire).
+super_effectiveness(electric,flying-ice).
+super_effectiveness(electric,flying-fighting).
+super_effectiveness(electric,flying-poison).
+super_effectiveness(electric,flying-psychic).
+super_effectiveness(electric,flying-bug).
+super_effectiveness(electric,flying-rock).
+super_effectiveness(electric,flying-ghost).
+super_effectiveness(electric,flying-dark).
+super_effectiveness(electric,flying-steel).
+super_effectiveness(electric,flying-fairy).
+super_effectiveness(electric,psychic-water).
+super_effectiveness(electric,psychic-flying).
+super_effectiveness(electric,bug-water).
+super_effectiveness(electric,bug-flying).
+super_effectiveness(electric,rock-water).
+super_effectiveness(electric,rock-flying).
+super_effectiveness(electric,ghost-water).
+super_effectiveness(electric,ghost-flying).
+super_effectiveness(electric,dark-water).
+super_effectiveness(electric,dark-flying).
+super_effectiveness(electric,steel-water).
+super_effectiveness(electric,steel-flying).
+super_effectiveness(electric,fairy-water).
+super_effectiveness(electric,fairy-flying).
+super_effectiveness(grass,water).
+super_effectiveness(grass,ground).
+super_effectiveness(grass,rock).
+super_effectiveness(grass,normal-water).
+super_effectiveness(grass,normal-ground).
+super_effectiveness(grass,normal-rock).
+super_effectiveness(grass,water-normal).
+super_effectiveness(grass,water-electric).
+super_effectiveness(grass,water-fighting).
+super_effectiveness(grass,water-psychic).
+super_effectiveness(grass,water-ghost).
+super_effectiveness(grass,water-dark).
+super_effectiveness(grass,water-fairy).
+super_effectiveness(grass,electric-water).
+super_effectiveness(grass,electric-ground).
+super_effectiveness(grass,electric-rock).
+super_effectiveness(grass,ice-ground).
+super_effectiveness(grass,ice-rock).
+super_effectiveness(grass,fighting-water).
+super_effectiveness(grass,fighting-ground).
+super_effectiveness(grass,fighting-rock).
+super_effectiveness(grass,ground-normal).
+super_effectiveness(grass,ground-electric).
+super_effectiveness(grass,ground-ice).
+super_effectiveness(grass,ground-fighting).
+super_effectiveness(grass,ground-psychic).
+super_effectiveness(grass,ground-ghost).
+super_effectiveness(grass,ground-dark).
+super_effectiveness(grass,ground-fairy).
+super_effectiveness(grass,psychic-water).
+super_effectiveness(grass,psychic-ground).
+super_effectiveness(grass,psychic-rock).
+super_effectiveness(grass,rock-normal).
+super_effectiveness(grass,rock-electric).
+super_effectiveness(grass,rock-ice).
+super_effectiveness(grass,rock-fighting).
+super_effectiveness(grass,rock-psychic).
+super_effectiveness(grass,rock-ghost).
+super_effectiveness(grass,rock-dark).
+super_effectiveness(grass,rock-fairy).
+super_effectiveness(grass,ghost-water).
+super_effectiveness(grass,ghost-ground).
+super_effectiveness(grass,ghost-rock).
+super_effectiveness(grass,dark-water).
+super_effectiveness(grass,dark-ground).
+super_effectiveness(grass,dark-rock).
+super_effectiveness(grass,fairy-water).
+super_effectiveness(grass,fairy-ground).
+super_effectiveness(grass,fairy-rock).
+super_effectiveness(ice,grass).
+super_effectiveness(ice,ground).
+super_effectiveness(ice,flying).
+super_effectiveness(ice,dragon).
+super_effectiveness(ice,normal-grass).
+super_effectiveness(ice,normal-ground).
+super_effectiveness(ice,normal-flying).
+super_effectiveness(ice,normal-dragon).
+super_effectiveness(ice,electric-grass).
+super_effectiveness(ice,electric-ground).
+super_effectiveness(ice,electric-flying).
+super_effectiveness(ice,electric-dragon).
+super_effectiveness(ice,grass-normal).
+super_effectiveness(ice,grass-electric).
+super_effectiveness(ice,grass-fighting).
+super_effectiveness(ice,grass-poison).
+super_effectiveness(ice,grass-psychic).
+super_effectiveness(ice,grass-bug).
+super_effectiveness(ice,grass-rock).
+super_effectiveness(ice,grass-ghost).
+super_effectiveness(ice,grass-dark).
+super_effectiveness(ice,grass-fairy).
+super_effectiveness(ice,fighting-grass).
+super_effectiveness(ice,fighting-ground).
+super_effectiveness(ice,fighting-flying).
+super_effectiveness(ice,fighting-dragon).
+super_effectiveness(ice,poison-grass).
+super_effectiveness(ice,poison-ground).
+super_effectiveness(ice,poison-flying).
+super_effectiveness(ice,poison-dragon).
+super_effectiveness(ice,ground-normal).
+super_effectiveness(ice,ground-electric).
+super_effectiveness(ice,ground-fighting).
+super_effectiveness(ice,ground-poison).
+super_effectiveness(ice,ground-psychic).
+super_effectiveness(ice,ground-bug).
+super_effectiveness(ice,ground-rock).
+super_effectiveness(ice,ground-ghost).
+super_effectiveness(ice,ground-dark).
+super_effectiveness(ice,ground-fairy).
+super_effectiveness(ice,flying-normal).
+super_effectiveness(ice,flying-electric).
+super_effectiveness(ice,flying-fighting).
+super_effectiveness(ice,flying-poison).
+super_effectiveness(ice,flying-psychic).
+super_effectiveness(ice,flying-bug).
+super_effectiveness(ice,flying-rock).
+super_effectiveness(ice,flying-ghost).
+super_effectiveness(ice,flying-dark).
+super_effectiveness(ice,flying-fairy).
+super_effectiveness(ice,psychic-grass).
+super_effectiveness(ice,psychic-ground).
+super_effectiveness(ice,psychic-flying).
+super_effectiveness(ice,psychic-dragon).
+super_effectiveness(ice,bug-grass).
+super_effectiveness(ice,bug-ground).
+super_effectiveness(ice,bug-flying).
+super_effectiveness(ice,bug-dragon).
+super_effectiveness(ice,rock-grass).
+super_effectiveness(ice,rock-ground).
+super_effectiveness(ice,rock-flying).
+super_effectiveness(ice,rock-dragon).
+super_effectiveness(ice,ghost-grass).
+super_effectiveness(ice,ghost-ground).
+super_effectiveness(ice,ghost-flying).
+super_effectiveness(ice,ghost-dragon).
+super_effectiveness(ice,dragon-normal).
+super_effectiveness(ice,dragon-electric).
+super_effectiveness(ice,dragon-fighting).
+super_effectiveness(ice,dragon-poison).
+super_effectiveness(ice,dragon-psychic).
+super_effectiveness(ice,dragon-bug).
+super_effectiveness(ice,dragon-rock).
+super_effectiveness(ice,dragon-ghost).
+super_effectiveness(ice,dragon-dark).
+super_effectiveness(ice,dragon-fairy).
+super_effectiveness(ice,dark-grass).
+super_effectiveness(ice,dark-ground).
+super_effectiveness(ice,dark-flying).
+super_effectiveness(ice,dark-dragon).
+super_effectiveness(ice,fairy-grass).
+super_effectiveness(ice,fairy-ground).
+super_effectiveness(ice,fairy-flying).
+super_effectiveness(ice,fairy-dragon).
+super_effectiveness(fighting,normal).
+super_effectiveness(fighting,ice).
+super_effectiveness(fighting,rock).
+super_effectiveness(fighting,dark).
+super_effectiveness(fighting,steel).
+super_effectiveness(fighting,normal-fire).
+super_effectiveness(fighting,normal-water).
+super_effectiveness(fighting,normal-electric).
+super_effectiveness(fighting,normal-grass).
+super_effectiveness(fighting,normal-fighting).
+super_effectiveness(fighting,normal-ground).
+super_effectiveness(fighting,normal-dragon).
+super_effectiveness(fighting,fire-normal).
+super_effectiveness(fighting,fire-ice).
+super_effectiveness(fighting,fire-rock).
+super_effectiveness(fighting,fire-dark).
+super_effectiveness(fighting,fire-steel).
+super_effectiveness(fighting,water-normal).
+super_effectiveness(fighting,water-ice).
+super_effectiveness(fighting,water-rock).
+super_effectiveness(fighting,water-dark).
+super_effectiveness(fighting,water-steel).
+super_effectiveness(fighting,electric-normal).
+super_effectiveness(fighting,electric-ice).
+super_effectiveness(fighting,electric-rock).
+super_effectiveness(fighting,electric-dark).
+super_effectiveness(fighting,electric-steel).
+super_effectiveness(fighting,grass-normal).
+super_effectiveness(fighting,grass-ice).
+super_effectiveness(fighting,grass-rock).
+super_effectiveness(fighting,grass-dark).
+super_effectiveness(fighting,grass-steel).
+super_effectiveness(fighting,ice-fire).
+super_effectiveness(fighting,ice-water).
+super_effectiveness(fighting,ice-electric).
+super_effectiveness(fighting,ice-grass).
+super_effectiveness(fighting,ice-fighting).
+super_effectiveness(fighting,ice-ground).
+super_effectiveness(fighting,ice-dragon).
+super_effectiveness(fighting,fighting-normal).
+super_effectiveness(fighting,fighting-ice).
+super_effectiveness(fighting,fighting-rock).
+super_effectiveness(fighting,fighting-dark).
+super_effectiveness(fighting,fighting-steel).
+super_effectiveness(fighting,ground-normal).
+super_effectiveness(fighting,ground-ice).
+super_effectiveness(fighting,ground-rock).
+super_effectiveness(fighting,ground-dark).
+super_effectiveness(fighting,ground-steel).
+super_effectiveness(fighting,rock-fire).
+super_effectiveness(fighting,rock-water).
+super_effectiveness(fighting,rock-electric).
+super_effectiveness(fighting,rock-grass).
+super_effectiveness(fighting,rock-fighting).
+super_effectiveness(fighting,rock-ground).
+super_effectiveness(fighting,rock-dragon).
+super_effectiveness(fighting,dragon-normal).
+super_effectiveness(fighting,dragon-ice).
+super_effectiveness(fighting,dragon-rock).
+super_effectiveness(fighting,dragon-dark).
+super_effectiveness(fighting,dragon-steel).
+super_effectiveness(fighting,dark-fire).
+super_effectiveness(fighting,dark-water).
+super_effectiveness(fighting,dark-electric).
+super_effectiveness(fighting,dark-grass).
+super_effectiveness(fighting,dark-fighting).
+super_effectiveness(fighting,dark-ground).
+super_effectiveness(fighting,dark-dragon).
+super_effectiveness(fighting,steel-fire).
+super_effectiveness(fighting,steel-water).
+super_effectiveness(fighting,steel-electric).
+super_effectiveness(fighting,steel-grass).
+super_effectiveness(fighting,steel-fighting).
+super_effectiveness(fighting,steel-ground).
+super_effectiveness(fighting,steel-dragon).
+super_effectiveness(poison,grass).
+super_effectiveness(poison,fairy).
+super_effectiveness(poison,normal-grass).
+super_effectiveness(poison,normal-fairy).
+super_effectiveness(poison,fire-grass).
+super_effectiveness(poison,fire-fairy).
+super_effectiveness(poison,water-grass).
+super_effectiveness(poison,water-fairy).
+super_effectiveness(poison,electric-grass).
+super_effectiveness(poison,electric-fairy).
+super_effectiveness(poison,grass-normal).
+super_effectiveness(poison,grass-fire).
+super_effectiveness(poison,grass-water).
+super_effectiveness(poison,grass-electric).
+super_effectiveness(poison,grass-ice).
+super_effectiveness(poison,grass-fighting).
+super_effectiveness(poison,grass-flying).
+super_effectiveness(poison,grass-psychic).
+super_effectiveness(poison,grass-bug).
+super_effectiveness(poison,grass-dragon).
+super_effectiveness(poison,grass-dark).
+super_effectiveness(poison,ice-grass).
+super_effectiveness(poison,ice-fairy).
+super_effectiveness(poison,fighting-grass).
+super_effectiveness(poison,fighting-fairy).
+super_effectiveness(poison,flying-grass).
+super_effectiveness(poison,flying-fairy).
+super_effectiveness(poison,psychic-grass).
+super_effectiveness(poison,psychic-fairy).
+super_effectiveness(poison,bug-grass).
+super_effectiveness(poison,bug-fairy).
+super_effectiveness(poison,dragon-grass).
+super_effectiveness(poison,dragon-fairy).
+super_effectiveness(poison,dark-grass).
+super_effectiveness(poison,dark-fairy).
+super_effectiveness(poison,fairy-normal).
+super_effectiveness(poison,fairy-fire).
+super_effectiveness(poison,fairy-water).
+super_effectiveness(poison,fairy-electric).
+super_effectiveness(poison,fairy-ice).
+super_effectiveness(poison,fairy-fighting).
+super_effectiveness(poison,fairy-flying).
+super_effectiveness(poison,fairy-psychic).
+super_effectiveness(poison,fairy-bug).
+super_effectiveness(poison,fairy-dragon).
+super_effectiveness(poison,fairy-dark).
+super_effectiveness(ground,fire).
+super_effectiveness(ground,electric).
+super_effectiveness(ground,poison).
+super_effectiveness(ground,rock).
+super_effectiveness(ground,steel).
+super_effectiveness(ground,normal-fire).
+super_effectiveness(ground,normal-electric).
+super_effectiveness(ground,normal-poison).
+super_effectiveness(ground,normal-rock).
+super_effectiveness(ground,normal-steel).
+super_effectiveness(ground,fire-normal).
+super_effectiveness(ground,fire-water).
+super_effectiveness(ground,fire-ice).
+super_effectiveness(ground,fire-fighting).
+super_effectiveness(ground,fire-ground).
+super_effectiveness(ground,fire-psychic).
+super_effectiveness(ground,fire-ghost).
+super_effectiveness(ground,fire-dragon).
+super_effectiveness(ground,fire-dark).
+super_effectiveness(ground,fire-fairy).
+super_effectiveness(ground,water-fire).
+super_effectiveness(ground,water-electric).
+super_effectiveness(ground,water-poison).
+super_effectiveness(ground,water-rock).
+super_effectiveness(ground,water-steel).
+super_effectiveness(ground,electric-normal).
+super_effectiveness(ground,electric-water).
+super_effectiveness(ground,electric-ice).
+super_effectiveness(ground,electric-fighting).
+super_effectiveness(ground,electric-ground).
+super_effectiveness(ground,electric-psychic).
+super_effectiveness(ground,electric-ghost).
+super_effectiveness(ground,electric-dragon).
+super_effectiveness(ground,electric-dark).
+super_effectiveness(ground,electric-fairy).
+super_effectiveness(ground,ice-fire).
+super_effectiveness(ground,ice-electric).
+super_effectiveness(ground,ice-poison).
+super_effectiveness(ground,ice-rock).
+super_effectiveness(ground,ice-steel).
+super_effectiveness(ground,fighting-fire).
+super_effectiveness(ground,fighting-electric).
+super_effectiveness(ground,fighting-poison).
+super_effectiveness(ground,fighting-rock).
+super_effectiveness(ground,fighting-steel).
+super_effectiveness(ground,poison-normal).
+super_effectiveness(ground,poison-water).
+super_effectiveness(ground,poison-ice).
+super_effectiveness(ground,poison-fighting).
+super_effectiveness(ground,poison-ground).
+super_effectiveness(ground,poison-psychic).
+super_effectiveness(ground,poison-ghost).
+super_effectiveness(ground,poison-dragon).
+super_effectiveness(ground,poison-dark).
+super_effectiveness(ground,poison-fairy).
+super_effectiveness(ground,ground-fire).
+super_effectiveness(ground,ground-electric).
+super_effectiveness(ground,ground-poison).
+super_effectiveness(ground,ground-rock).
+super_effectiveness(ground,ground-steel).
+super_effectiveness(ground,psychic-fire).
+super_effectiveness(ground,psychic-electric).
+super_effectiveness(ground,psychic-poison).
+super_effectiveness(ground,psychic-rock).
+super_effectiveness(ground,psychic-steel).
+super_effectiveness(ground,rock-normal).
+super_effectiveness(ground,rock-water).
+super_effectiveness(ground,rock-ice).
+super_effectiveness(ground,rock-fighting).
+super_effectiveness(ground,rock-ground).
+super_effectiveness(ground,rock-psychic).
+super_effectiveness(ground,rock-ghost).
+super_effectiveness(ground,rock-dragon).
+super_effectiveness(ground,rock-dark).
+super_effectiveness(ground,rock-fairy).
+super_effectiveness(ground,ghost-fire).
+super_effectiveness(ground,ghost-electric).
+super_effectiveness(ground,ghost-poison).
+super_effectiveness(ground,ghost-rock).
+super_effectiveness(ground,ghost-steel).
+super_effectiveness(ground,dragon-fire).
+super_effectiveness(ground,dragon-electric).
+super_effectiveness(ground,dragon-poison).
+super_effectiveness(ground,dragon-rock).
+super_effectiveness(ground,dragon-steel).
+super_effectiveness(ground,dark-fire).
+super_effectiveness(ground,dark-electric).
+super_effectiveness(ground,dark-poison).
+super_effectiveness(ground,dark-rock).
+super_effectiveness(ground,dark-steel).
+super_effectiveness(ground,steel-normal).
+super_effectiveness(ground,steel-water).
+super_effectiveness(ground,steel-ice).
+super_effectiveness(ground,steel-fighting).
+super_effectiveness(ground,steel-ground).
+super_effectiveness(ground,steel-psychic).
+super_effectiveness(ground,steel-ghost).
+super_effectiveness(ground,steel-dragon).
+super_effectiveness(ground,steel-dark).
+super_effectiveness(ground,steel-fairy).
+super_effectiveness(ground,fairy-fire).
+super_effectiveness(ground,fairy-electric).
+super_effectiveness(ground,fairy-poison).
+super_effectiveness(ground,fairy-rock).
+super_effectiveness(ground,fairy-steel).
+super_effectiveness(flying,grass).
+super_effectiveness(flying,fighting).
+super_effectiveness(flying,bug).
+super_effectiveness(flying,normal-grass).
+super_effectiveness(flying,normal-fighting).
+super_effectiveness(flying,normal-bug).
+super_effectiveness(flying,fire-grass).
+super_effectiveness(flying,fire-fighting).
+super_effectiveness(flying,fire-bug).
+super_effectiveness(flying,water-grass).
+super_effectiveness(flying,water-fighting).
+super_effectiveness(flying,water-bug).
+super_effectiveness(flying,grass-normal).
+super_effectiveness(flying,grass-fire).
+super_effectiveness(flying,grass-water).
+super_effectiveness(flying,grass-ice).
+super_effectiveness(flying,grass-poison).
+super_effectiveness(flying,grass-ground).
+super_effectiveness(flying,grass-flying).
+super_effectiveness(flying,grass-psychic).
+super_effectiveness(flying,grass-ghost).
+super_effectiveness(flying,grass-dragon).
+super_effectiveness(flying,grass-dark).
+super_effectiveness(flying,grass-fairy).
+super_effectiveness(flying,ice-grass).
+super_effectiveness(flying,ice-fighting).
+super_effectiveness(flying,ice-bug).
+super_effectiveness(flying,fighting-normal).
+super_effectiveness(flying,fighting-fire).
+super_effectiveness(flying,fighting-water).
+super_effectiveness(flying,fighting-ice).
+super_effectiveness(flying,fighting-ground).
+super_effectiveness(flying,fighting-flying).
+super_effectiveness(flying,fighting-psychic).
+super_effectiveness(flying,fighting-ghost).
+super_effectiveness(flying,fighting-dragon).
+super_effectiveness(flying,fighting-dark).
+super_effectiveness(flying,fighting-fairy).
+super_effectiveness(flying,poison-grass).
+super_effectiveness(flying,poison-bug).
+super_effectiveness(flying,ground-grass).
+super_effectiveness(flying,ground-fighting).
+super_effectiveness(flying,ground-bug).
+super_effectiveness(flying,flying-grass).
+super_effectiveness(flying,flying-fighting).
+super_effectiveness(flying,flying-bug).
+super_effectiveness(flying,psychic-grass).
+super_effectiveness(flying,psychic-fighting).
+super_effectiveness(flying,psychic-bug).
+super_effectiveness(flying,bug-normal).
+super_effectiveness(flying,bug-fire).
+super_effectiveness(flying,bug-water).
+super_effectiveness(flying,bug-ice).
+super_effectiveness(flying,bug-poison).
+super_effectiveness(flying,bug-ground).
+super_effectiveness(flying,bug-flying).
+super_effectiveness(flying,bug-psychic).
+super_effectiveness(flying,bug-ghost).
+super_effectiveness(flying,bug-dragon).
+super_effectiveness(flying,bug-dark).
+super_effectiveness(flying,bug-fairy).
+super_effectiveness(flying,ghost-grass).
+super_effectiveness(flying,ghost-fighting).
+super_effectiveness(flying,ghost-bug).
+super_effectiveness(flying,dragon-grass).
+super_effectiveness(flying,dragon-fighting).
+super_effectiveness(flying,dragon-bug).
+super_effectiveness(flying,dark-grass).
+super_effectiveness(flying,dark-fighting).
+super_effectiveness(flying,dark-bug).
+super_effectiveness(flying,fairy-grass).
+super_effectiveness(flying,fairy-fighting).
+super_effectiveness(flying,fairy-bug).
+super_effectiveness(psychic,fighting).
+super_effectiveness(psychic,poison).
+super_effectiveness(psychic,normal-fighting).
+super_effectiveness(psychic,normal-poison).
+super_effectiveness(psychic,fire-fighting).
+super_effectiveness(psychic,fire-poison).
+super_effectiveness(psychic,water-fighting).
+super_effectiveness(psychic,water-poison).
+super_effectiveness(psychic,electric-fighting).
+super_effectiveness(psychic,electric-poison).
+super_effectiveness(psychic,grass-fighting).
+super_effectiveness(psychic,grass-poison).
+super_effectiveness(psychic,ice-fighting).
+super_effectiveness(psychic,ice-poison).
+super_effectiveness(psychic,fighting-normal).
+super_effectiveness(psychic,fighting-fire).
+super_effectiveness(psychic,fighting-water).
+super_effectiveness(psychic,fighting-electric).
+super_effectiveness(psychic,fighting-grass).
+super_effectiveness(psychic,fighting-ice).
+super_effectiveness(psychic,fighting-poison).
+super_effectiveness(psychic,fighting-ground).
+super_effectiveness(psychic,fighting-flying).
+super_effectiveness(psychic,fighting-bug).
+super_effectiveness(psychic,fighting-rock).
+super_effectiveness(psychic,fighting-ghost).
+super_effectiveness(psychic,fighting-dragon).
+super_effectiveness(psychic,fighting-fairy).
+super_effectiveness(psychic,poison-normal).
+super_effectiveness(psychic,poison-fire).
+super_effectiveness(psychic,poison-water).
+super_effectiveness(psychic,poison-electric).
+super_effectiveness(psychic,poison-grass).
+super_effectiveness(psychic,poison-ice).
+super_effectiveness(psychic,poison-fighting).
+super_effectiveness(psychic,poison-ground).
+super_effectiveness(psychic,poison-flying).
+super_effectiveness(psychic,poison-bug).
+super_effectiveness(psychic,poison-ghost).
+super_effectiveness(psychic,poison-dragon).
+super_effectiveness(psychic,poison-fairy).
+super_effectiveness(psychic,ground-fighting).
+super_effectiveness(psychic,ground-poison).
+super_effectiveness(psychic,flying-fighting).
+super_effectiveness(psychic,flying-poison).
+super_effectiveness(psychic,bug-fighting).
+super_effectiveness(psychic,bug-poison).
+super_effectiveness(psychic,rock-fighting).
+super_effectiveness(psychic,ghost-fighting).
+super_effectiveness(psychic,ghost-poison).
+super_effectiveness(psychic,dragon-fighting).
+super_effectiveness(psychic,dragon-poison).
+super_effectiveness(psychic,fairy-fighting).
+super_effectiveness(psychic,fairy-poison).
+super_effectiveness(bug,grass).
+super_effectiveness(bug,psychic).
+super_effectiveness(bug,dark).
+super_effectiveness(bug,normal-grass).
+super_effectiveness(bug,normal-psychic).
+super_effectiveness(bug,normal-dark).
+super_effectiveness(bug,water-grass).
+super_effectiveness(bug,water-psychic).
+super_effectiveness(bug,water-dark).
+super_effectiveness(bug,electric-grass).
+super_effectiveness(bug,electric-psychic).
+super_effectiveness(bug,electric-dark).
+super_effectiveness(bug,grass-normal).
+super_effectiveness(bug,grass-water).
+super_effectiveness(bug,grass-electric).
+super_effectiveness(bug,grass-ice).
+super_effectiveness(bug,grass-ground).
+super_effectiveness(bug,grass-bug).
+super_effectiveness(bug,grass-rock).
+super_effectiveness(bug,grass-dragon).
+super_effectiveness(bug,ice-grass).
+super_effectiveness(bug,ice-psychic).
+super_effectiveness(bug,ice-dark).
+super_effectiveness(bug,ground-grass).
+super_effectiveness(bug,ground-psychic).
+super_effectiveness(bug,ground-dark).
+super_effectiveness(bug,psychic-normal).
+super_effectiveness(bug,psychic-water).
+super_effectiveness(bug,psychic-electric).
+super_effectiveness(bug,psychic-ice).
+super_effectiveness(bug,psychic-ground).
+super_effectiveness(bug,psychic-bug).
+super_effectiveness(bug,psychic-rock).
+super_effectiveness(bug,psychic-dragon).
+super_effectiveness(bug,bug-grass).
+super_effectiveness(bug,bug-psychic).
+super_effectiveness(bug,bug-dark).
+super_effectiveness(bug,rock-grass).
+super_effectiveness(bug,rock-psychic).
+super_effectiveness(bug,rock-dark).
+super_effectiveness(bug,dragon-grass).
+super_effectiveness(bug,dragon-psychic).
+super_effectiveness(bug,dragon-dark).
+super_effectiveness(bug,dark-normal).
+super_effectiveness(bug,dark-water).
+super_effectiveness(bug,dark-electric).
+super_effectiveness(bug,dark-ice).
+super_effectiveness(bug,dark-ground).
+super_effectiveness(bug,dark-bug).
+super_effectiveness(bug,dark-rock).
+super_effectiveness(bug,dark-dragon).
+super_effectiveness(rock,fire).
+super_effectiveness(rock,ice).
+super_effectiveness(rock,flying).
+super_effectiveness(rock,bug).
+super_effectiveness(rock,normal-fire).
+super_effectiveness(rock,normal-ice).
+super_effectiveness(rock,normal-flying).
+super_effectiveness(rock,normal-bug).
+super_effectiveness(rock,fire-normal).
+super_effectiveness(rock,fire-water).
+super_effectiveness(rock,fire-electric).
+super_effectiveness(rock,fire-grass).
+super_effectiveness(rock,fire-poison).
+super_effectiveness(rock,fire-psychic).
+super_effectiveness(rock,fire-rock).
+super_effectiveness(rock,fire-ghost).
+super_effectiveness(rock,fire-dragon).
+super_effectiveness(rock,fire-dark).
+super_effectiveness(rock,fire-fairy).
+super_effectiveness(rock,water-fire).
+super_effectiveness(rock,water-ice).
+super_effectiveness(rock,water-flying).
+super_effectiveness(rock,water-bug).
+super_effectiveness(rock,electric-fire).
+super_effectiveness(rock,electric-ice).
+super_effectiveness(rock,electric-flying).
+super_effectiveness(rock,electric-bug).
+super_effectiveness(rock,grass-fire).
+super_effectiveness(rock,grass-ice).
+super_effectiveness(rock,grass-flying).
+super_effectiveness(rock,grass-bug).
+super_effectiveness(rock,ice-normal).
+super_effectiveness(rock,ice-water).
+super_effectiveness(rock,ice-electric).
+super_effectiveness(rock,ice-grass).
+super_effectiveness(rock,ice-poison).
+super_effectiveness(rock,ice-psychic).
+super_effectiveness(rock,ice-rock).
+super_effectiveness(rock,ice-ghost).
+super_effectiveness(rock,ice-dragon).
+super_effectiveness(rock,ice-dark).
+super_effectiveness(rock,ice-fairy).
+super_effectiveness(rock,fighting-poison).
+super_effectiveness(rock,poison-fire).
+super_effectiveness(rock,poison-ice).
+super_effectiveness(rock,poison-fighting).
+super_effectiveness(rock,poison-flying).
+super_effectiveness(rock,poison-bug).
+super_effectiveness(rock,flying-normal).
+super_effectiveness(rock,flying-water).
+super_effectiveness(rock,flying-electric).
+super_effectiveness(rock,flying-grass).
+super_effectiveness(rock,flying-poison).
+super_effectiveness(rock,flying-psychic).
+super_effectiveness(rock,flying-rock).
+super_effectiveness(rock,flying-ghost).
+super_effectiveness(rock,flying-dragon).
+super_effectiveness(rock,flying-dark).
+super_effectiveness(rock,flying-fairy).
+super_effectiveness(rock,psychic-fire).
+super_effectiveness(rock,psychic-ice).
+super_effectiveness(rock,psychic-flying).
+super_effectiveness(rock,psychic-bug).
+super_effectiveness(rock,bug-normal).
+super_effectiveness(rock,bug-water).
+super_effectiveness(rock,bug-electric).
+super_effectiveness(rock,bug-grass).
+super_effectiveness(rock,bug-poison).
+super_effectiveness(rock,bug-psychic).
+super_effectiveness(rock,bug-rock).
+super_effectiveness(rock,bug-ghost).
+super_effectiveness(rock,bug-dragon).
+super_effectiveness(rock,bug-dark).
+super_effectiveness(rock,bug-fairy).
+super_effectiveness(rock,rock-fire).
+super_effectiveness(rock,rock-ice).
+super_effectiveness(rock,rock-flying).
+super_effectiveness(rock,rock-bug).
+super_effectiveness(rock,ghost-fire).
+super_effectiveness(rock,ghost-ice).
+super_effectiveness(rock,ghost-flying).
+super_effectiveness(rock,ghost-bug).
+super_effectiveness(rock,dragon-fire).
+super_effectiveness(rock,dragon-ice).
+super_effectiveness(rock,dragon-flying).
+super_effectiveness(rock,dragon-bug).
+super_effectiveness(rock,dark-fire).
+super_effectiveness(rock,dark-ice).
+super_effectiveness(rock,dark-flying).
+super_effectiveness(rock,dark-bug).
+super_effectiveness(rock,fairy-fire).
+super_effectiveness(rock,fairy-ice).
+super_effectiveness(rock,fairy-flying).
+super_effectiveness(rock,fairy-bug).
+super_effectiveness(ghost,psychic).
+super_effectiveness(ghost,ghost).
+super_effectiveness(ghost,fire-psychic).
+super_effectiveness(ghost,fire-ghost).
+super_effectiveness(ghost,water-psychic).
+super_effectiveness(ghost,water-ghost).
+super_effectiveness(ghost,electric-psychic).
+super_effectiveness(ghost,electric-ghost).
+super_effectiveness(ghost,grass-psychic).
+super_effectiveness(ghost,grass-ghost).
+super_effectiveness(ghost,ice-psychic).
+super_effectiveness(ghost,ice-ghost).
+super_effectiveness(ghost,fighting-psychic).
+super_effectiveness(ghost,fighting-ghost).
+super_effectiveness(ghost,poison-psychic).
+super_effectiveness(ghost,poison-ghost).
+super_effectiveness(ghost,ground-psychic).
+super_effectiveness(ghost,ground-ghost).
+super_effectiveness(ghost,flying-psychic).
+super_effectiveness(ghost,flying-ghost).
+super_effectiveness(ghost,psychic-fire).
+super_effectiveness(ghost,psychic-water).
+super_effectiveness(ghost,psychic-electric).
+super_effectiveness(ghost,psychic-grass).
+super_effectiveness(ghost,psychic-ice).
+super_effectiveness(ghost,psychic-fighting).
+super_effectiveness(ghost,psychic-poison).
+super_effectiveness(ghost,psychic-ground).
+super_effectiveness(ghost,psychic-flying).
+super_effectiveness(ghost,psychic-bug).
+super_effectiveness(ghost,psychic-rock).
+super_effectiveness(ghost,psychic-dragon).
+super_effectiveness(ghost,psychic-steel).
+super_effectiveness(ghost,psychic-fairy).
+super_effectiveness(ghost,bug-psychic).
+super_effectiveness(ghost,bug-ghost).
+super_effectiveness(ghost,rock-psychic).
+super_effectiveness(ghost,rock-ghost).
+super_effectiveness(ghost,ghost-fire).
+super_effectiveness(ghost,ghost-water).
+super_effectiveness(ghost,ghost-electric).
+super_effectiveness(ghost,ghost-grass).
+super_effectiveness(ghost,ghost-ice).
+super_effectiveness(ghost,ghost-fighting).
+super_effectiveness(ghost,ghost-poison).
+super_effectiveness(ghost,ghost-ground).
+super_effectiveness(ghost,ghost-flying).
+super_effectiveness(ghost,ghost-bug).
+super_effectiveness(ghost,ghost-rock).
+super_effectiveness(ghost,ghost-dragon).
+super_effectiveness(ghost,ghost-steel).
+super_effectiveness(ghost,ghost-fairy).
+super_effectiveness(ghost,dragon-psychic).
+super_effectiveness(ghost,dragon-ghost).
+super_effectiveness(ghost,steel-psychic).
+super_effectiveness(ghost,steel-ghost).
+super_effectiveness(ghost,fairy-psychic).
+super_effectiveness(ghost,fairy-ghost).
+super_effectiveness(dragon,dragon).
+super_effectiveness(dragon,normal-dragon).
+super_effectiveness(dragon,fire-dragon).
+super_effectiveness(dragon,water-dragon).
+super_effectiveness(dragon,electric-dragon).
+super_effectiveness(dragon,grass-dragon).
+super_effectiveness(dragon,ice-dragon).
+super_effectiveness(dragon,fighting-dragon).
+super_effectiveness(dragon,poison-dragon).
+super_effectiveness(dragon,ground-dragon).
+super_effectiveness(dragon,flying-dragon).
+super_effectiveness(dragon,psychic-dragon).
+super_effectiveness(dragon,bug-dragon).
+super_effectiveness(dragon,rock-dragon).
+super_effectiveness(dragon,ghost-dragon).
+super_effectiveness(dragon,dragon-normal).
+super_effectiveness(dragon,dragon-fire).
+super_effectiveness(dragon,dragon-water).
+super_effectiveness(dragon,dragon-electric).
+super_effectiveness(dragon,dragon-grass).
+super_effectiveness(dragon,dragon-ice).
+super_effectiveness(dragon,dragon-fighting).
+super_effectiveness(dragon,dragon-poison).
+super_effectiveness(dragon,dragon-ground).
+super_effectiveness(dragon,dragon-flying).
+super_effectiveness(dragon,dragon-psychic).
+super_effectiveness(dragon,dragon-bug).
+super_effectiveness(dragon,dragon-rock).
+super_effectiveness(dragon,dragon-ghost).
+super_effectiveness(dragon,dragon-dark).
+super_effectiveness(dragon,dark-dragon).
+super_effectiveness(dark,psychic).
+super_effectiveness(dark,ghost).
+super_effectiveness(dark,normal-psychic).
+super_effectiveness(dark,normal-ghost).
+super_effectiveness(dark,fire-psychic).
+super_effectiveness(dark,fire-ghost).
+super_effectiveness(dark,water-psychic).
+super_effectiveness(dark,water-ghost).
+super_effectiveness(dark,electric-psychic).
+super_effectiveness(dark,electric-ghost).
+super_effectiveness(dark,grass-psychic).
+super_effectiveness(dark,grass-ghost).
+super_effectiveness(dark,ice-psychic).
+super_effectiveness(dark,ice-ghost).
+super_effectiveness(dark,poison-psychic).
+super_effectiveness(dark,poison-ghost).
+super_effectiveness(dark,ground-psychic).
+super_effectiveness(dark,ground-ghost).
+super_effectiveness(dark,flying-psychic).
+super_effectiveness(dark,flying-ghost).
+super_effectiveness(dark,psychic-normal).
+super_effectiveness(dark,psychic-fire).
+super_effectiveness(dark,psychic-water).
+super_effectiveness(dark,psychic-electric).
+super_effectiveness(dark,psychic-grass).
+super_effectiveness(dark,psychic-ice).
+super_effectiveness(dark,psychic-poison).
+super_effectiveness(dark,psychic-ground).
+super_effectiveness(dark,psychic-flying).
+super_effectiveness(dark,psychic-bug).
+super_effectiveness(dark,psychic-rock).
+super_effectiveness(dark,psychic-dragon).
+super_effectiveness(dark,psychic-steel).
+super_effectiveness(dark,bug-psychic).
+super_effectiveness(dark,bug-ghost).
+super_effectiveness(dark,rock-psychic).
+super_effectiveness(dark,rock-ghost).
+super_effectiveness(dark,ghost-normal).
+super_effectiveness(dark,ghost-fire).
+super_effectiveness(dark,ghost-water).
+super_effectiveness(dark,ghost-electric).
+super_effectiveness(dark,ghost-grass).
+super_effectiveness(dark,ghost-ice).
+super_effectiveness(dark,ghost-poison).
+super_effectiveness(dark,ghost-ground).
+super_effectiveness(dark,ghost-flying).
+super_effectiveness(dark,ghost-bug).
+super_effectiveness(dark,ghost-rock).
+super_effectiveness(dark,ghost-dragon).
+super_effectiveness(dark,ghost-steel).
+super_effectiveness(dark,dragon-psychic).
+super_effectiveness(dark,dragon-ghost).
+super_effectiveness(dark,steel-psychic).
+super_effectiveness(dark,steel-ghost).
+super_effectiveness(steel,ice).
+super_effectiveness(steel,rock).
+super_effectiveness(steel,fairy).
+super_effectiveness(steel,normal-ice).
+super_effectiveness(steel,normal-rock).
+super_effectiveness(steel,normal-fairy).
+super_effectiveness(steel,grass-ice).
+super_effectiveness(steel,grass-rock).
+super_effectiveness(steel,grass-fairy).
+super_effectiveness(steel,ice-normal).
+super_effectiveness(steel,ice-grass).
+super_effectiveness(steel,ice-fighting).
+super_effectiveness(steel,ice-poison).
+super_effectiveness(steel,ice-ground).
+super_effectiveness(steel,ice-flying).
+super_effectiveness(steel,ice-psychic).
+super_effectiveness(steel,ice-bug).
+super_effectiveness(steel,ice-ghost).
+super_effectiveness(steel,ice-dragon).
+super_effectiveness(steel,ice-dark).
+super_effectiveness(steel,fighting-ice).
+super_effectiveness(steel,fighting-poison).
+super_effectiveness(steel,fighting-rock).
+super_effectiveness(steel,fighting-fairy).
+super_effectiveness(steel,poison-ice).
+super_effectiveness(steel,poison-fighting).
+super_effectiveness(steel,poison-rock).
+super_effectiveness(steel,poison-fairy).
+super_effectiveness(steel,ground-ice).
+super_effectiveness(steel,ground-rock).
+super_effectiveness(steel,ground-fairy).
+super_effectiveness(steel,flying-ice).
+super_effectiveness(steel,flying-rock).
+super_effectiveness(steel,flying-fairy).
+super_effectiveness(steel,psychic-ice).
+super_effectiveness(steel,psychic-rock).
+super_effectiveness(steel,psychic-fairy).
+super_effectiveness(steel,bug-ice).
+super_effectiveness(steel,bug-rock).
+super_effectiveness(steel,bug-fairy).
+super_effectiveness(steel,rock-normal).
+super_effectiveness(steel,rock-grass).
+super_effectiveness(steel,rock-fighting).
+super_effectiveness(steel,rock-poison).
+super_effectiveness(steel,rock-ground).
+super_effectiveness(steel,rock-flying).
+super_effectiveness(steel,rock-psychic).
+super_effectiveness(steel,rock-bug).
+super_effectiveness(steel,rock-ghost).
+super_effectiveness(steel,rock-dragon).
+super_effectiveness(steel,rock-dark).
+super_effectiveness(steel,ghost-ice).
+super_effectiveness(steel,ghost-rock).
+super_effectiveness(steel,ghost-fairy).
+super_effectiveness(steel,dragon-ice).
+super_effectiveness(steel,dragon-rock).
+super_effectiveness(steel,dragon-fairy).
+super_effectiveness(steel,dark-ice).
+super_effectiveness(steel,dark-rock).
+super_effectiveness(steel,dark-fairy).
+super_effectiveness(steel,fairy-normal).
+super_effectiveness(steel,fairy-grass).
+super_effectiveness(steel,fairy-fighting).
+super_effectiveness(steel,fairy-poison).
+super_effectiveness(steel,fairy-ground).
+super_effectiveness(steel,fairy-flying).
+super_effectiveness(steel,fairy-psychic).
+super_effectiveness(steel,fairy-bug).
+super_effectiveness(steel,fairy-ghost).
+super_effectiveness(steel,fairy-dragon).
+super_effectiveness(steel,fairy-dark).
+super_effectiveness(fairy,fighting).
+super_effectiveness(fairy,dragon).
+super_effectiveness(fairy,dark).
+super_effectiveness(fairy,normal-ice).
+super_effectiveness(fairy,normal-dragon).
+super_effectiveness(fairy,normal-dark).
+super_effectiveness(fairy,water-fighting).
+super_effectiveness(fairy,water-dragon).
+super_effectiveness(fairy,water-dark).
+super_effectiveness(fairy,electric-fighting).
+super_effectiveness(fairy,electric-dragon).
+super_effectiveness(fairy,electric-dark).
+super_effectiveness(fairy,grass-fighting).
+super_effectiveness(fairy,grass-dragon).
+super_effectiveness(fairy,grass-dark).
+super_effectiveness(fairy,ice-fighting).
+super_effectiveness(fairy,ice-dragon).
+super_effectiveness(fairy,ice-dark).
+super_effectiveness(fairy,fighting-normal).
+super_effectiveness(fairy,fighting-water).
+super_effectiveness(fairy,fighting-electric).
+super_effectiveness(fairy,fighting-grass).
+super_effectiveness(fairy,fighting-ice).
+super_effectiveness(fairy,fighting-ground).
+super_effectiveness(fairy,fighting-flying).
+super_effectiveness(fairy,fighting-psychic).
+super_effectiveness(fairy,fighting-bug).
+super_effectiveness(fairy,fighting-rock).
+super_effectiveness(fairy,fighting-ghost).
+super_effectiveness(fairy,fighting-fairy).
+super_effectiveness(fairy,ground-fighting).
+super_effectiveness(fairy,ground-dragon).
+super_effectiveness(fairy,ground-dark).
+super_effectiveness(fairy,flying-fighting).
+super_effectiveness(fairy,flying-dragon).
+super_effectiveness(fairy,flying-dark).
+super_effectiveness(fairy,psychic-fighting).
+super_effectiveness(fairy,psychic-dragon).
+super_effectiveness(fairy,psychic-dark).
+super_effectiveness(fairy,bug-fighting).
+super_effectiveness(fairy,bug-dragon).
+super_effectiveness(fairy,bug-dark).
+super_effectiveness(fairy,rock-fighting).
+super_effectiveness(fairy,rock-dragon).
+super_effectiveness(fairy,rock-dark).
+super_effectiveness(fairy,ghost-fighting).
+super_effectiveness(fairy,ghost-dragon).
+super_effectiveness(fairy,ghost-dark).
+super_effectiveness(fairy,dragon-normal).
+super_effectiveness(fairy,dragon-water).
+super_effectiveness(fairy,dragon-electric).
+super_effectiveness(fairy,dragon-grass).
+super_effectiveness(fairy,dragon-ice).
+super_effectiveness(fairy,dragon-ground).
+super_effectiveness(fairy,dragon-flying).
+super_effectiveness(fairy,dragon-psychic).
+super_effectiveness(fairy,dragon-bug).
+super_effectiveness(fairy,dragon-rock).
+super_effectiveness(fairy,dragon-ghost).
+super_effectiveness(fairy,dragon-fairy).
+super_effectiveness(fairy,dark-normal).
+super_effectiveness(fairy,dark-water).
+super_effectiveness(fairy,dark-electric).
+super_effectiveness(fairy,dark-grass).
+super_effectiveness(fairy,dark-ice).
+super_effectiveness(fairy,dark-ground).
+super_effectiveness(fairy,dark-flying).
+super_effectiveness(fairy,dark-psychic).
+super_effectiveness(fairy,dark-bug).
+super_effectiveness(fairy,dark-rock).
+super_effectiveness(fairy,dark-ghost).
+super_effectiveness(fairy,dark-fairy).
+super_effectiveness(fairy,fairy-fighting).
+super_effectiveness(fairy,fairy-dragon).
+super_effectiveness(fairy,fairy-dark).
 
-/* Efetividade tipo fogo */
-normalmente_efetivo(fogo,normal)
-desvantagem(fogo,fogo)
-desvantagem(fogo,agua)
-normalmente_efetivo(fogo,eletrico)
-vantagem(fogo,planta)
-vantagem(fogo,gelo)
-normalmente_efetivo(fogo,lutador)
-normalmente_efetivo(fogo,veneno)
-normalmente_efetivo(fogo,terra)
-normalmente_efetivo(fogo,voador)
-normalmente_efetivo(fogo,psiquico)
-vantagem(fogo,inseto)
-desvantagem(fogo,pedra)
-normalmente_efetivo(fogo,fantasma)
-desvantagem(fogo,dragao)
-normalmente_efetivo(fogo,noturno)
-vantagem(fogo,metalico)
-normalmente_efetivo(fogo,fada)
-desvantagem(fogo,normal-fogo)
-desvantagem(fogo, normal-agua)
-normalmente_efetivo(fogo, normal-eletrico)
-vantagem(fogo, normal-planta)
-vantagem(fogo, normal-gelo)
-normalmente_efetivo(fogo, normal-lutador)
-normalmente_efetivo(fogo, normal-veneno)
-normalmente_efetivo(fogo, normal-terra)
-normalmente_efetivo(fogo, normal-voador)
-normalmente_efetivo(fogo, normal-psiquico)
-vantagem(fogo, normal-inseto)
-desvantagem(fogo, normal-pedra)
-normalmente_efetivo(fogo, normal-fantasma)
-desvantagem(fogo, normal-dragao)
-normalmente_efetivo(fogo, normal-noturno)
-vantagem(fogo, normal-metalico)
-normalmente_efetivo(fogo, normal-fada)
-desvantagem(fogo, fogo-normal)
-super_desvantagem(fogo, fogo-agua)
-desvantagem(fogo, fogo-eletrico)
-normalmente_efetivo(fogo, fogo-planta)
-normalmente_efetivo(fogo, fogo-gelo)
-desvantagem(fogo, fogo-lutador)
-desvantagem(fogo, fogo-veneno)
-desvantagem(fogo, fogo-terra)
-desvantagem(fogo, fogo-voador)
-desvantagem(fogo, fogo-psiquico)
-normalmente_efetivo(fogo, fogo-inseto)
-super_desvantagem(fogo, fogo-pedra)
-desvantagem(fogo, fogo-fantasma)
-super_desvantagem(fogo, fogo-dragao)
-desvantagem(fogo, fogo-noturno)
-normalmente_efetivo(fogo, fogo-metalico)
-desvantagem(fogo, fogo-fada)
-desvantagem(fogo, agua-normal)
-super_desvantagem(fogo, agua-fogo)
-desvantagem(fogo, agua-eletrico)
-normalmente_efetivo(fogo, agua-planta)
-normalmente_efetivo(fogo, agua-gelo)
-desvantagem(fogo, agua-lutador)
-desvantagem(fogo, agua-veneno)
-desvantagem(fogo, agua-terra)
-desvantagem(fogo, agua-voador)
-desvantagem(fogo, agua-psiquico)
-normalmente_efetivo(fogo, agua-inseto)
-super_desvantagem(fogo, agua-pedra)
-desvantagem(fogo, agua-fantasma)
-super_desvantagem(fogo, agua-dragao)
-desvantagem(fogo, agua-noturno)
-normalmente_efetivo(fogo, agua-metalico)
-desvantagem(fogo, agua-fada)
-normalmente_efetivo(fogo, eletrico-normal)
-desvantagem(fogo, eletrico-fogo)
-desvantagem(fogo, eletrico-agua)
-vantagem(fogo, eletrico-planta)
-vantagem(fogo, eletrico-gelo)
-normalmente_efetivo(fogo, eletrico-lutador)
-normalmente_efetivo(fogo, eletrico-veneno)
-normalmente_efetivo(fogo, eletrico-terra)
-normalmente_efetivo(fogo, eletrico-voador)
-normalmente_efetivo(fogo, eletrico-psiquico)
-vantagem(fogo, eletrico-inseto)
-desvantagem(fogo, eletrico-pedra)
-normalmente_efetivo(fogo, eletrico-fantasma)
-desvantagem(fogo, eletrico-dragao)
-normalmente_efetivo(fogo, eletrico-noturno)
-vantagem(fogo, eletrico-metalico)
-normalmente_efetivo(fogo, eletrico-fada)
-vantagem(fogo, planta-normal)
-normalmente_efetivo(fogo, planta-fogo)
-normalmente_efetivo(fogo, planta-agua)
-vantagem(fogo, planta-eletrico)
-super_vantagem(fogo, planta-gelo)
-vantagem(fogo, planta-lutador)
-vantagem(fogo, planta-veneno)
-vantagem(fogo, planta-terra)
-vantagem(fogo, planta-voador)
-vantagem(fogo, planta-psiquico)
-super_vantagem(fogo, planta-inseto)
-normalmente_efetivo(fogo, planta-pedra)
-vantagem(fogo, planta-fantasma)
-normalmente_efetivo(fogo, planta-dragao)
-vantagem(fogo, planta-noturno)
-super_vantagem(fogo, planta-metalico)
-vantagem(fogo, planta-fada)
-vantagem(fogo, gelo-normal)
-normalmente_efetivo(fogo, gelo-fogo)
-normalmente_efetivo(fogo, gelo-agua)
-vantagem(fogo, gelo-eletrico)
-super_vantagem(fogo, gelo-planta)
-vantagem(fogo, gelo-lutador)
-vantagem(fogo, gelo-veneno)
-vantagem(fogo, gelo-terra)
-vantagem(fogo, gelo-voador)
-vantagem(fogo, gelo-psiquico)
-super_vantagem(fogo, gelo-inseto)
-normalmente_efetivo(fogo, gelo-pedra)
-vantagem(fogo, gelo-fantasma)
-normalmente_efetivo(fogo, gelo-dragao)
-vantagem(fogo, gelo-noturno)
-super_vantagem(fogo, gelo-metalico)
-vantagem(fogo, gelo-fada)
-normalmente_efetivo(fogo, lutador-normal)
-desvantagem(fogo, lutador-fogo)
-desvantagem(fogo, lutador-agua)
-normalmente_efetivo(fogo, lutador-eletrico)
-vantagem(fogo, lutador-planta)
-vantagem(fogo, lutador-gelo)
-vantagem(fogo, lutador-veneno)
-normalmente_efetivo(fogo, lutador-terra)
-normalmente_efetivo(fogo, lutador-voador)
-normalmente_efetivo(fogo, lutador-psiquico)
-vantagem(fogo, lutador-inseto)
-desvantagem(fogo, lutador-pedra)
-normalmente_efetivo(fogo, lutador-fantasma)
-desvantagem(fogo, lutador-dragao)
-normalmente_efetivo(fogo, lutador-noturno)
-vantagem(fogo, lutador-metalico)
-normalmente_efetivo(fogo, lutador-fada)
-normalmente_efetivo(fogo, veneno-normal)
-desvantagem(fogo, veneno-fogo)
-desvantagem(fogo, veneno-agua)
-normalmente_efetivo(fogo, veneno-eletrico)
-vantagem(fogo, veneno-planta)
-vantagem(fogo, veneno-gelo)
-vantagem(fogo, veneno-lutador)
-normalmente_efetivo(fogo, veneno-terra)
-normalmente_efetivo(fogo, veneno-voador)
-normalmente_efetivo(fogo, veneno-psiquico)
-vantagem(fogo, veneno-inseto)
-desvantagem(fogo, veneno-pedra)
-normalmente_efetivo(fogo, veneno-fantasma)
-desvantagem(fogo, veneno-dragao)
-normalmente_efetivo(fogo, veneno-noturno)
-vantagem(fogo, veneno-metalico)
-normalmente_efetivo(fogo, veneno-fada)
-normalmente_efetivo(fogo, terra-normal)
-desvantagem(fogo, terra-fogo)
-desvantagem(fogo, terra-agua)
-normalmente_efetivo(fogo, terra-eletrico)
-vantagem(fogo, terra-planta)
-vantagem(fogo, terra-gelo)
-normalmente_efetivo(fogo, terra-lutador)
-normalmente_efetivo(fogo, terra-veneno)
-normalmente_efetivo(fogo, terra-voador)
-normalmente_efetivo(fogo, terra-psiquico)
-vantagem(fogo, terra-inseto)
-desvantagem(fogo, terra-pedra)
-normalmente_efetivo(fogo, terra-fantasma)
-desvantagem(fogo, terra-dragao)
-normalmente_efetivo(fogo, terra-noturno)
-vantagem(fogo, terra-metalico)
-normalmente_efetivo(fogo, terra-fada)
-normalmente_efetivo(fogo, voador-normal)
-desvantagem(fogo, voador-fogo)
-desvantagem(fogo, voador-agua)
-normalmente_efetivo(fogo, voador-eletrico)
-vantagem(fogo, voador-planta)
-vantagem(fogo, voador-gelo)
-normalmente_efetivo(fogo, voador-lutador)
-normalmente_efetivo(fogo, voador-veneno)
-normalmente_efetivo(fogo, voador-terra)
-normalmente_efetivo(fogo, voador-psiquico)
-vantagem(fogo, voador-inseto)
-desvantagem(fogo, voador-pedra)
-normalmente_efetivo(fogo, voador-fantasma)
-desvantagem(fogo, voador-dragao)
-normalmente_efetivo(fogo, voador-noturno)
-vantagem(fogo, voador-metalico)
-normalmente_efetivo(fogo, voador-fada)
-normalmente_efetivo(fogo, psiquico-normal)
-desvantagem(fogo, psiquico-fogo)
-desvantagem(fogo, psiquico-agua)
-normalmente_efetivo(fogo, psiquico-eletrico)
-vantagem(fogo, psiquico-planta)
-vantagem(fogo, psiquico-gelo)
-normalmente_efetivo(fogo, psiquico-lutador)
-normalmente_efetivo(fogo, psiquico-veneno)
-normalmente_efetivo(fogo, psiquico-terra)
-normalmente_efetivo(fogo, psiquico-voador)
-vantagem(fogo, psiquico-inseto)
-desvantagem(fogo, psiquico-pedra)
-normalmente_efetivo(fogo, psiquico-fantasma)
-desvantagem(fogo, psiquico-dragao)
-normalmente_efetivo(fogo, psiquico-noturno)
-vantagem(fogo, psiquico-metalico)
-normalmente_efetivo(fogo, psiquico-fada)
-vantagem(fogo, inseto-normal)
-normalmente_efetivo(fogo, inseto-fogo)
-normalmente_efetivo(fogo, inseto-agua)
-vantagem(fogo, inseto-eletrico)
-super_vantagem(fogo, inseto-planta)
-super_vantagem(fogo, inseto-gelo)
-vantagem(fogo, inseto-lutador)
-vantagem(fogo, inseto-veneno)
-vantagem(fogo, inseto-terra)
-vantagem(fogo, inseto-voador)
-vantagem(fogo, inseto-psiquico)
-normalmente_efetivo(fogo, inseto-pedra)
-vantagem(fogo, inseto-fantasma)
-normalmente_efetivo(fogo, inseto-dragao)
-vantagem(fogo, inseto-noturno)
-super_vantagem(fogo, inseto-metalico)
-vantagem(fogo, inseto-fada)
-desvantagem(fogo, pedra-normal)
-super_desvantagem(fogo, pedra-fogo)
-super_desvantagem(fogo, pedra-agua)
-desvantagem(fogo, pedra-eletrico)
-normalmente_efetivo(fogo, pedra-planta)
-normalmente_efetivo(fogo, pedra-gelo)
-desvantagem(fogo, pedra-lutador)
-desvantagem(fogo, pedra-veneno)
-desvantagem(fogo, pedra-terra)
-desvantagem(fogo, pedra-voador)
-desvantagem(fogo, pedra-psiquico)
-normalmente_efetivo(fogo, pedra-inseto)
-desvantagem(fogo, pedra-fantasma)
-super_desvantagem(fogo, pedra-dragao)
-desvantagem(fogo, pedra-noturno)
-normalmente_efetivo(fogo, pedra-metalico)
-desvantagem(fogo, pedra-fada)
-normalmente_efetivo(fogo, fantasma-normal)
-desvantagem(fogo, fantasma-fogo)
-desvantagem(fogo, fantasma-agua)
-normalmente_efetivo(fogo, fantasma-eletrico)
-vantagem(fogo, fantasma-planta)
-vantagem(fogo, fantasma-gelo)
-normalmente_efetivo(fogo, fantasma-lutador)
-normalmente_efetivo(fogo, fantasma-veneno)
-normalmente_efetivo(fogo, fantasma-terra)
-normalmente_efetivo(fogo, fantasma-voador)
-normalmente_efetivo(fogo, fantasma-psiquico)
-vantagem(fogo, fantasma-inseto)
-desvantagem(fogo, fantasma-pedra)
-desvantagem(fogo, fantasma-dragao)
-normalmente_efetivo(fogo, fantasma-noturno)
-vantagem(fogo, fantasma-metalico)
-normalmente_efetivo(fogo, fantasma-fada)
-desvantagem(fogo, dragao-normal)
-super_desvantagem(fogo, dragao-fogo)
-super_desvantagem(fogo, dragao-agua)
-desvantagem(fogo, dragao-eletrico)
-normalmente_efetivo(fogo, dragao-planta)
-normalmente_efetivo(fogo, dragao-gelo)
-desvantagem(fogo, dragao-lutador)
-desvantagem(fogo, dragao-veneno)
-desvantagem(fogo, dragao-terra)
-desvantagem(fogo, dragao-voador)
-desvantagem(fogo, dragao-psiquico)
-normalmente_efetivo(fogo, dragao-inseto)
-super_desvantagem(fogo, dragao-pedra)
-desvantagem(fogo, dragao-fantasma)
-desvantagem(fogo, dragao-noturno)
-normalmente_efetivo(fogo, dragao-metalico)
-desvantagem(fogo, dragao-fada)
-normalmente_efetivo(fogo, noturno-normal)
-desvantagem(fogo, noturno-fogo)
-desvantagem(fogo, noturno-agua)
-normalmente_efetivo(fogo, noturno-eletrico)
-vantagem(fogo, noturno-planta)
-vantagem(fogo, noturno-gelo)
-normalmente_efetivo(fogo, noturno-lutador)
-normalmente_efetivo(fogo, noturno-veneno)
-normalmente_efetivo(fogo, noturno-terra)
-normalmente_efetivo(fogo, noturno-voador)
-normalmente_efetivo(fogo, noturno-psiquico)
-vantagem(fogo, noturno-inseto)
-desvantagem(fogo, noturno-pedra)
-normalmente_efetivo(fogo, noturno-fantasma)
-desvantagem(fogo, noturno-dragao)
-vantagem(fogo, noturno-metalico)
-normalmente_efetivo(fogo, noturno-fada)
-vantagem(fogo, metalico-normal)
-normalmente_efetivo(fogo, metalico-fogo)
-normalmente_efetivo(fogo, metalico-agua)
-vantagem(fogo, metalico-eletrico)
-super_vantagem(fogo, metalico-planta)
-super_vantagem(fogo, metalico-gelo)
-vantagem(fogo, metalico-lutador)
-vantagem(fogo, metalico-veneno)
-vantagem(fogo, metalico-terra)
-vantagem(fogo, metalico-voador)
-vantagem(fogo, metalico-psiquico)
-super_vantagem(fogo, metalico-inseto)
-normalmente_efetivo(fogo, metalico-pedra)
-vantagem(fogo, metalico-fantasma)
-normalmente_efetivo(fogo, metalico-dragao)
-vantagem(fogo, metalico-noturno)
-vantagem(fogo, metalico-fada)
-normalmente_efetivo(fogo, fada-normal)
-desvantagem(fogo, fada-fogo)
-desvantagem(fogo, fada-agua)
-normalmente_efetivo(fogo, fada-eletrico)
-vantagem(fogo, fada-planta)
-vantagem(fogo, fada-gelo)
-normalmente_efetivo(fogo, fada-lutador)
-normalmente_efetivo(fogo, fada-veneno)
-normalmente_efetivo(fogo, fada-terra)
-normalmente_efetivo(fogo, fada-voador)
-normalmente_efetivo(fogo, fada-psiquico)
-vantagem(fogo, fada-inseto)
-desvantagem(fogo, fada-pedra)
-normalmente_efetivo(fogo, fada-fantasma)
-desvantagem(fogo, fada-dragao)
-normalmente_efetivo(fogo, fada-noturno)
-vantagem(fogo, fada-metalico)
+normal_effectiveness(normal,normal).
+normal_effectiveness(normal,fire).
+normal_effectiveness(normal,water).
+normal_effectiveness(normal,electric).
+normal_effectiveness(normal,grass).
+normal_effectiveness(normal,ice).
+normal_effectiveness(normal,fighting).
+normal_effectiveness(normal,poison).
+normal_effectiveness(normal,ground).
+normal_effectiveness(normal,flying).
+normal_effectiveness(normal,psychic).
+normal_effectiveness(normal,bug).
+normal_effectiveness(normal,dragon).
+normal_effectiveness(normal,dark).
+normal_effectiveness(normal,fairy).
+normal_effectiveness(normal,normal-fire).
+normal_effectiveness(normal,normal-water).
+normal_effectiveness(normal,normal-electric).
+normal_effectiveness(normal,normal-grass).
+normal_effectiveness(normal,normal-ice).
+normal_effectiveness(normal,normal-fighting).
+normal_effectiveness(normal,normal-poison).
+normal_effectiveness(normal,normal-ground).
+normal_effectiveness(normal,normal-flying).
+normal_effectiveness(normal,normal-psychic).
+normal_effectiveness(normal,normal-bug).
+normal_effectiveness(normal,normal-dragon).
+normal_effectiveness(normal,normal-dark).
+normal_effectiveness(normal,normal-fairy).
+normal_effectiveness(normal,fire-normal).
+normal_effectiveness(normal,fire-water).
+normal_effectiveness(normal,fire-electric).
+normal_effectiveness(normal,fire-grass).
+normal_effectiveness(normal,fire-ice).
+normal_effectiveness(normal,fire-fighting).
+normal_effectiveness(normal,fire-poison).
+normal_effectiveness(normal,fire-ground).
+normal_effectiveness(normal,fire-flying).
+normal_effectiveness(normal,fire-psychic).
+normal_effectiveness(normal,fire-bug).
+normal_effectiveness(normal,fire-dragon).
+normal_effectiveness(normal,fire-dark).
+normal_effectiveness(normal,fire-fairy).
+normal_effectiveness(normal,water-normal).
+normal_effectiveness(normal,water-fire).
+normal_effectiveness(normal,water-electric).
+normal_effectiveness(normal,water-grass).
+normal_effectiveness(normal,water-ice).
+normal_effectiveness(normal,water-fighting).
+normal_effectiveness(normal,water-poison).
+normal_effectiveness(normal,water-ground).
+normal_effectiveness(normal,water-flying).
+normal_effectiveness(normal,water-psychic).
+normal_effectiveness(normal,water-bug).
+normal_effectiveness(normal,water-dragon).
+normal_effectiveness(normal,water-dark).
+normal_effectiveness(normal,water-fairy).
+normal_effectiveness(normal,electric-normal).
+normal_effectiveness(normal,electric-fire).
+normal_effectiveness(normal,electric-water).
+normal_effectiveness(normal,electric-grass).
+normal_effectiveness(normal,electric-ice).
+normal_effectiveness(normal,electric-fighting).
+normal_effectiveness(normal,electric-poison).
+normal_effectiveness(normal,electric-ground).
+normal_effectiveness(normal,electric-flying).
+normal_effectiveness(normal,electric-psychic).
+normal_effectiveness(normal,electric-bug).
+normal_effectiveness(normal,electric-dragon).
+normal_effectiveness(normal,electric-dark).
+normal_effectiveness(normal,electric-fairy).
+normal_effectiveness(normal,grass-normal).
+normal_effectiveness(normal,grass-fire).
+normal_effectiveness(normal,grass-water).
+normal_effectiveness(normal,grass-electric).
+normal_effectiveness(normal,grass-ice).
+normal_effectiveness(normal,grass-fighting).
+normal_effectiveness(normal,grass-poison).
+normal_effectiveness(normal,grass-ground).
+normal_effectiveness(normal,grass-flying).
+normal_effectiveness(normal,grass-psychic).
+normal_effectiveness(normal,grass-bug).
+normal_effectiveness(normal,grass-dragon).
+normal_effectiveness(normal,grass-dark).
+normal_effectiveness(normal,grass-fairy).
+normal_effectiveness(normal,ice-normal).
+normal_effectiveness(normal,ice-fire).
+normal_effectiveness(normal,ice-water).
+normal_effectiveness(normal,ice-electric).
+normal_effectiveness(normal,ice-grass).
+normal_effectiveness(normal,ice-fighting).
+normal_effectiveness(normal,ice-poison).
+normal_effectiveness(normal,ice-ground).
+normal_effectiveness(normal,ice-flying).
+normal_effectiveness(normal,ice-psychic).
+normal_effectiveness(normal,ice-bug).
+normal_effectiveness(normal,ice-dragon).
+normal_effectiveness(normal,ice-dark).
+normal_effectiveness(normal,ice-fairy).
+normal_effectiveness(normal,fighting-normal).
+normal_effectiveness(normal,fighting-fire).
+normal_effectiveness(normal,fighting-water).
+normal_effectiveness(normal,fighting-electric).
+normal_effectiveness(normal,fighting-grass).
+normal_effectiveness(normal,fighting-ice).
+normal_effectiveness(normal,fighting-poison).
+normal_effectiveness(normal,fighting-ground).
+normal_effectiveness(normal,fighting-flying).
+normal_effectiveness(normal,fighting-psychic).
+normal_effectiveness(normal,fighting-bug).
+normal_effectiveness(normal,fighting-dragon).
+normal_effectiveness(normal,fighting-dark).
+normal_effectiveness(normal,fighting-fairy).
+normal_effectiveness(normal,poison-normal).
+normal_effectiveness(normal,poison-fire).
+normal_effectiveness(normal,poison-water).
+normal_effectiveness(normal,poison-electric).
+normal_effectiveness(normal,poison-grass).
+normal_effectiveness(normal,poison-ice).
+normal_effectiveness(normal,poison-fighting).
+normal_effectiveness(normal,poison-ground).
+normal_effectiveness(normal,poison-flying).
+normal_effectiveness(normal,poison-psychic).
+normal_effectiveness(normal,poison-bug).
+normal_effectiveness(normal,poison-dragon).
+normal_effectiveness(normal,poison-dark).
+normal_effectiveness(normal,poison-fairy).
+normal_effectiveness(normal,ground-normal).
+normal_effectiveness(normal,ground-fire).
+normal_effectiveness(normal,ground-water).
+normal_effectiveness(normal,ground-electric).
+normal_effectiveness(normal,ground-grass).
+normal_effectiveness(normal,ground-ice).
+normal_effectiveness(normal,ground-fighting).
+normal_effectiveness(normal,ground-poison).
+normal_effectiveness(normal,ground-flying).
+normal_effectiveness(normal,ground-psychic).
+normal_effectiveness(normal,ground-bug).
+normal_effectiveness(normal,ground-dragon).
+normal_effectiveness(normal,ground-dark).
+normal_effectiveness(normal,ground-fairy).
+normal_effectiveness(normal,flying-normal).
+normal_effectiveness(normal,flying-fire).
+normal_effectiveness(normal,flying-water).
+normal_effectiveness(normal,flying-electric).
+normal_effectiveness(normal,flying-grass).
+normal_effectiveness(normal,flying-ice).
+normal_effectiveness(normal,flying-fighting).
+normal_effectiveness(normal,flying-poison).
+normal_effectiveness(normal,flying-ground).
+normal_effectiveness(normal,flying-psychic).
+normal_effectiveness(normal,flying-bug).
+normal_effectiveness(normal,flying-dragon).
+normal_effectiveness(normal,flying-dark).
+normal_effectiveness(normal,flying-fairy).
+normal_effectiveness(normal,psychic-normal).
+normal_effectiveness(normal,psychic-fire).
+normal_effectiveness(normal,psychic-water).
+normal_effectiveness(normal,psychic-electric).
+normal_effectiveness(normal,psychic-grass).
+normal_effectiveness(normal,psychic-ice).
+normal_effectiveness(normal,psychic-fighting).
+normal_effectiveness(normal,psychic-poison).
+normal_effectiveness(normal,psychic-ground).
+normal_effectiveness(normal,psychic-flying).
+normal_effectiveness(normal,psychic-bug).
+normal_effectiveness(normal,psychic-dragon).
+normal_effectiveness(normal,psychic-dark).
+normal_effectiveness(normal,psychic-fairy).
+normal_effectiveness(normal,bug-normal).
+normal_effectiveness(normal,bug-fire).
+normal_effectiveness(normal,bug-water).
+normal_effectiveness(normal,bug-electric).
+normal_effectiveness(normal,bug-grass).
+normal_effectiveness(normal,bug-ice).
+normal_effectiveness(normal,bug-fighting).
+normal_effectiveness(normal,bug-poison).
+normal_effectiveness(normal,bug-ground).
+normal_effectiveness(normal,bug-flying).
+normal_effectiveness(normal,bug-psychic).
+normal_effectiveness(normal,bug-dragon).
+normal_effectiveness(normal,bug-dark).
+normal_effectiveness(normal,bug-fairy).
+normal_effectiveness(normal,dragon-normal).
+normal_effectiveness(normal,dragon-fire).
+normal_effectiveness(normal,dragon-water).
+normal_effectiveness(normal,dragon-electric).
+normal_effectiveness(normal,dragon-grass).
+normal_effectiveness(normal,dragon-ice).
+normal_effectiveness(normal,dragon-fighting).
+normal_effectiveness(normal,dragon-poison).
+normal_effectiveness(normal,dragon-ground).
+normal_effectiveness(normal,dragon-flying).
+normal_effectiveness(normal,dragon-psychic).
+normal_effectiveness(normal,dragon-bug).
+normal_effectiveness(normal,dragon-dark).
+normal_effectiveness(normal,dragon-fairy).
+normal_effectiveness(normal,dark-normal).
+normal_effectiveness(normal,dark-fire).
+normal_effectiveness(normal,dark-water).
+normal_effectiveness(normal,dark-electric).
+normal_effectiveness(normal,dark-grass).
+normal_effectiveness(normal,dark-ice).
+normal_effectiveness(normal,dark-fighting).
+normal_effectiveness(normal,dark-poison).
+normal_effectiveness(normal,dark-ground).
+normal_effectiveness(normal,dark-flying).
+normal_effectiveness(normal,dark-psychic).
+normal_effectiveness(normal,dark-bug).
+normal_effectiveness(normal,dark-dragon).
+normal_effectiveness(normal,dark-fairy).
+normal_effectiveness(normal,fairy-normal).
+normal_effectiveness(normal,fairy-fire).
+normal_effectiveness(normal,fairy-water).
+normal_effectiveness(normal,fairy-electric).
+normal_effectiveness(normal,fairy-grass).
+normal_effectiveness(normal,fairy-ice).
+normal_effectiveness(normal,fairy-fighting).
+normal_effectiveness(normal,fairy-poison).
+normal_effectiveness(normal,fairy-ground).
+normal_effectiveness(normal,fairy-flying).
+normal_effectiveness(normal,fairy-psychic).
+normal_effectiveness(normal,fairy-bug).
+normal_effectiveness(normal,fairy-dragon).
+normal_effectiveness(normal,fairy-dark).
+normal_effectiveness(fire,normal).
+normal_effectiveness(fire,electric).
+normal_effectiveness(fire,fighting).
+normal_effectiveness(fire,poison).
+normal_effectiveness(fire,ground).
+normal_effectiveness(fire,flying).
+normal_effectiveness(fire,psychic).
+normal_effectiveness(fire,ghost).
+normal_effectiveness(fire,dark).
+normal_effectiveness(fire,fairy).
+normal_effectiveness(fire,normal-electric).
+normal_effectiveness(fire,normal-fighting).
+normal_effectiveness(fire,normal-poison).
+normal_effectiveness(fire,normal-ground).
+normal_effectiveness(fire,normal-flying).
+normal_effectiveness(fire,normal-psychic).
+normal_effectiveness(fire,normal-ghost).
+normal_effectiveness(fire,normal-dark).
+normal_effectiveness(fire,normal-fairy).
+normal_effectiveness(fire,fire-grass).
+normal_effectiveness(fire,fire-ice).
+normal_effectiveness(fire,fire-bug).
+normal_effectiveness(fire,fire-steel).
+normal_effectiveness(fire,water-grass).
+normal_effectiveness(fire,water-ice).
+normal_effectiveness(fire,water-bug).
+normal_effectiveness(fire,water-steel).
+normal_effectiveness(fire,electric-normal).
+normal_effectiveness(fire,electric-fighting).
+normal_effectiveness(fire,electric-poison).
+normal_effectiveness(fire,electric-ground).
+normal_effectiveness(fire,electric-flying).
+normal_effectiveness(fire,electric-psychic).
+normal_effectiveness(fire,electric-ghost).
+normal_effectiveness(fire,electric-dark).
+normal_effectiveness(fire,electric-fairy).
+normal_effectiveness(fire,grass-fire).
+normal_effectiveness(fire,grass-water).
+normal_effectiveness(fire,grass-rock).
+normal_effectiveness(fire,grass-dragon).
+normal_effectiveness(fire,ice-fire).
+normal_effectiveness(fire,ice-water).
+normal_effectiveness(fire,ice-rock).
+normal_effectiveness(fire,ice-dragon).
+normal_effectiveness(fire,fighting-normal).
+normal_effectiveness(fire,fighting-electric).
+normal_effectiveness(fire,fighting-ground).
+normal_effectiveness(fire,fighting-flying).
+normal_effectiveness(fire,fighting-psychic).
+normal_effectiveness(fire,fighting-ghost).
+normal_effectiveness(fire,fighting-dark).
+normal_effectiveness(fire,fighting-fairy).
+normal_effectiveness(fire,poison-normal).
+normal_effectiveness(fire,poison-electric).
+normal_effectiveness(fire,poison-ground).
+normal_effectiveness(fire,poison-flying).
+normal_effectiveness(fire,poison-psychic).
+normal_effectiveness(fire,poison-ghost).
+normal_effectiveness(fire,poison-dark).
+normal_effectiveness(fire,poison-fairy).
+normal_effectiveness(fire,ground-normal).
+normal_effectiveness(fire,ground-electric).
+normal_effectiveness(fire,ground-fighting).
+normal_effectiveness(fire,ground-poison).
+normal_effectiveness(fire,ground-flying).
+normal_effectiveness(fire,ground-psychic).
+normal_effectiveness(fire,ground-ghost).
+normal_effectiveness(fire,ground-dark).
+normal_effectiveness(fire,ground-fairy).
+normal_effectiveness(fire,flying-normal).
+normal_effectiveness(fire,flying-electric).
+normal_effectiveness(fire,flying-fighting).
+normal_effectiveness(fire,flying-poison).
+normal_effectiveness(fire,flying-ground).
+normal_effectiveness(fire,flying-psychic).
+normal_effectiveness(fire,flying-ghost).
+normal_effectiveness(fire,flying-dark).
+normal_effectiveness(fire,flying-fairy).
+normal_effectiveness(fire,psychic-normal).
+normal_effectiveness(fire,psychic-electric).
+normal_effectiveness(fire,psychic-fighting).
+normal_effectiveness(fire,psychic-poison).
+normal_effectiveness(fire,psychic-ground).
+normal_effectiveness(fire,psychic-flying).
+normal_effectiveness(fire,psychic-ghost).
+normal_effectiveness(fire,psychic-dark).
+normal_effectiveness(fire,psychic-fairy).
+normal_effectiveness(fire,bug-fire).
+normal_effectiveness(fire,bug-water).
+normal_effectiveness(fire,bug-rock).
+normal_effectiveness(fire,bug-dragon).
+normal_effectiveness(fire,rock-grass).
+normal_effectiveness(fire,rock-ice).
+normal_effectiveness(fire,rock-bug).
+normal_effectiveness(fire,rock-steel).
+normal_effectiveness(fire,ghost-normal).
+normal_effectiveness(fire,ghost-electric).
+normal_effectiveness(fire,ghost-fighting).
+normal_effectiveness(fire,ghost-poison).
+normal_effectiveness(fire,ghost-ground).
+normal_effectiveness(fire,ghost-flying).
+normal_effectiveness(fire,ghost-psychic).
+normal_effectiveness(fire,ghost-dark).
+normal_effectiveness(fire,ghost-fairy).
+normal_effectiveness(fire,dragon-grass).
+normal_effectiveness(fire,dragon-ice).
+normal_effectiveness(fire,dragon-bug).
+normal_effectiveness(fire,dragon-steel).
+normal_effectiveness(fire,dark-normal).
+normal_effectiveness(fire,dark-electric).
+normal_effectiveness(fire,dark-fighting).
+normal_effectiveness(fire,dark-poison).
+normal_effectiveness(fire,dark-ground).
+normal_effectiveness(fire,dark-flying).
+normal_effectiveness(fire,dark-psychic).
+normal_effectiveness(fire,dark-ghost).
+normal_effectiveness(fire,dark-fairy).
+normal_effectiveness(fire,steel-fire).
+normal_effectiveness(fire,steel-water).
+normal_effectiveness(fire,steel-rock).
+normal_effectiveness(fire,steel-dragon).
+normal_effectiveness(fire,fairy-normal).
+normal_effectiveness(fire,fairy-electric).
+normal_effectiveness(fire,fairy-fighting).
+normal_effectiveness(fire,fairy-poison).
+normal_effectiveness(fire,fairy-ground).
+normal_effectiveness(fire,fairy-flying).
+normal_effectiveness(fire,fairy-psychic).
+normal_effectiveness(fire,fairy-ghost).
+normal_effectiveness(fire,fairy-dark).
+normal_effectiveness(water,normal).
+normal_effectiveness(water,electric).
+normal_effectiveness(water,ice).
+normal_effectiveness(water,fighting).
+normal_effectiveness(water,poison).
+normal_effectiveness(water,flying).
+normal_effectiveness(water,psychic).
+normal_effectiveness(water,bug).
+normal_effectiveness(water,ghost).
+normal_effectiveness(water,dark).
+normal_effectiveness(water,steel).
+normal_effectiveness(water,fairy).
+normal_effectiveness(water,normal-electric).
+normal_effectiveness(water,normal-ice).
+normal_effectiveness(water,normal-fighting).
+normal_effectiveness(water,normal-poison).
+normal_effectiveness(water,normal-flying).
+normal_effectiveness(water,normal-psychic).
+normal_effectiveness(water,normal-bug).
+normal_effectiveness(water,normal-ghost).
+normal_effectiveness(water,normal-dark).
+normal_effectiveness(water,normal-steel).
+normal_effectiveness(water,normal-fairy).
+normal_effectiveness(water,fire-water).
+normal_effectiveness(water,fire-grass).
+normal_effectiveness(water,fire-dragon).
+normal_effectiveness(water,water-fire).
+normal_effectiveness(water,water-ground).
+normal_effectiveness(water,water-rock).
+normal_effectiveness(water,electric-normal).
+normal_effectiveness(water,electric-ice).
+normal_effectiveness(water,electric-fighting).
+normal_effectiveness(water,electric-poison).
+normal_effectiveness(water,electric-flying).
+normal_effectiveness(water,electric-psychic).
+normal_effectiveness(water,electric-bug).
+normal_effectiveness(water,electric-ghost).
+normal_effectiveness(water,electric-dark).
+normal_effectiveness(water,electric-steel).
+normal_effectiveness(water,electric-fairy).
+normal_effectiveness(water,grass-fire).
+normal_effectiveness(water,grass-ground).
+normal_effectiveness(water,grass-rock).
+normal_effectiveness(water,ice-normal).
+normal_effectiveness(water,ice-electric).
+normal_effectiveness(water,ice-fighting).
+normal_effectiveness(water,ice-poison).
+normal_effectiveness(water,ice-flying).
+normal_effectiveness(water,ice-psychic).
+normal_effectiveness(water,ice-bug).
+normal_effectiveness(water,ice-ghost).
+normal_effectiveness(water,ice-dark).
+normal_effectiveness(water,ice-steel).
+normal_effectiveness(water,ice-fairy).
+normal_effectiveness(water,fighting-normal).
+normal_effectiveness(water,fighting-electric).
+normal_effectiveness(water,fighting-ice).
+normal_effectiveness(water,fighting-poison).
+normal_effectiveness(water,fighting-flying).
+normal_effectiveness(water,fighting-psychic).
+normal_effectiveness(water,fighting-bug).
+normal_effectiveness(water,fighting-ghost).
+normal_effectiveness(water,fighting-dark).
+normal_effectiveness(water,fighting-steel).
+normal_effectiveness(water,fighting-fairy).
+normal_effectiveness(water,poison-normal).
+normal_effectiveness(water,poison-electric).
+normal_effectiveness(water,poison-ice).
+normal_effectiveness(water,poison-fighting).
+normal_effectiveness(water,poison-flying).
+normal_effectiveness(water,poison-psychic).
+normal_effectiveness(water,poison-bug).
+normal_effectiveness(water,poison-ghost).
+normal_effectiveness(water,poison-dark).
+normal_effectiveness(water,poison-steel).
+normal_effectiveness(water,poison-fairy).
+normal_effectiveness(water,ground-water).
+normal_effectiveness(water,ground-grass).
+normal_effectiveness(water,ground-dragon).
+normal_effectiveness(water,flying-normal).
+normal_effectiveness(water,flying-electric).
+normal_effectiveness(water,flying-ice).
+normal_effectiveness(water,flying-fighting).
+normal_effectiveness(water,flying-poison).
+normal_effectiveness(water,flying-psychic).
+normal_effectiveness(water,flying-bug).
+normal_effectiveness(water,flying-ghost).
+normal_effectiveness(water,flying-dark).
+normal_effectiveness(water,flying-steel).
+normal_effectiveness(water,flying-fairy).
+normal_effectiveness(water,psychic-normal).
+normal_effectiveness(water,psychic-electric).
+normal_effectiveness(water,psychic-ice).
+normal_effectiveness(water,psychic-fighting).
+normal_effectiveness(water,psychic-poison).
+normal_effectiveness(water,psychic-flying).
+normal_effectiveness(water,psychic-bug).
+normal_effectiveness(water,psychic-ghost).
+normal_effectiveness(water,psychic-dark).
+normal_effectiveness(water,psychic-steel).
+normal_effectiveness(water,psychic-fairy).
+normal_effectiveness(water,bug-normal).
+normal_effectiveness(water,bug-electric).
+normal_effectiveness(water,bug-ice).
+normal_effectiveness(water,bug-fighting).
+normal_effectiveness(water,bug-poison).
+normal_effectiveness(water,bug-flying).
+normal_effectiveness(water,bug-psychic).
+normal_effectiveness(water,bug-ghost).
+normal_effectiveness(water,bug-dark).
+normal_effectiveness(water,bug-steel).
+normal_effectiveness(water,bug-fairy).
+normal_effectiveness(water,rock-water).
+normal_effectiveness(water,rock-grass).
+normal_effectiveness(water,rock-dragon).
+normal_effectiveness(water,ghost-normal).
+normal_effectiveness(water,ghost-electric).
+normal_effectiveness(water,ghost-ice).
+normal_effectiveness(water,ghost-fighting).
+normal_effectiveness(water,ghost-poison).
+normal_effectiveness(water,ghost-flying).
+normal_effectiveness(water,ghost-psychic).
+normal_effectiveness(water,ghost-bug).
+normal_effectiveness(water,ghost-dark).
+normal_effectiveness(water,ghost-steel).
+normal_effectiveness(water,ghost-fairy).
+normal_effectiveness(water,dragon-fire).
+normal_effectiveness(water,dragon-ground).
+normal_effectiveness(water,dragon-rock).
+normal_effectiveness(water,dark-normal).
+normal_effectiveness(water,dark-electric).
+normal_effectiveness(water,dark-ice).
+normal_effectiveness(water,dark-fighting).
+normal_effectiveness(water,dark-poison).
+normal_effectiveness(water,dark-flying).
+normal_effectiveness(water,dark-psychic).
+normal_effectiveness(water,dark-bug).
+normal_effectiveness(water,dark-ghost).
+normal_effectiveness(water,dark-steel).
+normal_effectiveness(water,dark-fairy).
+normal_effectiveness(water,steel-normal).
+normal_effectiveness(water,steel-electric).
+normal_effectiveness(water,steel-ice).
+normal_effectiveness(water,steel-fighting).
+normal_effectiveness(water,steel-poison).
+normal_effectiveness(water,steel-flying).
+normal_effectiveness(water,steel-psychic).
+normal_effectiveness(water,steel-bug).
+normal_effectiveness(water,steel-ghost).
+normal_effectiveness(water,steel-dark).
+normal_effectiveness(water,steel-fairy).
+normal_effectiveness(water,fairy-normal).
+normal_effectiveness(water,fairy-electric).
+normal_effectiveness(water,fairy-ice).
+normal_effectiveness(water,fairy-fighting).
+normal_effectiveness(water,fairy-poison).
+normal_effectiveness(water,fairy-flying).
+normal_effectiveness(water,fairy-psychic).
+normal_effectiveness(water,fairy-bug).
+normal_effectiveness(water,fairy-ghost).
+normal_effectiveness(water,fairy-dark).
+normal_effectiveness(water,fairy-steel).
+normal_effectiveness(electric,normal).
+normal_effectiveness(electric,fire).
+normal_effectiveness(electric,ice).
+normal_effectiveness(electric,fighting).
+normal_effectiveness(electric,poison).
+normal_effectiveness(electric,psychic).
+normal_effectiveness(electric,bug).
+normal_effectiveness(electric,rock).
+normal_effectiveness(electric,ghost).
+normal_effectiveness(electric,dark).
+normal_effectiveness(electric,steel).
+normal_effectiveness(electric,fairy).
+normal_effectiveness(electric,normal-fire).
+normal_effectiveness(electric,normal-ice).
+normal_effectiveness(electric,normal-fighting).
+normal_effectiveness(electric,normal-poison).
+normal_effectiveness(electric,normal-psychic).
+normal_effectiveness(electric,normal-bug).
+normal_effectiveness(electric,normal-rock).
+normal_effectiveness(electric,normal-ghost).
+normal_effectiveness(electric,normal-dark).
+normal_effectiveness(electric,normal-steel).
+normal_effectiveness(electric,normal-fairy).
+normal_effectiveness(electric,fire-normal).
+normal_effectiveness(electric,fire-ice).
+normal_effectiveness(electric,fire-fighting).
+normal_effectiveness(electric,fire-poison).
+normal_effectiveness(electric,fire-psychic).
+normal_effectiveness(electric,fire-bug).
+normal_effectiveness(electric,fire-rock).
+normal_effectiveness(electric,fire-ghost).
+normal_effectiveness(electric,fire-dark).
+normal_effectiveness(electric,fire-steel).
+normal_effectiveness(electric,fire-fairy).
+normal_effectiveness(electric,water-electric).
+normal_effectiveness(electric,water-grass).
+normal_effectiveness(electric,water-ice).
+normal_effectiveness(electric,water-dragon).
+normal_effectiveness(electric,electric-water).
+normal_effectiveness(electric,electric-flying).
+normal_effectiveness(electric,grass-water).
+normal_effectiveness(electric,grass-flying).
+normal_effectiveness(electric,ice-normal).
+normal_effectiveness(electric,ice-fire).
+normal_effectiveness(electric,ice-water).
+normal_effectiveness(electric,ice-fighting).
+normal_effectiveness(electric,ice-poison).
+normal_effectiveness(electric,ice-psychic).
+normal_effectiveness(electric,ice-bug).
+normal_effectiveness(electric,ice-rock).
+normal_effectiveness(electric,ice-ghost).
+normal_effectiveness(electric,ice-dark).
+normal_effectiveness(electric,ice-steel).
+normal_effectiveness(electric,ice-fairy).
+normal_effectiveness(electric,fighting-normal).
+normal_effectiveness(electric,fighting-fire).
+normal_effectiveness(electric,fighting-ice).
+normal_effectiveness(electric,fighting-poison).
+normal_effectiveness(electric,fighting-psychic).
+normal_effectiveness(electric,fighting-bug).
+normal_effectiveness(electric,fighting-rock).
+normal_effectiveness(electric,fighting-ghost).
+normal_effectiveness(electric,fighting-dark).
+normal_effectiveness(electric,fighting-steel).
+normal_effectiveness(electric,fighting-fairy).
+normal_effectiveness(electric,poison-normal).
+normal_effectiveness(electric,poison-fire).
+normal_effectiveness(electric,poison-ice).
+normal_effectiveness(electric,poison-fighting).
+normal_effectiveness(electric,poison-psychic).
+normal_effectiveness(electric,poison-bug).
+normal_effectiveness(electric,poison-rock).
+normal_effectiveness(electric,poison-ghost).
+normal_effectiveness(electric,poison-dark).
+normal_effectiveness(electric,poison-steel).
+normal_effectiveness(electric,poison-fairy).
+normal_effectiveness(electric,flying-electric).
+normal_effectiveness(electric,flying-grass).
+normal_effectiveness(electric,flying-dragon).
+normal_effectiveness(electric,psychic-normal).
+normal_effectiveness(electric,psychic-fire).
+normal_effectiveness(electric,psychic-ice).
+normal_effectiveness(electric,psychic-fighting).
+normal_effectiveness(electric,psychic-poison).
+normal_effectiveness(electric,psychic-bug).
+normal_effectiveness(electric,psychic-rock).
+normal_effectiveness(electric,psychic-ghost).
+normal_effectiveness(electric,psychic-dark).
+normal_effectiveness(electric,psychic-steel).
+normal_effectiveness(electric,psychic-fairy).
+normal_effectiveness(electric,bug-normal).
+normal_effectiveness(electric,bug-fire).
+normal_effectiveness(electric,bug-ice).
+normal_effectiveness(electric,bug-fighting).
+normal_effectiveness(electric,bug-poison).
+normal_effectiveness(electric,bug-psychic).
+normal_effectiveness(electric,bug-rock).
+normal_effectiveness(electric,bug-ghost).
+normal_effectiveness(electric,bug-dark).
+normal_effectiveness(electric,bug-steel).
+normal_effectiveness(electric,bug-fairy).
+normal_effectiveness(electric,rock-normal).
+normal_effectiveness(electric,rock-fire).
+normal_effectiveness(electric,rock-ice).
+normal_effectiveness(electric,rock-fighting).
+normal_effectiveness(electric,rock-poison).
+normal_effectiveness(electric,rock-psychic).
+normal_effectiveness(electric,rock-bug).
+normal_effectiveness(electric,rock-ghost).
+normal_effectiveness(electric,rock-dark).
+normal_effectiveness(electric,rock-steel).
+normal_effectiveness(electric,rock-fairy).
+normal_effectiveness(electric,ghost-normal).
+normal_effectiveness(electric,ghost-fire).
+normal_effectiveness(electric,ghost-ice).
+normal_effectiveness(electric,ghost-fighting).
+normal_effectiveness(electric,ghost-poison).
+normal_effectiveness(electric,ghost-psychic).
+normal_effectiveness(electric,ghost-bug).
+normal_effectiveness(electric,ghost-rock).
+normal_effectiveness(electric,ghost-dark).
+normal_effectiveness(electric,ghost-steel).
+normal_effectiveness(electric,ghost-fairy).
+normal_effectiveness(electric,dragon-water).
+normal_effectiveness(electric,dragon-flying).
+normal_effectiveness(electric,dark-normal).
+normal_effectiveness(electric,dark-fire).
+normal_effectiveness(electric,dark-ice).
+normal_effectiveness(electric,dark-fighting).
+normal_effectiveness(electric,dark-poison).
+normal_effectiveness(electric,dark-psychic).
+normal_effectiveness(electric,dark-bug).
+normal_effectiveness(electric,dark-rock).
+normal_effectiveness(electric,dark-ghost).
+normal_effectiveness(electric,dark-steel).
+normal_effectiveness(electric,dark-fairy).
+normal_effectiveness(electric,steel-normal).
+normal_effectiveness(electric,steel-fire).
+normal_effectiveness(electric,steel-ice).
+normal_effectiveness(electric,steel-fighting).
+normal_effectiveness(electric,steel-poison).
+normal_effectiveness(electric,steel-psychic).
+normal_effectiveness(electric,steel-bug).
+normal_effectiveness(electric,steel-rock).
+normal_effectiveness(electric,steel-ghost).
+normal_effectiveness(electric,steel-dark).
+normal_effectiveness(electric,steel-fairy).
+normal_effectiveness(electric,fairy-normal).
+normal_effectiveness(electric,fairy-fire).
+normal_effectiveness(electric,fairy-ice).
+normal_effectiveness(electric,fairy-fighting).
+normal_effectiveness(electric,fairy-poison).
+normal_effectiveness(electric,fairy-psychic).
+normal_effectiveness(electric,fairy-bug).
+normal_effectiveness(electric,fairy-rock).
+normal_effectiveness(electric,fairy-ghost).
+normal_effectiveness(electric,fairy-dark).
+normal_effectiveness(electric,fairy-steel).
+normal_effectiveness(grass,normal).
+normal_effectiveness(grass,electric).
+normal_effectiveness(grass,ice).
+normal_effectiveness(grass,fighting).
+normal_effectiveness(grass,psychic).
+normal_effectiveness(grass,ghost).
+normal_effectiveness(grass,dark).
+normal_effectiveness(grass,fairy).
+normal_effectiveness(grass,normal-electric).
+normal_effectiveness(grass,normal-ice).
+normal_effectiveness(grass,normal-fighting).
+normal_effectiveness(grass,normal-psychic).
+normal_effectiveness(grass,normal-ghost).
+normal_effectiveness(grass,normal-dark).
+normal_effectiveness(grass,normal-fairy).
+normal_effectiveness(grass,fire-water).
+normal_effectiveness(grass,fire-ground).
+normal_effectiveness(grass,fire-rock).
+normal_effectiveness(grass,water-fire).
+normal_effectiveness(grass,water-grass).
+normal_effectiveness(grass,water-ice).
+normal_effectiveness(grass,water-poison).
+normal_effectiveness(grass,water-flying).
+normal_effectiveness(grass,water-bug).
+normal_effectiveness(grass,water-dragon).
+normal_effectiveness(grass,water-steel).
+normal_effectiveness(grass,electric-normal).
+normal_effectiveness(grass,electric-ice).
+normal_effectiveness(grass,electric-fighting).
+normal_effectiveness(grass,electric-psychic).
+normal_effectiveness(grass,electric-ghost).
+normal_effectiveness(grass,electric-dark).
+normal_effectiveness(grass,electric-fairy).
+normal_effectiveness(grass,grass-water).
+normal_effectiveness(grass,grass-ground).
+normal_effectiveness(grass,grass-rock).
+normal_effectiveness(grass,ice-normal).
+normal_effectiveness(grass,ice-water).
+normal_effectiveness(grass,ice-electric).
+normal_effectiveness(grass,ice-fighting).
+normal_effectiveness(grass,ice-psychic).
+normal_effectiveness(grass,ice-ghost).
+normal_effectiveness(grass,ice-dark).
+normal_effectiveness(grass,ice-fairy).
+normal_effectiveness(grass,fighting-normal).
+normal_effectiveness(grass,fighting-electric).
+normal_effectiveness(grass,fighting-ice).
+normal_effectiveness(grass,fighting-psychic).
+normal_effectiveness(grass,fighting-ghost).
+normal_effectiveness(grass,fighting-dark).
+normal_effectiveness(grass,fighting-fairy).
+normal_effectiveness(grass,poison-water).
+normal_effectiveness(grass,poison-ground).
+normal_effectiveness(grass,poison-rock).
+normal_effectiveness(grass,ground-fire).
+normal_effectiveness(grass,ground-grass).
+normal_effectiveness(grass,ground-poison).
+normal_effectiveness(grass,ground-flying).
+normal_effectiveness(grass,ground-bug).
+normal_effectiveness(grass,ground-dragon).
+normal_effectiveness(grass,ground-steel).
+normal_effectiveness(grass,flying-water).
+normal_effectiveness(grass,flying-ground).
+normal_effectiveness(grass,flying-rock).
+normal_effectiveness(grass,psychic-normal).
+normal_effectiveness(grass,psychic-electric).
+normal_effectiveness(grass,psychic-ice).
+normal_effectiveness(grass,psychic-fighting).
+normal_effectiveness(grass,psychic-ghost).
+normal_effectiveness(grass,psychic-dark).
+normal_effectiveness(grass,psychic-fairy).
+normal_effectiveness(grass,bug-water).
+normal_effectiveness(grass,bug-ground).
+normal_effectiveness(grass,bug-rock).
+normal_effectiveness(grass,rock-fire).
+normal_effectiveness(grass,rock-grass).
+normal_effectiveness(grass,rock-poison).
+normal_effectiveness(grass,rock-flying).
+normal_effectiveness(grass,rock-bug).
+normal_effectiveness(grass,rock-dragon).
+normal_effectiveness(grass,rock-steel).
+normal_effectiveness(grass,ghost-normal).
+normal_effectiveness(grass,ghost-electric).
+normal_effectiveness(grass,ghost-ice).
+normal_effectiveness(grass,ghost-fighting).
+normal_effectiveness(grass,ghost-psychic).
+normal_effectiveness(grass,ghost-dark).
+normal_effectiveness(grass,ghost-fairy).
+normal_effectiveness(grass,dragon-water).
+normal_effectiveness(grass,dragon-ground).
+normal_effectiveness(grass,dragon-rock).
+normal_effectiveness(grass,dark-normal).
+normal_effectiveness(grass,dark-electric).
+normal_effectiveness(grass,dark-ice).
+normal_effectiveness(grass,dark-fighting).
+normal_effectiveness(grass,dark-psychic).
+normal_effectiveness(grass,dark-ghost).
+normal_effectiveness(grass,dark-fairy).
+normal_effectiveness(grass,steel-water).
+normal_effectiveness(grass,steel-ground).
+normal_effectiveness(grass,steel-rock).
+normal_effectiveness(grass,fairy-normal).
+normal_effectiveness(grass,fairy-electric).
+normal_effectiveness(grass,fairy-ice).
+normal_effectiveness(grass,fairy-fighting).
+normal_effectiveness(grass,fairy-psychic).
+normal_effectiveness(grass,fairy-ghost).
+normal_effectiveness(grass,fairy-dark).
+normal_effectiveness(ice,normal).
+normal_effectiveness(ice,electric).
+normal_effectiveness(ice,fighting).
+normal_effectiveness(ice,poison).
+normal_effectiveness(ice,psychic).
+normal_effectiveness(ice,bug).
+normal_effectiveness(ice,rock).
+normal_effectiveness(ice,ghost).
+normal_effectiveness(ice,dark).
+normal_effectiveness(ice,fairy).
+normal_effectiveness(ice,normal-electric).
+normal_effectiveness(ice,normal-fighting).
+normal_effectiveness(ice,normal-poison).
+normal_effectiveness(ice,normal-psychic).
+normal_effectiveness(ice,normal-bug).
+normal_effectiveness(ice,normal-rock).
+normal_effectiveness(ice,normal-ghost).
+normal_effectiveness(ice,normal-dark).
+normal_effectiveness(ice,normal-fairy).
+normal_effectiveness(ice,fire-grass).
+normal_effectiveness(ice,fire-ground).
+normal_effectiveness(ice,fire-flying).
+normal_effectiveness(ice,fire-dragon).
+normal_effectiveness(ice,water-grass).
+normal_effectiveness(ice,water-ground).
+normal_effectiveness(ice,water-flying).
+normal_effectiveness(ice,water-dragon).
+normal_effectiveness(ice,electric-normal).
+normal_effectiveness(ice,electric-fighting).
+normal_effectiveness(ice,electric-poison).
+normal_effectiveness(ice,electric-psychic).
+normal_effectiveness(ice,electric-bug).
+normal_effectiveness(ice,electric-rock).
+normal_effectiveness(ice,electric-ghost).
+normal_effectiveness(ice,electric-dark).
+normal_effectiveness(ice,electric-fairy).
+normal_effectiveness(ice,grass-fire).
+normal_effectiveness(ice,grass-water).
+normal_effectiveness(ice,grass-ice).
+normal_effectiveness(ice,grass-steel).
+normal_effectiveness(ice,ice-grass).
+normal_effectiveness(ice,ice-ground).
+normal_effectiveness(ice,ice-flying).
+normal_effectiveness(ice,ice-dragon).
+normal_effectiveness(ice,fighting-normal).
+normal_effectiveness(ice,fighting-electric).
+normal_effectiveness(ice,fighting-psychic).
+normal_effectiveness(ice,fighting-bug).
+normal_effectiveness(ice,fighting-rock).
+normal_effectiveness(ice,fighting-ghost).
+normal_effectiveness(ice,fighting-dark).
+normal_effectiveness(ice,fighting-fairy).
+normal_effectiveness(ice,poison-normal).
+normal_effectiveness(ice,poison-electric).
+normal_effectiveness(ice,poison-psychic).
+normal_effectiveness(ice,poison-bug).
+normal_effectiveness(ice,poison-rock).
+normal_effectiveness(ice,poison-ghost).
+normal_effectiveness(ice,poison-dark).
+normal_effectiveness(ice,poison-fairy).
+normal_effectiveness(ice,ground-fire).
+normal_effectiveness(ice,ground-water).
+normal_effectiveness(ice,ground-ice).
+normal_effectiveness(ice,ground-steel).
+normal_effectiveness(ice,flying-fire).
+normal_effectiveness(ice,flying-water).
+normal_effectiveness(ice,flying-ice).
+normal_effectiveness(ice,flying-steel).
+normal_effectiveness(ice,psychic-normal).
+normal_effectiveness(ice,psychic-electric).
+normal_effectiveness(ice,psychic-fighting).
+normal_effectiveness(ice,psychic-poison).
+normal_effectiveness(ice,psychic-bug).
+normal_effectiveness(ice,psychic-rock).
+normal_effectiveness(ice,psychic-ghost).
+normal_effectiveness(ice,psychic-dark).
+normal_effectiveness(ice,psychic-fairy).
+normal_effectiveness(ice,bug-normal).
+normal_effectiveness(ice,bug-electric).
+normal_effectiveness(ice,bug-fighting).
+normal_effectiveness(ice,bug-poison).
+normal_effectiveness(ice,bug-psychic).
+normal_effectiveness(ice,bug-rock).
+normal_effectiveness(ice,bug-ghost).
+normal_effectiveness(ice,bug-dark).
+normal_effectiveness(ice,bug-fairy).
+normal_effectiveness(ice,rock-normal).
+normal_effectiveness(ice,rock-electric).
+normal_effectiveness(ice,rock-fighting).
+normal_effectiveness(ice,rock-poison).
+normal_effectiveness(ice,rock-psychic).
+normal_effectiveness(ice,rock-bug).
+normal_effectiveness(ice,rock-ghost).
+normal_effectiveness(ice,rock-dark).
+normal_effectiveness(ice,rock-fairy).
+normal_effectiveness(ice,ghost-normal).
+normal_effectiveness(ice,ghost-electric).
+normal_effectiveness(ice,ghost-fighting).
+normal_effectiveness(ice,ghost-poison).
+normal_effectiveness(ice,ghost-psychic).
+normal_effectiveness(ice,ghost-bug).
+normal_effectiveness(ice,ghost-rock).
+normal_effectiveness(ice,ghost-dark).
+normal_effectiveness(ice,ghost-fairy).
+normal_effectiveness(ice,dragon-fire).
+normal_effectiveness(ice,dragon-water).
+normal_effectiveness(ice,dragon-ice).
+normal_effectiveness(ice,dragon-steel).
+normal_effectiveness(ice,dark-normal).
+normal_effectiveness(ice,dark-electric).
+normal_effectiveness(ice,dark-fighting).
+normal_effectiveness(ice,dark-poison).
+normal_effectiveness(ice,dark-psychic).
+normal_effectiveness(ice,dark-bug).
+normal_effectiveness(ice,dark-rock).
+normal_effectiveness(ice,dark-ghost).
+normal_effectiveness(ice,dark-fairy).
+normal_effectiveness(ice,steel-grass).
+normal_effectiveness(ice,steel-ground).
+normal_effectiveness(ice,steel-flying).
+normal_effectiveness(ice,steel-dragon).
+normal_effectiveness(ice,fairy-normal).
+normal_effectiveness(ice,fairy-electric).
+normal_effectiveness(ice,fairy-fighting).
+normal_effectiveness(ice,fairy-poison).
+normal_effectiveness(ice,fairy-psychic).
+normal_effectiveness(ice,fairy-bug).
+normal_effectiveness(ice,fairy-rock).
+normal_effectiveness(ice,fairy-ghost).
+normal_effectiveness(ice,fairy-dark).
+normal_effectiveness(fighting,fire).
+normal_effectiveness(fighting,water).
+normal_effectiveness(fighting,electric).
+normal_effectiveness(fighting,grass).
+normal_effectiveness(fighting,fighting).
+normal_effectiveness(fighting,ground).
+normal_effectiveness(fighting,dragon).
+normal_effectiveness(fighting,normal-poison).
+normal_effectiveness(fighting,normal-flying).
+normal_effectiveness(fighting,normal-psychic).
+normal_effectiveness(fighting,normal-bug).
+normal_effectiveness(fighting,normal-fairy).
+normal_effectiveness(fighting,fire-water).
+normal_effectiveness(fighting,fire-electric).
+normal_effectiveness(fighting,fire-grass).
+normal_effectiveness(fighting,fire-fighting).
+normal_effectiveness(fighting,fire-ground).
+normal_effectiveness(fighting,fire-dragon).
+normal_effectiveness(fighting,water-fire).
+normal_effectiveness(fighting,water-electric).
+normal_effectiveness(fighting,water-grass).
+normal_effectiveness(fighting,water-fighting).
+normal_effectiveness(fighting,water-ground).
+normal_effectiveness(fighting,water-dragon).
+normal_effectiveness(fighting,electric-fire).
+normal_effectiveness(fighting,electric-water).
+normal_effectiveness(fighting,electric-grass).
+normal_effectiveness(fighting,electric-fighting).
+normal_effectiveness(fighting,electric-ground).
+normal_effectiveness(fighting,electric-dragon).
+normal_effectiveness(fighting,grass-fire).
+normal_effectiveness(fighting,grass-water).
+normal_effectiveness(fighting,grass-electric).
+normal_effectiveness(fighting,grass-fighting).
+normal_effectiveness(fighting,grass-ground).
+normal_effectiveness(fighting,grass-dragon).
+normal_effectiveness(fighting,ice-poison).
+normal_effectiveness(fighting,ice-flying).
+normal_effectiveness(fighting,ice-psychic).
+normal_effectiveness(fighting,ice-bug).
+normal_effectiveness(fighting,ice-fairy).
+normal_effectiveness(fighting,fighting-fire).
+normal_effectiveness(fighting,fighting-water).
+normal_effectiveness(fighting,fighting-electric).
+normal_effectiveness(fighting,fighting-grass).
+normal_effectiveness(fighting,fighting-poison).
+normal_effectiveness(fighting,fighting-ground).
+normal_effectiveness(fighting,fighting-dragon).
+normal_effectiveness(fighting,poison-normal).
+normal_effectiveness(fighting,poison-ice).
+normal_effectiveness(fighting,poison-fighting).
+normal_effectiveness(fighting,poison-rock).
+normal_effectiveness(fighting,poison-dark).
+normal_effectiveness(fighting,poison-steel).
+normal_effectiveness(fighting,ground-fire).
+normal_effectiveness(fighting,ground-water).
+normal_effectiveness(fighting,ground-electric).
+normal_effectiveness(fighting,ground-grass).
+normal_effectiveness(fighting,ground-fighting).
+normal_effectiveness(fighting,ground-dragon).
+normal_effectiveness(fighting,flying-normal).
+normal_effectiveness(fighting,flying-ice).
+normal_effectiveness(fighting,flying-rock).
+normal_effectiveness(fighting,flying-dark).
+normal_effectiveness(fighting,flying-steel).
+normal_effectiveness(fighting,psychic-normal).
+normal_effectiveness(fighting,psychic-ice).
+normal_effectiveness(fighting,psychic-rock).
+normal_effectiveness(fighting,psychic-dark).
+normal_effectiveness(fighting,psychic-steel).
+normal_effectiveness(fighting,bug-normal).
+normal_effectiveness(fighting,bug-ice).
+normal_effectiveness(fighting,bug-rock).
+normal_effectiveness(fighting,bug-dark).
+normal_effectiveness(fighting,bug-steel).
+normal_effectiveness(fighting,rock-poison).
+normal_effectiveness(fighting,rock-flying).
+normal_effectiveness(fighting,rock-psychic).
+normal_effectiveness(fighting,rock-bug).
+normal_effectiveness(fighting,rock-fairy).
+normal_effectiveness(fighting,dragon-fire).
+normal_effectiveness(fighting,dragon-water).
+normal_effectiveness(fighting,dragon-electric).
+normal_effectiveness(fighting,dragon-grass).
+normal_effectiveness(fighting,dragon-fighting).
+normal_effectiveness(fighting,dragon-ground).
+normal_effectiveness(fighting,dark-poison).
+normal_effectiveness(fighting,dark-flying).
+normal_effectiveness(fighting,dark-psychic).
+normal_effectiveness(fighting,dark-bug).
+normal_effectiveness(fighting,dark-fairy).
+normal_effectiveness(fighting,steel-poison).
+normal_effectiveness(fighting,steel-flying).
+normal_effectiveness(fighting,steel-psychic).
+normal_effectiveness(fighting,steel-bug).
+normal_effectiveness(fighting,steel-fairy).
+normal_effectiveness(fighting,fairy-normal).
+normal_effectiveness(fighting,fairy-ice).
+normal_effectiveness(fighting,fairy-rock).
+normal_effectiveness(fighting,fairy-dark).
+normal_effectiveness(fighting,fairy-steel).
+normal_effectiveness(poison,normal).
+normal_effectiveness(poison,fire).
+normal_effectiveness(poison,water).
+normal_effectiveness(poison,electric).
+normal_effectiveness(poison,ice).
+normal_effectiveness(poison,fighting).
+normal_effectiveness(poison,flying).
+normal_effectiveness(poison,psychic).
+normal_effectiveness(poison,bug).
+normal_effectiveness(poison,dragon).
+normal_effectiveness(poison,dark).
+normal_effectiveness(poison,normal-fire).
+normal_effectiveness(poison,normal-water).
+normal_effectiveness(poison,normal-electric).
+normal_effectiveness(poison,normal-ice).
+normal_effectiveness(poison,normal-fighting).
+normal_effectiveness(poison,normal-flying).
+normal_effectiveness(poison,normal-psychic).
+normal_effectiveness(poison,normal-bug).
+normal_effectiveness(poison,normal-dragon).
+normal_effectiveness(poison,normal-dark).
+normal_effectiveness(poison,fire-normal).
+normal_effectiveness(poison,fire-water).
+normal_effectiveness(poison,fire-electric).
+normal_effectiveness(poison,fire-ice).
+normal_effectiveness(poison,fire-fighting).
+normal_effectiveness(poison,fire-flying).
+normal_effectiveness(poison,fire-psychic).
+normal_effectiveness(poison,fire-bug).
+normal_effectiveness(poison,fire-dragon).
+normal_effectiveness(poison,fire-dark).
+normal_effectiveness(poison,water-normal).
+normal_effectiveness(poison,water-fire).
+normal_effectiveness(poison,water-electric).
+normal_effectiveness(poison,water-ice).
+normal_effectiveness(poison,water-fighting).
+normal_effectiveness(poison,water-flying).
+normal_effectiveness(poison,water-psychic).
+normal_effectiveness(poison,water-bug).
+normal_effectiveness(poison,water-dragon).
+normal_effectiveness(poison,water-dark).
+normal_effectiveness(poison,electric-normal).
+normal_effectiveness(poison,electric-fire).
+normal_effectiveness(poison,electric-water).
+normal_effectiveness(poison,electric-ice).
+normal_effectiveness(poison,electric-fighting).
+normal_effectiveness(poison,electric-flying).
+normal_effectiveness(poison,electric-psychic).
+normal_effectiveness(poison,electric-bug).
+normal_effectiveness(poison,electric-dragon).
+normal_effectiveness(poison,electric-dark).
+normal_effectiveness(poison,grass-poison).
+normal_effectiveness(poison,grass-ground).
+normal_effectiveness(poison,grass-rock).
+normal_effectiveness(poison,grass-ghost).
+normal_effectiveness(poison,ice-normal).
+normal_effectiveness(poison,ice-fire).
+normal_effectiveness(poison,ice-water).
+normal_effectiveness(poison,ice-electric).
+normal_effectiveness(poison,ice-fighting).
+normal_effectiveness(poison,ice-flying).
+normal_effectiveness(poison,ice-psychic).
+normal_effectiveness(poison,ice-bug).
+normal_effectiveness(poison,ice-dragon).
+normal_effectiveness(poison,ice-dark).
+normal_effectiveness(poison,fighting-normal).
+normal_effectiveness(poison,fighting-fire).
+normal_effectiveness(poison,fighting-water).
+normal_effectiveness(poison,fighting-electric).
+normal_effectiveness(poison,fighting-ice).
+normal_effectiveness(poison,fighting-flying).
+normal_effectiveness(poison,fighting-psychic).
+normal_effectiveness(poison,fighting-bug).
+normal_effectiveness(poison,fighting-dragon).
+normal_effectiveness(poison,fighting-dark).
+normal_effectiveness(poison,poison-grass).
+normal_effectiveness(poison,poison-fairy).
+normal_effectiveness(poison,ground-grass).
+normal_effectiveness(poison,ground-fairy).
+normal_effectiveness(poison,flying-normal).
+normal_effectiveness(poison,flying-fire).
+normal_effectiveness(poison,flying-water).
+normal_effectiveness(poison,flying-electric).
+normal_effectiveness(poison,flying-ice).
+normal_effectiveness(poison,flying-fighting).
+normal_effectiveness(poison,flying-psychic).
+normal_effectiveness(poison,flying-bug).
+normal_effectiveness(poison,flying-dragon).
+normal_effectiveness(poison,flying-dark).
+normal_effectiveness(poison,psychic-normal).
+normal_effectiveness(poison,psychic-fire).
+normal_effectiveness(poison,psychic-water).
+normal_effectiveness(poison,psychic-electric).
+normal_effectiveness(poison,psychic-ice).
+normal_effectiveness(poison,psychic-fighting).
+normal_effectiveness(poison,psychic-flying).
+normal_effectiveness(poison,psychic-bug).
+normal_effectiveness(poison,psychic-dragon).
+normal_effectiveness(poison,psychic-dark).
+normal_effectiveness(poison,bug-normal).
+normal_effectiveness(poison,bug-fire).
+normal_effectiveness(poison,bug-water).
+normal_effectiveness(poison,bug-electric).
+normal_effectiveness(poison,bug-ice).
+normal_effectiveness(poison,bug-fighting).
+normal_effectiveness(poison,bug-flying).
+normal_effectiveness(poison,bug-psychic).
+normal_effectiveness(poison,bug-dragon).
+normal_effectiveness(poison,bug-dark).
+normal_effectiveness(poison,rock-grass).
+normal_effectiveness(poison,rock-fairy).
+normal_effectiveness(poison,ghost-grass).
+normal_effectiveness(poison,ghost-fairy).
+normal_effectiveness(poison,dragon-normal).
+normal_effectiveness(poison,dragon-fire).
+normal_effectiveness(poison,dragon-water).
+normal_effectiveness(poison,dragon-electric).
+normal_effectiveness(poison,dragon-ice).
+normal_effectiveness(poison,dragon-fighting).
+normal_effectiveness(poison,dragon-flying).
+normal_effectiveness(poison,dragon-psychic).
+normal_effectiveness(poison,dragon-bug).
+normal_effectiveness(poison,dragon-dark).
+normal_effectiveness(poison,dark-normal).
+normal_effectiveness(poison,dark-fire).
+normal_effectiveness(poison,dark-water).
+normal_effectiveness(poison,dark-electric).
+normal_effectiveness(poison,dark-ice).
+normal_effectiveness(poison,dark-fighting).
+normal_effectiveness(poison,dark-flying).
+normal_effectiveness(poison,dark-psychic).
+normal_effectiveness(poison,dark-bug).
+normal_effectiveness(poison,dark-dragon).
+normal_effectiveness(poison,fairy-poison).
+normal_effectiveness(poison,fairy-ground).
+normal_effectiveness(poison,fairy-rock).
+normal_effectiveness(poison,fairy-ghost).
+normal_effectiveness(ground,normal).
+normal_effectiveness(ground,water).
+normal_effectiveness(ground,ice).
+normal_effectiveness(ground,fighting).
+normal_effectiveness(ground,ground).
+normal_effectiveness(ground,psychic).
+normal_effectiveness(ground,ghost).
+normal_effectiveness(ground,dragon).
+normal_effectiveness(ground,dark).
+normal_effectiveness(ground,fairy).
+normal_effectiveness(ground,normal-water).
+normal_effectiveness(ground,normal-ice).
+normal_effectiveness(ground,normal-fighting).
+normal_effectiveness(ground,normal-ground).
+normal_effectiveness(ground,normal-psychic).
+normal_effectiveness(ground,normal-ghost).
+normal_effectiveness(ground,normal-dragon).
+normal_effectiveness(ground,normal-dark).
+normal_effectiveness(ground,normal-fairy).
+normal_effectiveness(ground,fire-grass).
+normal_effectiveness(ground,fire-bug).
+normal_effectiveness(ground,water-normal).
+normal_effectiveness(ground,water-ice).
+normal_effectiveness(ground,water-fighting).
+normal_effectiveness(ground,water-ground).
+normal_effectiveness(ground,water-psychic).
+normal_effectiveness(ground,water-ghost).
+normal_effectiveness(ground,water-dragon).
+normal_effectiveness(ground,water-dark).
+normal_effectiveness(ground,water-fairy).
+normal_effectiveness(ground,electric-grass).
+normal_effectiveness(ground,electric-bug).
+normal_effectiveness(ground,grass-fire).
+normal_effectiveness(ground,grass-electric).
+normal_effectiveness(ground,grass-poison).
+normal_effectiveness(ground,grass-rock).
+normal_effectiveness(ground,grass-steel).
+normal_effectiveness(ground,ice-normal).
+normal_effectiveness(ground,ice-water).
+normal_effectiveness(ground,ice-fighting).
+normal_effectiveness(ground,ice-ground).
+normal_effectiveness(ground,ice-psychic).
+normal_effectiveness(ground,ice-ghost).
+normal_effectiveness(ground,ice-dragon).
+normal_effectiveness(ground,ice-dark).
+normal_effectiveness(ground,ice-fairy).
+normal_effectiveness(ground,fighting-normal).
+normal_effectiveness(ground,fighting-water).
+normal_effectiveness(ground,fighting-ice).
+normal_effectiveness(ground,fighting-ground).
+normal_effectiveness(ground,fighting-psychic).
+normal_effectiveness(ground,fighting-ghost).
+normal_effectiveness(ground,fighting-dragon).
+normal_effectiveness(ground,fighting-dark).
+normal_effectiveness(ground,fighting-fairy).
+normal_effectiveness(ground,poison-grass).
+normal_effectiveness(ground,poison-bug).
+normal_effectiveness(ground,ground-normal).
+normal_effectiveness(ground,ground-water).
+normal_effectiveness(ground,ground-ice).
+normal_effectiveness(ground,ground-fighting).
+normal_effectiveness(ground,ground-psychic).
+normal_effectiveness(ground,ground-ghost).
+normal_effectiveness(ground,ground-dragon).
+normal_effectiveness(ground,ground-dark).
+normal_effectiveness(ground,ground-fairy).
+normal_effectiveness(ground,psychic-normal).
+normal_effectiveness(ground,psychic-water).
+normal_effectiveness(ground,psychic-ice).
+normal_effectiveness(ground,psychic-fighting).
+normal_effectiveness(ground,psychic-ground).
+normal_effectiveness(ground,psychic-ghost).
+normal_effectiveness(ground,psychic-dragon).
+normal_effectiveness(ground,psychic-dark).
+normal_effectiveness(ground,psychic-fairy).
+normal_effectiveness(ground,bug-fire).
+normal_effectiveness(ground,bug-electric).
+normal_effectiveness(ground,bug-poison).
+normal_effectiveness(ground,bug-rock).
+normal_effectiveness(ground,bug-steel).
+normal_effectiveness(ground,rock-grass).
+normal_effectiveness(ground,rock-bug).
+normal_effectiveness(ground,ghost-normal).
+normal_effectiveness(ground,ghost-water).
+normal_effectiveness(ground,ghost-ice).
+normal_effectiveness(ground,ghost-fighting).
+normal_effectiveness(ground,ghost-ground).
+normal_effectiveness(ground,ghost-psychic).
+normal_effectiveness(ground,ghost-dragon).
+normal_effectiveness(ground,ghost-dark).
+normal_effectiveness(ground,ghost-fairy).
+normal_effectiveness(ground,dragon-normal).
+normal_effectiveness(ground,dragon-water).
+normal_effectiveness(ground,dragon-ice).
+normal_effectiveness(ground,dragon-fighting).
+normal_effectiveness(ground,dragon-ground).
+normal_effectiveness(ground,dragon-psychic).
+normal_effectiveness(ground,dragon-ghost).
+normal_effectiveness(ground,dragon-dark).
+normal_effectiveness(ground,dragon-fairy).
+normal_effectiveness(ground,dark-normal).
+normal_effectiveness(ground,dark-water).
+normal_effectiveness(ground,dark-ice).
+normal_effectiveness(ground,dark-fighting).
+normal_effectiveness(ground,dark-ground).
+normal_effectiveness(ground,dark-psychic).
+normal_effectiveness(ground,dark-ghost).
+normal_effectiveness(ground,dark-dragon).
+normal_effectiveness(ground,dark-fairy).
+normal_effectiveness(ground,steel-grass).
+normal_effectiveness(ground,steel-bug).
+normal_effectiveness(ground,fairy-normal).
+normal_effectiveness(ground,fairy-water).
+normal_effectiveness(ground,fairy-ice).
+normal_effectiveness(ground,fairy-fighting).
+normal_effectiveness(ground,fairy-ground).
+normal_effectiveness(ground,fairy-psychic).
+normal_effectiveness(ground,fairy-ghost).
+normal_effectiveness(ground,fairy-dragon).
+normal_effectiveness(ground,fairy-dark).
+normal_effectiveness(flying,normal).
+normal_effectiveness(flying,fire).
+normal_effectiveness(flying,water).
+normal_effectiveness(flying,ice).
+normal_effectiveness(flying,poison).
+normal_effectiveness(flying,ground).
+normal_effectiveness(flying,flying).
+normal_effectiveness(flying,psychic).
+normal_effectiveness(flying,ghost).
+normal_effectiveness(flying,dragon).
+normal_effectiveness(flying,dark).
+normal_effectiveness(flying,fairy).
+normal_effectiveness(flying,normal-fire).
+normal_effectiveness(flying,normal-water).
+normal_effectiveness(flying,normal-ice).
+normal_effectiveness(flying,normal-poison).
+normal_effectiveness(flying,normal-ground).
+normal_effectiveness(flying,normal-flying).
+normal_effectiveness(flying,normal-psychic).
+normal_effectiveness(flying,normal-ghost).
+normal_effectiveness(flying,normal-dragon).
+normal_effectiveness(flying,normal-dark).
+normal_effectiveness(flying,normal-fairy).
+normal_effectiveness(flying,fire-normal).
+normal_effectiveness(flying,fire-water).
+normal_effectiveness(flying,fire-ice).
+normal_effectiveness(flying,fire-poison).
+normal_effectiveness(flying,fire-ground).
+normal_effectiveness(flying,fire-flying).
+normal_effectiveness(flying,fire-psychic).
+normal_effectiveness(flying,fire-ghost).
+normal_effectiveness(flying,fire-dragon).
+normal_effectiveness(flying,fire-dark).
+normal_effectiveness(flying,fire-fairy).
+normal_effectiveness(flying,water-normal).
+normal_effectiveness(flying,water-fire).
+normal_effectiveness(flying,water-ice).
+normal_effectiveness(flying,water-poison).
+normal_effectiveness(flying,water-ground).
+normal_effectiveness(flying,water-flying).
+normal_effectiveness(flying,water-psychic).
+normal_effectiveness(flying,water-ghost).
+normal_effectiveness(flying,water-dragon).
+normal_effectiveness(flying,water-dark).
+normal_effectiveness(flying,water-fairy).
+normal_effectiveness(flying,electric-grass).
+normal_effectiveness(flying,electric-fighting).
+normal_effectiveness(flying,electric-bug).
+normal_effectiveness(flying,grass-electric).
+normal_effectiveness(flying,grass-rock).
+normal_effectiveness(flying,grass-steel).
+normal_effectiveness(flying,ice-normal).
+normal_effectiveness(flying,ice-fire).
+normal_effectiveness(flying,ice-water).
+normal_effectiveness(flying,ice-poison).
+normal_effectiveness(flying,ice-ground).
+normal_effectiveness(flying,ice-flying).
+normal_effectiveness(flying,ice-psychic).
+normal_effectiveness(flying,ice-ghost).
+normal_effectiveness(flying,ice-dragon).
+normal_effectiveness(flying,ice-dark).
+normal_effectiveness(flying,ice-fairy).
+normal_effectiveness(flying,fighting-electric).
+normal_effectiveness(flying,fighting-poison).
+normal_effectiveness(flying,fighting-rock).
+normal_effectiveness(flying,fighting-steel).
+normal_effectiveness(flying,poison-normal).
+normal_effectiveness(flying,poison-fire).
+normal_effectiveness(flying,poison-water).
+normal_effectiveness(flying,poison-ice).
+normal_effectiveness(flying,poison-fighting).
+normal_effectiveness(flying,poison-ground).
+normal_effectiveness(flying,poison-flying).
+normal_effectiveness(flying,poison-psychic).
+normal_effectiveness(flying,poison-ghost).
+normal_effectiveness(flying,poison-dragon).
+normal_effectiveness(flying,poison-dark).
+normal_effectiveness(flying,poison-fairy).
+normal_effectiveness(flying,ground-normal).
+normal_effectiveness(flying,ground-fire).
+normal_effectiveness(flying,ground-water).
+normal_effectiveness(flying,ground-ice).
+normal_effectiveness(flying,ground-poison).
+normal_effectiveness(flying,ground-flying).
+normal_effectiveness(flying,ground-psychic).
+normal_effectiveness(flying,ground-ghost).
+normal_effectiveness(flying,ground-dragon).
+normal_effectiveness(flying,ground-dark).
+normal_effectiveness(flying,ground-fairy).
+normal_effectiveness(flying,flying-normal).
+normal_effectiveness(flying,flying-fire).
+normal_effectiveness(flying,flying-water).
+normal_effectiveness(flying,flying-ice).
+normal_effectiveness(flying,flying-poison).
+normal_effectiveness(flying,flying-ground).
+normal_effectiveness(flying,flying-psychic).
+normal_effectiveness(flying,flying-ghost).
+normal_effectiveness(flying,flying-dragon).
+normal_effectiveness(flying,flying-dark).
+normal_effectiveness(flying,flying-fairy).
+normal_effectiveness(flying,psychic-normal).
+normal_effectiveness(flying,psychic-fire).
+normal_effectiveness(flying,psychic-water).
+normal_effectiveness(flying,psychic-ice).
+normal_effectiveness(flying,psychic-poison).
+normal_effectiveness(flying,psychic-ground).
+normal_effectiveness(flying,psychic-flying).
+normal_effectiveness(flying,psychic-ghost).
+normal_effectiveness(flying,psychic-dragon).
+normal_effectiveness(flying,psychic-dark).
+normal_effectiveness(flying,psychic-fairy).
+normal_effectiveness(flying,bug-electric).
+normal_effectiveness(flying,bug-rock).
+normal_effectiveness(flying,bug-steel).
+normal_effectiveness(flying,rock-grass).
+normal_effectiveness(flying,rock-fighting).
+normal_effectiveness(flying,rock-bug).
+normal_effectiveness(flying,ghost-normal).
+normal_effectiveness(flying,ghost-fire).
+normal_effectiveness(flying,ghost-water).
+normal_effectiveness(flying,ghost-ice).
+normal_effectiveness(flying,ghost-poison).
+normal_effectiveness(flying,ghost-ground).
+normal_effectiveness(flying,ghost-flying).
+normal_effectiveness(flying,ghost-psychic).
+normal_effectiveness(flying,ghost-dragon).
+normal_effectiveness(flying,ghost-dark).
+normal_effectiveness(flying,ghost-fairy).
+normal_effectiveness(flying,dragon-normal).
+normal_effectiveness(flying,dragon-fire).
+normal_effectiveness(flying,dragon-water).
+normal_effectiveness(flying,dragon-ice).
+normal_effectiveness(flying,dragon-poison).
+normal_effectiveness(flying,dragon-ground).
+normal_effectiveness(flying,dragon-flying).
+normal_effectiveness(flying,dragon-psychic).
+normal_effectiveness(flying,dragon-ghost).
+normal_effectiveness(flying,dragon-dark).
+normal_effectiveness(flying,dragon-fairy).
+normal_effectiveness(flying,dark-normal).
+normal_effectiveness(flying,dark-fire).
+normal_effectiveness(flying,dark-water).
+normal_effectiveness(flying,dark-ice).
+normal_effectiveness(flying,dark-poison).
+normal_effectiveness(flying,dark-ground).
+normal_effectiveness(flying,dark-flying).
+normal_effectiveness(flying,dark-psychic).
+normal_effectiveness(flying,dark-ghost).
+normal_effectiveness(flying,dark-dragon).
+normal_effectiveness(flying,dark-fairy).
+normal_effectiveness(flying,steel-grass).
+normal_effectiveness(flying,steel-fighting).
+normal_effectiveness(flying,steel-bug).
+normal_effectiveness(flying,fairy-normal).
+normal_effectiveness(flying,fairy-fire).
+normal_effectiveness(flying,fairy-water).
+normal_effectiveness(flying,fairy-ice).
+normal_effectiveness(flying,fairy-poison).
+normal_effectiveness(flying,fairy-ground).
+normal_effectiveness(flying,fairy-flying).
+normal_effectiveness(flying,fairy-psychic).
+normal_effectiveness(flying,fairy-ghost).
+normal_effectiveness(flying,fairy-dragon).
+normal_effectiveness(flying,fairy-dark).
+normal_effectiveness(psychic,normal).
+normal_effectiveness(psychic,fire).
+normal_effectiveness(psychic,water).
+normal_effectiveness(psychic,electric).
+normal_effectiveness(psychic,grass).
+normal_effectiveness(psychic,ice).
+normal_effectiveness(psychic,ground).
+normal_effectiveness(psychic,flying).
+normal_effectiveness(psychic,bug).
+normal_effectiveness(psychic,rock).
+normal_effectiveness(psychic,ghost).
+normal_effectiveness(psychic,dragon).
+normal_effectiveness(psychic,fairy).
+normal_effectiveness(psychic,normal-fire).
+normal_effectiveness(psychic,normal-water).
+normal_effectiveness(psychic,normal-electric).
+normal_effectiveness(psychic,normal-grass).
+normal_effectiveness(psychic,normal-ice).
+normal_effectiveness(psychic,normal-ground).
+normal_effectiveness(psychic,normal-flying).
+normal_effectiveness(psychic,normal-bug).
+normal_effectiveness(psychic,normal-rock).
+normal_effectiveness(psychic,normal-ghost).
+normal_effectiveness(psychic,normal-dragon).
+normal_effectiveness(psychic,normal-fairy).
+normal_effectiveness(psychic,fire-normal).
+normal_effectiveness(psychic,fire-water).
+normal_effectiveness(psychic,fire-electric).
+normal_effectiveness(psychic,fire-grass).
+normal_effectiveness(psychic,fire-ice).
+normal_effectiveness(psychic,fire-ground).
+normal_effectiveness(psychic,fire-flying).
+normal_effectiveness(psychic,fire-bug).
+normal_effectiveness(psychic,fire-rock).
+normal_effectiveness(psychic,fire-ghost).
+normal_effectiveness(psychic,fire-dragon).
+normal_effectiveness(psychic,fire-fairy).
+normal_effectiveness(psychic,water-normal).
+normal_effectiveness(psychic,water-fire).
+normal_effectiveness(psychic,water-electric).
+normal_effectiveness(psychic,water-grass).
+normal_effectiveness(psychic,water-ice).
+normal_effectiveness(psychic,water-ground).
+normal_effectiveness(psychic,water-flying).
+normal_effectiveness(psychic,water-bug).
+normal_effectiveness(psychic,water-rock).
+normal_effectiveness(psychic,water-ghost).
+normal_effectiveness(psychic,water-dragon).
+normal_effectiveness(psychic,water-fairy).
+normal_effectiveness(psychic,electric-normal).
+normal_effectiveness(psychic,electric-fire).
+normal_effectiveness(psychic,electric-water).
+normal_effectiveness(psychic,electric-grass).
+normal_effectiveness(psychic,electric-ice).
+normal_effectiveness(psychic,electric-ground).
+normal_effectiveness(psychic,electric-flying).
+normal_effectiveness(psychic,electric-bug).
+normal_effectiveness(psychic,electric-rock).
+normal_effectiveness(psychic,electric-ghost).
+normal_effectiveness(psychic,electric-dragon).
+normal_effectiveness(psychic,electric-fairy).
+normal_effectiveness(psychic,grass-normal).
+normal_effectiveness(psychic,grass-fire).
+normal_effectiveness(psychic,grass-water).
+normal_effectiveness(psychic,grass-electric).
+normal_effectiveness(psychic,grass-ice).
+normal_effectiveness(psychic,grass-ground).
+normal_effectiveness(psychic,grass-flying).
+normal_effectiveness(psychic,grass-bug).
+normal_effectiveness(psychic,grass-rock).
+normal_effectiveness(psychic,grass-ghost).
+normal_effectiveness(psychic,grass-dragon).
+normal_effectiveness(psychic,grass-fairy).
+normal_effectiveness(psychic,ice-normal).
+normal_effectiveness(psychic,ice-fire).
+normal_effectiveness(psychic,ice-water).
+normal_effectiveness(psychic,ice-electric).
+normal_effectiveness(psychic,ice-grass).
+normal_effectiveness(psychic,ice-ground).
+normal_effectiveness(psychic,ice-flying).
+normal_effectiveness(psychic,ice-bug).
+normal_effectiveness(psychic,ice-rock).
+normal_effectiveness(psychic,ice-ghost).
+normal_effectiveness(psychic,ice-dragon).
+normal_effectiveness(psychic,ice-fairy).
+normal_effectiveness(psychic,fighting-psychic).
+normal_effectiveness(psychic,fighting-steel).
+normal_effectiveness(psychic,poison-psychic).
+normal_effectiveness(psychic,poison-rock).
+normal_effectiveness(psychic,poison-steel).
+normal_effectiveness(psychic,ground-normal).
+normal_effectiveness(psychic,ground-fire).
+normal_effectiveness(psychic,ground-water).
+normal_effectiveness(psychic,ground-electric).
+normal_effectiveness(psychic,ground-grass).
+normal_effectiveness(psychic,ground-ice).
+normal_effectiveness(psychic,ground-flying).
+normal_effectiveness(psychic,ground-bug).
+normal_effectiveness(psychic,ground-rock).
+normal_effectiveness(psychic,ground-ghost).
+normal_effectiveness(psychic,ground-dragon).
+normal_effectiveness(psychic,ground-fairy).
+normal_effectiveness(psychic,flying-normal).
+normal_effectiveness(psychic,flying-fire).
+normal_effectiveness(psychic,flying-water).
+normal_effectiveness(psychic,flying-electric).
+normal_effectiveness(psychic,flying-grass).
+normal_effectiveness(psychic,flying-ice).
+normal_effectiveness(psychic,flying-ground).
+normal_effectiveness(psychic,flying-bug).
+normal_effectiveness(psychic,flying-rock).
+normal_effectiveness(psychic,flying-ghost).
+normal_effectiveness(psychic,flying-dragon).
+normal_effectiveness(psychic,flying-fairy).
+normal_effectiveness(psychic,psychic-fighting).
+normal_effectiveness(psychic,psychic-poison).
+normal_effectiveness(psychic,bug-normal).
+normal_effectiveness(psychic,bug-fire).
+normal_effectiveness(psychic,bug-water).
+normal_effectiveness(psychic,bug-electric).
+normal_effectiveness(psychic,bug-grass).
+normal_effectiveness(psychic,bug-ice).
+normal_effectiveness(psychic,bug-ground).
+normal_effectiveness(psychic,bug-flying).
+normal_effectiveness(psychic,bug-rock).
+normal_effectiveness(psychic,bug-ghost).
+normal_effectiveness(psychic,bug-dragon).
+normal_effectiveness(psychic,bug-fairy).
+normal_effectiveness(psychic,rock-normal).
+normal_effectiveness(psychic,rock-fire).
+normal_effectiveness(psychic,rock-water).
+normal_effectiveness(psychic,rock-electric).
+normal_effectiveness(psychic,rock-grass).
+normal_effectiveness(psychic,rock-ice).
+normal_effectiveness(psychic,rock-poison).
+normal_effectiveness(psychic,rock-ground).
+normal_effectiveness(psychic,rock-flying).
+normal_effectiveness(psychic,rock-bug).
+normal_effectiveness(psychic,rock-ghost).
+normal_effectiveness(psychic,rock-dragon).
+normal_effectiveness(psychic,rock-fairy).
+normal_effectiveness(psychic,ghost-normal).
+normal_effectiveness(psychic,ghost-fire).
+normal_effectiveness(psychic,ghost-water).
+normal_effectiveness(psychic,ghost-electric).
+normal_effectiveness(psychic,ghost-grass).
+normal_effectiveness(psychic,ghost-ice).
+normal_effectiveness(psychic,ghost-ground).
+normal_effectiveness(psychic,ghost-flying).
+normal_effectiveness(psychic,ghost-bug).
+normal_effectiveness(psychic,ghost-rock).
+normal_effectiveness(psychic,ghost-dragon).
+normal_effectiveness(psychic,ghost-fairy).
+normal_effectiveness(psychic,dragon-normal).
+normal_effectiveness(psychic,dragon-fire).
+normal_effectiveness(psychic,dragon-water).
+normal_effectiveness(psychic,dragon-electric).
+normal_effectiveness(psychic,dragon-grass).
+normal_effectiveness(psychic,dragon-ice).
+normal_effectiveness(psychic,dragon-ground).
+normal_effectiveness(psychic,dragon-flying).
+normal_effectiveness(psychic,dragon-bug).
+normal_effectiveness(psychic,dragon-rock).
+normal_effectiveness(psychic,dragon-ghost).
+normal_effectiveness(psychic,dragon-fairy).
+normal_effectiveness(psychic,steel-fighting).
+normal_effectiveness(psychic,steel-poison).
+normal_effectiveness(psychic,fairy-normal).
+normal_effectiveness(psychic,fairy-fire).
+normal_effectiveness(psychic,fairy-water).
+normal_effectiveness(psychic,fairy-electric).
+normal_effectiveness(psychic,fairy-grass).
+normal_effectiveness(psychic,fairy-ice).
+normal_effectiveness(psychic,fairy-ground).
+normal_effectiveness(psychic,fairy-flying).
+normal_effectiveness(psychic,fairy-bug).
+normal_effectiveness(psychic,fairy-rock).
+normal_effectiveness(psychic,fairy-ghost).
+normal_effectiveness(psychic,fairy-dragon).
+normal_effectiveness(bug,normal).
+normal_effectiveness(bug,water).
+normal_effectiveness(bug,electric).
+normal_effectiveness(bug,ice).
+normal_effectiveness(bug,ground).
+normal_effectiveness(bug,bug).
+normal_effectiveness(bug,rock).
+normal_effectiveness(bug,dragon).
+normal_effectiveness(bug,normal-water).
+normal_effectiveness(bug,normal-electric).
+normal_effectiveness(bug,normal-ice).
+normal_effectiveness(bug,normal-ground).
+normal_effectiveness(bug,normal-bug).
+normal_effectiveness(bug,normal-rock).
+normal_effectiveness(bug,normal-dragon).
+normal_effectiveness(bug,fire-grass).
+normal_effectiveness(bug,fire-psychic).
+normal_effectiveness(bug,fire-dark).
+normal_effectiveness(bug,water-normal).
+normal_effectiveness(bug,water-electric).
+normal_effectiveness(bug,water-ice).
+normal_effectiveness(bug,water-ground).
+normal_effectiveness(bug,water-bug).
+normal_effectiveness(bug,water-rock).
+normal_effectiveness(bug,water-dragon).
+normal_effectiveness(bug,electric-normal).
+normal_effectiveness(bug,electric-water).
+normal_effectiveness(bug,electric-ice).
+normal_effectiveness(bug,electric-ground).
+normal_effectiveness(bug,electric-bug).
+normal_effectiveness(bug,electric-rock).
+normal_effectiveness(bug,electric-dragon).
+normal_effectiveness(bug,grass-fire).
+normal_effectiveness(bug,grass-fighting).
+normal_effectiveness(bug,grass-poison).
+normal_effectiveness(bug,grass-flying).
+normal_effectiveness(bug,grass-ghost).
+normal_effectiveness(bug,grass-steel).
+normal_effectiveness(bug,grass-fairy).
+normal_effectiveness(bug,ice-normal).
+normal_effectiveness(bug,ice-water).
+normal_effectiveness(bug,ice-electric).
+normal_effectiveness(bug,ice-ground).
+normal_effectiveness(bug,ice-bug).
+normal_effectiveness(bug,ice-rock).
+normal_effectiveness(bug,ice-dragon).
+normal_effectiveness(bug,fighting-grass).
+normal_effectiveness(bug,fighting-psychic).
+normal_effectiveness(bug,fighting-dark).
+normal_effectiveness(bug,poison-grass).
+normal_effectiveness(bug,poison-psychic).
+normal_effectiveness(bug,poison-dark).
+normal_effectiveness(bug,ground-normal).
+normal_effectiveness(bug,ground-water).
+normal_effectiveness(bug,ground-electric).
+normal_effectiveness(bug,ground-ice).
+normal_effectiveness(bug,ground-bug).
+normal_effectiveness(bug,ground-rock).
+normal_effectiveness(bug,ground-dragon).
+normal_effectiveness(bug,flying-grass).
+normal_effectiveness(bug,flying-psychic).
+normal_effectiveness(bug,flying-dark).
+normal_effectiveness(bug,psychic-fire).
+normal_effectiveness(bug,psychic-fighting).
+normal_effectiveness(bug,psychic-poison).
+normal_effectiveness(bug,psychic-flying).
+normal_effectiveness(bug,psychic-ghost).
+normal_effectiveness(bug,psychic-steel).
+normal_effectiveness(bug,psychic-fairy).
+normal_effectiveness(bug,bug-normal).
+normal_effectiveness(bug,bug-water).
+normal_effectiveness(bug,bug-electric).
+normal_effectiveness(bug,bug-ice).
+normal_effectiveness(bug,bug-ground).
+normal_effectiveness(bug,bug-rock).
+normal_effectiveness(bug,bug-dragon).
+normal_effectiveness(bug,rock-normal).
+normal_effectiveness(bug,rock-water).
+normal_effectiveness(bug,rock-electric).
+normal_effectiveness(bug,rock-ice).
+normal_effectiveness(bug,rock-ground).
+normal_effectiveness(bug,rock-bug).
+normal_effectiveness(bug,rock-dragon).
+normal_effectiveness(bug,ghost-grass).
+normal_effectiveness(bug,ghost-psychic).
+normal_effectiveness(bug,ghost-dark).
+normal_effectiveness(bug,dragon-normal).
+normal_effectiveness(bug,dragon-water).
+normal_effectiveness(bug,dragon-electric).
+normal_effectiveness(bug,dragon-ice).
+normal_effectiveness(bug,dragon-ground).
+normal_effectiveness(bug,dragon-bug).
+normal_effectiveness(bug,dragon-rock).
+normal_effectiveness(bug,dark-fire).
+normal_effectiveness(bug,dark-fighting).
+normal_effectiveness(bug,dark-poison).
+normal_effectiveness(bug,dark-flying).
+normal_effectiveness(bug,dark-ghost).
+normal_effectiveness(bug,dark-steel).
+normal_effectiveness(bug,dark-fairy).
+normal_effectiveness(bug,steel-grass).
+normal_effectiveness(bug,steel-psychic).
+normal_effectiveness(bug,steel-dark).
+normal_effectiveness(bug,fairy-grass).
+normal_effectiveness(bug,fairy-psychic).
+normal_effectiveness(bug,fairy-dark).
+normal_effectiveness(rock,normal).
+normal_effectiveness(rock,water).
+normal_effectiveness(rock,electric).
+normal_effectiveness(rock,grass).
+normal_effectiveness(rock,poison).
+normal_effectiveness(rock,psychic).
+normal_effectiveness(rock,rock).
+normal_effectiveness(rock,ghost).
+normal_effectiveness(rock,dragon).
+normal_effectiveness(rock,dark).
+normal_effectiveness(rock,fairy).
+normal_effectiveness(rock,normal-water).
+normal_effectiveness(rock,normal-electric).
+normal_effectiveness(rock,normal-grass).
+normal_effectiveness(rock,normal-poison).
+normal_effectiveness(rock,normal-psychic).
+normal_effectiveness(rock,normal-rock).
+normal_effectiveness(rock,normal-ghost).
+normal_effectiveness(rock,normal-dragon).
+normal_effectiveness(rock,normal-dark).
+normal_effectiveness(rock,normal-fairy).
+normal_effectiveness(rock,fire-fighting).
+normal_effectiveness(rock,fire-ground).
+normal_effectiveness(rock,fire-steel).
+normal_effectiveness(rock,water-normal).
+normal_effectiveness(rock,water-electric).
+normal_effectiveness(rock,water-grass).
+normal_effectiveness(rock,water-poison).
+normal_effectiveness(rock,water-psychic).
+normal_effectiveness(rock,water-rock).
+normal_effectiveness(rock,water-ghost).
+normal_effectiveness(rock,water-dragon).
+normal_effectiveness(rock,water-dark).
+normal_effectiveness(rock,water-fairy).
+normal_effectiveness(rock,electric-normal).
+normal_effectiveness(rock,electric-water).
+normal_effectiveness(rock,electric-grass).
+normal_effectiveness(rock,electric-poison).
+normal_effectiveness(rock,electric-psychic).
+normal_effectiveness(rock,electric-rock).
+normal_effectiveness(rock,electric-ghost).
+normal_effectiveness(rock,electric-dragon).
+normal_effectiveness(rock,electric-dark).
+normal_effectiveness(rock,electric-fairy).
+normal_effectiveness(rock,grass-normal).
+normal_effectiveness(rock,grass-water).
+normal_effectiveness(rock,grass-electric).
+normal_effectiveness(rock,grass-poison).
+normal_effectiveness(rock,grass-psychic).
+normal_effectiveness(rock,grass-rock).
+normal_effectiveness(rock,grass-ghost).
+normal_effectiveness(rock,grass-dragon).
+normal_effectiveness(rock,grass-dark).
+normal_effectiveness(rock,grass-fairy).
+normal_effectiveness(rock,ice-fighting).
+normal_effectiveness(rock,ice-ground).
+normal_effectiveness(rock,ice-steel).
+normal_effectiveness(rock,fighting-fire).
+normal_effectiveness(rock,fighting-ice).
+normal_effectiveness(rock,fighting-flying).
+normal_effectiveness(rock,fighting-bug).
+normal_effectiveness(rock,poison-normal).
+normal_effectiveness(rock,poison-water).
+normal_effectiveness(rock,poison-electric).
+normal_effectiveness(rock,poison-grass).
+normal_effectiveness(rock,poison-psychic).
+normal_effectiveness(rock,poison-rock).
+normal_effectiveness(rock,poison-ghost).
+normal_effectiveness(rock,poison-dragon).
+normal_effectiveness(rock,poison-dark).
+normal_effectiveness(rock,poison-fairy).
+normal_effectiveness(rock,ground-fire).
+normal_effectiveness(rock,ground-ice).
+normal_effectiveness(rock,ground-flying).
+normal_effectiveness(rock,ground-bug).
+normal_effectiveness(rock,flying-fighting).
+normal_effectiveness(rock,flying-ground).
+normal_effectiveness(rock,flying-steel).
+normal_effectiveness(rock,psychic-normal).
+normal_effectiveness(rock,psychic-water).
+normal_effectiveness(rock,psychic-electric).
+normal_effectiveness(rock,psychic-grass).
+normal_effectiveness(rock,psychic-poison).
+normal_effectiveness(rock,psychic-rock).
+normal_effectiveness(rock,psychic-ghost).
+normal_effectiveness(rock,psychic-dragon).
+normal_effectiveness(rock,psychic-dark).
+normal_effectiveness(rock,psychic-fairy).
+normal_effectiveness(rock,bug-fighting).
+normal_effectiveness(rock,bug-ground).
+normal_effectiveness(rock,bug-steel).
+normal_effectiveness(rock,rock-normal).
+normal_effectiveness(rock,rock-water).
+normal_effectiveness(rock,rock-electric).
+normal_effectiveness(rock,rock-grass).
+normal_effectiveness(rock,rock-poison).
+normal_effectiveness(rock,rock-psychic).
+normal_effectiveness(rock,rock-ghost).
+normal_effectiveness(rock,rock-dragon).
+normal_effectiveness(rock,rock-dark).
+normal_effectiveness(rock,rock-fairy).
+normal_effectiveness(rock,ghost-normal).
+normal_effectiveness(rock,ghost-water).
+normal_effectiveness(rock,ghost-electric).
+normal_effectiveness(rock,ghost-grass).
+normal_effectiveness(rock,ghost-poison).
+normal_effectiveness(rock,ghost-psychic).
+normal_effectiveness(rock,ghost-rock).
+normal_effectiveness(rock,ghost-dragon).
+normal_effectiveness(rock,ghost-dark).
+normal_effectiveness(rock,ghost-fairy).
+normal_effectiveness(rock,dragon-normal).
+normal_effectiveness(rock,dragon-water).
+normal_effectiveness(rock,dragon-electric).
+normal_effectiveness(rock,dragon-grass).
+normal_effectiveness(rock,dragon-poison).
+normal_effectiveness(rock,dragon-psychic).
+normal_effectiveness(rock,dragon-rock).
+normal_effectiveness(rock,dragon-ghost).
+normal_effectiveness(rock,dragon-dark).
+normal_effectiveness(rock,dragon-fairy).
+normal_effectiveness(rock,dark-normal).
+normal_effectiveness(rock,dark-water).
+normal_effectiveness(rock,dark-electric).
+normal_effectiveness(rock,dark-grass).
+normal_effectiveness(rock,dark-poison).
+normal_effectiveness(rock,dark-psychic).
+normal_effectiveness(rock,dark-rock).
+normal_effectiveness(rock,dark-ghost).
+normal_effectiveness(rock,dark-dragon).
+normal_effectiveness(rock,dark-fairy).
+normal_effectiveness(rock,steel-fire).
+normal_effectiveness(rock,steel-ice).
+normal_effectiveness(rock,steel-flying).
+normal_effectiveness(rock,steel-bug).
+normal_effectiveness(rock,fairy-normal).
+normal_effectiveness(rock,fairy-water).
+normal_effectiveness(rock,fairy-electric).
+normal_effectiveness(rock,fairy-grass).
+normal_effectiveness(rock,fairy-poison).
+normal_effectiveness(rock,fairy-psychic).
+normal_effectiveness(rock,fairy-rock).
+normal_effectiveness(rock,fairy-ghost).
+normal_effectiveness(rock,fairy-dragon).
+normal_effectiveness(rock,fairy-dark).
+normal_effectiveness(ghost,fire).
+normal_effectiveness(ghost,water).
+normal_effectiveness(ghost,electric).
+normal_effectiveness(ghost,grass).
+normal_effectiveness(ghost,ice).
+normal_effectiveness(ghost,fighting).
+normal_effectiveness(ghost,poison).
+normal_effectiveness(ghost,ground).
+normal_effectiveness(ghost,flying).
+normal_effectiveness(ghost,bug).
+normal_effectiveness(ghost,rock).
+normal_effectiveness(ghost,dragon).
+normal_effectiveness(ghost,steel).
+normal_effectiveness(ghost,fairy).
+normal_effectiveness(ghost,fire-water).
+normal_effectiveness(ghost,fire-electric).
+normal_effectiveness(ghost,fire-grass).
+normal_effectiveness(ghost,fire-ice).
+normal_effectiveness(ghost,fire-fighting).
+normal_effectiveness(ghost,fire-poison).
+normal_effectiveness(ghost,fire-ground).
+normal_effectiveness(ghost,fire-flying).
+normal_effectiveness(ghost,fire-bug).
+normal_effectiveness(ghost,fire-rock).
+normal_effectiveness(ghost,fire-dragon).
+normal_effectiveness(ghost,fire-steel).
+normal_effectiveness(ghost,fire-fairy).
+normal_effectiveness(ghost,water-fire).
+normal_effectiveness(ghost,water-electric).
+normal_effectiveness(ghost,water-grass).
+normal_effectiveness(ghost,water-ice).
+normal_effectiveness(ghost,water-fighting).
+normal_effectiveness(ghost,water-poison).
+normal_effectiveness(ghost,water-ground).
+normal_effectiveness(ghost,water-flying).
+normal_effectiveness(ghost,water-bug).
+normal_effectiveness(ghost,water-rock).
+normal_effectiveness(ghost,water-dragon).
+normal_effectiveness(ghost,water-steel).
+normal_effectiveness(ghost,water-fairy).
+normal_effectiveness(ghost,electric-fire).
+normal_effectiveness(ghost,electric-water).
+normal_effectiveness(ghost,electric-grass).
+normal_effectiveness(ghost,electric-ice).
+normal_effectiveness(ghost,electric-fighting).
+normal_effectiveness(ghost,electric-poison).
+normal_effectiveness(ghost,electric-ground).
+normal_effectiveness(ghost,electric-flying).
+normal_effectiveness(ghost,electric-bug).
+normal_effectiveness(ghost,electric-rock).
+normal_effectiveness(ghost,electric-dragon).
+normal_effectiveness(ghost,electric-steel).
+normal_effectiveness(ghost,electric-fairy).
+normal_effectiveness(ghost,grass-fire).
+normal_effectiveness(ghost,grass-water).
+normal_effectiveness(ghost,grass-electric).
+normal_effectiveness(ghost,grass-ice).
+normal_effectiveness(ghost,grass-fighting).
+normal_effectiveness(ghost,grass-poison).
+normal_effectiveness(ghost,grass-ground).
+normal_effectiveness(ghost,grass-flying).
+normal_effectiveness(ghost,grass-bug).
+normal_effectiveness(ghost,grass-rock).
+normal_effectiveness(ghost,grass-dragon).
+normal_effectiveness(ghost,grass-steel).
+normal_effectiveness(ghost,grass-fairy).
+normal_effectiveness(ghost,ice-fire).
+normal_effectiveness(ghost,ice-water).
+normal_effectiveness(ghost,ice-electric).
+normal_effectiveness(ghost,ice-grass).
+normal_effectiveness(ghost,ice-fighting).
+normal_effectiveness(ghost,ice-poison).
+normal_effectiveness(ghost,ice-ground).
+normal_effectiveness(ghost,ice-flying).
+normal_effectiveness(ghost,ice-bug).
+normal_effectiveness(ghost,ice-rock).
+normal_effectiveness(ghost,ice-dragon).
+normal_effectiveness(ghost,ice-steel).
+normal_effectiveness(ghost,ice-fairy).
+normal_effectiveness(ghost,fighting-fire).
+normal_effectiveness(ghost,fighting-water).
+normal_effectiveness(ghost,fighting-electric).
+normal_effectiveness(ghost,fighting-grass).
+normal_effectiveness(ghost,fighting-ice).
+normal_effectiveness(ghost,fighting-poison).
+normal_effectiveness(ghost,fighting-ground).
+normal_effectiveness(ghost,fighting-flying).
+normal_effectiveness(ghost,fighting-bug).
+normal_effectiveness(ghost,fighting-rock).
+normal_effectiveness(ghost,fighting-dragon).
+normal_effectiveness(ghost,fighting-steel).
+normal_effectiveness(ghost,fighting-fairy).
+normal_effectiveness(ghost,poison-fire).
+normal_effectiveness(ghost,poison-water).
+normal_effectiveness(ghost,poison-electric).
+normal_effectiveness(ghost,poison-grass).
+normal_effectiveness(ghost,poison-ice).
+normal_effectiveness(ghost,poison-fighting).
+normal_effectiveness(ghost,poison-ground).
+normal_effectiveness(ghost,poison-flying).
+normal_effectiveness(ghost,poison-bug).
+normal_effectiveness(ghost,poison-rock).
+normal_effectiveness(ghost,poison-dragon).
+normal_effectiveness(ghost,poison-steel).
+normal_effectiveness(ghost,poison-fairy).
+normal_effectiveness(ghost,ground-fire).
+normal_effectiveness(ghost,ground-water).
+normal_effectiveness(ghost,ground-electric).
+normal_effectiveness(ghost,ground-grass).
+normal_effectiveness(ghost,ground-ice).
+normal_effectiveness(ghost,ground-fighting).
+normal_effectiveness(ghost,ground-poison).
+normal_effectiveness(ghost,ground-flying).
+normal_effectiveness(ghost,ground-bug).
+normal_effectiveness(ghost,ground-rock).
+normal_effectiveness(ghost,ground-dragon).
+normal_effectiveness(ghost,ground-steel).
+normal_effectiveness(ghost,ground-fairy).
+normal_effectiveness(ghost,flying-fire).
+normal_effectiveness(ghost,flying-water).
+normal_effectiveness(ghost,flying-electric).
+normal_effectiveness(ghost,flying-grass).
+normal_effectiveness(ghost,flying-ice).
+normal_effectiveness(ghost,flying-fighting).
+normal_effectiveness(ghost,flying-poison).
+normal_effectiveness(ghost,flying-ground).
+normal_effectiveness(ghost,flying-bug).
+normal_effectiveness(ghost,flying-rock).
+normal_effectiveness(ghost,flying-dragon).
+normal_effectiveness(ghost,flying-steel).
+normal_effectiveness(ghost,flying-fairy).
+normal_effectiveness(ghost,psychic-dark).
+normal_effectiveness(ghost,bug-fire).
+normal_effectiveness(ghost,bug-water).
+normal_effectiveness(ghost,bug-electric).
+normal_effectiveness(ghost,bug-grass).
+normal_effectiveness(ghost,bug-ice).
+normal_effectiveness(ghost,bug-fighting).
+normal_effectiveness(ghost,bug-poison).
+normal_effectiveness(ghost,bug-ground).
+normal_effectiveness(ghost,bug-flying).
+normal_effectiveness(ghost,bug-rock).
+normal_effectiveness(ghost,bug-dragon).
+normal_effectiveness(ghost,bug-steel).
+normal_effectiveness(ghost,bug-fairy).
+normal_effectiveness(ghost,rock-fire).
+normal_effectiveness(ghost,rock-water).
+normal_effectiveness(ghost,rock-electric).
+normal_effectiveness(ghost,rock-grass).
+normal_effectiveness(ghost,rock-ice).
+normal_effectiveness(ghost,rock-fighting).
+normal_effectiveness(ghost,rock-poison).
+normal_effectiveness(ghost,rock-ground).
+normal_effectiveness(ghost,rock-flying).
+normal_effectiveness(ghost,rock-bug).
+normal_effectiveness(ghost,rock-dragon).
+normal_effectiveness(ghost,rock-steel).
+normal_effectiveness(ghost,rock-fairy).
+normal_effectiveness(ghost,ghost-dark).
+normal_effectiveness(ghost,dragon-fire).
+normal_effectiveness(ghost,dragon-water).
+normal_effectiveness(ghost,dragon-electric).
+normal_effectiveness(ghost,dragon-grass).
+normal_effectiveness(ghost,dragon-ice).
+normal_effectiveness(ghost,dragon-fighting).
+normal_effectiveness(ghost,dragon-poison).
+normal_effectiveness(ghost,dragon-ground).
+normal_effectiveness(ghost,dragon-flying).
+normal_effectiveness(ghost,dragon-bug).
+normal_effectiveness(ghost,dragon-rock).
+normal_effectiveness(ghost,dragon-steel).
+normal_effectiveness(ghost,dragon-fairy).
+normal_effectiveness(ghost,dark-psychic).
+normal_effectiveness(ghost,dark-ghost).
+normal_effectiveness(ghost,steel-fire).
+normal_effectiveness(ghost,steel-water).
+normal_effectiveness(ghost,steel-electric).
+normal_effectiveness(ghost,steel-grass).
+normal_effectiveness(ghost,steel-ice).
+normal_effectiveness(ghost,steel-fighting).
+normal_effectiveness(ghost,steel-poison).
+normal_effectiveness(ghost,steel-ground).
+normal_effectiveness(ghost,steel-flying).
+normal_effectiveness(ghost,steel-bug).
+normal_effectiveness(ghost,steel-rock).
+normal_effectiveness(ghost,steel-dragon).
+normal_effectiveness(ghost,steel-fairy).
+normal_effectiveness(ghost,fairy-fire).
+normal_effectiveness(ghost,fairy-water).
+normal_effectiveness(ghost,fairy-electric).
+normal_effectiveness(ghost,fairy-grass).
+normal_effectiveness(ghost,fairy-ice).
+normal_effectiveness(ghost,fairy-fighting).
+normal_effectiveness(ghost,fairy-poison).
+normal_effectiveness(ghost,fairy-ground).
+normal_effectiveness(ghost,fairy-flying).
+normal_effectiveness(ghost,fairy-bug).
+normal_effectiveness(ghost,fairy-rock).
+normal_effectiveness(ghost,fairy-dragon).
+normal_effectiveness(ghost,fairy-steel).
+normal_effectiveness(dragon,normal).
+normal_effectiveness(dragon,fire).
+normal_effectiveness(dragon,water).
+normal_effectiveness(dragon,electric).
+normal_effectiveness(dragon,grass).
+normal_effectiveness(dragon,ice).
+normal_effectiveness(dragon,fighting).
+normal_effectiveness(dragon,poison).
+normal_effectiveness(dragon,ground).
+normal_effectiveness(dragon,flying).
+normal_effectiveness(dragon,psychic).
+normal_effectiveness(dragon,bug).
+normal_effectiveness(dragon,rock).
+normal_effectiveness(dragon,ghost).
+normal_effectiveness(dragon,dark).
+normal_effectiveness(dragon,normal-fire).
+normal_effectiveness(dragon,normal-water).
+normal_effectiveness(dragon,normal-electric).
+normal_effectiveness(dragon,normal-grass).
+normal_effectiveness(dragon,normal-ice).
+normal_effectiveness(dragon,normal-fighting).
+normal_effectiveness(dragon,normal-poison).
+normal_effectiveness(dragon,normal-ground).
+normal_effectiveness(dragon,normal-flying).
+normal_effectiveness(dragon,normal-psychic).
+normal_effectiveness(dragon,normal-bug).
+normal_effectiveness(dragon,normal-rock).
+normal_effectiveness(dragon,normal-ghost).
+normal_effectiveness(dragon,normal-dark).
+normal_effectiveness(dragon,fire-normal).
+normal_effectiveness(dragon,fire-water).
+normal_effectiveness(dragon,fire-electric).
+normal_effectiveness(dragon,fire-grass).
+normal_effectiveness(dragon,fire-ice).
+normal_effectiveness(dragon,fire-fighting).
+normal_effectiveness(dragon,fire-poison).
+normal_effectiveness(dragon,fire-ground).
+normal_effectiveness(dragon,fire-flying).
+normal_effectiveness(dragon,fire-psychic).
+normal_effectiveness(dragon,fire-bug).
+normal_effectiveness(dragon,fire-rock).
+normal_effectiveness(dragon,fire-ghost).
+normal_effectiveness(dragon,fire-dark).
+normal_effectiveness(dragon,water-normal).
+normal_effectiveness(dragon,water-fire).
+normal_effectiveness(dragon,water-electric).
+normal_effectiveness(dragon,water-grass).
+normal_effectiveness(dragon,water-ice).
+normal_effectiveness(dragon,water-fighting).
+normal_effectiveness(dragon,water-poison).
+normal_effectiveness(dragon,water-ground).
+normal_effectiveness(dragon,water-flying).
+normal_effectiveness(dragon,water-psychic).
+normal_effectiveness(dragon,water-bug).
+normal_effectiveness(dragon,water-rock).
+normal_effectiveness(dragon,water-ghost).
+normal_effectiveness(dragon,water-dark).
+normal_effectiveness(dragon,electric-normal).
+normal_effectiveness(dragon,electric-fire).
+normal_effectiveness(dragon,electric-water).
+normal_effectiveness(dragon,electric-grass).
+normal_effectiveness(dragon,electric-ice).
+normal_effectiveness(dragon,electric-fighting).
+normal_effectiveness(dragon,electric-poison).
+normal_effectiveness(dragon,electric-ground).
+normal_effectiveness(dragon,electric-flying).
+normal_effectiveness(dragon,electric-psychic).
+normal_effectiveness(dragon,electric-bug).
+normal_effectiveness(dragon,electric-rock).
+normal_effectiveness(dragon,electric-ghost).
+normal_effectiveness(dragon,electric-dark).
+normal_effectiveness(dragon,grass-normal).
+normal_effectiveness(dragon,grass-fire).
+normal_effectiveness(dragon,grass-water).
+normal_effectiveness(dragon,grass-electric).
+normal_effectiveness(dragon,grass-ice).
+normal_effectiveness(dragon,grass-fighting).
+normal_effectiveness(dragon,grass-poison).
+normal_effectiveness(dragon,grass-ground).
+normal_effectiveness(dragon,grass-flying).
+normal_effectiveness(dragon,grass-psychic).
+normal_effectiveness(dragon,grass-bug).
+normal_effectiveness(dragon,grass-rock).
+normal_effectiveness(dragon,grass-ghost).
+normal_effectiveness(dragon,grass-dark).
+normal_effectiveness(dragon,ice-normal).
+normal_effectiveness(dragon,ice-fire).
+normal_effectiveness(dragon,ice-water).
+normal_effectiveness(dragon,ice-electric).
+normal_effectiveness(dragon,ice-grass).
+normal_effectiveness(dragon,ice-fighting).
+normal_effectiveness(dragon,ice-poison).
+normal_effectiveness(dragon,ice-ground).
+normal_effectiveness(dragon,ice-flying).
+normal_effectiveness(dragon,ice-psychic).
+normal_effectiveness(dragon,ice-bug).
+normal_effectiveness(dragon,ice-rock).
+normal_effectiveness(dragon,ice-ghost).
+normal_effectiveness(dragon,ice-dark).
+normal_effectiveness(dragon,fighting-normal).
+normal_effectiveness(dragon,fighting-fire).
+normal_effectiveness(dragon,fighting-water).
+normal_effectiveness(dragon,fighting-electric).
+normal_effectiveness(dragon,fighting-grass).
+normal_effectiveness(dragon,fighting-ice).
+normal_effectiveness(dragon,fighting-poison).
+normal_effectiveness(dragon,fighting-ground).
+normal_effectiveness(dragon,fighting-flying).
+normal_effectiveness(dragon,fighting-psychic).
+normal_effectiveness(dragon,fighting-bug).
+normal_effectiveness(dragon,fighting-rock).
+normal_effectiveness(dragon,fighting-ghost).
+normal_effectiveness(dragon,fighting-dark).
+normal_effectiveness(dragon,poison-normal).
+normal_effectiveness(dragon,poison-fire).
+normal_effectiveness(dragon,poison-water).
+normal_effectiveness(dragon,poison-electric).
+normal_effectiveness(dragon,poison-grass).
+normal_effectiveness(dragon,poison-ice).
+normal_effectiveness(dragon,poison-fighting).
+normal_effectiveness(dragon,poison-ground).
+normal_effectiveness(dragon,poison-flying).
+normal_effectiveness(dragon,poison-psychic).
+normal_effectiveness(dragon,poison-bug).
+normal_effectiveness(dragon,poison-rock).
+normal_effectiveness(dragon,poison-ghost).
+normal_effectiveness(dragon,poison-dark).
+normal_effectiveness(dragon,ground-normal).
+normal_effectiveness(dragon,ground-fire).
+normal_effectiveness(dragon,ground-water).
+normal_effectiveness(dragon,ground-electric).
+normal_effectiveness(dragon,ground-grass).
+normal_effectiveness(dragon,ground-ice).
+normal_effectiveness(dragon,ground-fighting).
+normal_effectiveness(dragon,ground-poison).
+normal_effectiveness(dragon,ground-flying).
+normal_effectiveness(dragon,ground-psychic).
+normal_effectiveness(dragon,ground-bug).
+normal_effectiveness(dragon,ground-rock).
+normal_effectiveness(dragon,ground-ghost).
+normal_effectiveness(dragon,ground-dark).
+normal_effectiveness(dragon,flying-normal).
+normal_effectiveness(dragon,flying-fire).
+normal_effectiveness(dragon,flying-water).
+normal_effectiveness(dragon,flying-electric).
+normal_effectiveness(dragon,flying-grass).
+normal_effectiveness(dragon,flying-ice).
+normal_effectiveness(dragon,flying-fighting).
+normal_effectiveness(dragon,flying-poison).
+normal_effectiveness(dragon,flying-ground).
+normal_effectiveness(dragon,flying-psychic).
+normal_effectiveness(dragon,flying-bug).
+normal_effectiveness(dragon,flying-rock).
+normal_effectiveness(dragon,flying-ghost).
+normal_effectiveness(dragon,flying-dark).
+normal_effectiveness(dragon,psychic-normal).
+normal_effectiveness(dragon,psychic-fire).
+normal_effectiveness(dragon,psychic-water).
+normal_effectiveness(dragon,psychic-electric).
+normal_effectiveness(dragon,psychic-grass).
+normal_effectiveness(dragon,psychic-ice).
+normal_effectiveness(dragon,psychic-fighting).
+normal_effectiveness(dragon,psychic-poison).
+normal_effectiveness(dragon,psychic-ground).
+normal_effectiveness(dragon,psychic-flying).
+normal_effectiveness(dragon,psychic-bug).
+normal_effectiveness(dragon,psychic-rock).
+normal_effectiveness(dragon,psychic-ghost).
+normal_effectiveness(dragon,psychic-dark).
+normal_effectiveness(dragon,bug-normal).
+normal_effectiveness(dragon,bug-fire).
+normal_effectiveness(dragon,bug-water).
+normal_effectiveness(dragon,bug-electric).
+normal_effectiveness(dragon,bug-grass).
+normal_effectiveness(dragon,bug-ice).
+normal_effectiveness(dragon,bug-fighting).
+normal_effectiveness(dragon,bug-poison).
+normal_effectiveness(dragon,bug-ground).
+normal_effectiveness(dragon,bug-flying).
+normal_effectiveness(dragon,bug-psychic).
+normal_effectiveness(dragon,bug-rock).
+normal_effectiveness(dragon,bug-ghost).
+normal_effectiveness(dragon,bug-dark).
+normal_effectiveness(dragon,rock-normal).
+normal_effectiveness(dragon,rock-fire).
+normal_effectiveness(dragon,rock-water).
+normal_effectiveness(dragon,rock-electric).
+normal_effectiveness(dragon,rock-grass).
+normal_effectiveness(dragon,rock-ice).
+normal_effectiveness(dragon,rock-fighting).
+normal_effectiveness(dragon,rock-poison).
+normal_effectiveness(dragon,rock-ground).
+normal_effectiveness(dragon,rock-flying).
+normal_effectiveness(dragon,rock-psychic).
+normal_effectiveness(dragon,rock-bug).
+normal_effectiveness(dragon,rock-ghost).
+normal_effectiveness(dragon,rock-dark).
+normal_effectiveness(dragon,ghost-normal).
+normal_effectiveness(dragon,ghost-fire).
+normal_effectiveness(dragon,ghost-water).
+normal_effectiveness(dragon,ghost-electric).
+normal_effectiveness(dragon,ghost-grass).
+normal_effectiveness(dragon,ghost-ice).
+normal_effectiveness(dragon,ghost-fighting).
+normal_effectiveness(dragon,ghost-poison).
+normal_effectiveness(dragon,ghost-ground).
+normal_effectiveness(dragon,ghost-flying).
+normal_effectiveness(dragon,ghost-psychic).
+normal_effectiveness(dragon,ghost-bug).
+normal_effectiveness(dragon,ghost-rock).
+normal_effectiveness(dragon,ghost-dark).
+normal_effectiveness(dragon,dragon-steel).
+normal_effectiveness(dragon,dark-normal).
+normal_effectiveness(dragon,dark-fire).
+normal_effectiveness(dragon,dark-water).
+normal_effectiveness(dragon,dark-electric).
+normal_effectiveness(dragon,dark-grass).
+normal_effectiveness(dragon,dark-ice).
+normal_effectiveness(dragon,dark-fighting).
+normal_effectiveness(dragon,dark-poison).
+normal_effectiveness(dragon,dark-ground).
+normal_effectiveness(dragon,dark-flying).
+normal_effectiveness(dragon,dark-psychic).
+normal_effectiveness(dragon,dark-bug).
+normal_effectiveness(dragon,dark-rock).
+normal_effectiveness(dragon,dark-ghost).
+normal_effectiveness(dragon,steel-dragon).
+normal_effectiveness(dark,normal).
+normal_effectiveness(dark,fire).
+normal_effectiveness(dark,water).
+normal_effectiveness(dark,electric).
+normal_effectiveness(dark,grass).
+normal_effectiveness(dark,ice).
+normal_effectiveness(dark,poison).
+normal_effectiveness(dark,ground).
+normal_effectiveness(dark,flying).
+normal_effectiveness(dark,bug).
+normal_effectiveness(dark,rock).
+normal_effectiveness(dark,dragon).
+normal_effectiveness(dark,steel).
+normal_effectiveness(dark,normal-fire).
+normal_effectiveness(dark,normal-water).
+normal_effectiveness(dark,normal-electric).
+normal_effectiveness(dark,normal-grass).
+normal_effectiveness(dark,normal-ice).
+normal_effectiveness(dark,normal-poison).
+normal_effectiveness(dark,normal-ground).
+normal_effectiveness(dark,normal-flying).
+normal_effectiveness(dark,normal-bug).
+normal_effectiveness(dark,normal-rock).
+normal_effectiveness(dark,normal-dragon).
+normal_effectiveness(dark,normal-steel).
+normal_effectiveness(dark,fire-normal).
+normal_effectiveness(dark,fire-water).
+normal_effectiveness(dark,fire-electric).
+normal_effectiveness(dark,fire-grass).
+normal_effectiveness(dark,fire-ice).
+normal_effectiveness(dark,fire-poison).
+normal_effectiveness(dark,fire-ground).
+normal_effectiveness(dark,fire-flying).
+normal_effectiveness(dark,fire-bug).
+normal_effectiveness(dark,fire-rock).
+normal_effectiveness(dark,fire-dragon).
+normal_effectiveness(dark,fire-steel).
+normal_effectiveness(dark,water-normal).
+normal_effectiveness(dark,water-fire).
+normal_effectiveness(dark,water-electric).
+normal_effectiveness(dark,water-grass).
+normal_effectiveness(dark,water-ice).
+normal_effectiveness(dark,water-poison).
+normal_effectiveness(dark,water-ground).
+normal_effectiveness(dark,water-flying).
+normal_effectiveness(dark,water-bug).
+normal_effectiveness(dark,water-rock).
+normal_effectiveness(dark,water-dragon).
+normal_effectiveness(dark,water-steel).
+normal_effectiveness(dark,electric-normal).
+normal_effectiveness(dark,electric-fire).
+normal_effectiveness(dark,electric-water).
+normal_effectiveness(dark,electric-grass).
+normal_effectiveness(dark,electric-ice).
+normal_effectiveness(dark,electric-poison).
+normal_effectiveness(dark,electric-ground).
+normal_effectiveness(dark,electric-flying).
+normal_effectiveness(dark,electric-bug).
+normal_effectiveness(dark,electric-rock).
+normal_effectiveness(dark,electric-dragon).
+normal_effectiveness(dark,electric-steel).
+normal_effectiveness(dark,grass-normal).
+normal_effectiveness(dark,grass-fire).
+normal_effectiveness(dark,grass-water).
+normal_effectiveness(dark,grass-electric).
+normal_effectiveness(dark,grass-ice).
+normal_effectiveness(dark,grass-poison).
+normal_effectiveness(dark,grass-ground).
+normal_effectiveness(dark,grass-flying).
+normal_effectiveness(dark,grass-bug).
+normal_effectiveness(dark,grass-rock).
+normal_effectiveness(dark,grass-dragon).
+normal_effectiveness(dark,grass-steel).
+normal_effectiveness(dark,ice-normal).
+normal_effectiveness(dark,ice-fire).
+normal_effectiveness(dark,ice-water).
+normal_effectiveness(dark,ice-electric).
+normal_effectiveness(dark,ice-grass).
+normal_effectiveness(dark,ice-poison).
+normal_effectiveness(dark,ice-ground).
+normal_effectiveness(dark,ice-flying).
+normal_effectiveness(dark,ice-bug).
+normal_effectiveness(dark,ice-rock).
+normal_effectiveness(dark,ice-dragon).
+normal_effectiveness(dark,ice-steel).
+normal_effectiveness(dark,fighting-psychic).
+normal_effectiveness(dark,fighting-ghost).
+normal_effectiveness(dark,poison-normal).
+normal_effectiveness(dark,poison-fire).
+normal_effectiveness(dark,poison-water).
+normal_effectiveness(dark,poison-electric).
+normal_effectiveness(dark,poison-grass).
+normal_effectiveness(dark,poison-ice).
+normal_effectiveness(dark,poison-ground).
+normal_effectiveness(dark,poison-flying).
+normal_effectiveness(dark,poison-bug).
+normal_effectiveness(dark,poison-rock).
+normal_effectiveness(dark,poison-dragon).
+normal_effectiveness(dark,poison-steel).
+normal_effectiveness(dark,ground-normal).
+normal_effectiveness(dark,ground-fire).
+normal_effectiveness(dark,ground-water).
+normal_effectiveness(dark,ground-electric).
+normal_effectiveness(dark,ground-grass).
+normal_effectiveness(dark,ground-ice).
+normal_effectiveness(dark,ground-poison).
+normal_effectiveness(dark,ground-flying).
+normal_effectiveness(dark,ground-bug).
+normal_effectiveness(dark,ground-rock).
+normal_effectiveness(dark,ground-dragon).
+normal_effectiveness(dark,ground-steel).
+normal_effectiveness(dark,flying-normal).
+normal_effectiveness(dark,flying-fire).
+normal_effectiveness(dark,flying-water).
+normal_effectiveness(dark,flying-electric).
+normal_effectiveness(dark,flying-grass).
+normal_effectiveness(dark,flying-ice).
+normal_effectiveness(dark,flying-poison).
+normal_effectiveness(dark,flying-ground).
+normal_effectiveness(dark,flying-bug).
+normal_effectiveness(dark,flying-rock).
+normal_effectiveness(dark,flying-dragon).
+normal_effectiveness(dark,flying-steel).
+normal_effectiveness(dark,psychic-fighting).
+normal_effectiveness(dark,psychic-dark).
+normal_effectiveness(dark,psychic-fairy).
+normal_effectiveness(dark,bug-normal).
+normal_effectiveness(dark,bug-fire).
+normal_effectiveness(dark,bug-water).
+normal_effectiveness(dark,bug-electric).
+normal_effectiveness(dark,bug-grass).
+normal_effectiveness(dark,bug-ice).
+normal_effectiveness(dark,bug-poison).
+normal_effectiveness(dark,bug-ground).
+normal_effectiveness(dark,bug-flying).
+normal_effectiveness(dark,bug-rock).
+normal_effectiveness(dark,bug-dragon).
+normal_effectiveness(dark,bug-steel).
+normal_effectiveness(dark,rock-normal).
+normal_effectiveness(dark,rock-fire).
+normal_effectiveness(dark,rock-water).
+normal_effectiveness(dark,rock-electric).
+normal_effectiveness(dark,rock-grass).
+normal_effectiveness(dark,rock-ice).
+normal_effectiveness(dark,rock-poison).
+normal_effectiveness(dark,rock-ground).
+normal_effectiveness(dark,rock-flying).
+normal_effectiveness(dark,rock-bug).
+normal_effectiveness(dark,rock-dragon).
+normal_effectiveness(dark,rock-steel).
+normal_effectiveness(dark,ghost-fighting).
+normal_effectiveness(dark,ghost-dark).
+normal_effectiveness(dark,ghost-fairy).
+normal_effectiveness(dark,dragon-normal).
+normal_effectiveness(dark,dragon-fire).
+normal_effectiveness(dark,dragon-water).
+normal_effectiveness(dark,dragon-electric).
+normal_effectiveness(dark,dragon-grass).
+normal_effectiveness(dark,dragon-ice).
+normal_effectiveness(dark,dragon-poison).
+normal_effectiveness(dark,dragon-ground).
+normal_effectiveness(dark,dragon-flying).
+normal_effectiveness(dark,dragon-bug).
+normal_effectiveness(dark,dragon-rock).
+normal_effectiveness(dark,dragon-steel).
+normal_effectiveness(dark,dark-psychic).
+normal_effectiveness(dark,dark-ghost).
+normal_effectiveness(dark,steel-normal).
+normal_effectiveness(dark,steel-fire).
+normal_effectiveness(dark,steel-water).
+normal_effectiveness(dark,steel-electric).
+normal_effectiveness(dark,steel-grass).
+normal_effectiveness(dark,steel-ice).
+normal_effectiveness(dark,steel-poison).
+normal_effectiveness(dark,steel-ground).
+normal_effectiveness(dark,steel-flying).
+normal_effectiveness(dark,steel-bug).
+normal_effectiveness(dark,steel-rock).
+normal_effectiveness(dark,steel-dragon).
+normal_effectiveness(dark,fairy-psychic).
+normal_effectiveness(dark,fairy-ghost).
+normal_effectiveness(steel,normal).
+normal_effectiveness(steel,grass).
+normal_effectiveness(steel,fighting).
+normal_effectiveness(steel,poison).
+normal_effectiveness(steel,ground).
+normal_effectiveness(steel,flying).
+normal_effectiveness(steel,psychic).
+normal_effectiveness(steel,bug).
+normal_effectiveness(steel,ghost).
+normal_effectiveness(steel,dragon).
+normal_effectiveness(steel,dark).
+normal_effectiveness(steel,normal-grass).
+normal_effectiveness(steel,normal-fighting).
+normal_effectiveness(steel,normal-poison).
+normal_effectiveness(steel,normal-ground).
+normal_effectiveness(steel,normal-flying).
+normal_effectiveness(steel,normal-psychic).
+normal_effectiveness(steel,normal-bug).
+normal_effectiveness(steel,normal-ghost).
+normal_effectiveness(steel,normal-dragon).
+normal_effectiveness(steel,normal-dark).
+normal_effectiveness(steel,fire-ice).
+normal_effectiveness(steel,fire-rock).
+normal_effectiveness(steel,fire-fairy).
+normal_effectiveness(steel,water-ice).
+normal_effectiveness(steel,water-poison).
+normal_effectiveness(steel,water-bug).
+normal_effectiveness(steel,water-rock).
+normal_effectiveness(steel,water-fairy).
+normal_effectiveness(steel,electric-ice).
+normal_effectiveness(steel,electric-poison).
+normal_effectiveness(steel,electric-rock).
+normal_effectiveness(steel,electric-fairy).
+normal_effectiveness(steel,grass-normal).
+normal_effectiveness(steel,grass-fighting).
+normal_effectiveness(steel,grass-poison).
+normal_effectiveness(steel,grass-ground).
+normal_effectiveness(steel,grass-flying).
+normal_effectiveness(steel,grass-psychic).
+normal_effectiveness(steel,grass-bug).
+normal_effectiveness(steel,grass-ghost).
+normal_effectiveness(steel,grass-dragon).
+normal_effectiveness(steel,grass-dark).
+normal_effectiveness(steel,ice-fire).
+normal_effectiveness(steel,ice-water).
+normal_effectiveness(steel,ice-electric).
+normal_effectiveness(steel,ice-steel).
+normal_effectiveness(steel,fighting-normal).
+normal_effectiveness(steel,fighting-grass).
+normal_effectiveness(steel,fighting-ground).
+normal_effectiveness(steel,fighting-flying).
+normal_effectiveness(steel,fighting-psychic).
+normal_effectiveness(steel,fighting-bug).
+normal_effectiveness(steel,fighting-ghost).
+normal_effectiveness(steel,fighting-dragon).
+normal_effectiveness(steel,fighting-dark).
+normal_effectiveness(steel,poison-normal).
+normal_effectiveness(steel,poison-water).
+normal_effectiveness(steel,poison-electric).
+normal_effectiveness(steel,poison-grass).
+normal_effectiveness(steel,poison-ground).
+normal_effectiveness(steel,poison-flying).
+normal_effectiveness(steel,poison-psychic).
+normal_effectiveness(steel,poison-bug).
+normal_effectiveness(steel,poison-ghost).
+normal_effectiveness(steel,poison-dragon).
+normal_effectiveness(steel,poison-dark).
+normal_effectiveness(steel,ground-normal).
+normal_effectiveness(steel,ground-grass).
+normal_effectiveness(steel,ground-fighting).
+normal_effectiveness(steel,ground-poison).
+normal_effectiveness(steel,ground-flying).
+normal_effectiveness(steel,ground-psychic).
+normal_effectiveness(steel,ground-bug).
+normal_effectiveness(steel,ground-ghost).
+normal_effectiveness(steel,ground-dragon).
+normal_effectiveness(steel,ground-dark).
+normal_effectiveness(steel,flying-normal).
+normal_effectiveness(steel,flying-grass).
+normal_effectiveness(steel,flying-fighting).
+normal_effectiveness(steel,flying-poison).
+normal_effectiveness(steel,flying-ground).
+normal_effectiveness(steel,flying-psychic).
+normal_effectiveness(steel,flying-bug).
+normal_effectiveness(steel,flying-ghost).
+normal_effectiveness(steel,flying-dragon).
+normal_effectiveness(steel,flying-dark).
+normal_effectiveness(steel,psychic-normal).
+normal_effectiveness(steel,psychic-grass).
+normal_effectiveness(steel,psychic-fighting).
+normal_effectiveness(steel,psychic-poison).
+normal_effectiveness(steel,psychic-ground).
+normal_effectiveness(steel,psychic-flying).
+normal_effectiveness(steel,psychic-bug).
+normal_effectiveness(steel,psychic-ghost).
+normal_effectiveness(steel,psychic-dragon).
+normal_effectiveness(steel,psychic-dark).
+normal_effectiveness(steel,bug-normal).
+normal_effectiveness(steel,bug-water).
+normal_effectiveness(steel,bug-grass).
+normal_effectiveness(steel,bug-fighting).
+normal_effectiveness(steel,bug-poison).
+normal_effectiveness(steel,bug-ground).
+normal_effectiveness(steel,bug-flying).
+normal_effectiveness(steel,bug-psychic).
+normal_effectiveness(steel,bug-ghost).
+normal_effectiveness(steel,bug-dragon).
+normal_effectiveness(steel,bug-dark).
+normal_effectiveness(steel,rock-fire).
+normal_effectiveness(steel,rock-water).
+normal_effectiveness(steel,rock-electric).
+normal_effectiveness(steel,rock-steel).
+normal_effectiveness(steel,ghost-normal).
+normal_effectiveness(steel,ghost-grass).
+normal_effectiveness(steel,ghost-fighting).
+normal_effectiveness(steel,ghost-poison).
+normal_effectiveness(steel,ghost-ground).
+normal_effectiveness(steel,ghost-flying).
+normal_effectiveness(steel,ghost-psychic).
+normal_effectiveness(steel,ghost-bug).
+normal_effectiveness(steel,ghost-dragon).
+normal_effectiveness(steel,ghost-dark).
+normal_effectiveness(steel,dragon-normal).
+normal_effectiveness(steel,dragon-grass).
+normal_effectiveness(steel,dragon-fighting).
+normal_effectiveness(steel,dragon-poison).
+normal_effectiveness(steel,dragon-ground).
+normal_effectiveness(steel,dragon-flying).
+normal_effectiveness(steel,dragon-psychic).
+normal_effectiveness(steel,dragon-bug).
+normal_effectiveness(steel,dragon-ghost).
+normal_effectiveness(steel,dragon-dark).
+normal_effectiveness(steel,dark-normal).
+normal_effectiveness(steel,dark-grass).
+normal_effectiveness(steel,dark-fighting).
+normal_effectiveness(steel,dark-poison).
+normal_effectiveness(steel,dark-ground).
+normal_effectiveness(steel,dark-flying).
+normal_effectiveness(steel,dark-psychic).
+normal_effectiveness(steel,dark-bug).
+normal_effectiveness(steel,dark-ghost).
+normal_effectiveness(steel,dark-dragon).
+normal_effectiveness(steel,steel-ice).
+normal_effectiveness(steel,steel-rock).
+normal_effectiveness(steel,steel-fairy).
+normal_effectiveness(steel,fairy-fire).
+normal_effectiveness(steel,fairy-water).
+normal_effectiveness(steel,fairy-electric).
+normal_effectiveness(steel,fairy-steel).
+normal_effectiveness(fairy,normal).
+normal_effectiveness(fairy,water).
+normal_effectiveness(fairy,electric).
+normal_effectiveness(fairy,grass).
+normal_effectiveness(fairy,ice).
+normal_effectiveness(fairy,ground).
+normal_effectiveness(fairy,flying).
+normal_effectiveness(fairy,psychic).
+normal_effectiveness(fairy,bug).
+normal_effectiveness(fairy,rock).
+normal_effectiveness(fairy,ghost).
+normal_effectiveness(fairy,fairy).
+normal_effectiveness(fairy,normal-water).
+normal_effectiveness(fairy,normal-electric).
+normal_effectiveness(fairy,normal-grass).
+normal_effectiveness(fairy,normal-poison).
+normal_effectiveness(fairy,normal-ground).
+normal_effectiveness(fairy,normal-flying).
+normal_effectiveness(fairy,normal-psychic).
+normal_effectiveness(fairy,normal-bug).
+normal_effectiveness(fairy,normal-rock).
+normal_effectiveness(fairy,normal-ghost).
+normal_effectiveness(fairy,normal-fairy).
+normal_effectiveness(fairy,fire-fighting).
+normal_effectiveness(fairy,fire-dragon).
+normal_effectiveness(fairy,fire-dark).
+normal_effectiveness(fairy,water-normal).
+normal_effectiveness(fairy,water-electric).
+normal_effectiveness(fairy,water-grass).
+normal_effectiveness(fairy,water-ice).
+normal_effectiveness(fairy,water-ground).
+normal_effectiveness(fairy,water-flying).
+normal_effectiveness(fairy,water-psychic).
+normal_effectiveness(fairy,water-bug).
+normal_effectiveness(fairy,water-rock).
+normal_effectiveness(fairy,water-ghost).
+normal_effectiveness(fairy,water-fairy).
+normal_effectiveness(fairy,electric-normal).
+normal_effectiveness(fairy,electric-water).
+normal_effectiveness(fairy,electric-grass).
+normal_effectiveness(fairy,electric-ice).
+normal_effectiveness(fairy,electric-ground).
+normal_effectiveness(fairy,electric-flying).
+normal_effectiveness(fairy,electric-psychic).
+normal_effectiveness(fairy,electric-bug).
+normal_effectiveness(fairy,electric-rock).
+normal_effectiveness(fairy,electric-ghost).
+normal_effectiveness(fairy,electric-fairy).
+normal_effectiveness(fairy,grass-normal).
+normal_effectiveness(fairy,grass-water).
+normal_effectiveness(fairy,grass-electric).
+normal_effectiveness(fairy,grass-ice).
+normal_effectiveness(fairy,grass-ground).
+normal_effectiveness(fairy,grass-flying).
+normal_effectiveness(fairy,grass-psychic).
+normal_effectiveness(fairy,grass-bug).
+normal_effectiveness(fairy,grass-rock).
+normal_effectiveness(fairy,grass-ghost).
+normal_effectiveness(fairy,grass-fairy).
+normal_effectiveness(fairy,ice-normal).
+normal_effectiveness(fairy,ice-water).
+normal_effectiveness(fairy,ice-electric).
+normal_effectiveness(fairy,ice-grass).
+normal_effectiveness(fairy,ice-ground).
+normal_effectiveness(fairy,ice-flying).
+normal_effectiveness(fairy,ice-psychic).
+normal_effectiveness(fairy,ice-bug).
+normal_effectiveness(fairy,ice-rock).
+normal_effectiveness(fairy,ice-ghost).
+normal_effectiveness(fairy,ice-fairy).
+normal_effectiveness(fairy,fighting-fire).
+normal_effectiveness(fairy,fighting-poison).
+normal_effectiveness(fairy,fighting-steel).
+normal_effectiveness(fairy,poison-fighting).
+normal_effectiveness(fairy,poison-dragon).
+normal_effectiveness(fairy,poison-dark).
+normal_effectiveness(fairy,ground-normal).
+normal_effectiveness(fairy,ground-water).
+normal_effectiveness(fairy,ground-electric).
+normal_effectiveness(fairy,ground-grass).
+normal_effectiveness(fairy,ground-ice).
+normal_effectiveness(fairy,ground-flying).
+normal_effectiveness(fairy,ground-psychic).
+normal_effectiveness(fairy,ground-bug).
+normal_effectiveness(fairy,ground-rock).
+normal_effectiveness(fairy,ground-ghost).
+normal_effectiveness(fairy,ground-fairy).
+normal_effectiveness(fairy,flying-normal).
+normal_effectiveness(fairy,flying-water).
+normal_effectiveness(fairy,flying-electric).
+normal_effectiveness(fairy,flying-grass).
+normal_effectiveness(fairy,flying-ice).
+normal_effectiveness(fairy,flying-ground).
+normal_effectiveness(fairy,flying-psychic).
+normal_effectiveness(fairy,flying-bug).
+normal_effectiveness(fairy,flying-rock).
+normal_effectiveness(fairy,flying-ghost).
+normal_effectiveness(fairy,flying-fairy).
+normal_effectiveness(fairy,psychic-normal).
+normal_effectiveness(fairy,psychic-water).
+normal_effectiveness(fairy,psychic-electric).
+normal_effectiveness(fairy,psychic-grass).
+normal_effectiveness(fairy,psychic-ice).
+normal_effectiveness(fairy,psychic-ground).
+normal_effectiveness(fairy,psychic-flying).
+normal_effectiveness(fairy,psychic-bug).
+normal_effectiveness(fairy,psychic-rock).
+normal_effectiveness(fairy,psychic-ghost).
+normal_effectiveness(fairy,psychic-fairy).
+normal_effectiveness(fairy,bug-normal).
+normal_effectiveness(fairy,bug-water).
+normal_effectiveness(fairy,bug-electric).
+normal_effectiveness(fairy,bug-grass).
+normal_effectiveness(fairy,bug-ice).
+normal_effectiveness(fairy,bug-ground).
+normal_effectiveness(fairy,bug-flying).
+normal_effectiveness(fairy,bug-psychic).
+normal_effectiveness(fairy,bug-rock).
+normal_effectiveness(fairy,bug-ghost).
+normal_effectiveness(fairy,bug-fairy).
+normal_effectiveness(fairy,rock-normal).
+normal_effectiveness(fairy,rock-water).
+normal_effectiveness(fairy,rock-electric).
+normal_effectiveness(fairy,rock-grass).
+normal_effectiveness(fairy,rock-ice).
+normal_effectiveness(fairy,rock-ground).
+normal_effectiveness(fairy,rock-flying).
+normal_effectiveness(fairy,rock-psychic).
+normal_effectiveness(fairy,rock-bug).
+normal_effectiveness(fairy,rock-ghost).
+normal_effectiveness(fairy,rock-fairy).
+normal_effectiveness(fairy,ghost-normal).
+normal_effectiveness(fairy,ghost-water).
+normal_effectiveness(fairy,ghost-electric).
+normal_effectiveness(fairy,ghost-grass).
+normal_effectiveness(fairy,ghost-ice).
+normal_effectiveness(fairy,ghost-ground).
+normal_effectiveness(fairy,ghost-flying).
+normal_effectiveness(fairy,ghost-psychic).
+normal_effectiveness(fairy,ghost-bug).
+normal_effectiveness(fairy,ghost-rock).
+normal_effectiveness(fairy,ghost-fairy).
+normal_effectiveness(fairy,dragon-fire).
+normal_effectiveness(fairy,dragon-poison).
+normal_effectiveness(fairy,dragon-steel).
+normal_effectiveness(fairy,dark-fire).
+normal_effectiveness(fairy,dark-poison).
+normal_effectiveness(fairy,dark-steel).
+normal_effectiveness(fairy,steel-fighting).
+normal_effectiveness(fairy,steel-dragon).
+normal_effectiveness(fairy,steel-dark).
+normal_effectiveness(fairy,fairy-normal).
+normal_effectiveness(fairy,fairy-water).
+normal_effectiveness(fairy,fairy-electric).
+normal_effectiveness(fairy,fairy-grass).
+normal_effectiveness(fairy,fairy-ice).
+normal_effectiveness(fairy,fairy-ground).
+normal_effectiveness(fairy,fairy-flying).
+normal_effectiveness(fairy,fairy-psychic).
+normal_effectiveness(fairy,fairy-bug).
+normal_effectiveness(fairy,fairy-rock).
+normal_effectiveness(fairy,fairy-ghost).
 
-/* Efetividade tipo agua */
-normalmente_efetivo(agua,normal)
-vantagem(agua,fogo)
-desvantagem(agua,agua)
-normalmente_efetivo(agua,eletrico)
-desvantagem(agua,planta)
-normalmente_efetivo(agua,gelo)
-normalmente_efetivo(agua,lutador)
-normalmente_efetivo(agua,veneno)
-vantagem(agua,terra)
-normalmente_efetivo(agua,voador)
-normalmente_efetivo(agua,psiquico)
-normalmente_efetivo(agua,inseto)
-vantagem(agua,pedra)
-normalmente_efetivo(agua,fantasma)
-desvantagem(agua,dragao)
-normalmente_efetivo(agua,noturno)
-normalmente_efetivo(agua,metalico)
-normalmente_efetivo(agua,fada)
-vantagem(agua,normal-fogo)
-desvantagem(agua, normal-agua)
-normalmente_efetivo(agua, normal-eletrico)
-desvantagem(agua, normal-planta)
-normalmente_efetivo(agua, normal-gelo)
-normalmente_efetivo(agua, normal-lutador)
-normalmente_efetivo(agua, normal-veneno)
-vantagem(agua, normal-terra)
-normalmente_efetivo(agua, normal-voador)
-normalmente_efetivo(agua, normal-psiquico)
-normalmente_efetivo(agua, normal-inseto)
-vantagem(agua, normal-pedra)
-normalmente_efetivo(agua, normal-fantasma)
-desvantagem(agua, normal-dragao)
-normalmente_efetivo(agua, normal-noturno)
-normalmente_efetivo(agua, normal-metalico)
-normalmente_efetivo(agua, normal-fada)
-vantagem(agua, fogo-normal)
-normalmente_efetivo(agua, fogo-agua)
-vantagem(agua, fogo-eletrico)
-normalmente_efetivo(agua, fogo-planta)
-vantagem(agua, fogo-gelo)
-vantagem(agua, fogo-lutador)
-vantagem(agua, fogo-veneno)
-super_vantagem(agua, fogo-terra)
-vantagem(agua, fogo-voador)
-vantagem(agua, fogo-psiquico)
-vantagem(agua, fogo-inseto)
-super_vantagem(agua, fogo-pedra)
-vantagem(agua, fogo-fantasma)
-normalmente_efetivo(agua, fogo-dragao)
-vantagem(agua, fogo-noturno)
-vantagem(agua, fogo-metalico)
-vantagem(agua, fogo-fada)
-desvantagem(agua, agua-normal)
-normalmente_efetivo(agua, agua-fogo)
-desvantagem(agua, agua-eletrico)
-super_desvantagem(agua, agua-planta)
-desvantagem(agua, agua-gelo)
-desvantagem(agua, agua-lutador)
-desvantagem(agua, agua-veneno)
-normalmente_efetivo(agua, agua-terra)
-desvantagem(agua, agua-voador)
-desvantagem(agua, agua-psiquico)
-desvantagem(agua, agua-inseto)
-normalmente_efetivo(agua, agua-pedra)
-desvantagem(agua, agua-fantasma)
-super_desvantagem(agua, agua-dragao)
-desvantagem(agua, agua-noturno)
-desvantagem(agua, agua-metalico)
-desvantagem(agua, agua-fada)
-normalmente_efetivo(agua, eletrico-normal)
-vantagem(agua, eletrico-fogo)
-desvantagem(agua, eletrico-agua)
-desvantagem(agua, eletrico-planta)
-normalmente_efetivo(agua, eletrico-gelo)
-normalmente_efetivo(agua, eletrico-lutador)
-normalmente_efetivo(agua, eletrico-veneno)
-vantagem(agua, eletrico-terra)
-normalmente_efetivo(agua, eletrico-voador)
-normalmente_efetivo(agua, eletrico-psiquico)
-normalmente_efetivo(agua, eletrico-inseto)
-vantagem(agua, eletrico-pedra)
-normalmente_efetivo(agua, eletrico-fantasma)
-desvantagem(agua, eletrico-dragao)
-normalmente_efetivo(agua, eletrico-noturno)
-normalmente_efetivo(agua, eletrico-metalico)
-normalmente_efetivo(agua, eletrico-fada)
-desvantagem(agua, planta-normal)
-normalmente_efetivo(agua, planta-fogo)
-super_desvantagem(agua, planta-agua)
-desvantagem(agua, planta-eletrico)
-desvantagem(agua, planta-gelo)
-desvantagem(agua, planta-lutador)
-desvantagem(agua, planta-veneno)
-normalmente_efetivo(agua, planta-terra)
-desvantagem(agua, planta-voador)
-desvantagem(agua, planta-psiquico)
-desvantagem(agua, planta-inseto)
-normalmente_efetivo(agua, planta-pedra)
-desvantagem(agua, planta-fantasma)
-super_desvantagem(agua, planta-dragao)
-desvantagem(agua, planta-noturno)
-desvantagem(agua, planta-metalico)
-desvantagem(agua, planta-fada)
-normalmente_efetivo(agua, gelo-normal)
-vantagem(agua, gelo-fogo)
-desvantagem(agua, gelo-agua)
-normalmente_efetivo(agua, gelo-eletrico)
-desvantagem(agua, gelo-planta)
-normalmente_efetivo(agua, gelo-lutador)
-normalmente_efetivo(agua, gelo-veneno)
-vantagem(agua, gelo-terra)
-normalmente_efetivo(agua, gelo-voador)
-normalmente_efetivo(agua, gelo-psiquico)
-normalmente_efetivo(agua, gelo-inseto)
-vantagem(agua, gelo-pedra)
-normalmente_efetivo(agua, gelo-fantasma)
-desvantagem(agua, gelo-dragao)
-normalmente_efetivo(agua, gelo-noturno)
-normalmente_efetivo(agua, gelo-metalico)
-normalmente_efetivo(agua, gelo-fada)
-normalmente_efetivo(agua, lutador-normal)
-vantagem(agua, lutador-fogo)
-desvantagem(agua, lutador-agua)
-normalmente_efetivo(agua, lutador-eletrico)
-desvantagem(agua, lutador-planta)
-normalmente_efetivo(agua, lutador-gelo)
-normalmente_efetivo(agua, lutador-veneno)
-vantagem(agua, lutador-terra)
-normalmente_efetivo(agua, lutador-voador)
-normalmente_efetivo(agua, lutador-psiquico)
-normalmente_efetivo(agua, lutador-inseto)
-vantagem(agua, lutador-pedra)
-normalmente_efetivo(agua, lutador-fantasma)
-desvantagem(agua, lutador-dragao)
-normalmente_efetivo(agua, lutador-noturno)
-normalmente_efetivo(agua, lutador-metalico)
-normalmente_efetivo(agua, lutador-fada)
-normalmente_efetivo(agua, veneno-normal)
-vantagem(agua, veneno-fogo)
-desvantagem(agua, veneno-agua)
-normalmente_efetivo(agua, veneno-eletrico)
-desvantagem(agua, veneno-planta)
-normalmente_efetivo(agua, veneno-gelo)
-normalmente_efetivo(agua, veneno-lutador)
-vantagem(agua, veneno-terra)
-normalmente_efetivo(agua, veneno-voador)
-normalmente_efetivo(agua, veneno-psiquico)
-normalmente_efetivo(agua, veneno-inseto)
-vantagem(agua, veneno-pedra)
-normalmente_efetivo(agua, veneno-fantasma)
-desvantagem(agua, veneno-dragao)
-normalmente_efetivo(agua, veneno-noturno)
-normalmente_efetivo(agua, veneno-metalico)
-normalmente_efetivo(agua, veneno-fada)
-vantagem(agua, terra-normal)
-super_vantagem(agua, terra-fogo)
-normalmente_efetivo(agua, terra-agua)
-vantagem(agua, terra-eletrico)
-normalmente_efetivo(agua, terra-planta)
-vantagem(agua, terra-gelo)
-vantagem(agua, terra-lutador)
-vantagem(agua, terra-veneno)
-vantagem(agua, terra-voador)
-vantagem(agua, terra-psiquico)
-vantagem(agua, terra-inseto)
-super_vantagem(agua, terra-pedra)
-vantagem(agua, terra-fantasma)
-normalmente_efetivo(agua, terra-dragao)
-vantagem(agua, terra-noturno)
-vantagem(agua, terra-metalico)
-vantagem(agua, terra-fada)
-normalmente_efetivo(agua, voador-normal)
-vantagem(agua, voador-fogo)
-desvantagem(agua, voador-agua)
-normalmente_efetivo(agua, voador-eletrico)
-desvantagem(agua, voador-planta)
-normalmente_efetivo(agua, voador-gelo)
-normalmente_efetivo(agua, voador-lutador)
-normalmente_efetivo(agua, voador-veneno)
-vantagem(agua, voador-terra)
-normalmente_efetivo(agua, voador-psiquico)
-normalmente_efetivo(agua, voador-inseto)
-vantagem(agua, voador-pedra)
-normalmente_efetivo(agua, voador-fantasma)
-desvantagem(agua, voador-dragao)
-normalmente_efetivo(agua, voador-noturno)
-normalmente_efetivo(agua, voador-metalico)
-normalmente_efetivo(agua, voador-fada)
-normalmente_efetivo(agua, psiquico-normal)
-vantagem(agua, psiquico-fogo)
-desvantagem(agua, psiquico-agua)
-normalmente_efetivo(agua, psiquico-eletrico)
-desvantagem(agua, psiquico-planta)
-normalmente_efetivo(agua, psiquico-gelo)
-normalmente_efetivo(agua, psiquico-lutador)
-normalmente_efetivo(agua, psiquico-veneno)
-vantagem(agua, psiquico-terra)
-normalmente_efetivo(agua, psiquico-voador)
-normalmente_efetivo(agua, psiquico-inseto)
-vantagem(agua, psiquico-pedra)
-normalmente_efetivo(agua, psiquico-fantasma)
-desvantagem(agua, psiquico-dragao)
-normalmente_efetivo(agua, psiquico-noturno)
-normalmente_efetivo(agua, psiquico-metalico)
-normalmente_efetivo(agua, psiquico-fada)
-normalmente_efetivo(agua, inseto-normal)
-vantagem(agua, inseto-fogo)
-desvantagem(agua, inseto-agua)
-normalmente_efetivo(agua, inseto-eletrico)
-desvantagem(agua, inseto-planta)
-normalmente_efetivo(agua, inseto-gelo)
-normalmente_efetivo(agua, inseto-lutador)
-normalmente_efetivo(agua, inseto-veneno)
-vantagem(agua, inseto-terra)
-normalmente_efetivo(agua, inseto-voador)
-normalmente_efetivo(agua, inseto-psiquico)
-vantagem(agua, inseto-pedra)
-normalmente_efetivo(agua, inseto-fantasma)
-desvantagem(agua, inseto-dragao)
-normalmente_efetivo(agua, inseto-noturno)
-normalmente_efetivo(agua, inseto-metalico)
-normalmente_efetivo(agua, inseto-fada)
-vantagem(agua, pedra-normal)
-super_vantagem(agua, pedra-fogo)
-normalmente_efetivo(agua, pedra-agua)
-vantagem(agua, pedra-eletrico)
-normalmente_efetivo(agua, pedra-planta)
-vantagem(agua, pedra-gelo)
-vantagem(agua, pedra-lutador)
-vantagem(agua, pedra-veneno)
-super_vantagem(agua, pedra-terra)
-vantagem(agua, pedra-voador)
-vantagem(agua, pedra-psiquico)
-vantagem(agua, pedra-inseto)
-vantagem(agua, pedra-fantasma)
-normalmente_efetivo(agua, pedra-dragao)
-vantagem(agua, pedra-noturno)
-vantagem(agua, pedra-metalico)
-vantagem(agua, pedra-fada)
-normalmente_efetivo(agua, fantasma-normal)
-vantagem(agua, fantasma-fogo)
-desvantagem(agua, fantasma-agua)
-normalmente_efetivo(agua, fantasma-eletrico)
-desvantagem(agua, fantasma-planta)
-normalmente_efetivo(agua, fantasma-gelo)
-normalmente_efetivo(agua, fantasma-lutador)
-normalmente_efetivo(agua, fantasma-veneno)
-vantagem(agua, fantasma-terra)
-normalmente_efetivo(agua, fantasma-voador)
-normalmente_efetivo(agua, fantasma-psiquico)
-normalmente_efetivo(agua, fantasma-inseto)
-vantagem(agua, fantasma-pedra)
-desvantagem(agua, fantasma-dragao)
-normalmente_efetivo(agua, fantasma-noturno)
-normalmente_efetivo(agua, fantasma-metalico)
-normalmente_efetivo(agua, fantasma-fada)
-desvantagem(agua, dragao-normal)
-normalmente_efetivo(agua, dragao-fogo)
-super_desvantagem(agua, dragao-agua)
-desvantagem(agua, dragao-eletrico)
-super_desvantagem(agua, dragao-planta)
-desvantagem(agua, dragao-gelo)
-desvantagem(agua, dragao-lutador)
-desvantagem(agua, dragao-veneno)
-normalmente_efetivo(agua, dragao-terra)
-desvantagem(agua, dragao-voador)
-desvantagem(agua, dragao-psiquico)
-desvantagem(agua, dragao-inseto)
-normalmente_efetivo(agua, dragao-pedra)
-desvantagem(agua, dragao-fantasma)
-desvantagem(agua, dragao-noturno)
-desvantagem(agua, dragao-metalico)
-desvantagem(agua, dragao-fada)
-normalmente_efetivo(agua, noturno-normal)
-vantagem(agua, noturno-fogo)
-desvantagem(agua, noturno-agua)
-normalmente_efetivo(agua, noturno-eletrico)
-desvantagem(agua, noturno-planta)
-normalmente_efetivo(agua, noturno-gelo)
-normalmente_efetivo(agua, noturno-lutador)
-normalmente_efetivo(agua, noturno-veneno)
-vantagem(agua, noturno-terra)
-normalmente_efetivo(agua, noturno-voador)
-normalmente_efetivo(agua, noturno-psiquico)
-normalmente_efetivo(agua, noturno-inseto)
-vantagem(agua, noturno-pedra)
-normalmente_efetivo(agua, noturno-fantasma)
-desvantagem(agua, noturno-dragao)
-normalmente_efetivo(agua, noturno-metalico)
-normalmente_efetivo(agua, noturno-fada)
-normalmente_efetivo(agua, metalico-normal)
-vantagem(agua, metalico-fogo)
-desvantagem(agua, metalico-agua)
-normalmente_efetivo(agua, metalico-eletrico)
-desvantagem(agua, metalico-planta)
-normalmente_efetivo(agua, metalico-gelo)
-normalmente_efetivo(agua, metalico-lutador)
-normalmente_efetivo(agua, metalico-veneno)
-vantagem(agua, metalico-terra)
-normalmente_efetivo(agua, metalico-voador)
-normalmente_efetivo(agua, metalico-psiquico)
-normalmente_efetivo(agua, metalico-inseto)
-vantagem(agua, metalico-pedra)
-normalmente_efetivo(agua, metalico-fantasma)
-desvantagem(agua, metalico-dragao)
-normalmente_efetivo(agua, metalico-noturno)
-normalmente_efetivo(agua, metalico-fada)
-normalmente_efetivo(agua, fada-normal)
-vantagem(agua, fada-fogo)
-desvantagem(agua, fada-agua)
-normalmente_efetivo(agua, fada-eletrico)
-desvantagem(agua, fada-planta)
-normalmente_efetivo(agua, fada-gelo)
-normalmente_efetivo(agua, fada-lutador)
-normalmente_efetivo(agua, fada-veneno)
-vantagem(agua, fada-terra)
-normalmente_efetivo(agua, fada-voador)
-normalmente_efetivo(agua, fada-psiquico)
-normalmente_efetivo(agua, fada-inseto)
-vantagem(agua, fada-pedra)
-normalmente_efetivo(agua, fada-fantasma)
-desvantagem(agua, fada-dragao)
-normalmente_efetivo(agua, fada-noturno)
-normalmente_efetivo(agua, fada-metalico)
+zero_effectiveness(normal,ghost).
+zero_effectiveness(normal,normal-ghost).
+zero_effectiveness(normal,fire-ghost).
+zero_effectiveness(normal,water-ghost).
+zero_effectiveness(normal,electric-ghost).
+zero_effectiveness(normal,grass-ghost).
+zero_effectiveness(normal,ice-ghost).
+zero_effectiveness(normal,fighting-ghost).
+zero_effectiveness(normal,poison-ghost).
+zero_effectiveness(normal,ground-ghost).
+zero_effectiveness(normal,flying-ghost).
+zero_effectiveness(normal,psychic-ghost).
+zero_effectiveness(normal,bug-ghost).
+zero_effectiveness(normal,rock-ghost).
+zero_effectiveness(normal,ghost-normal).
+zero_effectiveness(normal,ghost-fire).
+zero_effectiveness(normal,ghost-water).
+zero_effectiveness(normal,ghost-electric).
+zero_effectiveness(normal,ghost-grass).
+zero_effectiveness(normal,ghost-ice).
+zero_effectiveness(normal,ghost-fighting).
+zero_effectiveness(normal,ghost-poison).
+zero_effectiveness(normal,ghost-ground).
+zero_effectiveness(normal,ghost-flying).
+zero_effectiveness(normal,ghost-psychic).
+zero_effectiveness(normal,ghost-bug).
+zero_effectiveness(normal,ghost-rock).
+zero_effectiveness(normal,ghost-dragon).
+zero_effectiveness(normal,ghost-dark).
+zero_effectiveness(normal,ghost-steel).
+zero_effectiveness(normal,ghost-fairy).
+zero_effectiveness(normal,dragon-ghost).
+zero_effectiveness(normal,dark-ghost).
+zero_effectiveness(normal,steel-ghost).
+zero_effectiveness(normal,fairy-ghost).
+zero_effectiveness(electric,ground).
+zero_effectiveness(electric,normal-ground).
+zero_effectiveness(electric,fire-ground).
+zero_effectiveness(electric,water-ground).
+zero_effectiveness(electric,electric-ground).
+zero_effectiveness(electric,grass-ground).
+zero_effectiveness(electric,ice-ground).
+zero_effectiveness(electric,fighting-ground).
+zero_effectiveness(electric,poison-ground).
+zero_effectiveness(electric,ground-normal).
+zero_effectiveness(electric,ground-fire).
+zero_effectiveness(electric,ground-water).
+zero_effectiveness(electric,ground-electric).
+zero_effectiveness(electric,ground-grass).
+zero_effectiveness(electric,ground-ice).
+zero_effectiveness(electric,ground-fighting).
+zero_effectiveness(electric,ground-poison).
+zero_effectiveness(electric,ground-flying).
+zero_effectiveness(electric,ground-psychic).
+zero_effectiveness(electric,ground-bug).
+zero_effectiveness(electric,ground-rock).
+zero_effectiveness(electric,ground-ghost).
+zero_effectiveness(electric,ground-dragon).
+zero_effectiveness(electric,ground-dark).
+zero_effectiveness(electric,ground-steel).
+zero_effectiveness(electric,ground-fairy).
+zero_effectiveness(electric,flying-ground).
+zero_effectiveness(electric,psychic-ground).
+zero_effectiveness(electric,bug-ground).
+zero_effectiveness(electric,rock-ground).
+zero_effectiveness(electric,ghost-ground).
+zero_effectiveness(electric,dragon-ground).
+zero_effectiveness(electric,dark-ground).
+zero_effectiveness(electric,steel-ground).
+zero_effectiveness(electric,fairy-ground).
+zero_effectiveness(fighting,ghost).
+zero_effectiveness(fighting,normal-ghost).
+zero_effectiveness(fighting,fire-ghost).
+zero_effectiveness(fighting,water-ghost).
+zero_effectiveness(fighting,electric-ghost).
+zero_effectiveness(fighting,grass-ghost).
+zero_effectiveness(fighting,ice-ghost).
+zero_effectiveness(fighting,fighting-ghost).
+zero_effectiveness(fighting,poison-ghost).
+zero_effectiveness(fighting,ground-ghost).
+zero_effectiveness(fighting,flying-ghost).
+zero_effectiveness(fighting,psychic-ghost).
+zero_effectiveness(fighting,bug-ghost).
+zero_effectiveness(fighting,rock-ghost).
+zero_effectiveness(fighting,ghost-normal).
+zero_effectiveness(fighting,ghost-fire).
+zero_effectiveness(fighting,ghost-water).
+zero_effectiveness(fighting,ghost-electric).
+zero_effectiveness(fighting,ghost-grass).
+zero_effectiveness(fighting,ghost-ice).
+zero_effectiveness(fighting,ghost-fighting).
+zero_effectiveness(fighting,ghost-poison).
+zero_effectiveness(fighting,ghost-ground).
+zero_effectiveness(fighting,ghost-flying).
+zero_effectiveness(fighting,ghost-psychic).
+zero_effectiveness(fighting,ghost-bug).
+zero_effectiveness(fighting,ghost-rock).
+zero_effectiveness(fighting,ghost-dragon).
+zero_effectiveness(fighting,ghost-dark).
+zero_effectiveness(fighting,ghost-steel).
+zero_effectiveness(fighting,ghost-fairy).
+zero_effectiveness(fighting,dragon-ghost).
+zero_effectiveness(fighting,dark-ghost).
+zero_effectiveness(fighting,steel-ghost).
+zero_effectiveness(fighting,fairy-ghost).
+zero_effectiveness(poison,steel).
+zero_effectiveness(poison,normal-steel).
+zero_effectiveness(poison,fire-steel).
+zero_effectiveness(poison,water-steel).
+zero_effectiveness(poison,electric-steel).
+zero_effectiveness(poison,grass-steel).
+zero_effectiveness(poison,ice-steel).
+zero_effectiveness(poison,fighting-steel).
+zero_effectiveness(poison,poison-steel).
+zero_effectiveness(poison,ground-steel).
+zero_effectiveness(poison,flying-steel).
+zero_effectiveness(poison,psychic-steel).
+zero_effectiveness(poison,bug-steel).
+zero_effectiveness(poison,rock-steel).
+zero_effectiveness(poison,ghost-steel).
+zero_effectiveness(poison,dragon-steel).
+zero_effectiveness(poison,dark-steel).
+zero_effectiveness(poison,steel-normal).
+zero_effectiveness(poison,steel-fire).
+zero_effectiveness(poison,steel-water).
+zero_effectiveness(poison,steel-electric).
+zero_effectiveness(poison,steel-grass).
+zero_effectiveness(poison,steel-ice).
+zero_effectiveness(poison,steel-fighting).
+zero_effectiveness(poison,steel-poison).
+zero_effectiveness(poison,steel-ground).
+zero_effectiveness(poison,steel-flying).
+zero_effectiveness(poison,steel-psychic).
+zero_effectiveness(poison,steel-bug).
+zero_effectiveness(poison,steel-rock).
+zero_effectiveness(poison,steel-ghost).
+zero_effectiveness(poison,steel-dragon).
+zero_effectiveness(poison,steel-dark).
+zero_effectiveness(poison,steel-fairy).
+zero_effectiveness(poison,fairy-steel).
+zero_effectiveness(ground,flying).
+zero_effectiveness(ground,normal-flying).
+zero_effectiveness(ground,fire-flying).
+zero_effectiveness(ground,water-flying).
+zero_effectiveness(ground,electric-flying).
+zero_effectiveness(ground,grass-flying).
+zero_effectiveness(ground,ice-flying).
+zero_effectiveness(ground,fighting-flying).
+zero_effectiveness(ground,poison-flying).
+zero_effectiveness(ground,ground-flying).
+zero_effectiveness(ground,flying-normal).
+zero_effectiveness(ground,flying-fire).
+zero_effectiveness(ground,flying-water).
+zero_effectiveness(ground,flying-electric).
+zero_effectiveness(ground,flying-grass).
+zero_effectiveness(ground,flying-ice).
+zero_effectiveness(ground,flying-fighting).
+zero_effectiveness(ground,flying-poison).
+zero_effectiveness(ground,flying-ground).
+zero_effectiveness(ground,flying-psychic).
+zero_effectiveness(ground,flying-bug).
+zero_effectiveness(ground,flying-rock).
+zero_effectiveness(ground,flying-ghost).
+zero_effectiveness(ground,flying-dragon).
+zero_effectiveness(ground,flying-dark).
+zero_effectiveness(ground,flying-steel).
+zero_effectiveness(ground,flying-fairy).
+zero_effectiveness(ground,psychic-flying).
+zero_effectiveness(ground,bug-flying).
+zero_effectiveness(ground,rock-flying).
+zero_effectiveness(ground,ghost-flying).
+zero_effectiveness(ground,dragon-flying).
+zero_effectiveness(ground,dark-flying).
+zero_effectiveness(ground,steel-flying).
+zero_effectiveness(ground,fairy-flying).
+zero_effectiveness(psychic,dark).
+zero_effectiveness(psychic,normal-dark).
+zero_effectiveness(psychic,fire-dark).
+zero_effectiveness(psychic,water-dark).
+zero_effectiveness(psychic,electric-dark).
+zero_effectiveness(psychic,grass-dark).
+zero_effectiveness(psychic,ice-dark).
+zero_effectiveness(psychic,fighting-dark).
+zero_effectiveness(psychic,poison-dark).
+zero_effectiveness(psychic,ground-dark).
+zero_effectiveness(psychic,flying-dark).
+zero_effectiveness(psychic,psychic-dark).
+zero_effectiveness(psychic,bug-dark).
+zero_effectiveness(psychic,rock-dark).
+zero_effectiveness(psychic,ghost-dark).
+zero_effectiveness(psychic,dragon-dark).
+zero_effectiveness(psychic,dark-normal).
+zero_effectiveness(psychic,dark-fire).
+zero_effectiveness(psychic,dark-water).
+zero_effectiveness(psychic,dark-electric).
+zero_effectiveness(psychic,dark-grass).
+zero_effectiveness(psychic,dark-ice).
+zero_effectiveness(psychic,dark-fighting).
+zero_effectiveness(psychic,dark-poison).
+zero_effectiveness(psychic,dark-ground).
+zero_effectiveness(psychic,dark-flying).
+zero_effectiveness(psychic,dark-psychic).
+zero_effectiveness(psychic,dark-bug).
+zero_effectiveness(psychic,dark-rock).
+zero_effectiveness(psychic,dark-ghost).
+zero_effectiveness(psychic,dark-dragon).
+zero_effectiveness(psychic,dark-steel).
+zero_effectiveness(psychic,dark-fairy).
+zero_effectiveness(psychic,steel-dark).
+zero_effectiveness(psychic,fairy-dark).
+zero_effectiveness(ghost,normal).
+zero_effectiveness(ghost,normal-fire).
+zero_effectiveness(ghost,normal-water).
+zero_effectiveness(ghost,normal-electric).
+zero_effectiveness(ghost,normal-grass).
+zero_effectiveness(ghost,normal-ice).
+zero_effectiveness(ghost,normal-fighting).
+zero_effectiveness(ghost,normal-poison).
+zero_effectiveness(ghost,normal-ground).
+zero_effectiveness(ghost,normal-flying).
+zero_effectiveness(ghost,normal-psychic).
+zero_effectiveness(ghost,normal-bug).
+zero_effectiveness(ghost,normal-rock).
+zero_effectiveness(ghost,normal-ghost).
+zero_effectiveness(ghost,normal-dragon).
+zero_effectiveness(ghost,normal-dark).
+zero_effectiveness(ghost,normal-steel).
+zero_effectiveness(ghost,normal-fairy).
+zero_effectiveness(ghost,fire-normal).
+zero_effectiveness(ghost,water-normal).
+zero_effectiveness(ghost,electric-normal).
+zero_effectiveness(ghost,grass-normal).
+zero_effectiveness(ghost,ice-normal).
+zero_effectiveness(ghost,fighting-normal).
+zero_effectiveness(ghost,poison-normal).
+zero_effectiveness(ghost,ground-normal).
+zero_effectiveness(ghost,flying-normal).
+zero_effectiveness(ghost,psychic-normal).
+zero_effectiveness(ghost,bug-normal).
+zero_effectiveness(ghost,rock-normal).
+zero_effectiveness(ghost,ghost-normal).
+zero_effectiveness(ghost,dragon-normal).
+zero_effectiveness(ghost,dark-normal).
+zero_effectiveness(ghost,steel-normal).
+zero_effectiveness(ghost,fairy-normal).
+zero_effectiveness(dragon,fairy).
+zero_effectiveness(dragon,normal-fairy).
+zero_effectiveness(dragon,fire-fairy).
+zero_effectiveness(dragon,water-fairy).
+zero_effectiveness(dragon,electric-fairy).
+zero_effectiveness(dragon,grass-fairy).
+zero_effectiveness(dragon,ice-fairy).
+zero_effectiveness(dragon,fighting-fairy).
+zero_effectiveness(dragon,poison-fairy).
+zero_effectiveness(dragon,ground-fairy).
+zero_effectiveness(dragon,flying-fairy).
+zero_effectiveness(dragon,psychic-fairy).
+zero_effectiveness(dragon,bug-fairy).
+zero_effectiveness(dragon,rock-fairy).
+zero_effectiveness(dragon,ghost-fairy).
+zero_effectiveness(dragon,dragon-fairy).
+zero_effectiveness(dragon,dark-fairy).
+zero_effectiveness(dragon,steel-fairy).
+zero_effectiveness(dragon,fairy-normal).
+zero_effectiveness(dragon,fairy-fire).
+zero_effectiveness(dragon,fairy-water).
+zero_effectiveness(dragon,fairy-electric).
+zero_effectiveness(dragon,fairy-grass).
+zero_effectiveness(dragon,fairy-ice).
+zero_effectiveness(dragon,fairy-fighting).
+zero_effectiveness(dragon,fairy-poison).
+zero_effectiveness(dragon,fairy-ground).
+zero_effectiveness(dragon,fairy-flying).
+zero_effectiveness(dragon,fairy-psychic).
+zero_effectiveness(dragon,fairy-bug).
+zero_effectiveness(dragon,fairy-rock).
+zero_effectiveness(dragon,fairy-ghost).
+zero_effectiveness(dragon,fairy-dragon).
+zero_effectiveness(dragon,fairy-dark).
+zero_effectiveness(dragon,fairy-steel).
 
-/* Efetividade tipo eletrico */
-normalmente_efetivo(eletrico,normal)
-normalmente_efetivo(eletrico,fogo)
-vantagem(eletrico,agua)
-desvantagem(eletrico,eletrico)
-desvantagem(eletrico,planta)
-normalmente_efetivo(eletrico,gelo)
-normalmente_efetivo(eletrico,lutador)
-normalmente_efetivo(eletrico,veneno)
-dano_zero(eletrico,terra)
-vantagem(eletrico,voador)
-normalmente_efetivo(eletrico,psiquico)
-normalmente_efetivo(eletrico,inseto)
-normalmente_efetivo(eletrico,pedra)
-normalmente_efetivo(eletrico,fantasma)
-desvantagem(eletrico,dragao)
-normalmente_efetivo(eletrico,noturno)
-normalmente_efetivo(eletrico,metalico)
-normalmente_efetivo(eletrico,fada)
-normalmente_efetivo(eletrico,normal-fogo)
-vantagem(eletrico, normal-agua)
-desvantagem(eletrico, normal-eletrico)
-desvantagem(eletrico, normal-planta)
-normalmente_efetivo(eletrico, normal-gelo)
-normalmente_efetivo(eletrico, normal-lutador)
-normalmente_efetivo(eletrico, normal-veneno)
-dano_zero(eletrico, normal-terra)
-vantagem(eletrico, normal-voador)
-normalmente_efetivo(eletrico, normal-psiquico)
-normalmente_efetivo(eletrico, normal-inseto)
-normalmente_efetivo(eletrico, normal-pedra)
-normalmente_efetivo(eletrico, normal-fantasma)
-desvantagem(eletrico, normal-dragao)
-normalmente_efetivo(eletrico, normal-noturno)
-normalmente_efetivo(eletrico, normal-metalico)
-normalmente_efetivo(eletrico, normal-fada)
-normalmente_efetivo(eletrico, fogo-normal)
-vantagem(eletrico, fogo-agua)
-desvantagem(eletrico, fogo-eletrico)
-desvantagem(eletrico, fogo-planta)
-normalmente_efetivo(eletrico, fogo-gelo)
-normalmente_efetivo(eletrico, fogo-lutador)
-normalmente_efetivo(eletrico, fogo-veneno)
-dano_zero(eletrico, fogo-terra)
-vantagem(eletrico, fogo-voador)
-normalmente_efetivo(eletrico, fogo-psiquico)
-normalmente_efetivo(eletrico, fogo-inseto)
-normalmente_efetivo(eletrico, fogo-pedra)
-normalmente_efetivo(eletrico, fogo-fantasma)
-desvantagem(eletrico, fogo-dragao)
-normalmente_efetivo(eletrico, fogo-noturno)
-normalmente_efetivo(eletrico, fogo-metalico)
-normalmente_efetivo(eletrico, fogo-fada)
-vantagem(eletrico, agua-normal)
-vantagem(eletrico, agua-fogo)
-normalmente_efetivo(eletrico, agua-eletrico)
-normalmente_efetivo(eletrico, agua-planta)
-normalmente_efetivo(eletrico, agua-gelo)
-vantagem(eletrico, agua-lutador)
-vantagem(eletrico, agua-veneno)
-dano_zero(eletrico, agua-terra)
-super_vantagem(eletrico, agua-voador)
-vantagem(eletrico, agua-psiquico)
-vantagem(eletrico, agua-inseto)
-vantagem(eletrico, agua-pedra)
-vantagem(eletrico, agua-fantasma)
-normalmente_efetivo(eletrico, agua-dragao)
-vantagem(eletrico, agua-noturno)
-vantagem(eletrico, agua-metalico)
-vantagem(eletrico, agua-fada)
-desvantagem(eletrico, eletrico-normal)
-desvantagem(eletrico, eletrico-fogo)
-normalmente_efetivo(eletrico, eletrico-agua)
-super_desvantagem(eletrico, eletrico-planta)
-desvantagem(eletrico, eletrico-gelo)
-desvantagem(eletrico, eletrico-lutador)
-desvantagem(eletrico, eletrico-veneno)
-dano_zero(eletrico, eletrico-terra)
-normalmente_efetivo(eletrico, eletrico-voador)
-desvantagem(eletrico, eletrico-psiquico)
-desvantagem(eletrico, eletrico-inseto)
-desvantagem(eletrico, eletrico-pedra)
-desvantagem(eletrico, eletrico-fantasma)
-super_desvantagem(eletrico, eletrico-dragao)
-desvantagem(eletrico, eletrico-noturno)
-desvantagem(eletrico, eletrico-metalico)
-desvantagem(eletrico, eletrico-fada)
-desvantagem(eletrico, planta-normal)
-desvantagem(eletrico, planta-fogo)
-normalmente_efetivo(eletrico, planta-agua)
-super_desvantagem(eletrico, planta-eletrico)
-desvantagem(eletrico, planta-gelo)
-desvantagem(eletrico, planta-lutador)
-desvantagem(eletrico, planta-veneno)
-dano_zero(eletrico, planta-terra)
-normalmente_efetivo(eletrico, planta-voador)
-desvantagem(eletrico, planta-psiquico)
-desvantagem(eletrico, planta-inseto)
-desvantagem(eletrico, planta-pedra)
-desvantagem(eletrico, planta-fantasma)
-super_desvantagem(eletrico, planta-dragao)
-desvantagem(eletrico, planta-noturno)
-desvantagem(eletrico, planta-metalico)
-desvantagem(eletrico, planta-fada)
-normalmente_efetivo(eletrico, gelo-normal)
-normalmente_efetivo(eletrico, gelo-fogo)
-normalmente_efetivo(eletrico, gelo-agua)
-desvantagem(eletrico, gelo-eletrico)
-desvantagem(eletrico, gelo-planta)
-normalmente_efetivo(eletrico, gelo-lutador)
-normalmente_efetivo(eletrico, gelo-veneno)
-dano_zero(eletrico, gelo-terra)
-vantagem(eletrico, gelo-voador)
-normalmente_efetivo(eletrico, gelo-psiquico)
-normalmente_efetivo(eletrico, gelo-inseto)
-normalmente_efetivo(eletrico, gelo-pedra)
-normalmente_efetivo(eletrico, gelo-fantasma)
-desvantagem(eletrico, gelo-dragao)
-normalmente_efetivo(eletrico, gelo-noturno)
-normalmente_efetivo(eletrico, gelo-metalico)
-normalmente_efetivo(eletrico, gelo-fada)
-normalmente_efetivo(eletrico, lutador-normal)
-normalmente_efetivo(eletrico, lutador-fogo)
-vantagem(eletrico, lutador-agua)
-desvantagem(eletrico, lutador-eletrico)
-desvantagem(eletrico, lutador-planta)
-normalmente_efetivo(eletrico, lutador-gelo)
-normalmente_efetivo(eletrico, lutador-veneno)
-dano_zero(eletrico, lutador-terra)
-vantagem(eletrico, lutador-voador)
-normalmente_efetivo(eletrico, lutador-psiquico)
-normalmente_efetivo(eletrico, lutador-inseto)
-normalmente_efetivo(eletrico, lutador-pedra)
-normalmente_efetivo(eletrico, lutador-fantasma)
-desvantagem(eletrico, lutador-dragao)
-normalmente_efetivo(eletrico, lutador-noturno)
-normalmente_efetivo(eletrico, lutador-metalico)
-normalmente_efetivo(eletrico, lutador-fada)
-normalmente_efetivo(eletrico, veneno-normal)
-normalmente_efetivo(eletrico, veneno-fogo)
-vantagem(eletrico, veneno-agua)
-desvantagem(eletrico, veneno-eletrico)
-desvantagem(eletrico, veneno-planta)
-normalmente_efetivo(eletrico, veneno-gelo)
-normalmente_efetivo(eletrico, veneno-lutador)
-dano_zero(eletrico, veneno-terra)
-vantagem(eletrico, veneno-voador)
-normalmente_efetivo(eletrico, veneno-psiquico)
-normalmente_efetivo(eletrico, veneno-inseto)
-normalmente_efetivo(eletrico, veneno-pedra)
-normalmente_efetivo(eletrico, veneno-fantasma)
-desvantagem(eletrico, veneno-dragao)
-normalmente_efetivo(eletrico, veneno-noturno)
-normalmente_efetivo(eletrico, veneno-metalico)
-normalmente_efetivo(eletrico, veneno-fada)
-dano_zero(eletrico, terra-normal)
-dano_zero(eletrico, terra-fogo)
-dano_zero(eletrico, terra-agua)
-dano_zero(eletrico, terra-eletrico)
-dano_zero(eletrico, terra-planta)
-dano_zero(eletrico, terra-gelo)
-dano_zero(eletrico, terra-lutador)
-dano_zero(eletrico, terra-veneno)
-dano_zero(eletrico, terra-voador)
-dano_zero(eletrico, terra-psiquico)
-dano_zero(eletrico, terra-inseto)
-dano_zero(eletrico, terra-pedra)
-dano_zero(eletrico, terra-fantasma)
-dano_zero(eletrico, terra-dragao)
-dano_zero(eletrico, terra-noturno)
-dano_zero(eletrico, terra-metalico)
-dano_zero(eletrico, terra-fada)
-vantagem(eletrico, voador-normal)
-vantagem(eletrico, voador-fogo)
-super_vantagem(eletrico, voador-agua)
-normalmente_efetivo(eletrico, voador-eletrico)
-normalmente_efetivo(eletrico, voador-planta)
-vantagem(eletrico, voador-gelo)
-vantagem(eletrico, voador-lutador)
-vantagem(eletrico, voador-veneno)
-dano_zero(eletrico, voador-terra)
-vantagem(eletrico, voador-psiquico)
-vantagem(eletrico, voador-inseto)
-vantagem(eletrico, voador-pedra)
-vantagem(eletrico, voador-fantasma)
-normalmente_efetivo(eletrico, voador-dragao)
-vantagem(eletrico, voador-noturno)
-vantagem(eletrico, voador-metalico)
-vantagem(eletrico, voador-fada)
-normalmente_efetivo(eletrico, psiquico-normal)
-normalmente_efetivo(eletrico, psiquico-fogo)
-vantagem(eletrico, psiquico-agua)
-desvantagem(eletrico, psiquico-eletrico)
-desvantagem(eletrico, psiquico-planta)
-normalmente_efetivo(eletrico, psiquico-gelo)
-normalmente_efetivo(eletrico, psiquico-lutador)
-normalmente_efetivo(eletrico, psiquico-veneno)
-dano_zero(eletrico, psiquico-terra)
-vantagem(eletrico, psiquico-voador)
-normalmente_efetivo(eletrico, psiquico-inseto)
-normalmente_efetivo(eletrico, psiquico-pedra)
-normalmente_efetivo(eletrico, psiquico-fantasma)
-desvantagem(eletrico, psiquico-dragao)
-normalmente_efetivo(eletrico, psiquico-noturno)
-normalmente_efetivo(eletrico, psiquico-metalico)
-normalmente_efetivo(eletrico, psiquico-fada)
-normalmente_efetivo(eletrico, inseto-normal)
-normalmente_efetivo(eletrico, inseto-fogo)
-vantagem(eletrico, inseto-agua)
-desvantagem(eletrico, inseto-eletrico)
-desvantagem(eletrico, inseto-planta)
-normalmente_efetivo(eletrico, inseto-gelo)
-normalmente_efetivo(eletrico, inseto-lutador)
-normalmente_efetivo(eletrico, inseto-veneno)
-dano_zero(eletrico, inseto-terra)
-vantagem(eletrico, inseto-voador)
-normalmente_efetivo(eletrico, inseto-psiquico)
-normalmente_efetivo(eletrico, inseto-pedra)
-normalmente_efetivo(eletrico, inseto-fantasma)
-desvantagem(eletrico, inseto-dragao)
-normalmente_efetivo(eletrico, inseto-noturno)
-normalmente_efetivo(eletrico, inseto-metalico)
-normalmente_efetivo(eletrico, inseto-fada)
-normalmente_efetivo(eletrico, pedra-normal)
-normalmente_efetivo(eletrico, pedra-fogo)
-vantagem(eletrico, pedra-agua)
-desvantagem(eletrico, pedra-eletrico)
-desvantagem(eletrico, pedra-planta)
-normalmente_efetivo(eletrico, pedra-gelo)
-normalmente_efetivo(eletrico, pedra-lutador)
-normalmente_efetivo(eletrico, pedra-veneno)
-dano_zero(eletrico, pedra-terra)
-vantagem(eletrico, pedra-voador)
-normalmente_efetivo(eletrico, pedra-psiquico)
-normalmente_efetivo(eletrico, pedra-inseto)
-normalmente_efetivo(eletrico, pedra-fantasma)
-desvantagem(eletrico, pedra-dragao)
-normalmente_efetivo(eletrico, pedra-noturno)
-normalmente_efetivo(eletrico, pedra-metalico)
-normalmente_efetivo(eletrico, pedra-fada)
-normalmente_efetivo(eletrico, fantasma-normal)
-normalmente_efetivo(eletrico, fantasma-fogo)
-vantagem(eletrico, fantasma-agua)
-desvantagem(eletrico, fantasma-eletrico)
-desvantagem(eletrico, fantasma-planta)
-normalmente_efetivo(eletrico, fantasma-gelo)
-normalmente_efetivo(eletrico, fantasma-lutador)
-normalmente_efetivo(eletrico, fantasma-veneno)
-dano_zero(eletrico, fantasma-terra)
-vantagem(eletrico, fantasma-voador)
-normalmente_efetivo(eletrico, fantasma-psiquico)
-normalmente_efetivo(eletrico, fantasma-inseto)
-normalmente_efetivo(eletrico, fantasma-pedra)
-desvantagem(eletrico, fantasma-dragao)
-normalmente_efetivo(eletrico, fantasma-noturno)
-normalmente_efetivo(eletrico, fantasma-metalico)
-normalmente_efetivo(eletrico, fantasma-fada)
-desvantagem(eletrico, dragao-normal)
-desvantagem(eletrico, dragao-fogo)
-normalmente_efetivo(eletrico, dragao-agua)
-super_desvantagem(eletrico, dragao-eletrico)
-super_desvantagem(eletrico, dragao-planta)
-desvantagem(eletrico, dragao-gelo)
-desvantagem(eletrico, dragao-lutador)
-desvantagem(eletrico, dragao-veneno)
-dano_zero(eletrico, dragao-terra)
-normalmente_efetivo(eletrico, dragao-voador)
-desvantagem(eletrico, dragao-psiquico)
-desvantagem(eletrico, dragao-inseto)
-desvantagem(eletrico, dragao-pedra)
-desvantagem(eletrico, dragao-fantasma)
-desvantagem(eletrico, dragao-noturno)
-desvantagem(eletrico, dragao-metalico)
-desvantagem(eletrico, dragao-fada)
-normalmente_efetivo(eletrico, noturno-normal)
-normalmente_efetivo(eletrico, noturno-fogo)
-vantagem(eletrico, noturno-agua)
-desvantagem(eletrico, noturno-eletrico)
-desvantagem(eletrico, noturno-planta)
-normalmente_efetivo(eletrico, noturno-gelo)
-normalmente_efetivo(eletrico, noturno-lutador)
-normalmente_efetivo(eletrico, noturno-veneno)
-dano_zero(eletrico, noturno-terra)
-vantagem(eletrico, noturno-voador)
-normalmente_efetivo(eletrico, noturno-psiquico)
-normalmente_efetivo(eletrico, noturno-inseto)
-normalmente_efetivo(eletrico, noturno-pedra)
-normalmente_efetivo(eletrico, noturno-fantasma)
-desvantagem(eletrico, noturno-dragao)
-normalmente_efetivo(eletrico, noturno-metalico)
-normalmente_efetivo(eletrico, noturno-fada)
-normalmente_efetivo(eletrico, metalico-normal)
-normalmente_efetivo(eletrico, metalico-fogo)
-vantagem(eletrico, metalico-agua)
-desvantagem(eletrico, metalico-eletrico)
-desvantagem(eletrico, metalico-planta)
-normalmente_efetivo(eletrico, metalico-gelo)
-normalmente_efetivo(eletrico, metalico-lutador)
-normalmente_efetivo(eletrico, metalico-veneno)
-dano_zero(eletrico, metalico-terra)
-vantagem(eletrico, metalico-voador)
-normalmente_efetivo(eletrico, metalico-psiquico)
-normalmente_efetivo(eletrico, metalico-inseto)
-normalmente_efetivo(eletrico, metalico-pedra)
-normalmente_efetivo(eletrico, metalico-fantasma)
-desvantagem(eletrico, metalico-dragao)
-normalmente_efetivo(eletrico, metalico-noturno)
-normalmente_efetivo(eletrico, metalico-fada)
-normalmente_efetivo(eletrico, fada-normal)
-normalmente_efetivo(eletrico, fada-fogo)
-vantagem(eletrico, fada-agua)
-desvantagem(eletrico, fada-eletrico)
-desvantagem(eletrico, fada-planta)
-normalmente_efetivo(eletrico, fada-gelo)
-normalmente_efetivo(eletrico, fada-lutador)
-normalmente_efetivo(eletrico, fada-veneno)
-dano_zero(eletrico, fada-terra)
-vantagem(eletrico, fada-voador)
-normalmente_efetivo(eletrico, fada-psiquico)
-normalmente_efetivo(eletrico, fada-inseto)
-normalmente_efetivo(eletrico, fada-pedra)
-normalmente_efetivo(eletrico, fada-fantasma)
-desvantagem(eletrico, fada-dragao)
-normalmente_efetivo(eletrico, fada-noturno)
-normalmente_efetivo(eletrico, fada-metalico)
+weakness(normal,rock).
+weakness(normal,steel).
+weakness(normal,normal-rock).
+weakness(normal,normal-steel).
+weakness(normal,fire-rock).
+weakness(normal,fire-steel).
+weakness(normal,water-rock).
+weakness(normal,water-steel).
+weakness(normal,electric-rock).
+weakness(normal,electric-steel).
+weakness(normal,grass-rock).
+weakness(normal,grass-steel).
+weakness(normal,ice-rock).
+weakness(normal,ice-steel).
+weakness(normal,fighting-rock).
+weakness(normal,fighting-steel).
+weakness(normal,poison-rock).
+weakness(normal,poison-steel).
+weakness(normal,ground-rock).
+weakness(normal,ground-steel).
+weakness(normal,flying-rock).
+weakness(normal,flying-steel).
+weakness(normal,psychic-rock).
+weakness(normal,psychic-steel).
+weakness(normal,bug-rock).
+weakness(normal,bug-steel).
+weakness(normal,rock-normal).
+weakness(normal,rock-fire).
+weakness(normal,rock-water).
+weakness(normal,rock-electric).
+weakness(normal,rock-grass).
+weakness(normal,rock-ice).
+weakness(normal,rock-fighting).
+weakness(normal,rock-poison).
+weakness(normal,rock-ground).
+weakness(normal,rock-flying).
+weakness(normal,rock-psychic).
+weakness(normal,rock-bug).
+weakness(normal,rock-dragon).
+weakness(normal,rock-dark).
+weakness(normal,rock-fairy).
+weakness(normal,dragon-rock).
+weakness(normal,dragon-steel).
+weakness(normal,dark-rock).
+weakness(normal,dark-steel).
+weakness(normal,steel-normal).
+weakness(normal,steel-fire).
+weakness(normal,steel-water).
+weakness(normal,steel-electric).
+weakness(normal,steel-grass).
+weakness(normal,steel-ice).
+weakness(normal,steel-fighting).
+weakness(normal,steel-poison).
+weakness(normal,steel-ground).
+weakness(normal,steel-flying).
+weakness(normal,steel-psychic).
+weakness(normal,steel-bug).
+weakness(normal,steel-dragon).
+weakness(normal,steel-dark).
+weakness(normal,steel-fairy).
+weakness(normal,fairy-rock).
+weakness(normal,fairy-steel).
+weakness(fire,fire).
+weakness(fire,water).
+weakness(fire,rock).
+weakness(fire,dragon).
+weakness(fire,normal-fire).
+weakness(fire,normal-water).
+weakness(fire,normal-rock).
+weakness(fire,normal-dragon).
+weakness(fire,fire-normal).
+weakness(fire,fire-electric).
+weakness(fire,fire-fighting).
+weakness(fire,fire-poison).
+weakness(fire,fire-ground).
+weakness(fire,fire-flying).
+weakness(fire,fire-psychic).
+weakness(fire,fire-ghost).
+weakness(fire,fire-dark).
+weakness(fire,fire-fairy).
+weakness(fire,water-normal).
+weakness(fire,water-electric).
+weakness(fire,water-fighting).
+weakness(fire,water-poison).
+weakness(fire,water-ground).
+weakness(fire,water-flying).
+weakness(fire,water-psychic).
+weakness(fire,water-ghost).
+weakness(fire,water-dark).
+weakness(fire,water-fairy).
+weakness(fire,electric-fire).
+weakness(fire,electric-water).
+weakness(fire,electric-rock).
+weakness(fire,electric-dragon).
+weakness(fire,fighting-fire).
+weakness(fire,fighting-water).
+weakness(fire,fighting-rock).
+weakness(fire,fighting-dragon).
+weakness(fire,poison-fire).
+weakness(fire,poison-water).
+weakness(fire,poison-rock).
+weakness(fire,poison-dragon).
+weakness(fire,ground-fire).
+weakness(fire,ground-water).
+weakness(fire,ground-rock).
+weakness(fire,ground-dragon).
+weakness(fire,flying-fire).
+weakness(fire,flying-water).
+weakness(fire,flying-rock).
+weakness(fire,flying-dragon).
+weakness(fire,psychic-fire).
+weakness(fire,psychic-water).
+weakness(fire,psychic-rock).
+weakness(fire,psychic-dragon).
+weakness(fire,rock-normal).
+weakness(fire,rock-electric).
+weakness(fire,rock-fighting).
+weakness(fire,rock-poison).
+weakness(fire,rock-ground).
+weakness(fire,rock-flying).
+weakness(fire,rock-psychic).
+weakness(fire,rock-ghost).
+weakness(fire,rock-dark).
+weakness(fire,rock-fairy).
+weakness(fire,ghost-fire).
+weakness(fire,ghost-water).
+weakness(fire,ghost-rock).
+weakness(fire,ghost-dragon).
+weakness(fire,dragon-normal).
+weakness(fire,dragon-electric).
+weakness(fire,dragon-fighting).
+weakness(fire,dragon-poison).
+weakness(fire,dragon-ground).
+weakness(fire,dragon-flying).
+weakness(fire,dragon-psychic).
+weakness(fire,dragon-ghost).
+weakness(fire,dragon-dark).
+weakness(fire,dragon-fairy).
+weakness(fire,dark-fire).
+weakness(fire,dark-water).
+weakness(fire,dark-rock).
+weakness(fire,dark-dragon).
+weakness(fire,fairy-fire).
+weakness(fire,fairy-water).
+weakness(fire,fairy-rock).
+weakness(fire,fairy-dragon).
+weakness(water,water).
+weakness(water,grass).
+weakness(water,dragon).
+weakness(water,normal-water).
+weakness(water,normal-grass).
+weakness(water,normal-dragon).
+weakness(water,water-normal).
+weakness(water,water-electric).
+weakness(water,water-ice).
+weakness(water,water-fighting).
+weakness(water,water-poison).
+weakness(water,water-flying).
+weakness(water,water-psychic).
+weakness(water,water-bug).
+weakness(water,water-ghost).
+weakness(water,water-dark).
+weakness(water,water-steel).
+weakness(water,water-fairy).
+weakness(water,electric-water).
+weakness(water,electric-grass).
+weakness(water,electric-dragon).
+weakness(water,grass-normal).
+weakness(water,grass-electric).
+weakness(water,grass-ice).
+weakness(water,grass-fighting).
+weakness(water,grass-poison).
+weakness(water,grass-flying).
+weakness(water,grass-psychic).
+weakness(water,grass-bug).
+weakness(water,grass-ghost).
+weakness(water,grass-dark).
+weakness(water,grass-steel).
+weakness(water,grass-fairy).
+weakness(water,ice-water).
+weakness(water,ice-grass).
+weakness(water,ice-dragon).
+weakness(water,fighting-water).
+weakness(water,fighting-grass).
+weakness(water,fighting-dragon).
+weakness(water,poison-water).
+weakness(water,poison-grass).
+weakness(water,poison-dragon).
+weakness(water,flying-water).
+weakness(water,flying-grass).
+weakness(water,flying-dragon).
+weakness(water,psychic-water).
+weakness(water,psychic-grass).
+weakness(water,psychic-dragon).
+weakness(water,bug-water).
+weakness(water,bug-grass).
+weakness(water,bug-dragon).
+weakness(water,ghost-water).
+weakness(water,ghost-grass).
+weakness(water,ghost-dragon).
+weakness(water,dragon-normal).
+weakness(water,dragon-electric).
+weakness(water,dragon-ice).
+weakness(water,dragon-fighting).
+weakness(water,dragon-poison).
+weakness(water,dragon-flying).
+weakness(water,dragon-psychic).
+weakness(water,dragon-bug).
+weakness(water,dragon-ghost).
+weakness(water,dragon-dark).
+weakness(water,dragon-steel).
+weakness(water,dragon-fairy).
+weakness(water,dark-water).
+weakness(water,dark-grass).
+weakness(water,dark-dragon).
+weakness(water,steel-water).
+weakness(water,steel-grass).
+weakness(water,steel-dragon).
+weakness(water,fairy-water).
+weakness(water,fairy-grass).
+weakness(water,fairy-dragon).
+weakness(electric,electric).
+weakness(electric,grass).
+weakness(electric,dragon).
+weakness(electric,normal-electric).
+weakness(electric,normal-grass).
+weakness(electric,normal-dragon).
+weakness(electric,fire-electric).
+weakness(electric,fire-grass).
+weakness(electric,fire-dragon).
+weakness(electric,electric-normal).
+weakness(electric,electric-fire).
+weakness(electric,electric-ice).
+weakness(electric,electric-fighting).
+weakness(electric,electric-poison).
+weakness(electric,electric-psychic).
+weakness(electric,electric-bug).
+weakness(electric,electric-rock).
+weakness(electric,electric-ghost).
+weakness(electric,electric-dark).
+weakness(electric,electric-steel).
+weakness(electric,electric-fairy).
+weakness(electric,grass-normal).
+weakness(electric,grass-fire).
+weakness(electric,grass-ice).
+weakness(electric,grass-fighting).
+weakness(electric,grass-poison).
+weakness(electric,grass-psychic).
+weakness(electric,grass-bug).
+weakness(electric,grass-rock).
+weakness(electric,grass-ghost).
+weakness(electric,grass-dark).
+weakness(electric,grass-steel).
+weakness(electric,grass-fairy).
+weakness(electric,ice-electric).
+weakness(electric,ice-grass).
+weakness(electric,ice-dragon).
+weakness(electric,fighting-electric).
+weakness(electric,fighting-grass).
+weakness(electric,fighting-dragon).
+weakness(electric,poison-electric).
+weakness(electric,poison-grass).
+weakness(electric,poison-dragon).
+weakness(electric,psychic-electric).
+weakness(electric,psychic-grass).
+weakness(electric,psychic-dragon).
+weakness(electric,bug-electric).
+weakness(electric,bug-grass).
+weakness(electric,bug-dragon).
+weakness(electric,rock-electric).
+weakness(electric,rock-grass).
+weakness(electric,rock-dragon).
+weakness(electric,ghost-electric).
+weakness(electric,ghost-grass).
+weakness(electric,ghost-dragon).
+weakness(electric,dragon-normal).
+weakness(electric,dragon-fire).
+weakness(electric,dragon-ice).
+weakness(electric,dragon-fighting).
+weakness(electric,dragon-poison).
+weakness(electric,dragon-psychic).
+weakness(electric,dragon-bug).
+weakness(electric,dragon-rock).
+weakness(electric,dragon-ghost).
+weakness(electric,dragon-dark).
+weakness(electric,dragon-steel).
+weakness(electric,dragon-fairy).
+weakness(electric,dark-electric).
+weakness(electric,dark-grass).
+weakness(electric,dark-dragon).
+weakness(electric,steel-electric).
+weakness(electric,steel-grass).
+weakness(electric,steel-dragon).
+weakness(electric,fairy-electric).
+weakness(electric,fairy-grass).
+weakness(electric,fairy-dragon).
+weakness(grass,fire).
+weakness(grass,grass).
+weakness(grass,poison).
+weakness(grass,flying).
+weakness(grass,bug).
+weakness(grass,dragon).
+weakness(grass,steel).
+weakness(grass,normal-fire).
+weakness(grass,normal-grass).
+weakness(grass,normal-poison).
+weakness(grass,normal-flying).
+weakness(grass,normal-bug).
+weakness(grass,normal-dragon).
+weakness(grass,normal-steel).
+weakness(grass,fire-normal).
+weakness(grass,fire-electric).
+weakness(grass,fire-ice).
+weakness(grass,fire-fighting).
+weakness(grass,fire-psychic).
+weakness(grass,fire-ghost).
+weakness(grass,fire-dark).
+weakness(grass,fire-fairy).
+weakness(grass,electric-fire).
+weakness(grass,electric-grass).
+weakness(grass,electric-poison).
+weakness(grass,electric-flying).
+weakness(grass,electric-bug).
+weakness(grass,electric-dragon).
+weakness(grass,electric-steel).
+weakness(grass,grass-normal).
+weakness(grass,grass-electric).
+weakness(grass,grass-ice).
+weakness(grass,grass-fighting).
+weakness(grass,grass-psychic).
+weakness(grass,grass-ghost).
+weakness(grass,grass-dark).
+weakness(grass,grass-fairy).
+weakness(grass,ice-fire).
+weakness(grass,ice-grass).
+weakness(grass,ice-poison).
+weakness(grass,ice-flying).
+weakness(grass,ice-bug).
+weakness(grass,ice-dragon).
+weakness(grass,ice-steel).
+weakness(grass,fighting-fire).
+weakness(grass,fighting-grass).
+weakness(grass,fighting-poison).
+weakness(grass,fighting-flying).
+weakness(grass,fighting-bug).
+weakness(grass,fighting-dragon).
+weakness(grass,fighting-steel).
+weakness(grass,poison-normal).
+weakness(grass,poison-electric).
+weakness(grass,poison-ice).
+weakness(grass,poison-fighting).
+weakness(grass,poison-psychic).
+weakness(grass,poison-ghost).
+weakness(grass,poison-dark).
+weakness(grass,poison-fairy).
+weakness(grass,flying-normal).
+weakness(grass,flying-electric).
+weakness(grass,flying-ice).
+weakness(grass,flying-fighting).
+weakness(grass,flying-psychic).
+weakness(grass,flying-ghost).
+weakness(grass,flying-dark).
+weakness(grass,flying-fairy).
+weakness(grass,psychic-fire).
+weakness(grass,psychic-grass).
+weakness(grass,psychic-poison).
+weakness(grass,psychic-flying).
+weakness(grass,psychic-bug).
+weakness(grass,psychic-dragon).
+weakness(grass,psychic-steel).
+weakness(grass,bug-normal).
+weakness(grass,bug-electric).
+weakness(grass,bug-ice).
+weakness(grass,bug-fighting).
+weakness(grass,bug-psychic).
+weakness(grass,bug-ghost).
+weakness(grass,bug-dark).
+weakness(grass,bug-fairy).
+weakness(grass,ghost-fire).
+weakness(grass,ghost-grass).
+weakness(grass,ghost-poison).
+weakness(grass,ghost-flying).
+weakness(grass,ghost-bug).
+weakness(grass,ghost-dragon).
+weakness(grass,ghost-steel).
+weakness(grass,dragon-normal).
+weakness(grass,dragon-electric).
+weakness(grass,dragon-ice).
+weakness(grass,dragon-fighting).
+weakness(grass,dragon-psychic).
+weakness(grass,dragon-ghost).
+weakness(grass,dragon-dark).
+weakness(grass,dragon-fairy).
+weakness(grass,dark-fire).
+weakness(grass,dark-grass).
+weakness(grass,dark-poison).
+weakness(grass,dark-flying).
+weakness(grass,dark-bug).
+weakness(grass,dark-dragon).
+weakness(grass,dark-steel).
+weakness(grass,steel-normal).
+weakness(grass,steel-electric).
+weakness(grass,steel-ice).
+weakness(grass,steel-fighting).
+weakness(grass,steel-psychic).
+weakness(grass,steel-ghost).
+weakness(grass,steel-dark).
+weakness(grass,steel-fairy).
+weakness(grass,fairy-fire).
+weakness(grass,fairy-grass).
+weakness(grass,fairy-poison).
+weakness(grass,fairy-flying).
+weakness(grass,fairy-bug).
+weakness(grass,fairy-dragon).
+weakness(grass,fairy-steel).
+weakness(ice,fire).
+weakness(ice,water).
+weakness(ice,ice).
+weakness(ice,steel).
+weakness(ice,normal-fire).
+weakness(ice,normal-water).
+weakness(ice,normal-ice).
+weakness(ice,normal-steel).
+weakness(ice,fire-normal).
+weakness(ice,fire-electric).
+weakness(ice,fire-fighting).
+weakness(ice,fire-poison).
+weakness(ice,fire-psychic).
+weakness(ice,fire-bug).
+weakness(ice,fire-rock).
+weakness(ice,fire-ghost).
+weakness(ice,fire-dark).
+weakness(ice,fire-fairy).
+weakness(ice,water-normal).
+weakness(ice,water-electric).
+weakness(ice,water-fighting).
+weakness(ice,water-poison).
+weakness(ice,water-psychic).
+weakness(ice,water-bug).
+weakness(ice,water-rock).
+weakness(ice,water-ghost).
+weakness(ice,water-dark).
+weakness(ice,water-fairy).
+weakness(ice,electric-fire).
+weakness(ice,electric-water).
+weakness(ice,electric-ice).
+weakness(ice,electric-steel).
+weakness(ice,ice-normal).
+weakness(ice,ice-fire).
+weakness(ice,ice-electric).
+weakness(ice,ice-fighting).
+weakness(ice,ice-poison).
+weakness(ice,ice-psychic).
+weakness(ice,ice-bug).
+weakness(ice,ice-rock).
+weakness(ice,ice-ghost).
+weakness(ice,ice-dark).
+weakness(ice,ice-fairy).
+weakness(ice,fighting-fire).
+weakness(ice,fighting-water).
+weakness(ice,fighting-ice).
+weakness(ice,fighting-poison).
+weakness(ice,fighting-steel).
+weakness(ice,poison-fire).
+weakness(ice,poison-water).
+weakness(ice,poison-ice).
+weakness(ice,poison-fighting).
+weakness(ice,poison-steel).
+weakness(ice,psychic-fire).
+weakness(ice,psychic-water).
+weakness(ice,psychic-ice).
+weakness(ice,psychic-steel).
+weakness(ice,bug-fire).
+weakness(ice,bug-water).
+weakness(ice,bug-ice).
+weakness(ice,bug-steel).
+weakness(ice,rock-fire).
+weakness(ice,rock-water).
+weakness(ice,rock-ice).
+weakness(ice,rock-steel).
+weakness(ice,ghost-fire).
+weakness(ice,ghost-water).
+weakness(ice,ghost-ice).
+weakness(ice,ghost-steel).
+weakness(ice,dark-fire).
+weakness(ice,dark-water).
+weakness(ice,dark-ice).
+weakness(ice,dark-steel).
+weakness(ice,steel-normal).
+weakness(ice,steel-electric).
+weakness(ice,steel-fighting).
+weakness(ice,steel-poison).
+weakness(ice,steel-psychic).
+weakness(ice,steel-bug).
+weakness(ice,steel-rock).
+weakness(ice,steel-ghost).
+weakness(ice,steel-dark).
+weakness(ice,steel-fairy).
+weakness(ice,fairy-fire).
+weakness(ice,fairy-water).
+weakness(ice,fairy-ice).
+weakness(ice,fairy-steel).
+weakness(fighting,poison).
+weakness(fighting,flying).
+weakness(fighting,psychic).
+weakness(fighting,bug).
+weakness(fighting,fairy).
+weakness(fighting,fire-poison).
+weakness(fighting,fire-flying).
+weakness(fighting,fire-psychic).
+weakness(fighting,fire-bug).
+weakness(fighting,fire-fairy).
+weakness(fighting,water-poison).
+weakness(fighting,water-flying).
+weakness(fighting,water-psychic).
+weakness(fighting,water-bug).
+weakness(fighting,water-fairy).
+weakness(fighting,electric-poison).
+weakness(fighting,electric-flying).
+weakness(fighting,electric-psychic).
+weakness(fighting,electric-bug).
+weakness(fighting,electric-fairy).
+weakness(fighting,grass-poison).
+weakness(fighting,grass-flying).
+weakness(fighting,grass-psychic).
+weakness(fighting,grass-bug).
+weakness(fighting,grass-fairy).
+weakness(fighting,fighting-flying).
+weakness(fighting,fighting-psychic).
+weakness(fighting,fighting-bug).
+weakness(fighting,fighting-fairy).
+weakness(fighting,poison-fire).
+weakness(fighting,poison-water).
+weakness(fighting,poison-electric).
+weakness(fighting,poison-grass).
+weakness(fighting,poison-ground).
+weakness(fighting,poison-dragon).
+weakness(fighting,ground-poison).
+weakness(fighting,ground-flying).
+weakness(fighting,ground-psychic).
+weakness(fighting,ground-bug).
+weakness(fighting,ground-fairy).
+weakness(fighting,flying-fire).
+weakness(fighting,flying-water).
+weakness(fighting,flying-electric).
+weakness(fighting,flying-grass).
+weakness(fighting,flying-fighting).
+weakness(fighting,flying-ground).
+weakness(fighting,flying-dragon).
+weakness(fighting,psychic-fire).
+weakness(fighting,psychic-water).
+weakness(fighting,psychic-electric).
+weakness(fighting,psychic-grass).
+weakness(fighting,psychic-fighting).
+weakness(fighting,psychic-ground).
+weakness(fighting,psychic-dragon).
+weakness(fighting,bug-fire).
+weakness(fighting,bug-water).
+weakness(fighting,bug-electric).
+weakness(fighting,bug-grass).
+weakness(fighting,bug-fighting).
+weakness(fighting,bug-ground).
+weakness(fighting,bug-dragon).
+weakness(fighting,dragon-poison).
+weakness(fighting,dragon-flying).
+weakness(fighting,dragon-psychic).
+weakness(fighting,dragon-bug).
+weakness(fighting,dragon-fairy).
+weakness(fighting,fairy-fire).
+weakness(fighting,fairy-water).
+weakness(fighting,fairy-electric).
+weakness(fighting,fairy-grass).
+weakness(fighting,fairy-fighting).
+weakness(fighting,fairy-ground).
+weakness(fighting,fairy-dragon).
+weakness(poison,poison).
+weakness(poison,ground).
+weakness(poison,rock).
+weakness(poison,ghost).
+weakness(poison,normal-poison).
+weakness(poison,normal-ground).
+weakness(poison,normal-rock).
+weakness(poison,normal-ghost).
+weakness(poison,fire-poison).
+weakness(poison,fire-ground).
+weakness(poison,fire-rock).
+weakness(poison,fire-ghost).
+weakness(poison,water-poison).
+weakness(poison,water-ground).
+weakness(poison,water-rock).
+weakness(poison,water-ghost).
+weakness(poison,electric-poison).
+weakness(poison,electric-ground).
+weakness(poison,electric-rock).
+weakness(poison,electric-ghost).
+weakness(poison,ice-poison).
+weakness(poison,ice-ground).
+weakness(poison,ice-rock).
+weakness(poison,ice-ghost).
+weakness(poison,fighting-poison).
+weakness(poison,fighting-ground).
+weakness(poison,fighting-rock).
+weakness(poison,fighting-ghost).
+weakness(poison,poison-normal).
+weakness(poison,poison-fire).
+weakness(poison,poison-water).
+weakness(poison,poison-electric).
+weakness(poison,poison-ice).
+weakness(poison,poison-fighting).
+weakness(poison,poison-flying).
+weakness(poison,poison-psychic).
+weakness(poison,poison-bug).
+weakness(poison,poison-dragon).
+weakness(poison,poison-dark).
+weakness(poison,ground-normal).
+weakness(poison,ground-fire).
+weakness(poison,ground-water).
+weakness(poison,ground-electric).
+weakness(poison,ground-ice).
+weakness(poison,ground-fighting).
+weakness(poison,ground-flying).
+weakness(poison,ground-psychic).
+weakness(poison,ground-bug).
+weakness(poison,ground-dragon).
+weakness(poison,ground-dark).
+weakness(poison,flying-poison).
+weakness(poison,flying-ground).
+weakness(poison,flying-rock).
+weakness(poison,flying-ghost).
+weakness(poison,psychic-poison).
+weakness(poison,psychic-ground).
+weakness(poison,psychic-rock).
+weakness(poison,psychic-ghost).
+weakness(poison,bug-poison).
+weakness(poison,bug-ground).
+weakness(poison,bug-rock).
+weakness(poison,bug-ghost).
+weakness(poison,rock-normal).
+weakness(poison,rock-fire).
+weakness(poison,rock-water).
+weakness(poison,rock-electric).
+weakness(poison,rock-ice).
+weakness(poison,rock-fighting).
+weakness(poison,rock-flying).
+weakness(poison,rock-psychic).
+weakness(poison,rock-bug).
+weakness(poison,rock-dragon).
+weakness(poison,rock-dark).
+weakness(poison,ghost-normal).
+weakness(poison,ghost-fire).
+weakness(poison,ghost-water).
+weakness(poison,ghost-electric).
+weakness(poison,ghost-ice).
+weakness(poison,ghost-fighting).
+weakness(poison,ghost-flying).
+weakness(poison,ghost-psychic).
+weakness(poison,ghost-bug).
+weakness(poison,ghost-dragon).
+weakness(poison,ghost-dark).
+weakness(poison,dragon-poison).
+weakness(poison,dragon-ground).
+weakness(poison,dragon-rock).
+weakness(poison,dragon-ghost).
+weakness(poison,dark-poison).
+weakness(poison,dark-ground).
+weakness(poison,dark-rock).
+weakness(poison,dark-ghost).
+weakness(ground,grass).
+weakness(ground,bug).
+weakness(ground,normal-grass).
+weakness(ground,normal-bug).
+weakness(ground,water-grass).
+weakness(ground,water-bug).
+weakness(ground,grass-normal).
+weakness(ground,grass-water).
+weakness(ground,grass-ice).
+weakness(ground,grass-fighting).
+weakness(ground,grass-ground).
+weakness(ground,grass-psychic).
+weakness(ground,grass-ghost).
+weakness(ground,grass-dragon).
+weakness(ground,grass-dark).
+weakness(ground,grass-fairy).
+weakness(ground,ice-grass).
+weakness(ground,ice-bug).
+weakness(ground,fighting-grass).
+weakness(ground,fighting-bug).
+weakness(ground,ground-grass).
+weakness(ground,ground-bug).
+weakness(ground,psychic-grass).
+weakness(ground,psychic-bug).
+weakness(ground,bug-normal).
+weakness(ground,bug-water).
+weakness(ground,bug-ice).
+weakness(ground,bug-fighting).
+weakness(ground,bug-ground).
+weakness(ground,bug-psychic).
+weakness(ground,bug-ghost).
+weakness(ground,bug-dragon).
+weakness(ground,bug-dark).
+weakness(ground,bug-fairy).
+weakness(ground,ghost-grass).
+weakness(ground,ghost-bug).
+weakness(ground,dragon-grass).
+weakness(ground,dragon-bug).
+weakness(ground,dark-grass).
+weakness(ground,dark-bug).
+weakness(ground,fairy-grass).
+weakness(ground,fairy-bug).
+weakness(flying,electric).
+weakness(flying,rock).
+weakness(flying,steel).
+weakness(flying,normal-electric).
+weakness(flying,normal-rock).
+weakness(flying,normal-steel).
+weakness(flying,fire-electric).
+weakness(flying,fire-rock).
+weakness(flying,fire-steel).
+weakness(flying,water-electric).
+weakness(flying,water-rock).
+weakness(flying,water-steel).
+weakness(flying,electric-normal).
+weakness(flying,electric-fire).
+weakness(flying,electric-water).
+weakness(flying,electric-ice).
+weakness(flying,electric-poison).
+weakness(flying,electric-ground).
+weakness(flying,electric-flying).
+weakness(flying,electric-psychic).
+weakness(flying,electric-ghost).
+weakness(flying,electric-dragon).
+weakness(flying,electric-dark).
+weakness(flying,electric-fairy).
+weakness(flying,ice-electric).
+weakness(flying,ice-rock).
+weakness(flying,ice-steel).
+weakness(flying,poison-electric).
+weakness(flying,poison-rock).
+weakness(flying,poison-steel).
+weakness(flying,ground-electric).
+weakness(flying,ground-rock).
+weakness(flying,ground-steel).
+weakness(flying,flying-electric).
+weakness(flying,flying-rock).
+weakness(flying,flying-steel).
+weakness(flying,psychic-electric).
+weakness(flying,psychic-rock).
+weakness(flying,psychic-steel).
+weakness(flying,rock-normal).
+weakness(flying,rock-fire).
+weakness(flying,rock-water).
+weakness(flying,rock-ice).
+weakness(flying,rock-poison).
+weakness(flying,rock-ground).
+weakness(flying,rock-flying).
+weakness(flying,rock-psychic).
+weakness(flying,rock-ghost).
+weakness(flying,rock-dragon).
+weakness(flying,rock-dark).
+weakness(flying,rock-fairy).
+weakness(flying,ghost-electric).
+weakness(flying,ghost-rock).
+weakness(flying,ghost-steel).
+weakness(flying,dragon-electric).
+weakness(flying,dragon-rock).
+weakness(flying,dragon-steel).
+weakness(flying,dark-electric).
+weakness(flying,dark-rock).
+weakness(flying,dark-steel).
+weakness(flying,steel-normal).
+weakness(flying,steel-fire).
+weakness(flying,steel-water).
+weakness(flying,steel-ice).
+weakness(flying,steel-poison).
+weakness(flying,steel-ground).
+weakness(flying,steel-flying).
+weakness(flying,steel-psychic).
+weakness(flying,steel-ghost).
+weakness(flying,steel-dragon).
+weakness(flying,steel-dark).
+weakness(flying,steel-fairy).
+weakness(flying,fairy-electric).
+weakness(flying,fairy-rock).
+weakness(flying,fairy-steel).
+weakness(psychic,psychic).
+weakness(psychic,steel).
+weakness(psychic,normal-psychic).
+weakness(psychic,normal-steel).
+weakness(psychic,fire-psychic).
+weakness(psychic,fire-steel).
+weakness(psychic,water-psychic).
+weakness(psychic,water-steel).
+weakness(psychic,electric-psychic).
+weakness(psychic,electric-steel).
+weakness(psychic,grass-psychic).
+weakness(psychic,grass-steel).
+weakness(psychic,ice-psychic).
+weakness(psychic,ice-steel).
+weakness(psychic,ground-psychic).
+weakness(psychic,ground-steel).
+weakness(psychic,flying-psychic).
+weakness(psychic,flying-steel).
+weakness(psychic,psychic-normal).
+weakness(psychic,psychic-fire).
+weakness(psychic,psychic-water).
+weakness(psychic,psychic-electric).
+weakness(psychic,psychic-grass).
+weakness(psychic,psychic-ice).
+weakness(psychic,psychic-ground).
+weakness(psychic,psychic-flying).
+weakness(psychic,psychic-bug).
+weakness(psychic,psychic-rock).
+weakness(psychic,psychic-ghost).
+weakness(psychic,psychic-dragon).
+weakness(psychic,psychic-fairy).
+weakness(psychic,bug-psychic).
+weakness(psychic,bug-steel).
+weakness(psychic,rock-psychic).
+weakness(psychic,rock-steel).
+weakness(psychic,ghost-psychic).
+weakness(psychic,ghost-steel).
+weakness(psychic,dragon-psychic).
+weakness(psychic,dragon-steel).
+weakness(psychic,steel-normal).
+weakness(psychic,steel-fire).
+weakness(psychic,steel-water).
+weakness(psychic,steel-electric).
+weakness(psychic,steel-grass).
+weakness(psychic,steel-ice).
+weakness(psychic,steel-ground).
+weakness(psychic,steel-flying).
+weakness(psychic,steel-bug).
+weakness(psychic,steel-rock).
+weakness(psychic,steel-ghost).
+weakness(psychic,steel-dragon).
+weakness(psychic,steel-fairy).
+weakness(psychic,fairy-psychic).
+weakness(psychic,fairy-steel).
+weakness(bug,fire).
+weakness(bug,fighting).
+weakness(bug,poison).
+weakness(bug,flying).
+weakness(bug,ghost).
+weakness(bug,steel).
+weakness(bug,fairy).
+weakness(bug,normal-fire).
+weakness(bug,normal-fighting).
+weakness(bug,normal-poison).
+weakness(bug,normal-flying).
+weakness(bug,normal-ghost).
+weakness(bug,normal-steel).
+weakness(bug,normal-fairy).
+weakness(bug,fire-normal).
+weakness(bug,fire-water).
+weakness(bug,fire-electric).
+weakness(bug,fire-ice).
+weakness(bug,fire-ground).
+weakness(bug,fire-bug).
+weakness(bug,fire-rock).
+weakness(bug,fire-dragon).
+weakness(bug,water-fire).
+weakness(bug,water-fighting).
+weakness(bug,water-poison).
+weakness(bug,water-flying).
+weakness(bug,water-ghost).
+weakness(bug,water-steel).
+weakness(bug,water-fairy).
+weakness(bug,electric-fire).
+weakness(bug,electric-fighting).
+weakness(bug,electric-poison).
+weakness(bug,electric-flying).
+weakness(bug,electric-ghost).
+weakness(bug,electric-steel).
+weakness(bug,electric-fairy).
+weakness(bug,ice-fire).
+weakness(bug,ice-fighting).
+weakness(bug,ice-poison).
+weakness(bug,ice-flying).
+weakness(bug,ice-ghost).
+weakness(bug,ice-steel).
+weakness(bug,ice-fairy).
+weakness(bug,fighting-normal).
+weakness(bug,fighting-water).
+weakness(bug,fighting-electric).
+weakness(bug,fighting-ice).
+weakness(bug,fighting-poison).
+weakness(bug,fighting-ground).
+weakness(bug,fighting-bug).
+weakness(bug,fighting-rock).
+weakness(bug,fighting-dragon).
+weakness(bug,poison-normal).
+weakness(bug,poison-water).
+weakness(bug,poison-electric).
+weakness(bug,poison-ice).
+weakness(bug,poison-fighting).
+weakness(bug,poison-ground).
+weakness(bug,poison-bug).
+weakness(bug,poison-rock).
+weakness(bug,poison-dragon).
+weakness(bug,ground-fire).
+weakness(bug,ground-fighting).
+weakness(bug,ground-poison).
+weakness(bug,ground-flying).
+weakness(bug,ground-ghost).
+weakness(bug,ground-steel).
+weakness(bug,ground-fairy).
+weakness(bug,flying-normal).
+weakness(bug,flying-water).
+weakness(bug,flying-electric).
+weakness(bug,flying-ice).
+weakness(bug,flying-ground).
+weakness(bug,flying-bug).
+weakness(bug,flying-rock).
+weakness(bug,flying-dragon).
+weakness(bug,bug-fire).
+weakness(bug,bug-fighting).
+weakness(bug,bug-poison).
+weakness(bug,bug-flying).
+weakness(bug,bug-ghost).
+weakness(bug,bug-steel).
+weakness(bug,bug-fairy).
+weakness(bug,rock-fire).
+weakness(bug,rock-fighting).
+weakness(bug,rock-poison).
+weakness(bug,rock-flying).
+weakness(bug,rock-ghost).
+weakness(bug,rock-steel).
+weakness(bug,rock-fairy).
+weakness(bug,ghost-normal).
+weakness(bug,ghost-water).
+weakness(bug,ghost-electric).
+weakness(bug,ghost-ice).
+weakness(bug,ghost-ground).
+weakness(bug,ghost-bug).
+weakness(bug,ghost-rock).
+weakness(bug,ghost-dragon).
+weakness(bug,ghost-fairy).
+weakness(bug,dragon-fire).
+weakness(bug,dragon-fighting).
+weakness(bug,dragon-poison).
+weakness(bug,dragon-flying).
+weakness(bug,dragon-ghost).
+weakness(bug,dragon-steel).
+weakness(bug,dragon-fairy).
+weakness(bug,steel-normal).
+weakness(bug,steel-water).
+weakness(bug,steel-electric).
+weakness(bug,steel-ice).
+weakness(bug,steel-ground).
+weakness(bug,steel-bug).
+weakness(bug,steel-rock).
+weakness(bug,steel-dragon).
+weakness(bug,fairy-normal).
+weakness(bug,fairy-water).
+weakness(bug,fairy-electric).
+weakness(bug,fairy-ice).
+weakness(bug,fairy-ground).
+weakness(bug,fairy-bug).
+weakness(bug,fairy-rock).
+weakness(bug,fairy-ghost).
+weakness(bug,fairy-dragon).
+weakness(rock,fighting).
+weakness(rock,ground).
+weakness(rock,steel).
+weakness(rock,normal-fighting).
+weakness(rock,normal-ground).
+weakness(rock,normal-steel).
+weakness(rock,water-fighting).
+weakness(rock,water-ground).
+weakness(rock,water-steel).
+weakness(rock,electric-fighting).
+weakness(rock,electric-ground).
+weakness(rock,electric-steel).
+weakness(rock,grass-fighting).
+weakness(rock,grass-ground).
+weakness(rock,grass-steel).
+weakness(rock,fighting-normal).
+weakness(rock,fighting-water).
+weakness(rock,fighting-electric).
+weakness(rock,fighting-grass).
+weakness(rock,fighting-psychic).
+weakness(rock,fighting-rock).
+weakness(rock,fighting-ghost).
+weakness(rock,fighting-dragon).
+weakness(rock,fighting-dark).
+weakness(rock,fighting-fairy).
+weakness(rock,poison-ground).
+weakness(rock,poison-steel).
+weakness(rock,ground-normal).
+weakness(rock,ground-water).
+weakness(rock,ground-electric).
+weakness(rock,ground-grass).
+weakness(rock,ground-poison).
+weakness(rock,ground-psychic).
+weakness(rock,ground-rock).
+weakness(rock,ground-ghost).
+weakness(rock,ground-dragon).
+weakness(rock,ground-dark).
+weakness(rock,ground-fairy).
+weakness(rock,psychic-fighting).
+weakness(rock,psychic-ground).
+weakness(rock,psychic-steel).
+weakness(rock,rock-fighting).
+weakness(rock,rock-ground).
+weakness(rock,rock-steel).
+weakness(rock,ghost-fighting).
+weakness(rock,ghost-ground).
+weakness(rock,ghost-steel).
+weakness(rock,dragon-fighting).
+weakness(rock,dragon-ground).
+weakness(rock,dragon-steel).
+weakness(rock,dark-fighting).
+weakness(rock,dark-ground).
+weakness(rock,dark-steel).
+weakness(rock,steel-normal).
+weakness(rock,steel-water).
+weakness(rock,steel-electric).
+weakness(rock,steel-grass).
+weakness(rock,steel-poison).
+weakness(rock,steel-psychic).
+weakness(rock,steel-rock).
+weakness(rock,steel-ghost).
+weakness(rock,steel-dragon).
+weakness(rock,steel-dark).
+weakness(rock,steel-fairy).
+weakness(rock,fairy-fighting).
+weakness(rock,fairy-ground).
+weakness(rock,fairy-steel).
+weakness(ghost,dark).
+weakness(ghost,fire-dark).
+weakness(ghost,water-dark).
+weakness(ghost,electric-dark).
+weakness(ghost,grass-dark).
+weakness(ghost,ice-dark).
+weakness(ghost,fighting-dark).
+weakness(ghost,poison-dark).
+weakness(ghost,ground-dark).
+weakness(ghost,flying-dark).
+weakness(ghost,bug-dark).
+weakness(ghost,rock-dark).
+weakness(ghost,dragon-dark).
+weakness(ghost,dark-fire).
+weakness(ghost,dark-water).
+weakness(ghost,dark-electric).
+weakness(ghost,dark-grass).
+weakness(ghost,dark-ice).
+weakness(ghost,dark-fighting).
+weakness(ghost,dark-poison).
+weakness(ghost,dark-ground).
+weakness(ghost,dark-flying).
+weakness(ghost,dark-bug).
+weakness(ghost,dark-rock).
+weakness(ghost,dark-dragon).
+weakness(ghost,dark-steel).
+weakness(ghost,dark-fairy).
+weakness(ghost,steel-dark).
+weakness(ghost,fairy-dark).
+weakness(dragon,steel).
+weakness(dragon,normal-steel).
+weakness(dragon,fire-steel).
+weakness(dragon,water-steel).
+weakness(dragon,electric-steel).
+weakness(dragon,grass-steel).
+weakness(dragon,ice-steel).
+weakness(dragon,fighting-steel).
+weakness(dragon,poison-steel).
+weakness(dragon,ground-steel).
+weakness(dragon,flying-steel).
+weakness(dragon,psychic-steel).
+weakness(dragon,bug-steel).
+weakness(dragon,rock-steel).
+weakness(dragon,ghost-steel).
+weakness(dragon,dark-steel).
+weakness(dragon,steel-normal).
+weakness(dragon,steel-fire).
+weakness(dragon,steel-water).
+weakness(dragon,steel-electric).
+weakness(dragon,steel-grass).
+weakness(dragon,steel-ice).
+weakness(dragon,steel-fighting).
+weakness(dragon,steel-poison).
+weakness(dragon,steel-ground).
+weakness(dragon,steel-flying).
+weakness(dragon,steel-psychic).
+weakness(dragon,steel-bug).
+weakness(dragon,steel-rock).
+weakness(dragon,steel-ghost).
+weakness(dragon,steel-dark).
+weakness(dark,fighting).
+weakness(dark,dark).
+weakness(dark,fairy).
+weakness(dark,normal-fighting).
+weakness(dark,normal-dark).
+weakness(dark,normal-fairy).
+weakness(dark,fire-fighting).
+weakness(dark,fire-dark).
+weakness(dark,fire-fairy).
+weakness(dark,water-fighting).
+weakness(dark,water-dark).
+weakness(dark,water-fairy).
+weakness(dark,electric-fighting).
+weakness(dark,electric-dark).
+weakness(dark,electric-fairy).
+weakness(dark,grass-fighting).
+weakness(dark,grass-dark).
+weakness(dark,grass-fairy).
+weakness(dark,ice-fighting).
+weakness(dark,ice-dark).
+weakness(dark,ice-fairy).
+weakness(dark,fighting-normal).
+weakness(dark,fighting-fire).
+weakness(dark,fighting-water).
+weakness(dark,fighting-electric).
+weakness(dark,fighting-grass).
+weakness(dark,fighting-ice).
+weakness(dark,fighting-poison).
+weakness(dark,fighting-ground).
+weakness(dark,fighting-flying).
+weakness(dark,fighting-bug).
+weakness(dark,fighting-rock).
+weakness(dark,fighting-dragon).
+weakness(dark,fighting-steel).
+weakness(dark,poison-fighting).
+weakness(dark,poison-dark).
+weakness(dark,poison-fairy).
+weakness(dark,ground-fighting).
+weakness(dark,ground-dark).
+weakness(dark,ground-fairy).
+weakness(dark,flying-fighting).
+weakness(dark,flying-dark).
+weakness(dark,flying-fairy).
+weakness(dark,bug-fighting).
+weakness(dark,bug-dark).
+weakness(dark,bug-fairy).
+weakness(dark,rock-fighting).
+weakness(dark,rock-dark).
+weakness(dark,rock-fairy).
+weakness(dark,dragon-fighting).
+weakness(dark,dragon-dark).
+weakness(dark,dragon-fairy).
+weakness(dark,dark-normal).
+weakness(dark,dark-fire).
+weakness(dark,dark-water).
+weakness(dark,dark-electric).
+weakness(dark,dark-grass).
+weakness(dark,dark-ice).
+weakness(dark,dark-poison).
+weakness(dark,dark-ground).
+weakness(dark,dark-flying).
+weakness(dark,dark-bug).
+weakness(dark,dark-rock).
+weakness(dark,dark-dragon).
+weakness(dark,dark-steel).
+weakness(dark,steel-fighting).
+weakness(dark,steel-dark).
+weakness(dark,steel-fairy).
+weakness(dark,fairy-normal).
+weakness(dark,fairy-fire).
+weakness(dark,fairy-water).
+weakness(dark,fairy-electric).
+weakness(dark,fairy-grass).
+weakness(dark,fairy-ice).
+weakness(dark,fairy-poison).
+weakness(dark,fairy-ground).
+weakness(dark,fairy-flying).
+weakness(dark,fairy-bug).
+weakness(dark,fairy-rock).
+weakness(dark,fairy-dragon).
+weakness(dark,fairy-steel).
+weakness(steel,fire).
+weakness(steel,water).
+weakness(steel,electric).
+weakness(steel,steel).
+weakness(steel,normal-fire).
+weakness(steel,normal-water).
+weakness(steel,normal-electric).
+weakness(steel,normal-steel).
+weakness(steel,fire-normal).
+weakness(steel,fire-grass).
+weakness(steel,fire-fighting).
+weakness(steel,fire-poison).
+weakness(steel,fire-ground).
+weakness(steel,fire-flying).
+weakness(steel,fire-psychic).
+weakness(steel,fire-bug).
+weakness(steel,fire-ghost).
+weakness(steel,fire-dragon).
+weakness(steel,fire-dark).
+weakness(steel,water-normal).
+weakness(steel,water-grass).
+weakness(steel,water-fighting).
+weakness(steel,water-ground).
+weakness(steel,water-flying).
+weakness(steel,water-psychic).
+weakness(steel,water-ghost).
+weakness(steel,water-dragon).
+weakness(steel,water-dark).
+weakness(steel,electric-normal).
+weakness(steel,electric-grass).
+weakness(steel,electric-fighting).
+weakness(steel,electric-ground).
+weakness(steel,electric-flying).
+weakness(steel,electric-psychic).
+weakness(steel,electric-bug).
+weakness(steel,electric-ghost).
+weakness(steel,electric-dragon).
+weakness(steel,electric-dark).
+weakness(steel,grass-fire).
+weakness(steel,grass-water).
+weakness(steel,grass-electric).
+weakness(steel,grass-steel).
+weakness(steel,fighting-fire).
+weakness(steel,fighting-water).
+weakness(steel,fighting-electric).
+weakness(steel,fighting-steel).
+weakness(steel,poison-fire).
+weakness(steel,poison-steel).
+weakness(steel,ground-fire).
+weakness(steel,ground-water).
+weakness(steel,ground-electric).
+weakness(steel,ground-steel).
+weakness(steel,flying-fire).
+weakness(steel,flying-water).
+weakness(steel,flying-electric).
+weakness(steel,flying-steel).
+weakness(steel,psychic-fire).
+weakness(steel,psychic-water).
+weakness(steel,psychic-electric).
+weakness(steel,psychic-steel).
+weakness(steel,bug-fire).
+weakness(steel,bug-electric).
+weakness(steel,bug-steel).
+weakness(steel,ghost-fire).
+weakness(steel,ghost-water).
+weakness(steel,ghost-electric).
+weakness(steel,ghost-steel).
+weakness(steel,dragon-fire).
+weakness(steel,dragon-water).
+weakness(steel,dragon-electric).
+weakness(steel,dragon-steel).
+weakness(steel,dark-fire).
+weakness(steel,dark-water).
+weakness(steel,dark-electric).
+weakness(steel,dark-steel).
+weakness(steel,steel-normal).
+weakness(steel,steel-grass).
+weakness(steel,steel-fighting).
+weakness(steel,steel-poison).
+weakness(steel,steel-ground).
+weakness(steel,steel-flying).
+weakness(steel,steel-psychic).
+weakness(steel,steel-bug).
+weakness(steel,steel-ghost).
+weakness(steel,steel-dragon).
+weakness(steel,steel-dark).
+weakness(fairy,fire).
+weakness(fairy,poison).
+weakness(fairy,steel).
+weakness(fairy,normal-fire).
+weakness(fairy,normal-fighting).
+weakness(fairy,normal-steel).
+weakness(fairy,fire-normal).
+weakness(fairy,fire-water).
+weakness(fairy,fire-electric).
+weakness(fairy,fire-grass).
+weakness(fairy,fire-ice).
+weakness(fairy,fire-ground).
+weakness(fairy,fire-flying).
+weakness(fairy,fire-psychic).
+weakness(fairy,fire-bug).
+weakness(fairy,fire-rock).
+weakness(fairy,fire-ghost).
+weakness(fairy,fire-fairy).
+weakness(fairy,water-fire).
+weakness(fairy,water-poison).
+weakness(fairy,water-steel).
+weakness(fairy,electric-fire).
+weakness(fairy,electric-poison).
+weakness(fairy,electric-steel).
+weakness(fairy,grass-fire).
+weakness(fairy,grass-poison).
+weakness(fairy,grass-steel).
+weakness(fairy,ice-fire).
+weakness(fairy,ice-poison).
+weakness(fairy,ice-steel).
+weakness(fairy,poison-normal).
+weakness(fairy,poison-water).
+weakness(fairy,poison-electric).
+weakness(fairy,poison-grass).
+weakness(fairy,poison-ice).
+weakness(fairy,poison-ground).
+weakness(fairy,poison-flying).
+weakness(fairy,poison-psychic).
+weakness(fairy,poison-bug).
+weakness(fairy,poison-rock).
+weakness(fairy,poison-ghost).
+weakness(fairy,poison-fairy).
+weakness(fairy,ground-fire).
+weakness(fairy,ground-poison).
+weakness(fairy,ground-steel).
+weakness(fairy,flying-fire).
+weakness(fairy,flying-poison).
+weakness(fairy,flying-steel).
+weakness(fairy,psychic-fire).
+weakness(fairy,psychic-poison).
+weakness(fairy,psychic-steel).
+weakness(fairy,bug-fire).
+weakness(fairy,bug-poison).
+weakness(fairy,bug-steel).
+weakness(fairy,rock-fire).
+weakness(fairy,rock-poison).
+weakness(fairy,rock-steel).
+weakness(fairy,ghost-fire).
+weakness(fairy,ghost-poison).
+weakness(fairy,ghost-steel).
+weakness(fairy,steel-normal).
+weakness(fairy,steel-water).
+weakness(fairy,steel-electric).
+weakness(fairy,steel-grass).
+weakness(fairy,steel-ice).
+weakness(fairy,steel-ground).
+weakness(fairy,steel-flying).
+weakness(fairy,steel-psychic).
+weakness(fairy,steel-bug).
+weakness(fairy,steel-rock).
+weakness(fairy,steel-ghost).
+weakness(fairy,steel-fairy).
+weakness(fairy,fairy-fire).
+weakness(fairy,fairy-poison).
+weakness(fairy,fairy-steel).
 
-/* Efetividade tipo planta */
-normalmente_efetivo(planta,normal)
-desvantagem(planta,fogo)
-vantagem(planta,agua)
-normalmente_efetivo(planta,eletrico)
-desvantagem(planta,planta)
-normalmente_efetivo(planta,gelo)
-normalmente_efetivo(planta,lutador)
-desvantagem(planta,veneno)
-vantagem(planta,terra)
-desvantagem(planta,voador)
-normalmente_efetivo(planta,psiquico)
-desvantagem(planta,inseto)
-vantagem(planta,pedra)
-normalmente_efetivo(planta,fantasma)
-desvantagem(planta,dragao)
-normalmente_efetivo(planta,noturno)
-desvantagem(planta,metalico)
-normalmente_efetivo(planta,fada)
-desvantagem(planta,normal-fogo)
-vantagem(planta, normal-agua)
-normalmente_efetivo(planta, normal-eletrico)
-desvantagem(planta, normal-planta)
-normalmente_efetivo(planta, normal-gelo)
-normalmente_efetivo(planta, normal-lutador)
-desvantagem(planta, normal-veneno)
-vantagem(planta, normal-terra)
-desvantagem(planta, normal-voador)
-normalmente_efetivo(planta, normal-psiquico)
-desvantagem(planta, normal-inseto)
-vantagem(planta, normal-pedra)
-normalmente_efetivo(planta, normal-fantasma)
-desvantagem(planta, normal-dragao)
-normalmente_efetivo(planta, normal-noturno)
-desvantagem(planta, normal-metalico)
-normalmente_efetivo(planta, normal-fada)
-desvantagem(planta, fogo-normal)
-normalmente_efetivo(planta, fogo-agua)
-desvantagem(planta, fogo-eletrico)
-super_desvantagem(planta, fogo-planta)
-desvantagem(planta, fogo-gelo)
-desvantagem(planta, fogo-lutador)
-super_desvantagem(planta, fogo-veneno)
-normalmente_efetivo(planta, fogo-terra)
-super_desvantagem(planta, fogo-voador)
-desvantagem(planta, fogo-psiquico)
-super_desvantagem(planta, fogo-inseto)
-normalmente_efetivo(planta, fogo-pedra)
-desvantagem(planta, fogo-fantasma)
-super_desvantagem(planta, fogo-dragao)
-desvantagem(planta, fogo-noturno)
-super_desvantagem(planta, fogo-metalico)
-desvantagem(planta, fogo-fada)
-vantagem(planta, agua-normal)
-normalmente_efetivo(planta, agua-fogo)
-vantagem(planta, agua-eletrico)
-normalmente_efetivo(planta, agua-planta)
-normalmente_efetivo(planta, agua-gelo)
-vantagem(planta, agua-lutador)
-normalmente_efetivo(planta, agua-veneno)
-super_vantagem(planta, agua-terra)
-normalmente_efetivo(planta, agua-voador)
-vantagem(planta, agua-psiquico)
-normalmente_efetivo(planta, agua-inseto)
-super_vantagem(planta, agua-pedra)
-vantagem(planta, agua-fantasma)
-normalmente_efetivo(planta, agua-dragao)
-vantagem(planta, agua-noturno)
-normalmente_efetivo(planta, agua-metalico)
-vantagem(planta, agua-fada)
-normalmente_efetivo(planta, eletrico-normal)
-desvantagem(planta, eletrico-fogo)
-vantagem(planta, eletrico-agua)
-desvantagem(planta, eletrico-planta)
-normalmente_efetivo(planta, eletrico-gelo)
-normalmente_efetivo(planta, eletrico-lutador)
-desvantagem(planta, eletrico-veneno)
-vantagem(planta, eletrico-terra)
-desvantagem(planta, eletrico-voador)
-normalmente_efetivo(planta, eletrico-psiquico)
-desvantagem(planta, eletrico-inseto)
-vantagem(planta, eletrico-pedra)
-normalmente_efetivo(planta, eletrico-fantasma)
-desvantagem(planta, eletrico-dragao)
-normalmente_efetivo(planta, eletrico-noturno)
-desvantagem(planta, eletrico-metalico)
-normalmente_efetivo(planta, eletrico-fada)
-desvantagem(planta, planta-normal)
-super_desvantagem(planta, planta-fogo)
-normalmente_efetivo(planta, planta-agua)
-desvantagem(planta, planta-eletrico)
-desvantagem(planta, planta-gelo)
-desvantagem(planta, planta-lutador)
-super_desvantagem(planta, planta-veneno)
-normalmente_efetivo(planta, planta-terra)
-super_desvantagem(planta, planta-voador)
-desvantagem(planta, planta-psiquico)
-super_desvantagem(planta, planta-inseto)
-normalmente_efetivo(planta, planta-pedra)
-desvantagem(planta, planta-fantasma)
-super_desvantagem(planta, planta-dragao)
-desvantagem(planta, planta-noturno)
-super_desvantagem(planta, planta-metalico)
-desvantagem(planta, planta-fada)
-normalmente_efetivo(planta, gelo-normal)
-desvantagem(planta, gelo-fogo)
-normalmente_efetivo(planta, gelo-agua)
-normalmente_efetivo(planta, gelo-eletrico)
-desvantagem(planta, gelo-planta)
-normalmente_efetivo(planta, gelo-lutador)
-desvantagem(planta, gelo-veneno)
-vantagem(planta, gelo-terra)
-desvantagem(planta, gelo-voador)
-normalmente_efetivo(planta, gelo-psiquico)
-desvantagem(planta, gelo-inseto)
-vantagem(planta, gelo-pedra)
-normalmente_efetivo(planta, gelo-fantasma)
-desvantagem(planta, gelo-dragao)
-normalmente_efetivo(planta, gelo-noturno)
-desvantagem(planta, gelo-metalico)
-normalmente_efetivo(planta, gelo-fada)
-normalmente_efetivo(planta, lutador-normal)
-desvantagem(planta, lutador-fogo)
-vantagem(planta, lutador-agua)
-normalmente_efetivo(planta, lutador-eletrico)
-desvantagem(planta, lutador-planta)
-normalmente_efetivo(planta, lutador-gelo)
-desvantagem(planta, lutador-veneno)
-vantagem(planta, lutador-terra)
-desvantagem(planta, lutador-voador)
-normalmente_efetivo(planta, lutador-psiquico)
-desvantagem(planta, lutador-inseto)
-vantagem(planta, lutador-pedra)
-normalmente_efetivo(planta, lutador-fantasma)
-desvantagem(planta, lutador-dragao)
-normalmente_efetivo(planta, lutador-noturno)
-desvantagem(planta, lutador-metalico)
-normalmente_efetivo(planta, lutador-fada)
-desvantagem(planta, veneno-normal)
-super_desvantagem(planta, veneno-fogo)
-normalmente_efetivo(planta, veneno-agua)
-desvantagem(planta, veneno-eletrico)
-super_desvantagem(planta, veneno-planta)
-desvantagem(planta, veneno-gelo)
-desvantagem(planta, veneno-lutador)
-normalmente_efetivo(planta, veneno-terra)
-super_desvantagem(planta, veneno-voador)
-desvantagem(planta, veneno-psiquico)
-super_desvantagem(planta, veneno-inseto)
-normalmente_efetivo(planta, veneno-pedra)
-desvantagem(planta, veneno-fantasma)
-super_desvantagem(planta, veneno-dragao)
-desvantagem(planta, veneno-noturno)
-super_desvantagem(planta, veneno-metalico)
-desvantagem(planta, veneno-fada)
-vantagem(planta, terra-normal)
-normalmente_efetivo(planta, terra-fogo)
-super_vantagem(planta, terra-agua)
-vantagem(planta, terra-eletrico)
-normalmente_efetivo(planta, terra-planta)
-vantagem(planta, terra-gelo)
-vantagem(planta, terra-lutador)
-normalmente_efetivo(planta, terra-veneno)
-normalmente_efetivo(planta, terra-voador)
-vantagem(planta, terra-psiquico)
-normalmente_efetivo(planta, terra-inseto)
-super_vantagem(planta, terra-pedra)
-vantagem(planta, terra-fantasma)
-normalmente_efetivo(planta, terra-dragao)
-vantagem(planta, terra-noturno)
-normalmente_efetivo(planta, terra-metalico)
-vantagem(planta, terra-fada)
-desvantagem(planta, voador-normal)
-super_desvantagem(planta, voador-fogo)
-normalmente_efetivo(planta, voador-agua)
-desvantagem(planta, voador-eletrico)
-super_desvantagem(planta, voador-planta)
-desvantagem(planta, voador-gelo)
-desvantagem(planta, voador-lutador)
-super_desvantagem(planta, voador-veneno)
-normalmente_efetivo(planta, voador-terra)
-desvantagem(planta, voador-psiquico)
-super_desvantagem(planta, voador-inseto)
-normalmente_efetivo(planta, voador-pedra)
-desvantagem(planta, voador-fantasma)
-super_desvantagem(planta, voador-dragao)
-desvantagem(planta, voador-noturno)
-super_desvantagem(planta, voador-metalico)
-desvantagem(planta, voador-fada)
-normalmente_efetivo(planta, psiquico-normal)
-desvantagem(planta, psiquico-fogo)
-vantagem(planta, psiquico-agua)
-normalmente_efetivo(planta, psiquico-eletrico)
-desvantagem(planta, psiquico-planta)
-normalmente_efetivo(planta, psiquico-gelo)
-normalmente_efetivo(planta, psiquico-lutador)
-desvantagem(planta, psiquico-veneno)
-vantagem(planta, psiquico-terra)
-desvantagem(planta, psiquico-voador)
-desvantagem(planta, psiquico-inseto)
-vantagem(planta, psiquico-pedra)
-normalmente_efetivo(planta, psiquico-fantasma)
-desvantagem(planta, psiquico-dragao)
-normalmente_efetivo(planta, psiquico-noturno)
-desvantagem(planta, psiquico-metalico)
-normalmente_efetivo(planta, psiquico-fada)
-desvantagem(planta, inseto-normal)
-super_desvantagem(planta, inseto-fogo)
-normalmente_efetivo(planta, inseto-agua)
-desvantagem(planta, inseto-eletrico)
-super_desvantagem(planta, inseto-planta)
-desvantagem(planta, inseto-gelo)
-desvantagem(planta, inseto-lutador)
-super_desvantagem(planta, inseto-veneno)
-normalmente_efetivo(planta, inseto-terra)
-super_desvantagem(planta, inseto-voador)
-desvantagem(planta, inseto-psiquico)
-normalmente_efetivo(planta, inseto-pedra)
-desvantagem(planta, inseto-fantasma)
-super_desvantagem(planta, inseto-dragao)
-desvantagem(planta, inseto-noturno)
-super_desvantagem(planta, inseto-metalico)
-desvantagem(planta, inseto-fada)
-vantagem(planta, pedra-normal)
-normalmente_efetivo(planta, pedra-fogo)
-super_vantagem(planta, pedra-agua)
-vantagem(planta, pedra-eletrico)
-normalmente_efetivo(planta, pedra-planta)
-vantagem(planta, pedra-gelo)
-vantagem(planta, pedra-lutador)
-normalmente_efetivo(planta, pedra-veneno)
-super_vantagem(planta, pedra-terra)
-normalmente_efetivo(planta, pedra-voador)
-vantagem(planta, pedra-psiquico)
-normalmente_efetivo(planta, pedra-inseto)
-vantagem(planta, pedra-fantasma)
-normalmente_efetivo(planta, pedra-dragao)
-vantagem(planta, pedra-noturno)
-normalmente_efetivo(planta, pedra-metalico)
-vantagem(planta, pedra-fada)
-normalmente_efetivo(planta, fantasma-normal)
-desvantagem(planta, fantasma-fogo)
-vantagem(planta, fantasma-agua)
-normalmente_efetivo(planta, fantasma-eletrico)
-desvantagem(planta, fantasma-planta)
-normalmente_efetivo(planta, fantasma-gelo)
-normalmente_efetivo(planta, fantasma-lutador)
-desvantagem(planta, fantasma-veneno)
-vantagem(planta, fantasma-terra)
-desvantagem(planta, fantasma-voador)
-normalmente_efetivo(planta, fantasma-psiquico)
-desvantagem(planta, fantasma-inseto)
-vantagem(planta, fantasma-pedra)
-desvantagem(planta, fantasma-dragao)
-normalmente_efetivo(planta, fantasma-noturno)
-desvantagem(planta, fantasma-metalico)
-normalmente_efetivo(planta, fantasma-fada)
-desvantagem(planta, dragao-normal)
-super_desvantagem(planta, dragao-fogo)
-normalmente_efetivo(planta, dragao-agua)
-desvantagem(planta, dragao-eletrico)
-super_desvantagem(planta, dragao-planta)
-desvantagem(planta, dragao-gelo)
-desvantagem(planta, dragao-lutador)
-super_desvantagem(planta, dragao-veneno)
-normalmente_efetivo(planta, dragao-terra)
-super_desvantagem(planta, dragao-voador)
-desvantagem(planta, dragao-psiquico)
-super_desvantagem(planta, dragao-inseto)
-normalmente_efetivo(planta, dragao-pedra)
-desvantagem(planta, dragao-fantasma)
-desvantagem(planta, dragao-noturno)
-super_desvantagem(planta, dragao-metalico)
-desvantagem(planta, dragao-fada)
-normalmente_efetivo(planta, noturno-normal)
-desvantagem(planta, noturno-fogo)
-vantagem(planta, noturno-agua)
-normalmente_efetivo(planta, noturno-eletrico)
-desvantagem(planta, noturno-planta)
-normalmente_efetivo(planta, noturno-gelo)
-normalmente_efetivo(planta, noturno-lutador)
-desvantagem(planta, noturno-veneno)
-vantagem(planta, noturno-terra)
-desvantagem(planta, noturno-voador)
-normalmente_efetivo(planta, noturno-psiquico)
-desvantagem(planta, noturno-inseto)
-vantagem(planta, noturno-pedra)
-normalmente_efetivo(planta, noturno-fantasma)
-desvantagem(planta, noturno-dragao)
-desvantagem(planta, noturno-metalico)
-normalmente_efetivo(planta, noturno-fada)
-desvantagem(planta, metalico-normal)
-super_desvantagem(planta, metalico-fogo)
-normalmente_efetivo(planta, metalico-agua)
-desvantagem(planta, metalico-eletrico)
-super_desvantagem(planta, metalico-planta)
-desvantagem(planta, metalico-gelo)
-desvantagem(planta, metalico-lutador)
-super_desvantagem(planta, metalico-veneno)
-normalmente_efetivo(planta, metalico-terra)
-super_desvantagem(planta, metalico-voador)
-desvantagem(planta, metalico-psiquico)
-super_desvantagem(planta, metalico-inseto)
-normalmente_efetivo(planta, metalico-pedra)
-desvantagem(planta, metalico-fantasma)
-super_desvantagem(planta, metalico-dragao)
-desvantagem(planta, metalico-noturno)
-desvantagem(planta, metalico-fada)
-normalmente_efetivo(planta, fada-normal)
-desvantagem(planta, fada-fogo)
-vantagem(planta, fada-agua)
-normalmente_efetivo(planta, fada-eletrico)
-desvantagem(planta, fada-planta)
-normalmente_efetivo(planta, fada-gelo)
-normalmente_efetivo(planta, fada-lutador)
-desvantagem(planta, fada-veneno)
-vantagem(planta, fada-terra)
-desvantagem(planta, fada-voador)
-normalmente_efetivo(planta, fada-psiquico)
-desvantagem(planta, fada-inseto)
-vantagem(planta, fada-pedra)
-normalmente_efetivo(planta, fada-fantasma)
-desvantagem(planta, fada-dragao)
-normalmente_efetivo(planta, fada-noturno)
-desvantagem(planta, fada-metalico)
-
-/* Efetividade tipo gelo */
-normalmente_efetivo(gelo,normal)
-desvantagem(gelo,fogo)
-desvantagem(gelo,agua)
-normalmente_efetivo(gelo,eletrico)
-vantagem(gelo,planta)
-desvantagem(gelo,gelo)
-normalmente_efetivo(gelo,lutador)
-normalmente_efetivo(gelo,veneno)
-vantagem(gelo,terra)
-vantagem(gelo,voador)
-normalmente_efetivo(gelo,psiquico)
-normalmente_efetivo(gelo,inseto)
-normalmente_efetivo(gelo,pedra)
-normalmente_efetivo(gelo,fantasma)
-vantagem(gelo,dragao)
-normalmente_efetivo(gelo,noturno)
-desvantagem(gelo,metalico)
-normalmente_efetivo(gelo,fada)
-desvantagem(gelo,normal-fogo)
-desvantagem(gelo, normal-agua)
-normalmente_efetivo(gelo, normal-eletrico)
-vantagem(gelo, normal-planta)
-desvantagem(gelo, normal-gelo)
-normalmente_efetivo(gelo, normal-lutador)
-normalmente_efetivo(gelo, normal-veneno)
-vantagem(gelo, normal-terra)
-vantagem(gelo, normal-voador)
-normalmente_efetivo(gelo, normal-psiquico)
-normalmente_efetivo(gelo, normal-inseto)
-normalmente_efetivo(gelo, normal-pedra)
-normalmente_efetivo(gelo, normal-fantasma)
-vantagem(gelo, normal-dragao)
-normalmente_efetivo(gelo, normal-noturno)
-desvantagem(gelo, normal-metalico)
-normalmente_efetivo(gelo, normal-fada)
-desvantagem(gelo, fogo-normal)
-super_desvantagem(gelo, fogo-agua)
-desvantagem(gelo, fogo-eletrico)
-normalmente_efetivo(gelo, fogo-planta)
-super_desvantagem(gelo, fogo-gelo)
-desvantagem(gelo, fogo-lutador)
-desvantagem(gelo, fogo-veneno)
-normalmente_efetivo(gelo, fogo-terra)
-normalmente_efetivo(gelo, fogo-voador)
-desvantagem(gelo, fogo-psiquico)
-desvantagem(gelo, fogo-inseto)
-desvantagem(gelo, fogo-pedra)
-desvantagem(gelo, fogo-fantasma)
-normalmente_efetivo(gelo, fogo-dragao)
-desvantagem(gelo, fogo-noturno)
-super_desvantagem(gelo, fogo-metalico)
-desvantagem(gelo, fogo-fada)
-desvantagem(gelo, agua-normal)
-super_desvantagem(gelo, agua-fogo)
-desvantagem(gelo, agua-eletrico)
-normalmente_efetivo(gelo, agua-planta)
-super_desvantagem(gelo, agua-gelo)
-desvantagem(gelo, agua-lutador)
-desvantagem(gelo, agua-veneno)
-normalmente_efetivo(gelo, agua-terra)
-normalmente_efetivo(gelo, agua-voador)
-desvantagem(gelo, agua-psiquico)
-desvantagem(gelo, agua-inseto)
-desvantagem(gelo, agua-pedra)
-desvantagem(gelo, agua-fantasma)
-normalmente_efetivo(gelo, agua-dragao)
-desvantagem(gelo, agua-noturno)
-super_desvantagem(gelo, agua-metalico)
-desvantagem(gelo, agua-fada)
-normalmente_efetivo(gelo, eletrico-normal)
-desvantagem(gelo, eletrico-fogo)
-desvantagem(gelo, eletrico-agua)
-vantagem(gelo, eletrico-planta)
-desvantagem(gelo, eletrico-gelo)
-normalmente_efetivo(gelo, eletrico-lutador)
-normalmente_efetivo(gelo, eletrico-veneno)
-vantagem(gelo, eletrico-terra)
-vantagem(gelo, eletrico-voador)
-normalmente_efetivo(gelo, eletrico-psiquico)
-normalmente_efetivo(gelo, eletrico-inseto)
-normalmente_efetivo(gelo, eletrico-pedra)
-normalmente_efetivo(gelo, eletrico-fantasma)
-vantagem(gelo, eletrico-dragao)
-normalmente_efetivo(gelo, eletrico-noturno)
-desvantagem(gelo, eletrico-metalico)
-normalmente_efetivo(gelo, eletrico-fada)
-vantagem(gelo, planta-normal)
-normalmente_efetivo(gelo, planta-fogo)
-normalmente_efetivo(gelo, planta-agua)
-vantagem(gelo, planta-eletrico)
-normalmente_efetivo(gelo, planta-gelo)
-vantagem(gelo, planta-lutador)
-vantagem(gelo, planta-veneno)
-super_vantagem(gelo, planta-terra)
-super_vantagem(gelo, planta-voador)
-vantagem(gelo, planta-psiquico)
-vantagem(gelo, planta-inseto)
-vantagem(gelo, planta-pedra)
-vantagem(gelo, planta-fantasma)
-super_vantagem(gelo, planta-dragao)
-vantagem(gelo, planta-noturno)
-normalmente_efetivo(gelo, planta-metalico)
-vantagem(gelo, planta-fada)
-desvantagem(gelo, gelo-normal)
-desvantagem(gelo, gelo-fogo)
-super_desvantagem(gelo, gelo-agua)
-desvantagem(gelo, gelo-eletrico)
-normalmente_efetivo(gelo, gelo-planta)
-desvantagem(gelo, gelo-lutador)
-desvantagem(gelo, gelo-veneno)
-normalmente_efetivo(gelo, gelo-terra)
-normalmente_efetivo(gelo, gelo-voador)
-desvantagem(gelo, gelo-psiquico)
-desvantagem(gelo, gelo-inseto)
-desvantagem(gelo, gelo-pedra)
-desvantagem(gelo, gelo-fantasma)
-normalmente_efetivo(gelo, gelo-dragao)
-desvantagem(gelo, gelo-noturno)
-super_desvantagem(gelo, gelo-metalico)
-desvantagem(gelo, gelo-fada)
-normalmente_efetivo(gelo, lutador-normal)
-desvantagem(gelo, lutador-fogo)
-desvantagem(gelo, lutador-agua)
-normalmente_efetivo(gelo, lutador-eletrico)
-vantagem(gelo, lutador-planta)
-desvantagem(gelo, lutador-gelo)
-desvantagem(gelo, lutador-veneno)
-vantagem(gelo, lutador-terra)
-vantagem(gelo, lutador-voador)
-normalmente_efetivo(gelo, lutador-psiquico)
-normalmente_efetivo(gelo, lutador-inseto)
-normalmente_efetivo(gelo, lutador-pedra)
-normalmente_efetivo(gelo, lutador-fantasma)
-vantagem(gelo, lutador-dragao)
-normalmente_efetivo(gelo, lutador-noturno)
-desvantagem(gelo, lutador-metalico)
-normalmente_efetivo(gelo, lutador-fada)
-normalmente_efetivo(gelo, veneno-normal)
-desvantagem(gelo, veneno-fogo)
-desvantagem(gelo, veneno-agua)
-normalmente_efetivo(gelo, veneno-eletrico)
-vantagem(gelo, veneno-planta)
-desvantagem(gelo, veneno-gelo)
-desvantagem(gelo, veneno-lutador)
-vantagem(gelo, veneno-terra)
-vantagem(gelo, veneno-voador)
-normalmente_efetivo(gelo, veneno-psiquico)
-normalmente_efetivo(gelo, veneno-inseto)
-normalmente_efetivo(gelo, veneno-pedra)
-normalmente_efetivo(gelo, veneno-fantasma)
-vantagem(gelo, veneno-dragao)
-normalmente_efetivo(gelo, veneno-noturno)
-desvantagem(gelo, veneno-metalico)
-normalmente_efetivo(gelo, veneno-fada)
-vantagem(gelo, terra-normal)
-normalmente_efetivo(gelo, terra-fogo)
-normalmente_efetivo(gelo, terra-agua)
-vantagem(gelo, terra-eletrico)
-super_vantagem(gelo, terra-planta)
-normalmente_efetivo(gelo, terra-gelo)
-vantagem(gelo, terra-lutador)
-vantagem(gelo, terra-veneno)
-super_vantagem(gelo, terra-voador)
-vantagem(gelo, terra-psiquico)
-vantagem(gelo, terra-inseto)
-vantagem(gelo, terra-pedra)
-vantagem(gelo, terra-fantasma)
-super_vantagem(gelo, terra-dragao)
-vantagem(gelo, terra-noturno)
-normalmente_efetivo(gelo, terra-metalico)
-vantagem(gelo, terra-fada)
-vantagem(gelo, voador-normal)
-normalmente_efetivo(gelo, voador-fogo)
-normalmente_efetivo(gelo, voador-agua)
-vantagem(gelo, voador-eletrico)
-super_vantagem(gelo, voador-planta)
-normalmente_efetivo(gelo, voador-gelo)
-vantagem(gelo, voador-lutador)
-vantagem(gelo, voador-veneno)
-super_vantagem(gelo, voador-terra)
-vantagem(gelo, voador-psiquico)
-vantagem(gelo, voador-inseto)
-vantagem(gelo, voador-pedra)
-vantagem(gelo, voador-fantasma)
-super_vantagem(gelo, voador-dragao)
-vantagem(gelo, voador-noturno)
-normalmente_efetivo(gelo, voador-metalico)
-vantagem(gelo, voador-fada)
-normalmente_efetivo(gelo, psiquico-normal)
-desvantagem(gelo, psiquico-fogo)
-desvantagem(gelo, psiquico-agua)
-normalmente_efetivo(gelo, psiquico-eletrico)
-vantagem(gelo, psiquico-planta)
-desvantagem(gelo, psiquico-gelo)
-normalmente_efetivo(gelo, psiquico-lutador)
-normalmente_efetivo(gelo, psiquico-veneno)
-vantagem(gelo, psiquico-terra)
-vantagem(gelo, psiquico-voador)
-normalmente_efetivo(gelo, psiquico-inseto)
-normalmente_efetivo(gelo, psiquico-pedra)
-normalmente_efetivo(gelo, psiquico-fantasma)
-vantagem(gelo, psiquico-dragao)
-normalmente_efetivo(gelo, psiquico-noturno)
-desvantagem(gelo, psiquico-metalico)
-normalmente_efetivo(gelo, psiquico-fada)
-normalmente_efetivo(gelo, inseto-normal)
-desvantagem(gelo, inseto-fogo)
-desvantagem(gelo, inseto-agua)
-normalmente_efetivo(gelo, inseto-eletrico)
-vantagem(gelo, inseto-planta)
-desvantagem(gelo, inseto-gelo)
-normalmente_efetivo(gelo, inseto-lutador)
-normalmente_efetivo(gelo, inseto-veneno)
-vantagem(gelo, inseto-terra)
-vantagem(gelo, inseto-voador)
-normalmente_efetivo(gelo, inseto-psiquico)
-normalmente_efetivo(gelo, inseto-pedra)
-normalmente_efetivo(gelo, inseto-fantasma)
-vantagem(gelo, inseto-dragao)
-normalmente_efetivo(gelo, inseto-noturno)
-desvantagem(gelo, inseto-metalico)
-normalmente_efetivo(gelo, inseto-fada)
-normalmente_efetivo(gelo, pedra-normal)
-desvantagem(gelo, pedra-fogo)
-desvantagem(gelo, pedra-agua)
-normalmente_efetivo(gelo, pedra-eletrico)
-vantagem(gelo, pedra-planta)
-desvantagem(gelo, pedra-gelo)
-normalmente_efetivo(gelo, pedra-lutador)
-normalmente_efetivo(gelo, pedra-veneno)
-vantagem(gelo, pedra-terra)
-vantagem(gelo, pedra-voador)
-normalmente_efetivo(gelo, pedra-psiquico)
-normalmente_efetivo(gelo, pedra-inseto)
-normalmente_efetivo(gelo, pedra-fantasma)
-vantagem(gelo, pedra-dragao)
-normalmente_efetivo(gelo, pedra-noturno)
-desvantagem(gelo, pedra-metalico)
-normalmente_efetivo(gelo, pedra-fada)
-normalmente_efetivo(gelo, fantasma-normal)
-desvantagem(gelo, fantasma-fogo)
-desvantagem(gelo, fantasma-agua)
-normalmente_efetivo(gelo, fantasma-eletrico)
-vantagem(gelo, fantasma-planta)
-desvantagem(gelo, fantasma-gelo)
-normalmente_efetivo(gelo, fantasma-lutador)
-normalmente_efetivo(gelo, fantasma-veneno)
-vantagem(gelo, fantasma-terra)
-vantagem(gelo, fantasma-voador)
-normalmente_efetivo(gelo, fantasma-psiquico)
-normalmente_efetivo(gelo, fantasma-inseto)
-normalmente_efetivo(gelo, fantasma-pedra)
-vantagem(gelo, fantasma-dragao)
-normalmente_efetivo(gelo, fantasma-noturno)
-desvantagem(gelo, fantasma-metalico)
-normalmente_efetivo(gelo, fantasma-fada)
-vantagem(gelo, dragao-normal)
-normalmente_efetivo(gelo, dragao-fogo)
-normalmente_efetivo(gelo, dragao-agua)
-vantagem(gelo, dragao-eletrico)
-super_vantagem(gelo, dragao-planta)
-normalmente_efetivo(gelo, dragao-gelo)
-vantagem(gelo, dragao-lutador)
-vantagem(gelo, dragao-veneno)
-super_vantagem(gelo, dragao-terra)
-super_vantagem(gelo, dragao-voador)
-vantagem(gelo, dragao-psiquico)
-vantagem(gelo, dragao-inseto)
-vantagem(gelo, dragao-pedra)
-vantagem(gelo, dragao-fantasma)
-vantagem(gelo, dragao-noturno)
-normalmente_efetivo(gelo, dragao-metalico)
-vantagem(gelo, dragao-fada)
-normalmente_efetivo(gelo, noturno-normal)
-desvantagem(gelo, noturno-fogo)
-desvantagem(gelo, noturno-agua)
-normalmente_efetivo(gelo, noturno-eletrico)
-vantagem(gelo, noturno-planta)
-desvantagem(gelo, noturno-gelo)
-normalmente_efetivo(gelo, noturno-lutador)
-normalmente_efetivo(gelo, noturno-veneno)
-vantagem(gelo, noturno-terra)
-vantagem(gelo, noturno-voador)
-normalmente_efetivo(gelo, noturno-psiquico)
-normalmente_efetivo(gelo, noturno-inseto)
-normalmente_efetivo(gelo, noturno-pedra)
-normalmente_efetivo(gelo, noturno-fantasma)
-vantagem(gelo, noturno-dragao)
-desvantagem(gelo, noturno-metalico)
-normalmente_efetivo(gelo, noturno-fada)
-desvantagem(gelo, metalico-normal)
-super_desvantagem(gelo, metalico-fogo)
-super_desvantagem(gelo, metalico-agua)
-desvantagem(gelo, metalico-eletrico)
-normalmente_efetivo(gelo, metalico-planta)
-super_desvantagem(gelo, metalico-gelo)
-desvantagem(gelo, metalico-lutador)
-desvantagem(gelo, metalico-veneno)
-normalmente_efetivo(gelo, metalico-terra)
-normalmente_efetivo(gelo, metalico-voador)
-desvantagem(gelo, metalico-psiquico)
-desvantagem(gelo, metalico-inseto)
-desvantagem(gelo, metalico-pedra)
-desvantagem(gelo, metalico-fantasma)
-normalmente_efetivo(gelo, metalico-dragao)
-desvantagem(gelo, metalico-noturno)
-desvantagem(gelo, metalico-fada)
-normalmente_efetivo(gelo, fada-normal)
-desvantagem(gelo, fada-fogo)
-desvantagem(gelo, fada-agua)
-normalmente_efetivo(gelo, fada-eletrico)
-vantagem(gelo, fada-planta)
-desvantagem(gelo, fada-gelo)
-normalmente_efetivo(gelo, fada-lutador)
-normalmente_efetivo(gelo, fada-veneno)
-vantagem(gelo, fada-terra)
-vantagem(gelo, fada-voador)
-normalmente_efetivo(gelo, fada-psiquico)
-normalmente_efetivo(gelo, fada-inseto)
-normalmente_efetivo(gelo, fada-pedra)
-normalmente_efetivo(gelo, fada-fantasma)
-vantagem(gelo, fada-dragao)
-normalmente_efetivo(gelo, fada-noturno)
-desvantagem(gelo, fada-metalico)
-
-/* Efetividade tipo lutador */
-vantagem(lutador,normal)
-normalmente_efetivo(lutador,fogo)
-normalmente_efetivo(lutador,agua)
-normalmente_efetivo(lutador,eletrico)
-normalmente_efetivo(lutador,planta)
-vantagem(lutador,gelo)
-normalmente_efetivo(lutador,lutador)
-desvantagem(lutador,veneno)
-normalmente_efetivo(lutador,terra)
-desvantagem(lutador,voador)
-desvantagem(lutador,psiquico)
-desvantagem(lutador,inseto)
-vantagem(lutador,pedra)
-dano_zero(lutador,fantasma)
-normalmente_efetivo(lutador,dragao)
-vantagem(lutador,noturno)
-vantagem(lutador,metalico)
-desvantagem(lutador,fada)
-vantagem(lutador,normal-fogo)
-vantagem(lutador, normal-agua)
-vantagem(lutador, normal-eletrico)
-vantagem(lutador, normal-planta)
-super_vantagem(lutador, normal-gelo)
-vantagem(lutador, normal-lutador)
-normalmente_efetivo(lutador, normal-veneno)
-vantagem(lutador, normal-terra)
-normalmente_efetivo(lutador, normal-voador)
-normalmente_efetivo(lutador, normal-psiquico)
-normalmente_efetivo(lutador, normal-inseto)
-super_vantagem(lutador, normal-pedra)
-dano_zero(lutador, normal-fantasma)
-vantagem(lutador, normal-dragao)
-super_vantagem(lutador, normal-noturno)
-super_vantagem(lutador, normal-metalico)
-normalmente_efetivo(lutador, normal-fada)
-vantagem(lutador, fogo-normal)
-normalmente_efetivo(lutador, fogo-agua)
-normalmente_efetivo(lutador, fogo-eletrico)
-normalmente_efetivo(lutador, fogo-planta)
-vantagem(lutador, fogo-gelo)
-normalmente_efetivo(lutador, fogo-lutador)
-desvantagem(lutador, fogo-veneno)
-normalmente_efetivo(lutador, fogo-terra)
-desvantagem(lutador, fogo-voador)
-desvantagem(lutador, fogo-psiquico)
-desvantagem(lutador, fogo-inseto)
-vantagem(lutador, fogo-pedra)
-dano_zero(lutador, fogo-fantasma)
-normalmente_efetivo(lutador, fogo-dragao)
-vantagem(lutador, fogo-noturno)
-vantagem(lutador, fogo-metalico)
-desvantagem(lutador, fogo-fada)
-vantagem(lutador, agua-normal)
-normalmente_efetivo(lutador, agua-fogo)
-normalmente_efetivo(lutador, agua-eletrico)
-normalmente_efetivo(lutador, agua-planta)
-vantagem(lutador, agua-gelo)
-normalmente_efetivo(lutador, agua-lutador)
-desvantagem(lutador, agua-veneno)
-normalmente_efetivo(lutador, agua-terra)
-desvantagem(lutador, agua-voador)
-desvantagem(lutador, agua-psiquico)
-desvantagem(lutador, agua-inseto)
-vantagem(lutador, agua-pedra)
-dano_zero(lutador, agua-fantasma)
-normalmente_efetivo(lutador, agua-dragao)
-vantagem(lutador, agua-noturno)
-vantagem(lutador, agua-metalico)
-desvantagem(lutador, agua-fada)
-vantagem(lutador, eletrico-normal)
-normalmente_efetivo(lutador, eletrico-fogo)
-normalmente_efetivo(lutador, eletrico-agua)
-normalmente_efetivo(lutador, eletrico-planta)
-vantagem(lutador, eletrico-gelo)
-normalmente_efetivo(lutador, eletrico-lutador)
-desvantagem(lutador, eletrico-veneno)
-normalmente_efetivo(lutador, eletrico-terra)
-desvantagem(lutador, eletrico-voador)
-desvantagem(lutador, eletrico-psiquico)
-desvantagem(lutador, eletrico-inseto)
-vantagem(lutador, eletrico-pedra)
-dano_zero(lutador, eletrico-fantasma)
-normalmente_efetivo(lutador, eletrico-dragao)
-vantagem(lutador, eletrico-noturno)
-vantagem(lutador, eletrico-metalico)
-desvantagem(lutador, eletrico-fada)
-vantagem(lutador, planta-normal)
-normalmente_efetivo(lutador, planta-fogo)
-normalmente_efetivo(lutador, planta-agua)
-normalmente_efetivo(lutador, planta-eletrico)
-vantagem(lutador, planta-gelo)
-normalmente_efetivo(lutador, planta-lutador)
-desvantagem(lutador, planta-veneno)
-normalmente_efetivo(lutador, planta-terra)
-desvantagem(lutador, planta-voador)
-desvantagem(lutador, planta-psiquico)
-desvantagem(lutador, planta-inseto)
-vantagem(lutador, planta-pedra)
-dano_zero(lutador, planta-fantasma)
-normalmente_efetivo(lutador, planta-dragao)
-vantagem(lutador, planta-noturno)
-vantagem(lutador, planta-metalico)
-desvantagem(lutador, planta-fada)
-super_vantagem(lutador, gelo-normal)
-vantagem(lutador, gelo-fogo)
-vantagem(lutador, gelo-agua)
-vantagem(lutador, gelo-eletrico)
-vantagem(lutador, gelo-planta)
-vantagem(lutador, gelo-lutador)
-normalmente_efetivo(lutador, gelo-veneno)
-vantagem(lutador, gelo-terra)
-normalmente_efetivo(lutador, gelo-voador)
-normalmente_efetivo(lutador, gelo-psiquico)
-normalmente_efetivo(lutador, gelo-inseto)
-super_vantagem(lutador, gelo-pedra)
-dano_zero(lutador, gelo-fantasma)
-vantagem(lutador, gelo-dragao)
-super_vantagem(lutador, gelo-noturno)
-super_vantagem(lutador, gelo-metalico)
-normalmente_efetivo(lutador, gelo-fada)
-vantagem(lutador, lutador-normal)
-normalmente_efetivo(lutador, lutador-fogo)
-normalmente_efetivo(lutador, lutador-agua)
-normalmente_efetivo(lutador, lutador-eletrico)
-normalmente_efetivo(lutador, lutador-planta)
-vantagem(lutador, lutador-gelo)
-normalmente_efetivo(lutador, lutador-veneno)
-normalmente_efetivo(lutador, lutador-terra)
-desvantagem(lutador, lutador-voador)
-desvantagem(lutador, lutador-psiquico)
-desvantagem(lutador, lutador-inseto)
-vantagem(lutador, lutador-pedra)
-dano_zero(lutador, lutador-fantasma)
-normalmente_efetivo(lutador, lutador-dragao)
-vantagem(lutador, lutador-noturno)
-vantagem(lutador, lutador-metalico)
-desvantagem(lutador, lutador-fada)
-normalmente_efetivo(lutador, veneno-normal)
-desvantagem(lutador, veneno-fogo)
-desvantagem(lutador, veneno-agua)
-desvantagem(lutador, veneno-eletrico)
-desvantagem(lutador, veneno-planta)
-normalmente_efetivo(lutador, veneno-gelo)
-normalmente_efetivo(lutador, veneno-lutador)
-desvantagem(lutador, veneno-terra)
-super_desvantagem(lutador, veneno-voador)
-super_desvantagem(lutador, veneno-psiquico)
-super_desvantagem(lutador, veneno-inseto)
-normalmente_efetivo(lutador, veneno-pedra)
-dano_zero(lutador, veneno-fantasma)
-desvantagem(lutador, veneno-dragao)
-normalmente_efetivo(lutador, veneno-noturno)
-normalmente_efetivo(lutador, veneno-metalico)
-super_desvantagem(lutador, veneno-fada)
-vantagem(lutador, terra-normal)
-normalmente_efetivo(lutador, terra-fogo)
-normalmente_efetivo(lutador, terra-agua)
-normalmente_efetivo(lutador, terra-eletrico)
-normalmente_efetivo(lutador, terra-planta)
-vantagem(lutador, terra-gelo)
-normalmente_efetivo(lutador, terra-lutador)
-desvantagem(lutador, terra-veneno)
-desvantagem(lutador, terra-voador)
-desvantagem(lutador, terra-psiquico)
-desvantagem(lutador, terra-inseto)
-vantagem(lutador, terra-pedra)
-dano_zero(lutador, terra-fantasma)
-normalmente_efetivo(lutador, terra-dragao)
-vantagem(lutador, terra-noturno)
-vantagem(lutador, terra-metalico)
-desvantagem(lutador, terra-fada)
-normalmente_efetivo(lutador, voador-normal)
-desvantagem(lutador, voador-fogo)
-desvantagem(lutador, voador-agua)
-desvantagem(lutador, voador-eletrico)
-desvantagem(lutador, voador-planta)
-normalmente_efetivo(lutador, voador-gelo)
-desvantagem(lutador, voador-lutador)
-super_desvantagem(lutador, voador-veneno)
-desvantagem(lutador, voador-terra)
-super_desvantagem(lutador, voador-psiquico)
-super_desvantagem(lutador, voador-inseto)
-normalmente_efetivo(lutador, voador-pedra)
-dano_zero(lutador, voador-fantasma)
-desvantagem(lutador, voador-dragao)
-normalmente_efetivo(lutador, voador-noturno)
-normalmente_efetivo(lutador, voador-metalico)
-super_desvantagem(lutador, voador-fada)
-normalmente_efetivo(lutador, psiquico-normal)
-desvantagem(lutador, psiquico-fogo)
-desvantagem(lutador, psiquico-agua)
-desvantagem(lutador, psiquico-eletrico)
-desvantagem(lutador, psiquico-planta)
-normalmente_efetivo(lutador, psiquico-gelo)
-desvantagem(lutador, psiquico-lutador)
-super_desvantagem(lutador, psiquico-veneno)
-desvantagem(lutador, psiquico-terra)
-super_desvantagem(lutador, psiquico-voador)
-super_desvantagem(lutador, psiquico-inseto)
-normalmente_efetivo(lutador, psiquico-pedra)
-dano_zero(lutador, psiquico-fantasma)
-desvantagem(lutador, psiquico-dragao)
-normalmente_efetivo(lutador, psiquico-noturno)
-normalmente_efetivo(lutador, psiquico-metalico)
-super_desvantagem(lutador, psiquico-fada)
-normalmente_efetivo(lutador, inseto-normal)
-desvantagem(lutador, inseto-fogo)
-desvantagem(lutador, inseto-agua)
-desvantagem(lutador, inseto-eletrico)
-desvantagem(lutador, inseto-planta)
-normalmente_efetivo(lutador, inseto-gelo)
-desvantagem(lutador, inseto-lutador)
-super_desvantagem(lutador, inseto-veneno)
-desvantagem(lutador, inseto-terra)
-super_desvantagem(lutador, inseto-voador)
-super_desvantagem(lutador, inseto-psiquico)
-normalmente_efetivo(lutador, inseto-pedra)
-dano_zero(lutador, inseto-fantasma)
-desvantagem(lutador, inseto-dragao)
-normalmente_efetivo(lutador, inseto-noturno)
-normalmente_efetivo(lutador, inseto-metalico)
-super_desvantagem(lutador, inseto-fada)
-super_vantagem(lutador, pedra-normal)
-vantagem(lutador, pedra-fogo)
-vantagem(lutador, pedra-agua)
-vantagem(lutador, pedra-eletrico)
-vantagem(lutador, pedra-planta)
-super_vantagem(lutador, pedra-gelo)
-vantagem(lutador, pedra-lutador)
-normalmente_efetivo(lutador, pedra-veneno)
-vantagem(lutador, pedra-terra)
-normalmente_efetivo(lutador, pedra-voador)
-normalmente_efetivo(lutador, pedra-psiquico)
-normalmente_efetivo(lutador, pedra-inseto)
-dano_zero(lutador, pedra-fantasma)
-vantagem(lutador, pedra-dragao)
-super_vantagem(lutador, pedra-noturno)
-super_vantagem(lutador, pedra-metalico)
-normalmente_efetivo(lutador, pedra-fada)
-dano_zero(lutador, fantasma-normal)
-dano_zero(lutador, fantasma-fogo)
-dano_zero(lutador, fantasma-agua)
-dano_zero(lutador, fantasma-eletrico)
-dano_zero(lutador, fantasma-planta)
-dano_zero(lutador, fantasma-gelo)
-dano_zero(lutador, fantasma-lutador)
-dano_zero(lutador, fantasma-veneno)
-dano_zero(lutador, fantasma-terra)
-dano_zero(lutador, fantasma-voador)
-dano_zero(lutador, fantasma-psiquico)
-dano_zero(lutador, fantasma-inseto)
-dano_zero(lutador, fantasma-pedra)
-dano_zero(lutador, fantasma-dragao)
-dano_zero(lutador, fantasma-noturno)
-dano_zero(lutador, fantasma-metalico)
-dano_zero(lutador, fantasma-fada)
-vantagem(lutador, dragao-normal)
-normalmente_efetivo(lutador, dragao-fogo)
-normalmente_efetivo(lutador, dragao-agua)
-normalmente_efetivo(lutador, dragao-eletrico)
-normalmente_efetivo(lutador, dragao-planta)
-vantagem(lutador, dragao-gelo)
-normalmente_efetivo(lutador, dragao-lutador)
-desvantagem(lutador, dragao-veneno)
-normalmente_efetivo(lutador, dragao-terra)
-desvantagem(lutador, dragao-voador)
-desvantagem(lutador, dragao-psiquico)
-desvantagem(lutador, dragao-inseto)
-vantagem(lutador, dragao-pedra)
-dano_zero(lutador, dragao-fantasma)
-vantagem(lutador, dragao-noturno)
-vantagem(lutador, dragao-metalico)
-desvantagem(lutador, dragao-fada)
-super_vantagem(lutador, noturno-normal)
-vantagem(lutador, noturno-fogo)
-vantagem(lutador, noturno-agua)
-vantagem(lutador, noturno-eletrico)
-vantagem(lutador, noturno-planta)
-super_vantagem(lutador, noturno-gelo)
-vantagem(lutador, noturno-lutador)
-normalmente_efetivo(lutador, noturno-veneno)
-vantagem(lutador, noturno-terra)
-normalmente_efetivo(lutador, noturno-voador)
-normalmente_efetivo(lutador, noturno-psiquico)
-normalmente_efetivo(lutador, noturno-inseto)
-super_vantagem(lutador, noturno-pedra)
-dano_zero(lutador, noturno-fantasma)
-vantagem(lutador, noturno-dragao)
-super_vantagem(lutador, noturno-metalico)
-normalmente_efetivo(lutador, noturno-fada)
-super_vantagem(lutador, metalico-normal)
-vantagem(lutador, metalico-fogo)
-vantagem(lutador, metalico-agua)
-vantagem(lutador, metalico-eletrico)
-vantagem(lutador, metalico-planta)
-super_vantagem(lutador, metalico-gelo)
-vantagem(lutador, metalico-lutador)
-normalmente_efetivo(lutador, metalico-veneno)
-vantagem(lutador, metalico-terra)
-normalmente_efetivo(lutador, metalico-voador)
-normalmente_efetivo(lutador, metalico-psiquico)
-normalmente_efetivo(lutador, metalico-inseto)
-super_vantagem(lutador, metalico-pedra)
-dano_zero(lutador, metalico-fantasma)
-vantagem(lutador, metalico-dragao)
-super_vantagem(lutador, metalico-noturno)
-normalmente_efetivo(lutador, metalico-fada)
-normalmente_efetivo(lutador, fada-normal)
-desvantagem(lutador, fada-fogo)
-desvantagem(lutador, fada-agua)
-desvantagem(lutador, fada-eletrico)
-desvantagem(lutador, fada-planta)
-normalmente_efetivo(lutador, fada-gelo)
-desvantagem(lutador, fada-lutador)
-super_desvantagem(lutador, fada-veneno)
-desvantagem(lutador, fada-terra)
-super_desvantagem(lutador, fada-voador)
-super_desvantagem(lutador, fada-psiquico)
-super_desvantagem(lutador, fada-inseto)
-normalmente_efetivo(lutador, fada-pedra)
-dano_zero(lutador, fada-fantasma)
-desvantagem(lutador, fada-dragao)
-normalmente_efetivo(lutador, fada-noturno)
-normalmente_efetivo(lutador, fada-metalico)
-
-/* Efetividade tipo veneno */
-normalmente_efetivo(veneno,normal)
-normalmente_efetivo(veneno,fogo)
-normalmente_efetivo(veneno,agua)
-normalmente_efetivo(veneno,eletrico)
-vantagem(veneno,planta)
-normalmente_efetivo(veneno,gelo)
-normalmente_efetivo(veneno,lutador)
-desvantagem(veneno,veneno)
-desvantagem(veneno,terra)
-normalmente_efetivo(veneno,voador)
-normalmente_efetivo(veneno,psiquico)
-normalmente_efetivo(veneno,inseto)
-desvantagem(veneno,pedra)
-desvantagem(veneno,fantasma)
-normalmente_efetivo(veneno,dragao)
-normalmente_efetivo(veneno,noturno)
-dano_zero(veneno,metalico)
-vantagem(veneno,fada)
-normalmente_efetivo(veneno,normal-fogo)
-normalmente_efetivo(veneno, normal-agua)
-normalmente_efetivo(veneno, normal-eletrico)
-vantagem(veneno, normal-planta)
-normalmente_efetivo(veneno, normal-gelo)
-normalmente_efetivo(veneno, normal-lutador)
-desvantagem(veneno, normal-veneno)
-desvantagem(veneno, normal-terra)
-normalmente_efetivo(veneno, normal-voador)
-normalmente_efetivo(veneno, normal-psiquico)
-normalmente_efetivo(veneno, normal-inseto)
-desvantagem(veneno, normal-pedra)
-desvantagem(veneno, normal-fantasma)
-normalmente_efetivo(veneno, normal-dragao)
-normalmente_efetivo(veneno, normal-noturno)
-dano_zero(veneno, normal-metalico)
-vantagem(veneno, normal-fada)
-normalmente_efetivo(veneno, fogo-normal)
-normalmente_efetivo(veneno, fogo-agua)
-normalmente_efetivo(veneno, fogo-eletrico)
-vantagem(veneno, fogo-planta)
-normalmente_efetivo(veneno, fogo-gelo)
-normalmente_efetivo(veneno, fogo-lutador)
-desvantagem(veneno, fogo-veneno)
-desvantagem(veneno, fogo-terra)
-normalmente_efetivo(veneno, fogo-voador)
-normalmente_efetivo(veneno, fogo-psiquico)
-normalmente_efetivo(veneno, fogo-inseto)
-desvantagem(veneno, fogo-pedra)
-desvantagem(veneno, fogo-fantasma)
-normalmente_efetivo(veneno, fogo-dragao)
-normalmente_efetivo(veneno, fogo-noturno)
-dano_zero(veneno, fogo-metalico)
-vantagem(veneno, fogo-fada)
-normalmente_efetivo(veneno, agua-normal)
-normalmente_efetivo(veneno, agua-fogo)
-normalmente_efetivo(veneno, agua-eletrico)
-vantagem(veneno, agua-planta)
-normalmente_efetivo(veneno, agua-gelo)
-normalmente_efetivo(veneno, agua-lutador)
-desvantagem(veneno, agua-veneno)
-desvantagem(veneno, agua-terra)
-normalmente_efetivo(veneno, agua-voador)
-normalmente_efetivo(veneno, agua-psiquico)
-normalmente_efetivo(veneno, agua-inseto)
-desvantagem(veneno, agua-pedra)
-desvantagem(veneno, agua-fantasma)
-normalmente_efetivo(veneno, agua-dragao)
-normalmente_efetivo(veneno, agua-noturno)
-dano_zero(veneno, agua-metalico)
-vantagem(veneno, agua-fada)
-normalmente_efetivo(veneno, eletrico-normal)
-normalmente_efetivo(veneno, eletrico-fogo)
-normalmente_efetivo(veneno, eletrico-agua)
-vantagem(veneno, eletrico-planta)
-normalmente_efetivo(veneno, eletrico-gelo)
-normalmente_efetivo(veneno, eletrico-lutador)
-desvantagem(veneno, eletrico-veneno)
-desvantagem(veneno, eletrico-terra)
-normalmente_efetivo(veneno, eletrico-voador)
-normalmente_efetivo(veneno, eletrico-psiquico)
-normalmente_efetivo(veneno, eletrico-inseto)
-desvantagem(veneno, eletrico-pedra)
-desvantagem(veneno, eletrico-fantasma)
-normalmente_efetivo(veneno, eletrico-dragao)
-normalmente_efetivo(veneno, eletrico-noturno)
-dano_zero(veneno, eletrico-metalico)
-vantagem(veneno, eletrico-fada)
-vantagem(veneno, planta-normal)
-vantagem(veneno, planta-fogo)
-vantagem(veneno, planta-agua)
-vantagem(veneno, planta-eletrico)
-vantagem(veneno, planta-gelo)
-vantagem(veneno, planta-lutador)
-normalmente_efetivo(veneno, planta-veneno)
-normalmente_efetivo(veneno, planta-terra)
-vantagem(veneno, planta-voador)
-vantagem(veneno, planta-psiquico)
-vantagem(veneno, planta-inseto)
-normalmente_efetivo(veneno, planta-pedra)
-normalmente_efetivo(veneno, planta-fantasma)
-vantagem(veneno, planta-dragao)
-vantagem(veneno, planta-noturno)
-dano_zero(veneno, planta-metalico)
-super_vantagem(veneno, planta-fada)
-normalmente_efetivo(veneno, gelo-normal)
-normalmente_efetivo(veneno, gelo-fogo)
-normalmente_efetivo(veneno, gelo-agua)
-normalmente_efetivo(veneno, gelo-eletrico)
-vantagem(veneno, gelo-planta)
-normalmente_efetivo(veneno, gelo-lutador)
-desvantagem(veneno, gelo-veneno)
-desvantagem(veneno, gelo-terra)
-normalmente_efetivo(veneno, gelo-voador)
-normalmente_efetivo(veneno, gelo-psiquico)
-normalmente_efetivo(veneno, gelo-inseto)
-desvantagem(veneno, gelo-pedra)
-desvantagem(veneno, gelo-fantasma)
-normalmente_efetivo(veneno, gelo-dragao)
-normalmente_efetivo(veneno, gelo-noturno)
-dano_zero(veneno, gelo-metalico)
-vantagem(veneno, gelo-fada)
-normalmente_efetivo(veneno, lutador-normal)
-normalmente_efetivo(veneno, lutador-fogo)
-normalmente_efetivo(veneno, lutador-agua)
-normalmente_efetivo(veneno, lutador-eletrico)
-vantagem(veneno, lutador-planta)
-normalmente_efetivo(veneno, lutador-gelo)
-desvantagem(veneno, lutador-veneno)
-desvantagem(veneno, lutador-terra)
-normalmente_efetivo(veneno, lutador-voador)
-normalmente_efetivo(veneno, lutador-psiquico)
-normalmente_efetivo(veneno, lutador-inseto)
-desvantagem(veneno, lutador-pedra)
-desvantagem(veneno, lutador-fantasma)
-normalmente_efetivo(veneno, lutador-dragao)
-normalmente_efetivo(veneno, lutador-noturno)
-dano_zero(veneno, lutador-metalico)
-vantagem(veneno, lutador-fada)
-desvantagem(veneno, veneno-normal)
-desvantagem(veneno, veneno-fogo)
-desvantagem(veneno, veneno-agua)
-desvantagem(veneno, veneno-eletrico)
-normalmente_efetivo(veneno, veneno-planta)
-desvantagem(veneno, veneno-gelo)
-desvantagem(veneno, veneno-lutador)
-super_desvantagem(veneno, veneno-terra)
-desvantagem(veneno, veneno-voador)
-desvantagem(veneno, veneno-psiquico)
-desvantagem(veneno, veneno-inseto)
-super_desvantagem(veneno, veneno-pedra)
-super_desvantagem(veneno, veneno-fantasma)
-desvantagem(veneno, veneno-dragao)
-desvantagem(veneno, veneno-noturno)
-dano_zero(veneno, veneno-metalico)
-normalmente_efetivo(veneno, veneno-fada)
-desvantagem(veneno, terra-normal)
-desvantagem(veneno, terra-fogo)
-desvantagem(veneno, terra-agua)
-desvantagem(veneno, terra-eletrico)
-normalmente_efetivo(veneno, terra-planta)
-desvantagem(veneno, terra-gelo)
-desvantagem(veneno, terra-lutador)
-super_desvantagem(veneno, terra-veneno)
-desvantagem(veneno, terra-voador)
-desvantagem(veneno, terra-psiquico)
-desvantagem(veneno, terra-inseto)
-super_desvantagem(veneno, terra-pedra)
-super_desvantagem(veneno, terra-fantasma)
-desvantagem(veneno, terra-dragao)
-desvantagem(veneno, terra-noturno)
-dano_zero(veneno, terra-metalico)
-normalmente_efetivo(veneno, terra-fada)
-normalmente_efetivo(veneno, voador-normal)
-normalmente_efetivo(veneno, voador-fogo)
-normalmente_efetivo(veneno, voador-agua)
-normalmente_efetivo(veneno, voador-eletrico)
-vantagem(veneno, voador-planta)
-normalmente_efetivo(veneno, voador-gelo)
-normalmente_efetivo(veneno, voador-lutador)
-desvantagem(veneno, voador-veneno)
-desvantagem(veneno, voador-terra)
-normalmente_efetivo(veneno, voador-psiquico)
-normalmente_efetivo(veneno, voador-inseto)
-desvantagem(veneno, voador-pedra)
-desvantagem(veneno, voador-fantasma)
-normalmente_efetivo(veneno, voador-dragao)
-normalmente_efetivo(veneno, voador-noturno)
-dano_zero(veneno, voador-metalico)
-vantagem(veneno, voador-fada)
-normalmente_efetivo(veneno, psiquico-normal)
-normalmente_efetivo(veneno, psiquico-fogo)
-normalmente_efetivo(veneno, psiquico-agua)
-normalmente_efetivo(veneno, psiquico-eletrico)
-vantagem(veneno, psiquico-planta)
-normalmente_efetivo(veneno, psiquico-gelo)
-normalmente_efetivo(veneno, psiquico-lutador)
-desvantagem(veneno, psiquico-veneno)
-desvantagem(veneno, psiquico-terra)
-normalmente_efetivo(veneno, psiquico-voador)
-normalmente_efetivo(veneno, psiquico-inseto)
-desvantagem(veneno, psiquico-pedra)
-desvantagem(veneno, psiquico-fantasma)
-normalmente_efetivo(veneno, psiquico-dragao)
-normalmente_efetivo(veneno, psiquico-noturno)
-dano_zero(veneno, psiquico-metalico)
-vantagem(veneno, psiquico-fada)
-normalmente_efetivo(veneno, inseto-normal)
-normalmente_efetivo(veneno, inseto-fogo)
-normalmente_efetivo(veneno, inseto-agua)
-normalmente_efetivo(veneno, inseto-eletrico)
-vantagem(veneno, inseto-planta)
-normalmente_efetivo(veneno, inseto-gelo)
-normalmente_efetivo(veneno, inseto-lutador)
-desvantagem(veneno, inseto-veneno)
-desvantagem(veneno, inseto-terra)
-normalmente_efetivo(veneno, inseto-voador)
-normalmente_efetivo(veneno, inseto-psiquico)
-desvantagem(veneno, inseto-pedra)
-desvantagem(veneno, inseto-fantasma)
-normalmente_efetivo(veneno, inseto-dragao)
-normalmente_efetivo(veneno, inseto-noturno)
-dano_zero(veneno, inseto-metalico)
-vantagem(veneno, inseto-fada)
-desvantagem(veneno, pedra-normal)
-desvantagem(veneno, pedra-fogo)
-desvantagem(veneno, pedra-agua)
-desvantagem(veneno, pedra-eletrico)
-normalmente_efetivo(veneno, pedra-planta)
-desvantagem(veneno, pedra-gelo)
-desvantagem(veneno, pedra-lutador)
-super_desvantagem(veneno, pedra-veneno)
-super_desvantagem(veneno, pedra-terra)
-desvantagem(veneno, pedra-voador)
-desvantagem(veneno, pedra-psiquico)
-desvantagem(veneno, pedra-inseto)
-super_desvantagem(veneno, pedra-fantasma)
-desvantagem(veneno, pedra-dragao)
-desvantagem(veneno, pedra-noturno)
-dano_zero(veneno, pedra-metalico)
-normalmente_efetivo(veneno, pedra-fada)
-desvantagem(veneno, fantasma-normal)
-desvantagem(veneno, fantasma-fogo)
-desvantagem(veneno, fantasma-agua)
-desvantagem(veneno, fantasma-eletrico)
-normalmente_efetivo(veneno, fantasma-planta)
-desvantagem(veneno, fantasma-gelo)
-desvantagem(veneno, fantasma-lutador)
-super_desvantagem(veneno, fantasma-veneno)
-super_desvantagem(veneno, fantasma-terra)
-desvantagem(veneno, fantasma-voador)
-desvantagem(veneno, fantasma-psiquico)
-desvantagem(veneno, fantasma-inseto)
-super_desvantagem(veneno, fantasma-pedra)
-desvantagem(veneno, fantasma-dragao)
-desvantagem(veneno, fantasma-noturno)
-dano_zero(veneno, fantasma-metalico)
-normalmente_efetivo(veneno, fantasma-fada)
-normalmente_efetivo(veneno, dragao-normal)
-normalmente_efetivo(veneno, dragao-fogo)
-normalmente_efetivo(veneno, dragao-agua)
-normalmente_efetivo(veneno, dragao-eletrico)
-vantagem(veneno, dragao-planta)
-normalmente_efetivo(veneno, dragao-gelo)
-normalmente_efetivo(veneno, dragao-lutador)
-desvantagem(veneno, dragao-veneno)
-desvantagem(veneno, dragao-terra)
-normalmente_efetivo(veneno, dragao-voador)
-normalmente_efetivo(veneno, dragao-psiquico)
-normalmente_efetivo(veneno, dragao-inseto)
-desvantagem(veneno, dragao-pedra)
-desvantagem(veneno, dragao-fantasma)
-normalmente_efetivo(veneno, dragao-noturno)
-dano_zero(veneno, dragao-metalico)
-vantagem(veneno, dragao-fada)
-normalmente_efetivo(veneno, noturno-normal)
-normalmente_efetivo(veneno, noturno-fogo)
-normalmente_efetivo(veneno, noturno-agua)
-normalmente_efetivo(veneno, noturno-eletrico)
-vantagem(veneno, noturno-planta)
-normalmente_efetivo(veneno, noturno-gelo)
-normalmente_efetivo(veneno, noturno-lutador)
-desvantagem(veneno, noturno-veneno)
-desvantagem(veneno, noturno-terra)
-normalmente_efetivo(veneno, noturno-voador)
-normalmente_efetivo(veneno, noturno-psiquico)
-normalmente_efetivo(veneno, noturno-inseto)
-desvantagem(veneno, noturno-pedra)
-desvantagem(veneno, noturno-fantasma)
-normalmente_efetivo(veneno, noturno-dragao)
-dano_zero(veneno, noturno-metalico)
-vantagem(veneno, noturno-fada)
-dano_zero(veneno, metalico-normal)
-dano_zero(veneno, metalico-fogo)
-dano_zero(veneno, metalico-agua)
-dano_zero(veneno, metalico-eletrico)
-dano_zero(veneno, metalico-planta)
-dano_zero(veneno, metalico-gelo)
-dano_zero(veneno, metalico-lutador)
-dano_zero(veneno, metalico-veneno)
-dano_zero(veneno, metalico-terra)
-dano_zero(veneno, metalico-voador)
-dano_zero(veneno, metalico-psiquico)
-dano_zero(veneno, metalico-inseto)
-dano_zero(veneno, metalico-pedra)
-dano_zero(veneno, metalico-fantasma)
-dano_zero(veneno, metalico-dragao)
-dano_zero(veneno, metalico-noturno)
-dano_zero(veneno, metalico-fada)
-vantagem(veneno, fada-normal)
-vantagem(veneno, fada-fogo)
-vantagem(veneno, fada-agua)
-vantagem(veneno, fada-eletrico)
-super_vantagem(veneno, fada-planta)
-vantagem(veneno, fada-gelo)
-vantagem(veneno, fada-lutador)
-normalmente_efetivo(veneno, fada-veneno)
-normalmente_efetivo(veneno, fada-terra)
-vantagem(veneno, fada-voador)
-vantagem(veneno, fada-psiquico)
-vantagem(veneno, fada-inseto)
-normalmente_efetivo(veneno, fada-pedra)
-normalmente_efetivo(veneno, fada-fantasma)
-vantagem(veneno, fada-dragao)
-vantagem(veneno, fada-noturno)
-dano_zero(veneno, fada-metalico)
-
-/* Efetividade tipo terra */
-normalmente_efetivo(terra,normal)
-vantagem(terra,fogo)
-normalmente_efetivo(terra,agua)
-vantagem(terra,eletrico)
-desvantagem(terra,planta)
-normalmente_efetivo(terra,gelo)
-normalmente_efetivo(terra,lutador)
-vantagem(terra,veneno)
-normalmente_efetivo(terra,terra)
-dano_zero(terra,voador)
-normalmente_efetivo(terra,psiquico)
-desvantagem(terra,inseto)
-vantagem(terra,pedra)
-normalmente_efetivo(terra,fantasma)
-normalmente_efetivo(terra,dragao)
-normalmente_efetivo(terra,noturno)
-vantagem(terra,metalico)
-normalmente_efetivo(terra,fada)
-vantagem(terra,normal-fogo)
-normalmente_efetivo(terra, normal-agua)
-vantagem(terra, normal-eletrico)
-desvantagem(terra, normal-planta)
-normalmente_efetivo(terra, normal-gelo)
-normalmente_efetivo(terra, normal-lutador)
-vantagem(terra, normal-veneno)
-normalmente_efetivo(terra, normal-terra)
-dano_zero(terra, normal-voador)
-normalmente_efetivo(terra, normal-psiquico)
-desvantagem(terra, normal-inseto)
-vantagem(terra, normal-pedra)
-normalmente_efetivo(terra, normal-fantasma)
-normalmente_efetivo(terra, normal-dragao)
-normalmente_efetivo(terra, normal-noturno)
-vantagem(terra, normal-metalico)
-normalmente_efetivo(terra, normal-fada)
-vantagem(terra, fogo-normal)
-vantagem(terra, fogo-agua)
-super_vantagem(terra, fogo-eletrico)
-normalmente_efetivo(terra, fogo-planta)
-vantagem(terra, fogo-gelo)
-vantagem(terra, fogo-lutador)
-super_vantagem(terra, fogo-veneno)
-vantagem(terra, fogo-terra)
-dano_zero(terra, fogo-voador)
-vantagem(terra, fogo-psiquico)
-normalmente_efetivo(terra, fogo-inseto)
-super_vantagem(terra, fogo-pedra)
-vantagem(terra, fogo-fantasma)
-vantagem(terra, fogo-dragao)
-vantagem(terra, fogo-noturno)
-super_vantagem(terra, fogo-metalico)
-vantagem(terra, fogo-fada)
-normalmente_efetivo(terra, agua-normal)
-vantagem(terra, agua-fogo)
-vantagem(terra, agua-eletrico)
-desvantagem(terra, agua-planta)
-normalmente_efetivo(terra, agua-gelo)
-normalmente_efetivo(terra, agua-lutador)
-vantagem(terra, agua-veneno)
-normalmente_efetivo(terra, agua-terra)
-dano_zero(terra, agua-voador)
-normalmente_efetivo(terra, agua-psiquico)
-desvantagem(terra, agua-inseto)
-vantagem(terra, agua-pedra)
-normalmente_efetivo(terra, agua-fantasma)
-normalmente_efetivo(terra, agua-dragao)
-normalmente_efetivo(terra, agua-noturno)
-vantagem(terra, agua-metalico)
-normalmente_efetivo(terra, agua-fada)
-vantagem(terra, eletrico-normal)
-super_vantagem(terra, eletrico-fogo)
-vantagem(terra, eletrico-agua)
-normalmente_efetivo(terra, eletrico-planta)
-vantagem(terra, eletrico-gelo)
-vantagem(terra, eletrico-lutador)
-super_vantagem(terra, eletrico-veneno)
-vantagem(terra, eletrico-terra)
-dano_zero(terra, eletrico-voador)
-vantagem(terra, eletrico-psiquico)
-normalmente_efetivo(terra, eletrico-inseto)
-super_vantagem(terra, eletrico-pedra)
-vantagem(terra, eletrico-fantasma)
-vantagem(terra, eletrico-dragao)
-vantagem(terra, eletrico-noturno)
-super_vantagem(terra, eletrico-metalico)
-vantagem(terra, eletrico-fada)
-desvantagem(terra, planta-normal)
-normalmente_efetivo(terra, planta-fogo)
-desvantagem(terra, planta-agua)
-normalmente_efetivo(terra, planta-eletrico)
-desvantagem(terra, planta-gelo)
-desvantagem(terra, planta-lutador)
-normalmente_efetivo(terra, planta-veneno)
-desvantagem(terra, planta-terra)
-dano_zero(terra, planta-voador)
-desvantagem(terra, planta-psiquico)
-super_desvantagem(terra, planta-inseto)
-normalmente_efetivo(terra, planta-pedra)
-desvantagem(terra, planta-fantasma)
-desvantagem(terra, planta-dragao)
-desvantagem(terra, planta-noturno)
-normalmente_efetivo(terra, planta-metalico)
-desvantagem(terra, planta-fada)
-normalmente_efetivo(terra, gelo-normal)
-vantagem(terra, gelo-fogo)
-normalmente_efetivo(terra, gelo-agua)
-vantagem(terra, gelo-eletrico)
-desvantagem(terra, gelo-planta)
-normalmente_efetivo(terra, gelo-lutador)
-vantagem(terra, gelo-veneno)
-normalmente_efetivo(terra, gelo-terra)
-dano_zero(terra, gelo-voador)
-normalmente_efetivo(terra, gelo-psiquico)
-desvantagem(terra, gelo-inseto)
-vantagem(terra, gelo-pedra)
-normalmente_efetivo(terra, gelo-fantasma)
-normalmente_efetivo(terra, gelo-dragao)
-normalmente_efetivo(terra, gelo-noturno)
-vantagem(terra, gelo-metalico)
-normalmente_efetivo(terra, gelo-fada)
-normalmente_efetivo(terra, lutador-normal)
-vantagem(terra, lutador-fogo)
-normalmente_efetivo(terra, lutador-agua)
-vantagem(terra, lutador-eletrico)
-desvantagem(terra, lutador-planta)
-normalmente_efetivo(terra, lutador-gelo)
-vantagem(terra, lutador-veneno)
-normalmente_efetivo(terra, lutador-terra)
-dano_zero(terra, lutador-voador)
-normalmente_efetivo(terra, lutador-psiquico)
-desvantagem(terra, lutador-inseto)
-vantagem(terra, lutador-pedra)
-normalmente_efetivo(terra, lutador-fantasma)
-normalmente_efetivo(terra, lutador-dragao)
-normalmente_efetivo(terra, lutador-noturno)
-vantagem(terra, lutador-metalico)
-normalmente_efetivo(terra, lutador-fada)
-vantagem(terra, veneno-normal)
-super_vantagem(terra, veneno-fogo)
-vantagem(terra, veneno-agua)
-super_vantagem(terra, veneno-eletrico)
-normalmente_efetivo(terra, veneno-planta)
-vantagem(terra, veneno-gelo)
-vantagem(terra, veneno-lutador)
-vantagem(terra, veneno-terra)
-dano_zero(terra, veneno-voador)
-vantagem(terra, veneno-psiquico)
-normalmente_efetivo(terra, veneno-inseto)
-super_vantagem(terra, veneno-pedra)
-vantagem(terra, veneno-fantasma)
-vantagem(terra, veneno-dragao)
-vantagem(terra, veneno-noturno)
-super_vantagem(terra, veneno-metalico)
-vantagem(terra, veneno-fada)
-normalmente_efetivo(terra, terra-normal)
-vantagem(terra, terra-fogo)
-normalmente_efetivo(terra, terra-agua)
-vantagem(terra, terra-eletrico)
-desvantagem(terra, terra-planta)
-normalmente_efetivo(terra, terra-gelo)
-normalmente_efetivo(terra, terra-lutador)
-vantagem(terra, terra-veneno)
-dano_zero(terra, terra-voador)
-normalmente_efetivo(terra, terra-psiquico)
-desvantagem(terra, terra-inseto)
-vantagem(terra, terra-pedra)
-normalmente_efetivo(terra, terra-fantasma)
-normalmente_efetivo(terra, terra-dragao)
-normalmente_efetivo(terra, terra-noturno)
-vantagem(terra, terra-metalico)
-normalmente_efetivo(terra, terra-fada)
-dano_zero(terra, voador-normal)
-dano_zero(terra, voador-fogo)
-dano_zero(terra, voador-agua)
-dano_zero(terra, voador-eletrico)
-dano_zero(terra, voador-planta)
-dano_zero(terra, voador-gelo)
-dano_zero(terra, voador-lutador)
-dano_zero(terra, voador-veneno)
-dano_zero(terra, voador-terra)
-dano_zero(terra, voador-psiquico)
-dano_zero(terra, voador-inseto)
-dano_zero(terra, voador-pedra)
-dano_zero(terra, voador-fantasma)
-dano_zero(terra, voador-dragao)
-dano_zero(terra, voador-noturno)
-dano_zero(terra, voador-metalico)
-dano_zero(terra, voador-fada)
-normalmente_efetivo(terra, psiquico-normal)
-vantagem(terra, psiquico-fogo)
-normalmente_efetivo(terra, psiquico-agua)
-vantagem(terra, psiquico-eletrico)
-desvantagem(terra, psiquico-planta)
-normalmente_efetivo(terra, psiquico-gelo)
-normalmente_efetivo(terra, psiquico-lutador)
-vantagem(terra, psiquico-veneno)
-normalmente_efetivo(terra, psiquico-terra)
-dano_zero(terra, psiquico-voador)
-desvantagem(terra, psiquico-inseto)
-vantagem(terra, psiquico-pedra)
-normalmente_efetivo(terra, psiquico-fantasma)
-normalmente_efetivo(terra, psiquico-dragao)
-normalmente_efetivo(terra, psiquico-noturno)
-vantagem(terra, psiquico-metalico)
-normalmente_efetivo(terra, psiquico-fada)
-desvantagem(terra, inseto-normal)
-normalmente_efetivo(terra, inseto-fogo)
-desvantagem(terra, inseto-agua)
-normalmente_efetivo(terra, inseto-eletrico)
-super_desvantagem(terra, inseto-planta)
-desvantagem(terra, inseto-gelo)
-desvantagem(terra, inseto-lutador)
-normalmente_efetivo(terra, inseto-veneno)
-desvantagem(terra, inseto-terra)
-dano_zero(terra, inseto-voador)
-desvantagem(terra, inseto-psiquico)
-normalmente_efetivo(terra, inseto-pedra)
-desvantagem(terra, inseto-fantasma)
-desvantagem(terra, inseto-dragao)
-desvantagem(terra, inseto-noturno)
-normalmente_efetivo(terra, inseto-metalico)
-desvantagem(terra, inseto-fada)
-vantagem(terra, pedra-normal)
-super_vantagem(terra, pedra-fogo)
-vantagem(terra, pedra-agua)
-super_vantagem(terra, pedra-eletrico)
-normalmente_efetivo(terra, pedra-planta)
-vantagem(terra, pedra-gelo)
-vantagem(terra, pedra-lutador)
-super_vantagem(terra, pedra-veneno)
-vantagem(terra, pedra-terra)
-dano_zero(terra, pedra-voador)
-vantagem(terra, pedra-psiquico)
-normalmente_efetivo(terra, pedra-inseto)
-vantagem(terra, pedra-fantasma)
-vantagem(terra, pedra-dragao)
-vantagem(terra, pedra-noturno)
-super_vantagem(terra, pedra-metalico)
-vantagem(terra, pedra-fada)
-normalmente_efetivo(terra, fantasma-normal)
-vantagem(terra, fantasma-fogo)
-normalmente_efetivo(terra, fantasma-agua)
-vantagem(terra, fantasma-eletrico)
-desvantagem(terra, fantasma-planta)
-normalmente_efetivo(terra, fantasma-gelo)
-normalmente_efetivo(terra, fantasma-lutador)
-vantagem(terra, fantasma-veneno)
-normalmente_efetivo(terra, fantasma-terra)
-dano_zero(terra, fantasma-voador)
-normalmente_efetivo(terra, fantasma-psiquico)
-desvantagem(terra, fantasma-inseto)
-vantagem(terra, fantasma-pedra)
-normalmente_efetivo(terra, fantasma-dragao)
-normalmente_efetivo(terra, fantasma-noturno)
-vantagem(terra, fantasma-metalico)
-normalmente_efetivo(terra, fantasma-fada)
-normalmente_efetivo(terra, dragao-normal)
-vantagem(terra, dragao-fogo)
-normalmente_efetivo(terra, dragao-agua)
-vantagem(terra, dragao-eletrico)
-desvantagem(terra, dragao-planta)
-normalmente_efetivo(terra, dragao-gelo)
-normalmente_efetivo(terra, dragao-lutador)
-vantagem(terra, dragao-veneno)
-normalmente_efetivo(terra, dragao-terra)
-dano_zero(terra, dragao-voador)
-normalmente_efetivo(terra, dragao-psiquico)
-desvantagem(terra, dragao-inseto)
-vantagem(terra, dragao-pedra)
-normalmente_efetivo(terra, dragao-fantasma)
-normalmente_efetivo(terra, dragao-noturno)
-vantagem(terra, dragao-metalico)
-normalmente_efetivo(terra, dragao-fada)
-normalmente_efetivo(terra, noturno-normal)
-vantagem(terra, noturno-fogo)
-normalmente_efetivo(terra, noturno-agua)
-vantagem(terra, noturno-eletrico)
-desvantagem(terra, noturno-planta)
-normalmente_efetivo(terra, noturno-gelo)
-normalmente_efetivo(terra, noturno-lutador)
-vantagem(terra, noturno-veneno)
-normalmente_efetivo(terra, noturno-terra)
-dano_zero(terra, noturno-voador)
-normalmente_efetivo(terra, noturno-psiquico)
-desvantagem(terra, noturno-inseto)
-vantagem(terra, noturno-pedra)
-normalmente_efetivo(terra, noturno-fantasma)
-normalmente_efetivo(terra, noturno-dragao)
-vantagem(terra, noturno-metalico)
-normalmente_efetivo(terra, noturno-fada)
-vantagem(terra, metalico-normal)
-super_vantagem(terra, metalico-fogo)
-vantagem(terra, metalico-agua)
-super_vantagem(terra, metalico-eletrico)
-normalmente_efetivo(terra, metalico-planta)
-vantagem(terra, metalico-gelo)
-vantagem(terra, metalico-lutador)
-super_vantagem(terra, metalico-veneno)
-vantagem(terra, metalico-terra)
-dano_zero(terra, metalico-voador)
-vantagem(terra, metalico-psiquico)
-normalmente_efetivo(terra, metalico-inseto)
-super_vantagem(terra, metalico-pedra)
-vantagem(terra, metalico-fantasma)
-vantagem(terra, metalico-dragao)
-vantagem(terra, metalico-noturno)
-vantagem(terra, metalico-fada)
-normalmente_efetivo(terra, fada-normal)
-vantagem(terra, fada-fogo)
-normalmente_efetivo(terra, fada-agua)
-vantagem(terra, fada-eletrico)
-desvantagem(terra, fada-planta)
-normalmente_efetivo(terra, fada-gelo)
-normalmente_efetivo(terra, fada-lutador)
-vantagem(terra, fada-veneno)
-normalmente_efetivo(terra, fada-terra)
-dano_zero(terra, fada-voador)
-normalmente_efetivo(terra, fada-psiquico)
-desvantagem(terra, fada-inseto)
-vantagem(terra, fada-pedra)
-normalmente_efetivo(terra, fada-fantasma)
-normalmente_efetivo(terra, fada-dragao)
-normalmente_efetivo(terra, fada-noturno)
-vantagem(terra, fada-metalico)
-
-/* Efetividade tipo voador */
-normalmente_efetivo(voador,normal)
-normalmente_efetivo(voador,fogo)
-normalmente_efetivo(voador,agua)
-desvantagem(voador,eletrico)
-vantagem(voador,planta)
-normalmente_efetivo(voador,gelo)
-vantagem(voador,lutador)
-normalmente_efetivo(voador,veneno)
-normalmente_efetivo(voador,terra)
-normalmente_efetivo(voador,voador)
-normalmente_efetivo(voador,psiquico)
-vantagem(voador,inseto)
-desvantagem(voador,pedra)
-normalmente_efetivo(voador,fantasma)
-normalmente_efetivo(voador,dragao)
-normalmente_efetivo(voador,noturno)
-desvantagem(voador,metalico)
-normalmente_efetivo(voador,fada)
-normalmente_efetivo(voador,normal-fogo)
-normalmente_efetivo(voador, normal-agua)
-desvantagem(voador, normal-eletrico)
-vantagem(voador, normal-planta)
-normalmente_efetivo(voador, normal-gelo)
-vantagem(voador, normal-lutador)
-normalmente_efetivo(voador, normal-veneno)
-normalmente_efetivo(voador, normal-terra)
-normalmente_efetivo(voador, normal-voador)
-normalmente_efetivo(voador, normal-psiquico)
-vantagem(voador, normal-inseto)
-desvantagem(voador, normal-pedra)
-normalmente_efetivo(voador, normal-fantasma)
-normalmente_efetivo(voador, normal-dragao)
-normalmente_efetivo(voador, normal-noturno)
-desvantagem(voador, normal-metalico)
-normalmente_efetivo(voador, normal-fada)
-normalmente_efetivo(voador, fogo-normal)
-normalmente_efetivo(voador, fogo-agua)
-desvantagem(voador, fogo-eletrico)
-vantagem(voador, fogo-planta)
-normalmente_efetivo(voador, fogo-gelo)
-vantagem(voador, fogo-lutador)
-normalmente_efetivo(voador, fogo-veneno)
-normalmente_efetivo(voador, fogo-terra)
-normalmente_efetivo(voador, fogo-voador)
-normalmente_efetivo(voador, fogo-psiquico)
-vantagem(voador, fogo-inseto)
-desvantagem(voador, fogo-pedra)
-normalmente_efetivo(voador, fogo-fantasma)
-normalmente_efetivo(voador, fogo-dragao)
-normalmente_efetivo(voador, fogo-noturno)
-desvantagem(voador, fogo-metalico)
-normalmente_efetivo(voador, fogo-fada)
-normalmente_efetivo(voador, agua-normal)
-normalmente_efetivo(voador, agua-fogo)
-desvantagem(voador, agua-eletrico)
-vantagem(voador, agua-planta)
-normalmente_efetivo(voador, agua-gelo)
-vantagem(voador, agua-lutador)
-normalmente_efetivo(voador, agua-veneno)
-normalmente_efetivo(voador, agua-terra)
-normalmente_efetivo(voador, agua-voador)
-normalmente_efetivo(voador, agua-psiquico)
-vantagem(voador, agua-inseto)
-desvantagem(voador, agua-pedra)
-normalmente_efetivo(voador, agua-fantasma)
-normalmente_efetivo(voador, agua-dragao)
-normalmente_efetivo(voador, agua-noturno)
-desvantagem(voador, agua-metalico)
-normalmente_efetivo(voador, agua-fada)
-desvantagem(voador, eletrico-normal)
-desvantagem(voador, eletrico-fogo)
-desvantagem(voador, eletrico-agua)
-normalmente_efetivo(voador, eletrico-planta)
-desvantagem(voador, eletrico-gelo)
-normalmente_efetivo(voador, eletrico-lutador)
-desvantagem(voador, eletrico-veneno)
-desvantagem(voador, eletrico-terra)
-desvantagem(voador, eletrico-voador)
-desvantagem(voador, eletrico-psiquico)
-normalmente_efetivo(voador, eletrico-inseto)
-super_desvantagem(voador, eletrico-pedra)
-desvantagem(voador, eletrico-fantasma)
-desvantagem(voador, eletrico-dragao)
-desvantagem(voador, eletrico-noturno)
-super_desvantagem(voador, eletrico-metalico)
-desvantagem(voador, eletrico-fada)
-vantagem(voador, planta-normal)
-vantagem(voador, planta-fogo)
-vantagem(voador, planta-agua)
-normalmente_efetivo(voador, planta-eletrico)
-vantagem(voador, planta-gelo)
-super_vantagem(voador, planta-lutador)
-vantagem(voador, planta-veneno)
-vantagem(voador, planta-terra)
-vantagem(voador, planta-voador)
-vantagem(voador, planta-psiquico)
-super_vantagem(voador, planta-inseto)
-normalmente_efetivo(voador, planta-pedra)
-vantagem(voador, planta-fantasma)
-vantagem(voador, planta-dragao)
-vantagem(voador, planta-noturno)
-normalmente_efetivo(voador, planta-metalico)
-vantagem(voador, planta-fada)
-normalmente_efetivo(voador, gelo-normal)
-normalmente_efetivo(voador, gelo-fogo)
-normalmente_efetivo(voador, gelo-agua)
-desvantagem(voador, gelo-eletrico)
-vantagem(voador, gelo-planta)
-vantagem(voador, gelo-lutador)
-normalmente_efetivo(voador, gelo-veneno)
-normalmente_efetivo(voador, gelo-terra)
-normalmente_efetivo(voador, gelo-voador)
-normalmente_efetivo(voador, gelo-psiquico)
-vantagem(voador, gelo-inseto)
-desvantagem(voador, gelo-pedra)
-normalmente_efetivo(voador, gelo-fantasma)
-normalmente_efetivo(voador, gelo-dragao)
-normalmente_efetivo(voador, gelo-noturno)
-desvantagem(voador, gelo-metalico)
-normalmente_efetivo(voador, gelo-fada)
-vantagem(voador, lutador-normal)
-vantagem(voador, lutador-fogo)
-vantagem(voador, lutador-agua)
-normalmente_efetivo(voador, lutador-eletrico)
-super_vantagem(voador, lutador-planta)
-vantagem(voador, lutador-gelo)
-normalmente_efetivo(voador, lutador-veneno)
-vantagem(voador, lutador-terra)
-vantagem(voador, lutador-voador)
-vantagem(voador, lutador-psiquico)
-super_vantagem(voador, lutador-inseto)
-normalmente_efetivo(voador, lutador-pedra)
-vantagem(voador, lutador-fantasma)
-vantagem(voador, lutador-dragao)
-vantagem(voador, lutador-noturno)
-normalmente_efetivo(voador, lutador-metalico)
-vantagem(voador, lutador-fada)
-normalmente_efetivo(voador, veneno-normal)
-normalmente_efetivo(voador, veneno-fogo)
-normalmente_efetivo(voador, veneno-agua)
-desvantagem(voador, veneno-eletrico)
-vantagem(voador, veneno-planta)
-normalmente_efetivo(voador, veneno-gelo)
-normalmente_efetivo(voador, veneno-lutador)
-normalmente_efetivo(voador, veneno-terra)
-normalmente_efetivo(voador, veneno-voador)
-normalmente_efetivo(voador, veneno-psiquico)
-vantagem(voador, veneno-inseto)
-desvantagem(voador, veneno-pedra)
-normalmente_efetivo(voador, veneno-fantasma)
-normalmente_efetivo(voador, veneno-dragao)
-normalmente_efetivo(voador, veneno-noturno)
-desvantagem(voador, veneno-metalico)
-normalmente_efetivo(voador, veneno-fada)
-normalmente_efetivo(voador, terra-normal)
-normalmente_efetivo(voador, terra-fogo)
-normalmente_efetivo(voador, terra-agua)
-desvantagem(voador, terra-eletrico)
-vantagem(voador, terra-planta)
-normalmente_efetivo(voador, terra-gelo)
-vantagem(voador, terra-lutador)
-normalmente_efetivo(voador, terra-veneno)
-normalmente_efetivo(voador, terra-voador)
-normalmente_efetivo(voador, terra-psiquico)
-vantagem(voador, terra-inseto)
-desvantagem(voador, terra-pedra)
-normalmente_efetivo(voador, terra-fantasma)
-normalmente_efetivo(voador, terra-dragao)
-normalmente_efetivo(voador, terra-noturno)
-desvantagem(voador, terra-metalico)
-normalmente_efetivo(voador, terra-fada)
-normalmente_efetivo(voador, voador-normal)
-normalmente_efetivo(voador, voador-fogo)
-normalmente_efetivo(voador, voador-agua)
-desvantagem(voador, voador-eletrico)
-vantagem(voador, voador-planta)
-normalmente_efetivo(voador, voador-gelo)
-vantagem(voador, voador-lutador)
-normalmente_efetivo(voador, voador-veneno)
-normalmente_efetivo(voador, voador-terra)
-normalmente_efetivo(voador, voador-psiquico)
-vantagem(voador, voador-inseto)
-desvantagem(voador, voador-pedra)
-normalmente_efetivo(voador, voador-fantasma)
-normalmente_efetivo(voador, voador-dragao)
-normalmente_efetivo(voador, voador-noturno)
-desvantagem(voador, voador-metalico)
-normalmente_efetivo(voador, voador-fada)
-normalmente_efetivo(voador, psiquico-normal)
-normalmente_efetivo(voador, psiquico-fogo)
-normalmente_efetivo(voador, psiquico-agua)
-desvantagem(voador, psiquico-eletrico)
-vantagem(voador, psiquico-planta)
-normalmente_efetivo(voador, psiquico-gelo)
-vantagem(voador, psiquico-lutador)
-normalmente_efetivo(voador, psiquico-veneno)
-normalmente_efetivo(voador, psiquico-terra)
-normalmente_efetivo(voador, psiquico-voador)
-vantagem(voador, psiquico-inseto)
-desvantagem(voador, psiquico-pedra)
-normalmente_efetivo(voador, psiquico-fantasma)
-normalmente_efetivo(voador, psiquico-dragao)
-normalmente_efetivo(voador, psiquico-noturno)
-desvantagem(voador, psiquico-metalico)
-normalmente_efetivo(voador, psiquico-fada)
-vantagem(voador, inseto-normal)
-vantagem(voador, inseto-fogo)
-vantagem(voador, inseto-agua)
-normalmente_efetivo(voador, inseto-eletrico)
-super_vantagem(voador, inseto-planta)
-vantagem(voador, inseto-gelo)
-super_vantagem(voador, inseto-lutador)
-vantagem(voador, inseto-veneno)
-vantagem(voador, inseto-terra)
-vantagem(voador, inseto-voador)
-vantagem(voador, inseto-psiquico)
-normalmente_efetivo(voador, inseto-pedra)
-vantagem(voador, inseto-fantasma)
-vantagem(voador, inseto-dragao)
-vantagem(voador, inseto-noturno)
-normalmente_efetivo(voador, inseto-metalico)
-vantagem(voador, inseto-fada)
-desvantagem(voador, pedra-normal)
-desvantagem(voador, pedra-fogo)
-desvantagem(voador, pedra-agua)
-super_desvantagem(voador, pedra-eletrico)
-normalmente_efetivo(voador, pedra-planta)
-desvantagem(voador, pedra-gelo)
-normalmente_efetivo(voador, pedra-lutador)
-desvantagem(voador, pedra-veneno)
-desvantagem(voador, pedra-terra)
-desvantagem(voador, pedra-voador)
-desvantagem(voador, pedra-psiquico)
-normalmente_efetivo(voador, pedra-inseto)
-desvantagem(voador, pedra-fantasma)
-desvantagem(voador, pedra-dragao)
-desvantagem(voador, pedra-noturno)
-super_desvantagem(voador, pedra-metalico)
-desvantagem(voador, pedra-fada)
-normalmente_efetivo(voador, fantasma-normal)
-normalmente_efetivo(voador, fantasma-fogo)
-normalmente_efetivo(voador, fantasma-agua)
-desvantagem(voador, fantasma-eletrico)
-vantagem(voador, fantasma-planta)
-normalmente_efetivo(voador, fantasma-gelo)
-vantagem(voador, fantasma-lutador)
-normalmente_efetivo(voador, fantasma-veneno)
-normalmente_efetivo(voador, fantasma-terra)
-normalmente_efetivo(voador, fantasma-voador)
-normalmente_efetivo(voador, fantasma-psiquico)
-vantagem(voador, fantasma-inseto)
-desvantagem(voador, fantasma-pedra)
-normalmente_efetivo(voador, fantasma-dragao)
-normalmente_efetivo(voador, fantasma-noturno)
-desvantagem(voador, fantasma-metalico)
-normalmente_efetivo(voador, fantasma-fada)
-normalmente_efetivo(voador, dragao-normal)
-normalmente_efetivo(voador, dragao-fogo)
-normalmente_efetivo(voador, dragao-agua)
-desvantagem(voador, dragao-eletrico)
-vantagem(voador, dragao-planta)
-normalmente_efetivo(voador, dragao-gelo)
-vantagem(voador, dragao-lutador)
-normalmente_efetivo(voador, dragao-veneno)
-normalmente_efetivo(voador, dragao-terra)
-normalmente_efetivo(voador, dragao-voador)
-normalmente_efetivo(voador, dragao-psiquico)
-vantagem(voador, dragao-inseto)
-desvantagem(voador, dragao-pedra)
-normalmente_efetivo(voador, dragao-fantasma)
-normalmente_efetivo(voador, dragao-noturno)
-desvantagem(voador, dragao-metalico)
-normalmente_efetivo(voador, dragao-fada)
-normalmente_efetivo(voador, noturno-normal)
-normalmente_efetivo(voador, noturno-fogo)
-normalmente_efetivo(voador, noturno-agua)
-desvantagem(voador, noturno-eletrico)
-vantagem(voador, noturno-planta)
-normalmente_efetivo(voador, noturno-gelo)
-vantagem(voador, noturno-lutador)
-normalmente_efetivo(voador, noturno-veneno)
-normalmente_efetivo(voador, noturno-terra)
-normalmente_efetivo(voador, noturno-voador)
-normalmente_efetivo(voador, noturno-psiquico)
-vantagem(voador, noturno-inseto)
-desvantagem(voador, noturno-pedra)
-normalmente_efetivo(voador, noturno-fantasma)
-normalmente_efetivo(voador, noturno-dragao)
-desvantagem(voador, noturno-metalico)
-normalmente_efetivo(voador, noturno-fada)
-desvantagem(voador, metalico-normal)
-desvantagem(voador, metalico-fogo)
-desvantagem(voador, metalico-agua)
-super_desvantagem(voador, metalico-eletrico)
-normalmente_efetivo(voador, metalico-planta)
-desvantagem(voador, metalico-gelo)
-normalmente_efetivo(voador, metalico-lutador)
-desvantagem(voador, metalico-veneno)
-desvantagem(voador, metalico-terra)
-desvantagem(voador, metalico-voador)
-desvantagem(voador, metalico-psiquico)
-normalmente_efetivo(voador, metalico-inseto)
-super_desvantagem(voador, metalico-pedra)
-desvantagem(voador, metalico-fantasma)
-desvantagem(voador, metalico-dragao)
-desvantagem(voador, metalico-noturno)
-desvantagem(voador, metalico-fada)
-normalmente_efetivo(voador, fada-normal)
-normalmente_efetivo(voador, fada-fogo)
-normalmente_efetivo(voador, fada-agua)
-desvantagem(voador, fada-eletrico)
-vantagem(voador, fada-planta)
-normalmente_efetivo(voador, fada-gelo)
-vantagem(voador, fada-lutador)
-normalmente_efetivo(voador, fada-veneno)
-normalmente_efetivo(voador, fada-terra)
-normalmente_efetivo(voador, fada-voador)
-normalmente_efetivo(voador, fada-psiquico)
-vantagem(voador, fada-inseto)
-desvantagem(voador, fada-pedra)
-normalmente_efetivo(voador, fada-fantasma)
-normalmente_efetivo(voador, fada-dragao)
-normalmente_efetivo(voador, fada-noturno)
-desvantagem(voador, fada-metalico)
-
-/* Efetividade tipo psiquico */
-normalmente_efetivo(psiquico,normal)
-normalmente_efetivo(psiquico,fogo)
-normalmente_efetivo(psiquico,agua)
-normalmente_efetivo(psiquico,eletrico)
-normalmente_efetivo(psiquico,planta)
-normalmente_efetivo(psiquico,gelo)
-vantagem(psiquico,lutador)
-vantagem(psiquico,veneno)
-normalmente_efetivo(psiquico,terra)
-normalmente_efetivo(psiquico,voador)
-desvantagem(psiquico,psiquico)
-normalmente_efetivo(psiquico,inseto)
-normalmente_efetivo(psiquico,pedra)
-normalmente_efetivo(psiquico,fantasma)
-normalmente_efetivo(psiquico,dragao)
-dano_zero(psiquico,noturno)
-desvantagem(psiquico,metalico)
-normalmente_efetivo(psiquico,fada)
-normalmente_efetivo(psiquico,normal-fogo)
-normalmente_efetivo(psiquico, normal-agua)
-normalmente_efetivo(psiquico, normal-eletrico)
-normalmente_efetivo(psiquico, normal-planta)
-normalmente_efetivo(psiquico, normal-gelo)
-vantagem(psiquico, normal-lutador)
-vantagem(psiquico, normal-veneno)
-normalmente_efetivo(psiquico, normal-terra)
-normalmente_efetivo(psiquico, normal-voador)
-desvantagem(psiquico, normal-psiquico)
-normalmente_efetivo(psiquico, normal-inseto)
-normalmente_efetivo(psiquico, normal-pedra)
-normalmente_efetivo(psiquico, normal-fantasma)
-normalmente_efetivo(psiquico, normal-dragao)
-dano_zero(psiquico, normal-noturno)
-desvantagem(psiquico, normal-metalico)
-normalmente_efetivo(psiquico, normal-fada)
-normalmente_efetivo(psiquico, fogo-normal)
-normalmente_efetivo(psiquico, fogo-agua)
-normalmente_efetivo(psiquico, fogo-eletrico)
-normalmente_efetivo(psiquico, fogo-planta)
-normalmente_efetivo(psiquico, fogo-gelo)
-vantagem(psiquico, fogo-lutador)
-vantagem(psiquico, fogo-veneno)
-normalmente_efetivo(psiquico, fogo-terra)
-normalmente_efetivo(psiquico, fogo-voador)
-desvantagem(psiquico, fogo-psiquico)
-normalmente_efetivo(psiquico, fogo-inseto)
-normalmente_efetivo(psiquico, fogo-pedra)
-normalmente_efetivo(psiquico, fogo-fantasma)
-normalmente_efetivo(psiquico, fogo-dragao)
-dano_zero(psiquico, fogo-noturno)
-desvantagem(psiquico, fogo-metalico)
-normalmente_efetivo(psiquico, fogo-fada)
-normalmente_efetivo(psiquico, agua-normal)
-normalmente_efetivo(psiquico, agua-fogo)
-normalmente_efetivo(psiquico, agua-eletrico)
-normalmente_efetivo(psiquico, agua-planta)
-normalmente_efetivo(psiquico, agua-gelo)
-vantagem(psiquico, agua-lutador)
-vantagem(psiquico, agua-veneno)
-normalmente_efetivo(psiquico, agua-terra)
-normalmente_efetivo(psiquico, agua-voador)
-desvantagem(psiquico, agua-psiquico)
-normalmente_efetivo(psiquico, agua-inseto)
-normalmente_efetivo(psiquico, agua-pedra)
-normalmente_efetivo(psiquico, agua-fantasma)
-normalmente_efetivo(psiquico, agua-dragao)
-dano_zero(psiquico, agua-noturno)
-desvantagem(psiquico, agua-metalico)
-normalmente_efetivo(psiquico, agua-fada)
-normalmente_efetivo(psiquico, eletrico-normal)
-normalmente_efetivo(psiquico, eletrico-fogo)
-normalmente_efetivo(psiquico, eletrico-agua)
-normalmente_efetivo(psiquico, eletrico-planta)
-normalmente_efetivo(psiquico, eletrico-gelo)
-vantagem(psiquico, eletrico-lutador)
-vantagem(psiquico, eletrico-veneno)
-normalmente_efetivo(psiquico, eletrico-terra)
-normalmente_efetivo(psiquico, eletrico-voador)
-desvantagem(psiquico, eletrico-psiquico)
-normalmente_efetivo(psiquico, eletrico-inseto)
-normalmente_efetivo(psiquico, eletrico-pedra)
-normalmente_efetivo(psiquico, eletrico-fantasma)
-normalmente_efetivo(psiquico, eletrico-dragao)
-dano_zero(psiquico, eletrico-noturno)
-desvantagem(psiquico, eletrico-metalico)
-normalmente_efetivo(psiquico, eletrico-fada)
-normalmente_efetivo(psiquico, planta-normal)
-normalmente_efetivo(psiquico, planta-fogo)
-normalmente_efetivo(psiquico, planta-agua)
-normalmente_efetivo(psiquico, planta-eletrico)
-normalmente_efetivo(psiquico, planta-gelo)
-vantagem(psiquico, planta-lutador)
-vantagem(psiquico, planta-veneno)
-normalmente_efetivo(psiquico, planta-terra)
-normalmente_efetivo(psiquico, planta-voador)
-desvantagem(psiquico, planta-psiquico)
-normalmente_efetivo(psiquico, planta-inseto)
-normalmente_efetivo(psiquico, planta-pedra)
-normalmente_efetivo(psiquico, planta-fantasma)
-normalmente_efetivo(psiquico, planta-dragao)
-dano_zero(psiquico, planta-noturno)
-desvantagem(psiquico, planta-metalico)
-normalmente_efetivo(psiquico, planta-fada)
-normalmente_efetivo(psiquico, gelo-normal)
-normalmente_efetivo(psiquico, gelo-fogo)
-normalmente_efetivo(psiquico, gelo-agua)
-normalmente_efetivo(psiquico, gelo-eletrico)
-normalmente_efetivo(psiquico, gelo-planta)
-vantagem(psiquico, gelo-lutador)
-vantagem(psiquico, gelo-veneno)
-normalmente_efetivo(psiquico, gelo-terra)
-normalmente_efetivo(psiquico, gelo-voador)
-desvantagem(psiquico, gelo-psiquico)
-normalmente_efetivo(psiquico, gelo-inseto)
-normalmente_efetivo(psiquico, gelo-pedra)
-normalmente_efetivo(psiquico, gelo-fantasma)
-normalmente_efetivo(psiquico, gelo-dragao)
-dano_zero(psiquico, gelo-noturno)
-desvantagem(psiquico, gelo-metalico)
-normalmente_efetivo(psiquico, gelo-fada)
-vantagem(psiquico, lutador-normal)
-vantagem(psiquico, lutador-fogo)
-vantagem(psiquico, lutador-agua)
-vantagem(psiquico, lutador-eletrico)
-vantagem(psiquico, lutador-planta)
-vantagem(psiquico, lutador-gelo)
-vantagem(psiquico, lutador-veneno)
-vantagem(psiquico, lutador-terra)
-vantagem(psiquico, lutador-voador)
-normalmente_efetivo(psiquico, lutador-psiquico)
-vantagem(psiquico, lutador-inseto)
-vantagem(psiquico, lutador-pedra)
-vantagem(psiquico, lutador-fantasma)
-vantagem(psiquico, lutador-dragao)
-dano_zero(psiquico, lutador-noturno)
-normalmente_efetivo(psiquico, lutador-metalico)
-vantagem(psiquico, lutador-fada)
-vantagem(psiquico, veneno-normal)
-vantagem(psiquico, veneno-fogo)
-vantagem(psiquico, veneno-agua)
-vantagem(psiquico, veneno-eletrico)
-vantagem(psiquico, veneno-planta)
-vantagem(psiquico, veneno-gelo)
-vantagem(psiquico, veneno-lutador)
-vantagem(psiquico, veneno-terra)
-vantagem(psiquico, veneno-voador)
-normalmente_efetivo(psiquico, veneno-psiquico)
-vantagem(psiquico, veneno-inseto)
-normalmente_efetivo(psiquico, veneno-pedra)
-vantagem(psiquico, veneno-fantasma)
-vantagem(psiquico, veneno-dragao)
-dano_zero(psiquico, veneno-noturno)
-normalmente_efetivo(psiquico, veneno-metalico)
-vantagem(psiquico, veneno-fada)
-normalmente_efetivo(psiquico, terra-normal)
-normalmente_efetivo(psiquico, terra-fogo)
-normalmente_efetivo(psiquico, terra-agua)
-normalmente_efetivo(psiquico, terra-eletrico)
-normalmente_efetivo(psiquico, terra-planta)
-normalmente_efetivo(psiquico, terra-gelo)
-vantagem(psiquico, terra-lutador)
-vantagem(psiquico, terra-veneno)
-normalmente_efetivo(psiquico, terra-voador)
-desvantagem(psiquico, terra-psiquico)
-normalmente_efetivo(psiquico, terra-inseto)
-normalmente_efetivo(psiquico, terra-pedra)
-normalmente_efetivo(psiquico, terra-fantasma)
-normalmente_efetivo(psiquico, terra-dragao)
-dano_zero(psiquico, terra-noturno)
-desvantagem(psiquico, terra-metalico)
-normalmente_efetivo(psiquico, terra-fada)
-normalmente_efetivo(psiquico, voador-normal)
-normalmente_efetivo(psiquico, voador-fogo)
-normalmente_efetivo(psiquico, voador-agua)
-normalmente_efetivo(psiquico, voador-eletrico)
-normalmente_efetivo(psiquico, voador-planta)
-normalmente_efetivo(psiquico, voador-gelo)
-vantagem(psiquico, voador-lutador)
-vantagem(psiquico, voador-veneno)
-normalmente_efetivo(psiquico, voador-terra)
-desvantagem(psiquico, voador-psiquico)
-normalmente_efetivo(psiquico, voador-inseto)
-normalmente_efetivo(psiquico, voador-pedra)
-normalmente_efetivo(psiquico, voador-fantasma)
-normalmente_efetivo(psiquico, voador-dragao)
-dano_zero(psiquico, voador-noturno)
-desvantagem(psiquico, voador-metalico)
-normalmente_efetivo(psiquico, voador-fada)
-desvantagem(psiquico, psiquico-normal)
-desvantagem(psiquico, psiquico-fogo)
-desvantagem(psiquico, psiquico-agua)
-desvantagem(psiquico, psiquico-eletrico)
-desvantagem(psiquico, psiquico-planta)
-desvantagem(psiquico, psiquico-gelo)
-normalmente_efetivo(psiquico, psiquico-lutador)
-normalmente_efetivo(psiquico, psiquico-veneno)
-desvantagem(psiquico, psiquico-terra)
-desvantagem(psiquico, psiquico-voador)
-desvantagem(psiquico, psiquico-inseto)
-desvantagem(psiquico, psiquico-pedra)
-desvantagem(psiquico, psiquico-fantasma)
-desvantagem(psiquico, psiquico-dragao)
-dano_zero(psiquico, psiquico-noturno)
-super_desvantagem(psiquico, psiquico-metalico)
-desvantagem(psiquico, psiquico-fada)
-normalmente_efetivo(psiquico, inseto-normal)
-normalmente_efetivo(psiquico, inseto-fogo)
-normalmente_efetivo(psiquico, inseto-agua)
-normalmente_efetivo(psiquico, inseto-eletrico)
-normalmente_efetivo(psiquico, inseto-planta)
-normalmente_efetivo(psiquico, inseto-gelo)
-vantagem(psiquico, inseto-lutador)
-vantagem(psiquico, inseto-veneno)
-normalmente_efetivo(psiquico, inseto-terra)
-normalmente_efetivo(psiquico, inseto-voador)
-desvantagem(psiquico, inseto-psiquico)
-normalmente_efetivo(psiquico, inseto-pedra)
-normalmente_efetivo(psiquico, inseto-fantasma)
-normalmente_efetivo(psiquico, inseto-dragao)
-dano_zero(psiquico, inseto-noturno)
-desvantagem(psiquico, inseto-metalico)
-normalmente_efetivo(psiquico, inseto-fada)
-normalmente_efetivo(psiquico, pedra-normal)
-normalmente_efetivo(psiquico, pedra-fogo)
-normalmente_efetivo(psiquico, pedra-agua)
-normalmente_efetivo(psiquico, pedra-eletrico)
-normalmente_efetivo(psiquico, pedra-planta)
-normalmente_efetivo(psiquico, pedra-gelo)
-vantagem(psiquico, pedra-lutador)
-normalmente_efetivo(psiquico, pedra-veneno)
-normalmente_efetivo(psiquico, pedra-terra)
-normalmente_efetivo(psiquico, pedra-voador)
-desvantagem(psiquico, pedra-psiquico)
-normalmente_efetivo(psiquico, pedra-inseto)
-normalmente_efetivo(psiquico, pedra-fantasma)
-normalmente_efetivo(psiquico, pedra-dragao)
-dano_zero(psiquico, pedra-noturno)
-desvantagem(psiquico, pedra-metalico)
-normalmente_efetivo(psiquico, pedra-fada)
-normalmente_efetivo(psiquico, fantasma-normal)
-normalmente_efetivo(psiquico, fantasma-fogo)
-normalmente_efetivo(psiquico, fantasma-agua)
-normalmente_efetivo(psiquico, fantasma-eletrico)
-normalmente_efetivo(psiquico, fantasma-planta)
-normalmente_efetivo(psiquico, fantasma-gelo)
-vantagem(psiquico, fantasma-lutador)
-vantagem(psiquico, fantasma-veneno)
-normalmente_efetivo(psiquico, fantasma-terra)
-normalmente_efetivo(psiquico, fantasma-voador)
-desvantagem(psiquico, fantasma-psiquico)
-normalmente_efetivo(psiquico, fantasma-inseto)
-normalmente_efetivo(psiquico, fantasma-pedra)
-normalmente_efetivo(psiquico, fantasma-dragao)
-dano_zero(psiquico, fantasma-noturno)
-desvantagem(psiquico, fantasma-metalico)
-normalmente_efetivo(psiquico, fantasma-fada)
-normalmente_efetivo(psiquico, dragao-normal)
-normalmente_efetivo(psiquico, dragao-fogo)
-normalmente_efetivo(psiquico, dragao-agua)
-normalmente_efetivo(psiquico, dragao-eletrico)
-normalmente_efetivo(psiquico, dragao-planta)
-normalmente_efetivo(psiquico, dragao-gelo)
-vantagem(psiquico, dragao-lutador)
-vantagem(psiquico, dragao-veneno)
-normalmente_efetivo(psiquico, dragao-terra)
-normalmente_efetivo(psiquico, dragao-voador)
-desvantagem(psiquico, dragao-psiquico)
-normalmente_efetivo(psiquico, dragao-inseto)
-normalmente_efetivo(psiquico, dragao-pedra)
-normalmente_efetivo(psiquico, dragao-fantasma)
-dano_zero(psiquico, dragao-noturno)
-desvantagem(psiquico, dragao-metalico)
-normalmente_efetivo(psiquico, dragao-fada)
-dano_zero(psiquico, noturno-normal)
-dano_zero(psiquico, noturno-fogo)
-dano_zero(psiquico, noturno-agua)
-dano_zero(psiquico, noturno-eletrico)
-dano_zero(psiquico, noturno-planta)
-dano_zero(psiquico, noturno-gelo)
-dano_zero(psiquico, noturno-lutador)
-dano_zero(psiquico, noturno-veneno)
-dano_zero(psiquico, noturno-terra)
-dano_zero(psiquico, noturno-voador)
-dano_zero(psiquico, noturno-psiquico)
-dano_zero(psiquico, noturno-inseto)
-dano_zero(psiquico, noturno-pedra)
-dano_zero(psiquico, noturno-fantasma)
-dano_zero(psiquico, noturno-dragao)
-dano_zero(psiquico, noturno-metalico)
-dano_zero(psiquico, noturno-fada)
-desvantagem(psiquico, metalico-normal)
-desvantagem(psiquico, metalico-fogo)
-desvantagem(psiquico, metalico-agua)
-desvantagem(psiquico, metalico-eletrico)
-desvantagem(psiquico, metalico-planta)
-desvantagem(psiquico, metalico-gelo)
-normalmente_efetivo(psiquico, metalico-lutador)
-normalmente_efetivo(psiquico, metalico-veneno)
-desvantagem(psiquico, metalico-terra)
-desvantagem(psiquico, metalico-voador)
-super_desvantagem(psiquico, metalico-psiquico)
-desvantagem(psiquico, metalico-inseto)
-desvantagem(psiquico, metalico-pedra)
-desvantagem(psiquico, metalico-fantasma)
-desvantagem(psiquico, metalico-dragao)
-dano_zero(psiquico, metalico-noturno)
-desvantagem(psiquico, metalico-fada)
-normalmente_efetivo(psiquico, fada-normal)
-normalmente_efetivo(psiquico, fada-fogo)
-normalmente_efetivo(psiquico, fada-agua)
-normalmente_efetivo(psiquico, fada-eletrico)
-normalmente_efetivo(psiquico, fada-planta)
-normalmente_efetivo(psiquico, fada-gelo)
-vantagem(psiquico, fada-lutador)
-vantagem(psiquico, fada-veneno)
-normalmente_efetivo(psiquico, fada-terra)
-normalmente_efetivo(psiquico, fada-voador)
-desvantagem(psiquico, fada-psiquico)
-normalmente_efetivo(psiquico, fada-inseto)
-normalmente_efetivo(psiquico, fada-pedra)
-normalmente_efetivo(psiquico, fada-fantasma)
-normalmente_efetivo(psiquico, fada-dragao)
-dano_zero(psiquico, fada-noturno)
-desvantagem(psiquico, fada-metalico)
-
-/* Efetividade tipo inseto */
-normalmente_efetivo(inseto,normal)
-desvantagem(inseto,fogo)
-normalmente_efetivo(inseto,agua)
-normalmente_efetivo(inseto,eletrico)
-vantagem(inseto,planta)
-normalmente_efetivo(inseto,gelo)
-desvantagem(inseto,lutador)
-desvantagem(inseto,veneno)
-normalmente_efetivo(inseto,terra)
-desvantagem(inseto,voador)
-vantagem(inseto,psiquico)
-normalmente_efetivo(inseto,inseto)
-normalmente_efetivo(inseto,pedra)
-desvantagem(inseto,fantasma)
-normalmente_efetivo(inseto,dragao)
-vantagem(inseto,noturno)
-desvantagem(inseto,metalico)
-desvantagem(inseto,fada)
-desvantagem(inseto,normal-fogo)
-normalmente_efetivo(inseto, normal-agua)
-normalmente_efetivo(inseto, normal-eletrico)
-vantagem(inseto, normal-planta)
-normalmente_efetivo(inseto, normal-gelo)
-desvantagem(inseto, normal-lutador)
-desvantagem(inseto, normal-veneno)
-normalmente_efetivo(inseto, normal-terra)
-desvantagem(inseto, normal-voador)
-vantagem(inseto, normal-psiquico)
-normalmente_efetivo(inseto, normal-inseto)
-normalmente_efetivo(inseto, normal-pedra)
-desvantagem(inseto, normal-fantasma)
-normalmente_efetivo(inseto, normal-dragao)
-vantagem(inseto, normal-noturno)
-desvantagem(inseto, normal-metalico)
-desvantagem(inseto, normal-fada)
-desvantagem(inseto, fogo-normal)
-desvantagem(inseto, fogo-agua)
-desvantagem(inseto, fogo-eletrico)
-normalmente_efetivo(inseto, fogo-planta)
-desvantagem(inseto, fogo-gelo)
-super_desvantagem(inseto, fogo-lutador)
-super_desvantagem(inseto, fogo-veneno)
-desvantagem(inseto, fogo-terra)
-super_desvantagem(inseto, fogo-voador)
-normalmente_efetivo(inseto, fogo-psiquico)
-desvantagem(inseto, fogo-inseto)
-desvantagem(inseto, fogo-pedra)
-super_desvantagem(inseto, fogo-fantasma)
-desvantagem(inseto, fogo-dragao)
-normalmente_efetivo(inseto, fogo-noturno)
-super_desvantagem(inseto, fogo-metalico)
-super_desvantagem(inseto, fogo-fada)
-normalmente_efetivo(inseto, agua-normal)
-desvantagem(inseto, agua-fogo)
-normalmente_efetivo(inseto, agua-eletrico)
-vantagem(inseto, agua-planta)
-normalmente_efetivo(inseto, agua-gelo)
-desvantagem(inseto, agua-lutador)
-desvantagem(inseto, agua-veneno)
-normalmente_efetivo(inseto, agua-terra)
-desvantagem(inseto, agua-voador)
-vantagem(inseto, agua-psiquico)
-normalmente_efetivo(inseto, agua-inseto)
-normalmente_efetivo(inseto, agua-pedra)
-desvantagem(inseto, agua-fantasma)
-normalmente_efetivo(inseto, agua-dragao)
-vantagem(inseto, agua-noturno)
-desvantagem(inseto, agua-metalico)
-desvantagem(inseto, agua-fada)
-normalmente_efetivo(inseto, eletrico-normal)
-desvantagem(inseto, eletrico-fogo)
-normalmente_efetivo(inseto, eletrico-agua)
-vantagem(inseto, eletrico-planta)
-normalmente_efetivo(inseto, eletrico-gelo)
-desvantagem(inseto, eletrico-lutador)
-desvantagem(inseto, eletrico-veneno)
-normalmente_efetivo(inseto, eletrico-terra)
-desvantagem(inseto, eletrico-voador)
-vantagem(inseto, eletrico-psiquico)
-normalmente_efetivo(inseto, eletrico-inseto)
-normalmente_efetivo(inseto, eletrico-pedra)
-desvantagem(inseto, eletrico-fantasma)
-normalmente_efetivo(inseto, eletrico-dragao)
-vantagem(inseto, eletrico-noturno)
-desvantagem(inseto, eletrico-metalico)
-desvantagem(inseto, eletrico-fada)
-vantagem(inseto, planta-normal)
-normalmente_efetivo(inseto, planta-fogo)
-vantagem(inseto, planta-agua)
-vantagem(inseto, planta-eletrico)
-vantagem(inseto, planta-gelo)
-normalmente_efetivo(inseto, planta-lutador)
-normalmente_efetivo(inseto, planta-veneno)
-vantagem(inseto, planta-terra)
-normalmente_efetivo(inseto, planta-voador)
-super_vantagem(inseto, planta-psiquico)
-vantagem(inseto, planta-inseto)
-vantagem(inseto, planta-pedra)
-normalmente_efetivo(inseto, planta-fantasma)
-vantagem(inseto, planta-dragao)
-super_vantagem(inseto, planta-noturno)
-normalmente_efetivo(inseto, planta-metalico)
-normalmente_efetivo(inseto, planta-fada)
-normalmente_efetivo(inseto, gelo-normal)
-desvantagem(inseto, gelo-fogo)
-normalmente_efetivo(inseto, gelo-agua)
-normalmente_efetivo(inseto, gelo-eletrico)
-vantagem(inseto, gelo-planta)
-desvantagem(inseto, gelo-lutador)
-desvantagem(inseto, gelo-veneno)
-normalmente_efetivo(inseto, gelo-terra)
-desvantagem(inseto, gelo-voador)
-vantagem(inseto, gelo-psiquico)
-normalmente_efetivo(inseto, gelo-inseto)
-normalmente_efetivo(inseto, gelo-pedra)
-desvantagem(inseto, gelo-fantasma)
-normalmente_efetivo(inseto, gelo-dragao)
-vantagem(inseto, gelo-noturno)
-desvantagem(inseto, gelo-metalico)
-desvantagem(inseto, gelo-fada)
-desvantagem(inseto, lutador-normal)
-super_desvantagem(inseto, lutador-fogo)
-desvantagem(inseto, lutador-agua)
-desvantagem(inseto, lutador-eletrico)
-normalmente_efetivo(inseto, lutador-planta)
-desvantagem(inseto, lutador-gelo)
-desvantagem(inseto, lutador-veneno)
-desvantagem(inseto, lutador-terra)
-super_desvantagem(inseto, lutador-voador)
-normalmente_efetivo(inseto, lutador-psiquico)
-desvantagem(inseto, lutador-inseto)
-desvantagem(inseto, lutador-pedra)
-super_desvantagem(inseto, lutador-fantasma)
-desvantagem(inseto, lutador-dragao)
-normalmente_efetivo(inseto, lutador-noturno)
-super_desvantagem(inseto, lutador-metalico)
-super_desvantagem(inseto, lutador-fada)
-desvantagem(inseto, veneno-normal)
-super_desvantagem(inseto, veneno-fogo)
-desvantagem(inseto, veneno-agua)
-desvantagem(inseto, veneno-eletrico)
-normalmente_efetivo(inseto, veneno-planta)
-desvantagem(inseto, veneno-gelo)
-desvantagem(inseto, veneno-lutador)
-desvantagem(inseto, veneno-terra)
-super_desvantagem(inseto, veneno-voador)
-normalmente_efetivo(inseto, veneno-psiquico)
-desvantagem(inseto, veneno-inseto)
-desvantagem(inseto, veneno-pedra)
-super_desvantagem(inseto, veneno-fantasma)
-desvantagem(inseto, veneno-dragao)
-normalmente_efetivo(inseto, veneno-noturno)
-super_desvantagem(inseto, veneno-metalico)
-super_desvantagem(inseto, veneno-fada)
-normalmente_efetivo(inseto, terra-normal)
-desvantagem(inseto, terra-fogo)
-normalmente_efetivo(inseto, terra-agua)
-normalmente_efetivo(inseto, terra-eletrico)
-vantagem(inseto, terra-planta)
-normalmente_efetivo(inseto, terra-gelo)
-desvantagem(inseto, terra-lutador)
-desvantagem(inseto, terra-veneno)
-desvantagem(inseto, terra-voador)
-vantagem(inseto, terra-psiquico)
-normalmente_efetivo(inseto, terra-inseto)
-normalmente_efetivo(inseto, terra-pedra)
-desvantagem(inseto, terra-fantasma)
-normalmente_efetivo(inseto, terra-dragao)
-vantagem(inseto, terra-noturno)
-desvantagem(inseto, terra-metalico)
-desvantagem(inseto, terra-fada)
-desvantagem(inseto, voador-normal)
-super_desvantagem(inseto, voador-fogo)
-desvantagem(inseto, voador-agua)
-desvantagem(inseto, voador-eletrico)
-normalmente_efetivo(inseto, voador-planta)
-desvantagem(inseto, voador-gelo)
-super_desvantagem(inseto, voador-lutador)
-super_desvantagem(inseto, voador-veneno)
-desvantagem(inseto, voador-terra)
-normalmente_efetivo(inseto, voador-psiquico)
-desvantagem(inseto, voador-inseto)
-desvantagem(inseto, voador-pedra)
-super_desvantagem(inseto, voador-fantasma)
-desvantagem(inseto, voador-dragao)
-normalmente_efetivo(inseto, voador-noturno)
-super_desvantagem(inseto, voador-metalico)
-super_desvantagem(inseto, voador-fada)
-vantagem(inseto, psiquico-normal)
-normalmente_efetivo(inseto, psiquico-fogo)
-vantagem(inseto, psiquico-agua)
-vantagem(inseto, psiquico-eletrico)
-super_vantagem(inseto, psiquico-planta)
-vantagem(inseto, psiquico-gelo)
-normalmente_efetivo(inseto, psiquico-lutador)
-normalmente_efetivo(inseto, psiquico-veneno)
-vantagem(inseto, psiquico-terra)
-normalmente_efetivo(inseto, psiquico-voador)
-vantagem(inseto, psiquico-inseto)
-vantagem(inseto, psiquico-pedra)
-normalmente_efetivo(inseto, psiquico-fantasma)
-vantagem(inseto, psiquico-dragao)
-super_vantagem(inseto, psiquico-noturno)
-normalmente_efetivo(inseto, psiquico-metalico)
-normalmente_efetivo(inseto, psiquico-fada)
-normalmente_efetivo(inseto, inseto-normal)
-desvantagem(inseto, inseto-fogo)
-normalmente_efetivo(inseto, inseto-agua)
-normalmente_efetivo(inseto, inseto-eletrico)
-vantagem(inseto, inseto-planta)
-normalmente_efetivo(inseto, inseto-gelo)
-desvantagem(inseto, inseto-lutador)
-desvantagem(inseto, inseto-veneno)
-normalmente_efetivo(inseto, inseto-terra)
-desvantagem(inseto, inseto-voador)
-vantagem(inseto, inseto-psiquico)
-normalmente_efetivo(inseto, inseto-pedra)
-desvantagem(inseto, inseto-fantasma)
-normalmente_efetivo(inseto, inseto-dragao)
-vantagem(inseto, inseto-noturno)
-desvantagem(inseto, inseto-metalico)
-desvantagem(inseto, inseto-fada)
-normalmente_efetivo(inseto, pedra-normal)
-desvantagem(inseto, pedra-fogo)
-normalmente_efetivo(inseto, pedra-agua)
-normalmente_efetivo(inseto, pedra-eletrico)
-vantagem(inseto, pedra-planta)
-normalmente_efetivo(inseto, pedra-gelo)
-desvantagem(inseto, pedra-lutador)
-desvantagem(inseto, pedra-veneno)
-normalmente_efetivo(inseto, pedra-terra)
-desvantagem(inseto, pedra-voador)
-vantagem(inseto, pedra-psiquico)
-normalmente_efetivo(inseto, pedra-inseto)
-desvantagem(inseto, pedra-fantasma)
-normalmente_efetivo(inseto, pedra-dragao)
-vantagem(inseto, pedra-noturno)
-desvantagem(inseto, pedra-metalico)
-desvantagem(inseto, pedra-fada)
-desvantagem(inseto, fantasma-normal)
-super_desvantagem(inseto, fantasma-fogo)
-desvantagem(inseto, fantasma-agua)
-desvantagem(inseto, fantasma-eletrico)
-normalmente_efetivo(inseto, fantasma-planta)
-desvantagem(inseto, fantasma-gelo)
-super_desvantagem(inseto, fantasma-lutador)
-super_desvantagem(inseto, fantasma-veneno)
-desvantagem(inseto, fantasma-terra)
-super_desvantagem(inseto, fantasma-voador)
-normalmente_efetivo(inseto, fantasma-psiquico)
-desvantagem(inseto, fantasma-inseto)
-desvantagem(inseto, fantasma-pedra)
-desvantagem(inseto, fantasma-dragao)
-normalmente_efetivo(inseto, fantasma-noturno)
-super_desvantagem(inseto, fantasma-metalico)
-desvantagem(inseto, fantasma-fada)
-normalmente_efetivo(inseto, dragao-normal)
-desvantagem(inseto, dragao-fogo)
-normalmente_efetivo(inseto, dragao-agua)
-normalmente_efetivo(inseto, dragao-eletrico)
-vantagem(inseto, dragao-planta)
-normalmente_efetivo(inseto, dragao-gelo)
-desvantagem(inseto, dragao-lutador)
-desvantagem(inseto, dragao-veneno)
-normalmente_efetivo(inseto, dragao-terra)
-desvantagem(inseto, dragao-voador)
-vantagem(inseto, dragao-psiquico)
-normalmente_efetivo(inseto, dragao-inseto)
-normalmente_efetivo(inseto, dragao-pedra)
-desvantagem(inseto, dragao-fantasma)
-vantagem(inseto, dragao-noturno)
-desvantagem(inseto, dragao-metalico)
-desvantagem(inseto, dragao-fada)
-vantagem(inseto, noturno-normal)
-normalmente_efetivo(inseto, noturno-fogo)
-vantagem(inseto, noturno-agua)
-vantagem(inseto, noturno-eletrico)
-super_vantagem(inseto, noturno-planta)
-vantagem(inseto, noturno-gelo)
-normalmente_efetivo(inseto, noturno-lutador)
-normalmente_efetivo(inseto, noturno-veneno)
-vantagem(inseto, noturno-terra)
-normalmente_efetivo(inseto, noturno-voador)
-super_vantagem(inseto, noturno-psiquico)
-vantagem(inseto, noturno-inseto)
-vantagem(inseto, noturno-pedra)
-normalmente_efetivo(inseto, noturno-fantasma)
-vantagem(inseto, noturno-dragao)
-normalmente_efetivo(inseto, noturno-metalico)
-normalmente_efetivo(inseto, noturno-fada)
-desvantagem(inseto, metalico-normal)
-super_desvantagem(inseto, metalico-fogo)
-desvantagem(inseto, metalico-agua)
-desvantagem(inseto, metalico-eletrico)
-normalmente_efetivo(inseto, metalico-planta)
-desvantagem(inseto, metalico-gelo)
-super_desvantagem(inseto, metalico-lutador)
-super_desvantagem(inseto, metalico-veneno)
-desvantagem(inseto, metalico-terra)
-super_desvantagem(inseto, metalico-voador)
-normalmente_efetivo(inseto, metalico-psiquico)
-desvantagem(inseto, metalico-inseto)
-desvantagem(inseto, metalico-pedra)
-super_desvantagem(inseto, metalico-fantasma)
-desvantagem(inseto, metalico-dragao)
-normalmente_efetivo(inseto, metalico-noturno)
-super_desvantagem(inseto, metalico-fada)
-desvantagem(inseto, fada-normal)
-super_desvantagem(inseto, fada-fogo)
-desvantagem(inseto, fada-agua)
-desvantagem(inseto, fada-eletrico)
-normalmente_efetivo(inseto, fada-planta)
-desvantagem(inseto, fada-gelo)
-super_desvantagem(inseto, fada-lutador)
-super_desvantagem(inseto, fada-veneno)
-desvantagem(inseto, fada-terra)
-super_desvantagem(inseto, fada-voador)
-normalmente_efetivo(inseto, fada-psiquico)
-desvantagem(inseto, fada-inseto)
-desvantagem(inseto, fada-pedra)
-desvantagem(inseto, fada-fantasma)
-desvantagem(inseto, fada-dragao)
-normalmente_efetivo(inseto, fada-noturno)
-super_desvantagem(inseto, fada-metalico)
-
-/* Efetividade tipo pedra */
-normalmente_efetivo(pedra,normal)
-vantagem(pedra,fogo)
-normalmente_efetivo(pedra,agua)
-normalmente_efetivo(pedra,eletrico)
-normalmente_efetivo(pedra,planta)
-vantagem(pedra,gelo)
-desvantagem(pedra,lutador)
-normalmente_efetivo(pedra,veneno)
-desvantagem(pedra,terra)
-vantagem(pedra,voador)
-normalmente_efetivo(pedra,psiquico)
-vantagem(pedra,inseto)
-normalmente_efetivo(pedra,pedra)
-normalmente_efetivo(pedra,fantasma)
-normalmente_efetivo(pedra,dragao)
-normalmente_efetivo(pedra,noturno)
-desvantagem(pedra,metalico)
-normalmente_efetivo(pedra,fada)
-vantagem(pedra,normal-fogo)
-normalmente_efetivo(pedra, normal-agua)
-normalmente_efetivo(pedra, normal-eletrico)
-normalmente_efetivo(pedra, normal-planta)
-vantagem(pedra, normal-gelo)
-desvantagem(pedra, normal-lutador)
-normalmente_efetivo(pedra, normal-veneno)
-desvantagem(pedra, normal-terra)
-vantagem(pedra, normal-voador)
-normalmente_efetivo(pedra, normal-psiquico)
-vantagem(pedra, normal-inseto)
-normalmente_efetivo(pedra, normal-pedra)
-normalmente_efetivo(pedra, normal-fantasma)
-normalmente_efetivo(pedra, normal-dragao)
-normalmente_efetivo(pedra, normal-noturno)
-desvantagem(pedra, normal-metalico)
-normalmente_efetivo(pedra, normal-fada)
-vantagem(pedra, fogo-normal)
-vantagem(pedra, fogo-agua)
-vantagem(pedra, fogo-eletrico)
-vantagem(pedra, fogo-planta)
-super_vantagem(pedra, fogo-gelo)
-normalmente_efetivo(pedra, fogo-lutador)
-vantagem(pedra, fogo-veneno)
-normalmente_efetivo(pedra, fogo-terra)
-super_vantagem(pedra, fogo-voador)
-vantagem(pedra, fogo-psiquico)
-super_vantagem(pedra, fogo-inseto)
-vantagem(pedra, fogo-pedra)
-vantagem(pedra, fogo-fantasma)
-vantagem(pedra, fogo-dragao)
-vantagem(pedra, fogo-noturno)
-normalmente_efetivo(pedra, fogo-metalico)
-vantagem(pedra, fogo-fada)
-normalmente_efetivo(pedra, agua-normal)
-vantagem(pedra, agua-fogo)
-normalmente_efetivo(pedra, agua-eletrico)
-normalmente_efetivo(pedra, agua-planta)
-vantagem(pedra, agua-gelo)
-desvantagem(pedra, agua-lutador)
-normalmente_efetivo(pedra, agua-veneno)
-desvantagem(pedra, agua-terra)
-vantagem(pedra, agua-voador)
-normalmente_efetivo(pedra, agua-psiquico)
-vantagem(pedra, agua-inseto)
-normalmente_efetivo(pedra, agua-pedra)
-normalmente_efetivo(pedra, agua-fantasma)
-normalmente_efetivo(pedra, agua-dragao)
-normalmente_efetivo(pedra, agua-noturno)
-desvantagem(pedra, agua-metalico)
-normalmente_efetivo(pedra, agua-fada)
-normalmente_efetivo(pedra, eletrico-normal)
-vantagem(pedra, eletrico-fogo)
-normalmente_efetivo(pedra, eletrico-agua)
-normalmente_efetivo(pedra, eletrico-planta)
-vantagem(pedra, eletrico-gelo)
-desvantagem(pedra, eletrico-lutador)
-normalmente_efetivo(pedra, eletrico-veneno)
-desvantagem(pedra, eletrico-terra)
-vantagem(pedra, eletrico-voador)
-normalmente_efetivo(pedra, eletrico-psiquico)
-vantagem(pedra, eletrico-inseto)
-normalmente_efetivo(pedra, eletrico-pedra)
-normalmente_efetivo(pedra, eletrico-fantasma)
-normalmente_efetivo(pedra, eletrico-dragao)
-normalmente_efetivo(pedra, eletrico-noturno)
-desvantagem(pedra, eletrico-metalico)
-normalmente_efetivo(pedra, eletrico-fada)
-normalmente_efetivo(pedra, planta-normal)
-vantagem(pedra, planta-fogo)
-normalmente_efetivo(pedra, planta-agua)
-normalmente_efetivo(pedra, planta-eletrico)
-vantagem(pedra, planta-gelo)
-desvantagem(pedra, planta-lutador)
-normalmente_efetivo(pedra, planta-veneno)
-desvantagem(pedra, planta-terra)
-vantagem(pedra, planta-voador)
-normalmente_efetivo(pedra, planta-psiquico)
-vantagem(pedra, planta-inseto)
-normalmente_efetivo(pedra, planta-pedra)
-normalmente_efetivo(pedra, planta-fantasma)
-normalmente_efetivo(pedra, planta-dragao)
-normalmente_efetivo(pedra, planta-noturno)
-desvantagem(pedra, planta-metalico)
-normalmente_efetivo(pedra, planta-fada)
-vantagem(pedra, gelo-normal)
-super_vantagem(pedra, gelo-fogo)
-vantagem(pedra, gelo-agua)
-vantagem(pedra, gelo-eletrico)
-vantagem(pedra, gelo-planta)
-normalmente_efetivo(pedra, gelo-lutador)
-vantagem(pedra, gelo-veneno)
-normalmente_efetivo(pedra, gelo-terra)
-super_vantagem(pedra, gelo-voador)
-vantagem(pedra, gelo-psiquico)
-super_vantagem(pedra, gelo-inseto)
-vantagem(pedra, gelo-pedra)
-vantagem(pedra, gelo-fantasma)
-vantagem(pedra, gelo-dragao)
-vantagem(pedra, gelo-noturno)
-normalmente_efetivo(pedra, gelo-metalico)
-vantagem(pedra, gelo-fada)
-desvantagem(pedra, lutador-normal)
-normalmente_efetivo(pedra, lutador-fogo)
-desvantagem(pedra, lutador-agua)
-desvantagem(pedra, lutador-eletrico)
-desvantagem(pedra, lutador-planta)
-normalmente_efetivo(pedra, lutador-gelo)
-vantagem(pedra, lutador-veneno)
-super_desvantagem(pedra, lutador-terra)
-normalmente_efetivo(pedra, lutador-voador)
-desvantagem(pedra, lutador-psiquico)
-normalmente_efetivo(pedra, lutador-inseto)
-desvantagem(pedra, lutador-pedra)
-desvantagem(pedra, lutador-fantasma)
-desvantagem(pedra, lutador-dragao)
-desvantagem(pedra, lutador-noturno)
-super_desvantagem(pedra, lutador-metalico)
-desvantagem(pedra, lutador-fada)
-normalmente_efetivo(pedra, veneno-normal)
-vantagem(pedra, veneno-fogo)
-normalmente_efetivo(pedra, veneno-agua)
-normalmente_efetivo(pedra, veneno-eletrico)
-normalmente_efetivo(pedra, veneno-planta)
-vantagem(pedra, veneno-gelo)
-vantagem(pedra, veneno-lutador)
-desvantagem(pedra, veneno-terra)
-vantagem(pedra, veneno-voador)
-normalmente_efetivo(pedra, veneno-psiquico)
-vantagem(pedra, veneno-inseto)
-normalmente_efetivo(pedra, veneno-pedra)
-normalmente_efetivo(pedra, veneno-fantasma)
-normalmente_efetivo(pedra, veneno-dragao)
-normalmente_efetivo(pedra, veneno-noturno)
-desvantagem(pedra, veneno-metalico)
-normalmente_efetivo(pedra, veneno-fada)
-desvantagem(pedra, terra-normal)
-normalmente_efetivo(pedra, terra-fogo)
-desvantagem(pedra, terra-agua)
-desvantagem(pedra, terra-eletrico)
-desvantagem(pedra, terra-planta)
-normalmente_efetivo(pedra, terra-gelo)
-super_desvantagem(pedra, terra-lutador)
-desvantagem(pedra, terra-veneno)
-normalmente_efetivo(pedra, terra-voador)
-desvantagem(pedra, terra-psiquico)
-normalmente_efetivo(pedra, terra-inseto)
-desvantagem(pedra, terra-pedra)
-desvantagem(pedra, terra-fantasma)
-desvantagem(pedra, terra-dragao)
-desvantagem(pedra, terra-noturno)
-super_desvantagem(pedra, terra-metalico)
-desvantagem(pedra, terra-fada)
-vantagem(pedra, voador-normal)
-super_vantagem(pedra, voador-fogo)
-vantagem(pedra, voador-agua)
-vantagem(pedra, voador-eletrico)
-vantagem(pedra, voador-planta)
-super_vantagem(pedra, voador-gelo)
-normalmente_efetivo(pedra, voador-lutador)
-vantagem(pedra, voador-veneno)
-normalmente_efetivo(pedra, voador-terra)
-vantagem(pedra, voador-psiquico)
-super_vantagem(pedra, voador-inseto)
-vantagem(pedra, voador-pedra)
-vantagem(pedra, voador-fantasma)
-vantagem(pedra, voador-dragao)
-vantagem(pedra, voador-noturno)
-normalmente_efetivo(pedra, voador-metalico)
-vantagem(pedra, voador-fada)
-normalmente_efetivo(pedra, psiquico-normal)
-vantagem(pedra, psiquico-fogo)
-normalmente_efetivo(pedra, psiquico-agua)
-normalmente_efetivo(pedra, psiquico-eletrico)
-normalmente_efetivo(pedra, psiquico-planta)
-vantagem(pedra, psiquico-gelo)
-desvantagem(pedra, psiquico-lutador)
-normalmente_efetivo(pedra, psiquico-veneno)
-desvantagem(pedra, psiquico-terra)
-vantagem(pedra, psiquico-voador)
-vantagem(pedra, psiquico-inseto)
-normalmente_efetivo(pedra, psiquico-pedra)
-normalmente_efetivo(pedra, psiquico-fantasma)
-normalmente_efetivo(pedra, psiquico-dragao)
-normalmente_efetivo(pedra, psiquico-noturno)
-desvantagem(pedra, psiquico-metalico)
-normalmente_efetivo(pedra, psiquico-fada)
-vantagem(pedra, inseto-normal)
-super_vantagem(pedra, inseto-fogo)
-vantagem(pedra, inseto-agua)
-vantagem(pedra, inseto-eletrico)
-vantagem(pedra, inseto-planta)
-super_vantagem(pedra, inseto-gelo)
-normalmente_efetivo(pedra, inseto-lutador)
-vantagem(pedra, inseto-veneno)
-normalmente_efetivo(pedra, inseto-terra)
-super_vantagem(pedra, inseto-voador)
-vantagem(pedra, inseto-psiquico)
-vantagem(pedra, inseto-pedra)
-vantagem(pedra, inseto-fantasma)
-vantagem(pedra, inseto-dragao)
-vantagem(pedra, inseto-noturno)
-normalmente_efetivo(pedra, inseto-metalico)
-vantagem(pedra, inseto-fada)
-normalmente_efetivo(pedra, pedra-normal)
-vantagem(pedra, pedra-fogo)
-normalmente_efetivo(pedra, pedra-agua)
-normalmente_efetivo(pedra, pedra-eletrico)
-normalmente_efetivo(pedra, pedra-planta)
-vantagem(pedra, pedra-gelo)
-desvantagem(pedra, pedra-lutador)
-normalmente_efetivo(pedra, pedra-veneno)
-desvantagem(pedra, pedra-terra)
-vantagem(pedra, pedra-voador)
-normalmente_efetivo(pedra, pedra-psiquico)
-vantagem(pedra, pedra-inseto)
-normalmente_efetivo(pedra, pedra-fantasma)
-normalmente_efetivo(pedra, pedra-dragao)
-normalmente_efetivo(pedra, pedra-noturno)
-desvantagem(pedra, pedra-metalico)
-normalmente_efetivo(pedra, pedra-fada)
-normalmente_efetivo(pedra, fantasma-normal)
-vantagem(pedra, fantasma-fogo)
-normalmente_efetivo(pedra, fantasma-agua)
-normalmente_efetivo(pedra, fantasma-eletrico)
-normalmente_efetivo(pedra, fantasma-planta)
-vantagem(pedra, fantasma-gelo)
-desvantagem(pedra, fantasma-lutador)
-normalmente_efetivo(pedra, fantasma-veneno)
-desvantagem(pedra, fantasma-terra)
-vantagem(pedra, fantasma-voador)
-normalmente_efetivo(pedra, fantasma-psiquico)
-vantagem(pedra, fantasma-inseto)
-normalmente_efetivo(pedra, fantasma-pedra)
-normalmente_efetivo(pedra, fantasma-dragao)
-normalmente_efetivo(pedra, fantasma-noturno)
-desvantagem(pedra, fantasma-metalico)
-normalmente_efetivo(pedra, fantasma-fada)
-normalmente_efetivo(pedra, dragao-normal)
-vantagem(pedra, dragao-fogo)
-normalmente_efetivo(pedra, dragao-agua)
-normalmente_efetivo(pedra, dragao-eletrico)
-normalmente_efetivo(pedra, dragao-planta)
-vantagem(pedra, dragao-gelo)
-desvantagem(pedra, dragao-lutador)
-normalmente_efetivo(pedra, dragao-veneno)
-desvantagem(pedra, dragao-terra)
-vantagem(pedra, dragao-voador)
-normalmente_efetivo(pedra, dragao-psiquico)
-vantagem(pedra, dragao-inseto)
-normalmente_efetivo(pedra, dragao-pedra)
-normalmente_efetivo(pedra, dragao-fantasma)
-normalmente_efetivo(pedra, dragao-noturno)
-desvantagem(pedra, dragao-metalico)
-normalmente_efetivo(pedra, dragao-fada)
-normalmente_efetivo(pedra, noturno-normal)
-vantagem(pedra, noturno-fogo)
-normalmente_efetivo(pedra, noturno-agua)
-normalmente_efetivo(pedra, noturno-eletrico)
-normalmente_efetivo(pedra, noturno-planta)
-vantagem(pedra, noturno-gelo)
-desvantagem(pedra, noturno-lutador)
-normalmente_efetivo(pedra, noturno-veneno)
-desvantagem(pedra, noturno-terra)
-vantagem(pedra, noturno-voador)
-normalmente_efetivo(pedra, noturno-psiquico)
-vantagem(pedra, noturno-inseto)
-normalmente_efetivo(pedra, noturno-pedra)
-normalmente_efetivo(pedra, noturno-fantasma)
-normalmente_efetivo(pedra, noturno-dragao)
-desvantagem(pedra, noturno-metalico)
-normalmente_efetivo(pedra, noturno-fada)
-desvantagem(pedra, metalico-normal)
-normalmente_efetivo(pedra, metalico-fogo)
-desvantagem(pedra, metalico-agua)
-desvantagem(pedra, metalico-eletrico)
-desvantagem(pedra, metalico-planta)
-normalmente_efetivo(pedra, metalico-gelo)
-super_desvantagem(pedra, metalico-lutador)
-desvantagem(pedra, metalico-veneno)
-super_desvantagem(pedra, metalico-terra)
-normalmente_efetivo(pedra, metalico-voador)
-desvantagem(pedra, metalico-psiquico)
-normalmente_efetivo(pedra, metalico-inseto)
-desvantagem(pedra, metalico-pedra)
-desvantagem(pedra, metalico-fantasma)
-desvantagem(pedra, metalico-dragao)
-desvantagem(pedra, metalico-noturno)
-desvantagem(pedra, metalico-fada)
-normalmente_efetivo(pedra, fada-normal)
-vantagem(pedra, fada-fogo)
-normalmente_efetivo(pedra, fada-agua)
-normalmente_efetivo(pedra, fada-eletrico)
-normalmente_efetivo(pedra, fada-planta)
-vantagem(pedra, fada-gelo)
-desvantagem(pedra, fada-lutador)
-normalmente_efetivo(pedra, fada-veneno)
-desvantagem(pedra, fada-terra)
-vantagem(pedra, fada-voador)
-normalmente_efetivo(pedra, fada-psiquico)
-vantagem(pedra, fada-inseto)
-normalmente_efetivo(pedra, fada-pedra)
-normalmente_efetivo(pedra, fada-fantasma)
-normalmente_efetivo(pedra, fada-dragao)
-normalmente_efetivo(pedra, fada-noturno)
-desvantagem(pedra, fada-metalico)
-
-/* Efetividade tipo fantasma */
-dano_zero(fantasma,normal)
-normalmente_efetivo(fantasma,fogo)
-normalmente_efetivo(fantasma,agua)
-normalmente_efetivo(fantasma,eletrico)
-normalmente_efetivo(fantasma,planta)
-normalmente_efetivo(fantasma,gelo)
-normalmente_efetivo(fantasma,lutador)
-normalmente_efetivo(fantasma,veneno)
-normalmente_efetivo(fantasma,terra)
-normalmente_efetivo(fantasma,voador)
-vantagem(fantasma,psiquico)
-normalmente_efetivo(fantasma,inseto)
-normalmente_efetivo(fantasma,pedra)
-vantagem(fantasma,fantasma)
-normalmente_efetivo(fantasma,dragao)
-desvantagem(fantasma,noturno)
-normalmente_efetivo(fantasma,metalico)
-normalmente_efetivo(fantasma,fada)
-dano_zero(fantasma,normal-fogo)
-dano_zero(fantasma, normal-agua)
-dano_zero(fantasma, normal-eletrico)
-dano_zero(fantasma, normal-planta)
-dano_zero(fantasma, normal-gelo)
-dano_zero(fantasma, normal-lutador)
-dano_zero(fantasma, normal-veneno)
-dano_zero(fantasma, normal-terra)
-dano_zero(fantasma, normal-voador)
-dano_zero(fantasma, normal-psiquico)
-dano_zero(fantasma, normal-inseto)
-dano_zero(fantasma, normal-pedra)
-dano_zero(fantasma, normal-fantasma)
-dano_zero(fantasma, normal-dragao)
-dano_zero(fantasma, normal-noturno)
-dano_zero(fantasma, normal-metalico)
-dano_zero(fantasma, normal-fada)
-dano_zero(fantasma, fogo-normal)
-normalmente_efetivo(fantasma, fogo-agua)
-normalmente_efetivo(fantasma, fogo-eletrico)
-normalmente_efetivo(fantasma, fogo-planta)
-normalmente_efetivo(fantasma, fogo-gelo)
-normalmente_efetivo(fantasma, fogo-lutador)
-normalmente_efetivo(fantasma, fogo-veneno)
-normalmente_efetivo(fantasma, fogo-terra)
-normalmente_efetivo(fantasma, fogo-voador)
-vantagem(fantasma, fogo-psiquico)
-normalmente_efetivo(fantasma, fogo-inseto)
-normalmente_efetivo(fantasma, fogo-pedra)
-vantagem(fantasma, fogo-fantasma)
-normalmente_efetivo(fantasma, fogo-dragao)
-desvantagem(fantasma, fogo-noturno)
-normalmente_efetivo(fantasma, fogo-metalico)
-normalmente_efetivo(fantasma, fogo-fada)
-dano_zero(fantasma, agua-normal)
-normalmente_efetivo(fantasma, agua-fogo)
-normalmente_efetivo(fantasma, agua-eletrico)
-normalmente_efetivo(fantasma, agua-planta)
-normalmente_efetivo(fantasma, agua-gelo)
-normalmente_efetivo(fantasma, agua-lutador)
-normalmente_efetivo(fantasma, agua-veneno)
-normalmente_efetivo(fantasma, agua-terra)
-normalmente_efetivo(fantasma, agua-voador)
-vantagem(fantasma, agua-psiquico)
-normalmente_efetivo(fantasma, agua-inseto)
-normalmente_efetivo(fantasma, agua-pedra)
-vantagem(fantasma, agua-fantasma)
-normalmente_efetivo(fantasma, agua-dragao)
-desvantagem(fantasma, agua-noturno)
-normalmente_efetivo(fantasma, agua-metalico)
-normalmente_efetivo(fantasma, agua-fada)
-dano_zero(fantasma, eletrico-normal)
-normalmente_efetivo(fantasma, eletrico-fogo)
-normalmente_efetivo(fantasma, eletrico-agua)
-normalmente_efetivo(fantasma, eletrico-planta)
-normalmente_efetivo(fantasma, eletrico-gelo)
-normalmente_efetivo(fantasma, eletrico-lutador)
-normalmente_efetivo(fantasma, eletrico-veneno)
-normalmente_efetivo(fantasma, eletrico-terra)
-normalmente_efetivo(fantasma, eletrico-voador)
-vantagem(fantasma, eletrico-psiquico)
-normalmente_efetivo(fantasma, eletrico-inseto)
-normalmente_efetivo(fantasma, eletrico-pedra)
-vantagem(fantasma, eletrico-fantasma)
-normalmente_efetivo(fantasma, eletrico-dragao)
-desvantagem(fantasma, eletrico-noturno)
-normalmente_efetivo(fantasma, eletrico-metalico)
-normalmente_efetivo(fantasma, eletrico-fada)
-dano_zero(fantasma, planta-normal)
-normalmente_efetivo(fantasma, planta-fogo)
-normalmente_efetivo(fantasma, planta-agua)
-normalmente_efetivo(fantasma, planta-eletrico)
-normalmente_efetivo(fantasma, planta-gelo)
-normalmente_efetivo(fantasma, planta-lutador)
-normalmente_efetivo(fantasma, planta-veneno)
-normalmente_efetivo(fantasma, planta-terra)
-normalmente_efetivo(fantasma, planta-voador)
-vantagem(fantasma, planta-psiquico)
-normalmente_efetivo(fantasma, planta-inseto)
-normalmente_efetivo(fantasma, planta-pedra)
-vantagem(fantasma, planta-fantasma)
-normalmente_efetivo(fantasma, planta-dragao)
-desvantagem(fantasma, planta-noturno)
-normalmente_efetivo(fantasma, planta-metalico)
-normalmente_efetivo(fantasma, planta-fada)
-dano_zero(fantasma, gelo-normal)
-normalmente_efetivo(fantasma, gelo-fogo)
-normalmente_efetivo(fantasma, gelo-agua)
-normalmente_efetivo(fantasma, gelo-eletrico)
-normalmente_efetivo(fantasma, gelo-planta)
-normalmente_efetivo(fantasma, gelo-lutador)
-normalmente_efetivo(fantasma, gelo-veneno)
-normalmente_efetivo(fantasma, gelo-terra)
-normalmente_efetivo(fantasma, gelo-voador)
-vantagem(fantasma, gelo-psiquico)
-normalmente_efetivo(fantasma, gelo-inseto)
-normalmente_efetivo(fantasma, gelo-pedra)
-vantagem(fantasma, gelo-fantasma)
-normalmente_efetivo(fantasma, gelo-dragao)
-desvantagem(fantasma, gelo-noturno)
-normalmente_efetivo(fantasma, gelo-metalico)
-normalmente_efetivo(fantasma, gelo-fada)
-dano_zero(fantasma, lutador-normal)
-normalmente_efetivo(fantasma, lutador-fogo)
-normalmente_efetivo(fantasma, lutador-agua)
-normalmente_efetivo(fantasma, lutador-eletrico)
-normalmente_efetivo(fantasma, lutador-planta)
-normalmente_efetivo(fantasma, lutador-gelo)
-normalmente_efetivo(fantasma, lutador-veneno)
-normalmente_efetivo(fantasma, lutador-terra)
-normalmente_efetivo(fantasma, lutador-voador)
-vantagem(fantasma, lutador-psiquico)
-normalmente_efetivo(fantasma, lutador-inseto)
-normalmente_efetivo(fantasma, lutador-pedra)
-vantagem(fantasma, lutador-fantasma)
-normalmente_efetivo(fantasma, lutador-dragao)
-desvantagem(fantasma, lutador-noturno)
-normalmente_efetivo(fantasma, lutador-metalico)
-normalmente_efetivo(fantasma, lutador-fada)
-dano_zero(fantasma, veneno-normal)
-normalmente_efetivo(fantasma, veneno-fogo)
-normalmente_efetivo(fantasma, veneno-agua)
-normalmente_efetivo(fantasma, veneno-eletrico)
-normalmente_efetivo(fantasma, veneno-planta)
-normalmente_efetivo(fantasma, veneno-gelo)
-normalmente_efetivo(fantasma, veneno-lutador)
-normalmente_efetivo(fantasma, veneno-terra)
-normalmente_efetivo(fantasma, veneno-voador)
-vantagem(fantasma, veneno-psiquico)
-normalmente_efetivo(fantasma, veneno-inseto)
-normalmente_efetivo(fantasma, veneno-pedra)
-vantagem(fantasma, veneno-fantasma)
-normalmente_efetivo(fantasma, veneno-dragao)
-desvantagem(fantasma, veneno-noturno)
-normalmente_efetivo(fantasma, veneno-metalico)
-normalmente_efetivo(fantasma, veneno-fada)
-dano_zero(fantasma, terra-normal)
-normalmente_efetivo(fantasma, terra-fogo)
-normalmente_efetivo(fantasma, terra-agua)
-normalmente_efetivo(fantasma, terra-eletrico)
-normalmente_efetivo(fantasma, terra-planta)
-normalmente_efetivo(fantasma, terra-gelo)
-normalmente_efetivo(fantasma, terra-lutador)
-normalmente_efetivo(fantasma, terra-veneno)
-normalmente_efetivo(fantasma, terra-voador)
-vantagem(fantasma, terra-psiquico)
-normalmente_efetivo(fantasma, terra-inseto)
-normalmente_efetivo(fantasma, terra-pedra)
-vantagem(fantasma, terra-fantasma)
-normalmente_efetivo(fantasma, terra-dragao)
-desvantagem(fantasma, terra-noturno)
-normalmente_efetivo(fantasma, terra-metalico)
-normalmente_efetivo(fantasma, terra-fada)
-dano_zero(fantasma, voador-normal)
-normalmente_efetivo(fantasma, voador-fogo)
-normalmente_efetivo(fantasma, voador-agua)
-normalmente_efetivo(fantasma, voador-eletrico)
-normalmente_efetivo(fantasma, voador-planta)
-normalmente_efetivo(fantasma, voador-gelo)
-normalmente_efetivo(fantasma, voador-lutador)
-normalmente_efetivo(fantasma, voador-veneno)
-normalmente_efetivo(fantasma, voador-terra)
-vantagem(fantasma, voador-psiquico)
-normalmente_efetivo(fantasma, voador-inseto)
-normalmente_efetivo(fantasma, voador-pedra)
-vantagem(fantasma, voador-fantasma)
-normalmente_efetivo(fantasma, voador-dragao)
-desvantagem(fantasma, voador-noturno)
-normalmente_efetivo(fantasma, voador-metalico)
-normalmente_efetivo(fantasma, voador-fada)
-dano_zero(fantasma, psiquico-normal)
-vantagem(fantasma, psiquico-fogo)
-vantagem(fantasma, psiquico-agua)
-vantagem(fantasma, psiquico-eletrico)
-vantagem(fantasma, psiquico-planta)
-vantagem(fantasma, psiquico-gelo)
-vantagem(fantasma, psiquico-lutador)
-vantagem(fantasma, psiquico-veneno)
-vantagem(fantasma, psiquico-terra)
-vantagem(fantasma, psiquico-voador)
-vantagem(fantasma, psiquico-inseto)
-vantagem(fantasma, psiquico-pedra)
-super_vantagem(fantasma, psiquico-fantasma)
-vantagem(fantasma, psiquico-dragao)
-normalmente_efetivo(fantasma, psiquico-noturno)
-vantagem(fantasma, psiquico-metalico)
-vantagem(fantasma, psiquico-fada)
-dano_zero(fantasma, inseto-normal)
-normalmente_efetivo(fantasma, inseto-fogo)
-normalmente_efetivo(fantasma, inseto-agua)
-normalmente_efetivo(fantasma, inseto-eletrico)
-normalmente_efetivo(fantasma, inseto-planta)
-normalmente_efetivo(fantasma, inseto-gelo)
-normalmente_efetivo(fantasma, inseto-lutador)
-normalmente_efetivo(fantasma, inseto-veneno)
-normalmente_efetivo(fantasma, inseto-terra)
-normalmente_efetivo(fantasma, inseto-voador)
-vantagem(fantasma, inseto-psiquico)
-normalmente_efetivo(fantasma, inseto-pedra)
-vantagem(fantasma, inseto-fantasma)
-normalmente_efetivo(fantasma, inseto-dragao)
-desvantagem(fantasma, inseto-noturno)
-normalmente_efetivo(fantasma, inseto-metalico)
-normalmente_efetivo(fantasma, inseto-fada)
-dano_zero(fantasma, pedra-normal)
-normalmente_efetivo(fantasma, pedra-fogo)
-normalmente_efetivo(fantasma, pedra-agua)
-normalmente_efetivo(fantasma, pedra-eletrico)
-normalmente_efetivo(fantasma, pedra-planta)
-normalmente_efetivo(fantasma, pedra-gelo)
-normalmente_efetivo(fantasma, pedra-lutador)
-normalmente_efetivo(fantasma, pedra-veneno)
-normalmente_efetivo(fantasma, pedra-terra)
-normalmente_efetivo(fantasma, pedra-voador)
-vantagem(fantasma, pedra-psiquico)
-normalmente_efetivo(fantasma, pedra-inseto)
-vantagem(fantasma, pedra-fantasma)
-normalmente_efetivo(fantasma, pedra-dragao)
-desvantagem(fantasma, pedra-noturno)
-normalmente_efetivo(fantasma, pedra-metalico)
-normalmente_efetivo(fantasma, pedra-fada)
-dano_zero(fantasma, fantasma-normal)
-vantagem(fantasma, fantasma-fogo)
-vantagem(fantasma, fantasma-agua)
-vantagem(fantasma, fantasma-eletrico)
-vantagem(fantasma, fantasma-planta)
-vantagem(fantasma, fantasma-gelo)
-vantagem(fantasma, fantasma-lutador)
-vantagem(fantasma, fantasma-veneno)
-vantagem(fantasma, fantasma-terra)
-vantagem(fantasma, fantasma-voador)
-super_vantagem(fantasma, fantasma-psiquico)
-vantagem(fantasma, fantasma-inseto)
-vantagem(fantasma, fantasma-pedra)
-vantagem(fantasma, fantasma-dragao)
-normalmente_efetivo(fantasma, fantasma-noturno)
-vantagem(fantasma, fantasma-metalico)
-vantagem(fantasma, fantasma-fada)
-dano_zero(fantasma, dragao-normal)
-normalmente_efetivo(fantasma, dragao-fogo)
-normalmente_efetivo(fantasma, dragao-agua)
-normalmente_efetivo(fantasma, dragao-eletrico)
-normalmente_efetivo(fantasma, dragao-planta)
-normalmente_efetivo(fantasma, dragao-gelo)
-normalmente_efetivo(fantasma, dragao-lutador)
-normalmente_efetivo(fantasma, dragao-veneno)
-normalmente_efetivo(fantasma, dragao-terra)
-normalmente_efetivo(fantasma, dragao-voador)
-vantagem(fantasma, dragao-psiquico)
-normalmente_efetivo(fantasma, dragao-inseto)
-normalmente_efetivo(fantasma, dragao-pedra)
-vantagem(fantasma, dragao-fantasma)
-desvantagem(fantasma, dragao-noturno)
-normalmente_efetivo(fantasma, dragao-metalico)
-normalmente_efetivo(fantasma, dragao-fada)
-dano_zero(fantasma, noturno-normal)
-desvantagem(fantasma, noturno-fogo)
-desvantagem(fantasma, noturno-agua)
-desvantagem(fantasma, noturno-eletrico)
-desvantagem(fantasma, noturno-planta)
-desvantagem(fantasma, noturno-gelo)
-desvantagem(fantasma, noturno-lutador)
-desvantagem(fantasma, noturno-veneno)
-desvantagem(fantasma, noturno-terra)
-desvantagem(fantasma, noturno-voador)
-normalmente_efetivo(fantasma, noturno-psiquico)
-desvantagem(fantasma, noturno-inseto)
-desvantagem(fantasma, noturno-pedra)
-normalmente_efetivo(fantasma, noturno-fantasma)
-desvantagem(fantasma, noturno-dragao)
-desvantagem(fantasma, noturno-metalico)
-desvantagem(fantasma, noturno-fada)
-dano_zero(fantasma, metalico-normal)
-normalmente_efetivo(fantasma, metalico-fogo)
-normalmente_efetivo(fantasma, metalico-agua)
-normalmente_efetivo(fantasma, metalico-eletrico)
-normalmente_efetivo(fantasma, metalico-planta)
-normalmente_efetivo(fantasma, metalico-gelo)
-normalmente_efetivo(fantasma, metalico-lutador)
-normalmente_efetivo(fantasma, metalico-veneno)
-normalmente_efetivo(fantasma, metalico-terra)
-normalmente_efetivo(fantasma, metalico-voador)
-vantagem(fantasma, metalico-psiquico)
-normalmente_efetivo(fantasma, metalico-inseto)
-normalmente_efetivo(fantasma, metalico-pedra)
-vantagem(fantasma, metalico-fantasma)
-normalmente_efetivo(fantasma, metalico-dragao)
-desvantagem(fantasma, metalico-noturno)
-normalmente_efetivo(fantasma, metalico-fada)
-dano_zero(fantasma, fada-normal)
-normalmente_efetivo(fantasma, fada-fogo)
-normalmente_efetivo(fantasma, fada-agua)
-normalmente_efetivo(fantasma, fada-eletrico)
-normalmente_efetivo(fantasma, fada-planta)
-normalmente_efetivo(fantasma, fada-gelo)
-normalmente_efetivo(fantasma, fada-lutador)
-normalmente_efetivo(fantasma, fada-veneno)
-normalmente_efetivo(fantasma, fada-terra)
-normalmente_efetivo(fantasma, fada-voador)
-vantagem(fantasma, fada-psiquico)
-normalmente_efetivo(fantasma, fada-inseto)
-normalmente_efetivo(fantasma, fada-pedra)
-vantagem(fantasma, fada-fantasma)
-normalmente_efetivo(fantasma, fada-dragao)
-desvantagem(fantasma, fada-noturno)
-normalmente_efetivo(fantasma, fada-metalico)
-
-/* Efetividade tipo dragao */
-normalmente_efetivo(dragao,normal)
-normalmente_efetivo(dragao,fogo)
-normalmente_efetivo(dragao,agua)
-normalmente_efetivo(dragao,eletrico)
-normalmente_efetivo(dragao,planta)
-normalmente_efetivo(dragao,gelo)
-normalmente_efetivo(dragao,lutador)
-normalmente_efetivo(dragao,veneno)
-normalmente_efetivo(dragao,terra)
-normalmente_efetivo(dragao,voador)
-normalmente_efetivo(dragao,psiquico)
-normalmente_efetivo(dragao,inseto)
-normalmente_efetivo(dragao,pedra)
-normalmente_efetivo(dragao,fantasma)
-vantagem(dragao,dragao)
-normalmente_efetivo(dragao,noturno)
-desvantagem(dragao,metalico)
-dano_zero(dragao,fada)
-normalmente_efetivo(dragao,normal-fogo)
-normalmente_efetivo(dragao, normal-agua)
-normalmente_efetivo(dragao, normal-eletrico)
-normalmente_efetivo(dragao, normal-planta)
-normalmente_efetivo(dragao, normal-gelo)
-normalmente_efetivo(dragao, normal-lutador)
-normalmente_efetivo(dragao, normal-veneno)
-normalmente_efetivo(dragao, normal-terra)
-normalmente_efetivo(dragao, normal-voador)
-normalmente_efetivo(dragao, normal-psiquico)
-normalmente_efetivo(dragao, normal-inseto)
-normalmente_efetivo(dragao, normal-pedra)
-normalmente_efetivo(dragao, normal-fantasma)
-vantagem(dragao, normal-dragao)
-normalmente_efetivo(dragao, normal-noturno)
-desvantagem(dragao, normal-metalico)
-dano_zero(dragao, normal-fada)
-normalmente_efetivo(dragao, fogo-normal)
-normalmente_efetivo(dragao, fogo-agua)
-normalmente_efetivo(dragao, fogo-eletrico)
-normalmente_efetivo(dragao, fogo-planta)
-normalmente_efetivo(dragao, fogo-gelo)
-normalmente_efetivo(dragao, fogo-lutador)
-normalmente_efetivo(dragao, fogo-veneno)
-normalmente_efetivo(dragao, fogo-terra)
-normalmente_efetivo(dragao, fogo-voador)
-normalmente_efetivo(dragao, fogo-psiquico)
-normalmente_efetivo(dragao, fogo-inseto)
-normalmente_efetivo(dragao, fogo-pedra)
-normalmente_efetivo(dragao, fogo-fantasma)
-vantagem(dragao, fogo-dragao)
-normalmente_efetivo(dragao, fogo-noturno)
-desvantagem(dragao, fogo-metalico)
-dano_zero(dragao, fogo-fada)
-normalmente_efetivo(dragao, agua-normal)
-normalmente_efetivo(dragao, agua-fogo)
-normalmente_efetivo(dragao, agua-eletrico)
-normalmente_efetivo(dragao, agua-planta)
-normalmente_efetivo(dragao, agua-gelo)
-normalmente_efetivo(dragao, agua-lutador)
-normalmente_efetivo(dragao, agua-veneno)
-normalmente_efetivo(dragao, agua-terra)
-normalmente_efetivo(dragao, agua-voador)
-normalmente_efetivo(dragao, agua-psiquico)
-normalmente_efetivo(dragao, agua-inseto)
-normalmente_efetivo(dragao, agua-pedra)
-normalmente_efetivo(dragao, agua-fantasma)
-vantagem(dragao, agua-dragao)
-normalmente_efetivo(dragao, agua-noturno)
-desvantagem(dragao, agua-metalico)
-dano_zero(dragao, agua-fada)
-normalmente_efetivo(dragao, eletrico-normal)
-normalmente_efetivo(dragao, eletrico-fogo)
-normalmente_efetivo(dragao, eletrico-agua)
-normalmente_efetivo(dragao, eletrico-planta)
-normalmente_efetivo(dragao, eletrico-gelo)
-normalmente_efetivo(dragao, eletrico-lutador)
-normalmente_efetivo(dragao, eletrico-veneno)
-normalmente_efetivo(dragao, eletrico-terra)
-normalmente_efetivo(dragao, eletrico-voador)
-normalmente_efetivo(dragao, eletrico-psiquico)
-normalmente_efetivo(dragao, eletrico-inseto)
-normalmente_efetivo(dragao, eletrico-pedra)
-normalmente_efetivo(dragao, eletrico-fantasma)
-vantagem(dragao, eletrico-dragao)
-normalmente_efetivo(dragao, eletrico-noturno)
-desvantagem(dragao, eletrico-metalico)
-dano_zero(dragao, eletrico-fada)
-normalmente_efetivo(dragao, planta-normal)
-normalmente_efetivo(dragao, planta-fogo)
-normalmente_efetivo(dragao, planta-agua)
-normalmente_efetivo(dragao, planta-eletrico)
-normalmente_efetivo(dragao, planta-gelo)
-normalmente_efetivo(dragao, planta-lutador)
-normalmente_efetivo(dragao, planta-veneno)
-normalmente_efetivo(dragao, planta-terra)
-normalmente_efetivo(dragao, planta-voador)
-normalmente_efetivo(dragao, planta-psiquico)
-normalmente_efetivo(dragao, planta-inseto)
-normalmente_efetivo(dragao, planta-pedra)
-normalmente_efetivo(dragao, planta-fantasma)
-vantagem(dragao, planta-dragao)
-normalmente_efetivo(dragao, planta-noturno)
-desvantagem(dragao, planta-metalico)
-dano_zero(dragao, planta-fada)
-normalmente_efetivo(dragao, gelo-normal)
-normalmente_efetivo(dragao, gelo-fogo)
-normalmente_efetivo(dragao, gelo-agua)
-normalmente_efetivo(dragao, gelo-eletrico)
-normalmente_efetivo(dragao, gelo-planta)
-normalmente_efetivo(dragao, gelo-lutador)
-normalmente_efetivo(dragao, gelo-veneno)
-normalmente_efetivo(dragao, gelo-terra)
-normalmente_efetivo(dragao, gelo-voador)
-normalmente_efetivo(dragao, gelo-psiquico)
-normalmente_efetivo(dragao, gelo-inseto)
-normalmente_efetivo(dragao, gelo-pedra)
-normalmente_efetivo(dragao, gelo-fantasma)
-vantagem(dragao, gelo-dragao)
-normalmente_efetivo(dragao, gelo-noturno)
-desvantagem(dragao, gelo-metalico)
-dano_zero(dragao, gelo-fada)
-normalmente_efetivo(dragao, lutador-normal)
-normalmente_efetivo(dragao, lutador-fogo)
-normalmente_efetivo(dragao, lutador-agua)
-normalmente_efetivo(dragao, lutador-eletrico)
-normalmente_efetivo(dragao, lutador-planta)
-normalmente_efetivo(dragao, lutador-gelo)
-normalmente_efetivo(dragao, lutador-veneno)
-normalmente_efetivo(dragao, lutador-terra)
-normalmente_efetivo(dragao, lutador-voador)
-normalmente_efetivo(dragao, lutador-psiquico)
-normalmente_efetivo(dragao, lutador-inseto)
-normalmente_efetivo(dragao, lutador-pedra)
-normalmente_efetivo(dragao, lutador-fantasma)
-vantagem(dragao, lutador-dragao)
-normalmente_efetivo(dragao, lutador-noturno)
-desvantagem(dragao, lutador-metalico)
-dano_zero(dragao, lutador-fada)
-normalmente_efetivo(dragao, veneno-normal)
-normalmente_efetivo(dragao, veneno-fogo)
-normalmente_efetivo(dragao, veneno-agua)
-normalmente_efetivo(dragao, veneno-eletrico)
-normalmente_efetivo(dragao, veneno-planta)
-normalmente_efetivo(dragao, veneno-gelo)
-normalmente_efetivo(dragao, veneno-lutador)
-normalmente_efetivo(dragao, veneno-terra)
-normalmente_efetivo(dragao, veneno-voador)
-normalmente_efetivo(dragao, veneno-psiquico)
-normalmente_efetivo(dragao, veneno-inseto)
-normalmente_efetivo(dragao, veneno-pedra)
-normalmente_efetivo(dragao, veneno-fantasma)
-vantagem(dragao, veneno-dragao)
-normalmente_efetivo(dragao, veneno-noturno)
-desvantagem(dragao, veneno-metalico)
-dano_zero(dragao, veneno-fada)
-normalmente_efetivo(dragao, terra-normal)
-normalmente_efetivo(dragao, terra-fogo)
-normalmente_efetivo(dragao, terra-agua)
-normalmente_efetivo(dragao, terra-eletrico)
-normalmente_efetivo(dragao, terra-planta)
-normalmente_efetivo(dragao, terra-gelo)
-normalmente_efetivo(dragao, terra-lutador)
-normalmente_efetivo(dragao, terra-veneno)
-normalmente_efetivo(dragao, terra-voador)
-normalmente_efetivo(dragao, terra-psiquico)
-normalmente_efetivo(dragao, terra-inseto)
-normalmente_efetivo(dragao, terra-pedra)
-normalmente_efetivo(dragao, terra-fantasma)
-vantagem(dragao, terra-dragao)
-normalmente_efetivo(dragao, terra-noturno)
-desvantagem(dragao, terra-metalico)
-dano_zero(dragao, terra-fada)
-normalmente_efetivo(dragao, voador-normal)
-normalmente_efetivo(dragao, voador-fogo)
-normalmente_efetivo(dragao, voador-agua)
-normalmente_efetivo(dragao, voador-eletrico)
-normalmente_efetivo(dragao, voador-planta)
-normalmente_efetivo(dragao, voador-gelo)
-normalmente_efetivo(dragao, voador-lutador)
-normalmente_efetivo(dragao, voador-veneno)
-normalmente_efetivo(dragao, voador-terra)
-normalmente_efetivo(dragao, voador-psiquico)
-normalmente_efetivo(dragao, voador-inseto)
-normalmente_efetivo(dragao, voador-pedra)
-normalmente_efetivo(dragao, voador-fantasma)
-vantagem(dragao, voador-dragao)
-normalmente_efetivo(dragao, voador-noturno)
-desvantagem(dragao, voador-metalico)
-dano_zero(dragao, voador-fada)
-normalmente_efetivo(dragao, psiquico-normal)
-normalmente_efetivo(dragao, psiquico-fogo)
-normalmente_efetivo(dragao, psiquico-agua)
-normalmente_efetivo(dragao, psiquico-eletrico)
-normalmente_efetivo(dragao, psiquico-planta)
-normalmente_efetivo(dragao, psiquico-gelo)
-normalmente_efetivo(dragao, psiquico-lutador)
-normalmente_efetivo(dragao, psiquico-veneno)
-normalmente_efetivo(dragao, psiquico-terra)
-normalmente_efetivo(dragao, psiquico-voador)
-normalmente_efetivo(dragao, psiquico-inseto)
-normalmente_efetivo(dragao, psiquico-pedra)
-normalmente_efetivo(dragao, psiquico-fantasma)
-vantagem(dragao, psiquico-dragao)
-normalmente_efetivo(dragao, psiquico-noturno)
-desvantagem(dragao, psiquico-metalico)
-dano_zero(dragao, psiquico-fada)
-normalmente_efetivo(dragao, inseto-normal)
-normalmente_efetivo(dragao, inseto-fogo)
-normalmente_efetivo(dragao, inseto-agua)
-normalmente_efetivo(dragao, inseto-eletrico)
-normalmente_efetivo(dragao, inseto-planta)
-normalmente_efetivo(dragao, inseto-gelo)
-normalmente_efetivo(dragao, inseto-lutador)
-normalmente_efetivo(dragao, inseto-veneno)
-normalmente_efetivo(dragao, inseto-terra)
-normalmente_efetivo(dragao, inseto-voador)
-normalmente_efetivo(dragao, inseto-psiquico)
-normalmente_efetivo(dragao, inseto-pedra)
-normalmente_efetivo(dragao, inseto-fantasma)
-vantagem(dragao, inseto-dragao)
-normalmente_efetivo(dragao, inseto-noturno)
-desvantagem(dragao, inseto-metalico)
-dano_zero(dragao, inseto-fada)
-normalmente_efetivo(dragao, pedra-normal)
-normalmente_efetivo(dragao, pedra-fogo)
-normalmente_efetivo(dragao, pedra-agua)
-normalmente_efetivo(dragao, pedra-eletrico)
-normalmente_efetivo(dragao, pedra-planta)
-normalmente_efetivo(dragao, pedra-gelo)
-normalmente_efetivo(dragao, pedra-lutador)
-normalmente_efetivo(dragao, pedra-veneno)
-normalmente_efetivo(dragao, pedra-terra)
-normalmente_efetivo(dragao, pedra-voador)
-normalmente_efetivo(dragao, pedra-psiquico)
-normalmente_efetivo(dragao, pedra-inseto)
-normalmente_efetivo(dragao, pedra-fantasma)
-vantagem(dragao, pedra-dragao)
-normalmente_efetivo(dragao, pedra-noturno)
-desvantagem(dragao, pedra-metalico)
-dano_zero(dragao, pedra-fada)
-normalmente_efetivo(dragao, fantasma-normal)
-normalmente_efetivo(dragao, fantasma-fogo)
-normalmente_efetivo(dragao, fantasma-agua)
-normalmente_efetivo(dragao, fantasma-eletrico)
-normalmente_efetivo(dragao, fantasma-planta)
-normalmente_efetivo(dragao, fantasma-gelo)
-normalmente_efetivo(dragao, fantasma-lutador)
-normalmente_efetivo(dragao, fantasma-veneno)
-normalmente_efetivo(dragao, fantasma-terra)
-normalmente_efetivo(dragao, fantasma-voador)
-normalmente_efetivo(dragao, fantasma-psiquico)
-normalmente_efetivo(dragao, fantasma-inseto)
-normalmente_efetivo(dragao, fantasma-pedra)
-vantagem(dragao, fantasma-dragao)
-normalmente_efetivo(dragao, fantasma-noturno)
-desvantagem(dragao, fantasma-metalico)
-dano_zero(dragao, fantasma-fada)
-vantagem(dragao, dragao-normal)
-vantagem(dragao, dragao-fogo)
-vantagem(dragao, dragao-agua)
-vantagem(dragao, dragao-eletrico)
-vantagem(dragao, dragao-planta)
-vantagem(dragao, dragao-gelo)
-vantagem(dragao, dragao-lutador)
-vantagem(dragao, dragao-veneno)
-vantagem(dragao, dragao-terra)
-vantagem(dragao, dragao-voador)
-vantagem(dragao, dragao-psiquico)
-vantagem(dragao, dragao-inseto)
-vantagem(dragao, dragao-pedra)
-vantagem(dragao, dragao-fantasma)
-vantagem(dragao, dragao-noturno)
-normalmente_efetivo(dragao, dragao-metalico)
-dano_zero(dragao, dragao-fada)
-normalmente_efetivo(dragao, noturno-normal)
-normalmente_efetivo(dragao, noturno-fogo)
-normalmente_efetivo(dragao, noturno-agua)
-normalmente_efetivo(dragao, noturno-eletrico)
-normalmente_efetivo(dragao, noturno-planta)
-normalmente_efetivo(dragao, noturno-gelo)
-normalmente_efetivo(dragao, noturno-lutador)
-normalmente_efetivo(dragao, noturno-veneno)
-normalmente_efetivo(dragao, noturno-terra)
-normalmente_efetivo(dragao, noturno-voador)
-normalmente_efetivo(dragao, noturno-psiquico)
-normalmente_efetivo(dragao, noturno-inseto)
-normalmente_efetivo(dragao, noturno-pedra)
-normalmente_efetivo(dragao, noturno-fantasma)
-vantagem(dragao, noturno-dragao)
-desvantagem(dragao, noturno-metalico)
-dano_zero(dragao, noturno-fada)
-desvantagem(dragao, metalico-normal)
-desvantagem(dragao, metalico-fogo)
-desvantagem(dragao, metalico-agua)
-desvantagem(dragao, metalico-eletrico)
-desvantagem(dragao, metalico-planta)
-desvantagem(dragao, metalico-gelo)
-desvantagem(dragao, metalico-lutador)
-desvantagem(dragao, metalico-veneno)
-desvantagem(dragao, metalico-terra)
-desvantagem(dragao, metalico-voador)
-desvantagem(dragao, metalico-psiquico)
-desvantagem(dragao, metalico-inseto)
-desvantagem(dragao, metalico-pedra)
-desvantagem(dragao, metalico-fantasma)
-normalmente_efetivo(dragao, metalico-dragao)
-desvantagem(dragao, metalico-noturno)
-dano_zero(dragao, metalico-fada)
-dano_zero(dragao, fada-normal)
-dano_zero(dragao, fada-fogo)
-dano_zero(dragao, fada-agua)
-dano_zero(dragao, fada-eletrico)
-dano_zero(dragao, fada-planta)
-dano_zero(dragao, fada-gelo)
-dano_zero(dragao, fada-lutador)
-dano_zero(dragao, fada-veneno)
-dano_zero(dragao, fada-terra)
-dano_zero(dragao, fada-voador)
-dano_zero(dragao, fada-psiquico)
-dano_zero(dragao, fada-inseto)
-dano_zero(dragao, fada-pedra)
-dano_zero(dragao, fada-fantasma)
-dano_zero(dragao, fada-dragao)
-dano_zero(dragao, fada-noturno)
-dano_zero(dragao, fada-metalico)
-
-/* Efetividade tipo noturno */
-normalmente_efetivo(noturno,normal)
-normalmente_efetivo(noturno,fogo)
-normalmente_efetivo(noturno,agua)
-normalmente_efetivo(noturno,eletrico)
-normalmente_efetivo(noturno,planta)
-normalmente_efetivo(noturno,gelo)
-desvantagem(noturno,lutador)
-normalmente_efetivo(noturno,veneno)
-normalmente_efetivo(noturno,terra)
-normalmente_efetivo(noturno,voador)
-vantagem(noturno,psiquico)
-normalmente_efetivo(noturno,inseto)
-normalmente_efetivo(noturno,pedra)
-vantagem(noturno,fantasma)
-normalmente_efetivo(noturno,dragao)
-desvantagem(noturno,noturno)
-normalmente_efetivo(noturno,metalico)
-desvantagem(noturno,fada)
-normalmente_efetivo(noturno,normal-fogo)
-normalmente_efetivo(noturno, normal-agua)
-normalmente_efetivo(noturno, normal-eletrico)
-normalmente_efetivo(noturno, normal-planta)
-normalmente_efetivo(noturno, normal-gelo)
-desvantagem(noturno, normal-lutador)
-normalmente_efetivo(noturno, normal-veneno)
-normalmente_efetivo(noturno, normal-terra)
-normalmente_efetivo(noturno, normal-voador)
-vantagem(noturno, normal-psiquico)
-normalmente_efetivo(noturno, normal-inseto)
-normalmente_efetivo(noturno, normal-pedra)
-vantagem(noturno, normal-fantasma)
-normalmente_efetivo(noturno, normal-dragao)
-desvantagem(noturno, normal-noturno)
-normalmente_efetivo(noturno, normal-metalico)
-desvantagem(noturno, normal-fada)
-normalmente_efetivo(noturno, fogo-normal)
-normalmente_efetivo(noturno, fogo-agua)
-normalmente_efetivo(noturno, fogo-eletrico)
-normalmente_efetivo(noturno, fogo-planta)
-normalmente_efetivo(noturno, fogo-gelo)
-desvantagem(noturno, fogo-lutador)
-normalmente_efetivo(noturno, fogo-veneno)
-normalmente_efetivo(noturno, fogo-terra)
-normalmente_efetivo(noturno, fogo-voador)
-vantagem(noturno, fogo-psiquico)
-normalmente_efetivo(noturno, fogo-inseto)
-normalmente_efetivo(noturno, fogo-pedra)
-vantagem(noturno, fogo-fantasma)
-normalmente_efetivo(noturno, fogo-dragao)
-desvantagem(noturno, fogo-noturno)
-normalmente_efetivo(noturno, fogo-metalico)
-desvantagem(noturno, fogo-fada)
-normalmente_efetivo(noturno, agua-normal)
-normalmente_efetivo(noturno, agua-fogo)
-normalmente_efetivo(noturno, agua-eletrico)
-normalmente_efetivo(noturno, agua-planta)
-normalmente_efetivo(noturno, agua-gelo)
-desvantagem(noturno, agua-lutador)
-normalmente_efetivo(noturno, agua-veneno)
-normalmente_efetivo(noturno, agua-terra)
-normalmente_efetivo(noturno, agua-voador)
-vantagem(noturno, agua-psiquico)
-normalmente_efetivo(noturno, agua-inseto)
-normalmente_efetivo(noturno, agua-pedra)
-vantagem(noturno, agua-fantasma)
-normalmente_efetivo(noturno, agua-dragao)
-desvantagem(noturno, agua-noturno)
-normalmente_efetivo(noturno, agua-metalico)
-desvantagem(noturno, agua-fada)
-normalmente_efetivo(noturno, eletrico-normal)
-normalmente_efetivo(noturno, eletrico-fogo)
-normalmente_efetivo(noturno, eletrico-agua)
-normalmente_efetivo(noturno, eletrico-planta)
-normalmente_efetivo(noturno, eletrico-gelo)
-desvantagem(noturno, eletrico-lutador)
-normalmente_efetivo(noturno, eletrico-veneno)
-normalmente_efetivo(noturno, eletrico-terra)
-normalmente_efetivo(noturno, eletrico-voador)
-vantagem(noturno, eletrico-psiquico)
-normalmente_efetivo(noturno, eletrico-inseto)
-normalmente_efetivo(noturno, eletrico-pedra)
-vantagem(noturno, eletrico-fantasma)
-normalmente_efetivo(noturno, eletrico-dragao)
-desvantagem(noturno, eletrico-noturno)
-normalmente_efetivo(noturno, eletrico-metalico)
-desvantagem(noturno, eletrico-fada)
-normalmente_efetivo(noturno, planta-normal)
-normalmente_efetivo(noturno, planta-fogo)
-normalmente_efetivo(noturno, planta-agua)
-normalmente_efetivo(noturno, planta-eletrico)
-normalmente_efetivo(noturno, planta-gelo)
-desvantagem(noturno, planta-lutador)
-normalmente_efetivo(noturno, planta-veneno)
-normalmente_efetivo(noturno, planta-terra)
-normalmente_efetivo(noturno, planta-voador)
-vantagem(noturno, planta-psiquico)
-normalmente_efetivo(noturno, planta-inseto)
-normalmente_efetivo(noturno, planta-pedra)
-vantagem(noturno, planta-fantasma)
-normalmente_efetivo(noturno, planta-dragao)
-desvantagem(noturno, planta-noturno)
-normalmente_efetivo(noturno, planta-metalico)
-desvantagem(noturno, planta-fada)
-normalmente_efetivo(noturno, gelo-normal)
-normalmente_efetivo(noturno, gelo-fogo)
-normalmente_efetivo(noturno, gelo-agua)
-normalmente_efetivo(noturno, gelo-eletrico)
-normalmente_efetivo(noturno, gelo-planta)
-desvantagem(noturno, gelo-lutador)
-normalmente_efetivo(noturno, gelo-veneno)
-normalmente_efetivo(noturno, gelo-terra)
-normalmente_efetivo(noturno, gelo-voador)
-vantagem(noturno, gelo-psiquico)
-normalmente_efetivo(noturno, gelo-inseto)
-normalmente_efetivo(noturno, gelo-pedra)
-vantagem(noturno, gelo-fantasma)
-normalmente_efetivo(noturno, gelo-dragao)
-desvantagem(noturno, gelo-noturno)
-normalmente_efetivo(noturno, gelo-metalico)
-desvantagem(noturno, gelo-fada)
-desvantagem(noturno, lutador-normal)
-desvantagem(noturno, lutador-fogo)
-desvantagem(noturno, lutador-agua)
-desvantagem(noturno, lutador-eletrico)
-desvantagem(noturno, lutador-planta)
-desvantagem(noturno, lutador-gelo)
-desvantagem(noturno, lutador-veneno)
-desvantagem(noturno, lutador-terra)
-desvantagem(noturno, lutador-voador)
-normalmente_efetivo(noturno, lutador-psiquico)
-desvantagem(noturno, lutador-inseto)
-desvantagem(noturno, lutador-pedra)
-normalmente_efetivo(noturno, lutador-fantasma)
-desvantagem(noturno, lutador-dragao)
-super_desvantagem(noturno, lutador-noturno)
-desvantagem(noturno, lutador-metalico)
-super_desvantagem(noturno, lutador-fada)
-normalmente_efetivo(noturno, veneno-normal)
-normalmente_efetivo(noturno, veneno-fogo)
-normalmente_efetivo(noturno, veneno-agua)
-normalmente_efetivo(noturno, veneno-eletrico)
-normalmente_efetivo(noturno, veneno-planta)
-normalmente_efetivo(noturno, veneno-gelo)
-desvantagem(noturno, veneno-lutador)
-normalmente_efetivo(noturno, veneno-terra)
-normalmente_efetivo(noturno, veneno-voador)
-vantagem(noturno, veneno-psiquico)
-normalmente_efetivo(noturno, veneno-inseto)
-normalmente_efetivo(noturno, veneno-pedra)
-vantagem(noturno, veneno-fantasma)
-normalmente_efetivo(noturno, veneno-dragao)
-desvantagem(noturno, veneno-noturno)
-normalmente_efetivo(noturno, veneno-metalico)
-desvantagem(noturno, veneno-fada)
-normalmente_efetivo(noturno, terra-normal)
-normalmente_efetivo(noturno, terra-fogo)
-normalmente_efetivo(noturno, terra-agua)
-normalmente_efetivo(noturno, terra-eletrico)
-normalmente_efetivo(noturno, terra-planta)
-normalmente_efetivo(noturno, terra-gelo)
-desvantagem(noturno, terra-lutador)
-normalmente_efetivo(noturno, terra-veneno)
-normalmente_efetivo(noturno, terra-voador)
-vantagem(noturno, terra-psiquico)
-normalmente_efetivo(noturno, terra-inseto)
-normalmente_efetivo(noturno, terra-pedra)
-vantagem(noturno, terra-fantasma)
-normalmente_efetivo(noturno, terra-dragao)
-desvantagem(noturno, terra-noturno)
-normalmente_efetivo(noturno, terra-metalico)
-desvantagem(noturno, terra-fada)
-normalmente_efetivo(noturno, voador-normal)
-normalmente_efetivo(noturno, voador-fogo)
-normalmente_efetivo(noturno, voador-agua)
-normalmente_efetivo(noturno, voador-eletrico)
-normalmente_efetivo(noturno, voador-planta)
-normalmente_efetivo(noturno, voador-gelo)
-desvantagem(noturno, voador-lutador)
-normalmente_efetivo(noturno, voador-veneno)
-normalmente_efetivo(noturno, voador-terra)
-vantagem(noturno, voador-psiquico)
-normalmente_efetivo(noturno, voador-inseto)
-normalmente_efetivo(noturno, voador-pedra)
-vantagem(noturno, voador-fantasma)
-normalmente_efetivo(noturno, voador-dragao)
-desvantagem(noturno, voador-noturno)
-normalmente_efetivo(noturno, voador-metalico)
-desvantagem(noturno, voador-fada)
-vantagem(noturno, psiquico-normal)
-vantagem(noturno, psiquico-fogo)
-vantagem(noturno, psiquico-agua)
-vantagem(noturno, psiquico-eletrico)
-vantagem(noturno, psiquico-planta)
-vantagem(noturno, psiquico-gelo)
-normalmente_efetivo(noturno, psiquico-lutador)
-vantagem(noturno, psiquico-veneno)
-vantagem(noturno, psiquico-terra)
-vantagem(noturno, psiquico-voador)
-vantagem(noturno, psiquico-inseto)
-vantagem(noturno, psiquico-pedra)
-super_vantagem(noturno, psiquico-fantasma)
-vantagem(noturno, psiquico-dragao)
-normalmente_efetivo(noturno, psiquico-noturno)
-vantagem(noturno, psiquico-metalico)
-normalmente_efetivo(noturno, psiquico-fada)
-normalmente_efetivo(noturno, inseto-normal)
-normalmente_efetivo(noturno, inseto-fogo)
-normalmente_efetivo(noturno, inseto-agua)
-normalmente_efetivo(noturno, inseto-eletrico)
-normalmente_efetivo(noturno, inseto-planta)
-normalmente_efetivo(noturno, inseto-gelo)
-desvantagem(noturno, inseto-lutador)
-normalmente_efetivo(noturno, inseto-veneno)
-normalmente_efetivo(noturno, inseto-terra)
-normalmente_efetivo(noturno, inseto-voador)
-vantagem(noturno, inseto-psiquico)
-normalmente_efetivo(noturno, inseto-pedra)
-vantagem(noturno, inseto-fantasma)
-normalmente_efetivo(noturno, inseto-dragao)
-desvantagem(noturno, inseto-noturno)
-normalmente_efetivo(noturno, inseto-metalico)
-desvantagem(noturno, inseto-fada)
-normalmente_efetivo(noturno, pedra-normal)
-normalmente_efetivo(noturno, pedra-fogo)
-normalmente_efetivo(noturno, pedra-agua)
-normalmente_efetivo(noturno, pedra-eletrico)
-normalmente_efetivo(noturno, pedra-planta)
-normalmente_efetivo(noturno, pedra-gelo)
-desvantagem(noturno, pedra-lutador)
-normalmente_efetivo(noturno, pedra-veneno)
-normalmente_efetivo(noturno, pedra-terra)
-normalmente_efetivo(noturno, pedra-voador)
-vantagem(noturno, pedra-psiquico)
-normalmente_efetivo(noturno, pedra-inseto)
-vantagem(noturno, pedra-fantasma)
-normalmente_efetivo(noturno, pedra-dragao)
-desvantagem(noturno, pedra-noturno)
-normalmente_efetivo(noturno, pedra-metalico)
-desvantagem(noturno, pedra-fada)
-vantagem(noturno, fantasma-normal)
-vantagem(noturno, fantasma-fogo)
-vantagem(noturno, fantasma-agua)
-vantagem(noturno, fantasma-eletrico)
-vantagem(noturno, fantasma-planta)
-vantagem(noturno, fantasma-gelo)
-normalmente_efetivo(noturno, fantasma-lutador)
-vantagem(noturno, fantasma-veneno)
-vantagem(noturno, fantasma-terra)
-vantagem(noturno, fantasma-voador)
-super_vantagem(noturno, fantasma-psiquico)
-vantagem(noturno, fantasma-inseto)
-vantagem(noturno, fantasma-pedra)
-vantagem(noturno, fantasma-dragao)
-normalmente_efetivo(noturno, fantasma-noturno)
-vantagem(noturno, fantasma-metalico)
-normalmente_efetivo(noturno, fantasma-fada)
-normalmente_efetivo(noturno, dragao-normal)
-normalmente_efetivo(noturno, dragao-fogo)
-normalmente_efetivo(noturno, dragao-agua)
-normalmente_efetivo(noturno, dragao-eletrico)
-normalmente_efetivo(noturno, dragao-planta)
-normalmente_efetivo(noturno, dragao-gelo)
-desvantagem(noturno, dragao-lutador)
-normalmente_efetivo(noturno, dragao-veneno)
-normalmente_efetivo(noturno, dragao-terra)
-normalmente_efetivo(noturno, dragao-voador)
-vantagem(noturno, dragao-psiquico)
-normalmente_efetivo(noturno, dragao-inseto)
-normalmente_efetivo(noturno, dragao-pedra)
-vantagem(noturno, dragao-fantasma)
-desvantagem(noturno, dragao-noturno)
-normalmente_efetivo(noturno, dragao-metalico)
-desvantagem(noturno, dragao-fada)
-desvantagem(noturno, noturno-normal)
-desvantagem(noturno, noturno-fogo)
-desvantagem(noturno, noturno-agua)
-desvantagem(noturno, noturno-eletrico)
-desvantagem(noturno, noturno-planta)
-desvantagem(noturno, noturno-gelo)
-super_desvantagem(noturno, noturno-lutador)
-desvantagem(noturno, noturno-veneno)
-desvantagem(noturno, noturno-terra)
-desvantagem(noturno, noturno-voador)
-normalmente_efetivo(noturno, noturno-psiquico)
-desvantagem(noturno, noturno-inseto)
-desvantagem(noturno, noturno-pedra)
-normalmente_efetivo(noturno, noturno-fantasma)
-desvantagem(noturno, noturno-dragao)
-desvantagem(noturno, noturno-metalico)
-super_desvantagem(noturno, noturno-fada)
-normalmente_efetivo(noturno, metalico-normal)
-normalmente_efetivo(noturno, metalico-fogo)
-normalmente_efetivo(noturno, metalico-agua)
-normalmente_efetivo(noturno, metalico-eletrico)
-normalmente_efetivo(noturno, metalico-planta)
-normalmente_efetivo(noturno, metalico-gelo)
-desvantagem(noturno, metalico-lutador)
-normalmente_efetivo(noturno, metalico-veneno)
-normalmente_efetivo(noturno, metalico-terra)
-normalmente_efetivo(noturno, metalico-voador)
-vantagem(noturno, metalico-psiquico)
-normalmente_efetivo(noturno, metalico-inseto)
-normalmente_efetivo(noturno, metalico-pedra)
-vantagem(noturno, metalico-fantasma)
-normalmente_efetivo(noturno, metalico-dragao)
-desvantagem(noturno, metalico-noturno)
-desvantagem(noturno, metalico-fada)
-desvantagem(noturno, fada-normal)
-desvantagem(noturno, fada-fogo)
-desvantagem(noturno, fada-agua)
-desvantagem(noturno, fada-eletrico)
-desvantagem(noturno, fada-planta)
-desvantagem(noturno, fada-gelo)
-super_desvantagem(noturno, fada-lutador)
-desvantagem(noturno, fada-veneno)
-desvantagem(noturno, fada-terra)
-desvantagem(noturno, fada-voador)
-normalmente_efetivo(noturno, fada-psiquico)
-desvantagem(noturno, fada-inseto)
-desvantagem(noturno, fada-pedra)
-normalmente_efetivo(noturno, fada-fantasma)
-desvantagem(noturno, fada-dragao)
-super_desvantagem(noturno, fada-noturno)
-desvantagem(noturno, fada-metalico)
-
-/* Efetividade tipo metalico */
-normalmente_efetivo(metalico,normal)
-desvantagem(metalico,fogo)
-desvantagem(metalico,agua)
-desvantagem(metalico,eletrico)
-normalmente_efetivo(metalico,planta)
-vantagem(metalico,gelo)
-normalmente_efetivo(metalico,lutador)
-normalmente_efetivo(metalico,veneno)
-normalmente_efetivo(metalico,terra)
-normalmente_efetivo(metalico,voador)
-normalmente_efetivo(metalico,psiquico)
-normalmente_efetivo(metalico,inseto)
-vantagem(metalico,pedra)
-normalmente_efetivo(metalico,fantasma)
-normalmente_efetivo(metalico,dragao)
-normalmente_efetivo(metalico,noturno)
-desvantagem(metalico,metalico)
-vantagem(metalico,fada)
-desvantagem(metalico,normal-fogo)
-desvantagem(metalico, normal-agua)
-desvantagem(metalico, normal-eletrico)
-normalmente_efetivo(metalico, normal-planta)
-vantagem(metalico, normal-gelo)
-normalmente_efetivo(metalico, normal-lutador)
-normalmente_efetivo(metalico, normal-veneno)
-normalmente_efetivo(metalico, normal-terra)
-normalmente_efetivo(metalico, normal-voador)
-normalmente_efetivo(metalico, normal-psiquico)
-normalmente_efetivo(metalico, normal-inseto)
-vantagem(metalico, normal-pedra)
-normalmente_efetivo(metalico, normal-fantasma)
-normalmente_efetivo(metalico, normal-dragao)
-normalmente_efetivo(metalico, normal-noturno)
-desvantagem(metalico, normal-metalico)
-vantagem(metalico, normal-fada)
-desvantagem(metalico, fogo-normal)
-super_desvantagem(metalico, fogo-agua)
-super_desvantagem(metalico, fogo-eletrico)
-desvantagem(metalico, fogo-planta)
-normalmente_efetivo(metalico, fogo-gelo)
-desvantagem(metalico, fogo-lutador)
-desvantagem(metalico, fogo-veneno)
-desvantagem(metalico, fogo-terra)
-desvantagem(metalico, fogo-voador)
-desvantagem(metalico, fogo-psiquico)
-desvantagem(metalico, fogo-inseto)
-normalmente_efetivo(metalico, fogo-pedra)
-desvantagem(metalico, fogo-fantasma)
-desvantagem(metalico, fogo-dragao)
-desvantagem(metalico, fogo-noturno)
-super_desvantagem(metalico, fogo-metalico)
-normalmente_efetivo(metalico, fogo-fada)
-desvantagem(metalico, agua-normal)
-super_desvantagem(metalico, agua-fogo)
-super_desvantagem(metalico, agua-eletrico)
-desvantagem(metalico, agua-planta)
-normalmente_efetivo(metalico, agua-gelo)
-desvantagem(metalico, agua-lutador)
-normalmente_efetivo(metalico, agua-veneno)
-desvantagem(metalico, agua-terra)
-desvantagem(metalico, agua-voador)
-desvantagem(metalico, agua-psiquico)
-normalmente_efetivo(metalico, agua-inseto)
-normalmente_efetivo(metalico, agua-pedra)
-desvantagem(metalico, agua-fantasma)
-desvantagem(metalico, agua-dragao)
-desvantagem(metalico, agua-noturno)
-super_desvantagem(metalico, agua-metalico)
-normalmente_efetivo(metalico, agua-fada)
-desvantagem(metalico, eletrico-normal)
-super_desvantagem(metalico, eletrico-fogo)
-super_desvantagem(metalico, eletrico-agua)
-desvantagem(metalico, eletrico-planta)
-normalmente_efetivo(metalico, eletrico-gelo)
-desvantagem(metalico, eletrico-lutador)
-normalmente_efetivo(metalico, eletrico-veneno)
-desvantagem(metalico, eletrico-terra)
-desvantagem(metalico, eletrico-voador)
-desvantagem(metalico, eletrico-psiquico)
-desvantagem(metalico, eletrico-inseto)
-normalmente_efetivo(metalico, eletrico-pedra)
-desvantagem(metalico, eletrico-fantasma)
-desvantagem(metalico, eletrico-dragao)
-desvantagem(metalico, eletrico-noturno)
-super_desvantagem(metalico, eletrico-metalico)
-normalmente_efetivo(metalico, eletrico-fada)
-normalmente_efetivo(metalico, planta-normal)
-desvantagem(metalico, planta-fogo)
-desvantagem(metalico, planta-agua)
-desvantagem(metalico, planta-eletrico)
-vantagem(metalico, planta-gelo)
-normalmente_efetivo(metalico, planta-lutador)
-normalmente_efetivo(metalico, planta-veneno)
-normalmente_efetivo(metalico, planta-terra)
-normalmente_efetivo(metalico, planta-voador)
-normalmente_efetivo(metalico, planta-psiquico)
-normalmente_efetivo(metalico, planta-inseto)
-vantagem(metalico, planta-pedra)
-normalmente_efetivo(metalico, planta-fantasma)
-normalmente_efetivo(metalico, planta-dragao)
-normalmente_efetivo(metalico, planta-noturno)
-desvantagem(metalico, planta-metalico)
-vantagem(metalico, planta-fada)
-vantagem(metalico, gelo-normal)
-normalmente_efetivo(metalico, gelo-fogo)
-normalmente_efetivo(metalico, gelo-agua)
-normalmente_efetivo(metalico, gelo-eletrico)
-vantagem(metalico, gelo-planta)
-vantagem(metalico, gelo-lutador)
-vantagem(metalico, gelo-veneno)
-vantagem(metalico, gelo-terra)
-vantagem(metalico, gelo-voador)
-vantagem(metalico, gelo-psiquico)
-vantagem(metalico, gelo-inseto)
-super_vantagem(metalico, gelo-pedra)
-vantagem(metalico, gelo-fantasma)
-vantagem(metalico, gelo-dragao)
-vantagem(metalico, gelo-noturno)
-normalmente_efetivo(metalico, gelo-metalico)
-super_vantagem(metalico, gelo-fada)
-normalmente_efetivo(metalico, lutador-normal)
-desvantagem(metalico, lutador-fogo)
-desvantagem(metalico, lutador-agua)
-desvantagem(metalico, lutador-eletrico)
-normalmente_efetivo(metalico, lutador-planta)
-vantagem(metalico, lutador-gelo)
-vantagem(metalico, lutador-veneno)
-normalmente_efetivo(metalico, lutador-terra)
-normalmente_efetivo(metalico, lutador-voador)
-normalmente_efetivo(metalico, lutador-psiquico)
-normalmente_efetivo(metalico, lutador-inseto)
-vantagem(metalico, lutador-pedra)
-normalmente_efetivo(metalico, lutador-fantasma)
-normalmente_efetivo(metalico, lutador-dragao)
-normalmente_efetivo(metalico, lutador-noturno)
-desvantagem(metalico, lutador-metalico)
-vantagem(metalico, lutador-fada)
-normalmente_efetivo(metalico, veneno-normal)
-desvantagem(metalico, veneno-fogo)
-normalmente_efetivo(metalico, veneno-agua)
-normalmente_efetivo(metalico, veneno-eletrico)
-normalmente_efetivo(metalico, veneno-planta)
-vantagem(metalico, veneno-gelo)
-vantagem(metalico, veneno-lutador)
-normalmente_efetivo(metalico, veneno-terra)
-normalmente_efetivo(metalico, veneno-voador)
-normalmente_efetivo(metalico, veneno-psiquico)
-normalmente_efetivo(metalico, veneno-inseto)
-vantagem(metalico, veneno-pedra)
-normalmente_efetivo(metalico, veneno-fantasma)
-normalmente_efetivo(metalico, veneno-dragao)
-normalmente_efetivo(metalico, veneno-noturno)
-desvantagem(metalico, veneno-metalico)
-vantagem(metalico, veneno-fada)
-normalmente_efetivo(metalico, terra-normal)
-desvantagem(metalico, terra-fogo)
-desvantagem(metalico, terra-agua)
-desvantagem(metalico, terra-eletrico)
-normalmente_efetivo(metalico, terra-planta)
-vantagem(metalico, terra-gelo)
-normalmente_efetivo(metalico, terra-lutador)
-normalmente_efetivo(metalico, terra-veneno)
-normalmente_efetivo(metalico, terra-voador)
-normalmente_efetivo(metalico, terra-psiquico)
-normalmente_efetivo(metalico, terra-inseto)
-vantagem(metalico, terra-pedra)
-normalmente_efetivo(metalico, terra-fantasma)
-normalmente_efetivo(metalico, terra-dragao)
-normalmente_efetivo(metalico, terra-noturno)
-desvantagem(metalico, terra-metalico)
-vantagem(metalico, terra-fada)
-normalmente_efetivo(metalico, voador-normal)
-desvantagem(metalico, voador-fogo)
-desvantagem(metalico, voador-agua)
-desvantagem(metalico, voador-eletrico)
-normalmente_efetivo(metalico, voador-planta)
-vantagem(metalico, voador-gelo)
-normalmente_efetivo(metalico, voador-lutador)
-normalmente_efetivo(metalico, voador-veneno)
-normalmente_efetivo(metalico, voador-terra)
-normalmente_efetivo(metalico, voador-psiquico)
-normalmente_efetivo(metalico, voador-inseto)
-vantagem(metalico, voador-pedra)
-normalmente_efetivo(metalico, voador-fantasma)
-normalmente_efetivo(metalico, voador-dragao)
-normalmente_efetivo(metalico, voador-noturno)
-desvantagem(metalico, voador-metalico)
-vantagem(metalico, voador-fada)
-normalmente_efetivo(metalico, psiquico-normal)
-desvantagem(metalico, psiquico-fogo)
-desvantagem(metalico, psiquico-agua)
-desvantagem(metalico, psiquico-eletrico)
-normalmente_efetivo(metalico, psiquico-planta)
-vantagem(metalico, psiquico-gelo)
-normalmente_efetivo(metalico, psiquico-lutador)
-normalmente_efetivo(metalico, psiquico-veneno)
-normalmente_efetivo(metalico, psiquico-terra)
-normalmente_efetivo(metalico, psiquico-voador)
-normalmente_efetivo(metalico, psiquico-inseto)
-vantagem(metalico, psiquico-pedra)
-normalmente_efetivo(metalico, psiquico-fantasma)
-normalmente_efetivo(metalico, psiquico-dragao)
-normalmente_efetivo(metalico, psiquico-noturno)
-desvantagem(metalico, psiquico-metalico)
-vantagem(metalico, psiquico-fada)
-normalmente_efetivo(metalico, inseto-normal)
-desvantagem(metalico, inseto-fogo)
-normalmente_efetivo(metalico, inseto-agua)
-desvantagem(metalico, inseto-eletrico)
-normalmente_efetivo(metalico, inseto-planta)
-vantagem(metalico, inseto-gelo)
-normalmente_efetivo(metalico, inseto-lutador)
-normalmente_efetivo(metalico, inseto-veneno)
-normalmente_efetivo(metalico, inseto-terra)
-normalmente_efetivo(metalico, inseto-voador)
-normalmente_efetivo(metalico, inseto-psiquico)
-vantagem(metalico, inseto-pedra)
-normalmente_efetivo(metalico, inseto-fantasma)
-normalmente_efetivo(metalico, inseto-dragao)
-normalmente_efetivo(metalico, inseto-noturno)
-desvantagem(metalico, inseto-metalico)
-vantagem(metalico, inseto-fada)
-vantagem(metalico, pedra-normal)
-normalmente_efetivo(metalico, pedra-fogo)
-normalmente_efetivo(metalico, pedra-agua)
-normalmente_efetivo(metalico, pedra-eletrico)
-vantagem(metalico, pedra-planta)
-super_vantagem(metalico, pedra-gelo)
-vantagem(metalico, pedra-lutador)
-vantagem(metalico, pedra-veneno)
-vantagem(metalico, pedra-terra)
-vantagem(metalico, pedra-voador)
-vantagem(metalico, pedra-psiquico)
-vantagem(metalico, pedra-inseto)
-vantagem(metalico, pedra-fantasma)
-vantagem(metalico, pedra-dragao)
-vantagem(metalico, pedra-noturno)
-normalmente_efetivo(metalico, pedra-metalico)
-super_vantagem(metalico, pedra-fada)
-normalmente_efetivo(metalico, fantasma-normal)
-desvantagem(metalico, fantasma-fogo)
-desvantagem(metalico, fantasma-agua)
-desvantagem(metalico, fantasma-eletrico)
-normalmente_efetivo(metalico, fantasma-planta)
-vantagem(metalico, fantasma-gelo)
-normalmente_efetivo(metalico, fantasma-lutador)
-normalmente_efetivo(metalico, fantasma-veneno)
-normalmente_efetivo(metalico, fantasma-terra)
-normalmente_efetivo(metalico, fantasma-voador)
-normalmente_efetivo(metalico, fantasma-psiquico)
-normalmente_efetivo(metalico, fantasma-inseto)
-vantagem(metalico, fantasma-pedra)
-normalmente_efetivo(metalico, fantasma-dragao)
-normalmente_efetivo(metalico, fantasma-noturno)
-desvantagem(metalico, fantasma-metalico)
-vantagem(metalico, fantasma-fada)
-normalmente_efetivo(metalico, dragao-normal)
-desvantagem(metalico, dragao-fogo)
-desvantagem(metalico, dragao-agua)
-desvantagem(metalico, dragao-eletrico)
-normalmente_efetivo(metalico, dragao-planta)
-vantagem(metalico, dragao-gelo)
-normalmente_efetivo(metalico, dragao-lutador)
-normalmente_efetivo(metalico, dragao-veneno)
-normalmente_efetivo(metalico, dragao-terra)
-normalmente_efetivo(metalico, dragao-voador)
-normalmente_efetivo(metalico, dragao-psiquico)
-normalmente_efetivo(metalico, dragao-inseto)
-vantagem(metalico, dragao-pedra)
-normalmente_efetivo(metalico, dragao-fantasma)
-normalmente_efetivo(metalico, dragao-noturno)
-desvantagem(metalico, dragao-metalico)
-vantagem(metalico, dragao-fada)
-normalmente_efetivo(metalico, noturno-normal)
-desvantagem(metalico, noturno-fogo)
-desvantagem(metalico, noturno-agua)
-desvantagem(metalico, noturno-eletrico)
-normalmente_efetivo(metalico, noturno-planta)
-vantagem(metalico, noturno-gelo)
-normalmente_efetivo(metalico, noturno-lutador)
-normalmente_efetivo(metalico, noturno-veneno)
-normalmente_efetivo(metalico, noturno-terra)
-normalmente_efetivo(metalico, noturno-voador)
-normalmente_efetivo(metalico, noturno-psiquico)
-normalmente_efetivo(metalico, noturno-inseto)
-vantagem(metalico, noturno-pedra)
-normalmente_efetivo(metalico, noturno-fantasma)
-normalmente_efetivo(metalico, noturno-dragao)
-desvantagem(metalico, noturno-metalico)
-vantagem(metalico, noturno-fada)
-desvantagem(metalico, metalico-normal)
-super_desvantagem(metalico, metalico-fogo)
-super_desvantagem(metalico, metalico-agua)
-super_desvantagem(metalico, metalico-eletrico)
-desvantagem(metalico, metalico-planta)
-normalmente_efetivo(metalico, metalico-gelo)
-desvantagem(metalico, metalico-lutador)
-desvantagem(metalico, metalico-veneno)
-desvantagem(metalico, metalico-terra)
-desvantagem(metalico, metalico-voador)
-desvantagem(metalico, metalico-psiquico)
-desvantagem(metalico, metalico-inseto)
-normalmente_efetivo(metalico, metalico-pedra)
-desvantagem(metalico, metalico-fantasma)
-desvantagem(metalico, metalico-dragao)
-desvantagem(metalico, metalico-noturno)
-normalmente_efetivo(metalico, metalico-fada)
-vantagem(metalico, fada-normal)
-normalmente_efetivo(metalico, fada-fogo)
-normalmente_efetivo(metalico, fada-agua)
-normalmente_efetivo(metalico, fada-eletrico)
-vantagem(metalico, fada-planta)
-super_vantagem(metalico, fada-gelo)
-vantagem(metalico, fada-lutador)
-vantagem(metalico, fada-veneno)
-vantagem(metalico, fada-terra)
-vantagem(metalico, fada-voador)
-vantagem(metalico, fada-psiquico)
-vantagem(metalico, fada-inseto)
-super_vantagem(metalico, fada-pedra)
-vantagem(metalico, fada-fantasma)
-vantagem(metalico, fada-dragao)
-vantagem(metalico, fada-noturno)
-normalmente_efetivo(metalico, fada-metalico)
-
-/* Efetividade tipo fada */
-normalmente_efetivo(fada,normal)
-desvantagem(fada,fogo)
-normalmente_efetivo(fada,agua)
-normalmente_efetivo(fada,eletrico)
-normalmente_efetivo(fada,planta)
-normalmente_efetivo(fada,gelo)
-vantagem(fada,lutador)
-desvantagem(fada,veneno)
-normalmente_efetivo(fada,terra)
-normalmente_efetivo(fada,voador)
-normalmente_efetivo(fada,psiquico)
-normalmente_efetivo(fada,inseto)
-normalmente_efetivo(fada,pedra)
-normalmente_efetivo(fada,fantasma)
-vantagem(fada,dragao)
-vantagem(fada,noturno)
-desvantagem(fada,metalico)
-normalmente_efetivo(fada,fada)
-desvantagem(fada,normal-fogo)
-normalmente_efetivo(fada, normal-agua)
-normalmente_efetivo(fada, normal-eletrico)
-normalmente_efetivo(fada, normal-planta)
-vantagem(fada, normal-gelo)
-desvantagem(fada, normal-lutador)
-normalmente_efetivo(fada, normal-veneno)
-normalmente_efetivo(fada, normal-terra)
-normalmente_efetivo(fada, normal-voador)
-normalmente_efetivo(fada, normal-psiquico)
-normalmente_efetivo(fada, normal-inseto)
-normalmente_efetivo(fada, normal-pedra)
-normalmente_efetivo(fada, normal-fantasma)
-vantagem(fada, normal-dragao)
-vantagem(fada, normal-noturno)
-desvantagem(fada, normal-metalico)
-normalmente_efetivo(fada, normal-fada)
-desvantagem(fada, fogo-normal)
-desvantagem(fada, fogo-agua)
-desvantagem(fada, fogo-eletrico)
-desvantagem(fada, fogo-planta)
-desvantagem(fada, fogo-gelo)
-normalmente_efetivo(fada, fogo-lutador)
-super_desvantagem(fada, fogo-veneno)
-desvantagem(fada, fogo-terra)
-desvantagem(fada, fogo-voador)
-desvantagem(fada, fogo-psiquico)
-desvantagem(fada, fogo-inseto)
-desvantagem(fada, fogo-pedra)
-desvantagem(fada, fogo-fantasma)
-normalmente_efetivo(fada, fogo-dragao)
-normalmente_efetivo(fada, fogo-noturno)
-super_desvantagem(fada, fogo-metalico)
-desvantagem(fada, fogo-fada)
-normalmente_efetivo(fada, agua-normal)
-desvantagem(fada, agua-fogo)
-normalmente_efetivo(fada, agua-eletrico)
-normalmente_efetivo(fada, agua-planta)
-normalmente_efetivo(fada, agua-gelo)
-vantagem(fada, agua-lutador)
-desvantagem(fada, agua-veneno)
-normalmente_efetivo(fada, agua-terra)
-normalmente_efetivo(fada, agua-voador)
-normalmente_efetivo(fada, agua-psiquico)
-normalmente_efetivo(fada, agua-inseto)
-normalmente_efetivo(fada, agua-pedra)
-normalmente_efetivo(fada, agua-fantasma)
-vantagem(fada, agua-dragao)
-vantagem(fada, agua-noturno)
-desvantagem(fada, agua-metalico)
-normalmente_efetivo(fada, agua-fada)
-normalmente_efetivo(fada, eletrico-normal)
-desvantagem(fada, eletrico-fogo)
-normalmente_efetivo(fada, eletrico-agua)
-normalmente_efetivo(fada, eletrico-planta)
-normalmente_efetivo(fada, eletrico-gelo)
-vantagem(fada, eletrico-lutador)
-desvantagem(fada, eletrico-veneno)
-normalmente_efetivo(fada, eletrico-terra)
-normalmente_efetivo(fada, eletrico-voador)
-normalmente_efetivo(fada, eletrico-psiquico)
-normalmente_efetivo(fada, eletrico-inseto)
-normalmente_efetivo(fada, eletrico-pedra)
-normalmente_efetivo(fada, eletrico-fantasma)
-vantagem(fada, eletrico-dragao)
-vantagem(fada, eletrico-noturno)
-desvantagem(fada, eletrico-metalico)
-normalmente_efetivo(fada, eletrico-fada)
-normalmente_efetivo(fada, planta-normal)
-desvantagem(fada, planta-fogo)
-normalmente_efetivo(fada, planta-agua)
-normalmente_efetivo(fada, planta-eletrico)
-normalmente_efetivo(fada, planta-gelo)
-vantagem(fada, planta-lutador)
-desvantagem(fada, planta-veneno)
-normalmente_efetivo(fada, planta-terra)
-normalmente_efetivo(fada, planta-voador)
-normalmente_efetivo(fada, planta-psiquico)
-normalmente_efetivo(fada, planta-inseto)
-normalmente_efetivo(fada, planta-pedra)
-normalmente_efetivo(fada, planta-fantasma)
-vantagem(fada, planta-dragao)
-vantagem(fada, planta-noturno)
-desvantagem(fada, planta-metalico)
-normalmente_efetivo(fada, planta-fada)
-normalmente_efetivo(fada, gelo-normal)
-desvantagem(fada, gelo-fogo)
-normalmente_efetivo(fada, gelo-agua)
-normalmente_efetivo(fada, gelo-eletrico)
-normalmente_efetivo(fada, gelo-planta)
-vantagem(fada, gelo-lutador)
-desvantagem(fada, gelo-veneno)
-normalmente_efetivo(fada, gelo-terra)
-normalmente_efetivo(fada, gelo-voador)
-normalmente_efetivo(fada, gelo-psiquico)
-normalmente_efetivo(fada, gelo-inseto)
-normalmente_efetivo(fada, gelo-pedra)
-normalmente_efetivo(fada, gelo-fantasma)
-vantagem(fada, gelo-dragao)
-vantagem(fada, gelo-noturno)
-desvantagem(fada, gelo-metalico)
-normalmente_efetivo(fada, gelo-fada)
-vantagem(fada, lutador-normal)
-normalmente_efetivo(fada, lutador-fogo)
-vantagem(fada, lutador-agua)
-vantagem(fada, lutador-eletrico)
-vantagem(fada, lutador-planta)
-vantagem(fada, lutador-gelo)
-normalmente_efetivo(fada, lutador-veneno)
-vantagem(fada, lutador-terra)
-vantagem(fada, lutador-voador)
-vantagem(fada, lutador-psiquico)
-vantagem(fada, lutador-inseto)
-vantagem(fada, lutador-pedra)
-vantagem(fada, lutador-fantasma)
-super_vantagem(fada, lutador-dragao)
-super_vantagem(fada, lutador-noturno)
-normalmente_efetivo(fada, lutador-metalico)
-vantagem(fada, lutador-fada)
-desvantagem(fada, veneno-normal)
-super_desvantagem(fada, veneno-fogo)
-desvantagem(fada, veneno-agua)
-desvantagem(fada, veneno-eletrico)
-desvantagem(fada, veneno-planta)
-desvantagem(fada, veneno-gelo)
-normalmente_efetivo(fada, veneno-lutador)
-desvantagem(fada, veneno-terra)
-desvantagem(fada, veneno-voador)
-desvantagem(fada, veneno-psiquico)
-desvantagem(fada, veneno-inseto)
-desvantagem(fada, veneno-pedra)
-desvantagem(fada, veneno-fantasma)
-normalmente_efetivo(fada, veneno-dragao)
-normalmente_efetivo(fada, veneno-noturno)
-super_desvantagem(fada, veneno-metalico)
-desvantagem(fada, veneno-fada)
-normalmente_efetivo(fada, terra-normal)
-desvantagem(fada, terra-fogo)
-normalmente_efetivo(fada, terra-agua)
-normalmente_efetivo(fada, terra-eletrico)
-normalmente_efetivo(fada, terra-planta)
-normalmente_efetivo(fada, terra-gelo)
-vantagem(fada, terra-lutador)
-desvantagem(fada, terra-veneno)
-normalmente_efetivo(fada, terra-voador)
-normalmente_efetivo(fada, terra-psiquico)
-normalmente_efetivo(fada, terra-inseto)
-normalmente_efetivo(fada, terra-pedra)
-normalmente_efetivo(fada, terra-fantasma)
-vantagem(fada, terra-dragao)
-vantagem(fada, terra-noturno)
-desvantagem(fada, terra-metalico)
-normalmente_efetivo(fada, terra-fada)
-normalmente_efetivo(fada, voador-normal)
-desvantagem(fada, voador-fogo)
-normalmente_efetivo(fada, voador-agua)
-normalmente_efetivo(fada, voador-eletrico)
-normalmente_efetivo(fada, voador-planta)
-normalmente_efetivo(fada, voador-gelo)
-vantagem(fada, voador-lutador)
-desvantagem(fada, voador-veneno)
-normalmente_efetivo(fada, voador-terra)
-normalmente_efetivo(fada, voador-psiquico)
-normalmente_efetivo(fada, voador-inseto)
-normalmente_efetivo(fada, voador-pedra)
-normalmente_efetivo(fada, voador-fantasma)
-vantagem(fada, voador-dragao)
-vantagem(fada, voador-noturno)
-desvantagem(fada, voador-metalico)
-normalmente_efetivo(fada, voador-fada)
-normalmente_efetivo(fada, psiquico-normal)
-desvantagem(fada, psiquico-fogo)
-normalmente_efetivo(fada, psiquico-agua)
-normalmente_efetivo(fada, psiquico-eletrico)
-normalmente_efetivo(fada, psiquico-planta)
-normalmente_efetivo(fada, psiquico-gelo)
-vantagem(fada, psiquico-lutador)
-desvantagem(fada, psiquico-veneno)
-normalmente_efetivo(fada, psiquico-terra)
-normalmente_efetivo(fada, psiquico-voador)
-normalmente_efetivo(fada, psiquico-inseto)
-normalmente_efetivo(fada, psiquico-pedra)
-normalmente_efetivo(fada, psiquico-fantasma)
-vantagem(fada, psiquico-dragao)
-vantagem(fada, psiquico-noturno)
-desvantagem(fada, psiquico-metalico)
-normalmente_efetivo(fada, psiquico-fada)
-normalmente_efetivo(fada, inseto-normal)
-desvantagem(fada, inseto-fogo)
-normalmente_efetivo(fada, inseto-agua)
-normalmente_efetivo(fada, inseto-eletrico)
-normalmente_efetivo(fada, inseto-planta)
-normalmente_efetivo(fada, inseto-gelo)
-vantagem(fada, inseto-lutador)
-desvantagem(fada, inseto-veneno)
-normalmente_efetivo(fada, inseto-terra)
-normalmente_efetivo(fada, inseto-voador)
-normalmente_efetivo(fada, inseto-psiquico)
-normalmente_efetivo(fada, inseto-pedra)
-normalmente_efetivo(fada, inseto-fantasma)
-vantagem(fada, inseto-dragao)
-vantagem(fada, inseto-noturno)
-desvantagem(fada, inseto-metalico)
-normalmente_efetivo(fada, inseto-fada)
-normalmente_efetivo(fada, pedra-normal)
-desvantagem(fada, pedra-fogo)
-normalmente_efetivo(fada, pedra-agua)
-normalmente_efetivo(fada, pedra-eletrico)
-normalmente_efetivo(fada, pedra-planta)
-normalmente_efetivo(fada, pedra-gelo)
-vantagem(fada, pedra-lutador)
-desvantagem(fada, pedra-veneno)
-normalmente_efetivo(fada, pedra-terra)
-normalmente_efetivo(fada, pedra-voador)
-normalmente_efetivo(fada, pedra-psiquico)
-normalmente_efetivo(fada, pedra-inseto)
-normalmente_efetivo(fada, pedra-fantasma)
-vantagem(fada, pedra-dragao)
-vantagem(fada, pedra-noturno)
-desvantagem(fada, pedra-metalico)
-normalmente_efetivo(fada, pedra-fada)
-normalmente_efetivo(fada, fantasma-normal)
-desvantagem(fada, fantasma-fogo)
-normalmente_efetivo(fada, fantasma-agua)
-normalmente_efetivo(fada, fantasma-eletrico)
-normalmente_efetivo(fada, fantasma-planta)
-normalmente_efetivo(fada, fantasma-gelo)
-vantagem(fada, fantasma-lutador)
-desvantagem(fada, fantasma-veneno)
-normalmente_efetivo(fada, fantasma-terra)
-normalmente_efetivo(fada, fantasma-voador)
-normalmente_efetivo(fada, fantasma-psiquico)
-normalmente_efetivo(fada, fantasma-inseto)
-normalmente_efetivo(fada, fantasma-pedra)
-vantagem(fada, fantasma-dragao)
-vantagem(fada, fantasma-noturno)
-desvantagem(fada, fantasma-metalico)
-normalmente_efetivo(fada, fantasma-fada)
-vantagem(fada, dragao-normal)
-normalmente_efetivo(fada, dragao-fogo)
-vantagem(fada, dragao-agua)
-vantagem(fada, dragao-eletrico)
-vantagem(fada, dragao-planta)
-vantagem(fada, dragao-gelo)
-super_vantagem(fada, dragao-lutador)
-normalmente_efetivo(fada, dragao-veneno)
-vantagem(fada, dragao-terra)
-vantagem(fada, dragao-voador)
-vantagem(fada, dragao-psiquico)
-vantagem(fada, dragao-inseto)
-vantagem(fada, dragao-pedra)
-vantagem(fada, dragao-fantasma)
-super_vantagem(fada, dragao-noturno)
-normalmente_efetivo(fada, dragao-metalico)
-vantagem(fada, dragao-fada)
-vantagem(fada, noturno-normal)
-normalmente_efetivo(fada, noturno-fogo)
-vantagem(fada, noturno-agua)
-vantagem(fada, noturno-eletrico)
-vantagem(fada, noturno-planta)
-vantagem(fada, noturno-gelo)
-super_vantagem(fada, noturno-lutador)
-normalmente_efetivo(fada, noturno-veneno)
-vantagem(fada, noturno-terra)
-vantagem(fada, noturno-voador)
-vantagem(fada, noturno-psiquico)
-vantagem(fada, noturno-inseto)
-vantagem(fada, noturno-pedra)
-vantagem(fada, noturno-fantasma)
-super_vantagem(fada, noturno-dragao)
-normalmente_efetivo(fada, noturno-metalico)
-vantagem(fada, noturno-fada)
-desvantagem(fada, metalico-normal)
-super_desvantagem(fada, metalico-fogo)
-desvantagem(fada, metalico-agua)
-desvantagem(fada, metalico-eletrico)
-desvantagem(fada, metalico-planta)
-desvantagem(fada, metalico-gelo)
-normalmente_efetivo(fada, metalico-lutador)
-super_desvantagem(fada, metalico-veneno)
-desvantagem(fada, metalico-terra)
-desvantagem(fada, metalico-voador)
-desvantagem(fada, metalico-psiquico)
-desvantagem(fada, metalico-inseto)
-desvantagem(fada, metalico-pedra)
-desvantagem(fada, metalico-fantasma)
-normalmente_efetivo(fada, metalico-dragao)
-normalmente_efetivo(fada, metalico-noturno)
-desvantagem(fada, metalico-fada)
-normalmente_efetivo(fada, fada-normal)
-desvantagem(fada, fada-fogo)
-normalmente_efetivo(fada, fada-agua)
-normalmente_efetivo(fada, fada-eletrico)
-normalmente_efetivo(fada, fada-planta)
-normalmente_efetivo(fada, fada-gelo)
-vantagem(fada, fada-lutador)
-desvantagem(fada, fada-veneno)
-normalmente_efetivo(fada, fada-terra)
-normalmente_efetivo(fada, fada-voador)
-normalmente_efetivo(fada, fada-psiquico)
-normalmente_efetivo(fada, fada-inseto)
-normalmente_efetivo(fada, fada-pedra)
-normalmente_efetivo(fada, fada-fantasma)
-vantagem(fada, fada-dragao)
-vantagem(fada, fada-noturno)
-desvantagem(fada, fada-metalico)
-
+super_weakness(normal,rock-steel).
+super_weakness(normal,steel-rock).
+super_weakness(fire,fire-water).
+super_weakness(fire,fire-rock).
+super_weakness(fire,fire-dragon).
+super_weakness(fire,water-fire).
+super_weakness(fire,water-rock).
+super_weakness(fire,water-dragon).
+super_weakness(fire,rock-fire).
+super_weakness(fire,rock-water).
+super_weakness(fire,rock-dragon).
+super_weakness(fire,dragon-fire).
+super_weakness(fire,dragon-water).
+super_weakness(fire,dragon-rock).
+super_weakness(water,water-grass).
+super_weakness(water,water-dragon).
+super_weakness(water,grass-water).
+super_weakness(water,grass-dragon).
+super_weakness(water,dragon-water).
+super_weakness(water,dragon-grass).
+super_weakness(electric,electric-grass).
+super_weakness(electric,electric-dragon).
+super_weakness(electric,grass-electric).
+super_weakness(electric,grass-dragon).
+super_weakness(electric,dragon-electric).
+super_weakness(electric,dragon-grass).
+super_weakness(grass,fire-grass).
+super_weakness(grass,fire-poison).
+super_weakness(grass,fire-flying).
+super_weakness(grass,fire-bug).
+super_weakness(grass,fire-dragon).
+super_weakness(grass,fire-steel).
+super_weakness(grass,grass-fire).
+super_weakness(grass,grass-poison).
+super_weakness(grass,grass-flying).
+super_weakness(grass,grass-bug).
+super_weakness(grass,grass-dragon).
+super_weakness(grass,grass-steel).
+super_weakness(grass,poison-fire).
+super_weakness(grass,poison-grass).
+super_weakness(grass,poison-flying).
+super_weakness(grass,poison-bug).
+super_weakness(grass,poison-dragon).
+super_weakness(grass,poison-steel).
+super_weakness(grass,flying-fire).
+super_weakness(grass,flying-grass).
+super_weakness(grass,flying-poison).
+super_weakness(grass,flying-bug).
+super_weakness(grass,flying-dragon).
+super_weakness(grass,flying-steel).
+super_weakness(grass,bug-fire).
+super_weakness(grass,bug-grass).
+super_weakness(grass,bug-poison).
+super_weakness(grass,bug-flying).
+super_weakness(grass,bug-dragon).
+super_weakness(grass,bug-steel).
+super_weakness(grass,dragon-fire).
+super_weakness(grass,dragon-grass).
+super_weakness(grass,dragon-poison).
+super_weakness(grass,dragon-flying).
+super_weakness(grass,dragon-bug).
+super_weakness(grass,dragon-steel).
+super_weakness(grass,steel-fire).
+super_weakness(grass,steel-grass).
+super_weakness(grass,steel-poison).
+super_weakness(grass,steel-flying).
+super_weakness(grass,steel-bug).
+super_weakness(grass,steel-dragon).
+super_weakness(ice,fire-water).
+super_weakness(ice,fire-ice).
+super_weakness(ice,fire-steel).
+super_weakness(ice,water-fire).
+super_weakness(ice,water-ice).
+super_weakness(ice,water-steel).
+super_weakness(ice,ice-water).
+super_weakness(ice,ice-steel).
+super_weakness(ice,steel-fire).
+super_weakness(ice,steel-water).
+super_weakness(ice,steel-ice).
+super_weakness(fighting,poison-flying).
+super_weakness(fighting,poison-psychic).
+super_weakness(fighting,poison-bug).
+super_weakness(fighting,poison-fairy).
+super_weakness(fighting,flying-poison).
+super_weakness(fighting,flying-psychic).
+super_weakness(fighting,flying-bug).
+super_weakness(fighting,flying-fairy).
+super_weakness(fighting,psychic-poison).
+super_weakness(fighting,psychic-flying).
+super_weakness(fighting,psychic-bug).
+super_weakness(fighting,psychic-fairy).
+super_weakness(fighting,bug-poison).
+super_weakness(fighting,bug-flying).
+super_weakness(fighting,bug-psychic).
+super_weakness(fighting,bug-fairy).
+super_weakness(fighting,fairy-poison).
+super_weakness(fighting,fairy-flying).
+super_weakness(fighting,fairy-psychic).
+super_weakness(fighting,fairy-bug).
+super_weakness(poison,poison-ground).
+super_weakness(poison,poison-rock).
+super_weakness(poison,poison-ghost).
+super_weakness(poison,ground-poison).
+super_weakness(poison,ground-rock).
+super_weakness(poison,ground-ghost).
+super_weakness(poison,rock-poison).
+super_weakness(poison,rock-ground).
+super_weakness(poison,rock-ghost).
+super_weakness(poison,ghost-poison).
+super_weakness(poison,ghost-ground).
+super_weakness(poison,ghost-rock).
+super_weakness(ground,grass-bug).
+super_weakness(ground,bug-grass).
+super_weakness(flying,electric-rock).
+super_weakness(flying,electric-steel).
+super_weakness(flying,rock-electric).
+super_weakness(flying,rock-steel).
+super_weakness(flying,steel-electric).
+super_weakness(flying,steel-rock).
+super_weakness(psychic,psychic-steel).
+super_weakness(psychic,steel-psychic).
+super_weakness(bug,fire-fighting).
+super_weakness(bug,fire-poison).
+super_weakness(bug,fire-flying).
+super_weakness(bug,fire-ghost).
+super_weakness(bug,fire-steel).
+super_weakness(bug,fire-fairy).
+super_weakness(bug,fighting-fire).
+super_weakness(bug,fighting-flying).
+super_weakness(bug,fighting-ghost).
+super_weakness(bug,fighting-steel).
+super_weakness(bug,fighting-fairy).
+super_weakness(bug,poison-fire).
+super_weakness(bug,poison-flying).
+super_weakness(bug,poison-ghost).
+super_weakness(bug,poison-steel).
+super_weakness(bug,poison-fairy).
+super_weakness(bug,flying-fire).
+super_weakness(bug,flying-fighting).
+super_weakness(bug,flying-poison).
+super_weakness(bug,flying-ghost).
+super_weakness(bug,flying-steel).
+super_weakness(bug,flying-fairy).
+super_weakness(bug,ghost-fire).
+super_weakness(bug,ghost-fighting).
+super_weakness(bug,ghost-poison).
+super_weakness(bug,ghost-flying).
+super_weakness(bug,ghost-steel).
+super_weakness(bug,steel-fire).
+super_weakness(bug,steel-fighting).
+super_weakness(bug,steel-poison).
+super_weakness(bug,steel-flying).
+super_weakness(bug,steel-ghost).
+super_weakness(bug,steel-fairy).
+super_weakness(bug,fairy-fire).
+super_weakness(bug,fairy-fighting).
+super_weakness(bug,fairy-poison).
+super_weakness(bug,fairy-flying).
+super_weakness(bug,fairy-steel).
+super_weakness(rock,fighting-ground).
+super_weakness(rock,fighting-steel).
+super_weakness(rock,ground-fighting).
+super_weakness(rock,ground-steel).
+super_weakness(rock,steel-fighting).
+super_weakness(rock,steel-ground).
+super_weakness(dark,fighting-dark).
+super_weakness(dark,fighting-fairy).
+super_weakness(dark,dark-fighting).
+super_weakness(dark,dark-fairy).
+super_weakness(dark,fairy-fighting).
+super_weakness(dark,fairy-dark).
+super_weakness(steel,fire-water).
+super_weakness(steel,fire-electric).
+super_weakness(steel,fire-steel).
+super_weakness(steel,water-fire).
+super_weakness(steel,water-electric).
+super_weakness(steel,water-steel).
+super_weakness(steel,electric-fire).
+super_weakness(steel,electric-water).
+super_weakness(steel,electric-steel).
+super_weakness(steel,steel-fire).
+super_weakness(steel,steel-water).
+super_weakness(steel,steel-electric).
+super_weakness(fairy,fire-poison).
+super_weakness(fairy,fire-steel).
+super_weakness(fairy,poison-fire).
+super_weakness(fairy,poison-steel).
+super_weakness(fairy,steel-fire).
+super_weakness(fairy,steel-poison).
 
