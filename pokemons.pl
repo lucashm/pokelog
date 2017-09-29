@@ -1,648 +1,648 @@
-pokemon(bulbasaur).
-pokemon(ivysaur).
-pokemon(venusaur).
-pokemon(charmander).
-pokemon(charmeleon).
-pokemon(charizard).
-pokemon(squirtle).
-pokemon(wartortle).
-pokemon(blastoise).
-pokemon(caterpie).
-pokemon(metapod).
-pokemon(butterfree).
-pokemon(weedle).
-pokemon(kakuna).
-pokemon(beedrill).
-pokemon(pidgey).
-pokemon(pidgeotto).
-pokemon(pidgeot).
-pokemon(rattata).
-pokemon(raticate).
-pokemon(spearow).
-pokemon(fearow).
-pokemon(ekans).
-pokemon(arbok).
-pokemon(pikachu).
-pokemon(raichu).
-pokemon(sandshrew).
-pokemon(sandslash).
-pokemon(nidoran).
-pokemon(nidorina).
-pokemon(nidoqueen).
-pokemon(nidorino).
-pokemon(nidoking).
-pokemon(clefairy).
-pokemon(clefable).
-pokemon(vulpix).
-pokemon(ninetales).
-pokemon(jigglypuff).
-pokemon(wigglytuff).
-pokemon(zubat).
-pokemon(golbat).
-pokemon(oddish).
-pokemon(gloom).
-pokemon(vileplume).
-pokemon(paras).
-pokemon(parasect).
-pokemon(venonat).
-pokemon(venomoth).
-pokemon(diglett).
-pokemon(dugtrio).
-pokemon(meowth).
-pokemon(persian).
-pokemon(psyduck).
-pokemon(golduck).
-pokemon(mankey).
-pokemon(primeape).
-pokemon(growlithe).
-pokemon(arcanine).
-pokemon(poliwag).
-pokemon(poliwhirl).
-pokemon(poliwrath).
-pokemon(abra).
-pokemon(kadabra).
-pokemon(alakazam).
-pokemon(machop).
-pokemon(machoke).
-pokemon(machamp).
-pokemon(bellsprout).
-pokemon(weepinbell).
-pokemon(victreebel).
-pokemon(tentacool).
-pokemon(tentacruel).
-pokemon(geodude).
-pokemon(graveler).
-pokemon(golem).
-pokemon(ponyta).
-pokemon(rapidash).
-pokemon(slowpoke).
-pokemon(slowbro).
-pokemon(magnemite).
-pokemon(magneton).
-pokemon(farfetchd).
-pokemon(doduo).
-pokemon(dodrio).
-pokemon(seel).
-pokemon(dewgong).
-pokemon(grimer).
-pokemon(muk).
-pokemon(shellder).
-pokemon(cloyster).
-pokemon(gastly).
-pokemon(haunter).
-pokemon(gengar).
-pokemon(onix).
-pokemon(drowzee).
-pokemon(hypno).
-pokemon(krabby).
-pokemon(kingler).
-pokemon(voltorb).
-pokemon(electrode).
-pokemon(exeggcute).
-pokemon(exeggutor).
-pokemon(cubone).
-pokemon(marowak).
-pokemon(hitmonlee).
-pokemon(hitmonchan).
-pokemon(lickitung).
-pokemon(koffing).
-pokemon(weezing).
-pokemon(rhyhorn).
-pokemon(rhydon).
-pokemon(chansey).
-pokemon(tangela).
-pokemon(kangaskhan).
-pokemon(horsea).
-pokemon(seadra).
-pokemon(goldeen).
-pokemon(seaking).
-pokemon(staryu).
-pokemon(starmie).
-pokemon(mr-mime).
-pokemon(scyther).
-pokemon(jynx).
-pokemon(electabuzz).
-pokemon(magmar).
-pokemon(pinsir).
-pokemon(tauros).
-pokemon(magikarp).
-pokemon(gyarados).
-pokemon(lapras).
-pokemon(ditto).
-pokemon(eevee).
-pokemon(vaporeon).
-pokemon(jolteon).
-pokemon(flareon).
-pokemon(porygon).
-pokemon(omanyte).
-pokemon(omastar).
-pokemon(kabuto).
-pokemon(kabutops).
-pokemon(aerodactyl).
-pokemon(snorlax).
-pokemon(articuno).
-pokemon(zapdos).
-pokemon(moltres).
-pokemon(dratini).
-pokemon(dragonair).
-pokemon(dragonite).
-pokemon(mewtwo).
-pokemon(mew).
-pokemon(chikorita).
-pokemon(bayleef).
-pokemon(meganium).
-pokemon(cyndaquil).
-pokemon(quilava).
-pokemon(typhlosion).
-pokemon(totodile).
-pokemon(croconaw).
-pokemon(feraligatr).
-pokemon(sentret).
-pokemon(furret).
-pokemon(hoothoot).
-pokemon(noctowl).
-pokemon(ledyba).
-pokemon(ledian).
-pokemon(spinarak).
-pokemon(ariados).
-pokemon(crobat).
-pokemon(chinchou).
-pokemon(lanturn).
-pokemon(pichu).
-pokemon(cleffa).
-pokemon(igglybuff).
-pokemon(togepi).
-pokemon(togetic).
-pokemon(natu).
-pokemon(xatu).
-pokemon(mareep).
-pokemon(flaaffy).
-pokemon(ampharos).
-pokemon(bellossom).
-pokemon(marill).
-pokemon(azumarill).
-pokemon(sudowoodo).
-pokemon(politoed).
-pokemon(hoppip).
-pokemon(skiploom).
-pokemon(jumpluff).
-pokemon(aipom).
-pokemon(sunkern).
-pokemon(sunflora).
-pokemon(yanma).
-pokemon(wooper).
-pokemon(quagsire).
-pokemon(espeon).
-pokemon(umbreon).
-pokemon(murkrow).
-pokemon(slowking).
-pokemon(misdreavus).
-pokemon(unown).
-pokemon(wobbuffet).
-pokemon(girafarig).
-pokemon(pineco).
-pokemon(forretress).
-pokemon(dunsparce).
-pokemon(gligar).
-pokemon(steelix).
-pokemon(snubbull).
-pokemon(granbull).
-pokemon(qwilfish).
-pokemon(scizor).
-pokemon(shuckle).
-pokemon(heracross).
-pokemon(sneasel).
-pokemon(teddiursa).
-pokemon(ursaring).
-pokemon(slugma).
-pokemon(magcargo).
-pokemon(swinub).
-pokemon(piloswine).
-pokemon(corsola).
-pokemon(remoraid).
-pokemon(octillery).
-pokemon(delibird).
-pokemon(mantine).
-pokemon(skarmory).
-pokemon(houndour).
-pokemon(houndoom).
-pokemon(kingdra).
-pokemon(phanpy).
-pokemon(donphan).
-pokemon(porygon2).
-pokemon(stantler).
-pokemon(smeargle).
-pokemon(tyrogue).
-pokemon(hitmontop).
-pokemon(smoochum).
-pokemon(elekid).
-pokemon(magby).
-pokemon(miltank).
-pokemon(blissey).
-pokemon(raikou).
-pokemon(entei).
-pokemon(suicune).
-pokemon(larvitar).
-pokemon(pupitar).
-pokemon(tyranitar).
-pokemon(lugia).
-pokemon(ho-oh).
-pokemon(celebi).
-pokemon(treecko).
-pokemon(grovyle).
-pokemon(sceptile).
-pokemon(torchic).
-pokemon(combusken).
-pokemon(blaziken).
-pokemon(mudkip).
-pokemon(marshtomp).
-pokemon(swampert).
-pokemon(poochyena).
-pokemon(mightyena).
-pokemon(zigzagoon).
-pokemon(linoone).
-pokemon(wurmple).
-pokemon(silcoon).
-pokemon(beautifly).
-pokemon(cascoon).
-pokemon(dustox).
-pokemon(lotad).
-pokemon(lombre).
-pokemon(ludicolo).
-pokemon(seedot).
-pokemon(nuzleaf).
-pokemon(shiftry).
-pokemon(taillow).
-pokemon(swellow).
-pokemon(wingull).
-pokemon(pelipper).
-pokemon(ralts).
-pokemon(kirlia).
-pokemon(gardevoir).
-pokemon(surskit).
-pokemon(masquerain).
-pokemon(shroomish).
-pokemon(breloom).
-pokemon(slakoth).
-pokemon(vigoroth).
-pokemon(slaking).
-pokemon(nincada).
-pokemon(ninjask).
-pokemon(shedinja).
-pokemon(whismur).
-pokemon(loudred).
-pokemon(exploud).
-pokemon(makuhita).
-pokemon(hariyama).
-pokemon(azurill).
-pokemon(nosepass).
-pokemon(skitty).
-pokemon(delcatty).
-pokemon(sableye).
-pokemon(mawile).
-pokemon(aron).
-pokemon(lairon).
-pokemon(aggron).
-pokemon(meditite).
-pokemon(medicham).
-pokemon(electrike).
-pokemon(manectric).
-pokemon(plusle).
-pokemon(minun).
-pokemon(volbeat).
-pokemon(illumise).
-pokemon(roselia).
-pokemon(gulpin).
-pokemon(swalot).
-pokemon(carvanha).
-pokemon(sharpedo).
-pokemon(wailmer).
-pokemon(wailord).
-pokemon(numel).
-pokemon(camerupt).
-pokemon(torkoal).
-pokemon(spoink).
-pokemon(grumpig).
-pokemon(spinda).
-pokemon(trapinch).
-pokemon(vibrava).
-pokemon(flygon).
-pokemon(cacnea).
-pokemon(cacturne).
-pokemon(swablu).
-pokemon(altaria).
-pokemon(zangoose).
-pokemon(seviper).
-pokemon(lunatone).
-pokemon(solrock).
-pokemon(barboach).
-pokemon(whiscash).
-pokemon(corphish).
-pokemon(crawdaunt).
-pokemon(baltoy).
-pokemon(claydol).
-pokemon(lileep).
-pokemon(cradily).
-pokemon(anorith).
-pokemon(armaldo).
-pokemon(feebas).
-pokemon(milotic).
-pokemon(castform).
-pokemon(kecleon).
-pokemon(shuppet).
-pokemon(banette).
-pokemon(duskull).
-pokemon(dusclops).
-pokemon(tropius).
-pokemon(chimecho).
-pokemon(absol).
-pokemon(wynaut).
-pokemon(snorunt).
-pokemon(glalie).
-pokemon(spheal).
-pokemon(sealeo).
-pokemon(walrein).
-pokemon(clamperl).
-pokemon(huntail).
-pokemon(gorebyss).
-pokemon(relicanth).
-pokemon(luvdisc).
-pokemon(bagon).
-pokemon(shelgon).
-pokemon(salamence).
-pokemon(beldum).
-pokemon(metang).
-pokemon(metagross).
-pokemon(regirock).
-pokemon(regice).
-pokemon(registeel).
-pokemon(latias).
-pokemon(latios).
-pokemon(kyogre).
-pokemon(groudon).
-pokemon(rayquaza).
-pokemon(jirachi).
-pokemon(deoxys).
-pokemon(turtwig).
-pokemon(grotle).
-pokemon(torterra).
-pokemon(chimchar).
-pokemon(monferno).
-pokemon(infernape).
-pokemon(piplup).
-pokemon(prinplup).
-pokemon(empoleon).
-pokemon(starly).
-pokemon(staravia).
-pokemon(staraptor).
-pokemon(bidoof).
-pokemon(bibarel).
-pokemon(kricketot).
-pokemon(kricketune).
-pokemon(shinx).
-pokemon(luxio).
-pokemon(luxray).
-pokemon(budew).
-pokemon(roserade).
-pokemon(cranidos).
-pokemon(rampardos).
-pokemon(shieldon).
-pokemon(bastiodon).
-pokemon(burmy).
-pokemon(wormadam).
-pokemon(mothim).
-pokemon(combee).
-pokemon(vespiquen).
-pokemon(pachirisu).
-pokemon(buizel).
-pokemon(floatzel).
-pokemon(cherubi).
-pokemon(cherrim).
-pokemon(shellos).
-pokemon(gastrodon).
-pokemon(ambipom).
-pokemon(drifloon).
-pokemon(drifblim).
-pokemon(buneary).
-pokemon(lopunny).
-pokemon(mismagius).
-pokemon(honchkrow).
-pokemon(glameow).
-pokemon(purugly).
-pokemon(chingling).
-pokemon(stunky).
-pokemon(skuntank).
-pokemon(bronzor).
-pokemon(bronzong).
-pokemon(bonsly).
-pokemon(mime-jr).
-pokemon(happiny).
-pokemon(chatot).
-pokemon(spiritomb).
-pokemon(gible).
-pokemon(gabite).
-pokemon(garchomp).
-pokemon(munchlax).
-pokemon(riolu).
-pokemon(lucario).
-pokemon(hippopotas).
-pokemon(hippowdon).
-pokemon(skorupi).
-pokemon(drapion).
-pokemon(croagunk).
-pokemon(toxicroak).
-pokemon(carnivine).
-pokemon(finneon).
-pokemon(lumineon).
-pokemon(mantyke).
-pokemon(snover).
-pokemon(abomasnow).
-pokemon(weavile).
-pokemon(magnezone).
-pokemon(lickilicky).
-pokemon(rhyperior).
-pokemon(tangrowth).
-pokemon(electivire).
-pokemon(magmortar).
-pokemon(togekiss).
-pokemon(yanmega).
-pokemon(leafeon).
-pokemon(glaceon).
-pokemon(gliscor).
-pokemon(mamoswine).
-pokemon(porygon-z).
-pokemon(gallade).
-pokemon(probopass).
-pokemon(dusknoir).
-pokemon(froslass).
-pokemon(rotom).
-pokemon(uxie).
-pokemon(mesprit).
-pokemon(azelf).
-pokemon(dialga).
-pokemon(palkia).
-pokemon(heatran).
-pokemon(regigigas).
-pokemon(giratina).
-pokemon(cresselia).
-pokemon(phione).
-pokemon(manaphy).
-pokemon(darkrai).
-pokemon(shaymin).
-pokemon(arceus).
-pokemon(victini).
-pokemon(snivy).
-pokemon(servine).
-pokemon(serperior).
-pokemon(tepig).
-pokemon(pignite).
-pokemon(emboar).
-pokemon(oshawott).
-pokemon(dewott).
-pokemon(samurott).
-pokemon(patrat).
-pokemon(watchog).
-pokemon(lillipup).
-pokemon(herdier).
-pokemon(stoutland).
-pokemon(purrloin).
-pokemon(liepard).
-pokemon(pansage).
-pokemon(simisage).
-pokemon(pansear).
-pokemon(simisear).
-pokemon(panpour).
-pokemon(simipour).
-pokemon(munna).
-pokemon(musharna).
-pokemon(pidove).
-pokemon(tranquill).
-pokemon(unfezant).
-pokemon(blitzle).
-pokemon(zebstrika).
-pokemon(roggenrola).
-pokemon(boldore).
-pokemon(gigalith).
-pokemon(woobat).
-pokemon(swoobat).
-pokemon(drilbur).
-pokemon(excadrill).
-pokemon(audino).
-pokemon(timburr).
-pokemon(gurdurr).
-pokemon(conkeldurr).
-pokemon(tympole).
-pokemon(palpitoad).
-pokemon(seismitoad).
-pokemon(throh).
-pokemon(sawk).
-pokemon(sewaddle).
-pokemon(swadloon).
-pokemon(leavanny).
-pokemon(venipede).
-pokemon(whirlipede).
-pokemon(scolipede).
-pokemon(cottonee).
-pokemon(whimsicott).
-pokemon(petilil).
-pokemon(lilligant).
-pokemon(basculin).
-pokemon(sandile).
-pokemon(krokorok).
-pokemon(krookodile).
-pokemon(darumaka).
-pokemon(darmanitan).
-pokemon(maractus).
-pokemon(dwebble).
-pokemon(crustle).
-pokemon(scraggy).
-pokemon(scrafty).
-pokemon(sigilyph).
-pokemon(yamask).
-pokemon(cofagrigus).
-pokemon(tirtouga).
-pokemon(carracosta).
-pokemon(archen).
-pokemon(archeops).
-pokemon(trubbish).
-pokemon(garbodor).
-pokemon(zorua).
-pokemon(zoroark).
-pokemon(minccino).
-pokemon(ciccino).
-pokemon(gothita).
-pokemon(gothorita).
-pokemon(gothitelle).
-pokemon(solosis).
-pokemon(duosion).
-pokemon(reuniclus).
-pokemon(ducklett).
-pokemon(swanna).
-pokemon(vanillite).
-pokemon(vanillish).
-pokemon(vanilluxe).
-pokemon(deerling).
-pokemon(sawsbuck).
-pokemon(emolga).
-pokemon(karrablast).
-pokemon(escavalier).
-pokemon(foongus).
-pokemon(amoonguss).
-pokemon(frillish).
-pokemon(jellicent).
-pokemon(alomomola).
-pokemon(joltik).
-pokemon(galvantula).
-pokemon(ferroseed).
-pokemon(ferrothorn).
-pokemon(klink).
-pokemon(klang).
-pokemon(klinklang).
-pokemon(tynamo).
-pokemon(eelektrik).
-pokemon(eelektross).
-pokemon(elgyem).
-pokemon(beheeyem).
-pokemon(litwick).
-pokemon(lampent).
-pokemon(chandelure).
-pokemon(axew).
-pokemon(fraxure).
-pokemon(haxorus).
-pokemon(cubchoo).
-pokemon(beartic).
-pokemon(cryogonal).
-pokemon(shelmet).
-pokemon(accelgor).
-pokemon(stunfisk).
-pokemon(mienfoo).
-pokemon(mienshao).
-pokemon(druddigon).
-pokemon(golett).
-pokemon(golurk).
-pokemon(pawniard).
-pokemon(bisharp).
-pokemon(bouffalant).
-pokemon(rufflet).
-pokemon(braviary).
-pokemon(vullaby).
-pokemon(mandibuzz).
-pokemon(heatmor).
-pokemon(durant).
-pokemon(deino).
-pokemon(zweilous).
-pokemon(hydreigon).
-pokemon(larvesta).
-pokemon(volcarona).
-pokemon(cobalion).
-pokemon(terrakion).
-pokemon(virizion).
-pokemon(tornadus).
-pokemon(thundurus).
-pokemon(reshiram).
-pokemon(zekrom).
-pokemon(landorus).
-pokemon(kyurem).
-pokemon(keldeo).
-pokemon(meloetta).
-pokemon(genesect).
+pokemon(1, bulbasaur, 45, 49, 49, 65, 65, 45, 318).
+pokemon(2, ivysaur, 60, 62, 63, 80, 80, 60, 405).
+pokemon(3, venusaur, 80, 82, 83, 100, 100, 80, 525).
+pokemon(4, charmander, 39, 52, 43, 60, 50, 65, 309).
+pokemon(5, charmeleon, 58, 64, 58, 80, 65, 80, 405).
+pokemon(6, charizard, 78, 84, 78, 109, 85, 100, 534).
+pokemon(7, squirtle, 44, 48, 65, 60, 54, 43, 314).
+pokemon(8, wartortle, 59, 63, 80, 65, 80, 58, 405).
+pokemon(9, blastoise, 79, 83, 100, 85, 105, 78, 530).
+pokemon(10, caterpie, 45, 30, 35, 20, 20, 45, 195).
+pokemon(11, metapod, 50, 20, 55, 25, 25, 30, 205).
+pokemon(12, butterfree, 60, 45, 50, 80, 80, 70, 385).
+pokemon(13, weedle, 40, 35, 30, 20, 20, 50, 195).
+pokemon(14, kakuna, 45, 25, 50, 25, 25, 35, 205).
+pokemon(15, beedrill, 65, 80, 40, 40, 80, 75, 380).
+pokemon(16, pidgey, 40, 45, 40, 35, 35, 56, 251).
+pokemon(17, pidgeotto, 63, 60, 55, 50, 50, 71, 349).
+pokemon(18, pidgeot, 83, 80, 75, 70, 70, 91, 469).
+pokemon(19, rattata, 30, 56, 35, 25, 35, 72, 253).
+pokemon(20, raticate, 55, 81, 60, 50, 70, 97, 413).
+pokemon(21, spearow, 40, 60, 30, 31, 31, 70, 262).
+pokemon(22, fearow, 65, 90, 65, 61, 61, 100, 442).
+pokemon(23, ekans, 30, 60, 44, 40, 54, 55, 283).
+pokemon(24, arbok, 60, 85, 69, 65, 79, 80, 438).
+pokemon(25, pikachu, 35, 55, 30, 50, 40, 90, 300).
+pokemon(26, raichu, 60, 90, 55, 90, 80, 100, 475).
+pokemon(27, sandshrew, 50, 75, 85, 20, 30, 40, 300).
+pokemon(28, sandslash, 75, 100, 110, 45, 55, 65, 450).
+pokemon(29, nidoran, 55, 47, 52, 40, 40, 41, 275).
+pokemon(30, nidorina, 70, 62, 67, 55, 55, 56, 365).
+pokemon(31, nidoqueen, 90, 82, 87, 75, 85, 76, 495).
+pokemon(33, nidorino, 61, 72, 57, 55, 55, 65, 365).
+pokemon(34, nidoking, 81, 92, 77, 85, 75, 85, 495).
+pokemon(35, clefairy, 70, 45, 48, 60, 65, 35, 323).
+pokemon(36, clefable, 95, 70, 73, 85, 90, 60, 473).
+pokemon(37, vulpix, 38, 41, 40, 50, 65, 65, 299).
+pokemon(38, ninetales, 73, 76, 75, 81, 100, 100, 505).
+pokemon(39, jigglypuff, 115, 45, 20, 45, 25, 20, 270).
+pokemon(40, wigglytuff, 140, 70, 45, 75, 50, 45, 425).
+pokemon(41, zubat, 40, 45, 35, 30, 40, 55, 245).
+pokemon(42, golbat, 75, 80, 70, 65, 75, 90, 455).
+pokemon(43, oddish, 45, 50, 55, 75, 65, 30, 320).
+pokemon(44, gloom, 60, 65, 70, 85, 75, 40, 395).
+pokemon(45, vileplume, 75, 80, 85, 100, 90, 50, 480).
+pokemon(46, paras, 35, 70, 55, 45, 55, 25, 285).
+pokemon(47, parasect, 60, 95, 80, 60, 80, 30, 405).
+pokemon(48, venonat, 60, 55, 50, 40, 55, 45, 305).
+pokemon(49, venomoth, 70, 65, 60, 90, 75, 90, 450).
+pokemon(50, diglett, 10, 55, 25, 35, 45, 95, 265).
+pokemon(51, dugtrio, 35, 80, 50, 50, 70, 120, 405).
+pokemon(52, meowth, 40, 45, 35, 40, 40, 90, 290).
+pokemon(53, persian, 65, 70, 60, 65, 65, 115, 440).
+pokemon(54, psyduck, 50, 52, 48, 65, 50, 55, 320).
+pokemon(55, golduck, 80, 82, 78, 95, 80, 85, 500).
+pokemon(56, mankey, 40, 80, 35, 35, 45, 70, 305).
+pokemon(57, primeape, 65, 105, 60, 60, 70, 95, 455).
+pokemon(58, growlithe, 55, 70, 45, 70, 50, 60, 350).
+pokemon(59, arcanine, 90, 110, 80, 100, 80, 95, 555).
+pokemon(60, poliwag, 40, 50, 40, 40, 40, 90, 300).
+pokemon(61, poliwhirl, 65, 65, 65, 50, 50, 90, 385).
+pokemon(62, poliwrath, 90, 85, 95, 70, 90, 70, 500).
+pokemon(63, abra, 25, 20, 15, 105, 55, 90, 310).
+pokemon(64, kadabra, 40, 35, 30, 120, 70, 105, 400).
+pokemon(65, alakazam, 55, 50, 45, 135, 85, 120, 490).
+pokemon(66, machop, 70, 80, 50, 35, 35, 35, 305).
+pokemon(67, machoke, 80, 100, 70, 50, 60, 45, 405).
+pokemon(68, machamp, 90, 130, 80, 65, 85, 55, 505).
+pokemon(69, bellsprout, 50, 75, 35, 70, 30, 40, 300).
+pokemon(70, weepinbell, 65, 90, 50, 85, 45, 55, 390).
+pokemon(71, victreebel, 80, 105, 65, 100, 60, 70, 480).
+pokemon(72, tentacool, 40, 40, 35, 50, 100, 70, 335).
+pokemon(73, tentacruel, 80, 70, 65, 80, 120, 100, 515).
+pokemon(74, geodude, 40, 80, 100, 30, 30, 20, 300).
+pokemon(75, graveler, 55, 95, 115, 45, 45, 35, 390).
+pokemon(76, golem, 80, 110, 130, 55, 65, 45, 485).
+pokemon(77, ponyta, 50, 85, 55, 65, 65, 90, 410).
+pokemon(78, rapidash, 65, 100, 70, 80, 80, 105, 500).
+pokemon(79, slowpoke, 90, 65, 65, 40, 40, 15, 315).
+pokemon(80, slowbro, 95, 75, 110, 100, 80, 30, 490).
+pokemon(81, magnemite, 25, 35, 70, 95, 55, 45, 325).
+pokemon(82, magneton, 50, 60, 95, 120, 70, 70, 465).
+pokemon(83, farfetchd, 52, 65, 55, 58, 62, 60, 352).
+pokemon(84, doduo, 35, 85, 45, 35, 35, 75, 310).
+pokemon(85, dodrio, 60, 110, 70, 60, 60, 100, 460).
+pokemon(86, seel, 65, 45, 55, 45, 70, 45, 325).
+pokemon(87, dewgong, 90, 70, 80, 70, 95, 70, 475).
+pokemon(88, grimer, 80, 80, 50, 40, 50, 25, 325).
+pokemon(89, muk, 105, 105, 75, 65, 100, 50, 500).
+pokemon(90, shellder, 30, 65, 100, 45, 25, 40, 305).
+pokemon(91, cloyster, 50, 90, 180, 85, 45, 70, 520).
+pokemon(92, gastly, 30, 35, 30, 100, 35, 80, 310).
+pokemon(93, haunter, 45, 50, 45, 115, 55, 95, 405).
+pokemon(94, gengar, 60, 65, 60, 130, 75, 110, 500).
+pokemon(95, onix, 35, 45, 160, 30, 45, 70, 385).
+pokemon(96, drowzee, 60, 48, 45, 43, 90, 42, 328).
+pokemon(97, hypno, 85, 73, 70, 73, 115, 67, 483).
+pokemon(98, krabby, 30, 105, 90, 25, 25, 50, 325).
+pokemon(99, kingler, 55, 130, 115, 50, 50, 75, 475).
+pokemon(100, voltorb, 40, 30, 50, 55, 55, 100, 330).
+pokemon(101, electrode, 60, 50, 70, 80, 80, 140, 480).
+pokemon(102, exeggcute, 60, 40, 80, 60, 45, 40, 325).
+pokemon(103, exeggutor, 95, 95, 85, 125, 65, 55, 520).
+pokemon(104, cubone, 50, 50, 95, 40, 50, 35, 320).
+pokemon(105, marowak, 60, 80, 110, 50, 80, 45, 425).
+pokemon(106, hitmonlee, 50, 120, 53, 35, 110, 87, 455).
+pokemon(107, hitmonchan, 50, 105, 79, 35, 110, 76, 455).
+pokemon(108, lickitung, 90, 55, 75, 60, 75, 30, 385).
+pokemon(109, koffing, 40, 65, 95, 60, 45, 35, 340).
+pokemon(110, weezing, 65, 90, 120, 85, 70, 60, 490).
+pokemon(111, rhyhorn, 80, 85, 95, 30, 30, 25, 345).
+pokemon(112, rhydon, 105, 130, 120, 45, 45, 40, 485).
+pokemon(113, chansey, 250, 5, 5, 35, 105, 50, 450).
+pokemon(114, tangela, 65, 55, 115, 100, 40, 60, 435).
+pokemon(115, kangaskhan, 105, 95, 80, 40, 80, 90, 490).
+pokemon(116, horsea, 30, 40, 70, 70, 25, 60, 295).
+pokemon(117, seadra, 55, 65, 95, 95, 45, 85, 440).
+pokemon(118, goldeen, 45, 67, 60, 35, 50, 63, 320).
+pokemon(119, seaking, 80, 92, 65, 65, 80, 68, 450).
+pokemon(120, staryu, 30, 45, 55, 70, 55, 85, 340).
+pokemon(121, starmie, 60, 75, 85, 100, 85, 115, 520).
+pokemon(122, mr-mime, 40, 45, 65, 100, 120, 90, 460).
+pokemon(123, scyther, 70, 110, 80, 55, 80, 105, 500).
+pokemon(124, jynx, 65, 50, 35, 115, 95, 95, 455).
+pokemon(125, electabuzz, 65, 83, 57, 95, 85, 105, 490).
+pokemon(126, magmar, 65, 95, 57, 100, 85, 93, 495).
+pokemon(127, pinsir, 65, 125, 100, 55, 70, 85, 500).
+pokemon(128, tauros, 75, 100, 95, 40, 70, 110, 490).
+pokemon(129, magikarp, 20, 10, 55, 15, 20, 80, 200).
+pokemon(130, gyarados, 95, 125, 79, 60, 100, 81, 540).
+pokemon(131, lapras, 130, 85, 80, 85, 95, 60, 535).
+pokemon(132, ditto, 48, 48, 48, 48, 48, 48, 288).
+pokemon(133, eevee, 55, 55, 50, 45, 65, 55, 325).
+pokemon(134, vaporeon, 130, 65, 60, 110, 95, 65, 525).
+pokemon(135, jolteon, 65, 65, 60, 110, 95, 130, 525).
+pokemon(136, flareon, 65, 130, 60, 95, 110, 65, 525).
+pokemon(137, porygon, 65, 60, 70, 85, 75, 40, 395).
+pokemon(138, omanyte, 35, 40, 100, 90, 55, 35, 355).
+pokemon(139, omastar, 70, 60, 125, 115, 70, 55, 495).
+pokemon(140, kabuto, 30, 80, 90, 55, 45, 55, 355).
+pokemon(141, kabutops, 60, 115, 105, 65, 70, 80, 495).
+pokemon(142, aerodactyl, 80, 105, 65, 60, 75, 130, 515).
+pokemon(143, snorlax, 160, 110, 65, 65, 110, 30, 540).
+pokemon(144, articuno, 90, 85, 100, 95, 125, 85, 580).
+pokemon(145, zapdos, 90, 90, 85, 125, 90, 100, 580).
+pokemon(146, moltres, 90, 100, 90, 125, 85, 90, 580).
+pokemon(147, dratini, 41, 64, 45, 50, 50, 50, 300).
+pokemon(148, dragonair, 61, 84, 65, 70, 70, 70, 420).
+pokemon(149, dragonite, 91, 134, 95, 100, 100, 80, 600).
+pokemon(150, mewtwo, 106, 110, 90, 154, 90, 130, 680).
+pokemon(151, mew, 100, 100, 100, 100, 100, 100, 600).
+pokemon(152, chikorita, 45, 49, 65, 49, 65, 45, 318).
+pokemon(153, bayleef, 60, 62, 80, 63, 80, 69, 414).
+pokemon(154, meganium, 80, 82, 100, 83, 100, 80, 525).
+pokemon(155, cyndaquil, 39, 52, 43, 60, 50, 65, 309).
+pokemon(156, quilava, 58, 64, 58, 80, 65, 80, 405).
+pokemon(157, typhlosion, 78, 84, 78, 109, 85, 100, 534).
+pokemon(158, totodile, 50, 65, 64, 44, 48, 43, 314).
+pokemon(159, croconaw, 65, 80, 80, 59, 63, 58, 405).
+pokemon(160, feraligatr, 85, 105, 100, 79, 83, 78, 530).
+pokemon(161, sentret, 35, 46, 34, 35, 45, 20, 215).
+pokemon(162, furret, 85, 76, 64, 45, 55, 90, 415).
+pokemon(163, hoothoot, 60, 30, 30, 36, 56, 50, 262).
+pokemon(164, noctowl, 100, 50, 50, 76, 96, 70, 442).
+pokemon(165, ledyba, 40, 20, 30, 40, 80, 55, 265).
+pokemon(166, ledian, 55, 35, 50, 55, 110, 85, 390).
+pokemon(167, spinarak, 40, 60, 40, 40, 40, 30, 250).
+pokemon(168, ariados, 70, 90, 70, 60, 60, 40, 390).
+pokemon(169, crobat, 85, 90, 80, 70, 80, 130, 535).
+pokemon(170, chinchou, 75, 38, 38, 56, 56, 67, 330).
+pokemon(171, lanturn, 125, 58, 58, 76, 76, 67, 460).
+pokemon(172, pichu, 20, 40, 15, 35, 35, 60, 205).
+pokemon(173, cleffa, 50, 25, 28, 45, 55, 15, 218).
+pokemon(174, igglybuff, 90, 30, 15, 40, 20, 15, 210).
+pokemon(175, togepi, 35, 20, 65, 40, 65, 20, 245).
+pokemon(176, togetic, 55, 40, 85, 80, 105, 40, 405).
+pokemon(177, natu, 40, 50, 45, 70, 45, 70, 320).
+pokemon(178, xatu, 65, 75, 70, 95, 70, 95, 470).
+pokemon(179, mareep, 55, 40, 40, 65, 45, 35, 280).
+pokemon(180, flaaffy, 70, 55, 55, 80, 60, 45, 365).
+pokemon(181, ampharos, 90, 75, 75, 115, 90, 55, 500).
+pokemon(182, bellossom, 75, 80, 85, 90, 100, 50, 480).
+pokemon(183, marill, 70, 20, 50, 20, 50, 40, 250).
+pokemon(184, azumarill, 100, 50, 80, 50, 80, 50, 410).
+pokemon(185, sudowoodo, 70, 100, 115, 30, 65, 30, 410).
+pokemon(186, politoed, 90, 75, 75, 90, 100, 70, 500).
+pokemon(187, hoppip, 35, 35, 40, 35, 55, 50, 250).
+pokemon(188, skiploom, 55, 45, 50, 45, 65, 80, 340).
+pokemon(189, jumpluff, 75, 55, 70, 55, 85, 110, 450).
+pokemon(190, aipom, 55, 70, 55, 40, 55, 85, 360).
+pokemon(191, sunkern, 30, 30, 30, 30, 30, 30, 180).
+pokemon(192, sunflora, 75, 75, 55, 105, 85, 30, 425).
+pokemon(193, yanma, 65, 65, 45, 75, 45, 95, 390).
+pokemon(194, wooper, 55, 45, 45, 25, 25, 15, 210).
+pokemon(195, quagsire, 95, 85, 85, 65, 65, 35, 430).
+pokemon(196, espeon, 65, 65, 60, 130, 95, 110, 525).
+pokemon(197, umbreon, 95, 65, 110, 60, 130, 65, 525).
+pokemon(198, murkrow, 60, 85, 42, 85, 42, 91, 405).
+pokemon(199, slowking, 95, 75, 80, 100, 110, 30, 490).
+pokemon(200, misdreavus, 60, 60, 60, 85, 85, 85, 435).
+pokemon(201, unown, 48, 72, 48, 72, 48, 48, 336).
+pokemon(202, wobbuffet, 190, 33, 58, 33, 58, 33, 405).
+pokemon(203, girafarig, 70, 80, 65, 90, 65, 85, 455).
+pokemon(204, pineco, 50, 65, 90, 35, 35, 15, 290).
+pokemon(205, forretress, 75, 90, 140, 60, 60, 40, 465).
+pokemon(206, dunsparce, 100, 70, 70, 65, 65, 45, 415).
+pokemon(207, gligar, 65, 75, 105, 35, 65, 85, 430).
+pokemon(208, steelix, 75, 85, 200, 55, 65, 30, 510).
+pokemon(209, snubbull, 60, 80, 50, 40, 40, 30, 300).
+pokemon(210, granbull, 90, 120, 75, 60, 60, 45, 450).
+pokemon(211, qwilfish, 65, 95, 75, 55, 55, 85, 430).
+pokemon(212, scizor, 70, 130, 100, 55, 80, 65, 500).
+pokemon(213, shuckle, 20, 10, 230, 10, 230, 5, 505).
+pokemon(214, heracross, 80, 125, 75, 40, 95, 85, 500).
+pokemon(215, sneasel, 55, 95, 55, 35, 75, 115, 430).
+pokemon(216, teddiursa, 60, 80, 50, 50, 50, 40, 330).
+pokemon(217, ursaring, 90, 130, 75, 75, 75, 55, 500).
+pokemon(218, slugma, 40, 40, 40, 70, 40, 20, 250).
+pokemon(219, magcargo, 50, 50, 120, 80, 80, 30, 410).
+pokemon(220, swinub, 50, 50, 40, 30, 30, 50, 250).
+pokemon(221, piloswine, 100, 100, 80, 60, 60, 50, 450).
+pokemon(222, corsola, 55, 55, 85, 65, 85, 35, 380).
+pokemon(223, remoraid, 35, 65, 35, 65, 35, 65, 300).
+pokemon(224, octillery, 75, 105, 75, 105, 75, 45, 480).
+pokemon(225, delibird, 45, 55, 45, 65, 45, 75, 330).
+pokemon(226, mantine, 65, 40, 70, 80, 140, 70, 465).
+pokemon(227, skarmory, 65, 80, 140, 40, 70, 70, 465).
+pokemon(228, houndour, 45, 60, 30, 80, 50, 65, 330).
+pokemon(229, houndoom, 75, 90, 50, 110, 80, 95, 500).
+pokemon(230, kingdra, 75, 95, 95, 95, 95, 85, 540).
+pokemon(231, phanpy, 90, 60, 60, 40, 40, 40, 330).
+pokemon(232, donphan, 90, 120, 120, 60, 60, 50, 500).
+pokemon(233, porygon2, 85, 80, 90, 105, 95, 60, 515).
+pokemon(234, stantler, 73, 95, 62, 85, 65, 85, 465).
+pokemon(235, smeargle, 55, 20, 35, 20, 45, 75, 250).
+pokemon(236, tyrogue, 35, 35, 35, 35, 35, 35, 210).
+pokemon(237, hitmontop, 50, 95, 95, 35, 110, 70, 455).
+pokemon(238, smoochum, 45, 30, 15, 85, 65, 65, 305).
+pokemon(239, elekid, 45, 63, 37, 65, 55, 95, 360).
+pokemon(240, magby, 45, 75, 37, 70, 55, 83, 365).
+pokemon(241, miltank, 95, 80, 105, 40, 70, 100, 490).
+pokemon(242, blissey, 255, 10, 10, 75, 135, 55, 540).
+pokemon(243, raikou, 90, 85, 75, 115, 100, 115, 580).
+pokemon(244, entei, 115, 115, 85, 90, 75, 100, 580).
+pokemon(245, suicune, 100, 75, 115, 90, 115, 85, 580).
+pokemon(246, larvitar, 50, 64, 50, 45, 50, 41, 300).
+pokemon(247, pupitar, 70, 84, 70, 65, 70, 51, 410).
+pokemon(248, tyranitar, 100, 134, 110, 95, 100, 61, 600).
+pokemon(249, lugia, 106, 90, 130, 90, 154, 110, 680).
+pokemon(250, ho-oh, 106, 130, 90, 110, 154, 90, 680).
+pokemon(251, celebi, 100, 100, 100, 100, 100, 100, 600).
+pokemon(252, treecko, 40, 45, 35, 65, 55, 70, 310).
+pokemon(253, grovyle, 50, 65, 45, 85, 65, 95, 405).
+pokemon(254, sceptile, 70, 85, 65, 105, 85, 120, 530).
+pokemon(255, torchic, 45, 60, 40, 70, 50, 45, 310).
+pokemon(256, combusken, 60, 85, 60, 85, 60, 55, 405).
+pokemon(257, blaziken, 80, 120, 70, 110, 70, 80, 530).
+pokemon(258, mudkip, 50, 70, 50, 50, 50, 40, 310).
+pokemon(259, marshtomp, 70, 85, 70, 60, 70, 50, 405).
+pokemon(260, swampert, 100, 110, 90, 85, 90, 60, 535).
+pokemon(261, poochyena, 35, 55, 35, 30, 30, 35, 220).
+pokemon(262, mightyena, 70, 90, 70, 60, 60, 70, 420).
+pokemon(263, zigzagoon, 38, 30, 41, 30, 41, 60, 240).
+pokemon(264, linoone, 78, 70, 61, 50, 61, 100, 420).
+pokemon(265, wurmple, 45, 45, 35, 20, 30, 20, 195).
+pokemon(266, silcoon, 50, 35, 55, 25, 25, 15, 205).
+pokemon(267, beautifly, 60, 70, 50, 90, 50, 65, 385).
+pokemon(268, cascoon, 50, 35, 55, 25, 25, 15, 205).
+pokemon(269, dustox, 60, 50, 70, 50, 90, 65, 385).
+pokemon(270, lotad, 40, 30, 30, 40, 50, 30, 220).
+pokemon(271, lombre, 60, 50, 50, 60, 70, 50, 340).
+pokemon(272, ludicolo, 80, 70, 70, 90, 100, 70, 480).
+pokemon(273, seedot, 40, 40, 50, 30, 30, 30, 220).
+pokemon(274, nuzleaf, 70, 70, 40, 60, 40, 60, 340).
+pokemon(275, shiftry, 90, 100, 60, 90, 60, 80, 480).
+pokemon(276, taillow, 40, 55, 30, 30, 30, 85, 270).
+pokemon(277, swellow, 60, 85, 60, 50, 50, 125, 430).
+pokemon(278, wingull, 40, 30, 30, 55, 30, 85, 270).
+pokemon(279, pelipper, 60, 50, 100, 85, 70, 65, 430).
+pokemon(280, ralts, 28, 25, 25, 45, 35, 40, 198).
+pokemon(281, kirlia, 38, 35, 35, 65, 55, 50, 278).
+pokemon(282, gardevoir, 68, 65, 65, 125, 115, 80, 518).
+pokemon(283, surskit, 40, 30, 32, 50, 52, 65, 269).
+pokemon(284, masquerain, 70, 60, 62, 80, 82, 60, 414).
+pokemon(285, shroomish, 60, 40, 60, 40, 60, 35, 295).
+pokemon(286, breloom, 60, 130, 80, 60, 60, 70, 460).
+pokemon(287, slakoth, 60, 60, 60, 35, 35, 30, 280).
+pokemon(288, vigoroth, 80, 80, 80, 55, 55, 90, 440).
+pokemon(289, slaking, 150, 160, 100, 95, 65, 100, 670).
+pokemon(290, nincada, 31, 45, 90, 30, 30, 40, 266).
+pokemon(291, ninjask, 61, 90, 45, 50, 50, 160, 456).
+pokemon(292, shedinja, 1, 90, 45, 30, 30, 40, 236).
+pokemon(293, whismur, 64, 51, 23, 51, 23, 28, 240).
+pokemon(294, loudred, 84, 71, 43, 71, 43, 48, 360).
+pokemon(295, exploud, 104, 91, 63, 91, 63, 68, 480).
+pokemon(296, makuhita, 72, 60, 30, 20, 30, 25, 237).
+pokemon(297, hariyama, 144, 120, 60, 40, 60, 50, 474).
+pokemon(298, azurill, 50, 20, 40, 20, 40, 20, 190).
+pokemon(299, nosepass, 30, 45, 135, 45, 90, 30, 375).
+pokemon(300, skitty, 50, 45, 45, 35, 35, 50, 260).
+pokemon(301, delcatty, 70, 65, 65, 55, 55, 70, 380).
+pokemon(302, sableye, 50, 75, 75, 65, 65, 50, 380).
+pokemon(303, mawile, 50, 85, 85, 55, 55, 50, 380).
+pokemon(304, aron, 50, 70, 100, 40, 40, 30, 330).
+pokemon(305, lairon, 60, 90, 140, 50, 50, 40, 430).
+pokemon(306, aggron, 70, 110, 180, 60, 60, 50, 530).
+pokemon(307, meditite, 30, 40, 55, 40, 55, 60, 280).
+pokemon(308, medicham, 60, 60, 75, 60, 75, 80, 410).
+pokemon(309, electrike, 40, 45, 40, 65, 40, 65, 295).
+pokemon(310, manectric, 70, 75, 60, 105, 60, 105, 475).
+pokemon(311, plusle, 60, 50, 40, 85, 75, 95, 405).
+pokemon(312, minun, 60, 40, 50, 75, 85, 95, 405).
+pokemon(313, volbeat, 65, 73, 55, 47, 75, 85, 400).
+pokemon(314, illumise, 65, 47, 55, 73, 75, 85, 400).
+pokemon(315, roselia, 50, 60, 45, 100, 80, 65, 400).
+pokemon(316, gulpin, 70, 43, 53, 43, 53, 40, 302).
+pokemon(317, swalot, 100, 73, 83, 73, 83, 55, 467).
+pokemon(318, carvanha, 45, 90, 20, 65, 20, 65, 305).
+pokemon(319, sharpedo, 70, 120, 40, 95, 40, 95, 460).
+pokemon(320, wailmer, 130, 70, 35, 70, 35, 60, 400).
+pokemon(321, wailord, 170, 90, 45, 90, 45, 60, 500).
+pokemon(322, numel, 60, 60, 40, 65, 45, 35, 305).
+pokemon(323, camerupt, 70, 100, 70, 105, 75, 40, 460).
+pokemon(324, torkoal, 70, 85, 140, 85, 70, 20, 470).
+pokemon(325, spoink, 60, 25, 35, 70, 80, 60, 330).
+pokemon(326, grumpig, 80, 45, 65, 90, 110, 80, 470).
+pokemon(327, spinda, 60, 60, 60, 60, 60, 60, 360).
+pokemon(328, trapinch, 45, 100, 45, 45, 45, 10, 290).
+pokemon(329, vibrava, 50, 70, 50, 50, 50, 70, 340).
+pokemon(330, flygon, 80, 100, 80, 80, 80, 100, 520).
+pokemon(331, cacnea, 50, 85, 40, 85, 40, 35, 335).
+pokemon(332, cacturne, 70, 115, 60, 115, 60, 55, 475).
+pokemon(333, swablu, 45, 40, 60, 40, 75, 50, 310).
+pokemon(334, altaria, 75, 70, 90, 70, 105, 80, 490).
+pokemon(335, zangoose, 73, 115, 60, 60, 60, 90, 458).
+pokemon(336, seviper, 73, 100, 60, 100, 60, 65, 458).
+pokemon(337, lunatone, 70, 55, 65, 95, 85, 70, 440).
+pokemon(338, solrock, 70, 95, 85, 55, 65, 70, 440).
+pokemon(339, barboach, 50, 48, 43, 46, 41, 60, 288).
+pokemon(340, whiscash, 110, 78, 73, 76, 71, 60, 468).
+pokemon(341, corphish, 43, 80, 65, 50, 35, 35, 308).
+pokemon(342, crawdaunt, 63, 120, 85, 90, 55, 55, 468).
+pokemon(343, baltoy, 40, 40, 55, 40, 70, 55, 300).
+pokemon(344, claydol, 60, 70, 105, 70, 120, 75, 500).
+pokemon(345, lileep, 66, 41, 77, 61, 87, 23, 355).
+pokemon(346, cradily, 86, 81, 97, 81, 107, 43, 495).
+pokemon(347, anorith, 45, 95, 50, 40, 50, 75, 355).
+pokemon(348, armaldo, 75, 125, 100, 70, 80, 45, 495).
+pokemon(349, feebas, 20, 15, 20, 10, 55, 80, 200).
+pokemon(350, milotic, 95, 60, 79, 100, 125, 81, 540).
+pokemon(351, castform, 70, 70, 70, 70, 70, 70, 420).
+pokemon(352, kecleon, 60, 90, 70, 60, 120, 40, 440).
+pokemon(353, shuppet, 44, 75, 35, 63, 33, 45, 295).
+pokemon(354, banette, 64, 115, 65, 83, 63, 65, 455).
+pokemon(355, duskull, 20, 40, 90, 30, 90, 25, 295).
+pokemon(356, dusclops, 40, 70, 130, 60, 130, 25, 455).
+pokemon(357, tropius, 99, 68, 83, 72, 87, 51, 460).
+pokemon(358, chimecho, 65, 50, 70, 95, 80, 65, 425).
+pokemon(359, absol, 65, 130, 60, 75, 60, 75, 465).
+pokemon(360, wynaut, 95, 23, 48, 23, 48, 23, 260).
+pokemon(361, snorunt, 50, 50, 50, 50, 50, 50, 300).
+pokemon(362, glalie, 80, 80, 80, 80, 80, 80, 480).
+pokemon(363, spheal, 70, 40, 50, 55, 50, 25, 290).
+pokemon(364, sealeo, 90, 60, 70, 75, 70, 45, 410).
+pokemon(365, walrein, 110, 80, 90, 95, 90, 65, 530).
+pokemon(366, clamperl, 35, 64, 85, 74, 55, 32, 345).
+pokemon(367, huntail, 55, 104, 105, 94, 75, 52, 485).
+pokemon(368, gorebyss, 55, 84, 105, 114, 75, 52, 485).
+pokemon(369, relicanth, 100, 90, 130, 45, 65, 55, 485).
+pokemon(370, luvdisc, 43, 30, 55, 40, 65, 97, 330).
+pokemon(371, bagon, 45, 75, 60, 40, 30, 50, 300).
+pokemon(372, shelgon, 65, 95, 100, 60, 50, 50, 420).
+pokemon(373, salamence, 95, 135, 80, 110, 80, 100, 600).
+pokemon(374, beldum, 40, 55, 80, 35, 60, 30, 300).
+pokemon(375, metang, 60, 75, 100, 55, 80, 50, 420).
+pokemon(376, metagross, 80, 135, 130, 95, 90, 70, 600).
+pokemon(377, regirock, 80, 100, 200, 50, 100, 50, 580).
+pokemon(378, regice, 80, 50, 100, 100, 200, 50, 580).
+pokemon(379, registeel, 80, 75, 150, 75, 150, 50, 580).
+pokemon(380, latias, 80, 80, 90, 110, 130, 110, 600).
+pokemon(381, latios, 80, 90, 80, 130, 110, 110, 600).
+pokemon(382, kyogre, 100, 100, 90, 150, 140, 90, 670).
+pokemon(383, groudon, 100, 150, 140, 100, 90, 90, 670).
+pokemon(384, rayquaza, 105, 150, 90, 150, 90, 95, 680).
+pokemon(385, jirachi, 100, 100, 100, 100, 100, 100, 600).
+pokemon(386, deoxys, 50, 150, 50, 150, 50, 150, 600).
+pokemon(387, turtwig, 55, 68, 64, 45, 55, 31, 318).
+pokemon(388, grotle, 75, 89, 85, 55, 65, 36, 405).
+pokemon(389, torterra, 95, 109, 105, 75, 85, 56, 525).
+pokemon(390, chimchar, 44, 58, 44, 58, 44, 61, 309).
+pokemon(391, monferno, 64, 78, 52, 78, 52, 81, 405).
+pokemon(392, infernape, 76, 104, 71, 104, 71, 108, 534).
+pokemon(393, piplup, 53, 51, 53, 61, 56, 40, 314).
+pokemon(394, prinplup, 64, 66, 68, 81, 76, 50, 405).
+pokemon(395, empoleon, 84, 86, 88, 111, 101, 60, 530).
+pokemon(396, starly, 40, 55, 30, 30, 30, 60, 245).
+pokemon(397, staravia, 55, 75, 50, 40, 40, 80, 340).
+pokemon(398, staraptor, 85, 120, 70, 50, 50, 100, 475).
+pokemon(399, bidoof, 59, 45, 40, 35, 40, 31, 250).
+pokemon(400, bibarel, 79, 85, 60, 60, 71, 55, 410).
+pokemon(401, kricketot, 37, 25, 41, 25, 41, 25, 194).
+pokemon(402, kricketune, 77, 85, 51, 55, 51, 65, 384).
+pokemon(403, shinx, 45, 65, 34, 40, 34, 45, 263).
+pokemon(404, luxio, 60, 85, 49, 60, 49, 60, 363).
+pokemon(405, luxray, 80, 120, 79, 95, 79, 70, 523).
+pokemon(406, budew, 40, 30, 35, 50, 70, 55, 280).
+pokemon(407, roserade, 60, 70, 55, 125, 105, 90, 505).
+pokemon(408, cranidos, 67, 125, 40, 30, 30, 58, 350).
+pokemon(409, rampardos, 97, 165, 60, 65, 50, 58, 495).
+pokemon(410, shieldon, 30, 42, 118, 42, 88, 30, 350).
+pokemon(411, bastiodon, 60, 52, 168, 47, 138, 30, 495).
+pokemon(412, burmy, 40, 29, 45, 29, 45, 36, 224).
+pokemon(413, wormadam, 60, 59, 85, 79, 105, 36, 424).
+pokemon(414, mothim, 70, 94, 50, 94, 50, 66, 424).
+pokemon(415, combee, 30, 30, 42, 30, 42, 70, 244).
+pokemon(416, vespiquen, 70, 80, 102, 80, 102, 40, 474).
+pokemon(417, pachirisu, 60, 45, 70, 45, 90, 95, 405).
+pokemon(418, buizel, 55, 65, 35, 60, 30, 85, 330).
+pokemon(419, floatzel, 85, 105, 55, 85, 50, 115, 495).
+pokemon(420, cherubi, 45, 35, 45, 62, 53, 35, 275).
+pokemon(421, cherrim, 70, 60, 70, 87, 78, 85, 450).
+pokemon(422, shellos, 76, 48, 48, 57, 62, 34, 325).
+pokemon(423, gastrodon, 111, 83, 68, 92, 82, 39, 475).
+pokemon(424, ambipom, 75, 100, 66, 60, 66, 115, 482).
+pokemon(425, drifloon, 90, 50, 34, 60, 44, 70, 348).
+pokemon(426, drifblim, 150, 80, 44, 90, 54, 80, 498).
+pokemon(427, buneary, 55, 66, 44, 44, 56, 85, 350).
+pokemon(428, lopunny, 65, 76, 84, 54, 96, 105, 480).
+pokemon(429, mismagius, 60, 60, 60, 105, 105, 105, 495).
+pokemon(430, honchkrow, 100, 125, 52, 105, 52, 71, 505).
+pokemon(431, glameow, 49, 55, 42, 42, 37, 85, 310).
+pokemon(432, purugly, 71, 82, 64, 64, 59, 112, 452).
+pokemon(433, chingling, 45, 30, 50, 65, 50, 45, 285).
+pokemon(434, stunky, 63, 63, 47, 41, 41, 74, 329).
+pokemon(435, skuntank, 103, 93, 67, 71, 61, 84, 479).
+pokemon(436, bronzor, 57, 24, 86, 24, 86, 23, 300).
+pokemon(437, bronzong, 67, 89, 116, 79, 116, 33, 500).
+pokemon(438, bonsly, 50, 80, 95, 10, 45, 10, 290).
+pokemon(439, mime-jr, 20, 25, 45, 70, 90, 60, 310).
+pokemon(440, happiny, 100, 5, 5, 15, 65, 30, 220).
+pokemon(441, chatot, 76, 65, 45, 92, 42, 91, 411).
+pokemon(442, spiritomb, 50, 92, 108, 92, 108, 35, 485).
+pokemon(443, gible, 58, 70, 45, 40, 45, 42, 300).
+pokemon(444, gabite, 68, 90, 65, 50, 55, 82, 410).
+pokemon(445, garchomp, 108, 130, 95, 80, 85, 102, 600).
+pokemon(446, munchlax, 135, 85, 40, 40, 85, 5, 390).
+pokemon(447, riolu, 40, 70, 40, 35, 40, 60, 285).
+pokemon(448, lucario, 70, 110, 70, 115, 70, 90, 525).
+pokemon(449, hippopotas, 68, 72, 78, 38, 42, 32, 330).
+pokemon(450, hippowdon, 108, 112, 118, 68, 72, 47, 525).
+pokemon(451, skorupi, 40, 50, 90, 30, 55, 65, 330).
+pokemon(452, drapion, 70, 90, 110, 60, 75, 95, 500).
+pokemon(453, croagunk, 48, 61, 40, 61, 40, 50, 300).
+pokemon(454, toxicroak, 83, 106, 65, 86, 65, 85, 490).
+pokemon(455, carnivine, 74, 100, 72, 90, 72, 46, 454).
+pokemon(456, finneon, 49, 49, 56, 49, 61, 66, 330).
+pokemon(457, lumineon, 69, 69, 76, 69, 86, 91, 460).
+pokemon(458, mantyke, 45, 20, 50, 60, 120, 50, 345).
+pokemon(459, snover, 60, 62, 50, 62, 60, 40, 334).
+pokemon(460, abomasnow, 90, 92, 75, 92, 85, 60, 494).
+pokemon(461, weavile, 70, 120, 65, 45, 85, 125, 510).
+pokemon(462, magnezone, 70, 70, 115, 130, 90, 60, 535).
+pokemon(463, lickilicky, 110, 85, 95, 80, 95, 50, 515).
+pokemon(464, rhyperior, 115, 140, 130, 55, 55, 40, 535).
+pokemon(465, tangrowth, 100, 100, 125, 110, 50, 50, 535).
+pokemon(466, electivire, 75, 123, 67, 95, 85, 95, 540).
+pokemon(467, magmortar, 75, 95, 67, 125, 95, 83, 540).
+pokemon(468, togekiss, 85, 50, 95, 120, 115, 80, 545).
+pokemon(469, yanmega, 86, 76, 86, 116, 56, 95, 515).
+pokemon(470, leafeon, 65, 110, 130, 60, 65, 95, 525).
+pokemon(471, glaceon, 65, 60, 110, 130, 95, 65, 525).
+pokemon(472, gliscor, 75, 95, 125, 45, 75, 95, 510).
+pokemon(473, mamoswine, 110, 130, 80, 70, 60, 80, 530).
+pokemon(474, porygon-z, 85, 80, 70, 135, 75, 90, 535).
+pokemon(475, gallade, 68, 125, 65, 65, 115, 80, 518).
+pokemon(476, probopass, 60, 55, 145, 75, 150, 40, 525).
+pokemon(477, dusknoir, 45, 100, 135, 65, 135, 45, 525).
+pokemon(478, froslass, 70, 80, 70, 80, 70, 110, 480).
+pokemon(479, rotom, 50, 50, 77, 95, 77, 91, 440).
+pokemon(480, uxie, 75, 75, 130, 75, 130, 95, 580).
+pokemon(481, mesprit, 80, 105, 105, 105, 105, 80, 580).
+pokemon(482, azelf, 75, 125, 70, 125, 70, 115, 580).
+pokemon(483, dialga, 100, 120, 120, 150, 100, 90, 680).
+pokemon(484, palkia, 90, 120, 100, 150, 120, 100, 680).
+pokemon(485, heatran, 91, 90, 106, 130, 106, 77, 600).
+pokemon(486, regigigas, 110, 160, 110, 80, 110, 100, 670).
+pokemon(487, giratina, 150, 100, 120, 100, 120, 90, 680).
+pokemon(488, cresselia, 120, 70, 120, 75, 130, 85, 600).
+pokemon(489, phione, 80, 80, 80, 80, 80, 80, 480).
+pokemon(490, manaphy, 100, 100, 100, 100, 100, 100, 600).
+pokemon(491, darkrai, 70, 90, 90, 135, 90, 125, 600).
+pokemon(492, shaymin, 100, 100, 100, 100, 100, 100, 600).
+pokemon(493, arceus, 120, 120, 120, 120, 120, 120, 720).
+pokemon(494, victini, 100, 100, 100, 100, 100, 100, 600).
+pokemon(495, snivy, 45, 45, 55, 45, 55, 63, 308).
+pokemon(496, servine, 60, 60, 75, 60, 75, 83, 413).
+pokemon(497, serperior, 75, 75, 95, 75, 95, 113, 528).
+pokemon(498, tepig, 65, 63, 45, 45, 45, 45, 308).
+pokemon(499, pignite, 90, 93, 55, 70, 55, 55, 418).
+pokemon(500, emboar, 110, 123, 65, 100, 65, 65, 528).
+pokemon(501, oshawott, 55, 55, 45, 63, 45, 45, 308).
+pokemon(502, dewott, 75, 75, 60, 83, 60, 60, 413).
+pokemon(503, samurott, 95, 100, 85, 108, 70, 70, 528).
+pokemon(504, patrat, 45, 55, 39, 35, 39, 42, 255).
+pokemon(505, watchog, 60, 85, 69, 60, 69, 77, 420).
+pokemon(506, lillipup, 45, 60, 45, 25, 45, 55, 275).
+pokemon(507, herdier, 65, 80, 65, 35, 65, 60, 370).
+pokemon(508, stoutland, 85, 100, 90, 45, 90, 80, 490).
+pokemon(509, purrloin, 41, 50, 37, 50, 37, 66, 281).
+pokemon(510, liepard, 64, 88, 50, 88, 50, 106, 446).
+pokemon(511, pansage, 50, 53, 48, 53, 48, 64, 316).
+pokemon(512, simisage, 75, 98, 63, 98, 63, 101, 498).
+pokemon(513, pansear, 50, 53, 48, 53, 48, 64, 316).
+pokemon(514, simisear, 75, 98, 63, 98, 63, 101, 498).
+pokemon(515, panpour, 50, 53, 48, 53, 48, 64, 316).
+pokemon(516, simipour, 75, 98, 63, 98, 63, 101, 498).
+pokemon(517, munna, 76, 25, 45, 67, 55, 24, 292).
+pokemon(518, musharna, 116, 55, 85, 107, 95, 29, 487).
+pokemon(519, pidove, 50, 55, 50, 36, 30, 43, 264).
+pokemon(520, tranquill, 62, 77, 62, 50, 42, 65, 358).
+pokemon(521, unfezant, 80, 105, 80, 65, 55, 93, 478).
+pokemon(522, blitzle, 45, 60, 32, 50, 32, 76, 295).
+pokemon(523, zebstrika, 75, 100, 63, 80, 63, 116, 497).
+pokemon(524, roggenrola, 55, 75, 85, 25, 25, 15, 280).
+pokemon(525, boldore, 70, 105, 105, 50, 40, 20, 390).
+pokemon(526, gigalith, 85, 135, 130, 60, 70, 25, 505).
+pokemon(527, woobat, 55, 45, 43, 55, 43, 72, 313).
+pokemon(528, swoobat, 67, 57, 55, 77, 55, 114, 425).
+pokemon(529, drilbur, 60, 85, 40, 30, 45, 68, 328).
+pokemon(530, excadrill, 110, 135, 60, 50, 65, 88, 508).
+pokemon(531, audino, 103, 60, 86, 60, 86, 50, 445).
+pokemon(532, timburr, 75, 80, 55, 25, 35, 35, 305).
+pokemon(533, gurdurr, 85, 105, 85, 40, 50, 40, 405).
+pokemon(534, conkeldurr, 105, 140, 95, 55, 65, 45, 505).
+pokemon(535, tympole, 50, 50, 40, 50, 40, 64, 294).
+pokemon(536, palpitoad, 75, 65, 55, 65, 55, 69, 384).
+pokemon(537, seismitoad, 105, 85, 75, 85, 75, 74, 499).
+pokemon(538, throh, 120, 100, 85, 30, 85, 45, 465).
+pokemon(539, sawk, 75, 125, 75, 30, 75, 85, 465).
+pokemon(540, sewaddle, 45, 53, 70, 40, 60, 42, 310).
+pokemon(541, swadloon, 55, 63, 90, 50, 80, 42, 380).
+pokemon(542, leavanny, 75, 103, 80, 70, 70, 92, 490).
+pokemon(543, venipede, 30, 45, 59, 30, 39, 57, 260).
+pokemon(544, whirlipede, 40, 55, 99, 40, 79, 47, 360).
+pokemon(545, scolipede, 60, 90, 89, 55, 69, 112, 475).
+pokemon(546, cottonee, 40, 27, 60, 37, 50, 66, 280).
+pokemon(547, whimsicott, 60, 67, 85, 77, 75, 116, 480).
+pokemon(548, petilil, 45, 35, 50, 70, 50, 30, 280).
+pokemon(549, lilligant, 70, 60, 75, 110, 75, 90, 480).
+pokemon(550, basculin, 70, 92, 65, 80, 55, 98, 460).
+pokemon(551, sandile, 50, 72, 35, 35, 35, 65, 292).
+pokemon(552, krokorok, 60, 82, 45, 45, 45, 74, 351).
+pokemon(553, krookodile, 95, 117, 70, 65, 70, 92, 509).
+pokemon(554, darumaka, 70, 90, 45, 15, 45, 50, 315).
+pokemon(555, darmanitan, 105, 140, 55, 30, 55, 95, 480).
+pokemon(556, maractus, 75, 86, 67, 106, 67, 60, 461).
+pokemon(557, dwebble, 50, 65, 85, 35, 35, 55, 325).
+pokemon(558, crustle, 70, 95, 125, 65, 75, 45, 475).
+pokemon(559, scraggy, 50, 75, 70, 35, 70, 48, 348).
+pokemon(560, scrafty, 65, 90, 115, 45, 115, 58, 488).
+pokemon(561, sigilyph, 72, 58, 80, 103, 80, 97, 490).
+pokemon(562, yamask, 38, 30, 85, 55, 65, 30, 303).
+pokemon(563, cofagrigus, 58, 50, 145, 95, 105, 30, 483).
+pokemon(564, tirtouga, 54, 78, 103, 53, 45, 22, 355).
+pokemon(565, carracosta, 74, 108, 133, 83, 65, 32, 495).
+pokemon(566, archen, 55, 112, 45, 74, 45, 70, 401).
+pokemon(567, archeops, 75, 140, 65, 112, 65, 110, 567).
+pokemon(568, trubbish, 50, 50, 62, 40, 62, 65, 329).
+pokemon(569, garbodor, 80, 95, 92, 60, 82, 75, 484).
+pokemon(570, zorua, 40, 65, 40, 80, 40, 65, 330).
+pokemon(571, zoroark, 60, 105, 60, 120, 60, 105, 510).
+pokemon(572, minccino, 55, 50, 40, 40, 40, 75, 300).
+pokemon(573, ciccino, 75, 95, 60, 65, 60, 115, 470).
+pokemon(574, gothita, 45, 30, 50, 55, 65, 45, 290).
+pokemon(575, gothorita, 60, 45, 70, 75, 85, 55, 390).
+pokemon(576, gothitelle, 70, 55, 95, 95, 110, 65, 490).
+pokemon(577, solosis, 45, 30, 40, 105, 50, 20, 290).
+pokemon(578, duosion, 65, 40, 50, 125, 60, 30, 370).
+pokemon(579, reuniclus, 110, 65, 75, 125, 85, 30, 490).
+pokemon(580, ducklett, 62, 44, 50, 44, 50, 55, 305).
+pokemon(581, swanna, 75, 87, 63, 87, 63, 98, 473).
+pokemon(582, vanillite, 36, 50, 50, 65, 60, 44, 305).
+pokemon(583, vanillish, 51, 65, 65, 80, 75, 59, 395).
+pokemon(584, vanilluxe, 71, 95, 85, 110, 95, 79, 535).
+pokemon(585, deerling, 60, 60, 50, 40, 50, 75, 335).
+pokemon(586, sawsbuck, 80, 100, 70, 60, 70, 95, 475).
+pokemon(587, emolga, 55, 75, 60, 75, 60, 103, 428).
+pokemon(588, karrablast, 50, 75, 45, 40, 45, 60, 315).
+pokemon(589, escavalier, 70, 135, 105, 60, 105, 20, 495).
+pokemon(590, foongus, 69, 55, 45, 55, 55, 15, 294).
+pokemon(591, amoonguss, 114, 85, 70, 85, 80, 30, 464).
+pokemon(592, frillish, 55, 40, 50, 65, 85, 40, 335).
+pokemon(593, jellicent, 100, 60, 70, 85, 105, 60, 480).
+pokemon(594, alomomola, 165, 75, 80, 40, 45, 65, 470).
+pokemon(595, joltik, 50, 47, 50, 57, 50, 65, 319).
+pokemon(596, galvantula, 70, 77, 60, 97, 60, 108, 472).
+pokemon(597, ferroseed, 44, 50, 91, 24, 86, 10, 305).
+pokemon(598, ferrothorn, 74, 94, 131, 54, 116, 20, 489).
+pokemon(599, klink, 40, 55, 70, 45, 60, 30, 300).
+pokemon(600, klang, 60, 80, 95, 70, 85, 50, 440).
+pokemon(601, klinklang, 60, 100, 115, 70, 85, 90, 520).
+pokemon(602, tynamo, 35, 55, 40, 45, 40, 60, 275).
+pokemon(603, eelektrik, 65, 85, 70, 75, 70, 40, 405).
+pokemon(604, eelektross, 85, 115, 80, 105, 80, 50, 515).
+pokemon(605, elgyem, 55, 55, 55, 85, 55, 30, 335).
+pokemon(606, beheeyem, 75, 75, 75, 125, 95, 40, 485).
+pokemon(607, litwick, 50, 30, 55, 65, 55, 20, 275).
+pokemon(608, lampent, 60, 40, 60, 95, 60, 55, 370).
+pokemon(609, chandelure, 60, 55, 90, 145, 90, 80, 520).
+pokemon(610, axew, 46, 87, 60, 30, 40, 57, 320).
+pokemon(611, fraxure, 66, 117, 70, 40, 50, 67, 410).
+pokemon(612, haxorus, 76, 147, 90, 60, 70, 97, 540).
+pokemon(613, cubchoo, 55, 70, 40, 60, 40, 40, 305).
+pokemon(614, beartic, 95, 110, 80, 70, 80, 50, 485).
+pokemon(615, cryogonal, 70, 50, 30, 95, 135, 105, 485).
+pokemon(616, shelmet, 50, 40, 85, 40, 65, 25, 305).
+pokemon(617, accelgor, 80, 70, 40, 100, 60, 145, 495).
+pokemon(618, stunfisk, 109, 66, 84, 81, 99, 32, 471).
+pokemon(619, mienfoo, 45, 85, 50, 55, 50, 65, 350).
+pokemon(620, mienshao, 65, 125, 60, 95, 60, 105, 510).
+pokemon(621, druddigon, 77, 120, 90, 60, 90, 48, 485).
+pokemon(622, golett, 59, 74, 50, 35, 50, 35, 303).
+pokemon(623, golurk, 89, 124, 80, 55, 80, 55, 483).
+pokemon(624, pawniard, 45, 85, 70, 40, 40, 60, 340).
+pokemon(625, bisharp, 65, 125, 100, 60, 70, 70, 490).
+pokemon(626, bouffalant, 95, 110, 95, 40, 95, 55, 490).
+pokemon(627, rufflet, 70, 83, 50, 37, 50, 60, 350).
+pokemon(628, braviary, 100, 123, 75, 57, 75, 80, 510).
+pokemon(629, vullaby, 70, 55, 75, 45, 65, 60, 370).
+pokemon(630, mandibuzz, 110, 65, 105, 55, 95, 80, 510).
+pokemon(631, heatmor, 85, 97, 66, 105, 66, 65, 484).
+pokemon(632, durant, 58, 109, 112, 48, 48, 109, 484).
+pokemon(633, deino, 52, 65, 50, 45, 50, 38, 300).
+pokemon(634, zweilous, 72, 85, 70, 65, 70, 58, 420).
+pokemon(635, hydreigon, 92, 105, 90, 125, 90, 98, 600).
+pokemon(636, larvesta, 55, 85, 55, 50, 55, 60, 360).
+pokemon(637, volcarona, 85, 60, 65, 135, 105, 100, 550).
+pokemon(638, cobalion, 91, 90, 129, 90, 72, 108, 580).
+pokemon(639, terrakion, 91, 129, 90, 72, 90, 108, 580).
+pokemon(640, virizion, 91, 90, 72, 90, 129, 108, 580).
+pokemon(641, tornadus, 79, 115, 70, 125, 80, 111, 580).
+pokemon(642, thundurus, 79, 115, 70, 125, 80, 111, 580).
+pokemon(643, reshiram, 100, 120, 100, 150, 120, 90, 680).
+pokemon(644, zekrom, 100, 150, 120, 120, 100, 90, 680).
+pokemon(645, landorus, 89, 125, 90, 115, 80, 101, 600).
+pokemon(646, kyurem, 125, 130, 90, 130, 90, 95, 660).
+pokemon(647, keldeo, 91, 72, 90, 129, 90, 108, 580).
+pokemon(648, meloetta, 100, 77, 77, 128, 128, 90, 600).
+pokemon(649, genesect, 71, 120, 95, 120, 95, 99, 600).
