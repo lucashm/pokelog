@@ -1,6 +1,7 @@
 :- dynamic player/2.
 :- [aux].
 :- [pokemons].
+:- use_module(library(lists)).
 
 ownedPokemon([]) :-
   fail.  % Usuário começa com uma lista vazia de pokemons

@@ -29,6 +29,7 @@ pokemon(28, sandslash, 75, 100, 110, 45, 55, 65, 450).
 pokemon(29, nidoran, 55, 47, 52, 40, 40, 41, 275).
 pokemon(30, nidorina, 70, 62, 67, 55, 55, 56, 365).
 pokemon(31, nidoqueen, 90, 82, 87, 75, 85, 76, 495).
+pokemon(32, nidoran, 55, 47, 52, 40, 40, 41, 275).
 pokemon(33, nidorino, 61, 72, 57, 55, 55, 65, 365).
 pokemon(34, nidoking, 81, 92, 77, 85, 75, 85, 495).
 pokemon(35, clefairy, 70, 45, 48, 60, 65, 35, 323).

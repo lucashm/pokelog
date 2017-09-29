@@ -21,10 +21,9 @@ setEnemiesPosition() :-
 
 
 singleEnemyPosition() :-
-    random_between(0,1000, X),
-    random_between(0,1000, Y),
-    random_between(0, 598, Z),
-    findall(pokemon(A,B,C,D,E,F,G,H,I), pokemon(A, B, C, D, E, F, G, H, I), Lista),
-    write(Lista),
-    membro(pokemon(Z, _, _, _, _, _, _, _, _), Lista),
-    assert(enemyPokemon(pokemon(Z, _, _, _, _, _, _, _, _), position(X,Y))).
+    random_between(0,1000, X), %getting random X axis
+    random_between(0,1000, Y), %getting random Y axis
+    random_between(0, 598, Z), %getting random Pokemon
+    findall(pokemon(A,B,C,D,E,F,G,H,I), pokemon(A, B, C, D, E, F, G, H, I), Lista), %getting pokemon list
+    nth1(Z, Lista, ChosenOne), %getting one element in the list | Element = Z = Random Pokemon
+    assert(enemyPokemon(ChosenOne, position(X,Y))). %asserting enemyPokemon in the map
