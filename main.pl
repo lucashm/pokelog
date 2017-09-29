@@ -1,14 +1,16 @@
 :- dynamic player/2.
 :- [aux].
+:- [pokemons].
 
 ownedPokemon([]) :-
-  false.  % Usuário começa com uma lista vazia de pokemons
+  fail.  % Usuário começa com uma lista vazia de pokemons
 
 play() :-
+        setEnemiesPosition(),
         write('Digite o seu nome:'),
         nl,
         read(Name),
-        assert(player(Name)),
+        setPlayer(Name),
         nl,
         menu().
 
@@ -19,7 +21,9 @@ menu() :-
   nl,
   write('2- Listar meus pokemons'),
   nl,
-  write('3- Buscar o melhor campo para treino'),
+  write('3- Verificar minha posição no mapa'),
+  nl,
+  write('4- Buscar o melhor campo para treino'),
   nl,
   read(Choice),
   option(Choice).
@@ -31,24 +35,25 @@ option(1) :-
 option(2) :-
     findall(X, ownedPokemon(X), L),
     write(L),
-    nl,
+    nl, nl,
+    menu().
+
+option(3) :-
+    findall((X,Y), player(X,Y), L),
+    nl, write('sua Posição é: '),
+    write(L),
+    nl, nl,
     menu().
 
 choosePokemon() :-
-        write('Digite o pokemon escolhido! Opções:'),
+        write('Que pokemon você tem?'),
         nl,
-        write('pikachu'), nl,
-        write('charizard'), nl,
-        write('bulbassauro'), nl,
         read(Pokemon),
         checkpokemon(Pokemon).
 
 retry() :-
-        write('Pokemon inválido!! Selecione um pokemon da lista:'),
+        write('Pokemon inválido!! Digite o nome do seu pokemon corretamente'),
         nl,
-        write('pikachu'), nl,
-        write('charizard'), nl,
-        write('bulbassauro'), nl,
         read(Pokemon),
         checkpokemon(Pokemon).
 
@@ -59,12 +64,6 @@ checkpokemon(Pokemon) :- ifThenElse(ispokemon(Pokemon), setpokemon(Pokemon), ret
 setpokemon(Pokemon) :-
         assert(ownedPokemon(pokemon(Pokemon))),
         menu().
-
-
-pokemon(pikachu).
-pokemon(charizard).
-pokemon(bulbassauro).
-
 
 
 tipo_de_ataque(pikachu, raio). %exemplo
