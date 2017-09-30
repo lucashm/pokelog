@@ -17,6 +17,7 @@ setPlayer(Name) :-
     assert( player(Name, position(X,Y)) ).
 
 setEnemiesPosition() :-
+    clearBase(enemyPokemon(ChosenOne, position(X,Y))), %cleaning enemies setted before
     foreach(between(1,10,_), singleEnemyPosition()).
 
 

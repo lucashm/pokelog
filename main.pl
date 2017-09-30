@@ -1,4 +1,6 @@
 :- dynamic player/2.
+:- dynamic clearBase/1.
+:- dynamic clearBase1/1.
 :- [aux].
 :- [pokemons].
 :- use_module(library(lists)).
@@ -7,6 +9,7 @@ ownedPokemon([]) :-
   fail.  % Usuário começa com uma lista vazia de pokemons
 
 play() :-
+        clearBase(enemyPokemon(Pokemon)),
         setEnemiesPosition(),
         write('Digite o seu nome:'),
         nl,
@@ -66,5 +69,12 @@ setpokemon(Pokemon) :-
         assert(ownedPokemon(pokemon(Pokemon))),
         menu().
 
+
+%TODO:fix the singletons on clearBase and clearBase1
+clearBase(Pokemon):- clearBase1(Pokemon), fail.
+clearBase(Pokemon).
+
+clearBase1(Pokemon):- retract(Pokemon).
+clearBase1(Pokemon).
 
 tipo_de_ataque(pikachu, raio). %exemplo
