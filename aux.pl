@@ -28,3 +28,12 @@ singleEnemyPosition() :-
     findall(pokemon(A,B,C,D,E,F,G,H,I), pokemon(A, B, C, D, E, F, G, H, I), Lista), %getting pokemon list
     nth1(Z, Lista, ChosenOne), %getting one element in the list | Element = Z = Random Pokemon
     assert(enemyPokemon(ChosenOne, position(X,Y))). %asserting enemyPokemon in the map
+
+scanEnemies() :-
+    findall(A, enemyPokemon(A, P), Enemies),
+    foreach(member(X, Enemies), checkEnemyProximity()).
+
+
+checkEnemyProximity() :-
+    %TODO: Implement here the distance comparison
+    write('aaa'), nl.
