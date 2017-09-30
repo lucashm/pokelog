@@ -1,5 +1,5 @@
 :- dynamic player/2.
-:- [aux].
+:- [auxiliar_functions].
 :- [pokemons].
 :- use_module(library(lists)).
 
@@ -63,8 +63,10 @@ checkpokemon(Pokemon) :- ifThenElse(ispokemon(Pokemon), setpokemon(Pokemon), ret
 
 
 setpokemon(Pokemon) :-
-        assert(ownedPokemon(pokemon(Pokemon))),
-        menu().
+		findall(pokemon(A,Pokemon,C,D,E,F,G,H,I), pokemon(A, Pokemon, C, D, E, F, G, H, I) , Lista), %returns a list with only 1 element
+		nth1(1, Lista, ChosenOne), %set this element to be a single pokemon funtor
+        assert(ownedPokemon(ChosenOne)), %set this element to be in the list of owned pokemons
+        menu(). %reopens menu
 
 
 tipo_de_ataque(pikachu, raio). %exemplo
