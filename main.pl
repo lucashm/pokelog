@@ -22,7 +22,7 @@ play() :-
         menu().
 
 menu() :-
-  write('Digite a opção dejada:'),
+  write('Digite a opção desejada:'),
   nl,
   write('1- Cadastrar um pokemon'),
   nl,
@@ -31,6 +31,8 @@ menu() :-
   write('3- Verificar minha posição no mapa'),
   nl,
   write('4- Buscar o melhor campo para treino'),
+  nl,
+  write('5- Procurar inimigos por perto'),
   nl,
   read(Choice),
   option(Choice).
@@ -49,6 +51,13 @@ option(3) :-
     findall((X,Y), player(X,Y), L),
     nl, write('sua Posição é: '),
     write(L),
+    nl, nl,
+    menu().
+
+option(5) :-
+    findall((X,Y), player(X,Y), L),
+    write(L),
+    foreach(membro((_,position(X,Y)), L), scanEnemies(X,Y)),
     nl, nl,
     menu().
 
