@@ -17,7 +17,7 @@ setPlayer(Name) :-
     assert( player(Name, position(X,Y)) ).
 
 setEnemiesPosition() :-
-    clearBase(enemyPokemon(ChosenOne, position(X,Y))), %cleaning enemies setted before
+    clearBase(enemyPokemon(_, _)), %cleaning enemies setted before
     foreach(between(1,10,_), singleEnemyPosition()).
 
 
@@ -31,11 +31,14 @@ singleEnemyPosition() :-
 
 scanEnemies() :-
     findall((Pokemon, Position), enemyPokemon(Pokemon, Position), Enemies),
-    foreach(membro((Pokemon, Position), Enemies), checkEnemyProximity(Pokemon, Position)).
+    foreach(membro((Pokemon, position(X,Y)), Enemies), checkEnemyProximity(X,Y)).
 
 
-checkEnemyProximity(Pokemon, Position) :-
+checkEnemyProximity(X,Y) :-
     %TODO: Implement here the distance comparison
-    write(Position),nl,
-    nth1(1, Position, Y),
-    write(Y).
+    write('X = '), write(X),
+    nl,
+    write('Y = '), write(Y),
+    nl.
+    %nth1(1, Position, Z),
+    %write(Z).

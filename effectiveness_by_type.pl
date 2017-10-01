@@ -1,4 +1,6 @@
 /* Effectiveness normal */
+:-style_check(-discontiguous).
+
 normal_effectiveness(normal,normal).
 normal_effectiveness(normal,fire).
 normal_effectiveness(normal,water).
