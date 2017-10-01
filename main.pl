@@ -1,8 +1,13 @@
 :- dynamic player/2.
+<<<<<<< HEAD
 :- dynamic clearBase/1.
 :- dynamic clearBase1/1.
 :- dynamic enemyPokemon/2.
 :- [aux].
+=======
+:- dynamic ownedPokemon/1.
+:- [auxiliar_functions].
+>>>>>>> master
 :- [pokemons].
 :- use_module(library(lists)).
 
@@ -67,8 +72,10 @@ checkpokemon(Pokemon) :- ifThenElse(ispokemon(Pokemon), setpokemon(Pokemon), ret
 
 
 setpokemon(Pokemon) :-
-        assert(ownedPokemon(pokemon(Pokemon))),
-        menu().
+		findall(pokemon(A,Pokemon,C,D,E,F,G,H,I), pokemon(A, Pokemon, C, D, E, F, G, H, I) , Lista), %returns a list with only 1 element
+		nth1(1, Lista, ChosenOne), %set this element to be a single pokemon funtor
+        assert(ownedPokemon(ChosenOne)), %set this element to be in the list of owned pokemons
+        menu(). %reopens menu
 
 
 %TODO:fix the singletons on clearBase and clearBase1
