@@ -1,4 +1,5 @@
 :- dynamic player/2.
+:- dynamic ownedPokemon/1.
 :- [auxiliar_functions].
 :- [pokemons].
 :- use_module(library(lists)).
