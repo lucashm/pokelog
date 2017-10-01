@@ -1,6 +1,7 @@
 :- dynamic player/2.
 :- dynamic clearBase/1.
 :- dynamic clearBase1/1.
+:- dynamic enemyPokemon/2.
 :- [aux].
 :- [pokemons].
 :- use_module(library(lists)).

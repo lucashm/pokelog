@@ -30,10 +30,12 @@ singleEnemyPosition() :-
     assert(enemyPokemon(ChosenOne, position(X,Y))). %asserting enemyPokemon in the map
 
 scanEnemies() :-
-    findall(A, enemyPokemon(A, P), Enemies),
-    foreach(member(X, Enemies), checkEnemyProximity()).
+    findall((Pokemon, Position), enemyPokemon(Pokemon, Position), Enemies),
+    foreach(membro((Pokemon, Position), Enemies), checkEnemyProximity(Pokemon, Position)).
 
 
-checkEnemyProximity() :-
+checkEnemyProximity(Pokemon, Position) :-
     %TODO: Implement here the distance comparison
-    write('aaa'), nl.
+    write(Position),nl,
+    nth1(1, Position, Y),
+    write(Y).
