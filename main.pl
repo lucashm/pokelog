@@ -7,6 +7,9 @@
 :- [auxiliar_functions].
 :- [pokemons].
 :- use_module(library(lists)).
+:- [effectiveness_by_type].
+:- [show_advantages].
+:- [attack_types].
 
 ownedPokemon([]) :-
   fail.  % Usuário começa com uma lista vazia de pokemons
@@ -30,9 +33,7 @@ menu() :-
   nl,
   write('3- Verificar minha posição no mapa'),
   nl,
-  write('4- Buscar o melhor campo para treino'),
-  nl,
-  write('5- Procurar inimigos por perto'),
+  write('4- Procurar inimigos por perto'),
   nl,
   read(Choice),
   option(Choice).
@@ -54,11 +55,13 @@ option(3) :-
     nl, nl,
     menu().
 
-option(5) :-
+option(4) :-
     findall((X,Y), player(X,Y), L),
     write(L),
     foreach(membro((_,position(X,Y)), L), scanEnemies(X,Y)),
     nl, nl,
+    findall(X, ownedPokemon(X), List),
+		getListOfPokemons(List),
     menu().
 
 choosePokemon() :-

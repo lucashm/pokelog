@@ -1,40 +1,42 @@
-%TODO fix hardcoded tipes and names of my default pokemon
-%TODO list all my pokemon, to permit that user choose one of them.
-%TODO create method to get first type of my pokemon
+getListOfPokemons(MyPokemons) :-
+	nl,write("Choose one of yours Pokemons to be compared:"),nl,printMyPokemons(MyPokemons),nl,read(ChoosedPokemon),type(pokemon(ChoosedPokemon),MyPokemonType),
+	split_string(MyPokemonType,"_","",Types),nth0(0,Types,PokemonTypeRecovered),atom_string(PokemonTypeSplitted,PokemonTypeRecovered),
+	findall(PokemonName,nearbyEnemy(pokemon(_, PokemonName, _, _, _, _, _, _, _),_),List),
+	printPokemonsByEffectiveness(List,ChoosedPokemon,PokemonTypeSplitted),nl,nl.
 
-getListOfPokemons() :- 
-	findall(PokemonName, (pokemon(_, PokemonName, _, _, _, _, _, _, _),(PokemonName=bulbasaur;PokemonName=shelmet;PokemonName=ditto;PokemonName=deino)), List),
-	printPokemonsByEffectiveness(List).
+printMyPokemons([]).
+printMyPokemons([MyPokemon|Rest]) :-
+	tab(1),write(" -- "),write(MyPokemon),nl,printMyPokemons(Rest).
 
-printPokemonsByEffectiveness(List) :-
-	printMegaEffectiveness(List);
-	printSuperEffectiveness(List);
-	printNormalEffectiveness(List);
-	printZeroEffectiveness(List);
-	printWeakness(List);
-	printSuperWeakness(List).
+printPokemonsByEffectiveness(List,ChoosedPokemon,MyPokemonType) :-
+	printMegaEffectiveness(List,ChoosedPokemon,MyPokemonType),
+	printSuperEffectiveness(List,ChoosedPokemon,MyPokemonType),
+	printNormalEffectiveness(List,ChoosedPokemon,MyPokemonType),
+	printZeroEffectiveness(List,ChoosedPokemon,MyPokemonType),
+	printWeakness(List,ChoosedPokemon,MyPokemonType),
+	printSuperWeakness(List,ChoosedPokemon,MyPokemonType).
 
-printMegaEffectiveness([]).
-printMegaEffectiveness([PokemonName|Rest]) :- (type(pokemon(PokemonName),EnemyPokemonType),mega_effectiveness(fire,EnemyPokemonType),
-	write("Charizard has Mega Effectiveness against "),write(PokemonName),write(", a direct attack would cause damage multiplied by 4!"),nl);printMegaEffectiveness(Rest).
+printMegaEffectiveness(List,ChoosedPokemon,MyPokemonType) :- member(PokemonName,List),type(pokemon(PokemonName),EnemyPokemonType),mega_effectiveness(MyPokemonType,EnemyPokemonType),
+	write(ChoosedPokemon),write(" has Mega Effectiveness against "),write(PokemonName),write(", a direct attack would cause damage multiplied by 4!"),nl,fail.
+printMegaEffectiveness(_,_,_).
 
-printSuperEffectiveness([]).
-printSuperEffectiveness([PokemonName|Rest]) :- (type(pokemon(PokemonName),EnemyPokemonType),super_effectiveness(fire,EnemyPokemonType),
-	write("Charizard has Super Effectiveness against "),write(PokemonName),write(", a direct attack would cause damage multiplied by 2! "),nl);printSuperEffectiveness(Rest).
+printSuperEffectiveness(List,ChoosedPokemon,MyPokemonType) :- member(PokemonName,List),type(pokemon(PokemonName),EnemyPokemonType),super_effectiveness(MyPokemonType,EnemyPokemonType),
+	write(ChoosedPokemon),write(" has Super Effectiveness against "),write(PokemonName),write(", a direct attack would cause damage multiplied by 2! "),nl,fail.
+printSuperEffectiveness(_,_,_).
 
-printNormalEffectiveness([]).
-printNormalEffectiveness([PokemonName|Rest]) :- (type(pokemon(PokemonName),EnemyPokemonType),normal_effectiveness(fire,EnemyPokemonType),
-	write("Charizard has Normal Effectiveness against "),write(PokemonName),write(", then the attack has no bonus or decrease, and would be equal to attack points of "),write("Charizard."),nl);printNormalEffectiveness(Rest).
+printNormalEffectiveness(List,ChoosedPokemon,MyPokemonType) :- member(PokemonName,List),type(pokemon(PokemonName),EnemyPokemonType),normal_effectiveness(MyPokemonType,EnemyPokemonType),
+	write(ChoosedPokemon),write(" has Normal Effectiveness against "),write(PokemonName),write(", then the attack has no bonus or decrease, and would be equal to total attack points!"),nl,fail.
+printNormalEffectiveness(_,_,_).
 
-printZeroEffectiveness([]).
-printZeroEffectiveness([PokemonName|Rest]) :- (type(pokemon(PokemonName),EnemyPokemonType),zero_effectiveness(fire,EnemyPokemonType),
-	write("Charizard has Zero Effectiveness against "),write(PokemonName),write(", "),write(PokemonName),write(" is of type "),write(EnemyPokemonType),write(", that has immunity against attacks of fire type!"),nl);printZeroEffectiveness(Rest).
+printZeroEffectiveness(List,ChoosedPokemon,MyPokemonType) :- member(PokemonName,List),type(pokemon(PokemonName),EnemyPokemonType),zero_effectiveness(MyPokemonType,EnemyPokemonType),
+	write(ChoosedPokemon),write(" has Zero Effectiveness against "),write(PokemonName),write(", "),write(PokemonName),write(" is of type "),write(EnemyPokemonType),write(", that has immunity against attacks of "),write(MyPokemonType),write(" type!"),nl,fail.
+printZeroEffectiveness(_,_,_).
 
-printWeakness([]).
-printWeakness([PokemonName|Rest]) :- (type(pokemon(PokemonName),EnemyPokemonType),weakness(fire,EnemyPokemonType),
-	write("Charizard has Weakness against "),write(PokemonName),write(", then the attack has decrease, and would be multiplied by 1/2!"),nl);printWeakness(Rest).
+printWeakness(List,ChoosedPokemon,MyPokemonType) :- member(PokemonName,List),type(pokemon(PokemonName),EnemyPokemonType),weakness(MyPokemonType,EnemyPokemonType),
+	write(ChoosedPokemon),write(" has Weakness against "),write(PokemonName),write(", then the attack has decrease, and would be multiplied by 1/2!"),nl,fail.
+printWeakness(_,_,_).
 
-printSuperWeakness([]).
-printSuperWeakness([PokemonName|Rest]) :- (type(pokemon(PokemonName),EnemyPokemonType),super_weakness(fire,EnemyPokemonType),
-	write("Charizard has Super Weakness against "),write(PokemonName),write(", then the attack has super decrease, and would be multiplies by 1/4!"),nl);printSuperWeakness(Rest).
+printSuperWeakness(List,ChoosedPokemon,MyPokemonType) :- member(PokemonName,List),type(pokemon(PokemonName),EnemyPokemonType),super_weakness(MyPokemonType,EnemyPokemonType),
+	write(ChoosedPokemon),write(" has Super Weakness against "),write(PokemonName),write(", then the attack has super decrease, and would be multiplies by 1/4!"),nl,fail.
+printSuperWeakness(_,_,_).
 
