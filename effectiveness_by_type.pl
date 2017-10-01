@@ -1,5 +1,1253 @@
-/* Effectiveness normal */
-:-style_check(-discontiguous).
+mega_effectiveness(fire,grass-ice).
+mega_effectiveness(fire,grass-bug).
+mega_effectiveness(fire,grass-steel).
+mega_effectiveness(fire,ice-grass).
+mega_effectiveness(fire,ice-bug).
+mega_effectiveness(fire,ice-steel).
+mega_effectiveness(fire,bug-grass).
+mega_effectiveness(fire,bug-ice).
+mega_effectiveness(fire,bug-steel).
+mega_effectiveness(fire,steel-grass).
+mega_effectiveness(fire,steel-ice).
+mega_effectiveness(fire,steel-bug).
+mega_effectiveness(water,fire-ground).
+mega_effectiveness(water,fire-rock).
+mega_effectiveness(water,ground-fire).
+mega_effectiveness(water,ground-rock).
+mega_effectiveness(water,rock-fire).
+mega_effectiveness(water,rock-ground).
+mega_effectiveness(electric,water-flying).
+mega_effectiveness(electric,flying-water).
+mega_effectiveness(grass,water-ground).
+mega_effectiveness(grass,water-rock).
+mega_effectiveness(grass,ground-water).
+mega_effectiveness(grass,ground-rock).
+mega_effectiveness(grass,rock-water).
+mega_effectiveness(grass,rock-ground).
+mega_effectiveness(ice,grass-ground).
+mega_effectiveness(ice,grass-flying).
+mega_effectiveness(ice,grass-dragon).
+mega_effectiveness(ice,ground-grass).
+mega_effectiveness(ice,ground-flying).
+mega_effectiveness(ice,ground-dragon).
+mega_effectiveness(ice,flying-grass).
+mega_effectiveness(ice,flying-ground).
+mega_effectiveness(ice,flying-dragon).
+mega_effectiveness(ice,dragon-grass).
+mega_effectiveness(ice,dragon-ground).
+mega_effectiveness(ice,dragon-flying).
+mega_effectiveness(fighting,normal-ice).
+mega_effectiveness(fighting,normal-rock).
+mega_effectiveness(fighting,normal-dark).
+mega_effectiveness(fighting,normal-steel).
+mega_effectiveness(fighting,ice-normal).
+mega_effectiveness(fighting,ice-rock).
+mega_effectiveness(fighting,ice-dark).
+mega_effectiveness(fighting,ice-steel).
+mega_effectiveness(fighting,rock-normal).
+mega_effectiveness(fighting,rock-ice).
+mega_effectiveness(fighting,rock-dark).
+mega_effectiveness(fighting,rock-steel).
+mega_effectiveness(fighting,dark-normal).
+mega_effectiveness(fighting,dark-ice).
+mega_effectiveness(fighting,dark-rock).
+mega_effectiveness(fighting,dark-steel).
+mega_effectiveness(fighting,steel-normal).
+mega_effectiveness(fighting,steel-ice).
+mega_effectiveness(fighting,steel-rock).
+mega_effectiveness(fighting,steel-dark).
+mega_effectiveness(poison,grass-fairy).
+mega_effectiveness(poison,fairy-grass).
+mega_effectiveness(ground,fire-electric).
+mega_effectiveness(ground,fire-poison).
+mega_effectiveness(ground,fire-rock).
+mega_effectiveness(ground,fire-steel).
+mega_effectiveness(ground,electric-fire).
+mega_effectiveness(ground,electric-poison).
+mega_effectiveness(ground,electric-rock).
+mega_effectiveness(ground,electric-steel).
+mega_effectiveness(ground,poison-fire).
+mega_effectiveness(ground,poison-electric).
+mega_effectiveness(ground,poison-rock).
+mega_effectiveness(ground,poison-steel).
+mega_effectiveness(ground,rock-fire).
+mega_effectiveness(ground,rock-electric).
+mega_effectiveness(ground,rock-poison).
+mega_effectiveness(ground,rock-steel).
+mega_effectiveness(ground,steel-fire).
+mega_effectiveness(ground,steel-electric).
+mega_effectiveness(ground,steel-poison).
+mega_effectiveness(ground,steel-rock).
+mega_effectiveness(flying,grass-fighting).
+mega_effectiveness(flying,grass-bug).
+mega_effectiveness(flying,fighting-grass).
+mega_effectiveness(flying,fighting-bug).
+mega_effectiveness(flying,bug-grass).
+mega_effectiveness(flying,bug-fighting).
+mega_effectiveness(bug,grass-psychic).
+mega_effectiveness(bug,grass-dark).
+mega_effectiveness(bug,psychic-grass).
+mega_effectiveness(bug,psychic-dark).
+mega_effectiveness(bug,dark-grass).
+mega_effectiveness(bug,dark-psychic).
+mega_effectiveness(rock,fire-ice).
+mega_effectiveness(rock,fire-flying).
+mega_effectiveness(rock,fire-bug).
+mega_effectiveness(rock,ice-fire).
+mega_effectiveness(rock,ice-flying).
+mega_effectiveness(rock,ice-bug).
+mega_effectiveness(rock,flying-fire).
+mega_effectiveness(rock,flying-ice).
+mega_effectiveness(rock,flying-bug).
+mega_effectiveness(rock,bug-fire).
+mega_effectiveness(rock,bug-ice).
+mega_effectiveness(rock,bug-flying).
+mega_effectiveness(ghost,psychic-ghost).
+mega_effectiveness(ghost,ghost-psychic).
+mega_effectiveness(dark,psychic-ghost).
+mega_effectiveness(dark,ghost-psychic).
+mega_effectiveness(steel,ice-rock).
+mega_effectiveness(steel,ice-fairy).
+mega_effectiveness(steel,rock-ice).
+mega_effectiveness(steel,rock-fairy).
+mega_effectiveness(steel,fairy-ice).
+mega_effectiveness(steel,fairy-rock).
+mega_effectiveness(fairy,fighting-dragon).
+mega_effectiveness(fairy,fighting-dark).
+mega_effectiveness(fairy,dragon-fighting).
+mega_effectiveness(fairy,dragon-dark).
+mega_effectiveness(fairy,dark-fighting).
+mega_effectiveness(fairy,dark-dragon).
+
+super_effectiveness(fire,grass).
+super_effectiveness(fire,ice).
+super_effectiveness(fire,bug).
+super_effectiveness(fire,steel).
+super_effectiveness(fire,normal-grass).
+super_effectiveness(fire,normal-ice).
+super_effectiveness(fire,normal-bug).
+super_effectiveness(fire,normal-steel).
+super_effectiveness(fire,electric-grass).
+super_effectiveness(fire,electric-ice).
+super_effectiveness(fire,electric-bug).
+super_effectiveness(fire,electric-steel).
+super_effectiveness(fire,grass-normal).
+super_effectiveness(fire,grass-electric).
+super_effectiveness(fire,grass-fighting).
+super_effectiveness(fire,grass-poison).
+super_effectiveness(fire,grass-ground).
+super_effectiveness(fire,grass-flying).
+super_effectiveness(fire,grass-psychic).
+super_effectiveness(fire,grass-ghost).
+super_effectiveness(fire,grass-dark).
+super_effectiveness(fire,grass-fairy).
+super_effectiveness(fire,ice-normal).
+super_effectiveness(fire,ice-electric).
+super_effectiveness(fire,ice-fighting).
+super_effectiveness(fire,ice-poison).
+super_effectiveness(fire,ice-ground).
+super_effectiveness(fire,ice-flying).
+super_effectiveness(fire,ice-psychic).
+super_effectiveness(fire,ice-ghost).
+super_effectiveness(fire,ice-dark).
+super_effectiveness(fire,ice-fairy).
+super_effectiveness(fire,fighting-grass).
+super_effectiveness(fire,fighting-ice).
+super_effectiveness(fire,fighting-poison).
+super_effectiveness(fire,fighting-bug).
+super_effectiveness(fire,fighting-steel).
+super_effectiveness(fire,poison-grass).
+super_effectiveness(fire,poison-ice).
+super_effectiveness(fire,poison-fighting).
+super_effectiveness(fire,poison-bug).
+super_effectiveness(fire,poison-steel).
+super_effectiveness(fire,ground-grass).
+super_effectiveness(fire,ground-ice).
+super_effectiveness(fire,ground-bug).
+super_effectiveness(fire,ground-steel).
+super_effectiveness(fire,flying-grass).
+super_effectiveness(fire,flying-ice).
+super_effectiveness(fire,flying-bug).
+super_effectiveness(fire,flying-steel).
+super_effectiveness(fire,psychic-grass).
+super_effectiveness(fire,psychic-ice).
+super_effectiveness(fire,psychic-bug).
+super_effectiveness(fire,psychic-steel).
+super_effectiveness(fire,bug-normal).
+super_effectiveness(fire,bug-electric).
+super_effectiveness(fire,bug-fighting).
+super_effectiveness(fire,bug-poison).
+super_effectiveness(fire,bug-ground).
+super_effectiveness(fire,bug-flying).
+super_effectiveness(fire,bug-psychic).
+super_effectiveness(fire,bug-ghost).
+super_effectiveness(fire,bug-dark).
+super_effectiveness(fire,bug-fairy).
+super_effectiveness(fire,ghost-grass).
+super_effectiveness(fire,ghost-ice).
+super_effectiveness(fire,ghost-bug).
+super_effectiveness(fire,ghost-steel).
+super_effectiveness(fire,dark-grass).
+super_effectiveness(fire,dark-ice).
+super_effectiveness(fire,dark-bug).
+super_effectiveness(fire,dark-steel).
+super_effectiveness(fire,steel-normal).
+super_effectiveness(fire,steel-electric).
+super_effectiveness(fire,steel-fighting).
+super_effectiveness(fire,steel-poison).
+super_effectiveness(fire,steel-ground).
+super_effectiveness(fire,steel-flying).
+super_effectiveness(fire,steel-psychic).
+super_effectiveness(fire,steel-ghost).
+super_effectiveness(fire,steel-dark).
+super_effectiveness(fire,steel-fairy).
+super_effectiveness(fire,fairy-grass).
+super_effectiveness(fire,fairy-ice).
+super_effectiveness(fire,fairy-bug).
+super_effectiveness(fire,fairy-steel).
+super_effectiveness(water,fire).
+super_effectiveness(water,ground).
+super_effectiveness(water,rock).
+super_effectiveness(water,normal-fire).
+super_effectiveness(water,normal-ground).
+super_effectiveness(water,normal-rock).
+super_effectiveness(water,fire-normal).
+super_effectiveness(water,fire-electric).
+super_effectiveness(water,fire-ice).
+super_effectiveness(water,fire-fighting).
+super_effectiveness(water,fire-poison).
+super_effectiveness(water,fire-flying).
+super_effectiveness(water,fire-psychic).
+super_effectiveness(water,fire-bug).
+super_effectiveness(water,fire-ghost).
+super_effectiveness(water,fire-dark).
+super_effectiveness(water,fire-steel).
+super_effectiveness(water,fire-fairy).
+super_effectiveness(water,electric-fire).
+super_effectiveness(water,electric-ground).
+super_effectiveness(water,electric-rock).
+super_effectiveness(water,ice-fire).
+super_effectiveness(water,ice-ground).
+super_effectiveness(water,ice-rock).
+super_effectiveness(water,fighting-fire).
+super_effectiveness(water,fighting-ground).
+super_effectiveness(water,fighting-rock).
+super_effectiveness(water,poison-fire).
+super_effectiveness(water,poison-ground).
+super_effectiveness(water,poison-rock).
+super_effectiveness(water,ground-normal).
+super_effectiveness(water,ground-electric).
+super_effectiveness(water,ground-ice).
+super_effectiveness(water,ground-fighting).
+super_effectiveness(water,ground-poison).
+super_effectiveness(water,ground-flying).
+super_effectiveness(water,ground-psychic).
+super_effectiveness(water,ground-bug).
+super_effectiveness(water,ground-ghost).
+super_effectiveness(water,ground-dark).
+super_effectiveness(water,ground-steel).
+super_effectiveness(water,ground-fairy).
+super_effectiveness(water,flying-fire).
+super_effectiveness(water,flying-ground).
+super_effectiveness(water,flying-rock).
+super_effectiveness(water,psychic-fire).
+super_effectiveness(water,psychic-ground).
+super_effectiveness(water,psychic-rock).
+super_effectiveness(water,bug-fire).
+super_effectiveness(water,bug-ground).
+super_effectiveness(water,bug-rock).
+super_effectiveness(water,rock-normal).
+super_effectiveness(water,rock-electric).
+super_effectiveness(water,rock-ice).
+super_effectiveness(water,rock-fighting).
+super_effectiveness(water,rock-poison).
+super_effectiveness(water,rock-flying).
+super_effectiveness(water,rock-psychic).
+super_effectiveness(water,rock-bug).
+super_effectiveness(water,rock-ghost).
+super_effectiveness(water,rock-dark).
+super_effectiveness(water,rock-steel).
+super_effectiveness(water,rock-fairy).
+super_effectiveness(water,ghost-fire).
+super_effectiveness(water,ghost-ground).
+super_effectiveness(water,ghost-rock).
+super_effectiveness(water,dark-fire).
+super_effectiveness(water,dark-ground).
+super_effectiveness(water,dark-rock).
+super_effectiveness(water,steel-fire).
+super_effectiveness(water,steel-ground).
+super_effectiveness(water,steel-rock).
+super_effectiveness(water,fairy-fire).
+super_effectiveness(water,fairy-ground).
+super_effectiveness(water,fairy-rock).
+super_effectiveness(electric,water).
+super_effectiveness(electric,flying).
+super_effectiveness(electric,normal-water).
+super_effectiveness(electric,normal-flying).
+super_effectiveness(electric,fire-water).
+super_effectiveness(electric,fire-flying).
+super_effectiveness(electric,water-normal).
+super_effectiveness(electric,water-fire).
+super_effectiveness(electric,water-fighting).
+super_effectiveness(electric,water-poison).
+super_effectiveness(electric,water-psychic).
+super_effectiveness(electric,water-bug).
+super_effectiveness(electric,water-rock).
+super_effectiveness(electric,water-ghost).
+super_effectiveness(electric,water-dark).
+super_effectiveness(electric,water-steel).
+super_effectiveness(electric,water-fairy).
+super_effectiveness(electric,ice-flying).
+super_effectiveness(electric,fighting-water).
+super_effectiveness(electric,fighting-flying).
+super_effectiveness(electric,poison-water).
+super_effectiveness(electric,poison-flying).
+super_effectiveness(electric,flying-normal).
+super_effectiveness(electric,flying-fire).
+super_effectiveness(electric,flying-ice).
+super_effectiveness(electric,flying-fighting).
+super_effectiveness(electric,flying-poison).
+super_effectiveness(electric,flying-psychic).
+super_effectiveness(electric,flying-bug).
+super_effectiveness(electric,flying-rock).
+super_effectiveness(electric,flying-ghost).
+super_effectiveness(electric,flying-dark).
+super_effectiveness(electric,flying-steel).
+super_effectiveness(electric,flying-fairy).
+super_effectiveness(electric,psychic-water).
+super_effectiveness(electric,psychic-flying).
+super_effectiveness(electric,bug-water).
+super_effectiveness(electric,bug-flying).
+super_effectiveness(electric,rock-water).
+super_effectiveness(electric,rock-flying).
+super_effectiveness(electric,ghost-water).
+super_effectiveness(electric,ghost-flying).
+super_effectiveness(electric,dark-water).
+super_effectiveness(electric,dark-flying).
+super_effectiveness(electric,steel-water).
+super_effectiveness(electric,steel-flying).
+super_effectiveness(electric,fairy-water).
+super_effectiveness(electric,fairy-flying).
+super_effectiveness(grass,water).
+super_effectiveness(grass,ground).
+super_effectiveness(grass,rock).
+super_effectiveness(grass,normal-water).
+super_effectiveness(grass,normal-ground).
+super_effectiveness(grass,normal-rock).
+super_effectiveness(grass,water-normal).
+super_effectiveness(grass,water-electric).
+super_effectiveness(grass,water-fighting).
+super_effectiveness(grass,water-psychic).
+super_effectiveness(grass,water-ghost).
+super_effectiveness(grass,water-dark).
+super_effectiveness(grass,water-fairy).
+super_effectiveness(grass,electric-water).
+super_effectiveness(grass,electric-ground).
+super_effectiveness(grass,electric-rock).
+super_effectiveness(grass,ice-ground).
+super_effectiveness(grass,ice-rock).
+super_effectiveness(grass,fighting-water).
+super_effectiveness(grass,fighting-ground).
+super_effectiveness(grass,fighting-rock).
+super_effectiveness(grass,ground-normal).
+super_effectiveness(grass,ground-electric).
+super_effectiveness(grass,ground-ice).
+super_effectiveness(grass,ground-fighting).
+super_effectiveness(grass,ground-psychic).
+super_effectiveness(grass,ground-ghost).
+super_effectiveness(grass,ground-dark).
+super_effectiveness(grass,ground-fairy).
+super_effectiveness(grass,psychic-water).
+super_effectiveness(grass,psychic-ground).
+super_effectiveness(grass,psychic-rock).
+super_effectiveness(grass,rock-normal).
+super_effectiveness(grass,rock-electric).
+super_effectiveness(grass,rock-ice).
+super_effectiveness(grass,rock-fighting).
+super_effectiveness(grass,rock-psychic).
+super_effectiveness(grass,rock-ghost).
+super_effectiveness(grass,rock-dark).
+super_effectiveness(grass,rock-fairy).
+super_effectiveness(grass,ghost-water).
+super_effectiveness(grass,ghost-ground).
+super_effectiveness(grass,ghost-rock).
+super_effectiveness(grass,dark-water).
+super_effectiveness(grass,dark-ground).
+super_effectiveness(grass,dark-rock).
+super_effectiveness(grass,fairy-water).
+super_effectiveness(grass,fairy-ground).
+super_effectiveness(grass,fairy-rock).
+super_effectiveness(ice,grass).
+super_effectiveness(ice,ground).
+super_effectiveness(ice,flying).
+super_effectiveness(ice,dragon).
+super_effectiveness(ice,normal-grass).
+super_effectiveness(ice,normal-ground).
+super_effectiveness(ice,normal-flying).
+super_effectiveness(ice,normal-dragon).
+super_effectiveness(ice,electric-grass).
+super_effectiveness(ice,electric-ground).
+super_effectiveness(ice,electric-flying).
+super_effectiveness(ice,electric-dragon).
+super_effectiveness(ice,grass-normal).
+super_effectiveness(ice,grass-electric).
+super_effectiveness(ice,grass-fighting).
+super_effectiveness(ice,grass-poison).
+super_effectiveness(ice,grass-psychic).
+super_effectiveness(ice,grass-bug).
+super_effectiveness(ice,grass-rock).
+super_effectiveness(ice,grass-ghost).
+super_effectiveness(ice,grass-dark).
+super_effectiveness(ice,grass-fairy).
+super_effectiveness(ice,fighting-grass).
+super_effectiveness(ice,fighting-ground).
+super_effectiveness(ice,fighting-flying).
+super_effectiveness(ice,fighting-dragon).
+super_effectiveness(ice,poison-grass).
+super_effectiveness(ice,poison-ground).
+super_effectiveness(ice,poison-flying).
+super_effectiveness(ice,poison-dragon).
+super_effectiveness(ice,ground-normal).
+super_effectiveness(ice,ground-electric).
+super_effectiveness(ice,ground-fighting).
+super_effectiveness(ice,ground-poison).
+super_effectiveness(ice,ground-psychic).
+super_effectiveness(ice,ground-bug).
+super_effectiveness(ice,ground-rock).
+super_effectiveness(ice,ground-ghost).
+super_effectiveness(ice,ground-dark).
+super_effectiveness(ice,ground-fairy).
+super_effectiveness(ice,flying-normal).
+super_effectiveness(ice,flying-electric).
+super_effectiveness(ice,flying-fighting).
+super_effectiveness(ice,flying-poison).
+super_effectiveness(ice,flying-psychic).
+super_effectiveness(ice,flying-bug).
+super_effectiveness(ice,flying-rock).
+super_effectiveness(ice,flying-ghost).
+super_effectiveness(ice,flying-dark).
+super_effectiveness(ice,flying-fairy).
+super_effectiveness(ice,psychic-grass).
+super_effectiveness(ice,psychic-ground).
+super_effectiveness(ice,psychic-flying).
+super_effectiveness(ice,psychic-dragon).
+super_effectiveness(ice,bug-grass).
+super_effectiveness(ice,bug-ground).
+super_effectiveness(ice,bug-flying).
+super_effectiveness(ice,bug-dragon).
+super_effectiveness(ice,rock-grass).
+super_effectiveness(ice,rock-ground).
+super_effectiveness(ice,rock-flying).
+super_effectiveness(ice,rock-dragon).
+super_effectiveness(ice,ghost-grass).
+super_effectiveness(ice,ghost-ground).
+super_effectiveness(ice,ghost-flying).
+super_effectiveness(ice,ghost-dragon).
+super_effectiveness(ice,dragon-normal).
+super_effectiveness(ice,dragon-electric).
+super_effectiveness(ice,dragon-fighting).
+super_effectiveness(ice,dragon-poison).
+super_effectiveness(ice,dragon-psychic).
+super_effectiveness(ice,dragon-bug).
+super_effectiveness(ice,dragon-rock).
+super_effectiveness(ice,dragon-ghost).
+super_effectiveness(ice,dragon-dark).
+super_effectiveness(ice,dragon-fairy).
+super_effectiveness(ice,dark-grass).
+super_effectiveness(ice,dark-ground).
+super_effectiveness(ice,dark-flying).
+super_effectiveness(ice,dark-dragon).
+super_effectiveness(ice,fairy-grass).
+super_effectiveness(ice,fairy-ground).
+super_effectiveness(ice,fairy-flying).
+super_effectiveness(ice,fairy-dragon).
+super_effectiveness(fighting,normal).
+super_effectiveness(fighting,ice).
+super_effectiveness(fighting,rock).
+super_effectiveness(fighting,dark).
+super_effectiveness(fighting,steel).
+super_effectiveness(fighting,normal-fire).
+super_effectiveness(fighting,normal-water).
+super_effectiveness(fighting,normal-electric).
+super_effectiveness(fighting,normal-grass).
+super_effectiveness(fighting,normal-fighting).
+super_effectiveness(fighting,normal-ground).
+super_effectiveness(fighting,normal-dragon).
+super_effectiveness(fighting,fire-normal).
+super_effectiveness(fighting,fire-ice).
+super_effectiveness(fighting,fire-rock).
+super_effectiveness(fighting,fire-dark).
+super_effectiveness(fighting,fire-steel).
+super_effectiveness(fighting,water-normal).
+super_effectiveness(fighting,water-ice).
+super_effectiveness(fighting,water-rock).
+super_effectiveness(fighting,water-dark).
+super_effectiveness(fighting,water-steel).
+super_effectiveness(fighting,electric-normal).
+super_effectiveness(fighting,electric-ice).
+super_effectiveness(fighting,electric-rock).
+super_effectiveness(fighting,electric-dark).
+super_effectiveness(fighting,electric-steel).
+super_effectiveness(fighting,grass-normal).
+super_effectiveness(fighting,grass-ice).
+super_effectiveness(fighting,grass-rock).
+super_effectiveness(fighting,grass-dark).
+super_effectiveness(fighting,grass-steel).
+super_effectiveness(fighting,ice-fire).
+super_effectiveness(fighting,ice-water).
+super_effectiveness(fighting,ice-electric).
+super_effectiveness(fighting,ice-grass).
+super_effectiveness(fighting,ice-fighting).
+super_effectiveness(fighting,ice-ground).
+super_effectiveness(fighting,ice-dragon).
+super_effectiveness(fighting,fighting-normal).
+super_effectiveness(fighting,fighting-ice).
+super_effectiveness(fighting,fighting-rock).
+super_effectiveness(fighting,fighting-dark).
+super_effectiveness(fighting,fighting-steel).
+super_effectiveness(fighting,ground-normal).
+super_effectiveness(fighting,ground-ice).
+super_effectiveness(fighting,ground-rock).
+super_effectiveness(fighting,ground-dark).
+super_effectiveness(fighting,ground-steel).
+super_effectiveness(fighting,rock-fire).
+super_effectiveness(fighting,rock-water).
+super_effectiveness(fighting,rock-electric).
+super_effectiveness(fighting,rock-grass).
+super_effectiveness(fighting,rock-fighting).
+super_effectiveness(fighting,rock-ground).
+super_effectiveness(fighting,rock-dragon).
+super_effectiveness(fighting,dragon-normal).
+super_effectiveness(fighting,dragon-ice).
+super_effectiveness(fighting,dragon-rock).
+super_effectiveness(fighting,dragon-dark).
+super_effectiveness(fighting,dragon-steel).
+super_effectiveness(fighting,dark-fire).
+super_effectiveness(fighting,dark-water).
+super_effectiveness(fighting,dark-electric).
+super_effectiveness(fighting,dark-grass).
+super_effectiveness(fighting,dark-fighting).
+super_effectiveness(fighting,dark-ground).
+super_effectiveness(fighting,dark-dragon).
+super_effectiveness(fighting,steel-fire).
+super_effectiveness(fighting,steel-water).
+super_effectiveness(fighting,steel-electric).
+super_effectiveness(fighting,steel-grass).
+super_effectiveness(fighting,steel-fighting).
+super_effectiveness(fighting,steel-ground).
+super_effectiveness(fighting,steel-dragon).
+super_effectiveness(poison,grass).
+super_effectiveness(poison,fairy).
+super_effectiveness(poison,normal-grass).
+super_effectiveness(poison,normal-fairy).
+super_effectiveness(poison,fire-grass).
+super_effectiveness(poison,fire-fairy).
+super_effectiveness(poison,water-grass).
+super_effectiveness(poison,water-fairy).
+super_effectiveness(poison,electric-grass).
+super_effectiveness(poison,electric-fairy).
+super_effectiveness(poison,grass-normal).
+super_effectiveness(poison,grass-fire).
+super_effectiveness(poison,grass-water).
+super_effectiveness(poison,grass-electric).
+super_effectiveness(poison,grass-ice).
+super_effectiveness(poison,grass-fighting).
+super_effectiveness(poison,grass-flying).
+super_effectiveness(poison,grass-psychic).
+super_effectiveness(poison,grass-bug).
+super_effectiveness(poison,grass-dragon).
+super_effectiveness(poison,grass-dark).
+super_effectiveness(poison,ice-grass).
+super_effectiveness(poison,ice-fairy).
+super_effectiveness(poison,fighting-grass).
+super_effectiveness(poison,fighting-fairy).
+super_effectiveness(poison,flying-grass).
+super_effectiveness(poison,flying-fairy).
+super_effectiveness(poison,psychic-grass).
+super_effectiveness(poison,psychic-fairy).
+super_effectiveness(poison,bug-grass).
+super_effectiveness(poison,bug-fairy).
+super_effectiveness(poison,dragon-grass).
+super_effectiveness(poison,dragon-fairy).
+super_effectiveness(poison,dark-grass).
+super_effectiveness(poison,dark-fairy).
+super_effectiveness(poison,fairy-normal).
+super_effectiveness(poison,fairy-fire).
+super_effectiveness(poison,fairy-water).
+super_effectiveness(poison,fairy-electric).
+super_effectiveness(poison,fairy-ice).
+super_effectiveness(poison,fairy-fighting).
+super_effectiveness(poison,fairy-flying).
+super_effectiveness(poison,fairy-psychic).
+super_effectiveness(poison,fairy-bug).
+super_effectiveness(poison,fairy-dragon).
+super_effectiveness(poison,fairy-dark).
+super_effectiveness(ground,fire).
+super_effectiveness(ground,electric).
+super_effectiveness(ground,poison).
+super_effectiveness(ground,rock).
+super_effectiveness(ground,steel).
+super_effectiveness(ground,normal-fire).
+super_effectiveness(ground,normal-electric).
+super_effectiveness(ground,normal-poison).
+super_effectiveness(ground,normal-rock).
+super_effectiveness(ground,normal-steel).
+super_effectiveness(ground,fire-normal).
+super_effectiveness(ground,fire-water).
+super_effectiveness(ground,fire-ice).
+super_effectiveness(ground,fire-fighting).
+super_effectiveness(ground,fire-ground).
+super_effectiveness(ground,fire-psychic).
+super_effectiveness(ground,fire-ghost).
+super_effectiveness(ground,fire-dragon).
+super_effectiveness(ground,fire-dark).
+super_effectiveness(ground,fire-fairy).
+super_effectiveness(ground,water-fire).
+super_effectiveness(ground,water-electric).
+super_effectiveness(ground,water-poison).
+super_effectiveness(ground,water-rock).
+super_effectiveness(ground,water-steel).
+super_effectiveness(ground,electric-normal).
+super_effectiveness(ground,electric-water).
+super_effectiveness(ground,electric-ice).
+super_effectiveness(ground,electric-fighting).
+super_effectiveness(ground,electric-ground).
+super_effectiveness(ground,electric-psychic).
+super_effectiveness(ground,electric-ghost).
+super_effectiveness(ground,electric-dragon).
+super_effectiveness(ground,electric-dark).
+super_effectiveness(ground,electric-fairy).
+super_effectiveness(ground,ice-fire).
+super_effectiveness(ground,ice-electric).
+super_effectiveness(ground,ice-poison).
+super_effectiveness(ground,ice-rock).
+super_effectiveness(ground,ice-steel).
+super_effectiveness(ground,fighting-fire).
+super_effectiveness(ground,fighting-electric).
+super_effectiveness(ground,fighting-poison).
+super_effectiveness(ground,fighting-rock).
+super_effectiveness(ground,fighting-steel).
+super_effectiveness(ground,poison-normal).
+super_effectiveness(ground,poison-water).
+super_effectiveness(ground,poison-ice).
+super_effectiveness(ground,poison-fighting).
+super_effectiveness(ground,poison-ground).
+super_effectiveness(ground,poison-psychic).
+super_effectiveness(ground,poison-ghost).
+super_effectiveness(ground,poison-dragon).
+super_effectiveness(ground,poison-dark).
+super_effectiveness(ground,poison-fairy).
+super_effectiveness(ground,ground-fire).
+super_effectiveness(ground,ground-electric).
+super_effectiveness(ground,ground-poison).
+super_effectiveness(ground,ground-rock).
+super_effectiveness(ground,ground-steel).
+super_effectiveness(ground,psychic-fire).
+super_effectiveness(ground,psychic-electric).
+super_effectiveness(ground,psychic-poison).
+super_effectiveness(ground,psychic-rock).
+super_effectiveness(ground,psychic-steel).
+super_effectiveness(ground,rock-normal).
+super_effectiveness(ground,rock-water).
+super_effectiveness(ground,rock-ice).
+super_effectiveness(ground,rock-fighting).
+super_effectiveness(ground,rock-ground).
+super_effectiveness(ground,rock-psychic).
+super_effectiveness(ground,rock-ghost).
+super_effectiveness(ground,rock-dragon).
+super_effectiveness(ground,rock-dark).
+super_effectiveness(ground,rock-fairy).
+super_effectiveness(ground,ghost-fire).
+super_effectiveness(ground,ghost-electric).
+super_effectiveness(ground,ghost-poison).
+super_effectiveness(ground,ghost-rock).
+super_effectiveness(ground,ghost-steel).
+super_effectiveness(ground,dragon-fire).
+super_effectiveness(ground,dragon-electric).
+super_effectiveness(ground,dragon-poison).
+super_effectiveness(ground,dragon-rock).
+super_effectiveness(ground,dragon-steel).
+super_effectiveness(ground,dark-fire).
+super_effectiveness(ground,dark-electric).
+super_effectiveness(ground,dark-poison).
+super_effectiveness(ground,dark-rock).
+super_effectiveness(ground,dark-steel).
+super_effectiveness(ground,steel-normal).
+super_effectiveness(ground,steel-water).
+super_effectiveness(ground,steel-ice).
+super_effectiveness(ground,steel-fighting).
+super_effectiveness(ground,steel-ground).
+super_effectiveness(ground,steel-psychic).
+super_effectiveness(ground,steel-ghost).
+super_effectiveness(ground,steel-dragon).
+super_effectiveness(ground,steel-dark).
+super_effectiveness(ground,steel-fairy).
+super_effectiveness(ground,fairy-fire).
+super_effectiveness(ground,fairy-electric).
+super_effectiveness(ground,fairy-poison).
+super_effectiveness(ground,fairy-rock).
+super_effectiveness(ground,fairy-steel).
+super_effectiveness(flying,grass).
+super_effectiveness(flying,fighting).
+super_effectiveness(flying,bug).
+super_effectiveness(flying,normal-grass).
+super_effectiveness(flying,normal-fighting).
+super_effectiveness(flying,normal-bug).
+super_effectiveness(flying,fire-grass).
+super_effectiveness(flying,fire-fighting).
+super_effectiveness(flying,fire-bug).
+super_effectiveness(flying,water-grass).
+super_effectiveness(flying,water-fighting).
+super_effectiveness(flying,water-bug).
+super_effectiveness(flying,grass-normal).
+super_effectiveness(flying,grass-fire).
+super_effectiveness(flying,grass-water).
+super_effectiveness(flying,grass-ice).
+super_effectiveness(flying,grass-poison).
+super_effectiveness(flying,grass-ground).
+super_effectiveness(flying,grass-flying).
+super_effectiveness(flying,grass-psychic).
+super_effectiveness(flying,grass-ghost).
+super_effectiveness(flying,grass-dragon).
+super_effectiveness(flying,grass-dark).
+super_effectiveness(flying,grass-fairy).
+super_effectiveness(flying,ice-grass).
+super_effectiveness(flying,ice-fighting).
+super_effectiveness(flying,ice-bug).
+super_effectiveness(flying,fighting-normal).
+super_effectiveness(flying,fighting-fire).
+super_effectiveness(flying,fighting-water).
+super_effectiveness(flying,fighting-ice).
+super_effectiveness(flying,fighting-ground).
+super_effectiveness(flying,fighting-flying).
+super_effectiveness(flying,fighting-psychic).
+super_effectiveness(flying,fighting-ghost).
+super_effectiveness(flying,fighting-dragon).
+super_effectiveness(flying,fighting-dark).
+super_effectiveness(flying,fighting-fairy).
+super_effectiveness(flying,poison-grass).
+super_effectiveness(flying,poison-bug).
+super_effectiveness(flying,ground-grass).
+super_effectiveness(flying,ground-fighting).
+super_effectiveness(flying,ground-bug).
+super_effectiveness(flying,flying-grass).
+super_effectiveness(flying,flying-fighting).
+super_effectiveness(flying,flying-bug).
+super_effectiveness(flying,psychic-grass).
+super_effectiveness(flying,psychic-fighting).
+super_effectiveness(flying,psychic-bug).
+super_effectiveness(flying,bug-normal).
+super_effectiveness(flying,bug-fire).
+super_effectiveness(flying,bug-water).
+super_effectiveness(flying,bug-ice).
+super_effectiveness(flying,bug-poison).
+super_effectiveness(flying,bug-ground).
+super_effectiveness(flying,bug-flying).
+super_effectiveness(flying,bug-psychic).
+super_effectiveness(flying,bug-ghost).
+super_effectiveness(flying,bug-dragon).
+super_effectiveness(flying,bug-dark).
+super_effectiveness(flying,bug-fairy).
+super_effectiveness(flying,ghost-grass).
+super_effectiveness(flying,ghost-fighting).
+super_effectiveness(flying,ghost-bug).
+super_effectiveness(flying,dragon-grass).
+super_effectiveness(flying,dragon-fighting).
+super_effectiveness(flying,dragon-bug).
+super_effectiveness(flying,dark-grass).
+super_effectiveness(flying,dark-fighting).
+super_effectiveness(flying,dark-bug).
+super_effectiveness(flying,fairy-grass).
+super_effectiveness(flying,fairy-fighting).
+super_effectiveness(flying,fairy-bug).
+super_effectiveness(psychic,fighting).
+super_effectiveness(psychic,poison).
+super_effectiveness(psychic,normal-fighting).
+super_effectiveness(psychic,normal-poison).
+super_effectiveness(psychic,fire-fighting).
+super_effectiveness(psychic,fire-poison).
+super_effectiveness(psychic,water-fighting).
+super_effectiveness(psychic,water-poison).
+super_effectiveness(psychic,electric-fighting).
+super_effectiveness(psychic,electric-poison).
+super_effectiveness(psychic,grass-fighting).
+super_effectiveness(psychic,grass-poison).
+super_effectiveness(psychic,ice-fighting).
+super_effectiveness(psychic,ice-poison).
+super_effectiveness(psychic,fighting-normal).
+super_effectiveness(psychic,fighting-fire).
+super_effectiveness(psychic,fighting-water).
+super_effectiveness(psychic,fighting-electric).
+super_effectiveness(psychic,fighting-grass).
+super_effectiveness(psychic,fighting-ice).
+super_effectiveness(psychic,fighting-poison).
+super_effectiveness(psychic,fighting-ground).
+super_effectiveness(psychic,fighting-flying).
+super_effectiveness(psychic,fighting-bug).
+super_effectiveness(psychic,fighting-rock).
+super_effectiveness(psychic,fighting-ghost).
+super_effectiveness(psychic,fighting-dragon).
+super_effectiveness(psychic,fighting-fairy).
+super_effectiveness(psychic,poison-normal).
+super_effectiveness(psychic,poison-fire).
+super_effectiveness(psychic,poison-water).
+super_effectiveness(psychic,poison-electric).
+super_effectiveness(psychic,poison-grass).
+super_effectiveness(psychic,poison-ice).
+super_effectiveness(psychic,poison-fighting).
+super_effectiveness(psychic,poison-ground).
+super_effectiveness(psychic,poison-flying).
+super_effectiveness(psychic,poison-bug).
+super_effectiveness(psychic,poison-ghost).
+super_effectiveness(psychic,poison-dragon).
+super_effectiveness(psychic,poison-fairy).
+super_effectiveness(psychic,ground-fighting).
+super_effectiveness(psychic,ground-poison).
+super_effectiveness(psychic,flying-fighting).
+super_effectiveness(psychic,flying-poison).
+super_effectiveness(psychic,bug-fighting).
+super_effectiveness(psychic,bug-poison).
+super_effectiveness(psychic,rock-fighting).
+super_effectiveness(psychic,ghost-fighting).
+super_effectiveness(psychic,ghost-poison).
+super_effectiveness(psychic,dragon-fighting).
+super_effectiveness(psychic,dragon-poison).
+super_effectiveness(psychic,fairy-fighting).
+super_effectiveness(psychic,fairy-poison).
+super_effectiveness(bug,grass).
+super_effectiveness(bug,psychic).
+super_effectiveness(bug,dark).
+super_effectiveness(bug,normal-grass).
+super_effectiveness(bug,normal-psychic).
+super_effectiveness(bug,normal-dark).
+super_effectiveness(bug,water-grass).
+super_effectiveness(bug,water-psychic).
+super_effectiveness(bug,water-dark).
+super_effectiveness(bug,electric-grass).
+super_effectiveness(bug,electric-psychic).
+super_effectiveness(bug,electric-dark).
+super_effectiveness(bug,grass-normal).
+super_effectiveness(bug,grass-water).
+super_effectiveness(bug,grass-electric).
+super_effectiveness(bug,grass-ice).
+super_effectiveness(bug,grass-ground).
+super_effectiveness(bug,grass-bug).
+super_effectiveness(bug,grass-rock).
+super_effectiveness(bug,grass-dragon).
+super_effectiveness(bug,ice-grass).
+super_effectiveness(bug,ice-psychic).
+super_effectiveness(bug,ice-dark).
+super_effectiveness(bug,ground-grass).
+super_effectiveness(bug,ground-psychic).
+super_effectiveness(bug,ground-dark).
+super_effectiveness(bug,psychic-normal).
+super_effectiveness(bug,psychic-water).
+super_effectiveness(bug,psychic-electric).
+super_effectiveness(bug,psychic-ice).
+super_effectiveness(bug,psychic-ground).
+super_effectiveness(bug,psychic-bug).
+super_effectiveness(bug,psychic-rock).
+super_effectiveness(bug,psychic-dragon).
+super_effectiveness(bug,bug-grass).
+super_effectiveness(bug,bug-psychic).
+super_effectiveness(bug,bug-dark).
+super_effectiveness(bug,rock-grass).
+super_effectiveness(bug,rock-psychic).
+super_effectiveness(bug,rock-dark).
+super_effectiveness(bug,dragon-grass).
+super_effectiveness(bug,dragon-psychic).
+super_effectiveness(bug,dragon-dark).
+super_effectiveness(bug,dark-normal).
+super_effectiveness(bug,dark-water).
+super_effectiveness(bug,dark-electric).
+super_effectiveness(bug,dark-ice).
+super_effectiveness(bug,dark-ground).
+super_effectiveness(bug,dark-bug).
+super_effectiveness(bug,dark-rock).
+super_effectiveness(bug,dark-dragon).
+super_effectiveness(rock,fire).
+super_effectiveness(rock,ice).
+super_effectiveness(rock,flying).
+super_effectiveness(rock,bug).
+super_effectiveness(rock,normal-fire).
+super_effectiveness(rock,normal-ice).
+super_effectiveness(rock,normal-flying).
+super_effectiveness(rock,normal-bug).
+super_effectiveness(rock,fire-normal).
+super_effectiveness(rock,fire-water).
+super_effectiveness(rock,fire-electric).
+super_effectiveness(rock,fire-grass).
+super_effectiveness(rock,fire-poison).
+super_effectiveness(rock,fire-psychic).
+super_effectiveness(rock,fire-rock).
+super_effectiveness(rock,fire-ghost).
+super_effectiveness(rock,fire-dragon).
+super_effectiveness(rock,fire-dark).
+super_effectiveness(rock,fire-fairy).
+super_effectiveness(rock,water-fire).
+super_effectiveness(rock,water-ice).
+super_effectiveness(rock,water-flying).
+super_effectiveness(rock,water-bug).
+super_effectiveness(rock,electric-fire).
+super_effectiveness(rock,electric-ice).
+super_effectiveness(rock,electric-flying).
+super_effectiveness(rock,electric-bug).
+super_effectiveness(rock,grass-fire).
+super_effectiveness(rock,grass-ice).
+super_effectiveness(rock,grass-flying).
+super_effectiveness(rock,grass-bug).
+super_effectiveness(rock,ice-normal).
+super_effectiveness(rock,ice-water).
+super_effectiveness(rock,ice-electric).
+super_effectiveness(rock,ice-grass).
+super_effectiveness(rock,ice-poison).
+super_effectiveness(rock,ice-psychic).
+super_effectiveness(rock,ice-rock).
+super_effectiveness(rock,ice-ghost).
+super_effectiveness(rock,ice-dragon).
+super_effectiveness(rock,ice-dark).
+super_effectiveness(rock,ice-fairy).
+super_effectiveness(rock,fighting-poison).
+super_effectiveness(rock,poison-fire).
+super_effectiveness(rock,poison-ice).
+super_effectiveness(rock,poison-fighting).
+super_effectiveness(rock,poison-flying).
+super_effectiveness(rock,poison-bug).
+super_effectiveness(rock,flying-normal).
+super_effectiveness(rock,flying-water).
+super_effectiveness(rock,flying-electric).
+super_effectiveness(rock,flying-grass).
+super_effectiveness(rock,flying-poison).
+super_effectiveness(rock,flying-psychic).
+super_effectiveness(rock,flying-rock).
+super_effectiveness(rock,flying-ghost).
+super_effectiveness(rock,flying-dragon).
+super_effectiveness(rock,flying-dark).
+super_effectiveness(rock,flying-fairy).
+super_effectiveness(rock,psychic-fire).
+super_effectiveness(rock,psychic-ice).
+super_effectiveness(rock,psychic-flying).
+super_effectiveness(rock,psychic-bug).
+super_effectiveness(rock,bug-normal).
+super_effectiveness(rock,bug-water).
+super_effectiveness(rock,bug-electric).
+super_effectiveness(rock,bug-grass).
+super_effectiveness(rock,bug-poison).
+super_effectiveness(rock,bug-psychic).
+super_effectiveness(rock,bug-rock).
+super_effectiveness(rock,bug-ghost).
+super_effectiveness(rock,bug-dragon).
+super_effectiveness(rock,bug-dark).
+super_effectiveness(rock,bug-fairy).
+super_effectiveness(rock,rock-fire).
+super_effectiveness(rock,rock-ice).
+super_effectiveness(rock,rock-flying).
+super_effectiveness(rock,rock-bug).
+super_effectiveness(rock,ghost-fire).
+super_effectiveness(rock,ghost-ice).
+super_effectiveness(rock,ghost-flying).
+super_effectiveness(rock,ghost-bug).
+super_effectiveness(rock,dragon-fire).
+super_effectiveness(rock,dragon-ice).
+super_effectiveness(rock,dragon-flying).
+super_effectiveness(rock,dragon-bug).
+super_effectiveness(rock,dark-fire).
+super_effectiveness(rock,dark-ice).
+super_effectiveness(rock,dark-flying).
+super_effectiveness(rock,dark-bug).
+super_effectiveness(rock,fairy-fire).
+super_effectiveness(rock,fairy-ice).
+super_effectiveness(rock,fairy-flying).
+super_effectiveness(rock,fairy-bug).
+super_effectiveness(ghost,psychic).
+super_effectiveness(ghost,ghost).
+super_effectiveness(ghost,fire-psychic).
+super_effectiveness(ghost,fire-ghost).
+super_effectiveness(ghost,water-psychic).
+super_effectiveness(ghost,water-ghost).
+super_effectiveness(ghost,electric-psychic).
+super_effectiveness(ghost,electric-ghost).
+super_effectiveness(ghost,grass-psychic).
+super_effectiveness(ghost,grass-ghost).
+super_effectiveness(ghost,ice-psychic).
+super_effectiveness(ghost,ice-ghost).
+super_effectiveness(ghost,fighting-psychic).
+super_effectiveness(ghost,fighting-ghost).
+super_effectiveness(ghost,poison-psychic).
+super_effectiveness(ghost,poison-ghost).
+super_effectiveness(ghost,ground-psychic).
+super_effectiveness(ghost,ground-ghost).
+super_effectiveness(ghost,flying-psychic).
+super_effectiveness(ghost,flying-ghost).
+super_effectiveness(ghost,psychic-fire).
+super_effectiveness(ghost,psychic-water).
+super_effectiveness(ghost,psychic-electric).
+super_effectiveness(ghost,psychic-grass).
+super_effectiveness(ghost,psychic-ice).
+super_effectiveness(ghost,psychic-fighting).
+super_effectiveness(ghost,psychic-poison).
+super_effectiveness(ghost,psychic-ground).
+super_effectiveness(ghost,psychic-flying).
+super_effectiveness(ghost,psychic-bug).
+super_effectiveness(ghost,psychic-rock).
+super_effectiveness(ghost,psychic-dragon).
+super_effectiveness(ghost,psychic-steel).
+super_effectiveness(ghost,psychic-fairy).
+super_effectiveness(ghost,bug-psychic).
+super_effectiveness(ghost,bug-ghost).
+super_effectiveness(ghost,rock-psychic).
+super_effectiveness(ghost,rock-ghost).
+super_effectiveness(ghost,ghost-fire).
+super_effectiveness(ghost,ghost-water).
+super_effectiveness(ghost,ghost-electric).
+super_effectiveness(ghost,ghost-grass).
+super_effectiveness(ghost,ghost-ice).
+super_effectiveness(ghost,ghost-fighting).
+super_effectiveness(ghost,ghost-poison).
+super_effectiveness(ghost,ghost-ground).
+super_effectiveness(ghost,ghost-flying).
+super_effectiveness(ghost,ghost-bug).
+super_effectiveness(ghost,ghost-rock).
+super_effectiveness(ghost,ghost-dragon).
+super_effectiveness(ghost,ghost-steel).
+super_effectiveness(ghost,ghost-fairy).
+super_effectiveness(ghost,dragon-psychic).
+super_effectiveness(ghost,dragon-ghost).
+super_effectiveness(ghost,steel-psychic).
+super_effectiveness(ghost,steel-ghost).
+super_effectiveness(ghost,fairy-psychic).
+super_effectiveness(ghost,fairy-ghost).
+super_effectiveness(dragon,dragon).
+super_effectiveness(dragon,normal-dragon).
+super_effectiveness(dragon,fire-dragon).
+super_effectiveness(dragon,water-dragon).
+super_effectiveness(dragon,electric-dragon).
+super_effectiveness(dragon,grass-dragon).
+super_effectiveness(dragon,ice-dragon).
+super_effectiveness(dragon,fighting-dragon).
+super_effectiveness(dragon,poison-dragon).
+super_effectiveness(dragon,ground-dragon).
+super_effectiveness(dragon,flying-dragon).
+super_effectiveness(dragon,psychic-dragon).
+super_effectiveness(dragon,bug-dragon).
+super_effectiveness(dragon,rock-dragon).
+super_effectiveness(dragon,ghost-dragon).
+super_effectiveness(dragon,dragon-normal).
+super_effectiveness(dragon,dragon-fire).
+super_effectiveness(dragon,dragon-water).
+super_effectiveness(dragon,dragon-electric).
+super_effectiveness(dragon,dragon-grass).
+super_effectiveness(dragon,dragon-ice).
+super_effectiveness(dragon,dragon-fighting).
+super_effectiveness(dragon,dragon-poison).
+super_effectiveness(dragon,dragon-ground).
+super_effectiveness(dragon,dragon-flying).
+super_effectiveness(dragon,dragon-psychic).
+super_effectiveness(dragon,dragon-bug).
+super_effectiveness(dragon,dragon-rock).
+super_effectiveness(dragon,dragon-ghost).
+super_effectiveness(dragon,dragon-dark).
+super_effectiveness(dragon,dark-dragon).
+super_effectiveness(dark,psychic).
+super_effectiveness(dark,ghost).
+super_effectiveness(dark,normal-psychic).
+super_effectiveness(dark,normal-ghost).
+super_effectiveness(dark,fire-psychic).
+super_effectiveness(dark,fire-ghost).
+super_effectiveness(dark,water-psychic).
+super_effectiveness(dark,water-ghost).
+super_effectiveness(dark,electric-psychic).
+super_effectiveness(dark,electric-ghost).
+super_effectiveness(dark,grass-psychic).
+super_effectiveness(dark,grass-ghost).
+super_effectiveness(dark,ice-psychic).
+super_effectiveness(dark,ice-ghost).
+super_effectiveness(dark,poison-psychic).
+super_effectiveness(dark,poison-ghost).
+super_effectiveness(dark,ground-psychic).
+super_effectiveness(dark,ground-ghost).
+super_effectiveness(dark,flying-psychic).
+super_effectiveness(dark,flying-ghost).
+super_effectiveness(dark,psychic-normal).
+super_effectiveness(dark,psychic-fire).
+super_effectiveness(dark,psychic-water).
+super_effectiveness(dark,psychic-electric).
+super_effectiveness(dark,psychic-grass).
+super_effectiveness(dark,psychic-ice).
+super_effectiveness(dark,psychic-poison).
+super_effectiveness(dark,psychic-ground).
+super_effectiveness(dark,psychic-flying).
+super_effectiveness(dark,psychic-bug).
+super_effectiveness(dark,psychic-rock).
+super_effectiveness(dark,psychic-dragon).
+super_effectiveness(dark,psychic-steel).
+super_effectiveness(dark,bug-psychic).
+super_effectiveness(dark,bug-ghost).
+super_effectiveness(dark,rock-psychic).
+super_effectiveness(dark,rock-ghost).
+super_effectiveness(dark,ghost-normal).
+super_effectiveness(dark,ghost-fire).
+super_effectiveness(dark,ghost-water).
+super_effectiveness(dark,ghost-electric).
+super_effectiveness(dark,ghost-grass).
+super_effectiveness(dark,ghost-ice).
+super_effectiveness(dark,ghost-poison).
+super_effectiveness(dark,ghost-ground).
+super_effectiveness(dark,ghost-flying).
+super_effectiveness(dark,ghost-bug).
+super_effectiveness(dark,ghost-rock).
+super_effectiveness(dark,ghost-dragon).
+super_effectiveness(dark,ghost-steel).
+super_effectiveness(dark,dragon-psychic).
+super_effectiveness(dark,dragon-ghost).
+super_effectiveness(dark,steel-psychic).
+super_effectiveness(dark,steel-ghost).
+super_effectiveness(steel,ice).
+super_effectiveness(steel,rock).
+super_effectiveness(steel,fairy).
+super_effectiveness(steel,normal-ice).
+super_effectiveness(steel,normal-rock).
+super_effectiveness(steel,normal-fairy).
+super_effectiveness(steel,grass-ice).
+super_effectiveness(steel,grass-rock).
+super_effectiveness(steel,grass-fairy).
+super_effectiveness(steel,ice-normal).
+super_effectiveness(steel,ice-grass).
+super_effectiveness(steel,ice-fighting).
+super_effectiveness(steel,ice-poison).
+super_effectiveness(steel,ice-ground).
+super_effectiveness(steel,ice-flying).
+super_effectiveness(steel,ice-psychic).
+super_effectiveness(steel,ice-bug).
+super_effectiveness(steel,ice-ghost).
+super_effectiveness(steel,ice-dragon).
+super_effectiveness(steel,ice-dark).
+super_effectiveness(steel,fighting-ice).
+super_effectiveness(steel,fighting-poison).
+super_effectiveness(steel,fighting-rock).
+super_effectiveness(steel,fighting-fairy).
+super_effectiveness(steel,poison-ice).
+super_effectiveness(steel,poison-fighting).
+super_effectiveness(steel,poison-rock).
+super_effectiveness(steel,poison-fairy).
+super_effectiveness(steel,ground-ice).
+super_effectiveness(steel,ground-rock).
+super_effectiveness(steel,ground-fairy).
+super_effectiveness(steel,flying-ice).
+super_effectiveness(steel,flying-rock).
+super_effectiveness(steel,flying-fairy).
+super_effectiveness(steel,psychic-ice).
+super_effectiveness(steel,psychic-rock).
+super_effectiveness(steel,psychic-fairy).
+super_effectiveness(steel,bug-ice).
+super_effectiveness(steel,bug-rock).
+super_effectiveness(steel,bug-fairy).
+super_effectiveness(steel,rock-normal).
+super_effectiveness(steel,rock-grass).
+super_effectiveness(steel,rock-fighting).
+super_effectiveness(steel,rock-poison).
+super_effectiveness(steel,rock-ground).
+super_effectiveness(steel,rock-flying).
+super_effectiveness(steel,rock-psychic).
+super_effectiveness(steel,rock-bug).
+super_effectiveness(steel,rock-ghost).
+super_effectiveness(steel,rock-dragon).
+super_effectiveness(steel,rock-dark).
+super_effectiveness(steel,ghost-ice).
+super_effectiveness(steel,ghost-rock).
+super_effectiveness(steel,ghost-fairy).
+super_effectiveness(steel,dragon-ice).
+super_effectiveness(steel,dragon-rock).
+super_effectiveness(steel,dragon-fairy).
+super_effectiveness(steel,dark-ice).
+super_effectiveness(steel,dark-rock).
+super_effectiveness(steel,dark-fairy).
+super_effectiveness(steel,fairy-normal).
+super_effectiveness(steel,fairy-grass).
+super_effectiveness(steel,fairy-fighting).
+super_effectiveness(steel,fairy-poison).
+super_effectiveness(steel,fairy-ground).
+super_effectiveness(steel,fairy-flying).
+super_effectiveness(steel,fairy-psychic).
+super_effectiveness(steel,fairy-bug).
+super_effectiveness(steel,fairy-ghost).
+super_effectiveness(steel,fairy-dragon).
+super_effectiveness(steel,fairy-dark).
+super_effectiveness(fairy,fighting).
+super_effectiveness(fairy,dragon).
+super_effectiveness(fairy,dark).
+super_effectiveness(fairy,normal-ice).
+super_effectiveness(fairy,normal-dragon).
+super_effectiveness(fairy,normal-dark).
+super_effectiveness(fairy,water-fighting).
+super_effectiveness(fairy,water-dragon).
+super_effectiveness(fairy,water-dark).
+super_effectiveness(fairy,electric-fighting).
+super_effectiveness(fairy,electric-dragon).
+super_effectiveness(fairy,electric-dark).
+super_effectiveness(fairy,grass-fighting).
+super_effectiveness(fairy,grass-dragon).
+super_effectiveness(fairy,grass-dark).
+super_effectiveness(fairy,ice-fighting).
+super_effectiveness(fairy,ice-dragon).
+super_effectiveness(fairy,ice-dark).
+super_effectiveness(fairy,fighting-normal).
+super_effectiveness(fairy,fighting-water).
+super_effectiveness(fairy,fighting-electric).
+super_effectiveness(fairy,fighting-grass).
+super_effectiveness(fairy,fighting-ice).
+super_effectiveness(fairy,fighting-ground).
+super_effectiveness(fairy,fighting-flying).
+super_effectiveness(fairy,fighting-psychic).
+super_effectiveness(fairy,fighting-bug).
+super_effectiveness(fairy,fighting-rock).
+super_effectiveness(fairy,fighting-ghost).
+super_effectiveness(fairy,fighting-fairy).
+super_effectiveness(fairy,ground-fighting).
+super_effectiveness(fairy,ground-dragon).
+super_effectiveness(fairy,ground-dark).
+super_effectiveness(fairy,flying-fighting).
+super_effectiveness(fairy,flying-dragon).
+super_effectiveness(fairy,flying-dark).
+super_effectiveness(fairy,psychic-fighting).
+super_effectiveness(fairy,psychic-dragon).
+super_effectiveness(fairy,psychic-dark).
+super_effectiveness(fairy,bug-fighting).
+super_effectiveness(fairy,bug-dragon).
+super_effectiveness(fairy,bug-dark).
+super_effectiveness(fairy,rock-fighting).
+super_effectiveness(fairy,rock-dragon).
+super_effectiveness(fairy,rock-dark).
+super_effectiveness(fairy,ghost-fighting).
+super_effectiveness(fairy,ghost-dragon).
+super_effectiveness(fairy,ghost-dark).
+super_effectiveness(fairy,dragon-normal).
+super_effectiveness(fairy,dragon-water).
+super_effectiveness(fairy,dragon-electric).
+super_effectiveness(fairy,dragon-grass).
+super_effectiveness(fairy,dragon-ice).
+super_effectiveness(fairy,dragon-ground).
+super_effectiveness(fairy,dragon-flying).
+super_effectiveness(fairy,dragon-psychic).
+super_effectiveness(fairy,dragon-bug).
+super_effectiveness(fairy,dragon-rock).
+super_effectiveness(fairy,dragon-ghost).
+super_effectiveness(fairy,dragon-fairy).
+super_effectiveness(fairy,dark-normal).
+super_effectiveness(fairy,dark-water).
+super_effectiveness(fairy,dark-electric).
+super_effectiveness(fairy,dark-grass).
+super_effectiveness(fairy,dark-ice).
+super_effectiveness(fairy,dark-ground).
+super_effectiveness(fairy,dark-flying).
+super_effectiveness(fairy,dark-psychic).
+super_effectiveness(fairy,dark-bug).
+super_effectiveness(fairy,dark-rock).
+super_effectiveness(fairy,dark-ghost).
+super_effectiveness(fairy,dark-fairy).
+super_effectiveness(fairy,fairy-fighting).
+super_effectiveness(fairy,fairy-dragon).
+super_effectiveness(fairy,fairy-dark).
 
 normal_effectiveness(normal,normal).
 normal_effectiveness(normal,fire).
@@ -13,4233 +1261,1859 @@ normal_effectiveness(normal,ground).
 normal_effectiveness(normal,flying).
 normal_effectiveness(normal,psychic).
 normal_effectiveness(normal,bug).
-weakness(normal,rock).
-dano_zero(normal,ghost).
 normal_effectiveness(normal,dragon).
 normal_effectiveness(normal,dark).
-weakness(normal,steel).
 normal_effectiveness(normal,fairy).
 normal_effectiveness(normal,normal-fire).
-normal_effectiveness(normal, normal-water).
-normal_effectiveness(normal, normal-electric).
-normal_effectiveness(normal, normal-grass).
-normal_effectiveness(normal, normal-ice).
-normal_effectiveness(normal, normal-fighting).
-normal_effectiveness(normal, normal-poison).
-normal_effectiveness(normal, normal-ground).
-normal_effectiveness(normal, normal-flying).
-normal_effectiveness(normal, normal-psychic).
-normal_effectiveness(normal, normal-bug).
-weakness(normal, normal-rock).
-dano_zero(normal, normal-ghost).
-normal_effectiveness(normal, normal-dragon).
-normal_effectiveness(normal, normal-dark).
-weakness(normal, normal-steel).
-normal_effectiveness(normal, normal-fairy).
-normal_effectiveness(normal, fire-normal).
-normal_effectiveness(normal, fire-water).
-normal_effectiveness(normal, fire-electric).
-normal_effectiveness(normal, fire-grass).
-normal_effectiveness(normal, fire-ice).
-normal_effectiveness(normal, fire-fighting).
-normal_effectiveness(normal, fire-poison).
-normal_effectiveness(normal, fire-ground).
-normal_effectiveness(normal, fire-flying).
-normal_effectiveness(normal, fire-psychic).
-normal_effectiveness(normal, fire-bug).
-weakness(normal, fire-rock).
-dano_zero(normal, fire-ghost).
-normal_effectiveness(normal, fire-dragon).
-normal_effectiveness(normal, fire-dark).
-weakness(normal, fire-steel).
-normal_effectiveness(normal, fire-fairy).
-normal_effectiveness(normal, water-normal).
-normal_effectiveness(normal, water-fire).
-normal_effectiveness(normal, water-electric).
-normal_effectiveness(normal, water-grass).
-normal_effectiveness(normal, water-ice).
-normal_effectiveness(normal, water-fighting).
-normal_effectiveness(normal, water-poison).
-normal_effectiveness(normal, water-ground).
-normal_effectiveness(normal, water-flying).
-normal_effectiveness(normal, water-psychic).
-normal_effectiveness(normal, water-bug).
-weakness(normal, water-rock).
-dano_zero(normal, water-ghost).
-normal_effectiveness(normal, water-dragon).
-normal_effectiveness(normal, water-dark).
-weakness(normal, water-steel).
-normal_effectiveness(normal, water-fairy).
-normal_effectiveness(normal, electric-normal).
-normal_effectiveness(normal, electric-fire).
-normal_effectiveness(normal, electric-water).
-normal_effectiveness(normal, electric-grass).
-normal_effectiveness(normal, electric-ice).
-normal_effectiveness(normal, electric-fighting).
-normal_effectiveness(normal, electric-poison).
-normal_effectiveness(normal, electric-ground).
-normal_effectiveness(normal, electric-flying).
-normal_effectiveness(normal, electric-psychic).
-normal_effectiveness(normal, electric-bug).
-weakness(normal, electric-rock).
-dano_zero(normal, electric-ghost).
-normal_effectiveness(normal, electric-dragon).
-normal_effectiveness(normal, electric-dark).
-weakness(normal, electric-steel).
-normal_effectiveness(normal, electric-fairy).
-normal_effectiveness(normal, grass-normal).
-normal_effectiveness(normal, grass-fire).
-normal_effectiveness(normal, grass-water).
-normal_effectiveness(normal, grass-electric).
-normal_effectiveness(normal, grass-ice).
-normal_effectiveness(normal, grass-fighting).
-normal_effectiveness(normal, grass-poison).
-normal_effectiveness(normal, grass-ground).
-normal_effectiveness(normal, grass-flying).
-normal_effectiveness(normal, grass-psychic).
-normal_effectiveness(normal, grass-bug).
-weakness(normal, grass-rock).
-dano_zero(normal, grass-ghost).
-normal_effectiveness(normal, grass-dragon).
-normal_effectiveness(normal, grass-dark).
-weakness(normal, grass-steel).
-normal_effectiveness(normal, grass-fairy).
-normal_effectiveness(normal, ice-normal).
-normal_effectiveness(normal, ice-fire).
-normal_effectiveness(normal, ice-water).
-normal_effectiveness(normal, ice-electric).
-normal_effectiveness(normal, ice-grass).
-normal_effectiveness(normal, ice-fighting).
-normal_effectiveness(normal, ice-poison).
-normal_effectiveness(normal, ice-ground).
-normal_effectiveness(normal, ice-flying).
-normal_effectiveness(normal, ice-psychic).
-normal_effectiveness(normal, ice-bug).
-weakness(normal, ice-rock).
-dano_zero(normal, ice-ghost).
-normal_effectiveness(normal, ice-dragon).
-normal_effectiveness(normal, ice-dark).
-weakness(normal, ice-steel).
-normal_effectiveness(normal, ice-fairy).
-normal_effectiveness(normal, fighting-normal).
-normal_effectiveness(normal, fighting-fire).
-normal_effectiveness(normal, fighting-water).
-normal_effectiveness(normal, fighting-electric).
-normal_effectiveness(normal, fighting-grass).
-normal_effectiveness(normal, fighting-ice).
-normal_effectiveness(normal, fighting-poison).
-normal_effectiveness(normal, fighting-ground).
-normal_effectiveness(normal, fighting-flying).
-normal_effectiveness(normal, fighting-psychic).
-normal_effectiveness(normal, fighting-bug).
-weakness(normal, fighting-rock).
-dano_zero(normal, fighting-ghost).
-normal_effectiveness(normal, fighting-dragon).
-normal_effectiveness(normal, fighting-dark).
-weakness(normal, fighting-steel).
-normal_effectiveness(normal, fighting-fairy).
-normal_effectiveness(normal, poison-normal).
-normal_effectiveness(normal, poison-fire).
-normal_effectiveness(normal, poison-water).
-normal_effectiveness(normal, poison-electric).
-normal_effectiveness(normal, poison-grass).
-normal_effectiveness(normal, poison-ice).
-normal_effectiveness(normal, poison-fighting).
-normal_effectiveness(normal, poison-ground).
-normal_effectiveness(normal, poison-flying).
-normal_effectiveness(normal, poison-psychic).
-normal_effectiveness(normal, poison-bug).
-weakness(normal, poison-rock).
-dano_zero(normal, poison-ghost).
-normal_effectiveness(normal, poison-dragon).
-normal_effectiveness(normal, poison-dark).
-weakness(normal, poison-steel).
-normal_effectiveness(normal, poison-fairy).
-normal_effectiveness(normal, ground-normal).
-normal_effectiveness(normal, ground-fire).
-normal_effectiveness(normal, ground-water).
-normal_effectiveness(normal, ground-electric).
-normal_effectiveness(normal, ground-grass).
-normal_effectiveness(normal, ground-ice).
-normal_effectiveness(normal, ground-fighting).
-normal_effectiveness(normal, ground-poison).
-normal_effectiveness(normal, ground-flying).
-normal_effectiveness(normal, ground-psychic).
-normal_effectiveness(normal, ground-bug).
-weakness(normal, ground-rock).
-dano_zero(normal, ground-ghost).
-normal_effectiveness(normal, ground-dragon).
-normal_effectiveness(normal, ground-dark).
-weakness(normal, ground-steel).
-normal_effectiveness(normal, ground-fairy).
-normal_effectiveness(normal, flying-normal).
-normal_effectiveness(normal, flying-fire).
-normal_effectiveness(normal, flying-water).
-normal_effectiveness(normal, flying-electric).
-normal_effectiveness(normal, flying-grass).
-normal_effectiveness(normal, flying-ice).
-normal_effectiveness(normal, flying-fighting).
-normal_effectiveness(normal, flying-poison).
-normal_effectiveness(normal, flying-ground).
-normal_effectiveness(normal, flying-psychic).
-normal_effectiveness(normal, flying-bug).
-weakness(normal, flying-rock).
-dano_zero(normal, flying-ghost).
-normal_effectiveness(normal, flying-dragon).
-normal_effectiveness(normal, flying-dark).
-weakness(normal, flying-steel).
-normal_effectiveness(normal, flying-fairy).
-normal_effectiveness(normal, psychic-normal).
-normal_effectiveness(normal, psychic-fire).
-normal_effectiveness(normal, psychic-water).
-normal_effectiveness(normal, psychic-electric).
-normal_effectiveness(normal, psychic-grass).
-normal_effectiveness(normal, psychic-ice).
-normal_effectiveness(normal, psychic-fighting).
-normal_effectiveness(normal, psychic-poison).
-normal_effectiveness(normal, psychic-ground).
-normal_effectiveness(normal, psychic-flying).
-normal_effectiveness(normal, psychic-bug).
-weakness(normal, psychic-rock).
-dano_zero(normal, psychic-ghost).
-normal_effectiveness(normal, psychic-dragon).
-normal_effectiveness(normal, psychic-dark).
-weakness(normal, psychic-steel).
-normal_effectiveness(normal, psychic-fairy).
-normal_effectiveness(normal, bug-normal).
-normal_effectiveness(normal, bug-fire).
-normal_effectiveness(normal, bug-water).
-normal_effectiveness(normal, bug-electric).
-normal_effectiveness(normal, bug-grass).
-normal_effectiveness(normal, bug-ice).
-normal_effectiveness(normal, bug-fighting).
-normal_effectiveness(normal, bug-poison).
-normal_effectiveness(normal, bug-ground).
-normal_effectiveness(normal, bug-flying).
-normal_effectiveness(normal, bug-psychic).
-weakness(normal, bug-rock).
-dano_zero(normal, bug-ghost).
-normal_effectiveness(normal, bug-dragon).
-normal_effectiveness(normal, bug-dark).
-weakness(normal, bug-steel).
-normal_effectiveness(normal, bug-fairy).
-weakness(normal, rock-normal).
-weakness(normal, rock-fire).
-weakness(normal, rock-water).
-weakness(normal, rock-electric).
-weakness(normal, rock-grass).
-weakness(normal, rock-ice).
-weakness(normal, rock-fighting).
-weakness(normal, rock-poison).
-weakness(normal, rock-ground).
-weakness(normal, rock-flying).
-weakness(normal, rock-psychic).
-weakness(normal, rock-bug).
-dano_zero(normal, rock-ghost).
-weakness(normal, rock-dragon).
-weakness(normal, rock-dark).
-super_weakness(normal, rock-steel).
-weakness(normal, rock-fairy).
-dano_zero(normal, ghost-normal).
-dano_zero(normal, ghost-fire).
-dano_zero(normal, ghost-water).
-dano_zero(normal, ghost-electric).
-dano_zero(normal, ghost-grass).
-dano_zero(normal, ghost-ice).
-dano_zero(normal, ghost-fighting).
-dano_zero(normal, ghost-poison).
-dano_zero(normal, ghost-ground).
-dano_zero(normal, ghost-flying).
-dano_zero(normal, ghost-psychic).
-dano_zero(normal, ghost-bug).
-dano_zero(normal, ghost-rock).
-dano_zero(normal, ghost-dragon).
-dano_zero(normal, ghost-dark).
-dano_zero(normal, ghost-steel).
-dano_zero(normal, ghost-fairy).
-normal_effectiveness(normal, dragon-normal).
-normal_effectiveness(normal, dragon-fire).
-normal_effectiveness(normal, dragon-water).
-normal_effectiveness(normal, dragon-electric).
-normal_effectiveness(normal, dragon-grass).
-normal_effectiveness(normal, dragon-ice).
-normal_effectiveness(normal, dragon-fighting).
-normal_effectiveness(normal, dragon-poison).
-normal_effectiveness(normal, dragon-ground).
-normal_effectiveness(normal, dragon-flying).
-normal_effectiveness(normal, dragon-psychic).
-normal_effectiveness(normal, dragon-bug).
-weakness(normal, dragon-rock).
-dano_zero(normal, dragon-ghost).
-normal_effectiveness(normal, dragon-dark).
-weakness(normal, dragon-steel).
-normal_effectiveness(normal, dragon-fairy).
-normal_effectiveness(normal, dark-normal).
-normal_effectiveness(normal, dark-fire).
-normal_effectiveness(normal, dark-water).
-normal_effectiveness(normal, dark-electric).
-normal_effectiveness(normal, dark-grass).
-normal_effectiveness(normal, dark-ice).
-normal_effectiveness(normal, dark-fighting).
-normal_effectiveness(normal, dark-poison).
-normal_effectiveness(normal, dark-ground).
-normal_effectiveness(normal, dark-flying).
-normal_effectiveness(normal, dark-psychic).
-normal_effectiveness(normal, dark-bug).
-weakness(normal, dark-rock).
-dano_zero(normal, dark-ghost).
-normal_effectiveness(normal, dark-dragon).
-weakness(normal, dark-steel).
-normal_effectiveness(normal, dark-fairy).
-weakness(normal, steel-normal).
-weakness(normal, steel-fire).
-weakness(normal, steel-water).
-weakness(normal, steel-electric).
-weakness(normal, steel-grass).
-weakness(normal, steel-ice).
-weakness(normal, steel-fighting).
-weakness(normal, steel-poison).
-weakness(normal, steel-ground).
-weakness(normal, steel-flying).
-weakness(normal, steel-psychic).
-weakness(normal, steel-bug).
-super_weakness(normal, steel-rock).
-dano_zero(normal, steel-ghost).
-weakness(normal, steel-dragon).
-weakness(normal, steel-dark).
-weakness(normal, steel-fairy).
-normal_effectiveness(normal, fairy-normal).
-normal_effectiveness(normal, fairy-fire).
-normal_effectiveness(normal, fairy-water).
-normal_effectiveness(normal, fairy-electric).
-normal_effectiveness(normal, fairy-grass).
-normal_effectiveness(normal, fairy-ice).
-normal_effectiveness(normal, fairy-fighting).
-normal_effectiveness(normal, fairy-poison).
-normal_effectiveness(normal, fairy-ground).
-normal_effectiveness(normal, fairy-flying).
-normal_effectiveness(normal, fairy-psychic).
-normal_effectiveness(normal, fairy-bug).
-weakness(normal, fairy-rock).
-dano_zero(normal, fairy-ghost).
-normal_effectiveness(normal, fairy-dragon).
-normal_effectiveness(normal, fairy-dark).
-weakness(normal, fairy-steel).
-
-/* Effectiveness fire */
+normal_effectiveness(normal,normal-water).
+normal_effectiveness(normal,normal-electric).
+normal_effectiveness(normal,normal-grass).
+normal_effectiveness(normal,normal-ice).
+normal_effectiveness(normal,normal-fighting).
+normal_effectiveness(normal,normal-poison).
+normal_effectiveness(normal,normal-ground).
+normal_effectiveness(normal,normal-flying).
+normal_effectiveness(normal,normal-psychic).
+normal_effectiveness(normal,normal-bug).
+normal_effectiveness(normal,normal-dragon).
+normal_effectiveness(normal,normal-dark).
+normal_effectiveness(normal,normal-fairy).
+normal_effectiveness(normal,fire-normal).
+normal_effectiveness(normal,fire-water).
+normal_effectiveness(normal,fire-electric).
+normal_effectiveness(normal,fire-grass).
+normal_effectiveness(normal,fire-ice).
+normal_effectiveness(normal,fire-fighting).
+normal_effectiveness(normal,fire-poison).
+normal_effectiveness(normal,fire-ground).
+normal_effectiveness(normal,fire-flying).
+normal_effectiveness(normal,fire-psychic).
+normal_effectiveness(normal,fire-bug).
+normal_effectiveness(normal,fire-dragon).
+normal_effectiveness(normal,fire-dark).
+normal_effectiveness(normal,fire-fairy).
+normal_effectiveness(normal,water-normal).
+normal_effectiveness(normal,water-fire).
+normal_effectiveness(normal,water-electric).
+normal_effectiveness(normal,water-grass).
+normal_effectiveness(normal,water-ice).
+normal_effectiveness(normal,water-fighting).
+normal_effectiveness(normal,water-poison).
+normal_effectiveness(normal,water-ground).
+normal_effectiveness(normal,water-flying).
+normal_effectiveness(normal,water-psychic).
+normal_effectiveness(normal,water-bug).
+normal_effectiveness(normal,water-dragon).
+normal_effectiveness(normal,water-dark).
+normal_effectiveness(normal,water-fairy).
+normal_effectiveness(normal,electric-normal).
+normal_effectiveness(normal,electric-fire).
+normal_effectiveness(normal,electric-water).
+normal_effectiveness(normal,electric-grass).
+normal_effectiveness(normal,electric-ice).
+normal_effectiveness(normal,electric-fighting).
+normal_effectiveness(normal,electric-poison).
+normal_effectiveness(normal,electric-ground).
+normal_effectiveness(normal,electric-flying).
+normal_effectiveness(normal,electric-psychic).
+normal_effectiveness(normal,electric-bug).
+normal_effectiveness(normal,electric-dragon).
+normal_effectiveness(normal,electric-dark).
+normal_effectiveness(normal,electric-fairy).
+normal_effectiveness(normal,grass-normal).
+normal_effectiveness(normal,grass-fire).
+normal_effectiveness(normal,grass-water).
+normal_effectiveness(normal,grass-electric).
+normal_effectiveness(normal,grass-ice).
+normal_effectiveness(normal,grass-fighting).
+normal_effectiveness(normal,grass-poison).
+normal_effectiveness(normal,grass-ground).
+normal_effectiveness(normal,grass-flying).
+normal_effectiveness(normal,grass-psychic).
+normal_effectiveness(normal,grass-bug).
+normal_effectiveness(normal,grass-dragon).
+normal_effectiveness(normal,grass-dark).
+normal_effectiveness(normal,grass-fairy).
+normal_effectiveness(normal,ice-normal).
+normal_effectiveness(normal,ice-fire).
+normal_effectiveness(normal,ice-water).
+normal_effectiveness(normal,ice-electric).
+normal_effectiveness(normal,ice-grass).
+normal_effectiveness(normal,ice-fighting).
+normal_effectiveness(normal,ice-poison).
+normal_effectiveness(normal,ice-ground).
+normal_effectiveness(normal,ice-flying).
+normal_effectiveness(normal,ice-psychic).
+normal_effectiveness(normal,ice-bug).
+normal_effectiveness(normal,ice-dragon).
+normal_effectiveness(normal,ice-dark).
+normal_effectiveness(normal,ice-fairy).
+normal_effectiveness(normal,fighting-normal).
+normal_effectiveness(normal,fighting-fire).
+normal_effectiveness(normal,fighting-water).
+normal_effectiveness(normal,fighting-electric).
+normal_effectiveness(normal,fighting-grass).
+normal_effectiveness(normal,fighting-ice).
+normal_effectiveness(normal,fighting-poison).
+normal_effectiveness(normal,fighting-ground).
+normal_effectiveness(normal,fighting-flying).
+normal_effectiveness(normal,fighting-psychic).
+normal_effectiveness(normal,fighting-bug).
+normal_effectiveness(normal,fighting-dragon).
+normal_effectiveness(normal,fighting-dark).
+normal_effectiveness(normal,fighting-fairy).
+normal_effectiveness(normal,poison-normal).
+normal_effectiveness(normal,poison-fire).
+normal_effectiveness(normal,poison-water).
+normal_effectiveness(normal,poison-electric).
+normal_effectiveness(normal,poison-grass).
+normal_effectiveness(normal,poison-ice).
+normal_effectiveness(normal,poison-fighting).
+normal_effectiveness(normal,poison-ground).
+normal_effectiveness(normal,poison-flying).
+normal_effectiveness(normal,poison-psychic).
+normal_effectiveness(normal,poison-bug).
+normal_effectiveness(normal,poison-dragon).
+normal_effectiveness(normal,poison-dark).
+normal_effectiveness(normal,poison-fairy).
+normal_effectiveness(normal,ground-normal).
+normal_effectiveness(normal,ground-fire).
+normal_effectiveness(normal,ground-water).
+normal_effectiveness(normal,ground-electric).
+normal_effectiveness(normal,ground-grass).
+normal_effectiveness(normal,ground-ice).
+normal_effectiveness(normal,ground-fighting).
+normal_effectiveness(normal,ground-poison).
+normal_effectiveness(normal,ground-flying).
+normal_effectiveness(normal,ground-psychic).
+normal_effectiveness(normal,ground-bug).
+normal_effectiveness(normal,ground-dragon).
+normal_effectiveness(normal,ground-dark).
+normal_effectiveness(normal,ground-fairy).
+normal_effectiveness(normal,flying-normal).
+normal_effectiveness(normal,flying-fire).
+normal_effectiveness(normal,flying-water).
+normal_effectiveness(normal,flying-electric).
+normal_effectiveness(normal,flying-grass).
+normal_effectiveness(normal,flying-ice).
+normal_effectiveness(normal,flying-fighting).
+normal_effectiveness(normal,flying-poison).
+normal_effectiveness(normal,flying-ground).
+normal_effectiveness(normal,flying-psychic).
+normal_effectiveness(normal,flying-bug).
+normal_effectiveness(normal,flying-dragon).
+normal_effectiveness(normal,flying-dark).
+normal_effectiveness(normal,flying-fairy).
+normal_effectiveness(normal,psychic-normal).
+normal_effectiveness(normal,psychic-fire).
+normal_effectiveness(normal,psychic-water).
+normal_effectiveness(normal,psychic-electric).
+normal_effectiveness(normal,psychic-grass).
+normal_effectiveness(normal,psychic-ice).
+normal_effectiveness(normal,psychic-fighting).
+normal_effectiveness(normal,psychic-poison).
+normal_effectiveness(normal,psychic-ground).
+normal_effectiveness(normal,psychic-flying).
+normal_effectiveness(normal,psychic-bug).
+normal_effectiveness(normal,psychic-dragon).
+normal_effectiveness(normal,psychic-dark).
+normal_effectiveness(normal,psychic-fairy).
+normal_effectiveness(normal,bug-normal).
+normal_effectiveness(normal,bug-fire).
+normal_effectiveness(normal,bug-water).
+normal_effectiveness(normal,bug-electric).
+normal_effectiveness(normal,bug-grass).
+normal_effectiveness(normal,bug-ice).
+normal_effectiveness(normal,bug-fighting).
+normal_effectiveness(normal,bug-poison).
+normal_effectiveness(normal,bug-ground).
+normal_effectiveness(normal,bug-flying).
+normal_effectiveness(normal,bug-psychic).
+normal_effectiveness(normal,bug-dragon).
+normal_effectiveness(normal,bug-dark).
+normal_effectiveness(normal,bug-fairy).
+normal_effectiveness(normal,dragon-normal).
+normal_effectiveness(normal,dragon-fire).
+normal_effectiveness(normal,dragon-water).
+normal_effectiveness(normal,dragon-electric).
+normal_effectiveness(normal,dragon-grass).
+normal_effectiveness(normal,dragon-ice).
+normal_effectiveness(normal,dragon-fighting).
+normal_effectiveness(normal,dragon-poison).
+normal_effectiveness(normal,dragon-ground).
+normal_effectiveness(normal,dragon-flying).
+normal_effectiveness(normal,dragon-psychic).
+normal_effectiveness(normal,dragon-bug).
+normal_effectiveness(normal,dragon-dark).
+normal_effectiveness(normal,dragon-fairy).
+normal_effectiveness(normal,dark-normal).
+normal_effectiveness(normal,dark-fire).
+normal_effectiveness(normal,dark-water).
+normal_effectiveness(normal,dark-electric).
+normal_effectiveness(normal,dark-grass).
+normal_effectiveness(normal,dark-ice).
+normal_effectiveness(normal,dark-fighting).
+normal_effectiveness(normal,dark-poison).
+normal_effectiveness(normal,dark-ground).
+normal_effectiveness(normal,dark-flying).
+normal_effectiveness(normal,dark-psychic).
+normal_effectiveness(normal,dark-bug).
+normal_effectiveness(normal,dark-dragon).
+normal_effectiveness(normal,dark-fairy).
+normal_effectiveness(normal,fairy-normal).
+normal_effectiveness(normal,fairy-fire).
+normal_effectiveness(normal,fairy-water).
+normal_effectiveness(normal,fairy-electric).
+normal_effectiveness(normal,fairy-grass).
+normal_effectiveness(normal,fairy-ice).
+normal_effectiveness(normal,fairy-fighting).
+normal_effectiveness(normal,fairy-poison).
+normal_effectiveness(normal,fairy-ground).
+normal_effectiveness(normal,fairy-flying).
+normal_effectiveness(normal,fairy-psychic).
+normal_effectiveness(normal,fairy-bug).
+normal_effectiveness(normal,fairy-dragon).
+normal_effectiveness(normal,fairy-dark).
 normal_effectiveness(fire,normal).
-weakness(fire,fire).
-weakness(fire,water).
 normal_effectiveness(fire,electric).
-super_effectiveness(fire,grass).
-super_effectiveness(fire,ice).
 normal_effectiveness(fire,fighting).
 normal_effectiveness(fire,poison).
 normal_effectiveness(fire,ground).
 normal_effectiveness(fire,flying).
 normal_effectiveness(fire,psychic).
-super_effectiveness(fire,bug).
-weakness(fire,rock).
 normal_effectiveness(fire,ghost).
-weakness(fire,dragon).
 normal_effectiveness(fire,dark).
-super_effectiveness(fire,steel).
 normal_effectiveness(fire,fairy).
-weakness(fire,normal-fire).
-weakness(fire, normal-water).
-normal_effectiveness(fire, normal-electric).
-super_effectiveness(fire, normal-grass).
-super_effectiveness(fire, normal-ice).
-normal_effectiveness(fire, normal-fighting).
-normal_effectiveness(fire, normal-poison).
-normal_effectiveness(fire, normal-ground).
-normal_effectiveness(fire, normal-flying).
-normal_effectiveness(fire, normal-psychic).
-super_effectiveness(fire, normal-bug).
-weakness(fire, normal-rock).
-normal_effectiveness(fire, normal-ghost).
-weakness(fire, normal-dragon).
-normal_effectiveness(fire, normal-dark).
-super_effectiveness(fire, normal-steel).
-normal_effectiveness(fire, normal-fairy).
-weakness(fire, fire-normal).
-super_weakness(fire, fire-water).
-weakness(fire, fire-electric).
-normal_effectiveness(fire, fire-grass).
-normal_effectiveness(fire, fire-ice).
-weakness(fire, fire-fighting).
-weakness(fire, fire-poison).
-weakness(fire, fire-ground).
-weakness(fire, fire-flying).
-weakness(fire, fire-psychic).
-normal_effectiveness(fire, fire-bug).
-super_weakness(fire, fire-rock).
-weakness(fire, fire-ghost).
-super_weakness(fire, fire-dragon).
-weakness(fire, fire-dark).
-normal_effectiveness(fire, fire-steel).
-weakness(fire, fire-fairy).
-weakness(fire, water-normal).
-super_weakness(fire, water-fire).
-weakness(fire, water-electric).
-normal_effectiveness(fire, water-grass).
-normal_effectiveness(fire, water-ice).
-weakness(fire, water-fighting).
-weakness(fire, water-poison).
-weakness(fire, water-ground).
-weakness(fire, water-flying).
-weakness(fire, water-psychic).
-normal_effectiveness(fire, water-bug).
-super_weakness(fire, water-rock).
-weakness(fire, water-ghost).
-super_weakness(fire, water-dragon).
-weakness(fire, water-dark).
-normal_effectiveness(fire, water-steel).
-weakness(fire, water-fairy).
-normal_effectiveness(fire, electric-normal).
-weakness(fire, electric-fire).
-weakness(fire, electric-water).
-super_effectiveness(fire, electric-grass).
-super_effectiveness(fire, electric-ice).
-normal_effectiveness(fire, electric-fighting).
-normal_effectiveness(fire, electric-poison).
-normal_effectiveness(fire, electric-ground).
-normal_effectiveness(fire, electric-flying).
-normal_effectiveness(fire, electric-psychic).
-super_effectiveness(fire, electric-bug).
-weakness(fire, electric-rock).
-normal_effectiveness(fire, electric-ghost).
-weakness(fire, electric-dragon).
-normal_effectiveness(fire, electric-dark).
-super_effectiveness(fire, electric-steel).
-normal_effectiveness(fire, electric-fairy).
-super_effectiveness(fire, grass-normal).
-normal_effectiveness(fire, grass-fire).
-normal_effectiveness(fire, grass-water).
-super_effectiveness(fire, grass-electric).
-super_vantagem(fire, grass-ice).
-super_effectiveness(fire, grass-fighting).
-super_effectiveness(fire, grass-poison).
-super_effectiveness(fire, grass-ground).
-super_effectiveness(fire, grass-flying).
-super_effectiveness(fire, grass-psychic).
-super_vantagem(fire, grass-bug).
-normal_effectiveness(fire, grass-rock).
-super_effectiveness(fire, grass-ghost).
-normal_effectiveness(fire, grass-dragon).
-super_effectiveness(fire, grass-dark).
-super_vantagem(fire, grass-steel).
-super_effectiveness(fire, grass-fairy).
-super_effectiveness(fire, ice-normal).
-normal_effectiveness(fire, ice-fire).
-normal_effectiveness(fire, ice-water).
-super_effectiveness(fire, ice-electric).
-super_vantagem(fire, ice-grass).
-super_effectiveness(fire, ice-fighting).
-super_effectiveness(fire, ice-poison).
-super_effectiveness(fire, ice-ground).
-super_effectiveness(fire, ice-flying).
-super_effectiveness(fire, ice-psychic).
-super_vantagem(fire, ice-bug).
-normal_effectiveness(fire, ice-rock).
-super_effectiveness(fire, ice-ghost).
-normal_effectiveness(fire, ice-dragon).
-super_effectiveness(fire, ice-dark).
-super_vantagem(fire, ice-steel).
-super_effectiveness(fire, ice-fairy).
-normal_effectiveness(fire, fighting-normal).
-weakness(fire, fighting-fire).
-weakness(fire, fighting-water).
-normal_effectiveness(fire, fighting-electric).
-super_effectiveness(fire, fighting-grass).
-super_effectiveness(fire, fighting-ice).
-super_effectiveness(fire, fighting-poison).
-normal_effectiveness(fire, fighting-ground).
-normal_effectiveness(fire, fighting-flying).
-normal_effectiveness(fire, fighting-psychic).
-super_effectiveness(fire, fighting-bug).
-weakness(fire, fighting-rock).
-normal_effectiveness(fire, fighting-ghost).
-weakness(fire, fighting-dragon).
-normal_effectiveness(fire, fighting-dark).
-super_effectiveness(fire, fighting-steel).
-normal_effectiveness(fire, fighting-fairy).
-normal_effectiveness(fire, poison-normal).
-weakness(fire, poison-fire).
-weakness(fire, poison-water).
-normal_effectiveness(fire, poison-electric).
-super_effectiveness(fire, poison-grass).
-super_effectiveness(fire, poison-ice).
-super_effectiveness(fire, poison-fighting).
-normal_effectiveness(fire, poison-ground).
-normal_effectiveness(fire, poison-flying).
-normal_effectiveness(fire, poison-psychic).
-super_effectiveness(fire, poison-bug).
-weakness(fire, poison-rock).
-normal_effectiveness(fire, poison-ghost).
-weakness(fire, poison-dragon).
-normal_effectiveness(fire, poison-dark).
-super_effectiveness(fire, poison-steel).
-normal_effectiveness(fire, poison-fairy).
-normal_effectiveness(fire, ground-normal).
-weakness(fire, ground-fire).
-weakness(fire, ground-water).
-normal_effectiveness(fire, ground-electric).
-super_effectiveness(fire, ground-grass).
-super_effectiveness(fire, ground-ice).
-normal_effectiveness(fire, ground-fighting).
-normal_effectiveness(fire, ground-poison).
-normal_effectiveness(fire, ground-flying).
-normal_effectiveness(fire, ground-psychic).
-super_effectiveness(fire, ground-bug).
-weakness(fire, ground-rock).
-normal_effectiveness(fire, ground-ghost).
-weakness(fire, ground-dragon).
-normal_effectiveness(fire, ground-dark).
-super_effectiveness(fire, ground-steel).
-normal_effectiveness(fire, ground-fairy).
-normal_effectiveness(fire, flying-normal).
-weakness(fire, flying-fire).
-weakness(fire, flying-water).
-normal_effectiveness(fire, flying-electric).
-super_effectiveness(fire, flying-grass).
-super_effectiveness(fire, flying-ice).
-normal_effectiveness(fire, flying-fighting).
-normal_effectiveness(fire, flying-poison).
-normal_effectiveness(fire, flying-ground).
-normal_effectiveness(fire, flying-psychic).
-super_effectiveness(fire, flying-bug).
-weakness(fire, flying-rock).
-normal_effectiveness(fire, flying-ghost).
-weakness(fire, flying-dragon).
-normal_effectiveness(fire, flying-dark).
-super_effectiveness(fire, flying-steel).
-normal_effectiveness(fire, flying-fairy).
-normal_effectiveness(fire, psychic-normal).
-weakness(fire, psychic-fire).
-weakness(fire, psychic-water).
-normal_effectiveness(fire, psychic-electric).
-super_effectiveness(fire, psychic-grass).
-super_effectiveness(fire, psychic-ice).
-normal_effectiveness(fire, psychic-fighting).
-normal_effectiveness(fire, psychic-poison).
-normal_effectiveness(fire, psychic-ground).
-normal_effectiveness(fire, psychic-flying).
-super_effectiveness(fire, psychic-bug).
-weakness(fire, psychic-rock).
-normal_effectiveness(fire, psychic-ghost).
-weakness(fire, psychic-dragon).
-normal_effectiveness(fire, psychic-dark).
-super_effectiveness(fire, psychic-steel).
-normal_effectiveness(fire, psychic-fairy).
-super_effectiveness(fire, bug-normal).
-normal_effectiveness(fire, bug-fire).
-normal_effectiveness(fire, bug-water).
-super_effectiveness(fire, bug-electric).
-super_vantagem(fire, bug-grass).
-super_vantagem(fire, bug-ice).
-super_effectiveness(fire, bug-fighting).
-super_effectiveness(fire, bug-poison).
-super_effectiveness(fire, bug-ground).
-super_effectiveness(fire, bug-flying).
-super_effectiveness(fire, bug-psychic).
-normal_effectiveness(fire, bug-rock).
-super_effectiveness(fire, bug-ghost).
-normal_effectiveness(fire, bug-dragon).
-super_effectiveness(fire, bug-dark).
-super_vantagem(fire, bug-steel).
-super_effectiveness(fire, bug-fairy).
-weakness(fire, rock-normal).
-super_weakness(fire, rock-fire).
-super_weakness(fire, rock-water).
-weakness(fire, rock-electric).
-normal_effectiveness(fire, rock-grass).
-normal_effectiveness(fire, rock-ice).
-weakness(fire, rock-fighting).
-weakness(fire, rock-poison).
-weakness(fire, rock-ground).
-weakness(fire, rock-flying).
-weakness(fire, rock-psychic).
-normal_effectiveness(fire, rock-bug).
-weakness(fire, rock-ghost).
-super_weakness(fire, rock-dragon).
-weakness(fire, rock-dark).
-normal_effectiveness(fire, rock-steel).
-weakness(fire, rock-fairy).
-normal_effectiveness(fire, ghost-normal).
-weakness(fire, ghost-fire).
-weakness(fire, ghost-water).
-normal_effectiveness(fire, ghost-electric).
-super_effectiveness(fire, ghost-grass).
-super_effectiveness(fire, ghost-ice).
-normal_effectiveness(fire, ghost-fighting).
-normal_effectiveness(fire, ghost-poison).
-normal_effectiveness(fire, ghost-ground).
-normal_effectiveness(fire, ghost-flying).
-normal_effectiveness(fire, ghost-psychic).
-super_effectiveness(fire, ghost-bug).
-weakness(fire, ghost-rock).
-weakness(fire, ghost-dragon).
-normal_effectiveness(fire, ghost-dark).
-super_effectiveness(fire, ghost-steel).
-normal_effectiveness(fire, ghost-fairy).
-weakness(fire, dragon-normal).
-super_weakness(fire, dragon-fire).
-super_weakness(fire, dragon-water).
-weakness(fire, dragon-electric).
-normal_effectiveness(fire, dragon-grass).
-normal_effectiveness(fire, dragon-ice).
-weakness(fire, dragon-fighting).
-weakness(fire, dragon-poison).
-weakness(fire, dragon-ground).
-weakness(fire, dragon-flying).
-weakness(fire, dragon-psychic).
-normal_effectiveness(fire, dragon-bug).
-super_weakness(fire, dragon-rock).
-weakness(fire, dragon-ghost).
-weakness(fire, dragon-dark).
-normal_effectiveness(fire, dragon-steel).
-weakness(fire, dragon-fairy).
-normal_effectiveness(fire, dark-normal).
-weakness(fire, dark-fire).
-weakness(fire, dark-water).
-normal_effectiveness(fire, dark-electric).
-super_effectiveness(fire, dark-grass).
-super_effectiveness(fire, dark-ice).
-normal_effectiveness(fire, dark-fighting).
-normal_effectiveness(fire, dark-poison).
-normal_effectiveness(fire, dark-ground).
-normal_effectiveness(fire, dark-flying).
-normal_effectiveness(fire, dark-psychic).
-super_effectiveness(fire, dark-bug).
-weakness(fire, dark-rock).
-normal_effectiveness(fire, dark-ghost).
-weakness(fire, dark-dragon).
-super_effectiveness(fire, dark-steel).
-normal_effectiveness(fire, dark-fairy).
-super_effectiveness(fire, steel-normal).
-normal_effectiveness(fire, steel-fire).
-normal_effectiveness(fire, steel-water).
-super_effectiveness(fire, steel-electric).
-super_vantagem(fire, steel-grass).
-super_vantagem(fire, steel-ice).
-super_effectiveness(fire, steel-fighting).
-super_effectiveness(fire, steel-poison).
-super_effectiveness(fire, steel-ground).
-super_effectiveness(fire, steel-flying).
-super_effectiveness(fire, steel-psychic).
-super_vantagem(fire, steel-bug).
-normal_effectiveness(fire, steel-rock).
-super_effectiveness(fire, steel-ghost).
-normal_effectiveness(fire, steel-dragon).
-super_effectiveness(fire, steel-dark).
-super_effectiveness(fire, steel-fairy).
-normal_effectiveness(fire, fairy-normal).
-weakness(fire, fairy-fire).
-weakness(fire, fairy-water).
-normal_effectiveness(fire, fairy-electric).
-super_effectiveness(fire, fairy-grass).
-super_effectiveness(fire, fairy-ice).
-normal_effectiveness(fire, fairy-fighting).
-normal_effectiveness(fire, fairy-poison).
-normal_effectiveness(fire, fairy-ground).
-normal_effectiveness(fire, fairy-flying).
-normal_effectiveness(fire, fairy-psychic).
-super_effectiveness(fire, fairy-bug).
-weakness(fire, fairy-rock).
-normal_effectiveness(fire, fairy-ghost).
-weakness(fire, fairy-dragon).
-normal_effectiveness(fire, fairy-dark).
-super_effectiveness(fire, fairy-steel).
-
-/* Effectiveness water */
+normal_effectiveness(fire,normal-electric).
+normal_effectiveness(fire,normal-fighting).
+normal_effectiveness(fire,normal-poison).
+normal_effectiveness(fire,normal-ground).
+normal_effectiveness(fire,normal-flying).
+normal_effectiveness(fire,normal-psychic).
+normal_effectiveness(fire,normal-ghost).
+normal_effectiveness(fire,normal-dark).
+normal_effectiveness(fire,normal-fairy).
+normal_effectiveness(fire,fire-grass).
+normal_effectiveness(fire,fire-ice).
+normal_effectiveness(fire,fire-bug).
+normal_effectiveness(fire,fire-steel).
+normal_effectiveness(fire,water-grass).
+normal_effectiveness(fire,water-ice).
+normal_effectiveness(fire,water-bug).
+normal_effectiveness(fire,water-steel).
+normal_effectiveness(fire,electric-normal).
+normal_effectiveness(fire,electric-fighting).
+normal_effectiveness(fire,electric-poison).
+normal_effectiveness(fire,electric-ground).
+normal_effectiveness(fire,electric-flying).
+normal_effectiveness(fire,electric-psychic).
+normal_effectiveness(fire,electric-ghost).
+normal_effectiveness(fire,electric-dark).
+normal_effectiveness(fire,electric-fairy).
+normal_effectiveness(fire,grass-fire).
+normal_effectiveness(fire,grass-water).
+normal_effectiveness(fire,grass-rock).
+normal_effectiveness(fire,grass-dragon).
+normal_effectiveness(fire,ice-fire).
+normal_effectiveness(fire,ice-water).
+normal_effectiveness(fire,ice-rock).
+normal_effectiveness(fire,ice-dragon).
+normal_effectiveness(fire,fighting-normal).
+normal_effectiveness(fire,fighting-electric).
+normal_effectiveness(fire,fighting-ground).
+normal_effectiveness(fire,fighting-flying).
+normal_effectiveness(fire,fighting-psychic).
+normal_effectiveness(fire,fighting-ghost).
+normal_effectiveness(fire,fighting-dark).
+normal_effectiveness(fire,fighting-fairy).
+normal_effectiveness(fire,poison-normal).
+normal_effectiveness(fire,poison-electric).
+normal_effectiveness(fire,poison-ground).
+normal_effectiveness(fire,poison-flying).
+normal_effectiveness(fire,poison-psychic).
+normal_effectiveness(fire,poison-ghost).
+normal_effectiveness(fire,poison-dark).
+normal_effectiveness(fire,poison-fairy).
+normal_effectiveness(fire,ground-normal).
+normal_effectiveness(fire,ground-electric).
+normal_effectiveness(fire,ground-fighting).
+normal_effectiveness(fire,ground-poison).
+normal_effectiveness(fire,ground-flying).
+normal_effectiveness(fire,ground-psychic).
+normal_effectiveness(fire,ground-ghost).
+normal_effectiveness(fire,ground-dark).
+normal_effectiveness(fire,ground-fairy).
+normal_effectiveness(fire,flying-normal).
+normal_effectiveness(fire,flying-electric).
+normal_effectiveness(fire,flying-fighting).
+normal_effectiveness(fire,flying-poison).
+normal_effectiveness(fire,flying-ground).
+normal_effectiveness(fire,flying-psychic).
+normal_effectiveness(fire,flying-ghost).
+normal_effectiveness(fire,flying-dark).
+normal_effectiveness(fire,flying-fairy).
+normal_effectiveness(fire,psychic-normal).
+normal_effectiveness(fire,psychic-electric).
+normal_effectiveness(fire,psychic-fighting).
+normal_effectiveness(fire,psychic-poison).
+normal_effectiveness(fire,psychic-ground).
+normal_effectiveness(fire,psychic-flying).
+normal_effectiveness(fire,psychic-ghost).
+normal_effectiveness(fire,psychic-dark).
+normal_effectiveness(fire,psychic-fairy).
+normal_effectiveness(fire,bug-fire).
+normal_effectiveness(fire,bug-water).
+normal_effectiveness(fire,bug-rock).
+normal_effectiveness(fire,bug-dragon).
+normal_effectiveness(fire,rock-grass).
+normal_effectiveness(fire,rock-ice).
+normal_effectiveness(fire,rock-bug).
+normal_effectiveness(fire,rock-steel).
+normal_effectiveness(fire,ghost-normal).
+normal_effectiveness(fire,ghost-electric).
+normal_effectiveness(fire,ghost-fighting).
+normal_effectiveness(fire,ghost-poison).
+normal_effectiveness(fire,ghost-ground).
+normal_effectiveness(fire,ghost-flying).
+normal_effectiveness(fire,ghost-psychic).
+normal_effectiveness(fire,ghost-dark).
+normal_effectiveness(fire,ghost-fairy).
+normal_effectiveness(fire,dragon-grass).
+normal_effectiveness(fire,dragon-ice).
+normal_effectiveness(fire,dragon-bug).
+normal_effectiveness(fire,dragon-steel).
+normal_effectiveness(fire,dark-normal).
+normal_effectiveness(fire,dark-electric).
+normal_effectiveness(fire,dark-fighting).
+normal_effectiveness(fire,dark-poison).
+normal_effectiveness(fire,dark-ground).
+normal_effectiveness(fire,dark-flying).
+normal_effectiveness(fire,dark-psychic).
+normal_effectiveness(fire,dark-ghost).
+normal_effectiveness(fire,dark-fairy).
+normal_effectiveness(fire,steel-fire).
+normal_effectiveness(fire,steel-water).
+normal_effectiveness(fire,steel-rock).
+normal_effectiveness(fire,steel-dragon).
+normal_effectiveness(fire,fairy-normal).
+normal_effectiveness(fire,fairy-electric).
+normal_effectiveness(fire,fairy-fighting).
+normal_effectiveness(fire,fairy-poison).
+normal_effectiveness(fire,fairy-ground).
+normal_effectiveness(fire,fairy-flying).
+normal_effectiveness(fire,fairy-psychic).
+normal_effectiveness(fire,fairy-ghost).
+normal_effectiveness(fire,fairy-dark).
 normal_effectiveness(water,normal).
-super_effectiveness(water,fire).
-weakness(water,water).
 normal_effectiveness(water,electric).
-weakness(water,grass).
 normal_effectiveness(water,ice).
 normal_effectiveness(water,fighting).
 normal_effectiveness(water,poison).
-super_effectiveness(water,ground).
 normal_effectiveness(water,flying).
 normal_effectiveness(water,psychic).
 normal_effectiveness(water,bug).
-super_effectiveness(water,rock).
 normal_effectiveness(water,ghost).
-weakness(water,dragon).
 normal_effectiveness(water,dark).
 normal_effectiveness(water,steel).
 normal_effectiveness(water,fairy).
-super_effectiveness(water,normal-fire).
-weakness(water, normal-water).
-normal_effectiveness(water, normal-electric).
-weakness(water, normal-grass).
-normal_effectiveness(water, normal-ice).
-normal_effectiveness(water, normal-fighting).
-normal_effectiveness(water, normal-poison).
-super_effectiveness(water, normal-ground).
-normal_effectiveness(water, normal-flying).
-normal_effectiveness(water, normal-psychic).
-normal_effectiveness(water, normal-bug).
-super_effectiveness(water, normal-rock).
-normal_effectiveness(water, normal-ghost).
-weakness(water, normal-dragon).
-normal_effectiveness(water, normal-dark).
-normal_effectiveness(water, normal-steel).
-normal_effectiveness(water, normal-fairy).
-super_effectiveness(water, fire-normal).
-normal_effectiveness(water, fire-water).
-super_effectiveness(water, fire-electric).
-normal_effectiveness(water, fire-grass).
-super_effectiveness(water, fire-ice).
-super_effectiveness(water, fire-fighting).
-super_effectiveness(water, fire-poison).
-super_vantagem(water, fire-ground).
-super_effectiveness(water, fire-flying).
-super_effectiveness(water, fire-psychic).
-super_effectiveness(water, fire-bug).
-super_vantagem(water, fire-rock).
-super_effectiveness(water, fire-ghost).
-normal_effectiveness(water, fire-dragon).
-super_effectiveness(water, fire-dark).
-super_effectiveness(water, fire-steel).
-super_effectiveness(water, fire-fairy).
-weakness(water, water-normal).
-normal_effectiveness(water, water-fire).
-weakness(water, water-electric).
-super_weakness(water, water-grass).
-weakness(water, water-ice).
-weakness(water, water-fighting).
-weakness(water, water-poison).
-normal_effectiveness(water, water-ground).
-weakness(water, water-flying).
-weakness(water, water-psychic).
-weakness(water, water-bug).
-normal_effectiveness(water, water-rock).
-weakness(water, water-ghost).
-super_weakness(water, water-dragon).
-weakness(water, water-dark).
-weakness(water, water-steel).
-weakness(water, water-fairy).
-normal_effectiveness(water, electric-normal).
-super_effectiveness(water, electric-fire).
-weakness(water, electric-water).
-weakness(water, electric-grass).
-normal_effectiveness(water, electric-ice).
-normal_effectiveness(water, electric-fighting).
-normal_effectiveness(water, electric-poison).
-super_effectiveness(water, electric-ground).
-normal_effectiveness(water, electric-flying).
-normal_effectiveness(water, electric-psychic).
-normal_effectiveness(water, electric-bug).
-super_effectiveness(water, electric-rock).
-normal_effectiveness(water, electric-ghost).
-weakness(water, electric-dragon).
-normal_effectiveness(water, electric-dark).
-normal_effectiveness(water, electric-steel).
-normal_effectiveness(water, electric-fairy).
-weakness(water, grass-normal).
-normal_effectiveness(water, grass-fire).
-super_weakness(water, grass-water).
-weakness(water, grass-electric).
-weakness(water, grass-ice).
-weakness(water, grass-fighting).
-weakness(water, grass-poison).
-normal_effectiveness(water, grass-ground).
-weakness(water, grass-flying).
-weakness(water, grass-psychic).
-weakness(water, grass-bug).
-normal_effectiveness(water, grass-rock).
-weakness(water, grass-ghost).
-super_weakness(water, grass-dragon).
-weakness(water, grass-dark).
-weakness(water, grass-steel).
-weakness(water, grass-fairy).
-normal_effectiveness(water, ice-normal).
-super_effectiveness(water, ice-fire).
-weakness(water, ice-water).
-normal_effectiveness(water, ice-electric).
-weakness(water, ice-grass).
-normal_effectiveness(water, ice-fighting).
-normal_effectiveness(water, ice-poison).
-super_effectiveness(water, ice-ground).
-normal_effectiveness(water, ice-flying).
-normal_effectiveness(water, ice-psychic).
-normal_effectiveness(water, ice-bug).
-super_effectiveness(water, ice-rock).
-normal_effectiveness(water, ice-ghost).
-weakness(water, ice-dragon).
-normal_effectiveness(water, ice-dark).
-normal_effectiveness(water, ice-steel).
-normal_effectiveness(water, ice-fairy).
-normal_effectiveness(water, fighting-normal).
-super_effectiveness(water, fighting-fire).
-weakness(water, fighting-water).
-normal_effectiveness(water, fighting-electric).
-weakness(water, fighting-grass).
-normal_effectiveness(water, fighting-ice).
-normal_effectiveness(water, fighting-poison).
-super_effectiveness(water, fighting-ground).
-normal_effectiveness(water, fighting-flying).
-normal_effectiveness(water, fighting-psychic).
-normal_effectiveness(water, fighting-bug).
-super_effectiveness(water, fighting-rock).
-normal_effectiveness(water, fighting-ghost).
-weakness(water, fighting-dragon).
-normal_effectiveness(water, fighting-dark).
-normal_effectiveness(water, fighting-steel).
-normal_effectiveness(water, fighting-fairy).
-normal_effectiveness(water, poison-normal).
-super_effectiveness(water, poison-fire).
-weakness(water, poison-water).
-normal_effectiveness(water, poison-electric).
-weakness(water, poison-grass).
-normal_effectiveness(water, poison-ice).
-normal_effectiveness(water, poison-fighting).
-super_effectiveness(water, poison-ground).
-normal_effectiveness(water, poison-flying).
-normal_effectiveness(water, poison-psychic).
-normal_effectiveness(water, poison-bug).
-super_effectiveness(water, poison-rock).
-normal_effectiveness(water, poison-ghost).
-weakness(water, poison-dragon).
-normal_effectiveness(water, poison-dark).
-normal_effectiveness(water, poison-steel).
-normal_effectiveness(water, poison-fairy).
-super_effectiveness(water, ground-normal).
-super_vantagem(water, ground-fire).
-normal_effectiveness(water, ground-water).
-super_effectiveness(water, ground-electric).
-normal_effectiveness(water, ground-grass).
-super_effectiveness(water, ground-ice).
-super_effectiveness(water, ground-fighting).
-super_effectiveness(water, ground-poison).
-super_effectiveness(water, ground-flying).
-super_effectiveness(water, ground-psychic).
-super_effectiveness(water, ground-bug).
-super_vantagem(water, ground-rock).
-super_effectiveness(water, ground-ghost).
-normal_effectiveness(water, ground-dragon).
-super_effectiveness(water, ground-dark).
-super_effectiveness(water, ground-steel).
-super_effectiveness(water, ground-fairy).
-normal_effectiveness(water, flying-normal).
-super_effectiveness(water, flying-fire).
-weakness(water, flying-water).
-normal_effectiveness(water, flying-electric).
-weakness(water, flying-grass).
-normal_effectiveness(water, flying-ice).
-normal_effectiveness(water, flying-fighting).
-normal_effectiveness(water, flying-poison).
-super_effectiveness(water, flying-ground).
-normal_effectiveness(water, flying-psychic).
-normal_effectiveness(water, flying-bug).
-super_effectiveness(water, flying-rock).
-normal_effectiveness(water, flying-ghost).
-weakness(water, flying-dragon).
-normal_effectiveness(water, flying-dark).
-normal_effectiveness(water, flying-steel).
-normal_effectiveness(water, flying-fairy).
-normal_effectiveness(water, psychic-normal).
-super_effectiveness(water, psychic-fire).
-weakness(water, psychic-water).
-normal_effectiveness(water, psychic-electric).
-weakness(water, psychic-grass).
-normal_effectiveness(water, psychic-ice).
-normal_effectiveness(water, psychic-fighting).
-normal_effectiveness(water, psychic-poison).
-super_effectiveness(water, psychic-ground).
-normal_effectiveness(water, psychic-flying).
-normal_effectiveness(water, psychic-bug).
-super_effectiveness(water, psychic-rock).
-normal_effectiveness(water, psychic-ghost).
-weakness(water, psychic-dragon).
-normal_effectiveness(water, psychic-dark).
-normal_effectiveness(water, psychic-steel).
-normal_effectiveness(water, psychic-fairy).
-normal_effectiveness(water, bug-normal).
-super_effectiveness(water, bug-fire).
-weakness(water, bug-water).
-normal_effectiveness(water, bug-electric).
-weakness(water, bug-grass).
-normal_effectiveness(water, bug-ice).
-normal_effectiveness(water, bug-fighting).
-normal_effectiveness(water, bug-poison).
-super_effectiveness(water, bug-ground).
-normal_effectiveness(water, bug-flying).
-normal_effectiveness(water, bug-psychic).
-super_effectiveness(water, bug-rock).
-normal_effectiveness(water, bug-ghost).
-weakness(water, bug-dragon).
-normal_effectiveness(water, bug-dark).
-normal_effectiveness(water, bug-steel).
-normal_effectiveness(water, bug-fairy).
-super_effectiveness(water, rock-normal).
-super_vantagem(water, rock-fire).
-normal_effectiveness(water, rock-water).
-super_effectiveness(water, rock-electric).
-normal_effectiveness(water, rock-grass).
-super_effectiveness(water, rock-ice).
-super_effectiveness(water, rock-fighting).
-super_effectiveness(water, rock-poison).
-super_vantagem(water, rock-ground).
-super_effectiveness(water, rock-flying).
-super_effectiveness(water, rock-psychic).
-super_effectiveness(water, rock-bug).
-super_effectiveness(water, rock-ghost).
-normal_effectiveness(water, rock-dragon).
-super_effectiveness(water, rock-dark).
-super_effectiveness(water, rock-steel).
-super_effectiveness(water, rock-fairy).
-normal_effectiveness(water, ghost-normal).
-super_effectiveness(water, ghost-fire).
-weakness(water, ghost-water).
-normal_effectiveness(water, ghost-electric).
-weakness(water, ghost-grass).
-normal_effectiveness(water, ghost-ice).
-normal_effectiveness(water, ghost-fighting).
-normal_effectiveness(water, ghost-poison).
-super_effectiveness(water, ghost-ground).
-normal_effectiveness(water, ghost-flying).
-normal_effectiveness(water, ghost-psychic).
-normal_effectiveness(water, ghost-bug).
-super_effectiveness(water, ghost-rock).
-weakness(water, ghost-dragon).
-normal_effectiveness(water, ghost-dark).
-normal_effectiveness(water, ghost-steel).
-normal_effectiveness(water, ghost-fairy).
-weakness(water, dragon-normal).
-normal_effectiveness(water, dragon-fire).
-super_weakness(water, dragon-water).
-weakness(water, dragon-electric).
-super_weakness(water, dragon-grass).
-weakness(water, dragon-ice).
-weakness(water, dragon-fighting).
-weakness(water, dragon-poison).
-normal_effectiveness(water, dragon-ground).
-weakness(water, dragon-flying).
-weakness(water, dragon-psychic).
-weakness(water, dragon-bug).
-normal_effectiveness(water, dragon-rock).
-weakness(water, dragon-ghost).
-weakness(water, dragon-dark).
-weakness(water, dragon-steel).
-weakness(water, dragon-fairy).
-normal_effectiveness(water, dark-normal).
-super_effectiveness(water, dark-fire).
-weakness(water, dark-water).
-normal_effectiveness(water, dark-electric).
-weakness(water, dark-grass).
-normal_effectiveness(water, dark-ice).
-normal_effectiveness(water, dark-fighting).
-normal_effectiveness(water, dark-poison).
-super_effectiveness(water, dark-ground).
-normal_effectiveness(water, dark-flying).
-normal_effectiveness(water, dark-psychic).
-normal_effectiveness(water, dark-bug).
-super_effectiveness(water, dark-rock).
-normal_effectiveness(water, dark-ghost).
-weakness(water, dark-dragon).
-normal_effectiveness(water, dark-steel).
-normal_effectiveness(water, dark-fairy).
-normal_effectiveness(water, steel-normal).
-super_effectiveness(water, steel-fire).
-weakness(water, steel-water).
-normal_effectiveness(water, steel-electric).
-weakness(water, steel-grass).
-normal_effectiveness(water, steel-ice).
-normal_effectiveness(water, steel-fighting).
-normal_effectiveness(water, steel-poison).
-super_effectiveness(water, steel-ground).
-normal_effectiveness(water, steel-flying).
-normal_effectiveness(water, steel-psychic).
-normal_effectiveness(water, steel-bug).
-super_effectiveness(water, steel-rock).
-normal_effectiveness(water, steel-ghost).
-weakness(water, steel-dragon).
-normal_effectiveness(water, steel-dark).
-normal_effectiveness(water, steel-fairy).
-normal_effectiveness(water, fairy-normal).
-super_effectiveness(water, fairy-fire).
-weakness(water, fairy-water).
-normal_effectiveness(water, fairy-electric).
-weakness(water, fairy-grass).
-normal_effectiveness(water, fairy-ice).
-normal_effectiveness(water, fairy-fighting).
-normal_effectiveness(water, fairy-poison).
-super_effectiveness(water, fairy-ground).
-normal_effectiveness(water, fairy-flying).
-normal_effectiveness(water, fairy-psychic).
-normal_effectiveness(water, fairy-bug).
-super_effectiveness(water, fairy-rock).
-normal_effectiveness(water, fairy-ghost).
-weakness(water, fairy-dragon).
-normal_effectiveness(water, fairy-dark).
-normal_effectiveness(water, fairy-steel).
-
-/* Effectiveness electric */
+normal_effectiveness(water,normal-electric).
+normal_effectiveness(water,normal-ice).
+normal_effectiveness(water,normal-fighting).
+normal_effectiveness(water,normal-poison).
+normal_effectiveness(water,normal-flying).
+normal_effectiveness(water,normal-psychic).
+normal_effectiveness(water,normal-bug).
+normal_effectiveness(water,normal-ghost).
+normal_effectiveness(water,normal-dark).
+normal_effectiveness(water,normal-steel).
+normal_effectiveness(water,normal-fairy).
+normal_effectiveness(water,fire-water).
+normal_effectiveness(water,fire-grass).
+normal_effectiveness(water,fire-dragon).
+normal_effectiveness(water,water-fire).
+normal_effectiveness(water,water-ground).
+normal_effectiveness(water,water-rock).
+normal_effectiveness(water,electric-normal).
+normal_effectiveness(water,electric-ice).
+normal_effectiveness(water,electric-fighting).
+normal_effectiveness(water,electric-poison).
+normal_effectiveness(water,electric-flying).
+normal_effectiveness(water,electric-psychic).
+normal_effectiveness(water,electric-bug).
+normal_effectiveness(water,electric-ghost).
+normal_effectiveness(water,electric-dark).
+normal_effectiveness(water,electric-steel).
+normal_effectiveness(water,electric-fairy).
+normal_effectiveness(water,grass-fire).
+normal_effectiveness(water,grass-ground).
+normal_effectiveness(water,grass-rock).
+normal_effectiveness(water,ice-normal).
+normal_effectiveness(water,ice-electric).
+normal_effectiveness(water,ice-fighting).
+normal_effectiveness(water,ice-poison).
+normal_effectiveness(water,ice-flying).
+normal_effectiveness(water,ice-psychic).
+normal_effectiveness(water,ice-bug).
+normal_effectiveness(water,ice-ghost).
+normal_effectiveness(water,ice-dark).
+normal_effectiveness(water,ice-steel).
+normal_effectiveness(water,ice-fairy).
+normal_effectiveness(water,fighting-normal).
+normal_effectiveness(water,fighting-electric).
+normal_effectiveness(water,fighting-ice).
+normal_effectiveness(water,fighting-poison).
+normal_effectiveness(water,fighting-flying).
+normal_effectiveness(water,fighting-psychic).
+normal_effectiveness(water,fighting-bug).
+normal_effectiveness(water,fighting-ghost).
+normal_effectiveness(water,fighting-dark).
+normal_effectiveness(water,fighting-steel).
+normal_effectiveness(water,fighting-fairy).
+normal_effectiveness(water,poison-normal).
+normal_effectiveness(water,poison-electric).
+normal_effectiveness(water,poison-ice).
+normal_effectiveness(water,poison-fighting).
+normal_effectiveness(water,poison-flying).
+normal_effectiveness(water,poison-psychic).
+normal_effectiveness(water,poison-bug).
+normal_effectiveness(water,poison-ghost).
+normal_effectiveness(water,poison-dark).
+normal_effectiveness(water,poison-steel).
+normal_effectiveness(water,poison-fairy).
+normal_effectiveness(water,ground-water).
+normal_effectiveness(water,ground-grass).
+normal_effectiveness(water,ground-dragon).
+normal_effectiveness(water,flying-normal).
+normal_effectiveness(water,flying-electric).
+normal_effectiveness(water,flying-ice).
+normal_effectiveness(water,flying-fighting).
+normal_effectiveness(water,flying-poison).
+normal_effectiveness(water,flying-psychic).
+normal_effectiveness(water,flying-bug).
+normal_effectiveness(water,flying-ghost).
+normal_effectiveness(water,flying-dark).
+normal_effectiveness(water,flying-steel).
+normal_effectiveness(water,flying-fairy).
+normal_effectiveness(water,psychic-normal).
+normal_effectiveness(water,psychic-electric).
+normal_effectiveness(water,psychic-ice).
+normal_effectiveness(water,psychic-fighting).
+normal_effectiveness(water,psychic-poison).
+normal_effectiveness(water,psychic-flying).
+normal_effectiveness(water,psychic-bug).
+normal_effectiveness(water,psychic-ghost).
+normal_effectiveness(water,psychic-dark).
+normal_effectiveness(water,psychic-steel).
+normal_effectiveness(water,psychic-fairy).
+normal_effectiveness(water,bug-normal).
+normal_effectiveness(water,bug-electric).
+normal_effectiveness(water,bug-ice).
+normal_effectiveness(water,bug-fighting).
+normal_effectiveness(water,bug-poison).
+normal_effectiveness(water,bug-flying).
+normal_effectiveness(water,bug-psychic).
+normal_effectiveness(water,bug-ghost).
+normal_effectiveness(water,bug-dark).
+normal_effectiveness(water,bug-steel).
+normal_effectiveness(water,bug-fairy).
+normal_effectiveness(water,rock-water).
+normal_effectiveness(water,rock-grass).
+normal_effectiveness(water,rock-dragon).
+normal_effectiveness(water,ghost-normal).
+normal_effectiveness(water,ghost-electric).
+normal_effectiveness(water,ghost-ice).
+normal_effectiveness(water,ghost-fighting).
+normal_effectiveness(water,ghost-poison).
+normal_effectiveness(water,ghost-flying).
+normal_effectiveness(water,ghost-psychic).
+normal_effectiveness(water,ghost-bug).
+normal_effectiveness(water,ghost-dark).
+normal_effectiveness(water,ghost-steel).
+normal_effectiveness(water,ghost-fairy).
+normal_effectiveness(water,dragon-fire).
+normal_effectiveness(water,dragon-ground).
+normal_effectiveness(water,dragon-rock).
+normal_effectiveness(water,dark-normal).
+normal_effectiveness(water,dark-electric).
+normal_effectiveness(water,dark-ice).
+normal_effectiveness(water,dark-fighting).
+normal_effectiveness(water,dark-poison).
+normal_effectiveness(water,dark-flying).
+normal_effectiveness(water,dark-psychic).
+normal_effectiveness(water,dark-bug).
+normal_effectiveness(water,dark-ghost).
+normal_effectiveness(water,dark-steel).
+normal_effectiveness(water,dark-fairy).
+normal_effectiveness(water,steel-normal).
+normal_effectiveness(water,steel-electric).
+normal_effectiveness(water,steel-ice).
+normal_effectiveness(water,steel-fighting).
+normal_effectiveness(water,steel-poison).
+normal_effectiveness(water,steel-flying).
+normal_effectiveness(water,steel-psychic).
+normal_effectiveness(water,steel-bug).
+normal_effectiveness(water,steel-ghost).
+normal_effectiveness(water,steel-dark).
+normal_effectiveness(water,steel-fairy).
+normal_effectiveness(water,fairy-normal).
+normal_effectiveness(water,fairy-electric).
+normal_effectiveness(water,fairy-ice).
+normal_effectiveness(water,fairy-fighting).
+normal_effectiveness(water,fairy-poison).
+normal_effectiveness(water,fairy-flying).
+normal_effectiveness(water,fairy-psychic).
+normal_effectiveness(water,fairy-bug).
+normal_effectiveness(water,fairy-ghost).
+normal_effectiveness(water,fairy-dark).
+normal_effectiveness(water,fairy-steel).
 normal_effectiveness(electric,normal).
 normal_effectiveness(electric,fire).
-super_effectiveness(electric,water).
-weakness(electric,electric).
-weakness(electric,grass).
 normal_effectiveness(electric,ice).
 normal_effectiveness(electric,fighting).
 normal_effectiveness(electric,poison).
-dano_zero(electric,ground).
-super_effectiveness(electric,flying).
 normal_effectiveness(electric,psychic).
 normal_effectiveness(electric,bug).
 normal_effectiveness(electric,rock).
 normal_effectiveness(electric,ghost).
-weakness(electric,dragon).
 normal_effectiveness(electric,dark).
 normal_effectiveness(electric,steel).
 normal_effectiveness(electric,fairy).
 normal_effectiveness(electric,normal-fire).
-super_effectiveness(electric, normal-water).
-weakness(electric, normal-electric).
-weakness(electric, normal-grass).
-normal_effectiveness(electric, normal-ice).
-normal_effectiveness(electric, normal-fighting).
-normal_effectiveness(electric, normal-poison).
-dano_zero(electric, normal-ground).
-super_effectiveness(electric, normal-flying).
-normal_effectiveness(electric, normal-psychic).
-normal_effectiveness(electric, normal-bug).
-normal_effectiveness(electric, normal-rock).
-normal_effectiveness(electric, normal-ghost).
-weakness(electric, normal-dragon).
-normal_effectiveness(electric, normal-dark).
-normal_effectiveness(electric, normal-steel).
-normal_effectiveness(electric, normal-fairy).
-normal_effectiveness(electric, fire-normal).
-super_effectiveness(electric, fire-water).
-weakness(electric, fire-electric).
-weakness(electric, fire-grass).
-normal_effectiveness(electric, fire-ice).
-normal_effectiveness(electric, fire-fighting).
-normal_effectiveness(electric, fire-poison).
-dano_zero(electric, fire-ground).
-super_effectiveness(electric, fire-flying).
-normal_effectiveness(electric, fire-psychic).
-normal_effectiveness(electric, fire-bug).
-normal_effectiveness(electric, fire-rock).
-normal_effectiveness(electric, fire-ghost).
-weakness(electric, fire-dragon).
-normal_effectiveness(electric, fire-dark).
-normal_effectiveness(electric, fire-steel).
-normal_effectiveness(electric, fire-fairy).
-super_effectiveness(electric, water-normal).
-super_effectiveness(electric, water-fire).
-normal_effectiveness(electric, water-electric).
-normal_effectiveness(electric, water-grass).
-normal_effectiveness(electric, water-ice).
-super_effectiveness(electric, water-fighting).
-super_effectiveness(electric, water-poison).
-dano_zero(electric, water-ground).
-super_vantagem(electric, water-flying).
-super_effectiveness(electric, water-psychic).
-super_effectiveness(electric, water-bug).
-super_effectiveness(electric, water-rock).
-super_effectiveness(electric, water-ghost).
-normal_effectiveness(electric, water-dragon).
-super_effectiveness(electric, water-dark).
-super_effectiveness(electric, water-steel).
-super_effectiveness(electric, water-fairy).
-weakness(electric, electric-normal).
-weakness(electric, electric-fire).
-normal_effectiveness(electric, electric-water).
-super_weakness(electric, electric-grass).
-weakness(electric, electric-ice).
-weakness(electric, electric-fighting).
-weakness(electric, electric-poison).
-dano_zero(electric, electric-ground).
-normal_effectiveness(electric, electric-flying).
-weakness(electric, electric-psychic).
-weakness(electric, electric-bug).
-weakness(electric, electric-rock).
-weakness(electric, electric-ghost).
-super_weakness(electric, electric-dragon).
-weakness(electric, electric-dark).
-weakness(electric, electric-steel).
-weakness(electric, electric-fairy).
-weakness(electric, grass-normal).
-weakness(electric, grass-fire).
-normal_effectiveness(electric, grass-water).
-super_weakness(electric, grass-electric).
-weakness(electric, grass-ice).
-weakness(electric, grass-fighting).
-weakness(electric, grass-poison).
-dano_zero(electric, grass-ground).
-normal_effectiveness(electric, grass-flying).
-weakness(electric, grass-psychic).
-weakness(electric, grass-bug).
-weakness(electric, grass-rock).
-weakness(electric, grass-ghost).
-super_weakness(electric, grass-dragon).
-weakness(electric, grass-dark).
-weakness(electric, grass-steel).
-weakness(electric, grass-fairy).
-normal_effectiveness(electric, ice-normal).
-normal_effectiveness(electric, ice-fire).
-normal_effectiveness(electric, ice-water).
-weakness(electric, ice-electric).
-weakness(electric, ice-grass).
-normal_effectiveness(electric, ice-fighting).
-normal_effectiveness(electric, ice-poison).
-dano_zero(electric, ice-ground).
-super_effectiveness(electric, ice-flying).
-normal_effectiveness(electric, ice-psychic).
-normal_effectiveness(electric, ice-bug).
-normal_effectiveness(electric, ice-rock).
-normal_effectiveness(electric, ice-ghost).
-weakness(electric, ice-dragon).
-normal_effectiveness(electric, ice-dark).
-normal_effectiveness(electric, ice-steel).
-normal_effectiveness(electric, ice-fairy).
-normal_effectiveness(electric, fighting-normal).
-normal_effectiveness(electric, fighting-fire).
-super_effectiveness(electric, fighting-water).
-weakness(electric, fighting-electric).
-weakness(electric, fighting-grass).
-normal_effectiveness(electric, fighting-ice).
-normal_effectiveness(electric, fighting-poison).
-dano_zero(electric, fighting-ground).
-super_effectiveness(electric, fighting-flying).
-normal_effectiveness(electric, fighting-psychic).
-normal_effectiveness(electric, fighting-bug).
-normal_effectiveness(electric, fighting-rock).
-normal_effectiveness(electric, fighting-ghost).
-weakness(electric, fighting-dragon).
-normal_effectiveness(electric, fighting-dark).
-normal_effectiveness(electric, fighting-steel).
-normal_effectiveness(electric, fighting-fairy).
-normal_effectiveness(electric, poison-normal).
-normal_effectiveness(electric, poison-fire).
-super_effectiveness(electric, poison-water).
-weakness(electric, poison-electric).
-weakness(electric, poison-grass).
-normal_effectiveness(electric, poison-ice).
-normal_effectiveness(electric, poison-fighting).
-dano_zero(electric, poison-ground).
-super_effectiveness(electric, poison-flying).
-normal_effectiveness(electric, poison-psychic).
-normal_effectiveness(electric, poison-bug).
-normal_effectiveness(electric, poison-rock).
-normal_effectiveness(electric, poison-ghost).
-weakness(electric, poison-dragon).
-normal_effectiveness(electric, poison-dark).
-normal_effectiveness(electric, poison-steel).
-normal_effectiveness(electric, poison-fairy).
-dano_zero(electric, ground-normal).
-dano_zero(electric, ground-fire).
-dano_zero(electric, ground-water).
-dano_zero(electric, ground-electric).
-dano_zero(electric, ground-grass).
-dano_zero(electric, ground-ice).
-dano_zero(electric, ground-fighting).
-dano_zero(electric, ground-poison).
-dano_zero(electric, ground-flying).
-dano_zero(electric, ground-psychic).
-dano_zero(electric, ground-bug).
-dano_zero(electric, ground-rock).
-dano_zero(electric, ground-ghost).
-dano_zero(electric, ground-dragon).
-dano_zero(electric, ground-dark).
-dano_zero(electric, ground-steel).
-dano_zero(electric, ground-fairy).
-super_effectiveness(electric, flying-normal).
-super_effectiveness(electric, flying-fire).
-super_vantagem(electric, flying-water).
-normal_effectiveness(electric, flying-electric).
-normal_effectiveness(electric, flying-grass).
-super_effectiveness(electric, flying-ice).
-super_effectiveness(electric, flying-fighting).
-super_effectiveness(electric, flying-poison).
-dano_zero(electric, flying-ground).
-super_effectiveness(electric, flying-psychic).
-super_effectiveness(electric, flying-bug).
-super_effectiveness(electric, flying-rock).
-super_effectiveness(electric, flying-ghost).
-normal_effectiveness(electric, flying-dragon).
-super_effectiveness(electric, flying-dark).
-super_effectiveness(electric, flying-steel).
-super_effectiveness(electric, flying-fairy).
-normal_effectiveness(electric, psychic-normal).
-normal_effectiveness(electric, psychic-fire).
-super_effectiveness(electric, psychic-water).
-weakness(electric, psychic-electric).
-weakness(electric, psychic-grass).
-normal_effectiveness(electric, psychic-ice).
-normal_effectiveness(electric, psychic-fighting).
-normal_effectiveness(electric, psychic-poison).
-dano_zero(electric, psychic-ground).
-super_effectiveness(electric, psychic-flying).
-normal_effectiveness(electric, psychic-bug).
-normal_effectiveness(electric, psychic-rock).
-normal_effectiveness(electric, psychic-ghost).
-weakness(electric, psychic-dragon).
-normal_effectiveness(electric, psychic-dark).
-normal_effectiveness(electric, psychic-steel).
-normal_effectiveness(electric, psychic-fairy).
-normal_effectiveness(electric, bug-normal).
-normal_effectiveness(electric, bug-fire).
-super_effectiveness(electric, bug-water).
-weakness(electric, bug-electric).
-weakness(electric, bug-grass).
-normal_effectiveness(electric, bug-ice).
-normal_effectiveness(electric, bug-fighting).
-normal_effectiveness(electric, bug-poison).
-dano_zero(electric, bug-ground).
-super_effectiveness(electric, bug-flying).
-normal_effectiveness(electric, bug-psychic).
-normal_effectiveness(electric, bug-rock).
-normal_effectiveness(electric, bug-ghost).
-weakness(electric, bug-dragon).
-normal_effectiveness(electric, bug-dark).
-normal_effectiveness(electric, bug-steel).
-normal_effectiveness(electric, bug-fairy).
-normal_effectiveness(electric, rock-normal).
-normal_effectiveness(electric, rock-fire).
-super_effectiveness(electric, rock-water).
-weakness(electric, rock-electric).
-weakness(electric, rock-grass).
-normal_effectiveness(electric, rock-ice).
-normal_effectiveness(electric, rock-fighting).
-normal_effectiveness(electric, rock-poison).
-dano_zero(electric, rock-ground).
-super_effectiveness(electric, rock-flying).
-normal_effectiveness(electric, rock-psychic).
-normal_effectiveness(electric, rock-bug).
-normal_effectiveness(electric, rock-ghost).
-weakness(electric, rock-dragon).
-normal_effectiveness(electric, rock-dark).
-normal_effectiveness(electric, rock-steel).
-normal_effectiveness(electric, rock-fairy).
-normal_effectiveness(electric, ghost-normal).
-normal_effectiveness(electric, ghost-fire).
-super_effectiveness(electric, ghost-water).
-weakness(electric, ghost-electric).
-weakness(electric, ghost-grass).
-normal_effectiveness(electric, ghost-ice).
-normal_effectiveness(electric, ghost-fighting).
-normal_effectiveness(electric, ghost-poison).
-dano_zero(electric, ghost-ground).
-super_effectiveness(electric, ghost-flying).
-normal_effectiveness(electric, ghost-psychic).
-normal_effectiveness(electric, ghost-bug).
-normal_effectiveness(electric, ghost-rock).
-weakness(electric, ghost-dragon).
-normal_effectiveness(electric, ghost-dark).
-normal_effectiveness(electric, ghost-steel).
-normal_effectiveness(electric, ghost-fairy).
-weakness(electric, dragon-normal).
-weakness(electric, dragon-fire).
-normal_effectiveness(electric, dragon-water).
-super_weakness(electric, dragon-electric).
-super_weakness(electric, dragon-grass).
-weakness(electric, dragon-ice).
-weakness(electric, dragon-fighting).
-weakness(electric, dragon-poison).
-dano_zero(electric, dragon-ground).
-normal_effectiveness(electric, dragon-flying).
-weakness(electric, dragon-psychic).
-weakness(electric, dragon-bug).
-weakness(electric, dragon-rock).
-weakness(electric, dragon-ghost).
-weakness(electric, dragon-dark).
-weakness(electric, dragon-steel).
-weakness(electric, dragon-fairy).
-normal_effectiveness(electric, dark-normal).
-normal_effectiveness(electric, dark-fire).
-super_effectiveness(electric, dark-water).
-weakness(electric, dark-electric).
-weakness(electric, dark-grass).
-normal_effectiveness(electric, dark-ice).
-normal_effectiveness(electric, dark-fighting).
-normal_effectiveness(electric, dark-poison).
-dano_zero(electric, dark-ground).
-super_effectiveness(electric, dark-flying).
-normal_effectiveness(electric, dark-psychic).
-normal_effectiveness(electric, dark-bug).
-normal_effectiveness(electric, dark-rock).
-normal_effectiveness(electric, dark-ghost).
-weakness(electric, dark-dragon).
-normal_effectiveness(electric, dark-steel).
-normal_effectiveness(electric, dark-fairy).
-normal_effectiveness(electric, steel-normal).
-normal_effectiveness(electric, steel-fire).
-super_effectiveness(electric, steel-water).
-weakness(electric, steel-electric).
-weakness(electric, steel-grass).
-normal_effectiveness(electric, steel-ice).
-normal_effectiveness(electric, steel-fighting).
-normal_effectiveness(electric, steel-poison).
-dano_zero(electric, steel-ground).
-super_effectiveness(electric, steel-flying).
-normal_effectiveness(electric, steel-psychic).
-normal_effectiveness(electric, steel-bug).
-normal_effectiveness(electric, steel-rock).
-normal_effectiveness(electric, steel-ghost).
-weakness(electric, steel-dragon).
-normal_effectiveness(electric, steel-dark).
-normal_effectiveness(electric, steel-fairy).
-normal_effectiveness(electric, fairy-normal).
-normal_effectiveness(electric, fairy-fire).
-super_effectiveness(electric, fairy-water).
-weakness(electric, fairy-electric).
-weakness(electric, fairy-grass).
-normal_effectiveness(electric, fairy-ice).
-normal_effectiveness(electric, fairy-fighting).
-normal_effectiveness(electric, fairy-poison).
-dano_zero(electric, fairy-ground).
-super_effectiveness(electric, fairy-flying).
-normal_effectiveness(electric, fairy-psychic).
-normal_effectiveness(electric, fairy-bug).
-normal_effectiveness(electric, fairy-rock).
-normal_effectiveness(electric, fairy-ghost).
-weakness(electric, fairy-dragon).
-normal_effectiveness(electric, fairy-dark).
-normal_effectiveness(electric, fairy-steel).
-
-/* Effectiveness grass */
+normal_effectiveness(electric,normal-ice).
+normal_effectiveness(electric,normal-fighting).
+normal_effectiveness(electric,normal-poison).
+normal_effectiveness(electric,normal-psychic).
+normal_effectiveness(electric,normal-bug).
+normal_effectiveness(electric,normal-rock).
+normal_effectiveness(electric,normal-ghost).
+normal_effectiveness(electric,normal-dark).
+normal_effectiveness(electric,normal-steel).
+normal_effectiveness(electric,normal-fairy).
+normal_effectiveness(electric,fire-normal).
+normal_effectiveness(electric,fire-ice).
+normal_effectiveness(electric,fire-fighting).
+normal_effectiveness(electric,fire-poison).
+normal_effectiveness(electric,fire-psychic).
+normal_effectiveness(electric,fire-bug).
+normal_effectiveness(electric,fire-rock).
+normal_effectiveness(electric,fire-ghost).
+normal_effectiveness(electric,fire-dark).
+normal_effectiveness(electric,fire-steel).
+normal_effectiveness(electric,fire-fairy).
+normal_effectiveness(electric,water-electric).
+normal_effectiveness(electric,water-grass).
+normal_effectiveness(electric,water-ice).
+normal_effectiveness(electric,water-dragon).
+normal_effectiveness(electric,electric-water).
+normal_effectiveness(electric,electric-flying).
+normal_effectiveness(electric,grass-water).
+normal_effectiveness(electric,grass-flying).
+normal_effectiveness(electric,ice-normal).
+normal_effectiveness(electric,ice-fire).
+normal_effectiveness(electric,ice-water).
+normal_effectiveness(electric,ice-fighting).
+normal_effectiveness(electric,ice-poison).
+normal_effectiveness(electric,ice-psychic).
+normal_effectiveness(electric,ice-bug).
+normal_effectiveness(electric,ice-rock).
+normal_effectiveness(electric,ice-ghost).
+normal_effectiveness(electric,ice-dark).
+normal_effectiveness(electric,ice-steel).
+normal_effectiveness(electric,ice-fairy).
+normal_effectiveness(electric,fighting-normal).
+normal_effectiveness(electric,fighting-fire).
+normal_effectiveness(electric,fighting-ice).
+normal_effectiveness(electric,fighting-poison).
+normal_effectiveness(electric,fighting-psychic).
+normal_effectiveness(electric,fighting-bug).
+normal_effectiveness(electric,fighting-rock).
+normal_effectiveness(electric,fighting-ghost).
+normal_effectiveness(electric,fighting-dark).
+normal_effectiveness(electric,fighting-steel).
+normal_effectiveness(electric,fighting-fairy).
+normal_effectiveness(electric,poison-normal).
+normal_effectiveness(electric,poison-fire).
+normal_effectiveness(electric,poison-ice).
+normal_effectiveness(electric,poison-fighting).
+normal_effectiveness(electric,poison-psychic).
+normal_effectiveness(electric,poison-bug).
+normal_effectiveness(electric,poison-rock).
+normal_effectiveness(electric,poison-ghost).
+normal_effectiveness(electric,poison-dark).
+normal_effectiveness(electric,poison-steel).
+normal_effectiveness(electric,poison-fairy).
+normal_effectiveness(electric,flying-electric).
+normal_effectiveness(electric,flying-grass).
+normal_effectiveness(electric,flying-dragon).
+normal_effectiveness(electric,psychic-normal).
+normal_effectiveness(electric,psychic-fire).
+normal_effectiveness(electric,psychic-ice).
+normal_effectiveness(electric,psychic-fighting).
+normal_effectiveness(electric,psychic-poison).
+normal_effectiveness(electric,psychic-bug).
+normal_effectiveness(electric,psychic-rock).
+normal_effectiveness(electric,psychic-ghost).
+normal_effectiveness(electric,psychic-dark).
+normal_effectiveness(electric,psychic-steel).
+normal_effectiveness(electric,psychic-fairy).
+normal_effectiveness(electric,bug-normal).
+normal_effectiveness(electric,bug-fire).
+normal_effectiveness(electric,bug-ice).
+normal_effectiveness(electric,bug-fighting).
+normal_effectiveness(electric,bug-poison).
+normal_effectiveness(electric,bug-psychic).
+normal_effectiveness(electric,bug-rock).
+normal_effectiveness(electric,bug-ghost).
+normal_effectiveness(electric,bug-dark).
+normal_effectiveness(electric,bug-steel).
+normal_effectiveness(electric,bug-fairy).
+normal_effectiveness(electric,rock-normal).
+normal_effectiveness(electric,rock-fire).
+normal_effectiveness(electric,rock-ice).
+normal_effectiveness(electric,rock-fighting).
+normal_effectiveness(electric,rock-poison).
+normal_effectiveness(electric,rock-psychic).
+normal_effectiveness(electric,rock-bug).
+normal_effectiveness(electric,rock-ghost).
+normal_effectiveness(electric,rock-dark).
+normal_effectiveness(electric,rock-steel).
+normal_effectiveness(electric,rock-fairy).
+normal_effectiveness(electric,ghost-normal).
+normal_effectiveness(electric,ghost-fire).
+normal_effectiveness(electric,ghost-ice).
+normal_effectiveness(electric,ghost-fighting).
+normal_effectiveness(electric,ghost-poison).
+normal_effectiveness(electric,ghost-psychic).
+normal_effectiveness(electric,ghost-bug).
+normal_effectiveness(electric,ghost-rock).
+normal_effectiveness(electric,ghost-dark).
+normal_effectiveness(electric,ghost-steel).
+normal_effectiveness(electric,ghost-fairy).
+normal_effectiveness(electric,dragon-water).
+normal_effectiveness(electric,dragon-flying).
+normal_effectiveness(electric,dark-normal).
+normal_effectiveness(electric,dark-fire).
+normal_effectiveness(electric,dark-ice).
+normal_effectiveness(electric,dark-fighting).
+normal_effectiveness(electric,dark-poison).
+normal_effectiveness(electric,dark-psychic).
+normal_effectiveness(electric,dark-bug).
+normal_effectiveness(electric,dark-rock).
+normal_effectiveness(electric,dark-ghost).
+normal_effectiveness(electric,dark-steel).
+normal_effectiveness(electric,dark-fairy).
+normal_effectiveness(electric,steel-normal).
+normal_effectiveness(electric,steel-fire).
+normal_effectiveness(electric,steel-ice).
+normal_effectiveness(electric,steel-fighting).
+normal_effectiveness(electric,steel-poison).
+normal_effectiveness(electric,steel-psychic).
+normal_effectiveness(electric,steel-bug).
+normal_effectiveness(electric,steel-rock).
+normal_effectiveness(electric,steel-ghost).
+normal_effectiveness(electric,steel-dark).
+normal_effectiveness(electric,steel-fairy).
+normal_effectiveness(electric,fairy-normal).
+normal_effectiveness(electric,fairy-fire).
+normal_effectiveness(electric,fairy-ice).
+normal_effectiveness(electric,fairy-fighting).
+normal_effectiveness(electric,fairy-poison).
+normal_effectiveness(electric,fairy-psychic).
+normal_effectiveness(electric,fairy-bug).
+normal_effectiveness(electric,fairy-rock).
+normal_effectiveness(electric,fairy-ghost).
+normal_effectiveness(electric,fairy-dark).
+normal_effectiveness(electric,fairy-steel).
 normal_effectiveness(grass,normal).
-weakness(grass,fire).
-super_effectiveness(grass,water).
 normal_effectiveness(grass,electric).
-weakness(grass,grass).
 normal_effectiveness(grass,ice).
 normal_effectiveness(grass,fighting).
-weakness(grass,poison).
-super_effectiveness(grass,ground).
-weakness(grass,flying).
 normal_effectiveness(grass,psychic).
-weakness(grass,bug).
-super_effectiveness(grass,rock).
 normal_effectiveness(grass,ghost).
-weakness(grass,dragon).
 normal_effectiveness(grass,dark).
-weakness(grass,steel).
 normal_effectiveness(grass,fairy).
-weakness(grass,normal-fire).
-super_effectiveness(grass, normal-water).
-normal_effectiveness(grass, normal-electric).
-weakness(grass, normal-grass).
-normal_effectiveness(grass, normal-ice).
-normal_effectiveness(grass, normal-fighting).
-weakness(grass, normal-poison).
-super_effectiveness(grass, normal-ground).
-weakness(grass, normal-flying).
-normal_effectiveness(grass, normal-psychic).
-weakness(grass, normal-bug).
-super_effectiveness(grass, normal-rock).
-normal_effectiveness(grass, normal-ghost).
-weakness(grass, normal-dragon).
-normal_effectiveness(grass, normal-dark).
-weakness(grass, normal-steel).
-normal_effectiveness(grass, normal-fairy).
-weakness(grass, fire-normal).
-normal_effectiveness(grass, fire-water).
-weakness(grass, fire-electric).
-super_weakness(grass, fire-grass).
-weakness(grass, fire-ice).
-weakness(grass, fire-fighting).
-super_weakness(grass, fire-poison).
-normal_effectiveness(grass, fire-ground).
-super_weakness(grass, fire-flying).
-weakness(grass, fire-psychic).
-super_weakness(grass, fire-bug).
-normal_effectiveness(grass, fire-rock).
-weakness(grass, fire-ghost).
-super_weakness(grass, fire-dragon).
-weakness(grass, fire-dark).
-super_weakness(grass, fire-steel).
-weakness(grass, fire-fairy).
-super_effectiveness(grass, water-normal).
-normal_effectiveness(grass, water-fire).
-super_effectiveness(grass, water-electric).
-normal_effectiveness(grass, water-grass).
-normal_effectiveness(grass, water-ice).
-super_effectiveness(grass, water-fighting).
-normal_effectiveness(grass, water-poison).
-super_vantagem(grass, water-ground).
-normal_effectiveness(grass, water-flying).
-super_effectiveness(grass, water-psychic).
-normal_effectiveness(grass, water-bug).
-super_vantagem(grass, water-rock).
-super_effectiveness(grass, water-ghost).
-normal_effectiveness(grass, water-dragon).
-super_effectiveness(grass, water-dark).
-normal_effectiveness(grass, water-steel).
-super_effectiveness(grass, water-fairy).
-normal_effectiveness(grass, electric-normal).
-weakness(grass, electric-fire).
-super_effectiveness(grass, electric-water).
-weakness(grass, electric-grass).
-normal_effectiveness(grass, electric-ice).
-normal_effectiveness(grass, electric-fighting).
-weakness(grass, electric-poison).
-super_effectiveness(grass, electric-ground).
-weakness(grass, electric-flying).
-normal_effectiveness(grass, electric-psychic).
-weakness(grass, electric-bug).
-super_effectiveness(grass, electric-rock).
-normal_effectiveness(grass, electric-ghost).
-weakness(grass, electric-dragon).
-normal_effectiveness(grass, electric-dark).
-weakness(grass, electric-steel).
-normal_effectiveness(grass, electric-fairy).
-weakness(grass, grass-normal).
-super_weakness(grass, grass-fire).
-normal_effectiveness(grass, grass-water).
-weakness(grass, grass-electric).
-weakness(grass, grass-ice).
-weakness(grass, grass-fighting).
-super_weakness(grass, grass-poison).
-normal_effectiveness(grass, grass-ground).
-super_weakness(grass, grass-flying).
-weakness(grass, grass-psychic).
-super_weakness(grass, grass-bug).
-normal_effectiveness(grass, grass-rock).
-weakness(grass, grass-ghost).
-super_weakness(grass, grass-dragon).
-weakness(grass, grass-dark).
-super_weakness(grass, grass-steel).
-weakness(grass, grass-fairy).
-normal_effectiveness(grass, ice-normal).
-weakness(grass, ice-fire).
-normal_effectiveness(grass, ice-water).
-normal_effectiveness(grass, ice-electric).
-weakness(grass, ice-grass).
-normal_effectiveness(grass, ice-fighting).
-weakness(grass, ice-poison).
-super_effectiveness(grass, ice-ground).
-weakness(grass, ice-flying).
-normal_effectiveness(grass, ice-psychic).
-weakness(grass, ice-bug).
-super_effectiveness(grass, ice-rock).
-normal_effectiveness(grass, ice-ghost).
-weakness(grass, ice-dragon).
-normal_effectiveness(grass, ice-dark).
-weakness(grass, ice-steel).
-normal_effectiveness(grass, ice-fairy).
-normal_effectiveness(grass, fighting-normal).
-weakness(grass, fighting-fire).
-super_effectiveness(grass, fighting-water).
-normal_effectiveness(grass, fighting-electric).
-weakness(grass, fighting-grass).
-normal_effectiveness(grass, fighting-ice).
-weakness(grass, fighting-poison).
-super_effectiveness(grass, fighting-ground).
-weakness(grass, fighting-flying).
-normal_effectiveness(grass, fighting-psychic).
-weakness(grass, fighting-bug).
-super_effectiveness(grass, fighting-rock).
-normal_effectiveness(grass, fighting-ghost).
-weakness(grass, fighting-dragon).
-normal_effectiveness(grass, fighting-dark).
-weakness(grass, fighting-steel).
-normal_effectiveness(grass, fighting-fairy).
-weakness(grass, poison-normal).
-super_weakness(grass, poison-fire).
-normal_effectiveness(grass, poison-water).
-weakness(grass, poison-electric).
-super_weakness(grass, poison-grass).
-weakness(grass, poison-ice).
-weakness(grass, poison-fighting).
-normal_effectiveness(grass, poison-ground).
-super_weakness(grass, poison-flying).
-weakness(grass, poison-psychic).
-super_weakness(grass, poison-bug).
-normal_effectiveness(grass, poison-rock).
-weakness(grass, poison-ghost).
-super_weakness(grass, poison-dragon).
-weakness(grass, poison-dark).
-super_weakness(grass, poison-steel).
-weakness(grass, poison-fairy).
-super_effectiveness(grass, ground-normal).
-normal_effectiveness(grass, ground-fire).
-super_vantagem(grass, ground-water).
-super_effectiveness(grass, ground-electric).
-normal_effectiveness(grass, ground-grass).
-super_effectiveness(grass, ground-ice).
-super_effectiveness(grass, ground-fighting).
-normal_effectiveness(grass, ground-poison).
-normal_effectiveness(grass, ground-flying).
-super_effectiveness(grass, ground-psychic).
-normal_effectiveness(grass, ground-bug).
-super_vantagem(grass, ground-rock).
-super_effectiveness(grass, ground-ghost).
-normal_effectiveness(grass, ground-dragon).
-super_effectiveness(grass, ground-dark).
-normal_effectiveness(grass, ground-steel).
-super_effectiveness(grass, ground-fairy).
-weakness(grass, flying-normal).
-super_weakness(grass, flying-fire).
-normal_effectiveness(grass, flying-water).
-weakness(grass, flying-electric).
-super_weakness(grass, flying-grass).
-weakness(grass, flying-ice).
-weakness(grass, flying-fighting).
-super_weakness(grass, flying-poison).
-normal_effectiveness(grass, flying-ground).
-weakness(grass, flying-psychic).
-super_weakness(grass, flying-bug).
-normal_effectiveness(grass, flying-rock).
-weakness(grass, flying-ghost).
-super_weakness(grass, flying-dragon).
-weakness(grass, flying-dark).
-super_weakness(grass, flying-steel).
-weakness(grass, flying-fairy).
-normal_effectiveness(grass, psychic-normal).
-weakness(grass, psychic-fire).
-super_effectiveness(grass, psychic-water).
-normal_effectiveness(grass, psychic-electric).
-weakness(grass, psychic-grass).
-normal_effectiveness(grass, psychic-ice).
-normal_effectiveness(grass, psychic-fighting).
-weakness(grass, psychic-poison).
-super_effectiveness(grass, psychic-ground).
-weakness(grass, psychic-flying).
-weakness(grass, psychic-bug).
-super_effectiveness(grass, psychic-rock).
-normal_effectiveness(grass, psychic-ghost).
-weakness(grass, psychic-dragon).
-normal_effectiveness(grass, psychic-dark).
-weakness(grass, psychic-steel).
-normal_effectiveness(grass, psychic-fairy).
-weakness(grass, bug-normal).
-super_weakness(grass, bug-fire).
-normal_effectiveness(grass, bug-water).
-weakness(grass, bug-electric).
-super_weakness(grass, bug-grass).
-weakness(grass, bug-ice).
-weakness(grass, bug-fighting).
-super_weakness(grass, bug-poison).
-normal_effectiveness(grass, bug-ground).
-super_weakness(grass, bug-flying).
-weakness(grass, bug-psychic).
-normal_effectiveness(grass, bug-rock).
-weakness(grass, bug-ghost).
-super_weakness(grass, bug-dragon).
-weakness(grass, bug-dark).
-super_weakness(grass, bug-steel).
-weakness(grass, bug-fairy).
-super_effectiveness(grass, rock-normal).
-normal_effectiveness(grass, rock-fire).
-super_vantagem(grass, rock-water).
-super_effectiveness(grass, rock-electric).
-normal_effectiveness(grass, rock-grass).
-super_effectiveness(grass, rock-ice).
-super_effectiveness(grass, rock-fighting).
-normal_effectiveness(grass, rock-poison).
-super_vantagem(grass, rock-ground).
-normal_effectiveness(grass, rock-flying).
-super_effectiveness(grass, rock-psychic).
-normal_effectiveness(grass, rock-bug).
-super_effectiveness(grass, rock-ghost).
-normal_effectiveness(grass, rock-dragon).
-super_effectiveness(grass, rock-dark).
-normal_effectiveness(grass, rock-steel).
-super_effectiveness(grass, rock-fairy).
-normal_effectiveness(grass, ghost-normal).
-weakness(grass, ghost-fire).
-super_effectiveness(grass, ghost-water).
-normal_effectiveness(grass, ghost-electric).
-weakness(grass, ghost-grass).
-normal_effectiveness(grass, ghost-ice).
-normal_effectiveness(grass, ghost-fighting).
-weakness(grass, ghost-poison).
-super_effectiveness(grass, ghost-ground).
-weakness(grass, ghost-flying).
-normal_effectiveness(grass, ghost-psychic).
-weakness(grass, ghost-bug).
-super_effectiveness(grass, ghost-rock).
-weakness(grass, ghost-dragon).
-normal_effectiveness(grass, ghost-dark).
-weakness(grass, ghost-steel).
-normal_effectiveness(grass, ghost-fairy).
-weakness(grass, dragon-normal).
-super_weakness(grass, dragon-fire).
-normal_effectiveness(grass, dragon-water).
-weakness(grass, dragon-electric).
-super_weakness(grass, dragon-grass).
-weakness(grass, dragon-ice).
-weakness(grass, dragon-fighting).
-super_weakness(grass, dragon-poison).
-normal_effectiveness(grass, dragon-ground).
-super_weakness(grass, dragon-flying).
-weakness(grass, dragon-psychic).
-super_weakness(grass, dragon-bug).
-normal_effectiveness(grass, dragon-rock).
-weakness(grass, dragon-ghost).
-weakness(grass, dragon-dark).
-super_weakness(grass, dragon-steel).
-weakness(grass, dragon-fairy).
-normal_effectiveness(grass, dark-normal).
-weakness(grass, dark-fire).
-super_effectiveness(grass, dark-water).
-normal_effectiveness(grass, dark-electric).
-weakness(grass, dark-grass).
-normal_effectiveness(grass, dark-ice).
-normal_effectiveness(grass, dark-fighting).
-weakness(grass, dark-poison).
-super_effectiveness(grass, dark-ground).
-weakness(grass, dark-flying).
-normal_effectiveness(grass, dark-psychic).
-weakness(grass, dark-bug).
-super_effectiveness(grass, dark-rock).
-normal_effectiveness(grass, dark-ghost).
-weakness(grass, dark-dragon).
-weakness(grass, dark-steel).
-normal_effectiveness(grass, dark-fairy).
-weakness(grass, steel-normal).
-super_weakness(grass, steel-fire).
-normal_effectiveness(grass, steel-water).
-weakness(grass, steel-electric).
-super_weakness(grass, steel-grass).
-weakness(grass, steel-ice).
-weakness(grass, steel-fighting).
-super_weakness(grass, steel-poison).
-normal_effectiveness(grass, steel-ground).
-super_weakness(grass, steel-flying).
-weakness(grass, steel-psychic).
-super_weakness(grass, steel-bug).
-normal_effectiveness(grass, steel-rock).
-weakness(grass, steel-ghost).
-super_weakness(grass, steel-dragon).
-weakness(grass, steel-dark).
-weakness(grass, steel-fairy).
-normal_effectiveness(grass, fairy-normal).
-weakness(grass, fairy-fire).
-super_effectiveness(grass, fairy-water).
-normal_effectiveness(grass, fairy-electric).
-weakness(grass, fairy-grass).
-normal_effectiveness(grass, fairy-ice).
-normal_effectiveness(grass, fairy-fighting).
-weakness(grass, fairy-poison).
-super_effectiveness(grass, fairy-ground).
-weakness(grass, fairy-flying).
-normal_effectiveness(grass, fairy-psychic).
-weakness(grass, fairy-bug).
-super_effectiveness(grass, fairy-rock).
-normal_effectiveness(grass, fairy-ghost).
-weakness(grass, fairy-dragon).
-normal_effectiveness(grass, fairy-dark).
-weakness(grass, fairy-steel).
-
-/* Effectiveness ice */
+normal_effectiveness(grass,normal-electric).
+normal_effectiveness(grass,normal-ice).
+normal_effectiveness(grass,normal-fighting).
+normal_effectiveness(grass,normal-psychic).
+normal_effectiveness(grass,normal-ghost).
+normal_effectiveness(grass,normal-dark).
+normal_effectiveness(grass,normal-fairy).
+normal_effectiveness(grass,fire-water).
+normal_effectiveness(grass,fire-ground).
+normal_effectiveness(grass,fire-rock).
+normal_effectiveness(grass,water-fire).
+normal_effectiveness(grass,water-grass).
+normal_effectiveness(grass,water-ice).
+normal_effectiveness(grass,water-poison).
+normal_effectiveness(grass,water-flying).
+normal_effectiveness(grass,water-bug).
+normal_effectiveness(grass,water-dragon).
+normal_effectiveness(grass,water-steel).
+normal_effectiveness(grass,electric-normal).
+normal_effectiveness(grass,electric-ice).
+normal_effectiveness(grass,electric-fighting).
+normal_effectiveness(grass,electric-psychic).
+normal_effectiveness(grass,electric-ghost).
+normal_effectiveness(grass,electric-dark).
+normal_effectiveness(grass,electric-fairy).
+normal_effectiveness(grass,grass-water).
+normal_effectiveness(grass,grass-ground).
+normal_effectiveness(grass,grass-rock).
+normal_effectiveness(grass,ice-normal).
+normal_effectiveness(grass,ice-water).
+normal_effectiveness(grass,ice-electric).
+normal_effectiveness(grass,ice-fighting).
+normal_effectiveness(grass,ice-psychic).
+normal_effectiveness(grass,ice-ghost).
+normal_effectiveness(grass,ice-dark).
+normal_effectiveness(grass,ice-fairy).
+normal_effectiveness(grass,fighting-normal).
+normal_effectiveness(grass,fighting-electric).
+normal_effectiveness(grass,fighting-ice).
+normal_effectiveness(grass,fighting-psychic).
+normal_effectiveness(grass,fighting-ghost).
+normal_effectiveness(grass,fighting-dark).
+normal_effectiveness(grass,fighting-fairy).
+normal_effectiveness(grass,poison-water).
+normal_effectiveness(grass,poison-ground).
+normal_effectiveness(grass,poison-rock).
+normal_effectiveness(grass,ground-fire).
+normal_effectiveness(grass,ground-grass).
+normal_effectiveness(grass,ground-poison).
+normal_effectiveness(grass,ground-flying).
+normal_effectiveness(grass,ground-bug).
+normal_effectiveness(grass,ground-dragon).
+normal_effectiveness(grass,ground-steel).
+normal_effectiveness(grass,flying-water).
+normal_effectiveness(grass,flying-ground).
+normal_effectiveness(grass,flying-rock).
+normal_effectiveness(grass,psychic-normal).
+normal_effectiveness(grass,psychic-electric).
+normal_effectiveness(grass,psychic-ice).
+normal_effectiveness(grass,psychic-fighting).
+normal_effectiveness(grass,psychic-ghost).
+normal_effectiveness(grass,psychic-dark).
+normal_effectiveness(grass,psychic-fairy).
+normal_effectiveness(grass,bug-water).
+normal_effectiveness(grass,bug-ground).
+normal_effectiveness(grass,bug-rock).
+normal_effectiveness(grass,rock-fire).
+normal_effectiveness(grass,rock-grass).
+normal_effectiveness(grass,rock-poison).
+normal_effectiveness(grass,rock-flying).
+normal_effectiveness(grass,rock-bug).
+normal_effectiveness(grass,rock-dragon).
+normal_effectiveness(grass,rock-steel).
+normal_effectiveness(grass,ghost-normal).
+normal_effectiveness(grass,ghost-electric).
+normal_effectiveness(grass,ghost-ice).
+normal_effectiveness(grass,ghost-fighting).
+normal_effectiveness(grass,ghost-psychic).
+normal_effectiveness(grass,ghost-dark).
+normal_effectiveness(grass,ghost-fairy).
+normal_effectiveness(grass,dragon-water).
+normal_effectiveness(grass,dragon-ground).
+normal_effectiveness(grass,dragon-rock).
+normal_effectiveness(grass,dark-normal).
+normal_effectiveness(grass,dark-electric).
+normal_effectiveness(grass,dark-ice).
+normal_effectiveness(grass,dark-fighting).
+normal_effectiveness(grass,dark-psychic).
+normal_effectiveness(grass,dark-ghost).
+normal_effectiveness(grass,dark-fairy).
+normal_effectiveness(grass,steel-water).
+normal_effectiveness(grass,steel-ground).
+normal_effectiveness(grass,steel-rock).
+normal_effectiveness(grass,fairy-normal).
+normal_effectiveness(grass,fairy-electric).
+normal_effectiveness(grass,fairy-ice).
+normal_effectiveness(grass,fairy-fighting).
+normal_effectiveness(grass,fairy-psychic).
+normal_effectiveness(grass,fairy-ghost).
+normal_effectiveness(grass,fairy-dark).
 normal_effectiveness(ice,normal).
-weakness(ice,fire).
-weakness(ice,water).
 normal_effectiveness(ice,electric).
-super_effectiveness(ice,grass).
-weakness(ice,ice).
 normal_effectiveness(ice,fighting).
 normal_effectiveness(ice,poison).
-super_effectiveness(ice,ground).
-super_effectiveness(ice,flying).
 normal_effectiveness(ice,psychic).
 normal_effectiveness(ice,bug).
 normal_effectiveness(ice,rock).
 normal_effectiveness(ice,ghost).
-super_effectiveness(ice,dragon).
 normal_effectiveness(ice,dark).
-weakness(ice,steel).
 normal_effectiveness(ice,fairy).
-weakness(ice,normal-fire).
-weakness(ice, normal-water).
-normal_effectiveness(ice, normal-electric).
-super_effectiveness(ice, normal-grass).
-weakness(ice, normal-ice).
-normal_effectiveness(ice, normal-fighting).
-normal_effectiveness(ice, normal-poison).
-super_effectiveness(ice, normal-ground).
-super_effectiveness(ice, normal-flying).
-normal_effectiveness(ice, normal-psychic).
-normal_effectiveness(ice, normal-bug).
-normal_effectiveness(ice, normal-rock).
-normal_effectiveness(ice, normal-ghost).
-super_effectiveness(ice, normal-dragon).
-normal_effectiveness(ice, normal-dark).
-weakness(ice, normal-steel).
-normal_effectiveness(ice, normal-fairy).
-weakness(ice, fire-normal).
-super_weakness(ice, fire-water).
-weakness(ice, fire-electric).
-normal_effectiveness(ice, fire-grass).
-super_weakness(ice, fire-ice).
-weakness(ice, fire-fighting).
-weakness(ice, fire-poison).
-normal_effectiveness(ice, fire-ground).
-normal_effectiveness(ice, fire-flying).
-weakness(ice, fire-psychic).
-weakness(ice, fire-bug).
-weakness(ice, fire-rock).
-weakness(ice, fire-ghost).
-normal_effectiveness(ice, fire-dragon).
-weakness(ice, fire-dark).
-super_weakness(ice, fire-steel).
-weakness(ice, fire-fairy).
-weakness(ice, water-normal).
-super_weakness(ice, water-fire).
-weakness(ice, water-electric).
-normal_effectiveness(ice, water-grass).
-super_weakness(ice, water-ice).
-weakness(ice, water-fighting).
-weakness(ice, water-poison).
-normal_effectiveness(ice, water-ground).
-normal_effectiveness(ice, water-flying).
-weakness(ice, water-psychic).
-weakness(ice, water-bug).
-weakness(ice, water-rock).
-weakness(ice, water-ghost).
-normal_effectiveness(ice, water-dragon).
-weakness(ice, water-dark).
-super_weakness(ice, water-steel).
-weakness(ice, water-fairy).
-normal_effectiveness(ice, electric-normal).
-weakness(ice, electric-fire).
-weakness(ice, electric-water).
-super_effectiveness(ice, electric-grass).
-weakness(ice, electric-ice).
-normal_effectiveness(ice, electric-fighting).
-normal_effectiveness(ice, electric-poison).
-super_effectiveness(ice, electric-ground).
-super_effectiveness(ice, electric-flying).
-normal_effectiveness(ice, electric-psychic).
-normal_effectiveness(ice, electric-bug).
-normal_effectiveness(ice, electric-rock).
-normal_effectiveness(ice, electric-ghost).
-super_effectiveness(ice, electric-dragon).
-normal_effectiveness(ice, electric-dark).
-weakness(ice, electric-steel).
-normal_effectiveness(ice, electric-fairy).
-super_effectiveness(ice, grass-normal).
-normal_effectiveness(ice, grass-fire).
-normal_effectiveness(ice, grass-water).
-super_effectiveness(ice, grass-electric).
-normal_effectiveness(ice, grass-ice).
-super_effectiveness(ice, grass-fighting).
-super_effectiveness(ice, grass-poison).
-super_vantagem(ice, grass-ground).
-super_vantagem(ice, grass-flying).
-super_effectiveness(ice, grass-psychic).
-super_effectiveness(ice, grass-bug).
-super_effectiveness(ice, grass-rock).
-super_effectiveness(ice, grass-ghost).
-super_vantagem(ice, grass-dragon).
-super_effectiveness(ice, grass-dark).
-normal_effectiveness(ice, grass-steel).
-super_effectiveness(ice, grass-fairy).
-weakness(ice, ice-normal).
-weakness(ice, ice-fire).
-super_weakness(ice, ice-water).
-weakness(ice, ice-electric).
-normal_effectiveness(ice, ice-grass).
-weakness(ice, ice-fighting).
-weakness(ice, ice-poison).
-normal_effectiveness(ice, ice-ground).
-normal_effectiveness(ice, ice-flying).
-weakness(ice, ice-psychic).
-weakness(ice, ice-bug).
-weakness(ice, ice-rock).
-weakness(ice, ice-ghost).
-normal_effectiveness(ice, ice-dragon).
-weakness(ice, ice-dark).
-super_weakness(ice, ice-steel).
-weakness(ice, ice-fairy).
-normal_effectiveness(ice, fighting-normal).
-weakness(ice, fighting-fire).
-weakness(ice, fighting-water).
-normal_effectiveness(ice, fighting-electric).
-super_effectiveness(ice, fighting-grass).
-weakness(ice, fighting-ice).
-weakness(ice, fighting-poison).
-super_effectiveness(ice, fighting-ground).
-super_effectiveness(ice, fighting-flying).
-normal_effectiveness(ice, fighting-psychic).
-normal_effectiveness(ice, fighting-bug).
-normal_effectiveness(ice, fighting-rock).
-normal_effectiveness(ice, fighting-ghost).
-super_effectiveness(ice, fighting-dragon).
-normal_effectiveness(ice, fighting-dark).
-weakness(ice, fighting-steel).
-normal_effectiveness(ice, fighting-fairy).
-normal_effectiveness(ice, poison-normal).
-weakness(ice, poison-fire).
-weakness(ice, poison-water).
-normal_effectiveness(ice, poison-electric).
-super_effectiveness(ice, poison-grass).
-weakness(ice, poison-ice).
-weakness(ice, poison-fighting).
-super_effectiveness(ice, poison-ground).
-super_effectiveness(ice, poison-flying).
-normal_effectiveness(ice, poison-psychic).
-normal_effectiveness(ice, poison-bug).
-normal_effectiveness(ice, poison-rock).
-normal_effectiveness(ice, poison-ghost).
-super_effectiveness(ice, poison-dragon).
-normal_effectiveness(ice, poison-dark).
-weakness(ice, poison-steel).
-normal_effectiveness(ice, poison-fairy).
-super_effectiveness(ice, ground-normal).
-normal_effectiveness(ice, ground-fire).
-normal_effectiveness(ice, ground-water).
-super_effectiveness(ice, ground-electric).
-super_vantagem(ice, ground-grass).
-normal_effectiveness(ice, ground-ice).
-super_effectiveness(ice, ground-fighting).
-super_effectiveness(ice, ground-poison).
-super_vantagem(ice, ground-flying).
-super_effectiveness(ice, ground-psychic).
-super_effectiveness(ice, ground-bug).
-super_effectiveness(ice, ground-rock).
-super_effectiveness(ice, ground-ghost).
-super_vantagem(ice, ground-dragon).
-super_effectiveness(ice, ground-dark).
-normal_effectiveness(ice, ground-steel).
-super_effectiveness(ice, ground-fairy).
-super_effectiveness(ice, flying-normal).
-normal_effectiveness(ice, flying-fire).
-normal_effectiveness(ice, flying-water).
-super_effectiveness(ice, flying-electric).
-super_vantagem(ice, flying-grass).
-normal_effectiveness(ice, flying-ice).
-super_effectiveness(ice, flying-fighting).
-super_effectiveness(ice, flying-poison).
-super_vantagem(ice, flying-ground).
-super_effectiveness(ice, flying-psychic).
-super_effectiveness(ice, flying-bug).
-super_effectiveness(ice, flying-rock).
-super_effectiveness(ice, flying-ghost).
-super_vantagem(ice, flying-dragon).
-super_effectiveness(ice, flying-dark).
-normal_effectiveness(ice, flying-steel).
-super_effectiveness(ice, flying-fairy).
-normal_effectiveness(ice, psychic-normal).
-weakness(ice, psychic-fire).
-weakness(ice, psychic-water).
-normal_effectiveness(ice, psychic-electric).
-super_effectiveness(ice, psychic-grass).
-weakness(ice, psychic-ice).
-normal_effectiveness(ice, psychic-fighting).
-normal_effectiveness(ice, psychic-poison).
-super_effectiveness(ice, psychic-ground).
-super_effectiveness(ice, psychic-flying).
-normal_effectiveness(ice, psychic-bug).
-normal_effectiveness(ice, psychic-rock).
-normal_effectiveness(ice, psychic-ghost).
-super_effectiveness(ice, psychic-dragon).
-normal_effectiveness(ice, psychic-dark).
-weakness(ice, psychic-steel).
-normal_effectiveness(ice, psychic-fairy).
-normal_effectiveness(ice, bug-normal).
-weakness(ice, bug-fire).
-weakness(ice, bug-water).
-normal_effectiveness(ice, bug-electric).
-super_effectiveness(ice, bug-grass).
-weakness(ice, bug-ice).
-normal_effectiveness(ice, bug-fighting).
-normal_effectiveness(ice, bug-poison).
-super_effectiveness(ice, bug-ground).
-super_effectiveness(ice, bug-flying).
-normal_effectiveness(ice, bug-psychic).
-normal_effectiveness(ice, bug-rock).
-normal_effectiveness(ice, bug-ghost).
-super_effectiveness(ice, bug-dragon).
-normal_effectiveness(ice, bug-dark).
-weakness(ice, bug-steel).
-normal_effectiveness(ice, bug-fairy).
-normal_effectiveness(ice, rock-normal).
-weakness(ice, rock-fire).
-weakness(ice, rock-water).
-normal_effectiveness(ice, rock-electric).
-super_effectiveness(ice, rock-grass).
-weakness(ice, rock-ice).
-normal_effectiveness(ice, rock-fighting).
-normal_effectiveness(ice, rock-poison).
-super_effectiveness(ice, rock-ground).
-super_effectiveness(ice, rock-flying).
-normal_effectiveness(ice, rock-psychic).
-normal_effectiveness(ice, rock-bug).
-normal_effectiveness(ice, rock-ghost).
-super_effectiveness(ice, rock-dragon).
-normal_effectiveness(ice, rock-dark).
-weakness(ice, rock-steel).
-normal_effectiveness(ice, rock-fairy).
-normal_effectiveness(ice, ghost-normal).
-weakness(ice, ghost-fire).
-weakness(ice, ghost-water).
-normal_effectiveness(ice, ghost-electric).
-super_effectiveness(ice, ghost-grass).
-weakness(ice, ghost-ice).
-normal_effectiveness(ice, ghost-fighting).
-normal_effectiveness(ice, ghost-poison).
-super_effectiveness(ice, ghost-ground).
-super_effectiveness(ice, ghost-flying).
-normal_effectiveness(ice, ghost-psychic).
-normal_effectiveness(ice, ghost-bug).
-normal_effectiveness(ice, ghost-rock).
-super_effectiveness(ice, ghost-dragon).
-normal_effectiveness(ice, ghost-dark).
-weakness(ice, ghost-steel).
-normal_effectiveness(ice, ghost-fairy).
-super_effectiveness(ice, dragon-normal).
-normal_effectiveness(ice, dragon-fire).
-normal_effectiveness(ice, dragon-water).
-super_effectiveness(ice, dragon-electric).
-super_vantagem(ice, dragon-grass).
-normal_effectiveness(ice, dragon-ice).
-super_effectiveness(ice, dragon-fighting).
-super_effectiveness(ice, dragon-poison).
-super_vantagem(ice, dragon-ground).
-super_vantagem(ice, dragon-flying).
-super_effectiveness(ice, dragon-psychic).
-super_effectiveness(ice, dragon-bug).
-super_effectiveness(ice, dragon-rock).
-super_effectiveness(ice, dragon-ghost).
-super_effectiveness(ice, dragon-dark).
-normal_effectiveness(ice, dragon-steel).
-super_effectiveness(ice, dragon-fairy).
-normal_effectiveness(ice, dark-normal).
-weakness(ice, dark-fire).
-weakness(ice, dark-water).
-normal_effectiveness(ice, dark-electric).
-super_effectiveness(ice, dark-grass).
-weakness(ice, dark-ice).
-normal_effectiveness(ice, dark-fighting).
-normal_effectiveness(ice, dark-poison).
-super_effectiveness(ice, dark-ground).
-super_effectiveness(ice, dark-flying).
-normal_effectiveness(ice, dark-psychic).
-normal_effectiveness(ice, dark-bug).
-normal_effectiveness(ice, dark-rock).
-normal_effectiveness(ice, dark-ghost).
-super_effectiveness(ice, dark-dragon).
-weakness(ice, dark-steel).
-normal_effectiveness(ice, dark-fairy).
-weakness(ice, steel-normal).
-super_weakness(ice, steel-fire).
-super_weakness(ice, steel-water).
-weakness(ice, steel-electric).
-normal_effectiveness(ice, steel-grass).
-super_weakness(ice, steel-ice).
-weakness(ice, steel-fighting).
-weakness(ice, steel-poison).
-normal_effectiveness(ice, steel-ground).
-normal_effectiveness(ice, steel-flying).
-weakness(ice, steel-psychic).
-weakness(ice, steel-bug).
-weakness(ice, steel-rock).
-weakness(ice, steel-ghost).
-normal_effectiveness(ice, steel-dragon).
-weakness(ice, steel-dark).
-weakness(ice, steel-fairy).
-normal_effectiveness(ice, fairy-normal).
-weakness(ice, fairy-fire).
-weakness(ice, fairy-water).
-normal_effectiveness(ice, fairy-electric).
-super_effectiveness(ice, fairy-grass).
-weakness(ice, fairy-ice).
-normal_effectiveness(ice, fairy-fighting).
-normal_effectiveness(ice, fairy-poison).
-super_effectiveness(ice, fairy-ground).
-super_effectiveness(ice, fairy-flying).
-normal_effectiveness(ice, fairy-psychic).
-normal_effectiveness(ice, fairy-bug).
-normal_effectiveness(ice, fairy-rock).
-normal_effectiveness(ice, fairy-ghost).
-super_effectiveness(ice, fairy-dragon).
-normal_effectiveness(ice, fairy-dark).
-weakness(ice, fairy-steel).
-
-/* Effectiveness fighting */
-super_effectiveness(fighting,normal).
+normal_effectiveness(ice,normal-electric).
+normal_effectiveness(ice,normal-fighting).
+normal_effectiveness(ice,normal-poison).
+normal_effectiveness(ice,normal-psychic).
+normal_effectiveness(ice,normal-bug).
+normal_effectiveness(ice,normal-rock).
+normal_effectiveness(ice,normal-ghost).
+normal_effectiveness(ice,normal-dark).
+normal_effectiveness(ice,normal-fairy).
+normal_effectiveness(ice,fire-grass).
+normal_effectiveness(ice,fire-ground).
+normal_effectiveness(ice,fire-flying).
+normal_effectiveness(ice,fire-dragon).
+normal_effectiveness(ice,water-grass).
+normal_effectiveness(ice,water-ground).
+normal_effectiveness(ice,water-flying).
+normal_effectiveness(ice,water-dragon).
+normal_effectiveness(ice,electric-normal).
+normal_effectiveness(ice,electric-fighting).
+normal_effectiveness(ice,electric-poison).
+normal_effectiveness(ice,electric-psychic).
+normal_effectiveness(ice,electric-bug).
+normal_effectiveness(ice,electric-rock).
+normal_effectiveness(ice,electric-ghost).
+normal_effectiveness(ice,electric-dark).
+normal_effectiveness(ice,electric-fairy).
+normal_effectiveness(ice,grass-fire).
+normal_effectiveness(ice,grass-water).
+normal_effectiveness(ice,grass-ice).
+normal_effectiveness(ice,grass-steel).
+normal_effectiveness(ice,ice-grass).
+normal_effectiveness(ice,ice-ground).
+normal_effectiveness(ice,ice-flying).
+normal_effectiveness(ice,ice-dragon).
+normal_effectiveness(ice,fighting-normal).
+normal_effectiveness(ice,fighting-electric).
+normal_effectiveness(ice,fighting-psychic).
+normal_effectiveness(ice,fighting-bug).
+normal_effectiveness(ice,fighting-rock).
+normal_effectiveness(ice,fighting-ghost).
+normal_effectiveness(ice,fighting-dark).
+normal_effectiveness(ice,fighting-fairy).
+normal_effectiveness(ice,poison-normal).
+normal_effectiveness(ice,poison-electric).
+normal_effectiveness(ice,poison-psychic).
+normal_effectiveness(ice,poison-bug).
+normal_effectiveness(ice,poison-rock).
+normal_effectiveness(ice,poison-ghost).
+normal_effectiveness(ice,poison-dark).
+normal_effectiveness(ice,poison-fairy).
+normal_effectiveness(ice,ground-fire).
+normal_effectiveness(ice,ground-water).
+normal_effectiveness(ice,ground-ice).
+normal_effectiveness(ice,ground-steel).
+normal_effectiveness(ice,flying-fire).
+normal_effectiveness(ice,flying-water).
+normal_effectiveness(ice,flying-ice).
+normal_effectiveness(ice,flying-steel).
+normal_effectiveness(ice,psychic-normal).
+normal_effectiveness(ice,psychic-electric).
+normal_effectiveness(ice,psychic-fighting).
+normal_effectiveness(ice,psychic-poison).
+normal_effectiveness(ice,psychic-bug).
+normal_effectiveness(ice,psychic-rock).
+normal_effectiveness(ice,psychic-ghost).
+normal_effectiveness(ice,psychic-dark).
+normal_effectiveness(ice,psychic-fairy).
+normal_effectiveness(ice,bug-normal).
+normal_effectiveness(ice,bug-electric).
+normal_effectiveness(ice,bug-fighting).
+normal_effectiveness(ice,bug-poison).
+normal_effectiveness(ice,bug-psychic).
+normal_effectiveness(ice,bug-rock).
+normal_effectiveness(ice,bug-ghost).
+normal_effectiveness(ice,bug-dark).
+normal_effectiveness(ice,bug-fairy).
+normal_effectiveness(ice,rock-normal).
+normal_effectiveness(ice,rock-electric).
+normal_effectiveness(ice,rock-fighting).
+normal_effectiveness(ice,rock-poison).
+normal_effectiveness(ice,rock-psychic).
+normal_effectiveness(ice,rock-bug).
+normal_effectiveness(ice,rock-ghost).
+normal_effectiveness(ice,rock-dark).
+normal_effectiveness(ice,rock-fairy).
+normal_effectiveness(ice,ghost-normal).
+normal_effectiveness(ice,ghost-electric).
+normal_effectiveness(ice,ghost-fighting).
+normal_effectiveness(ice,ghost-poison).
+normal_effectiveness(ice,ghost-psychic).
+normal_effectiveness(ice,ghost-bug).
+normal_effectiveness(ice,ghost-rock).
+normal_effectiveness(ice,ghost-dark).
+normal_effectiveness(ice,ghost-fairy).
+normal_effectiveness(ice,dragon-fire).
+normal_effectiveness(ice,dragon-water).
+normal_effectiveness(ice,dragon-ice).
+normal_effectiveness(ice,dragon-steel).
+normal_effectiveness(ice,dark-normal).
+normal_effectiveness(ice,dark-electric).
+normal_effectiveness(ice,dark-fighting).
+normal_effectiveness(ice,dark-poison).
+normal_effectiveness(ice,dark-psychic).
+normal_effectiveness(ice,dark-bug).
+normal_effectiveness(ice,dark-rock).
+normal_effectiveness(ice,dark-ghost).
+normal_effectiveness(ice,dark-fairy).
+normal_effectiveness(ice,steel-grass).
+normal_effectiveness(ice,steel-ground).
+normal_effectiveness(ice,steel-flying).
+normal_effectiveness(ice,steel-dragon).
+normal_effectiveness(ice,fairy-normal).
+normal_effectiveness(ice,fairy-electric).
+normal_effectiveness(ice,fairy-fighting).
+normal_effectiveness(ice,fairy-poison).
+normal_effectiveness(ice,fairy-psychic).
+normal_effectiveness(ice,fairy-bug).
+normal_effectiveness(ice,fairy-rock).
+normal_effectiveness(ice,fairy-ghost).
+normal_effectiveness(ice,fairy-dark).
 normal_effectiveness(fighting,fire).
 normal_effectiveness(fighting,water).
 normal_effectiveness(fighting,electric).
 normal_effectiveness(fighting,grass).
-super_effectiveness(fighting,ice).
 normal_effectiveness(fighting,fighting).
-weakness(fighting,poison).
 normal_effectiveness(fighting,ground).
-weakness(fighting,flying).
-weakness(fighting,psychic).
-weakness(fighting,bug).
-super_effectiveness(fighting,rock).
-dano_zero(fighting,ghost).
 normal_effectiveness(fighting,dragon).
-super_effectiveness(fighting,dark).
-super_effectiveness(fighting,steel).
-weakness(fighting,fairy).
-super_effectiveness(fighting,normal-fire).
-super_effectiveness(fighting, normal-water).
-super_effectiveness(fighting, normal-electric).
-super_effectiveness(fighting, normal-grass).
-super_vantagem(fighting, normal-ice).
-super_effectiveness(fighting, normal-fighting).
-normal_effectiveness(fighting, normal-poison).
-super_effectiveness(fighting, normal-ground).
-normal_effectiveness(fighting, normal-flying).
-normal_effectiveness(fighting, normal-psychic).
-normal_effectiveness(fighting, normal-bug).
-super_vantagem(fighting, normal-rock).
-dano_zero(fighting, normal-ghost).
-super_effectiveness(fighting, normal-dragon).
-super_vantagem(fighting, normal-dark).
-super_vantagem(fighting, normal-steel).
-normal_effectiveness(fighting, normal-fairy).
-super_effectiveness(fighting, fire-normal).
-normal_effectiveness(fighting, fire-water).
-normal_effectiveness(fighting, fire-electric).
-normal_effectiveness(fighting, fire-grass).
-super_effectiveness(fighting, fire-ice).
-normal_effectiveness(fighting, fire-fighting).
-weakness(fighting, fire-poison).
-normal_effectiveness(fighting, fire-ground).
-weakness(fighting, fire-flying).
-weakness(fighting, fire-psychic).
-weakness(fighting, fire-bug).
-super_effectiveness(fighting, fire-rock).
-dano_zero(fighting, fire-ghost).
-normal_effectiveness(fighting, fire-dragon).
-super_effectiveness(fighting, fire-dark).
-super_effectiveness(fighting, fire-steel).
-weakness(fighting, fire-fairy).
-super_effectiveness(fighting, water-normal).
-normal_effectiveness(fighting, water-fire).
-normal_effectiveness(fighting, water-electric).
-normal_effectiveness(fighting, water-grass).
-super_effectiveness(fighting, water-ice).
-normal_effectiveness(fighting, water-fighting).
-weakness(fighting, water-poison).
-normal_effectiveness(fighting, water-ground).
-weakness(fighting, water-flying).
-weakness(fighting, water-psychic).
-weakness(fighting, water-bug).
-super_effectiveness(fighting, water-rock).
-dano_zero(fighting, water-ghost).
-normal_effectiveness(fighting, water-dragon).
-super_effectiveness(fighting, water-dark).
-super_effectiveness(fighting, water-steel).
-weakness(fighting, water-fairy).
-super_effectiveness(fighting, electric-normal).
-normal_effectiveness(fighting, electric-fire).
-normal_effectiveness(fighting, electric-water).
-normal_effectiveness(fighting, electric-grass).
-super_effectiveness(fighting, electric-ice).
-normal_effectiveness(fighting, electric-fighting).
-weakness(fighting, electric-poison).
-normal_effectiveness(fighting, electric-ground).
-weakness(fighting, electric-flying).
-weakness(fighting, electric-psychic).
-weakness(fighting, electric-bug).
-super_effectiveness(fighting, electric-rock).
-dano_zero(fighting, electric-ghost).
-normal_effectiveness(fighting, electric-dragon).
-super_effectiveness(fighting, electric-dark).
-super_effectiveness(fighting, electric-steel).
-weakness(fighting, electric-fairy).
-super_effectiveness(fighting, grass-normal).
-normal_effectiveness(fighting, grass-fire).
-normal_effectiveness(fighting, grass-water).
-normal_effectiveness(fighting, grass-electric).
-super_effectiveness(fighting, grass-ice).
-normal_effectiveness(fighting, grass-fighting).
-weakness(fighting, grass-poison).
-normal_effectiveness(fighting, grass-ground).
-weakness(fighting, grass-flying).
-weakness(fighting, grass-psychic).
-weakness(fighting, grass-bug).
-super_effectiveness(fighting, grass-rock).
-dano_zero(fighting, grass-ghost).
-normal_effectiveness(fighting, grass-dragon).
-super_effectiveness(fighting, grass-dark).
-super_effectiveness(fighting, grass-steel).
-weakness(fighting, grass-fairy).
-super_vantagem(fighting, ice-normal).
-super_effectiveness(fighting, ice-fire).
-super_effectiveness(fighting, ice-water).
-super_effectiveness(fighting, ice-electric).
-super_effectiveness(fighting, ice-grass).
-super_effectiveness(fighting, ice-fighting).
-normal_effectiveness(fighting, ice-poison).
-super_effectiveness(fighting, ice-ground).
-normal_effectiveness(fighting, ice-flying).
-normal_effectiveness(fighting, ice-psychic).
-normal_effectiveness(fighting, ice-bug).
-super_vantagem(fighting, ice-rock).
-dano_zero(fighting, ice-ghost).
-super_effectiveness(fighting, ice-dragon).
-super_vantagem(fighting, ice-dark).
-super_vantagem(fighting, ice-steel).
-normal_effectiveness(fighting, ice-fairy).
-super_effectiveness(fighting, fighting-normal).
-normal_effectiveness(fighting, fighting-fire).
-normal_effectiveness(fighting, fighting-water).
-normal_effectiveness(fighting, fighting-electric).
-normal_effectiveness(fighting, fighting-grass).
-super_effectiveness(fighting, fighting-ice).
-normal_effectiveness(fighting, fighting-poison).
-normal_effectiveness(fighting, fighting-ground).
-weakness(fighting, fighting-flying).
-weakness(fighting, fighting-psychic).
-weakness(fighting, fighting-bug).
-super_effectiveness(fighting, fighting-rock).
-dano_zero(fighting, fighting-ghost).
-normal_effectiveness(fighting, fighting-dragon).
-super_effectiveness(fighting, fighting-dark).
-super_effectiveness(fighting, fighting-steel).
-weakness(fighting, fighting-fairy).
-normal_effectiveness(fighting, poison-normal).
-weakness(fighting, poison-fire).
-weakness(fighting, poison-water).
-weakness(fighting, poison-electric).
-weakness(fighting, poison-grass).
-normal_effectiveness(fighting, poison-ice).
-normal_effectiveness(fighting, poison-fighting).
-weakness(fighting, poison-ground).
-super_weakness(fighting, poison-flying).
-super_weakness(fighting, poison-psychic).
-super_weakness(fighting, poison-bug).
-normal_effectiveness(fighting, poison-rock).
-dano_zero(fighting, poison-ghost).
-weakness(fighting, poison-dragon).
-normal_effectiveness(fighting, poison-dark).
-normal_effectiveness(fighting, poison-steel).
-super_weakness(fighting, poison-fairy).
-super_effectiveness(fighting, ground-normal).
-normal_effectiveness(fighting, ground-fire).
-normal_effectiveness(fighting, ground-water).
-normal_effectiveness(fighting, ground-electric).
-normal_effectiveness(fighting, ground-grass).
-super_effectiveness(fighting, ground-ice).
-normal_effectiveness(fighting, ground-fighting).
-weakness(fighting, ground-poison).
-weakness(fighting, ground-flying).
-weakness(fighting, ground-psychic).
-weakness(fighting, ground-bug).
-super_effectiveness(fighting, ground-rock).
-dano_zero(fighting, ground-ghost).
-normal_effectiveness(fighting, ground-dragon).
-super_effectiveness(fighting, ground-dark).
-super_effectiveness(fighting, ground-steel).
-weakness(fighting, ground-fairy).
-normal_effectiveness(fighting, flying-normal).
-weakness(fighting, flying-fire).
-weakness(fighting, flying-water).
-weakness(fighting, flying-electric).
-weakness(fighting, flying-grass).
-normal_effectiveness(fighting, flying-ice).
-weakness(fighting, flying-fighting).
-super_weakness(fighting, flying-poison).
-weakness(fighting, flying-ground).
-super_weakness(fighting, flying-psychic).
-super_weakness(fighting, flying-bug).
-normal_effectiveness(fighting, flying-rock).
-dano_zero(fighting, flying-ghost).
-weakness(fighting, flying-dragon).
-normal_effectiveness(fighting, flying-dark).
-normal_effectiveness(fighting, flying-steel).
-super_weakness(fighting, flying-fairy).
-normal_effectiveness(fighting, psychic-normal).
-weakness(fighting, psychic-fire).
-weakness(fighting, psychic-water).
-weakness(fighting, psychic-electric).
-weakness(fighting, psychic-grass).
-normal_effectiveness(fighting, psychic-ice).
-weakness(fighting, psychic-fighting).
-super_weakness(fighting, psychic-poison).
-weakness(fighting, psychic-ground).
-super_weakness(fighting, psychic-flying).
-super_weakness(fighting, psychic-bug).
-normal_effectiveness(fighting, psychic-rock).
-dano_zero(fighting, psychic-ghost).
-weakness(fighting, psychic-dragon).
-normal_effectiveness(fighting, psychic-dark).
-normal_effectiveness(fighting, psychic-steel).
-super_weakness(fighting, psychic-fairy).
-normal_effectiveness(fighting, bug-normal).
-weakness(fighting, bug-fire).
-weakness(fighting, bug-water).
-weakness(fighting, bug-electric).
-weakness(fighting, bug-grass).
-normal_effectiveness(fighting, bug-ice).
-weakness(fighting, bug-fighting).
-super_weakness(fighting, bug-poison).
-weakness(fighting, bug-ground).
-super_weakness(fighting, bug-flying).
-super_weakness(fighting, bug-psychic).
-normal_effectiveness(fighting, bug-rock).
-dano_zero(fighting, bug-ghost).
-weakness(fighting, bug-dragon).
-normal_effectiveness(fighting, bug-dark).
-normal_effectiveness(fighting, bug-steel).
-super_weakness(fighting, bug-fairy).
-super_vantagem(fighting, rock-normal).
-super_effectiveness(fighting, rock-fire).
-super_effectiveness(fighting, rock-water).
-super_effectiveness(fighting, rock-electric).
-super_effectiveness(fighting, rock-grass).
-super_vantagem(fighting, rock-ice).
-super_effectiveness(fighting, rock-fighting).
-normal_effectiveness(fighting, rock-poison).
-super_effectiveness(fighting, rock-ground).
-normal_effectiveness(fighting, rock-flying).
-normal_effectiveness(fighting, rock-psychic).
-normal_effectiveness(fighting, rock-bug).
-dano_zero(fighting, rock-ghost).
-super_effectiveness(fighting, rock-dragon).
-super_vantagem(fighting, rock-dark).
-super_vantagem(fighting, rock-steel).
-normal_effectiveness(fighting, rock-fairy).
-dano_zero(fighting, ghost-normal).
-dano_zero(fighting, ghost-fire).
-dano_zero(fighting, ghost-water).
-dano_zero(fighting, ghost-electric).
-dano_zero(fighting, ghost-grass).
-dano_zero(fighting, ghost-ice).
-dano_zero(fighting, ghost-fighting).
-dano_zero(fighting, ghost-poison).
-dano_zero(fighting, ghost-ground).
-dano_zero(fighting, ghost-flying).
-dano_zero(fighting, ghost-psychic).
-dano_zero(fighting, ghost-bug).
-dano_zero(fighting, ghost-rock).
-dano_zero(fighting, ghost-dragon).
-dano_zero(fighting, ghost-dark).
-dano_zero(fighting, ghost-steel).
-dano_zero(fighting, ghost-fairy).
-super_effectiveness(fighting, dragon-normal).
-normal_effectiveness(fighting, dragon-fire).
-normal_effectiveness(fighting, dragon-water).
-normal_effectiveness(fighting, dragon-electric).
-normal_effectiveness(fighting, dragon-grass).
-super_effectiveness(fighting, dragon-ice).
-normal_effectiveness(fighting, dragon-fighting).
-weakness(fighting, dragon-poison).
-normal_effectiveness(fighting, dragon-ground).
-weakness(fighting, dragon-flying).
-weakness(fighting, dragon-psychic).
-weakness(fighting, dragon-bug).
-super_effectiveness(fighting, dragon-rock).
-dano_zero(fighting, dragon-ghost).
-super_effectiveness(fighting, dragon-dark).
-super_effectiveness(fighting, dragon-steel).
-weakness(fighting, dragon-fairy).
-super_vantagem(fighting, dark-normal).
-super_effectiveness(fighting, dark-fire).
-super_effectiveness(fighting, dark-water).
-super_effectiveness(fighting, dark-electric).
-super_effectiveness(fighting, dark-grass).
-super_vantagem(fighting, dark-ice).
-super_effectiveness(fighting, dark-fighting).
-normal_effectiveness(fighting, dark-poison).
-super_effectiveness(fighting, dark-ground).
-normal_effectiveness(fighting, dark-flying).
-normal_effectiveness(fighting, dark-psychic).
-normal_effectiveness(fighting, dark-bug).
-super_vantagem(fighting, dark-rock).
-dano_zero(fighting, dark-ghost).
-super_effectiveness(fighting, dark-dragon).
-super_vantagem(fighting, dark-steel).
-normal_effectiveness(fighting, dark-fairy).
-super_vantagem(fighting, steel-normal).
-super_effectiveness(fighting, steel-fire).
-super_effectiveness(fighting, steel-water).
-super_effectiveness(fighting, steel-electric).
-super_effectiveness(fighting, steel-grass).
-super_vantagem(fighting, steel-ice).
-super_effectiveness(fighting, steel-fighting).
-normal_effectiveness(fighting, steel-poison).
-super_effectiveness(fighting, steel-ground).
-normal_effectiveness(fighting, steel-flying).
-normal_effectiveness(fighting, steel-psychic).
-normal_effectiveness(fighting, steel-bug).
-super_vantagem(fighting, steel-rock).
-dano_zero(fighting, steel-ghost).
-super_effectiveness(fighting, steel-dragon).
-super_vantagem(fighting, steel-dark).
-normal_effectiveness(fighting, steel-fairy).
-normal_effectiveness(fighting, fairy-normal).
-weakness(fighting, fairy-fire).
-weakness(fighting, fairy-water).
-weakness(fighting, fairy-electric).
-weakness(fighting, fairy-grass).
-normal_effectiveness(fighting, fairy-ice).
-weakness(fighting, fairy-fighting).
-super_weakness(fighting, fairy-poison).
-weakness(fighting, fairy-ground).
-super_weakness(fighting, fairy-flying).
-super_weakness(fighting, fairy-psychic).
-super_weakness(fighting, fairy-bug).
-normal_effectiveness(fighting, fairy-rock).
-dano_zero(fighting, fairy-ghost).
-weakness(fighting, fairy-dragon).
-normal_effectiveness(fighting, fairy-dark).
-normal_effectiveness(fighting, fairy-steel).
-
-/* Effectiveness poison */
+normal_effectiveness(fighting,normal-poison).
+normal_effectiveness(fighting,normal-flying).
+normal_effectiveness(fighting,normal-psychic).
+normal_effectiveness(fighting,normal-bug).
+normal_effectiveness(fighting,normal-fairy).
+normal_effectiveness(fighting,fire-water).
+normal_effectiveness(fighting,fire-electric).
+normal_effectiveness(fighting,fire-grass).
+normal_effectiveness(fighting,fire-fighting).
+normal_effectiveness(fighting,fire-ground).
+normal_effectiveness(fighting,fire-dragon).
+normal_effectiveness(fighting,water-fire).
+normal_effectiveness(fighting,water-electric).
+normal_effectiveness(fighting,water-grass).
+normal_effectiveness(fighting,water-fighting).
+normal_effectiveness(fighting,water-ground).
+normal_effectiveness(fighting,water-dragon).
+normal_effectiveness(fighting,electric-fire).
+normal_effectiveness(fighting,electric-water).
+normal_effectiveness(fighting,electric-grass).
+normal_effectiveness(fighting,electric-fighting).
+normal_effectiveness(fighting,electric-ground).
+normal_effectiveness(fighting,electric-dragon).
+normal_effectiveness(fighting,grass-fire).
+normal_effectiveness(fighting,grass-water).
+normal_effectiveness(fighting,grass-electric).
+normal_effectiveness(fighting,grass-fighting).
+normal_effectiveness(fighting,grass-ground).
+normal_effectiveness(fighting,grass-dragon).
+normal_effectiveness(fighting,ice-poison).
+normal_effectiveness(fighting,ice-flying).
+normal_effectiveness(fighting,ice-psychic).
+normal_effectiveness(fighting,ice-bug).
+normal_effectiveness(fighting,ice-fairy).
+normal_effectiveness(fighting,fighting-fire).
+normal_effectiveness(fighting,fighting-water).
+normal_effectiveness(fighting,fighting-electric).
+normal_effectiveness(fighting,fighting-grass).
+normal_effectiveness(fighting,fighting-poison).
+normal_effectiveness(fighting,fighting-ground).
+normal_effectiveness(fighting,fighting-dragon).
+normal_effectiveness(fighting,poison-normal).
+normal_effectiveness(fighting,poison-ice).
+normal_effectiveness(fighting,poison-fighting).
+normal_effectiveness(fighting,poison-rock).
+normal_effectiveness(fighting,poison-dark).
+normal_effectiveness(fighting,poison-steel).
+normal_effectiveness(fighting,ground-fire).
+normal_effectiveness(fighting,ground-water).
+normal_effectiveness(fighting,ground-electric).
+normal_effectiveness(fighting,ground-grass).
+normal_effectiveness(fighting,ground-fighting).
+normal_effectiveness(fighting,ground-dragon).
+normal_effectiveness(fighting,flying-normal).
+normal_effectiveness(fighting,flying-ice).
+normal_effectiveness(fighting,flying-rock).
+normal_effectiveness(fighting,flying-dark).
+normal_effectiveness(fighting,flying-steel).
+normal_effectiveness(fighting,psychic-normal).
+normal_effectiveness(fighting,psychic-ice).
+normal_effectiveness(fighting,psychic-rock).
+normal_effectiveness(fighting,psychic-dark).
+normal_effectiveness(fighting,psychic-steel).
+normal_effectiveness(fighting,bug-normal).
+normal_effectiveness(fighting,bug-ice).
+normal_effectiveness(fighting,bug-rock).
+normal_effectiveness(fighting,bug-dark).
+normal_effectiveness(fighting,bug-steel).
+normal_effectiveness(fighting,rock-poison).
+normal_effectiveness(fighting,rock-flying).
+normal_effectiveness(fighting,rock-psychic).
+normal_effectiveness(fighting,rock-bug).
+normal_effectiveness(fighting,rock-fairy).
+normal_effectiveness(fighting,dragon-fire).
+normal_effectiveness(fighting,dragon-water).
+normal_effectiveness(fighting,dragon-electric).
+normal_effectiveness(fighting,dragon-grass).
+normal_effectiveness(fighting,dragon-fighting).
+normal_effectiveness(fighting,dragon-ground).
+normal_effectiveness(fighting,dark-poison).
+normal_effectiveness(fighting,dark-flying).
+normal_effectiveness(fighting,dark-psychic).
+normal_effectiveness(fighting,dark-bug).
+normal_effectiveness(fighting,dark-fairy).
+normal_effectiveness(fighting,steel-poison).
+normal_effectiveness(fighting,steel-flying).
+normal_effectiveness(fighting,steel-psychic).
+normal_effectiveness(fighting,steel-bug).
+normal_effectiveness(fighting,steel-fairy).
+normal_effectiveness(fighting,fairy-normal).
+normal_effectiveness(fighting,fairy-ice).
+normal_effectiveness(fighting,fairy-rock).
+normal_effectiveness(fighting,fairy-dark).
+normal_effectiveness(fighting,fairy-steel).
 normal_effectiveness(poison,normal).
 normal_effectiveness(poison,fire).
 normal_effectiveness(poison,water).
 normal_effectiveness(poison,electric).
-super_effectiveness(poison,grass).
 normal_effectiveness(poison,ice).
 normal_effectiveness(poison,fighting).
-weakness(poison,poison).
-weakness(poison,ground).
 normal_effectiveness(poison,flying).
 normal_effectiveness(poison,psychic).
 normal_effectiveness(poison,bug).
-weakness(poison,rock).
-weakness(poison,ghost).
 normal_effectiveness(poison,dragon).
 normal_effectiveness(poison,dark).
-dano_zero(poison,steel).
-super_effectiveness(poison,fairy).
 normal_effectiveness(poison,normal-fire).
-normal_effectiveness(poison, normal-water).
-normal_effectiveness(poison, normal-electric).
-super_effectiveness(poison, normal-grass).
-normal_effectiveness(poison, normal-ice).
-normal_effectiveness(poison, normal-fighting).
-weakness(poison, normal-poison).
-weakness(poison, normal-ground).
-normal_effectiveness(poison, normal-flying).
-normal_effectiveness(poison, normal-psychic).
-normal_effectiveness(poison, normal-bug).
-weakness(poison, normal-rock).
-weakness(poison, normal-ghost).
-normal_effectiveness(poison, normal-dragon).
-normal_effectiveness(poison, normal-dark).
-dano_zero(poison, normal-steel).
-super_effectiveness(poison, normal-fairy).
-normal_effectiveness(poison, fire-normal).
-normal_effectiveness(poison, fire-water).
-normal_effectiveness(poison, fire-electric).
-super_effectiveness(poison, fire-grass).
-normal_effectiveness(poison, fire-ice).
-normal_effectiveness(poison, fire-fighting).
-weakness(poison, fire-poison).
-weakness(poison, fire-ground).
-normal_effectiveness(poison, fire-flying).
-normal_effectiveness(poison, fire-psychic).
-normal_effectiveness(poison, fire-bug).
-weakness(poison, fire-rock).
-weakness(poison, fire-ghost).
-normal_effectiveness(poison, fire-dragon).
-normal_effectiveness(poison, fire-dark).
-dano_zero(poison, fire-steel).
-super_effectiveness(poison, fire-fairy).
-normal_effectiveness(poison, water-normal).
-normal_effectiveness(poison, water-fire).
-normal_effectiveness(poison, water-electric).
-super_effectiveness(poison, water-grass).
-normal_effectiveness(poison, water-ice).
-normal_effectiveness(poison, water-fighting).
-weakness(poison, water-poison).
-weakness(poison, water-ground).
-normal_effectiveness(poison, water-flying).
-normal_effectiveness(poison, water-psychic).
-normal_effectiveness(poison, water-bug).
-weakness(poison, water-rock).
-weakness(poison, water-ghost).
-normal_effectiveness(poison, water-dragon).
-normal_effectiveness(poison, water-dark).
-dano_zero(poison, water-steel).
-super_effectiveness(poison, water-fairy).
-normal_effectiveness(poison, electric-normal).
-normal_effectiveness(poison, electric-fire).
-normal_effectiveness(poison, electric-water).
-super_effectiveness(poison, electric-grass).
-normal_effectiveness(poison, electric-ice).
-normal_effectiveness(poison, electric-fighting).
-weakness(poison, electric-poison).
-weakness(poison, electric-ground).
-normal_effectiveness(poison, electric-flying).
-normal_effectiveness(poison, electric-psychic).
-normal_effectiveness(poison, electric-bug).
-weakness(poison, electric-rock).
-weakness(poison, electric-ghost).
-normal_effectiveness(poison, electric-dragon).
-normal_effectiveness(poison, electric-dark).
-dano_zero(poison, electric-steel).
-super_effectiveness(poison, electric-fairy).
-super_effectiveness(poison, grass-normal).
-super_effectiveness(poison, grass-fire).
-super_effectiveness(poison, grass-water).
-super_effectiveness(poison, grass-electric).
-super_effectiveness(poison, grass-ice).
-super_effectiveness(poison, grass-fighting).
-normal_effectiveness(poison, grass-poison).
-normal_effectiveness(poison, grass-ground).
-super_effectiveness(poison, grass-flying).
-super_effectiveness(poison, grass-psychic).
-super_effectiveness(poison, grass-bug).
-normal_effectiveness(poison, grass-rock).
-normal_effectiveness(poison, grass-ghost).
-super_effectiveness(poison, grass-dragon).
-super_effectiveness(poison, grass-dark).
-dano_zero(poison, grass-steel).
-super_vantagem(poison, grass-fairy).
-normal_effectiveness(poison, ice-normal).
-normal_effectiveness(poison, ice-fire).
-normal_effectiveness(poison, ice-water).
-normal_effectiveness(poison, ice-electric).
-super_effectiveness(poison, ice-grass).
-normal_effectiveness(poison, ice-fighting).
-weakness(poison, ice-poison).
-weakness(poison, ice-ground).
-normal_effectiveness(poison, ice-flying).
-normal_effectiveness(poison, ice-psychic).
-normal_effectiveness(poison, ice-bug).
-weakness(poison, ice-rock).
-weakness(poison, ice-ghost).
-normal_effectiveness(poison, ice-dragon).
-normal_effectiveness(poison, ice-dark).
-dano_zero(poison, ice-steel).
-super_effectiveness(poison, ice-fairy).
-normal_effectiveness(poison, fighting-normal).
-normal_effectiveness(poison, fighting-fire).
-normal_effectiveness(poison, fighting-water).
-normal_effectiveness(poison, fighting-electric).
-super_effectiveness(poison, fighting-grass).
-normal_effectiveness(poison, fighting-ice).
-weakness(poison, fighting-poison).
-weakness(poison, fighting-ground).
-normal_effectiveness(poison, fighting-flying).
-normal_effectiveness(poison, fighting-psychic).
-normal_effectiveness(poison, fighting-bug).
-weakness(poison, fighting-rock).
-weakness(poison, fighting-ghost).
-normal_effectiveness(poison, fighting-dragon).
-normal_effectiveness(poison, fighting-dark).
-dano_zero(poison, fighting-steel).
-super_effectiveness(poison, fighting-fairy).
-weakness(poison, poison-normal).
-weakness(poison, poison-fire).
-weakness(poison, poison-water).
-weakness(poison, poison-electric).
-normal_effectiveness(poison, poison-grass).
-weakness(poison, poison-ice).
-weakness(poison, poison-fighting).
-super_weakness(poison, poison-ground).
-weakness(poison, poison-flying).
-weakness(poison, poison-psychic).
-weakness(poison, poison-bug).
-super_weakness(poison, poison-rock).
-super_weakness(poison, poison-ghost).
-weakness(poison, poison-dragon).
-weakness(poison, poison-dark).
-dano_zero(poison, poison-steel).
-normal_effectiveness(poison, poison-fairy).
-weakness(poison, ground-normal).
-weakness(poison, ground-fire).
-weakness(poison, ground-water).
-weakness(poison, ground-electric).
-normal_effectiveness(poison, ground-grass).
-weakness(poison, ground-ice).
-weakness(poison, ground-fighting).
-super_weakness(poison, ground-poison).
-weakness(poison, ground-flying).
-weakness(poison, ground-psychic).
-weakness(poison, ground-bug).
-super_weakness(poison, ground-rock).
-super_weakness(poison, ground-ghost).
-weakness(poison, ground-dragon).
-weakness(poison, ground-dark).
-dano_zero(poison, ground-steel).
-normal_effectiveness(poison, ground-fairy).
-normal_effectiveness(poison, flying-normal).
-normal_effectiveness(poison, flying-fire).
-normal_effectiveness(poison, flying-water).
-normal_effectiveness(poison, flying-electric).
-super_effectiveness(poison, flying-grass).
-normal_effectiveness(poison, flying-ice).
-normal_effectiveness(poison, flying-fighting).
-weakness(poison, flying-poison).
-weakness(poison, flying-ground).
-normal_effectiveness(poison, flying-psychic).
-normal_effectiveness(poison, flying-bug).
-weakness(poison, flying-rock).
-weakness(poison, flying-ghost).
-normal_effectiveness(poison, flying-dragon).
-normal_effectiveness(poison, flying-dark).
-dano_zero(poison, flying-steel).
-super_effectiveness(poison, flying-fairy).
-normal_effectiveness(poison, psychic-normal).
-normal_effectiveness(poison, psychic-fire).
-normal_effectiveness(poison, psychic-water).
-normal_effectiveness(poison, psychic-electric).
-super_effectiveness(poison, psychic-grass).
-normal_effectiveness(poison, psychic-ice).
-normal_effectiveness(poison, psychic-fighting).
-weakness(poison, psychic-poison).
-weakness(poison, psychic-ground).
-normal_effectiveness(poison, psychic-flying).
-normal_effectiveness(poison, psychic-bug).
-weakness(poison, psychic-rock).
-weakness(poison, psychic-ghost).
-normal_effectiveness(poison, psychic-dragon).
-normal_effectiveness(poison, psychic-dark).
-dano_zero(poison, psychic-steel).
-super_effectiveness(poison, psychic-fairy).
-normal_effectiveness(poison, bug-normal).
-normal_effectiveness(poison, bug-fire).
-normal_effectiveness(poison, bug-water).
-normal_effectiveness(poison, bug-electric).
-super_effectiveness(poison, bug-grass).
-normal_effectiveness(poison, bug-ice).
-normal_effectiveness(poison, bug-fighting).
-weakness(poison, bug-poison).
-weakness(poison, bug-ground).
-normal_effectiveness(poison, bug-flying).
-normal_effectiveness(poison, bug-psychic).
-weakness(poison, bug-rock).
-weakness(poison, bug-ghost).
-normal_effectiveness(poison, bug-dragon).
-normal_effectiveness(poison, bug-dark).
-dano_zero(poison, bug-steel).
-super_effectiveness(poison, bug-fairy).
-weakness(poison, rock-normal).
-weakness(poison, rock-fire).
-weakness(poison, rock-water).
-weakness(poison, rock-electric).
-normal_effectiveness(poison, rock-grass).
-weakness(poison, rock-ice).
-weakness(poison, rock-fighting).
-super_weakness(poison, rock-poison).
-super_weakness(poison, rock-ground).
-weakness(poison, rock-flying).
-weakness(poison, rock-psychic).
-weakness(poison, rock-bug).
-super_weakness(poison, rock-ghost).
-weakness(poison, rock-dragon).
-weakness(poison, rock-dark).
-dano_zero(poison, rock-steel).
-normal_effectiveness(poison, rock-fairy).
-weakness(poison, ghost-normal).
-weakness(poison, ghost-fire).
-weakness(poison, ghost-water).
-weakness(poison, ghost-electric).
-normal_effectiveness(poison, ghost-grass).
-weakness(poison, ghost-ice).
-weakness(poison, ghost-fighting).
-super_weakness(poison, ghost-poison).
-super_weakness(poison, ghost-ground).
-weakness(poison, ghost-flying).
-weakness(poison, ghost-psychic).
-weakness(poison, ghost-bug).
-super_weakness(poison, ghost-rock).
-weakness(poison, ghost-dragon).
-weakness(poison, ghost-dark).
-dano_zero(poison, ghost-steel).
-normal_effectiveness(poison, ghost-fairy).
-normal_effectiveness(poison, dragon-normal).
-normal_effectiveness(poison, dragon-fire).
-normal_effectiveness(poison, dragon-water).
-normal_effectiveness(poison, dragon-electric).
-super_effectiveness(poison, dragon-grass).
-normal_effectiveness(poison, dragon-ice).
-normal_effectiveness(poison, dragon-fighting).
-weakness(poison, dragon-poison).
-weakness(poison, dragon-ground).
-normal_effectiveness(poison, dragon-flying).
-normal_effectiveness(poison, dragon-psychic).
-normal_effectiveness(poison, dragon-bug).
-weakness(poison, dragon-rock).
-weakness(poison, dragon-ghost).
-normal_effectiveness(poison, dragon-dark).
-dano_zero(poison, dragon-steel).
-super_effectiveness(poison, dragon-fairy).
-normal_effectiveness(poison, dark-normal).
-normal_effectiveness(poison, dark-fire).
-normal_effectiveness(poison, dark-water).
-normal_effectiveness(poison, dark-electric).
-super_effectiveness(poison, dark-grass).
-normal_effectiveness(poison, dark-ice).
-normal_effectiveness(poison, dark-fighting).
-weakness(poison, dark-poison).
-weakness(poison, dark-ground).
-normal_effectiveness(poison, dark-flying).
-normal_effectiveness(poison, dark-psychic).
-normal_effectiveness(poison, dark-bug).
-weakness(poison, dark-rock).
-weakness(poison, dark-ghost).
-normal_effectiveness(poison, dark-dragon).
-dano_zero(poison, dark-steel).
-super_effectiveness(poison, dark-fairy).
-dano_zero(poison, steel-normal).
-dano_zero(poison, steel-fire).
-dano_zero(poison, steel-water).
-dano_zero(poison, steel-electric).
-dano_zero(poison, steel-grass).
-dano_zero(poison, steel-ice).
-dano_zero(poison, steel-fighting).
-dano_zero(poison, steel-poison).
-dano_zero(poison, steel-ground).
-dano_zero(poison, steel-flying).
-dano_zero(poison, steel-psychic).
-dano_zero(poison, steel-bug).
-dano_zero(poison, steel-rock).
-dano_zero(poison, steel-ghost).
-dano_zero(poison, steel-dragon).
-dano_zero(poison, steel-dark).
-dano_zero(poison, steel-fairy).
-super_effectiveness(poison, fairy-normal).
-super_effectiveness(poison, fairy-fire).
-super_effectiveness(poison, fairy-water).
-super_effectiveness(poison, fairy-electric).
-super_vantagem(poison, fairy-grass).
-super_effectiveness(poison, fairy-ice).
-super_effectiveness(poison, fairy-fighting).
-normal_effectiveness(poison, fairy-poison).
-normal_effectiveness(poison, fairy-ground).
-super_effectiveness(poison, fairy-flying).
-super_effectiveness(poison, fairy-psychic).
-super_effectiveness(poison, fairy-bug).
-normal_effectiveness(poison, fairy-rock).
-normal_effectiveness(poison, fairy-ghost).
-super_effectiveness(poison, fairy-dragon).
-super_effectiveness(poison, fairy-dark).
-dano_zero(poison, fairy-steel).
-
-/* Effectiveness ground */
+normal_effectiveness(poison,normal-water).
+normal_effectiveness(poison,normal-electric).
+normal_effectiveness(poison,normal-ice).
+normal_effectiveness(poison,normal-fighting).
+normal_effectiveness(poison,normal-flying).
+normal_effectiveness(poison,normal-psychic).
+normal_effectiveness(poison,normal-bug).
+normal_effectiveness(poison,normal-dragon).
+normal_effectiveness(poison,normal-dark).
+normal_effectiveness(poison,fire-normal).
+normal_effectiveness(poison,fire-water).
+normal_effectiveness(poison,fire-electric).
+normal_effectiveness(poison,fire-ice).
+normal_effectiveness(poison,fire-fighting).
+normal_effectiveness(poison,fire-flying).
+normal_effectiveness(poison,fire-psychic).
+normal_effectiveness(poison,fire-bug).
+normal_effectiveness(poison,fire-dragon).
+normal_effectiveness(poison,fire-dark).
+normal_effectiveness(poison,water-normal).
+normal_effectiveness(poison,water-fire).
+normal_effectiveness(poison,water-electric).
+normal_effectiveness(poison,water-ice).
+normal_effectiveness(poison,water-fighting).
+normal_effectiveness(poison,water-flying).
+normal_effectiveness(poison,water-psychic).
+normal_effectiveness(poison,water-bug).
+normal_effectiveness(poison,water-dragon).
+normal_effectiveness(poison,water-dark).
+normal_effectiveness(poison,electric-normal).
+normal_effectiveness(poison,electric-fire).
+normal_effectiveness(poison,electric-water).
+normal_effectiveness(poison,electric-ice).
+normal_effectiveness(poison,electric-fighting).
+normal_effectiveness(poison,electric-flying).
+normal_effectiveness(poison,electric-psychic).
+normal_effectiveness(poison,electric-bug).
+normal_effectiveness(poison,electric-dragon).
+normal_effectiveness(poison,electric-dark).
+normal_effectiveness(poison,grass-poison).
+normal_effectiveness(poison,grass-ground).
+normal_effectiveness(poison,grass-rock).
+normal_effectiveness(poison,grass-ghost).
+normal_effectiveness(poison,ice-normal).
+normal_effectiveness(poison,ice-fire).
+normal_effectiveness(poison,ice-water).
+normal_effectiveness(poison,ice-electric).
+normal_effectiveness(poison,ice-fighting).
+normal_effectiveness(poison,ice-flying).
+normal_effectiveness(poison,ice-psychic).
+normal_effectiveness(poison,ice-bug).
+normal_effectiveness(poison,ice-dragon).
+normal_effectiveness(poison,ice-dark).
+normal_effectiveness(poison,fighting-normal).
+normal_effectiveness(poison,fighting-fire).
+normal_effectiveness(poison,fighting-water).
+normal_effectiveness(poison,fighting-electric).
+normal_effectiveness(poison,fighting-ice).
+normal_effectiveness(poison,fighting-flying).
+normal_effectiveness(poison,fighting-psychic).
+normal_effectiveness(poison,fighting-bug).
+normal_effectiveness(poison,fighting-dragon).
+normal_effectiveness(poison,fighting-dark).
+normal_effectiveness(poison,poison-grass).
+normal_effectiveness(poison,poison-fairy).
+normal_effectiveness(poison,ground-grass).
+normal_effectiveness(poison,ground-fairy).
+normal_effectiveness(poison,flying-normal).
+normal_effectiveness(poison,flying-fire).
+normal_effectiveness(poison,flying-water).
+normal_effectiveness(poison,flying-electric).
+normal_effectiveness(poison,flying-ice).
+normal_effectiveness(poison,flying-fighting).
+normal_effectiveness(poison,flying-psychic).
+normal_effectiveness(poison,flying-bug).
+normal_effectiveness(poison,flying-dragon).
+normal_effectiveness(poison,flying-dark).
+normal_effectiveness(poison,psychic-normal).
+normal_effectiveness(poison,psychic-fire).
+normal_effectiveness(poison,psychic-water).
+normal_effectiveness(poison,psychic-electric).
+normal_effectiveness(poison,psychic-ice).
+normal_effectiveness(poison,psychic-fighting).
+normal_effectiveness(poison,psychic-flying).
+normal_effectiveness(poison,psychic-bug).
+normal_effectiveness(poison,psychic-dragon).
+normal_effectiveness(poison,psychic-dark).
+normal_effectiveness(poison,bug-normal).
+normal_effectiveness(poison,bug-fire).
+normal_effectiveness(poison,bug-water).
+normal_effectiveness(poison,bug-electric).
+normal_effectiveness(poison,bug-ice).
+normal_effectiveness(poison,bug-fighting).
+normal_effectiveness(poison,bug-flying).
+normal_effectiveness(poison,bug-psychic).
+normal_effectiveness(poison,bug-dragon).
+normal_effectiveness(poison,bug-dark).
+normal_effectiveness(poison,rock-grass).
+normal_effectiveness(poison,rock-fairy).
+normal_effectiveness(poison,ghost-grass).
+normal_effectiveness(poison,ghost-fairy).
+normal_effectiveness(poison,dragon-normal).
+normal_effectiveness(poison,dragon-fire).
+normal_effectiveness(poison,dragon-water).
+normal_effectiveness(poison,dragon-electric).
+normal_effectiveness(poison,dragon-ice).
+normal_effectiveness(poison,dragon-fighting).
+normal_effectiveness(poison,dragon-flying).
+normal_effectiveness(poison,dragon-psychic).
+normal_effectiveness(poison,dragon-bug).
+normal_effectiveness(poison,dragon-dark).
+normal_effectiveness(poison,dark-normal).
+normal_effectiveness(poison,dark-fire).
+normal_effectiveness(poison,dark-water).
+normal_effectiveness(poison,dark-electric).
+normal_effectiveness(poison,dark-ice).
+normal_effectiveness(poison,dark-fighting).
+normal_effectiveness(poison,dark-flying).
+normal_effectiveness(poison,dark-psychic).
+normal_effectiveness(poison,dark-bug).
+normal_effectiveness(poison,dark-dragon).
+normal_effectiveness(poison,fairy-poison).
+normal_effectiveness(poison,fairy-ground).
+normal_effectiveness(poison,fairy-rock).
+normal_effectiveness(poison,fairy-ghost).
 normal_effectiveness(ground,normal).
-super_effectiveness(ground,fire).
 normal_effectiveness(ground,water).
-super_effectiveness(ground,electric).
-weakness(ground,grass).
 normal_effectiveness(ground,ice).
 normal_effectiveness(ground,fighting).
-super_effectiveness(ground,poison).
 normal_effectiveness(ground,ground).
-dano_zero(ground,flying).
 normal_effectiveness(ground,psychic).
-weakness(ground,bug).
-super_effectiveness(ground,rock).
 normal_effectiveness(ground,ghost).
 normal_effectiveness(ground,dragon).
 normal_effectiveness(ground,dark).
-super_effectiveness(ground,steel).
 normal_effectiveness(ground,fairy).
-super_effectiveness(ground,normal-fire).
-normal_effectiveness(ground, normal-water).
-super_effectiveness(ground, normal-electric).
-weakness(ground, normal-grass).
-normal_effectiveness(ground, normal-ice).
-normal_effectiveness(ground, normal-fighting).
-super_effectiveness(ground, normal-poison).
-normal_effectiveness(ground, normal-ground).
-dano_zero(ground, normal-flying).
-normal_effectiveness(ground, normal-psychic).
-weakness(ground, normal-bug).
-super_effectiveness(ground, normal-rock).
-normal_effectiveness(ground, normal-ghost).
-normal_effectiveness(ground, normal-dragon).
-normal_effectiveness(ground, normal-dark).
-super_effectiveness(ground, normal-steel).
-normal_effectiveness(ground, normal-fairy).
-super_effectiveness(ground, fire-normal).
-super_effectiveness(ground, fire-water).
-super_vantagem(ground, fire-electric).
-normal_effectiveness(ground, fire-grass).
-super_effectiveness(ground, fire-ice).
-super_effectiveness(ground, fire-fighting).
-super_vantagem(ground, fire-poison).
-super_effectiveness(ground, fire-ground).
-dano_zero(ground, fire-flying).
-super_effectiveness(ground, fire-psychic).
-normal_effectiveness(ground, fire-bug).
-super_vantagem(ground, fire-rock).
-super_effectiveness(ground, fire-ghost).
-super_effectiveness(ground, fire-dragon).
-super_effectiveness(ground, fire-dark).
-super_vantagem(ground, fire-steel).
-super_effectiveness(ground, fire-fairy).
-normal_effectiveness(ground, water-normal).
-super_effectiveness(ground, water-fire).
-super_effectiveness(ground, water-electric).
-weakness(ground, water-grass).
-normal_effectiveness(ground, water-ice).
-normal_effectiveness(ground, water-fighting).
-super_effectiveness(ground, water-poison).
-normal_effectiveness(ground, water-ground).
-dano_zero(ground, water-flying).
-normal_effectiveness(ground, water-psychic).
-weakness(ground, water-bug).
-super_effectiveness(ground, water-rock).
-normal_effectiveness(ground, water-ghost).
-normal_effectiveness(ground, water-dragon).
-normal_effectiveness(ground, water-dark).
-super_effectiveness(ground, water-steel).
-normal_effectiveness(ground, water-fairy).
-super_effectiveness(ground, electric-normal).
-super_vantagem(ground, electric-fire).
-super_effectiveness(ground, electric-water).
-normal_effectiveness(ground, electric-grass).
-super_effectiveness(ground, electric-ice).
-super_effectiveness(ground, electric-fighting).
-super_vantagem(ground, electric-poison).
-super_effectiveness(ground, electric-ground).
-dano_zero(ground, electric-flying).
-super_effectiveness(ground, electric-psychic).
-normal_effectiveness(ground, electric-bug).
-super_vantagem(ground, electric-rock).
-super_effectiveness(ground, electric-ghost).
-super_effectiveness(ground, electric-dragon).
-super_effectiveness(ground, electric-dark).
-super_vantagem(ground, electric-steel).
-super_effectiveness(ground, electric-fairy).
-weakness(ground, grass-normal).
-normal_effectiveness(ground, grass-fire).
-weakness(ground, grass-water).
-normal_effectiveness(ground, grass-electric).
-weakness(ground, grass-ice).
-weakness(ground, grass-fighting).
-normal_effectiveness(ground, grass-poison).
-weakness(ground, grass-ground).
-dano_zero(ground, grass-flying).
-weakness(ground, grass-psychic).
-super_weakness(ground, grass-bug).
-normal_effectiveness(ground, grass-rock).
-weakness(ground, grass-ghost).
-weakness(ground, grass-dragon).
-weakness(ground, grass-dark).
-normal_effectiveness(ground, grass-steel).
-weakness(ground, grass-fairy).
-normal_effectiveness(ground, ice-normal).
-super_effectiveness(ground, ice-fire).
-normal_effectiveness(ground, ice-water).
-super_effectiveness(ground, ice-electric).
-weakness(ground, ice-grass).
-normal_effectiveness(ground, ice-fighting).
-super_effectiveness(ground, ice-poison).
-normal_effectiveness(ground, ice-ground).
-dano_zero(ground, ice-flying).
-normal_effectiveness(ground, ice-psychic).
-weakness(ground, ice-bug).
-super_effectiveness(ground, ice-rock).
-normal_effectiveness(ground, ice-ghost).
-normal_effectiveness(ground, ice-dragon).
-normal_effectiveness(ground, ice-dark).
-super_effectiveness(ground, ice-steel).
-normal_effectiveness(ground, ice-fairy).
-normal_effectiveness(ground, fighting-normal).
-super_effectiveness(ground, fighting-fire).
-normal_effectiveness(ground, fighting-water).
-super_effectiveness(ground, fighting-electric).
-weakness(ground, fighting-grass).
-normal_effectiveness(ground, fighting-ice).
-super_effectiveness(ground, fighting-poison).
-normal_effectiveness(ground, fighting-ground).
-dano_zero(ground, fighting-flying).
-normal_effectiveness(ground, fighting-psychic).
-weakness(ground, fighting-bug).
-super_effectiveness(ground, fighting-rock).
-normal_effectiveness(ground, fighting-ghost).
-normal_effectiveness(ground, fighting-dragon).
-normal_effectiveness(ground, fighting-dark).
-super_effectiveness(ground, fighting-steel).
-normal_effectiveness(ground, fighting-fairy).
-super_effectiveness(ground, poison-normal).
-super_vantagem(ground, poison-fire).
-super_effectiveness(ground, poison-water).
-super_vantagem(ground, poison-electric).
-normal_effectiveness(ground, poison-grass).
-super_effectiveness(ground, poison-ice).
-super_effectiveness(ground, poison-fighting).
-super_effectiveness(ground, poison-ground).
-dano_zero(ground, poison-flying).
-super_effectiveness(ground, poison-psychic).
-normal_effectiveness(ground, poison-bug).
-super_vantagem(ground, poison-rock).
-super_effectiveness(ground, poison-ghost).
-super_effectiveness(ground, poison-dragon).
-super_effectiveness(ground, poison-dark).
-super_vantagem(ground, poison-steel).
-super_effectiveness(ground, poison-fairy).
-normal_effectiveness(ground, ground-normal).
-super_effectiveness(ground, ground-fire).
-normal_effectiveness(ground, ground-water).
-super_effectiveness(ground, ground-electric).
-weakness(ground, ground-grass).
-normal_effectiveness(ground, ground-ice).
-normal_effectiveness(ground, ground-fighting).
-super_effectiveness(ground, ground-poison).
-dano_zero(ground, ground-flying).
-normal_effectiveness(ground, ground-psychic).
-weakness(ground, ground-bug).
-super_effectiveness(ground, ground-rock).
-normal_effectiveness(ground, ground-ghost).
-normal_effectiveness(ground, ground-dragon).
-normal_effectiveness(ground, ground-dark).
-super_effectiveness(ground, ground-steel).
-normal_effectiveness(ground, ground-fairy).
-dano_zero(ground, flying-normal).
-dano_zero(ground, flying-fire).
-dano_zero(ground, flying-water).
-dano_zero(ground, flying-electric).
-dano_zero(ground, flying-grass).
-dano_zero(ground, flying-ice).
-dano_zero(ground, flying-fighting).
-dano_zero(ground, flying-poison).
-dano_zero(ground, flying-ground).
-dano_zero(ground, flying-psychic).
-dano_zero(ground, flying-bug).
-dano_zero(ground, flying-rock).
-dano_zero(ground, flying-ghost).
-dano_zero(ground, flying-dragon).
-dano_zero(ground, flying-dark).
-dano_zero(ground, flying-steel).
-dano_zero(ground, flying-fairy).
-normal_effectiveness(ground, psychic-normal).
-super_effectiveness(ground, psychic-fire).
-normal_effectiveness(ground, psychic-water).
-super_effectiveness(ground, psychic-electric).
-weakness(ground, psychic-grass).
-normal_effectiveness(ground, psychic-ice).
-normal_effectiveness(ground, psychic-fighting).
-super_effectiveness(ground, psychic-poison).
-normal_effectiveness(ground, psychic-ground).
-dano_zero(ground, psychic-flying).
-weakness(ground, psychic-bug).
-super_effectiveness(ground, psychic-rock).
-normal_effectiveness(ground, psychic-ghost).
-normal_effectiveness(ground, psychic-dragon).
-normal_effectiveness(ground, psychic-dark).
-super_effectiveness(ground, psychic-steel).
-normal_effectiveness(ground, psychic-fairy).
-weakness(ground, bug-normal).
-normal_effectiveness(ground, bug-fire).
-weakness(ground, bug-water).
-normal_effectiveness(ground, bug-electric).
-super_weakness(ground, bug-grass).
-weakness(ground, bug-ice).
-weakness(ground, bug-fighting).
-normal_effectiveness(ground, bug-poison).
-weakness(ground, bug-ground).
-dano_zero(ground, bug-flying).
-weakness(ground, bug-psychic).
-normal_effectiveness(ground, bug-rock).
-weakness(ground, bug-ghost).
-weakness(ground, bug-dragon).
-weakness(ground, bug-dark).
-normal_effectiveness(ground, bug-steel).
-weakness(ground, bug-fairy).
-super_effectiveness(ground, rock-normal).
-super_vantagem(ground, rock-fire).
-super_effectiveness(ground, rock-water).
-super_vantagem(ground, rock-electric).
-normal_effectiveness(ground, rock-grass).
-super_effectiveness(ground, rock-ice).
-super_effectiveness(ground, rock-fighting).
-super_vantagem(ground, rock-poison).
-super_effectiveness(ground, rock-ground).
-dano_zero(ground, rock-flying).
-super_effectiveness(ground, rock-psychic).
-normal_effectiveness(ground, rock-bug).
-super_effectiveness(ground, rock-ghost).
-super_effectiveness(ground, rock-dragon).
-super_effectiveness(ground, rock-dark).
-super_vantagem(ground, rock-steel).
-super_effectiveness(ground, rock-fairy).
-normal_effectiveness(ground, ghost-normal).
-super_effectiveness(ground, ghost-fire).
-normal_effectiveness(ground, ghost-water).
-super_effectiveness(ground, ghost-electric).
-weakness(ground, ghost-grass).
-normal_effectiveness(ground, ghost-ice).
-normal_effectiveness(ground, ghost-fighting).
-super_effectiveness(ground, ghost-poison).
-normal_effectiveness(ground, ghost-ground).
-dano_zero(ground, ghost-flying).
-normal_effectiveness(ground, ghost-psychic).
-weakness(ground, ghost-bug).
-super_effectiveness(ground, ghost-rock).
-normal_effectiveness(ground, ghost-dragon).
-normal_effectiveness(ground, ghost-dark).
-super_effectiveness(ground, ghost-steel).
-normal_effectiveness(ground, ghost-fairy).
-normal_effectiveness(ground, dragon-normal).
-super_effectiveness(ground, dragon-fire).
-normal_effectiveness(ground, dragon-water).
-super_effectiveness(ground, dragon-electric).
-weakness(ground, dragon-grass).
-normal_effectiveness(ground, dragon-ice).
-normal_effectiveness(ground, dragon-fighting).
-super_effectiveness(ground, dragon-poison).
-normal_effectiveness(ground, dragon-ground).
-dano_zero(ground, dragon-flying).
-normal_effectiveness(ground, dragon-psychic).
-weakness(ground, dragon-bug).
-super_effectiveness(ground, dragon-rock).
-normal_effectiveness(ground, dragon-ghost).
-normal_effectiveness(ground, dragon-dark).
-super_effectiveness(ground, dragon-steel).
-normal_effectiveness(ground, dragon-fairy).
-normal_effectiveness(ground, dark-normal).
-super_effectiveness(ground, dark-fire).
-normal_effectiveness(ground, dark-water).
-super_effectiveness(ground, dark-electric).
-weakness(ground, dark-grass).
-normal_effectiveness(ground, dark-ice).
-normal_effectiveness(ground, dark-fighting).
-super_effectiveness(ground, dark-poison).
-normal_effectiveness(ground, dark-ground).
-dano_zero(ground, dark-flying).
-normal_effectiveness(ground, dark-psychic).
-weakness(ground, dark-bug).
-super_effectiveness(ground, dark-rock).
-normal_effectiveness(ground, dark-ghost).
-normal_effectiveness(ground, dark-dragon).
-super_effectiveness(ground, dark-steel).
-normal_effectiveness(ground, dark-fairy).
-super_effectiveness(ground, steel-normal).
-super_vantagem(ground, steel-fire).
-super_effectiveness(ground, steel-water).
-super_vantagem(ground, steel-electric).
-normal_effectiveness(ground, steel-grass).
-super_effectiveness(ground, steel-ice).
-super_effectiveness(ground, steel-fighting).
-super_vantagem(ground, steel-poison).
-super_effectiveness(ground, steel-ground).
-dano_zero(ground, steel-flying).
-super_effectiveness(ground, steel-psychic).
-normal_effectiveness(ground, steel-bug).
-super_vantagem(ground, steel-rock).
-super_effectiveness(ground, steel-ghost).
-super_effectiveness(ground, steel-dragon).
-super_effectiveness(ground, steel-dark).
-super_effectiveness(ground, steel-fairy).
-normal_effectiveness(ground, fairy-normal).
-super_effectiveness(ground, fairy-fire).
-normal_effectiveness(ground, fairy-water).
-super_effectiveness(ground, fairy-electric).
-weakness(ground, fairy-grass).
-normal_effectiveness(ground, fairy-ice).
-normal_effectiveness(ground, fairy-fighting).
-super_effectiveness(ground, fairy-poison).
-normal_effectiveness(ground, fairy-ground).
-dano_zero(ground, fairy-flying).
-normal_effectiveness(ground, fairy-psychic).
-weakness(ground, fairy-bug).
-super_effectiveness(ground, fairy-rock).
-normal_effectiveness(ground, fairy-ghost).
-normal_effectiveness(ground, fairy-dragon).
-normal_effectiveness(ground, fairy-dark).
-super_effectiveness(ground, fairy-steel).
-
-/* Effectiveness flying */
+normal_effectiveness(ground,normal-water).
+normal_effectiveness(ground,normal-ice).
+normal_effectiveness(ground,normal-fighting).
+normal_effectiveness(ground,normal-ground).
+normal_effectiveness(ground,normal-psychic).
+normal_effectiveness(ground,normal-ghost).
+normal_effectiveness(ground,normal-dragon).
+normal_effectiveness(ground,normal-dark).
+normal_effectiveness(ground,normal-fairy).
+normal_effectiveness(ground,fire-grass).
+normal_effectiveness(ground,fire-bug).
+normal_effectiveness(ground,water-normal).
+normal_effectiveness(ground,water-ice).
+normal_effectiveness(ground,water-fighting).
+normal_effectiveness(ground,water-ground).
+normal_effectiveness(ground,water-psychic).
+normal_effectiveness(ground,water-ghost).
+normal_effectiveness(ground,water-dragon).
+normal_effectiveness(ground,water-dark).
+normal_effectiveness(ground,water-fairy).
+normal_effectiveness(ground,electric-grass).
+normal_effectiveness(ground,electric-bug).
+normal_effectiveness(ground,grass-fire).
+normal_effectiveness(ground,grass-electric).
+normal_effectiveness(ground,grass-poison).
+normal_effectiveness(ground,grass-rock).
+normal_effectiveness(ground,grass-steel).
+normal_effectiveness(ground,ice-normal).
+normal_effectiveness(ground,ice-water).
+normal_effectiveness(ground,ice-fighting).
+normal_effectiveness(ground,ice-ground).
+normal_effectiveness(ground,ice-psychic).
+normal_effectiveness(ground,ice-ghost).
+normal_effectiveness(ground,ice-dragon).
+normal_effectiveness(ground,ice-dark).
+normal_effectiveness(ground,ice-fairy).
+normal_effectiveness(ground,fighting-normal).
+normal_effectiveness(ground,fighting-water).
+normal_effectiveness(ground,fighting-ice).
+normal_effectiveness(ground,fighting-ground).
+normal_effectiveness(ground,fighting-psychic).
+normal_effectiveness(ground,fighting-ghost).
+normal_effectiveness(ground,fighting-dragon).
+normal_effectiveness(ground,fighting-dark).
+normal_effectiveness(ground,fighting-fairy).
+normal_effectiveness(ground,poison-grass).
+normal_effectiveness(ground,poison-bug).
+normal_effectiveness(ground,ground-normal).
+normal_effectiveness(ground,ground-water).
+normal_effectiveness(ground,ground-ice).
+normal_effectiveness(ground,ground-fighting).
+normal_effectiveness(ground,ground-psychic).
+normal_effectiveness(ground,ground-ghost).
+normal_effectiveness(ground,ground-dragon).
+normal_effectiveness(ground,ground-dark).
+normal_effectiveness(ground,ground-fairy).
+normal_effectiveness(ground,psychic-normal).
+normal_effectiveness(ground,psychic-water).
+normal_effectiveness(ground,psychic-ice).
+normal_effectiveness(ground,psychic-fighting).
+normal_effectiveness(ground,psychic-ground).
+normal_effectiveness(ground,psychic-ghost).
+normal_effectiveness(ground,psychic-dragon).
+normal_effectiveness(ground,psychic-dark).
+normal_effectiveness(ground,psychic-fairy).
+normal_effectiveness(ground,bug-fire).
+normal_effectiveness(ground,bug-electric).
+normal_effectiveness(ground,bug-poison).
+normal_effectiveness(ground,bug-rock).
+normal_effectiveness(ground,bug-steel).
+normal_effectiveness(ground,rock-grass).
+normal_effectiveness(ground,rock-bug).
+normal_effectiveness(ground,ghost-normal).
+normal_effectiveness(ground,ghost-water).
+normal_effectiveness(ground,ghost-ice).
+normal_effectiveness(ground,ghost-fighting).
+normal_effectiveness(ground,ghost-ground).
+normal_effectiveness(ground,ghost-psychic).
+normal_effectiveness(ground,ghost-dragon).
+normal_effectiveness(ground,ghost-dark).
+normal_effectiveness(ground,ghost-fairy).
+normal_effectiveness(ground,dragon-normal).
+normal_effectiveness(ground,dragon-water).
+normal_effectiveness(ground,dragon-ice).
+normal_effectiveness(ground,dragon-fighting).
+normal_effectiveness(ground,dragon-ground).
+normal_effectiveness(ground,dragon-psychic).
+normal_effectiveness(ground,dragon-ghost).
+normal_effectiveness(ground,dragon-dark).
+normal_effectiveness(ground,dragon-fairy).
+normal_effectiveness(ground,dark-normal).
+normal_effectiveness(ground,dark-water).
+normal_effectiveness(ground,dark-ice).
+normal_effectiveness(ground,dark-fighting).
+normal_effectiveness(ground,dark-ground).
+normal_effectiveness(ground,dark-psychic).
+normal_effectiveness(ground,dark-ghost).
+normal_effectiveness(ground,dark-dragon).
+normal_effectiveness(ground,dark-fairy).
+normal_effectiveness(ground,steel-grass).
+normal_effectiveness(ground,steel-bug).
+normal_effectiveness(ground,fairy-normal).
+normal_effectiveness(ground,fairy-water).
+normal_effectiveness(ground,fairy-ice).
+normal_effectiveness(ground,fairy-fighting).
+normal_effectiveness(ground,fairy-ground).
+normal_effectiveness(ground,fairy-psychic).
+normal_effectiveness(ground,fairy-ghost).
+normal_effectiveness(ground,fairy-dragon).
+normal_effectiveness(ground,fairy-dark).
 normal_effectiveness(flying,normal).
 normal_effectiveness(flying,fire).
 normal_effectiveness(flying,water).
-weakness(flying,electric).
-super_effectiveness(flying,grass).
 normal_effectiveness(flying,ice).
-super_effectiveness(flying,fighting).
 normal_effectiveness(flying,poison).
 normal_effectiveness(flying,ground).
 normal_effectiveness(flying,flying).
 normal_effectiveness(flying,psychic).
-super_effectiveness(flying,bug).
-weakness(flying,rock).
 normal_effectiveness(flying,ghost).
 normal_effectiveness(flying,dragon).
 normal_effectiveness(flying,dark).
-weakness(flying,steel).
 normal_effectiveness(flying,fairy).
 normal_effectiveness(flying,normal-fire).
-normal_effectiveness(flying, normal-water).
-weakness(flying, normal-electric).
-super_effectiveness(flying, normal-grass).
-normal_effectiveness(flying, normal-ice).
-super_effectiveness(flying, normal-fighting).
-normal_effectiveness(flying, normal-poison).
-normal_effectiveness(flying, normal-ground).
-normal_effectiveness(flying, normal-flying).
-normal_effectiveness(flying, normal-psychic).
-super_effectiveness(flying, normal-bug).
-weakness(flying, normal-rock).
-normal_effectiveness(flying, normal-ghost).
-normal_effectiveness(flying, normal-dragon).
-normal_effectiveness(flying, normal-dark).
-weakness(flying, normal-steel).
-normal_effectiveness(flying, normal-fairy).
-normal_effectiveness(flying, fire-normal).
-normal_effectiveness(flying, fire-water).
-weakness(flying, fire-electric).
-super_effectiveness(flying, fire-grass).
-normal_effectiveness(flying, fire-ice).
-super_effectiveness(flying, fire-fighting).
-normal_effectiveness(flying, fire-poison).
-normal_effectiveness(flying, fire-ground).
-normal_effectiveness(flying, fire-flying).
-normal_effectiveness(flying, fire-psychic).
-super_effectiveness(flying, fire-bug).
-weakness(flying, fire-rock).
-normal_effectiveness(flying, fire-ghost).
-normal_effectiveness(flying, fire-dragon).
-normal_effectiveness(flying, fire-dark).
-weakness(flying, fire-steel).
-normal_effectiveness(flying, fire-fairy).
-normal_effectiveness(flying, water-normal).
-normal_effectiveness(flying, water-fire).
-weakness(flying, water-electric).
-super_effectiveness(flying, water-grass).
-normal_effectiveness(flying, water-ice).
-super_effectiveness(flying, water-fighting).
-normal_effectiveness(flying, water-poison).
-normal_effectiveness(flying, water-ground).
-normal_effectiveness(flying, water-flying).
-normal_effectiveness(flying, water-psychic).
-super_effectiveness(flying, water-bug).
-weakness(flying, water-rock).
-normal_effectiveness(flying, water-ghost).
-normal_effectiveness(flying, water-dragon).
-normal_effectiveness(flying, water-dark).
-weakness(flying, water-steel).
-normal_effectiveness(flying, water-fairy).
-weakness(flying, electric-normal).
-weakness(flying, electric-fire).
-weakness(flying, electric-water).
-normal_effectiveness(flying, electric-grass).
-weakness(flying, electric-ice).
-normal_effectiveness(flying, electric-fighting).
-weakness(flying, electric-poison).
-weakness(flying, electric-ground).
-weakness(flying, electric-flying).
-weakness(flying, electric-psychic).
-normal_effectiveness(flying, electric-bug).
-super_weakness(flying, electric-rock).
-weakness(flying, electric-ghost).
-weakness(flying, electric-dragon).
-weakness(flying, electric-dark).
-super_weakness(flying, electric-steel).
-weakness(flying, electric-fairy).
-super_effectiveness(flying, grass-normal).
-super_effectiveness(flying, grass-fire).
-super_effectiveness(flying, grass-water).
-normal_effectiveness(flying, grass-electric).
-super_effectiveness(flying, grass-ice).
-super_vantagem(flying, grass-fighting).
-super_effectiveness(flying, grass-poison).
-super_effectiveness(flying, grass-ground).
-super_effectiveness(flying, grass-flying).
-super_effectiveness(flying, grass-psychic).
-super_vantagem(flying, grass-bug).
-normal_effectiveness(flying, grass-rock).
-super_effectiveness(flying, grass-ghost).
-super_effectiveness(flying, grass-dragon).
-super_effectiveness(flying, grass-dark).
-normal_effectiveness(flying, grass-steel).
-super_effectiveness(flying, grass-fairy).
-normal_effectiveness(flying, ice-normal).
-normal_effectiveness(flying, ice-fire).
-normal_effectiveness(flying, ice-water).
-weakness(flying, ice-electric).
-super_effectiveness(flying, ice-grass).
-super_effectiveness(flying, ice-fighting).
-normal_effectiveness(flying, ice-poison).
-normal_effectiveness(flying, ice-ground).
-normal_effectiveness(flying, ice-flying).
-normal_effectiveness(flying, ice-psychic).
-super_effectiveness(flying, ice-bug).
-weakness(flying, ice-rock).
-normal_effectiveness(flying, ice-ghost).
-normal_effectiveness(flying, ice-dragon).
-normal_effectiveness(flying, ice-dark).
-weakness(flying, ice-steel).
-normal_effectiveness(flying, ice-fairy).
-super_effectiveness(flying, fighting-normal).
-super_effectiveness(flying, fighting-fire).
-super_effectiveness(flying, fighting-water).
-normal_effectiveness(flying, fighting-electric).
-super_vantagem(flying, fighting-grass).
-super_effectiveness(flying, fighting-ice).
-normal_effectiveness(flying, fighting-poison).
-super_effectiveness(flying, fighting-ground).
-super_effectiveness(flying, fighting-flying).
-super_effectiveness(flying, fighting-psychic).
-super_vantagem(flying, fighting-bug).
-normal_effectiveness(flying, fighting-rock).
-super_effectiveness(flying, fighting-ghost).
-super_effectiveness(flying, fighting-dragon).
-super_effectiveness(flying, fighting-dark).
-normal_effectiveness(flying, fighting-steel).
-super_effectiveness(flying, fighting-fairy).
-normal_effectiveness(flying, poison-normal).
-normal_effectiveness(flying, poison-fire).
-normal_effectiveness(flying, poison-water).
-weakness(flying, poison-electric).
-super_effectiveness(flying, poison-grass).
-normal_effectiveness(flying, poison-ice).
-normal_effectiveness(flying, poison-fighting).
-normal_effectiveness(flying, poison-ground).
-normal_effectiveness(flying, poison-flying).
-normal_effectiveness(flying, poison-psychic).
-super_effectiveness(flying, poison-bug).
-weakness(flying, poison-rock).
-normal_effectiveness(flying, poison-ghost).
-normal_effectiveness(flying, poison-dragon).
-normal_effectiveness(flying, poison-dark).
-weakness(flying, poison-steel).
-normal_effectiveness(flying, poison-fairy).
-normal_effectiveness(flying, ground-normal).
-normal_effectiveness(flying, ground-fire).
-normal_effectiveness(flying, ground-water).
-weakness(flying, ground-electric).
-super_effectiveness(flying, ground-grass).
-normal_effectiveness(flying, ground-ice).
-super_effectiveness(flying, ground-fighting).
-normal_effectiveness(flying, ground-poison).
-normal_effectiveness(flying, ground-flying).
-normal_effectiveness(flying, ground-psychic).
-super_effectiveness(flying, ground-bug).
-weakness(flying, ground-rock).
-normal_effectiveness(flying, ground-ghost).
-normal_effectiveness(flying, ground-dragon).
-normal_effectiveness(flying, ground-dark).
-weakness(flying, ground-steel).
-normal_effectiveness(flying, ground-fairy).
-normal_effectiveness(flying, flying-normal).
-normal_effectiveness(flying, flying-fire).
-normal_effectiveness(flying, flying-water).
-weakness(flying, flying-electric).
-super_effectiveness(flying, flying-grass).
-normal_effectiveness(flying, flying-ice).
-super_effectiveness(flying, flying-fighting).
-normal_effectiveness(flying, flying-poison).
-normal_effectiveness(flying, flying-ground).
-normal_effectiveness(flying, flying-psychic).
-super_effectiveness(flying, flying-bug).
-weakness(flying, flying-rock).
-normal_effectiveness(flying, flying-ghost).
-normal_effectiveness(flying, flying-dragon).
-normal_effectiveness(flying, flying-dark).
-weakness(flying, flying-steel).
-normal_effectiveness(flying, flying-fairy).
-normal_effectiveness(flying, psychic-normal).
-normal_effectiveness(flying, psychic-fire).
-normal_effectiveness(flying, psychic-water).
-weakness(flying, psychic-electric).
-super_effectiveness(flying, psychic-grass).
-normal_effectiveness(flying, psychic-ice).
-super_effectiveness(flying, psychic-fighting).
-normal_effectiveness(flying, psychic-poison).
-normal_effectiveness(flying, psychic-ground).
-normal_effectiveness(flying, psychic-flying).
-super_effectiveness(flying, psychic-bug).
-weakness(flying, psychic-rock).
-normal_effectiveness(flying, psychic-ghost).
-normal_effectiveness(flying, psychic-dragon).
-normal_effectiveness(flying, psychic-dark).
-weakness(flying, psychic-steel).
-normal_effectiveness(flying, psychic-fairy).
-super_effectiveness(flying, bug-normal).
-super_effectiveness(flying, bug-fire).
-super_effectiveness(flying, bug-water).
-normal_effectiveness(flying, bug-electric).
-super_vantagem(flying, bug-grass).
-super_effectiveness(flying, bug-ice).
-super_vantagem(flying, bug-fighting).
-super_effectiveness(flying, bug-poison).
-super_effectiveness(flying, bug-ground).
-super_effectiveness(flying, bug-flying).
-super_effectiveness(flying, bug-psychic).
-normal_effectiveness(flying, bug-rock).
-super_effectiveness(flying, bug-ghost).
-super_effectiveness(flying, bug-dragon).
-super_effectiveness(flying, bug-dark).
-normal_effectiveness(flying, bug-steel).
-super_effectiveness(flying, bug-fairy).
-weakness(flying, rock-normal).
-weakness(flying, rock-fire).
-weakness(flying, rock-water).
-super_weakness(flying, rock-electric).
-normal_effectiveness(flying, rock-grass).
-weakness(flying, rock-ice).
-normal_effectiveness(flying, rock-fighting).
-weakness(flying, rock-poison).
-weakness(flying, rock-ground).
-weakness(flying, rock-flying).
-weakness(flying, rock-psychic).
-normal_effectiveness(flying, rock-bug).
-weakness(flying, rock-ghost).
-weakness(flying, rock-dragon).
-weakness(flying, rock-dark).
-super_weakness(flying, rock-steel).
-weakness(flying, rock-fairy).
-normal_effectiveness(flying, ghost-normal).
-normal_effectiveness(flying, ghost-fire).
-normal_effectiveness(flying, ghost-water).
-weakness(flying, ghost-electric).
-super_effectiveness(flying, ghost-grass).
-normal_effectiveness(flying, ghost-ice).
-super_effectiveness(flying, ghost-fighting).
-normal_effectiveness(flying, ghost-poison).
-normal_effectiveness(flying, ghost-ground).
-normal_effectiveness(flying, ghost-flying).
-normal_effectiveness(flying, ghost-psychic).
-super_effectiveness(flying, ghost-bug).
-weakness(flying, ghost-rock).
-normal_effectiveness(flying, ghost-dragon).
-normal_effectiveness(flying, ghost-dark).
-weakness(flying, ghost-steel).
-normal_effectiveness(flying, ghost-fairy).
-normal_effectiveness(flying, dragon-normal).
-normal_effectiveness(flying, dragon-fire).
-normal_effectiveness(flying, dragon-water).
-weakness(flying, dragon-electric).
-super_effectiveness(flying, dragon-grass).
-normal_effectiveness(flying, dragon-ice).
-super_effectiveness(flying, dragon-fighting).
-normal_effectiveness(flying, dragon-poison).
-normal_effectiveness(flying, dragon-ground).
-normal_effectiveness(flying, dragon-flying).
-normal_effectiveness(flying, dragon-psychic).
-super_effectiveness(flying, dragon-bug).
-weakness(flying, dragon-rock).
-normal_effectiveness(flying, dragon-ghost).
-normal_effectiveness(flying, dragon-dark).
-weakness(flying, dragon-steel).
-normal_effectiveness(flying, dragon-fairy).
-normal_effectiveness(flying, dark-normal).
-normal_effectiveness(flying, dark-fire).
-normal_effectiveness(flying, dark-water).
-weakness(flying, dark-electric).
-super_effectiveness(flying, dark-grass).
-normal_effectiveness(flying, dark-ice).
-super_effectiveness(flying, dark-fighting).
-normal_effectiveness(flying, dark-poison).
-normal_effectiveness(flying, dark-ground).
-normal_effectiveness(flying, dark-flying).
-normal_effectiveness(flying, dark-psychic).
-super_effectiveness(flying, dark-bug).
-weakness(flying, dark-rock).
-normal_effectiveness(flying, dark-ghost).
-normal_effectiveness(flying, dark-dragon).
-weakness(flying, dark-steel).
-normal_effectiveness(flying, dark-fairy).
-weakness(flying, steel-normal).
-weakness(flying, steel-fire).
-weakness(flying, steel-water).
-super_weakness(flying, steel-electric).
-normal_effectiveness(flying, steel-grass).
-weakness(flying, steel-ice).
-normal_effectiveness(flying, steel-fighting).
-weakness(flying, steel-poison).
-weakness(flying, steel-ground).
-weakness(flying, steel-flying).
-weakness(flying, steel-psychic).
-normal_effectiveness(flying, steel-bug).
-super_weakness(flying, steel-rock).
-weakness(flying, steel-ghost).
-weakness(flying, steel-dragon).
-weakness(flying, steel-dark).
-weakness(flying, steel-fairy).
-normal_effectiveness(flying, fairy-normal).
-normal_effectiveness(flying, fairy-fire).
-normal_effectiveness(flying, fairy-water).
-weakness(flying, fairy-electric).
-super_effectiveness(flying, fairy-grass).
-normal_effectiveness(flying, fairy-ice).
-super_effectiveness(flying, fairy-fighting).
-normal_effectiveness(flying, fairy-poison).
-normal_effectiveness(flying, fairy-ground).
-normal_effectiveness(flying, fairy-flying).
-normal_effectiveness(flying, fairy-psychic).
-super_effectiveness(flying, fairy-bug).
-weakness(flying, fairy-rock).
-normal_effectiveness(flying, fairy-ghost).
-normal_effectiveness(flying, fairy-dragon).
-normal_effectiveness(flying, fairy-dark).
-weakness(flying, fairy-steel).
-
-/* Effectiveness psychic */
+normal_effectiveness(flying,normal-water).
+normal_effectiveness(flying,normal-ice).
+normal_effectiveness(flying,normal-poison).
+normal_effectiveness(flying,normal-ground).
+normal_effectiveness(flying,normal-flying).
+normal_effectiveness(flying,normal-psychic).
+normal_effectiveness(flying,normal-ghost).
+normal_effectiveness(flying,normal-dragon).
+normal_effectiveness(flying,normal-dark).
+normal_effectiveness(flying,normal-fairy).
+normal_effectiveness(flying,fire-normal).
+normal_effectiveness(flying,fire-water).
+normal_effectiveness(flying,fire-ice).
+normal_effectiveness(flying,fire-poison).
+normal_effectiveness(flying,fire-ground).
+normal_effectiveness(flying,fire-flying).
+normal_effectiveness(flying,fire-psychic).
+normal_effectiveness(flying,fire-ghost).
+normal_effectiveness(flying,fire-dragon).
+normal_effectiveness(flying,fire-dark).
+normal_effectiveness(flying,fire-fairy).
+normal_effectiveness(flying,water-normal).
+normal_effectiveness(flying,water-fire).
+normal_effectiveness(flying,water-ice).
+normal_effectiveness(flying,water-poison).
+normal_effectiveness(flying,water-ground).
+normal_effectiveness(flying,water-flying).
+normal_effectiveness(flying,water-psychic).
+normal_effectiveness(flying,water-ghost).
+normal_effectiveness(flying,water-dragon).
+normal_effectiveness(flying,water-dark).
+normal_effectiveness(flying,water-fairy).
+normal_effectiveness(flying,electric-grass).
+normal_effectiveness(flying,electric-fighting).
+normal_effectiveness(flying,electric-bug).
+normal_effectiveness(flying,grass-electric).
+normal_effectiveness(flying,grass-rock).
+normal_effectiveness(flying,grass-steel).
+normal_effectiveness(flying,ice-normal).
+normal_effectiveness(flying,ice-fire).
+normal_effectiveness(flying,ice-water).
+normal_effectiveness(flying,ice-poison).
+normal_effectiveness(flying,ice-ground).
+normal_effectiveness(flying,ice-flying).
+normal_effectiveness(flying,ice-psychic).
+normal_effectiveness(flying,ice-ghost).
+normal_effectiveness(flying,ice-dragon).
+normal_effectiveness(flying,ice-dark).
+normal_effectiveness(flying,ice-fairy).
+normal_effectiveness(flying,fighting-electric).
+normal_effectiveness(flying,fighting-poison).
+normal_effectiveness(flying,fighting-rock).
+normal_effectiveness(flying,fighting-steel).
+normal_effectiveness(flying,poison-normal).
+normal_effectiveness(flying,poison-fire).
+normal_effectiveness(flying,poison-water).
+normal_effectiveness(flying,poison-ice).
+normal_effectiveness(flying,poison-fighting).
+normal_effectiveness(flying,poison-ground).
+normal_effectiveness(flying,poison-flying).
+normal_effectiveness(flying,poison-psychic).
+normal_effectiveness(flying,poison-ghost).
+normal_effectiveness(flying,poison-dragon).
+normal_effectiveness(flying,poison-dark).
+normal_effectiveness(flying,poison-fairy).
+normal_effectiveness(flying,ground-normal).
+normal_effectiveness(flying,ground-fire).
+normal_effectiveness(flying,ground-water).
+normal_effectiveness(flying,ground-ice).
+normal_effectiveness(flying,ground-poison).
+normal_effectiveness(flying,ground-flying).
+normal_effectiveness(flying,ground-psychic).
+normal_effectiveness(flying,ground-ghost).
+normal_effectiveness(flying,ground-dragon).
+normal_effectiveness(flying,ground-dark).
+normal_effectiveness(flying,ground-fairy).
+normal_effectiveness(flying,flying-normal).
+normal_effectiveness(flying,flying-fire).
+normal_effectiveness(flying,flying-water).
+normal_effectiveness(flying,flying-ice).
+normal_effectiveness(flying,flying-poison).
+normal_effectiveness(flying,flying-ground).
+normal_effectiveness(flying,flying-psychic).
+normal_effectiveness(flying,flying-ghost).
+normal_effectiveness(flying,flying-dragon).
+normal_effectiveness(flying,flying-dark).
+normal_effectiveness(flying,flying-fairy).
+normal_effectiveness(flying,psychic-normal).
+normal_effectiveness(flying,psychic-fire).
+normal_effectiveness(flying,psychic-water).
+normal_effectiveness(flying,psychic-ice).
+normal_effectiveness(flying,psychic-poison).
+normal_effectiveness(flying,psychic-ground).
+normal_effectiveness(flying,psychic-flying).
+normal_effectiveness(flying,psychic-ghost).
+normal_effectiveness(flying,psychic-dragon).
+normal_effectiveness(flying,psychic-dark).
+normal_effectiveness(flying,psychic-fairy).
+normal_effectiveness(flying,bug-electric).
+normal_effectiveness(flying,bug-rock).
+normal_effectiveness(flying,bug-steel).
+normal_effectiveness(flying,rock-grass).
+normal_effectiveness(flying,rock-fighting).
+normal_effectiveness(flying,rock-bug).
+normal_effectiveness(flying,ghost-normal).
+normal_effectiveness(flying,ghost-fire).
+normal_effectiveness(flying,ghost-water).
+normal_effectiveness(flying,ghost-ice).
+normal_effectiveness(flying,ghost-poison).
+normal_effectiveness(flying,ghost-ground).
+normal_effectiveness(flying,ghost-flying).
+normal_effectiveness(flying,ghost-psychic).
+normal_effectiveness(flying,ghost-dragon).
+normal_effectiveness(flying,ghost-dark).
+normal_effectiveness(flying,ghost-fairy).
+normal_effectiveness(flying,dragon-normal).
+normal_effectiveness(flying,dragon-fire).
+normal_effectiveness(flying,dragon-water).
+normal_effectiveness(flying,dragon-ice).
+normal_effectiveness(flying,dragon-poison).
+normal_effectiveness(flying,dragon-ground).
+normal_effectiveness(flying,dragon-flying).
+normal_effectiveness(flying,dragon-psychic).
+normal_effectiveness(flying,dragon-ghost).
+normal_effectiveness(flying,dragon-dark).
+normal_effectiveness(flying,dragon-fairy).
+normal_effectiveness(flying,dark-normal).
+normal_effectiveness(flying,dark-fire).
+normal_effectiveness(flying,dark-water).
+normal_effectiveness(flying,dark-ice).
+normal_effectiveness(flying,dark-poison).
+normal_effectiveness(flying,dark-ground).
+normal_effectiveness(flying,dark-flying).
+normal_effectiveness(flying,dark-psychic).
+normal_effectiveness(flying,dark-ghost).
+normal_effectiveness(flying,dark-dragon).
+normal_effectiveness(flying,dark-fairy).
+normal_effectiveness(flying,steel-grass).
+normal_effectiveness(flying,steel-fighting).
+normal_effectiveness(flying,steel-bug).
+normal_effectiveness(flying,fairy-normal).
+normal_effectiveness(flying,fairy-fire).
+normal_effectiveness(flying,fairy-water).
+normal_effectiveness(flying,fairy-ice).
+normal_effectiveness(flying,fairy-poison).
+normal_effectiveness(flying,fairy-ground).
+normal_effectiveness(flying,fairy-flying).
+normal_effectiveness(flying,fairy-psychic).
+normal_effectiveness(flying,fairy-ghost).
+normal_effectiveness(flying,fairy-dragon).
+normal_effectiveness(flying,fairy-dark).
 normal_effectiveness(psychic,normal).
 normal_effectiveness(psychic,fire).
 normal_effectiveness(psychic,water).
 normal_effectiveness(psychic,electric).
 normal_effectiveness(psychic,grass).
 normal_effectiveness(psychic,ice).
-super_effectiveness(psychic,fighting).
-super_effectiveness(psychic,poison).
 normal_effectiveness(psychic,ground).
 normal_effectiveness(psychic,flying).
-weakness(psychic,psychic).
 normal_effectiveness(psychic,bug).
 normal_effectiveness(psychic,rock).
 normal_effectiveness(psychic,ghost).
 normal_effectiveness(psychic,dragon).
-dano_zero(psychic,dark).
-weakness(psychic,steel).
 normal_effectiveness(psychic,fairy).
 normal_effectiveness(psychic,normal-fire).
-normal_effectiveness(psychic, normal-water).
-normal_effectiveness(psychic, normal-electric).
-normal_effectiveness(psychic, normal-grass).
-normal_effectiveness(psychic, normal-ice).
-super_effectiveness(psychic, normal-fighting).
-super_effectiveness(psychic, normal-poison).
-normal_effectiveness(psychic, normal-ground).
-normal_effectiveness(psychic, normal-flying).
-weakness(psychic, normal-psychic).
-normal_effectiveness(psychic, normal-bug).
-normal_effectiveness(psychic, normal-rock).
-normal_effectiveness(psychic, normal-ghost).
-normal_effectiveness(psychic, normal-dragon).
-dano_zero(psychic, normal-dark).
-weakness(psychic, normal-steel).
-normal_effectiveness(psychic, normal-fairy).
-normal_effectiveness(psychic, fire-normal).
-normal_effectiveness(psychic, fire-water).
-normal_effectiveness(psychic, fire-electric).
-normal_effectiveness(psychic, fire-grass).
-normal_effectiveness(psychic, fire-ice).
-super_effectiveness(psychic, fire-fighting).
-super_effectiveness(psychic, fire-poison).
-normal_effectiveness(psychic, fire-ground).
-normal_effectiveness(psychic, fire-flying).
-weakness(psychic, fire-psychic).
-normal_effectiveness(psychic, fire-bug).
-normal_effectiveness(psychic, fire-rock).
-normal_effectiveness(psychic, fire-ghost).
-normal_effectiveness(psychic, fire-dragon).
-dano_zero(psychic, fire-dark).
-weakness(psychic, fire-steel).
-normal_effectiveness(psychic, fire-fairy).
-normal_effectiveness(psychic, water-normal).
-normal_effectiveness(psychic, water-fire).
-normal_effectiveness(psychic, water-electric).
-normal_effectiveness(psychic, water-grass).
-normal_effectiveness(psychic, water-ice).
-super_effectiveness(psychic, water-fighting).
-super_effectiveness(psychic, water-poison).
-normal_effectiveness(psychic, water-ground).
-normal_effectiveness(psychic, water-flying).
-weakness(psychic, water-psychic).
-normal_effectiveness(psychic, water-bug).
-normal_effectiveness(psychic, water-rock).
-normal_effectiveness(psychic, water-ghost).
-normal_effectiveness(psychic, water-dragon).
-dano_zero(psychic, water-dark).
-weakness(psychic, water-steel).
-normal_effectiveness(psychic, water-fairy).
-normal_effectiveness(psychic, electric-normal).
-normal_effectiveness(psychic, electric-fire).
-normal_effectiveness(psychic, electric-water).
-normal_effectiveness(psychic, electric-grass).
-normal_effectiveness(psychic, electric-ice).
-super_effectiveness(psychic, electric-fighting).
-super_effectiveness(psychic, electric-poison).
-normal_effectiveness(psychic, electric-ground).
-normal_effectiveness(psychic, electric-flying).
-weakness(psychic, electric-psychic).
-normal_effectiveness(psychic, electric-bug).
-normal_effectiveness(psychic, electric-rock).
-normal_effectiveness(psychic, electric-ghost).
-normal_effectiveness(psychic, electric-dragon).
-dano_zero(psychic, electric-dark).
-weakness(psychic, electric-steel).
-normal_effectiveness(psychic, electric-fairy).
-normal_effectiveness(psychic, grass-normal).
-normal_effectiveness(psychic, grass-fire).
-normal_effectiveness(psychic, grass-water).
-normal_effectiveness(psychic, grass-electric).
-normal_effectiveness(psychic, grass-ice).
-super_effectiveness(psychic, grass-fighting).
-super_effectiveness(psychic, grass-poison).
-normal_effectiveness(psychic, grass-ground).
-normal_effectiveness(psychic, grass-flying).
-weakness(psychic, grass-psychic).
-normal_effectiveness(psychic, grass-bug).
-normal_effectiveness(psychic, grass-rock).
-normal_effectiveness(psychic, grass-ghost).
-normal_effectiveness(psychic, grass-dragon).
-dano_zero(psychic, grass-dark).
-weakness(psychic, grass-steel).
-normal_effectiveness(psychic, grass-fairy).
-normal_effectiveness(psychic, ice-normal).
-normal_effectiveness(psychic, ice-fire).
-normal_effectiveness(psychic, ice-water).
-normal_effectiveness(psychic, ice-electric).
-normal_effectiveness(psychic, ice-grass).
-super_effectiveness(psychic, ice-fighting).
-super_effectiveness(psychic, ice-poison).
-normal_effectiveness(psychic, ice-ground).
-normal_effectiveness(psychic, ice-flying).
-weakness(psychic, ice-psychic).
-normal_effectiveness(psychic, ice-bug).
-normal_effectiveness(psychic, ice-rock).
-normal_effectiveness(psychic, ice-ghost).
-normal_effectiveness(psychic, ice-dragon).
-dano_zero(psychic, ice-dark).
-weakness(psychic, ice-steel).
-normal_effectiveness(psychic, ice-fairy).
-super_effectiveness(psychic, fighting-normal).
-super_effectiveness(psychic, fighting-fire).
-super_effectiveness(psychic, fighting-water).
-super_effectiveness(psychic, fighting-electric).
-super_effectiveness(psychic, fighting-grass).
-super_effectiveness(psychic, fighting-ice).
-super_effectiveness(psychic, fighting-poison).
-super_effectiveness(psychic, fighting-ground).
-super_effectiveness(psychic, fighting-flying).
-normal_effectiveness(psychic, fighting-psychic).
-super_effectiveness(psychic, fighting-bug).
-super_effectiveness(psychic, fighting-rock).
-super_effectiveness(psychic, fighting-ghost).
-super_effectiveness(psychic, fighting-dragon).
-dano_zero(psychic, fighting-dark).
-normal_effectiveness(psychic, fighting-steel).
-super_effectiveness(psychic, fighting-fairy).
-super_effectiveness(psychic, poison-normal).
-super_effectiveness(psychic, poison-fire).
-super_effectiveness(psychic, poison-water).
-super_effectiveness(psychic, poison-electric).
-super_effectiveness(psychic, poison-grass).
-super_effectiveness(psychic, poison-ice).
-super_effectiveness(psychic, poison-fighting).
-super_effectiveness(psychic, poison-ground).
-super_effectiveness(psychic, poison-flying).
-normal_effectiveness(psychic, poison-psychic).
-super_effectiveness(psychic, poison-bug).
-normal_effectiveness(psychic, poison-rock).
-super_effectiveness(psychic, poison-ghost).
-super_effectiveness(psychic, poison-dragon).
-dano_zero(psychic, poison-dark).
-normal_effectiveness(psychic, poison-steel).
-super_effectiveness(psychic, poison-fairy).
-normal_effectiveness(psychic, ground-normal).
-normal_effectiveness(psychic, ground-fire).
-normal_effectiveness(psychic, ground-water).
-normal_effectiveness(psychic, ground-electric).
-normal_effectiveness(psychic, ground-grass).
-normal_effectiveness(psychic, ground-ice).
-super_effectiveness(psychic, ground-fighting).
-super_effectiveness(psychic, ground-poison).
-normal_effectiveness(psychic, ground-flying).
-weakness(psychic, ground-psychic).
-normal_effectiveness(psychic, ground-bug).
-normal_effectiveness(psychic, ground-rock).
-normal_effectiveness(psychic, ground-ghost).
-normal_effectiveness(psychic, ground-dragon).
-dano_zero(psychic, ground-dark).
-weakness(psychic, ground-steel).
-normal_effectiveness(psychic, ground-fairy).
-normal_effectiveness(psychic, flying-normal).
-normal_effectiveness(psychic, flying-fire).
-normal_effectiveness(psychic, flying-water).
-normal_effectiveness(psychic, flying-electric).
-normal_effectiveness(psychic, flying-grass).
-normal_effectiveness(psychic, flying-ice).
-super_effectiveness(psychic, flying-fighting).
-super_effectiveness(psychic, flying-poison).
-normal_effectiveness(psychic, flying-ground).
-weakness(psychic, flying-psychic).
-normal_effectiveness(psychic, flying-bug).
-normal_effectiveness(psychic, flying-rock).
-normal_effectiveness(psychic, flying-ghost).
-normal_effectiveness(psychic, flying-dragon).
-dano_zero(psychic, flying-dark).
-weakness(psychic, flying-steel).
-normal_effectiveness(psychic, flying-fairy).
-weakness(psychic, psychic-normal).
-weakness(psychic, psychic-fire).
-weakness(psychic, psychic-water).
-weakness(psychic, psychic-electric).
-weakness(psychic, psychic-grass).
-weakness(psychic, psychic-ice).
-normal_effectiveness(psychic, psychic-fighting).
-normal_effectiveness(psychic, psychic-poison).
-weakness(psychic, psychic-ground).
-weakness(psychic, psychic-flying).
-weakness(psychic, psychic-bug).
-weakness(psychic, psychic-rock).
-weakness(psychic, psychic-ghost).
-weakness(psychic, psychic-dragon).
-dano_zero(psychic, psychic-dark).
-super_weakness(psychic, psychic-steel).
-weakness(psychic, psychic-fairy).
-normal_effectiveness(psychic, bug-normal).
-normal_effectiveness(psychic, bug-fire).
-normal_effectiveness(psychic, bug-water).
-normal_effectiveness(psychic, bug-electric).
-normal_effectiveness(psychic, bug-grass).
-normal_effectiveness(psychic, bug-ice).
-super_effectiveness(psychic, bug-fighting).
-super_effectiveness(psychic, bug-poison).
-normal_effectiveness(psychic, bug-ground).
-normal_effectiveness(psychic, bug-flying).
-weakness(psychic, bug-psychic).
-normal_effectiveness(psychic, bug-rock).
-normal_effectiveness(psychic, bug-ghost).
-normal_effectiveness(psychic, bug-dragon).
-dano_zero(psychic, bug-dark).
-weakness(psychic, bug-steel).
-normal_effectiveness(psychic, bug-fairy).
-normal_effectiveness(psychic, rock-normal).
-normal_effectiveness(psychic, rock-fire).
-normal_effectiveness(psychic, rock-water).
-normal_effectiveness(psychic, rock-electric).
-normal_effectiveness(psychic, rock-grass).
-normal_effectiveness(psychic, rock-ice).
-super_effectiveness(psychic, rock-fighting).
-normal_effectiveness(psychic, rock-poison).
-normal_effectiveness(psychic, rock-ground).
-normal_effectiveness(psychic, rock-flying).
-weakness(psychic, rock-psychic).
-normal_effectiveness(psychic, rock-bug).
-normal_effectiveness(psychic, rock-ghost).
-normal_effectiveness(psychic, rock-dragon).
-dano_zero(psychic, rock-dark).
-weakness(psychic, rock-steel).
-normal_effectiveness(psychic, rock-fairy).
-normal_effectiveness(psychic, ghost-normal).
-normal_effectiveness(psychic, ghost-fire).
-normal_effectiveness(psychic, ghost-water).
-normal_effectiveness(psychic, ghost-electric).
-normal_effectiveness(psychic, ghost-grass).
-normal_effectiveness(psychic, ghost-ice).
-super_effectiveness(psychic, ghost-fighting).
-super_effectiveness(psychic, ghost-poison).
-normal_effectiveness(psychic, ghost-ground).
-normal_effectiveness(psychic, ghost-flying).
-weakness(psychic, ghost-psychic).
-normal_effectiveness(psychic, ghost-bug).
-normal_effectiveness(psychic, ghost-rock).
-normal_effectiveness(psychic, ghost-dragon).
-dano_zero(psychic, ghost-dark).
-weakness(psychic, ghost-steel).
-normal_effectiveness(psychic, ghost-fairy).
-normal_effectiveness(psychic, dragon-normal).
-normal_effectiveness(psychic, dragon-fire).
-normal_effectiveness(psychic, dragon-water).
-normal_effectiveness(psychic, dragon-electric).
-normal_effectiveness(psychic, dragon-grass).
-normal_effectiveness(psychic, dragon-ice).
-super_effectiveness(psychic, dragon-fighting).
-super_effectiveness(psychic, dragon-poison).
-normal_effectiveness(psychic, dragon-ground).
-normal_effectiveness(psychic, dragon-flying).
-weakness(psychic, dragon-psychic).
-normal_effectiveness(psychic, dragon-bug).
-normal_effectiveness(psychic, dragon-rock).
-normal_effectiveness(psychic, dragon-ghost).
-dano_zero(psychic, dragon-dark).
-weakness(psychic, dragon-steel).
-normal_effectiveness(psychic, dragon-fairy).
-dano_zero(psychic, dark-normal).
-dano_zero(psychic, dark-fire).
-dano_zero(psychic, dark-water).
-dano_zero(psychic, dark-electric).
-dano_zero(psychic, dark-grass).
-dano_zero(psychic, dark-ice).
-dano_zero(psychic, dark-fighting).
-dano_zero(psychic, dark-poison).
-dano_zero(psychic, dark-ground).
-dano_zero(psychic, dark-flying).
-dano_zero(psychic, dark-psychic).
-dano_zero(psychic, dark-bug).
-dano_zero(psychic, dark-rock).
-dano_zero(psychic, dark-ghost).
-dano_zero(psychic, dark-dragon).
-dano_zero(psychic, dark-steel).
-dano_zero(psychic, dark-fairy).
-weakness(psychic, steel-normal).
-weakness(psychic, steel-fire).
-weakness(psychic, steel-water).
-weakness(psychic, steel-electric).
-weakness(psychic, steel-grass).
-weakness(psychic, steel-ice).
-normal_effectiveness(psychic, steel-fighting).
-normal_effectiveness(psychic, steel-poison).
-weakness(psychic, steel-ground).
-weakness(psychic, steel-flying).
-super_weakness(psychic, steel-psychic).
-weakness(psychic, steel-bug).
-weakness(psychic, steel-rock).
-weakness(psychic, steel-ghost).
-weakness(psychic, steel-dragon).
-dano_zero(psychic, steel-dark).
-weakness(psychic, steel-fairy).
-normal_effectiveness(psychic, fairy-normal).
-normal_effectiveness(psychic, fairy-fire).
-normal_effectiveness(psychic, fairy-water).
-normal_effectiveness(psychic, fairy-electric).
-normal_effectiveness(psychic, fairy-grass).
-normal_effectiveness(psychic, fairy-ice).
-super_effectiveness(psychic, fairy-fighting).
-super_effectiveness(psychic, fairy-poison).
-normal_effectiveness(psychic, fairy-ground).
-normal_effectiveness(psychic, fairy-flying).
-weakness(psychic, fairy-psychic).
-normal_effectiveness(psychic, fairy-bug).
-normal_effectiveness(psychic, fairy-rock).
-normal_effectiveness(psychic, fairy-ghost).
-normal_effectiveness(psychic, fairy-dragon).
-dano_zero(psychic, fairy-dark).
-weakness(psychic, fairy-steel).
-
-/* Effectiveness bug */
+normal_effectiveness(psychic,normal-water).
+normal_effectiveness(psychic,normal-electric).
+normal_effectiveness(psychic,normal-grass).
+normal_effectiveness(psychic,normal-ice).
+normal_effectiveness(psychic,normal-ground).
+normal_effectiveness(psychic,normal-flying).
+normal_effectiveness(psychic,normal-bug).
+normal_effectiveness(psychic,normal-rock).
+normal_effectiveness(psychic,normal-ghost).
+normal_effectiveness(psychic,normal-dragon).
+normal_effectiveness(psychic,normal-fairy).
+normal_effectiveness(psychic,fire-normal).
+normal_effectiveness(psychic,fire-water).
+normal_effectiveness(psychic,fire-electric).
+normal_effectiveness(psychic,fire-grass).
+normal_effectiveness(psychic,fire-ice).
+normal_effectiveness(psychic,fire-ground).
+normal_effectiveness(psychic,fire-flying).
+normal_effectiveness(psychic,fire-bug).
+normal_effectiveness(psychic,fire-rock).
+normal_effectiveness(psychic,fire-ghost).
+normal_effectiveness(psychic,fire-dragon).
+normal_effectiveness(psychic,fire-fairy).
+normal_effectiveness(psychic,water-normal).
+normal_effectiveness(psychic,water-fire).
+normal_effectiveness(psychic,water-electric).
+normal_effectiveness(psychic,water-grass).
+normal_effectiveness(psychic,water-ice).
+normal_effectiveness(psychic,water-ground).
+normal_effectiveness(psychic,water-flying).
+normal_effectiveness(psychic,water-bug).
+normal_effectiveness(psychic,water-rock).
+normal_effectiveness(psychic,water-ghost).
+normal_effectiveness(psychic,water-dragon).
+normal_effectiveness(psychic,water-fairy).
+normal_effectiveness(psychic,electric-normal).
+normal_effectiveness(psychic,electric-fire).
+normal_effectiveness(psychic,electric-water).
+normal_effectiveness(psychic,electric-grass).
+normal_effectiveness(psychic,electric-ice).
+normal_effectiveness(psychic,electric-ground).
+normal_effectiveness(psychic,electric-flying).
+normal_effectiveness(psychic,electric-bug).
+normal_effectiveness(psychic,electric-rock).
+normal_effectiveness(psychic,electric-ghost).
+normal_effectiveness(psychic,electric-dragon).
+normal_effectiveness(psychic,electric-fairy).
+normal_effectiveness(psychic,grass-normal).
+normal_effectiveness(psychic,grass-fire).
+normal_effectiveness(psychic,grass-water).
+normal_effectiveness(psychic,grass-electric).
+normal_effectiveness(psychic,grass-ice).
+normal_effectiveness(psychic,grass-ground).
+normal_effectiveness(psychic,grass-flying).
+normal_effectiveness(psychic,grass-bug).
+normal_effectiveness(psychic,grass-rock).
+normal_effectiveness(psychic,grass-ghost).
+normal_effectiveness(psychic,grass-dragon).
+normal_effectiveness(psychic,grass-fairy).
+normal_effectiveness(psychic,ice-normal).
+normal_effectiveness(psychic,ice-fire).
+normal_effectiveness(psychic,ice-water).
+normal_effectiveness(psychic,ice-electric).
+normal_effectiveness(psychic,ice-grass).
+normal_effectiveness(psychic,ice-ground).
+normal_effectiveness(psychic,ice-flying).
+normal_effectiveness(psychic,ice-bug).
+normal_effectiveness(psychic,ice-rock).
+normal_effectiveness(psychic,ice-ghost).
+normal_effectiveness(psychic,ice-dragon).
+normal_effectiveness(psychic,ice-fairy).
+normal_effectiveness(psychic,fighting-psychic).
+normal_effectiveness(psychic,fighting-steel).
+normal_effectiveness(psychic,poison-psychic).
+normal_effectiveness(psychic,poison-rock).
+normal_effectiveness(psychic,poison-steel).
+normal_effectiveness(psychic,ground-normal).
+normal_effectiveness(psychic,ground-fire).
+normal_effectiveness(psychic,ground-water).
+normal_effectiveness(psychic,ground-electric).
+normal_effectiveness(psychic,ground-grass).
+normal_effectiveness(psychic,ground-ice).
+normal_effectiveness(psychic,ground-flying).
+normal_effectiveness(psychic,ground-bug).
+normal_effectiveness(psychic,ground-rock).
+normal_effectiveness(psychic,ground-ghost).
+normal_effectiveness(psychic,ground-dragon).
+normal_effectiveness(psychic,ground-fairy).
+normal_effectiveness(psychic,flying-normal).
+normal_effectiveness(psychic,flying-fire).
+normal_effectiveness(psychic,flying-water).
+normal_effectiveness(psychic,flying-electric).
+normal_effectiveness(psychic,flying-grass).
+normal_effectiveness(psychic,flying-ice).
+normal_effectiveness(psychic,flying-ground).
+normal_effectiveness(psychic,flying-bug).
+normal_effectiveness(psychic,flying-rock).
+normal_effectiveness(psychic,flying-ghost).
+normal_effectiveness(psychic,flying-dragon).
+normal_effectiveness(psychic,flying-fairy).
+normal_effectiveness(psychic,psychic-fighting).
+normal_effectiveness(psychic,psychic-poison).
+normal_effectiveness(psychic,bug-normal).
+normal_effectiveness(psychic,bug-fire).
+normal_effectiveness(psychic,bug-water).
+normal_effectiveness(psychic,bug-electric).
+normal_effectiveness(psychic,bug-grass).
+normal_effectiveness(psychic,bug-ice).
+normal_effectiveness(psychic,bug-ground).
+normal_effectiveness(psychic,bug-flying).
+normal_effectiveness(psychic,bug-rock).
+normal_effectiveness(psychic,bug-ghost).
+normal_effectiveness(psychic,bug-dragon).
+normal_effectiveness(psychic,bug-fairy).
+normal_effectiveness(psychic,rock-normal).
+normal_effectiveness(psychic,rock-fire).
+normal_effectiveness(psychic,rock-water).
+normal_effectiveness(psychic,rock-electric).
+normal_effectiveness(psychic,rock-grass).
+normal_effectiveness(psychic,rock-ice).
+normal_effectiveness(psychic,rock-poison).
+normal_effectiveness(psychic,rock-ground).
+normal_effectiveness(psychic,rock-flying).
+normal_effectiveness(psychic,rock-bug).
+normal_effectiveness(psychic,rock-ghost).
+normal_effectiveness(psychic,rock-dragon).
+normal_effectiveness(psychic,rock-fairy).
+normal_effectiveness(psychic,ghost-normal).
+normal_effectiveness(psychic,ghost-fire).
+normal_effectiveness(psychic,ghost-water).
+normal_effectiveness(psychic,ghost-electric).
+normal_effectiveness(psychic,ghost-grass).
+normal_effectiveness(psychic,ghost-ice).
+normal_effectiveness(psychic,ghost-ground).
+normal_effectiveness(psychic,ghost-flying).
+normal_effectiveness(psychic,ghost-bug).
+normal_effectiveness(psychic,ghost-rock).
+normal_effectiveness(psychic,ghost-dragon).
+normal_effectiveness(psychic,ghost-fairy).
+normal_effectiveness(psychic,dragon-normal).
+normal_effectiveness(psychic,dragon-fire).
+normal_effectiveness(psychic,dragon-water).
+normal_effectiveness(psychic,dragon-electric).
+normal_effectiveness(psychic,dragon-grass).
+normal_effectiveness(psychic,dragon-ice).
+normal_effectiveness(psychic,dragon-ground).
+normal_effectiveness(psychic,dragon-flying).
+normal_effectiveness(psychic,dragon-bug).
+normal_effectiveness(psychic,dragon-rock).
+normal_effectiveness(psychic,dragon-ghost).
+normal_effectiveness(psychic,dragon-fairy).
+normal_effectiveness(psychic,steel-fighting).
+normal_effectiveness(psychic,steel-poison).
+normal_effectiveness(psychic,fairy-normal).
+normal_effectiveness(psychic,fairy-fire).
+normal_effectiveness(psychic,fairy-water).
+normal_effectiveness(psychic,fairy-electric).
+normal_effectiveness(psychic,fairy-grass).
+normal_effectiveness(psychic,fairy-ice).
+normal_effectiveness(psychic,fairy-ground).
+normal_effectiveness(psychic,fairy-flying).
+normal_effectiveness(psychic,fairy-bug).
+normal_effectiveness(psychic,fairy-rock).
+normal_effectiveness(psychic,fairy-ghost).
+normal_effectiveness(psychic,fairy-dragon).
 normal_effectiveness(bug,normal).
-weakness(bug,fire).
 normal_effectiveness(bug,water).
 normal_effectiveness(bug,electric).
-super_effectiveness(bug,grass).
 normal_effectiveness(bug,ice).
-weakness(bug,fighting).
-weakness(bug,poison).
 normal_effectiveness(bug,ground).
-weakness(bug,flying).
-super_effectiveness(bug,psychic).
 normal_effectiveness(bug,bug).
 normal_effectiveness(bug,rock).
-weakness(bug,ghost).
 normal_effectiveness(bug,dragon).
-super_effectiveness(bug,dark).
-weakness(bug,steel).
-weakness(bug,fairy).
-weakness(bug,normal-fire).
-normal_effectiveness(bug, normal-water).
-normal_effectiveness(bug, normal-electric).
-super_effectiveness(bug, normal-grass).
-normal_effectiveness(bug, normal-ice).
-weakness(bug, normal-fighting).
-weakness(bug, normal-poison).
-normal_effectiveness(bug, normal-ground).
-weakness(bug, normal-flying).
-super_effectiveness(bug, normal-psychic).
-normal_effectiveness(bug, normal-bug).
-normal_effectiveness(bug, normal-rock).
-weakness(bug, normal-ghost).
-normal_effectiveness(bug, normal-dragon).
-super_effectiveness(bug, normal-dark).
-weakness(bug, normal-steel).
-weakness(bug, normal-fairy).
-weakness(bug, fire-normal).
-weakness(bug, fire-water).
-weakness(bug, fire-electric).
-normal_effectiveness(bug, fire-grass).
-weakness(bug, fire-ice).
-super_weakness(bug, fire-fighting).
-super_weakness(bug, fire-poison).
-weakness(bug, fire-ground).
-super_weakness(bug, fire-flying).
-normal_effectiveness(bug, fire-psychic).
-weakness(bug, fire-bug).
-weakness(bug, fire-rock).
-super_weakness(bug, fire-ghost).
-weakness(bug, fire-dragon).
-normal_effectiveness(bug, fire-dark).
-super_weakness(bug, fire-steel).
-super_weakness(bug, fire-fairy).
-normal_effectiveness(bug, water-normal).
-weakness(bug, water-fire).
-normal_effectiveness(bug, water-electric).
-super_effectiveness(bug, water-grass).
-normal_effectiveness(bug, water-ice).
-weakness(bug, water-fighting).
-weakness(bug, water-poison).
-normal_effectiveness(bug, water-ground).
-weakness(bug, water-flying).
-super_effectiveness(bug, water-psychic).
-normal_effectiveness(bug, water-bug).
-normal_effectiveness(bug, water-rock).
-weakness(bug, water-ghost).
-normal_effectiveness(bug, water-dragon).
-super_effectiveness(bug, water-dark).
-weakness(bug, water-steel).
-weakness(bug, water-fairy).
-normal_effectiveness(bug, electric-normal).
-weakness(bug, electric-fire).
-normal_effectiveness(bug, electric-water).
-super_effectiveness(bug, electric-grass).
-normal_effectiveness(bug, electric-ice).
-weakness(bug, electric-fighting).
-weakness(bug, electric-poison).
-normal_effectiveness(bug, electric-ground).
-weakness(bug, electric-flying).
-super_effectiveness(bug, electric-psychic).
-normal_effectiveness(bug, electric-bug).
-normal_effectiveness(bug, electric-rock).
-weakness(bug, electric-ghost).
-normal_effectiveness(bug, electric-dragon).
-super_effectiveness(bug, electric-dark).
-weakness(bug, electric-steel).
-weakness(bug, electric-fairy).
-super_effectiveness(bug, grass-normal).
-normal_effectiveness(bug, grass-fire).
-super_effectiveness(bug, grass-water).
-super_effectiveness(bug, grass-electric).
-super_effectiveness(bug, grass-ice).
-normal_effectiveness(bug, grass-fighting).
-normal_effectiveness(bug, grass-poison).
-super_effectiveness(bug, grass-ground).
-normal_effectiveness(bug, grass-flying).
-super_vantagem(bug, grass-psychic).
-super_effectiveness(bug, grass-bug).
-super_effectiveness(bug, grass-rock).
-normal_effectiveness(bug, grass-ghost).
-super_effectiveness(bug, grass-dragon).
-super_vantagem(bug, grass-dark).
-normal_effectiveness(bug, grass-steel).
-normal_effectiveness(bug, grass-fairy).
-normal_effectiveness(bug, ice-normal).
-weakness(bug, ice-fire).
-normal_effectiveness(bug, ice-water).
-normal_effectiveness(bug, ice-electric).
-super_effectiveness(bug, ice-grass).
-weakness(bug, ice-fighting).
-weakness(bug, ice-poison).
-normal_effectiveness(bug, ice-ground).
-weakness(bug, ice-flying).
-super_effectiveness(bug, ice-psychic).
-normal_effectiveness(bug, ice-bug).
-normal_effectiveness(bug, ice-rock).
-weakness(bug, ice-ghost).
-normal_effectiveness(bug, ice-dragon).
-super_effectiveness(bug, ice-dark).
-weakness(bug, ice-steel).
-weakness(bug, ice-fairy).
-weakness(bug, fighting-normal).
-super_weakness(bug, fighting-fire).
-weakness(bug, fighting-water).
-weakness(bug, fighting-electric).
-normal_effectiveness(bug, fighting-grass).
-weakness(bug, fighting-ice).
-weakness(bug, fighting-poison).
-weakness(bug, fighting-ground).
-super_weakness(bug, fighting-flying).
-normal_effectiveness(bug, fighting-psychic).
-weakness(bug, fighting-bug).
-weakness(bug, fighting-rock).
-super_weakness(bug, fighting-ghost).
-weakness(bug, fighting-dragon).
-normal_effectiveness(bug, fighting-dark).
-super_weakness(bug, fighting-steel).
-super_weakness(bug, fighting-fairy).
-weakness(bug, poison-normal).
-super_weakness(bug, poison-fire).
-weakness(bug, poison-water).
-weakness(bug, poison-electric).
-normal_effectiveness(bug, poison-grass).
-weakness(bug, poison-ice).
-weakness(bug, poison-fighting).
-weakness(bug, poison-ground).
-super_weakness(bug, poison-flying).
-normal_effectiveness(bug, poison-psychic).
-weakness(bug, poison-bug).
-weakness(bug, poison-rock).
-super_weakness(bug, poison-ghost).
-weakness(bug, poison-dragon).
-normal_effectiveness(bug, poison-dark).
-super_weakness(bug, poison-steel).
-super_weakness(bug, poison-fairy).
-normal_effectiveness(bug, ground-normal).
-weakness(bug, ground-fire).
-normal_effectiveness(bug, ground-water).
-normal_effectiveness(bug, ground-electric).
-super_effectiveness(bug, ground-grass).
-normal_effectiveness(bug, ground-ice).
-weakness(bug, ground-fighting).
-weakness(bug, ground-poison).
-weakness(bug, ground-flying).
-super_effectiveness(bug, ground-psychic).
-normal_effectiveness(bug, ground-bug).
-normal_effectiveness(bug, ground-rock).
-weakness(bug, ground-ghost).
-normal_effectiveness(bug, ground-dragon).
-super_effectiveness(bug, ground-dark).
-weakness(bug, ground-steel).
-weakness(bug, ground-fairy).
-weakness(bug, flying-normal).
-super_weakness(bug, flying-fire).
-weakness(bug, flying-water).
-weakness(bug, flying-electric).
-normal_effectiveness(bug, flying-grass).
-weakness(bug, flying-ice).
-super_weakness(bug, flying-fighting).
-super_weakness(bug, flying-poison).
-weakness(bug, flying-ground).
-normal_effectiveness(bug, flying-psychic).
-weakness(bug, flying-bug).
-weakness(bug, flying-rock).
-super_weakness(bug, flying-ghost).
-weakness(bug, flying-dragon).
-normal_effectiveness(bug, flying-dark).
-super_weakness(bug, flying-steel).
-super_weakness(bug, flying-fairy).
-super_effectiveness(bug, psychic-normal).
-normal_effectiveness(bug, psychic-fire).
-super_effectiveness(bug, psychic-water).
-super_effectiveness(bug, psychic-electric).
-super_vantagem(bug, psychic-grass).
-super_effectiveness(bug, psychic-ice).
-normal_effectiveness(bug, psychic-fighting).
-normal_effectiveness(bug, psychic-poison).
-super_effectiveness(bug, psychic-ground).
-normal_effectiveness(bug, psychic-flying).
-super_effectiveness(bug, psychic-bug).
-super_effectiveness(bug, psychic-rock).
-normal_effectiveness(bug, psychic-ghost).
-super_effectiveness(bug, psychic-dragon).
-super_vantagem(bug, psychic-dark).
-normal_effectiveness(bug, psychic-steel).
-normal_effectiveness(bug, psychic-fairy).
-normal_effectiveness(bug, bug-normal).
-weakness(bug, bug-fire).
-normal_effectiveness(bug, bug-water).
-normal_effectiveness(bug, bug-electric).
-super_effectiveness(bug, bug-grass).
-normal_effectiveness(bug, bug-ice).
-weakness(bug, bug-fighting).
-weakness(bug, bug-poison).
-normal_effectiveness(bug, bug-ground).
-weakness(bug, bug-flying).
-super_effectiveness(bug, bug-psychic).
-normal_effectiveness(bug, bug-rock).
-weakness(bug, bug-ghost).
-normal_effectiveness(bug, bug-dragon).
-super_effectiveness(bug, bug-dark).
-weakness(bug, bug-steel).
-weakness(bug, bug-fairy).
-normal_effectiveness(bug, rock-normal).
-weakness(bug, rock-fire).
-normal_effectiveness(bug, rock-water).
-normal_effectiveness(bug, rock-electric).
-super_effectiveness(bug, rock-grass).
-normal_effectiveness(bug, rock-ice).
-weakness(bug, rock-fighting).
-weakness(bug, rock-poison).
-normal_effectiveness(bug, rock-ground).
-weakness(bug, rock-flying).
-super_effectiveness(bug, rock-psychic).
-normal_effectiveness(bug, rock-bug).
-weakness(bug, rock-ghost).
-normal_effectiveness(bug, rock-dragon).
-super_effectiveness(bug, rock-dark).
-weakness(bug, rock-steel).
-weakness(bug, rock-fairy).
-weakness(bug, ghost-normal).
-super_weakness(bug, ghost-fire).
-weakness(bug, ghost-water).
-weakness(bug, ghost-electric).
-normal_effectiveness(bug, ghost-grass).
-weakness(bug, ghost-ice).
-super_weakness(bug, ghost-fighting).
-super_weakness(bug, ghost-poison).
-weakness(bug, ghost-ground).
-super_weakness(bug, ghost-flying).
-normal_effectiveness(bug, ghost-psychic).
-weakness(bug, ghost-bug).
-weakness(bug, ghost-rock).
-weakness(bug, ghost-dragon).
-normal_effectiveness(bug, ghost-dark).
-super_weakness(bug, ghost-steel).
-weakness(bug, ghost-fairy).
-normal_effectiveness(bug, dragon-normal).
-weakness(bug, dragon-fire).
-normal_effectiveness(bug, dragon-water).
-normal_effectiveness(bug, dragon-electric).
-super_effectiveness(bug, dragon-grass).
-normal_effectiveness(bug, dragon-ice).
-weakness(bug, dragon-fighting).
-weakness(bug, dragon-poison).
-normal_effectiveness(bug, dragon-ground).
-weakness(bug, dragon-flying).
-super_effectiveness(bug, dragon-psychic).
-normal_effectiveness(bug, dragon-bug).
-normal_effectiveness(bug, dragon-rock).
-weakness(bug, dragon-ghost).
-super_effectiveness(bug, dragon-dark).
-weakness(bug, dragon-steel).
-weakness(bug, dragon-fairy).
-super_effectiveness(bug, dark-normal).
-normal_effectiveness(bug, dark-fire).
-super_effectiveness(bug, dark-water).
-super_effectiveness(bug, dark-electric).
-super_vantagem(bug, dark-grass).
-super_effectiveness(bug, dark-ice).
-normal_effectiveness(bug, dark-fighting).
-normal_effectiveness(bug, dark-poison).
-super_effectiveness(bug, dark-ground).
-normal_effectiveness(bug, dark-flying).
-super_vantagem(bug, dark-psychic).
-super_effectiveness(bug, dark-bug).
-super_effectiveness(bug, dark-rock).
-normal_effectiveness(bug, dark-ghost).
-super_effectiveness(bug, dark-dragon).
-normal_effectiveness(bug, dark-steel).
-normal_effectiveness(bug, dark-fairy).
-weakness(bug, steel-normal).
-super_weakness(bug, steel-fire).
-weakness(bug, steel-water).
-weakness(bug, steel-electric).
-normal_effectiveness(bug, steel-grass).
-weakness(bug, steel-ice).
-super_weakness(bug, steel-fighting).
-super_weakness(bug, steel-poison).
-weakness(bug, steel-ground).
-super_weakness(bug, steel-flying).
-normal_effectiveness(bug, steel-psychic).
-weakness(bug, steel-bug).
-weakness(bug, steel-rock).
-super_weakness(bug, steel-ghost).
-weakness(bug, steel-dragon).
-normal_effectiveness(bug, steel-dark).
-super_weakness(bug, steel-fairy).
-weakness(bug, fairy-normal).
-super_weakness(bug, fairy-fire).
-weakness(bug, fairy-water).
-weakness(bug, fairy-electric).
-normal_effectiveness(bug, fairy-grass).
-weakness(bug, fairy-ice).
-super_weakness(bug, fairy-fighting).
-super_weakness(bug, fairy-poison).
-weakness(bug, fairy-ground).
-super_weakness(bug, fairy-flying).
-normal_effectiveness(bug, fairy-psychic).
-weakness(bug, fairy-bug).
-weakness(bug, fairy-rock).
-weakness(bug, fairy-ghost).
-weakness(bug, fairy-dragon).
-normal_effectiveness(bug, fairy-dark).
-super_weakness(bug, fairy-steel).
-
-/* Effectiveness rock */
+normal_effectiveness(bug,normal-water).
+normal_effectiveness(bug,normal-electric).
+normal_effectiveness(bug,normal-ice).
+normal_effectiveness(bug,normal-ground).
+normal_effectiveness(bug,normal-bug).
+normal_effectiveness(bug,normal-rock).
+normal_effectiveness(bug,normal-dragon).
+normal_effectiveness(bug,fire-grass).
+normal_effectiveness(bug,fire-psychic).
+normal_effectiveness(bug,fire-dark).
+normal_effectiveness(bug,water-normal).
+normal_effectiveness(bug,water-electric).
+normal_effectiveness(bug,water-ice).
+normal_effectiveness(bug,water-ground).
+normal_effectiveness(bug,water-bug).
+normal_effectiveness(bug,water-rock).
+normal_effectiveness(bug,water-dragon).
+normal_effectiveness(bug,electric-normal).
+normal_effectiveness(bug,electric-water).
+normal_effectiveness(bug,electric-ice).
+normal_effectiveness(bug,electric-ground).
+normal_effectiveness(bug,electric-bug).
+normal_effectiveness(bug,electric-rock).
+normal_effectiveness(bug,electric-dragon).
+normal_effectiveness(bug,grass-fire).
+normal_effectiveness(bug,grass-fighting).
+normal_effectiveness(bug,grass-poison).
+normal_effectiveness(bug,grass-flying).
+normal_effectiveness(bug,grass-ghost).
+normal_effectiveness(bug,grass-steel).
+normal_effectiveness(bug,grass-fairy).
+normal_effectiveness(bug,ice-normal).
+normal_effectiveness(bug,ice-water).
+normal_effectiveness(bug,ice-electric).
+normal_effectiveness(bug,ice-ground).
+normal_effectiveness(bug,ice-bug).
+normal_effectiveness(bug,ice-rock).
+normal_effectiveness(bug,ice-dragon).
+normal_effectiveness(bug,fighting-grass).
+normal_effectiveness(bug,fighting-psychic).
+normal_effectiveness(bug,fighting-dark).
+normal_effectiveness(bug,poison-grass).
+normal_effectiveness(bug,poison-psychic).
+normal_effectiveness(bug,poison-dark).
+normal_effectiveness(bug,ground-normal).
+normal_effectiveness(bug,ground-water).
+normal_effectiveness(bug,ground-electric).
+normal_effectiveness(bug,ground-ice).
+normal_effectiveness(bug,ground-bug).
+normal_effectiveness(bug,ground-rock).
+normal_effectiveness(bug,ground-dragon).
+normal_effectiveness(bug,flying-grass).
+normal_effectiveness(bug,flying-psychic).
+normal_effectiveness(bug,flying-dark).
+normal_effectiveness(bug,psychic-fire).
+normal_effectiveness(bug,psychic-fighting).
+normal_effectiveness(bug,psychic-poison).
+normal_effectiveness(bug,psychic-flying).
+normal_effectiveness(bug,psychic-ghost).
+normal_effectiveness(bug,psychic-steel).
+normal_effectiveness(bug,psychic-fairy).
+normal_effectiveness(bug,bug-normal).
+normal_effectiveness(bug,bug-water).
+normal_effectiveness(bug,bug-electric).
+normal_effectiveness(bug,bug-ice).
+normal_effectiveness(bug,bug-ground).
+normal_effectiveness(bug,bug-rock).
+normal_effectiveness(bug,bug-dragon).
+normal_effectiveness(bug,rock-normal).
+normal_effectiveness(bug,rock-water).
+normal_effectiveness(bug,rock-electric).
+normal_effectiveness(bug,rock-ice).
+normal_effectiveness(bug,rock-ground).
+normal_effectiveness(bug,rock-bug).
+normal_effectiveness(bug,rock-dragon).
+normal_effectiveness(bug,ghost-grass).
+normal_effectiveness(bug,ghost-psychic).
+normal_effectiveness(bug,ghost-dark).
+normal_effectiveness(bug,dragon-normal).
+normal_effectiveness(bug,dragon-water).
+normal_effectiveness(bug,dragon-electric).
+normal_effectiveness(bug,dragon-ice).
+normal_effectiveness(bug,dragon-ground).
+normal_effectiveness(bug,dragon-bug).
+normal_effectiveness(bug,dragon-rock).
+normal_effectiveness(bug,dark-fire).
+normal_effectiveness(bug,dark-fighting).
+normal_effectiveness(bug,dark-poison).
+normal_effectiveness(bug,dark-flying).
+normal_effectiveness(bug,dark-ghost).
+normal_effectiveness(bug,dark-steel).
+normal_effectiveness(bug,dark-fairy).
+normal_effectiveness(bug,steel-grass).
+normal_effectiveness(bug,steel-psychic).
+normal_effectiveness(bug,steel-dark).
+normal_effectiveness(bug,fairy-grass).
+normal_effectiveness(bug,fairy-psychic).
+normal_effectiveness(bug,fairy-dark).
 normal_effectiveness(rock,normal).
-super_effectiveness(rock,fire).
 normal_effectiveness(rock,water).
 normal_effectiveness(rock,electric).
 normal_effectiveness(rock,grass).
-super_effectiveness(rock,ice).
-weakness(rock,fighting).
 normal_effectiveness(rock,poison).
-weakness(rock,ground).
-super_effectiveness(rock,flying).
 normal_effectiveness(rock,psychic).
-super_effectiveness(rock,bug).
 normal_effectiveness(rock,rock).
 normal_effectiveness(rock,ghost).
 normal_effectiveness(rock,dragon).
 normal_effectiveness(rock,dark).
-weakness(rock,steel).
 normal_effectiveness(rock,fairy).
-super_effectiveness(rock,normal-fire).
-normal_effectiveness(rock, normal-water).
-normal_effectiveness(rock, normal-electric).
-normal_effectiveness(rock, normal-grass).
-super_effectiveness(rock, normal-ice).
-weakness(rock, normal-fighting).
-normal_effectiveness(rock, normal-poison).
-weakness(rock, normal-ground).
-super_effectiveness(rock, normal-flying).
-normal_effectiveness(rock, normal-psychic).
-super_effectiveness(rock, normal-bug).
-normal_effectiveness(rock, normal-rock).
-normal_effectiveness(rock, normal-ghost).
-normal_effectiveness(rock, normal-dragon).
-normal_effectiveness(rock, normal-dark).
-weakness(rock, normal-steel).
-normal_effectiveness(rock, normal-fairy).
-super_effectiveness(rock, fire-normal).
-super_effectiveness(rock, fire-water).
-super_effectiveness(rock, fire-electric).
-super_effectiveness(rock, fire-grass).
-super_vantagem(rock, fire-ice).
-normal_effectiveness(rock, fire-fighting).
-super_effectiveness(rock, fire-poison).
-normal_effectiveness(rock, fire-ground).
-super_vantagem(rock, fire-flying).
-super_effectiveness(rock, fire-psychic).
-super_vantagem(rock, fire-bug).
-super_effectiveness(rock, fire-rock).
-super_effectiveness(rock, fire-ghost).
-super_effectiveness(rock, fire-dragon).
-super_effectiveness(rock, fire-dark).
-normal_effectiveness(rock, fire-steel).
-super_effectiveness(rock, fire-fairy).
-normal_effectiveness(rock, water-normal).
-super_effectiveness(rock, water-fire).
-normal_effectiveness(rock, water-electric).
-normal_effectiveness(rock, water-grass).
-super_effectiveness(rock, water-ice).
-weakness(rock, water-fighting).
-normal_effectiveness(rock, water-poison).
-weakness(rock, water-ground).
-super_effectiveness(rock, water-flying).
-normal_effectiveness(rock, water-psychic).
-super_effectiveness(rock, water-bug).
-normal_effectiveness(rock, water-rock).
-normal_effectiveness(rock, water-ghost).
-normal_effectiveness(rock, water-dragon).
-normal_effectiveness(rock, water-dark).
-weakness(rock, water-steel).
-normal_effectiveness(rock, water-fairy).
-normal_effectiveness(rock, electric-normal).
-super_effectiveness(rock, electric-fire).
-normal_effectiveness(rock, electric-water).
-normal_effectiveness(rock, electric-grass).
-super_effectiveness(rock, electric-ice).
-weakness(rock, electric-fighting).
-normal_effectiveness(rock, electric-poison).
-weakness(rock, electric-ground).
-super_effectiveness(rock, electric-flying).
-normal_effectiveness(rock, electric-psychic).
-super_effectiveness(rock, electric-bug).
-normal_effectiveness(rock, electric-rock).
-normal_effectiveness(rock, electric-ghost).
-normal_effectiveness(rock, electric-dragon).
-normal_effectiveness(rock, electric-dark).
-weakness(rock, electric-steel).
-normal_effectiveness(rock, electric-fairy).
-normal_effectiveness(rock, grass-normal).
-super_effectiveness(rock, grass-fire).
-normal_effectiveness(rock, grass-water).
-normal_effectiveness(rock, grass-electric).
-super_effectiveness(rock, grass-ice).
-weakness(rock, grass-fighting).
-normal_effectiveness(rock, grass-poison).
-weakness(rock, grass-ground).
-super_effectiveness(rock, grass-flying).
-normal_effectiveness(rock, grass-psychic).
-super_effectiveness(rock, grass-bug).
-normal_effectiveness(rock, grass-rock).
-normal_effectiveness(rock, grass-ghost).
-normal_effectiveness(rock, grass-dragon).
-normal_effectiveness(rock, grass-dark).
-weakness(rock, grass-steel).
-normal_effectiveness(rock, grass-fairy).
-super_effectiveness(rock, ice-normal).
-super_vantagem(rock, ice-fire).
-super_effectiveness(rock, ice-water).
-super_effectiveness(rock, ice-electric).
-super_effectiveness(rock, ice-grass).
-normal_effectiveness(rock, ice-fighting).
-super_effectiveness(rock, ice-poison).
-normal_effectiveness(rock, ice-ground).
-super_vantagem(rock, ice-flying).
-super_effectiveness(rock, ice-psychic).
-super_vantagem(rock, ice-bug).
-super_effectiveness(rock, ice-rock).
-super_effectiveness(rock, ice-ghost).
-super_effectiveness(rock, ice-dragon).
-super_effectiveness(rock, ice-dark).
-normal_effectiveness(rock, ice-steel).
-super_effectiveness(rock, ice-fairy).
-weakness(rock, fighting-normal).
-normal_effectiveness(rock, fighting-fire).
-weakness(rock, fighting-water).
-weakness(rock, fighting-electric).
-weakness(rock, fighting-grass).
-normal_effectiveness(rock, fighting-ice).
-super_effectiveness(rock, fighting-poison).
-super_weakness(rock, fighting-ground).
-normal_effectiveness(rock, fighting-flying).
-weakness(rock, fighting-psychic).
-normal_effectiveness(rock, fighting-bug).
-weakness(rock, fighting-rock).
-weakness(rock, fighting-ghost).
-weakness(rock, fighting-dragon).
-weakness(rock, fighting-dark).
-super_weakness(rock, fighting-steel).
-weakness(rock, fighting-fairy).
-normal_effectiveness(rock, poison-normal).
-super_effectiveness(rock, poison-fire).
-normal_effectiveness(rock, poison-water).
-normal_effectiveness(rock, poison-electric).
-normal_effectiveness(rock, poison-grass).
-super_effectiveness(rock, poison-ice).
-super_effectiveness(rock, poison-fighting).
-weakness(rock, poison-ground).
-super_effectiveness(rock, poison-flying).
-normal_effectiveness(rock, poison-psychic).
-super_effectiveness(rock, poison-bug).
-normal_effectiveness(rock, poison-rock).
-normal_effectiveness(rock, poison-ghost).
-normal_effectiveness(rock, poison-dragon).
-normal_effectiveness(rock, poison-dark).
-weakness(rock, poison-steel).
-normal_effectiveness(rock, poison-fairy).
-weakness(rock, ground-normal).
-normal_effectiveness(rock, ground-fire).
-weakness(rock, ground-water).
-weakness(rock, ground-electric).
-weakness(rock, ground-grass).
-normal_effectiveness(rock, ground-ice).
-super_weakness(rock, ground-fighting).
-weakness(rock, ground-poison).
-normal_effectiveness(rock, ground-flying).
-weakness(rock, ground-psychic).
-normal_effectiveness(rock, ground-bug).
-weakness(rock, ground-rock).
-weakness(rock, ground-ghost).
-weakness(rock, ground-dragon).
-weakness(rock, ground-dark).
-super_weakness(rock, ground-steel).
-weakness(rock, ground-fairy).
-super_effectiveness(rock, flying-normal).
-super_vantagem(rock, flying-fire).
-super_effectiveness(rock, flying-water).
-super_effectiveness(rock, flying-electric).
-super_effectiveness(rock, flying-grass).
-super_vantagem(rock, flying-ice).
-normal_effectiveness(rock, flying-fighting).
-super_effectiveness(rock, flying-poison).
-normal_effectiveness(rock, flying-ground).
-super_effectiveness(rock, flying-psychic).
-super_vantagem(rock, flying-bug).
-super_effectiveness(rock, flying-rock).
-super_effectiveness(rock, flying-ghost).
-super_effectiveness(rock, flying-dragon).
-super_effectiveness(rock, flying-dark).
-normal_effectiveness(rock, flying-steel).
-super_effectiveness(rock, flying-fairy).
-normal_effectiveness(rock, psychic-normal).
-super_effectiveness(rock, psychic-fire).
-normal_effectiveness(rock, psychic-water).
-normal_effectiveness(rock, psychic-electric).
-normal_effectiveness(rock, psychic-grass).
-super_effectiveness(rock, psychic-ice).
-weakness(rock, psychic-fighting).
-normal_effectiveness(rock, psychic-poison).
-weakness(rock, psychic-ground).
-super_effectiveness(rock, psychic-flying).
-super_effectiveness(rock, psychic-bug).
-normal_effectiveness(rock, psychic-rock).
-normal_effectiveness(rock, psychic-ghost).
-normal_effectiveness(rock, psychic-dragon).
-normal_effectiveness(rock, psychic-dark).
-weakness(rock, psychic-steel).
-normal_effectiveness(rock, psychic-fairy).
-super_effectiveness(rock, bug-normal).
-super_vantagem(rock, bug-fire).
-super_effectiveness(rock, bug-water).
-super_effectiveness(rock, bug-electric).
-super_effectiveness(rock, bug-grass).
-super_vantagem(rock, bug-ice).
-normal_effectiveness(rock, bug-fighting).
-super_effectiveness(rock, bug-poison).
-normal_effectiveness(rock, bug-ground).
-super_vantagem(rock, bug-flying).
-super_effectiveness(rock, bug-psychic).
-super_effectiveness(rock, bug-rock).
-super_effectiveness(rock, bug-ghost).
-super_effectiveness(rock, bug-dragon).
-super_effectiveness(rock, bug-dark).
-normal_effectiveness(rock, bug-steel).
-super_effectiveness(rock, bug-fairy).
-normal_effectiveness(rock, rock-normal).
-super_effectiveness(rock, rock-fire).
-normal_effectiveness(rock, rock-water).
-normal_effectiveness(rock, rock-electric).
-normal_effectiveness(rock, rock-grass).
-super_effectiveness(rock, rock-ice).
-weakness(rock, rock-fighting).
-normal_effectiveness(rock, rock-poison).
-weakness(rock, rock-ground).
-super_effectiveness(rock, rock-flying).
-normal_effectiveness(rock, rock-psychic).
-super_effectiveness(rock, rock-bug).
-normal_effectiveness(rock, rock-ghost).
-normal_effectiveness(rock, rock-dragon).
-normal_effectiveness(rock, rock-dark).
-weakness(rock, rock-steel).
-normal_effectiveness(rock, rock-fairy).
-normal_effectiveness(rock, ghost-normal).
-super_effectiveness(rock, ghost-fire).
-normal_effectiveness(rock, ghost-water).
-normal_effectiveness(rock, ghost-electric).
-normal_effectiveness(rock, ghost-grass).
-super_effectiveness(rock, ghost-ice).
-weakness(rock, ghost-fighting).
-normal_effectiveness(rock, ghost-poison).
-weakness(rock, ghost-ground).
-super_effectiveness(rock, ghost-flying).
-normal_effectiveness(rock, ghost-psychic).
-super_effectiveness(rock, ghost-bug).
-normal_effectiveness(rock, ghost-rock).
-normal_effectiveness(rock, ghost-dragon).
-normal_effectiveness(rock, ghost-dark).
-weakness(rock, ghost-steel).
-normal_effectiveness(rock, ghost-fairy).
-normal_effectiveness(rock, dragon-normal).
-super_effectiveness(rock, dragon-fire).
-normal_effectiveness(rock, dragon-water).
-normal_effectiveness(rock, dragon-electric).
-normal_effectiveness(rock, dragon-grass).
-super_effectiveness(rock, dragon-ice).
-weakness(rock, dragon-fighting).
-normal_effectiveness(rock, dragon-poison).
-weakness(rock, dragon-ground).
-super_effectiveness(rock, dragon-flying).
-normal_effectiveness(rock, dragon-psychic).
-super_effectiveness(rock, dragon-bug).
-normal_effectiveness(rock, dragon-rock).
-normal_effectiveness(rock, dragon-ghost).
-normal_effectiveness(rock, dragon-dark).
-weakness(rock, dragon-steel).
-normal_effectiveness(rock, dragon-fairy).
-normal_effectiveness(rock, dark-normal).
-super_effectiveness(rock, dark-fire).
-normal_effectiveness(rock, dark-water).
-normal_effectiveness(rock, dark-electric).
-normal_effectiveness(rock, dark-grass).
-super_effectiveness(rock, dark-ice).
-weakness(rock, dark-fighting).
-normal_effectiveness(rock, dark-poison).
-weakness(rock, dark-ground).
-super_effectiveness(rock, dark-flying).
-normal_effectiveness(rock, dark-psychic).
-super_effectiveness(rock, dark-bug).
-normal_effectiveness(rock, dark-rock).
-normal_effectiveness(rock, dark-ghost).
-normal_effectiveness(rock, dark-dragon).
-weakness(rock, dark-steel).
-normal_effectiveness(rock, dark-fairy).
-weakness(rock, steel-normal).
-normal_effectiveness(rock, steel-fire).
-weakness(rock, steel-water).
-weakness(rock, steel-electric).
-weakness(rock, steel-grass).
-normal_effectiveness(rock, steel-ice).
-super_weakness(rock, steel-fighting).
-weakness(rock, steel-poison).
-super_weakness(rock, steel-ground).
-normal_effectiveness(rock, steel-flying).
-weakness(rock, steel-psychic).
-normal_effectiveness(rock, steel-bug).
-weakness(rock, steel-rock).
-weakness(rock, steel-ghost).
-weakness(rock, steel-dragon).
-weakness(rock, steel-dark).
-weakness(rock, steel-fairy).
-normal_effectiveness(rock, fairy-normal).
-super_effectiveness(rock, fairy-fire).
-normal_effectiveness(rock, fairy-water).
-normal_effectiveness(rock, fairy-electric).
-normal_effectiveness(rock, fairy-grass).
-super_effectiveness(rock, fairy-ice).
-weakness(rock, fairy-fighting).
-normal_effectiveness(rock, fairy-poison).
-weakness(rock, fairy-ground).
-super_effectiveness(rock, fairy-flying).
-normal_effectiveness(rock, fairy-psychic).
-super_effectiveness(rock, fairy-bug).
-normal_effectiveness(rock, fairy-rock).
-normal_effectiveness(rock, fairy-ghost).
-normal_effectiveness(rock, fairy-dragon).
-normal_effectiveness(rock, fairy-dark).
-weakness(rock, fairy-steel).
-
-/* Effectiveness ghost */
-dano_zero(ghost,normal).
+normal_effectiveness(rock,normal-water).
+normal_effectiveness(rock,normal-electric).
+normal_effectiveness(rock,normal-grass).
+normal_effectiveness(rock,normal-poison).
+normal_effectiveness(rock,normal-psychic).
+normal_effectiveness(rock,normal-rock).
+normal_effectiveness(rock,normal-ghost).
+normal_effectiveness(rock,normal-dragon).
+normal_effectiveness(rock,normal-dark).
+normal_effectiveness(rock,normal-fairy).
+normal_effectiveness(rock,fire-fighting).
+normal_effectiveness(rock,fire-ground).
+normal_effectiveness(rock,fire-steel).
+normal_effectiveness(rock,water-normal).
+normal_effectiveness(rock,water-electric).
+normal_effectiveness(rock,water-grass).
+normal_effectiveness(rock,water-poison).
+normal_effectiveness(rock,water-psychic).
+normal_effectiveness(rock,water-rock).
+normal_effectiveness(rock,water-ghost).
+normal_effectiveness(rock,water-dragon).
+normal_effectiveness(rock,water-dark).
+normal_effectiveness(rock,water-fairy).
+normal_effectiveness(rock,electric-normal).
+normal_effectiveness(rock,electric-water).
+normal_effectiveness(rock,electric-grass).
+normal_effectiveness(rock,electric-poison).
+normal_effectiveness(rock,electric-psychic).
+normal_effectiveness(rock,electric-rock).
+normal_effectiveness(rock,electric-ghost).
+normal_effectiveness(rock,electric-dragon).
+normal_effectiveness(rock,electric-dark).
+normal_effectiveness(rock,electric-fairy).
+normal_effectiveness(rock,grass-normal).
+normal_effectiveness(rock,grass-water).
+normal_effectiveness(rock,grass-electric).
+normal_effectiveness(rock,grass-poison).
+normal_effectiveness(rock,grass-psychic).
+normal_effectiveness(rock,grass-rock).
+normal_effectiveness(rock,grass-ghost).
+normal_effectiveness(rock,grass-dragon).
+normal_effectiveness(rock,grass-dark).
+normal_effectiveness(rock,grass-fairy).
+normal_effectiveness(rock,ice-fighting).
+normal_effectiveness(rock,ice-ground).
+normal_effectiveness(rock,ice-steel).
+normal_effectiveness(rock,fighting-fire).
+normal_effectiveness(rock,fighting-ice).
+normal_effectiveness(rock,fighting-flying).
+normal_effectiveness(rock,fighting-bug).
+normal_effectiveness(rock,poison-normal).
+normal_effectiveness(rock,poison-water).
+normal_effectiveness(rock,poison-electric).
+normal_effectiveness(rock,poison-grass).
+normal_effectiveness(rock,poison-psychic).
+normal_effectiveness(rock,poison-rock).
+normal_effectiveness(rock,poison-ghost).
+normal_effectiveness(rock,poison-dragon).
+normal_effectiveness(rock,poison-dark).
+normal_effectiveness(rock,poison-fairy).
+normal_effectiveness(rock,ground-fire).
+normal_effectiveness(rock,ground-ice).
+normal_effectiveness(rock,ground-flying).
+normal_effectiveness(rock,ground-bug).
+normal_effectiveness(rock,flying-fighting).
+normal_effectiveness(rock,flying-ground).
+normal_effectiveness(rock,flying-steel).
+normal_effectiveness(rock,psychic-normal).
+normal_effectiveness(rock,psychic-water).
+normal_effectiveness(rock,psychic-electric).
+normal_effectiveness(rock,psychic-grass).
+normal_effectiveness(rock,psychic-poison).
+normal_effectiveness(rock,psychic-rock).
+normal_effectiveness(rock,psychic-ghost).
+normal_effectiveness(rock,psychic-dragon).
+normal_effectiveness(rock,psychic-dark).
+normal_effectiveness(rock,psychic-fairy).
+normal_effectiveness(rock,bug-fighting).
+normal_effectiveness(rock,bug-ground).
+normal_effectiveness(rock,bug-steel).
+normal_effectiveness(rock,rock-normal).
+normal_effectiveness(rock,rock-water).
+normal_effectiveness(rock,rock-electric).
+normal_effectiveness(rock,rock-grass).
+normal_effectiveness(rock,rock-poison).
+normal_effectiveness(rock,rock-psychic).
+normal_effectiveness(rock,rock-ghost).
+normal_effectiveness(rock,rock-dragon).
+normal_effectiveness(rock,rock-dark).
+normal_effectiveness(rock,rock-fairy).
+normal_effectiveness(rock,ghost-normal).
+normal_effectiveness(rock,ghost-water).
+normal_effectiveness(rock,ghost-electric).
+normal_effectiveness(rock,ghost-grass).
+normal_effectiveness(rock,ghost-poison).
+normal_effectiveness(rock,ghost-psychic).
+normal_effectiveness(rock,ghost-rock).
+normal_effectiveness(rock,ghost-dragon).
+normal_effectiveness(rock,ghost-dark).
+normal_effectiveness(rock,ghost-fairy).
+normal_effectiveness(rock,dragon-normal).
+normal_effectiveness(rock,dragon-water).
+normal_effectiveness(rock,dragon-electric).
+normal_effectiveness(rock,dragon-grass).
+normal_effectiveness(rock,dragon-poison).
+normal_effectiveness(rock,dragon-psychic).
+normal_effectiveness(rock,dragon-rock).
+normal_effectiveness(rock,dragon-ghost).
+normal_effectiveness(rock,dragon-dark).
+normal_effectiveness(rock,dragon-fairy).
+normal_effectiveness(rock,dark-normal).
+normal_effectiveness(rock,dark-water).
+normal_effectiveness(rock,dark-electric).
+normal_effectiveness(rock,dark-grass).
+normal_effectiveness(rock,dark-poison).
+normal_effectiveness(rock,dark-psychic).
+normal_effectiveness(rock,dark-rock).
+normal_effectiveness(rock,dark-ghost).
+normal_effectiveness(rock,dark-dragon).
+normal_effectiveness(rock,dark-fairy).
+normal_effectiveness(rock,steel-fire).
+normal_effectiveness(rock,steel-ice).
+normal_effectiveness(rock,steel-flying).
+normal_effectiveness(rock,steel-bug).
+normal_effectiveness(rock,fairy-normal).
+normal_effectiveness(rock,fairy-water).
+normal_effectiveness(rock,fairy-electric).
+normal_effectiveness(rock,fairy-grass).
+normal_effectiveness(rock,fairy-poison).
+normal_effectiveness(rock,fairy-psychic).
+normal_effectiveness(rock,fairy-rock).
+normal_effectiveness(rock,fairy-ghost).
+normal_effectiveness(rock,fairy-dragon).
+normal_effectiveness(rock,fairy-dark).
 normal_effectiveness(ghost,fire).
 normal_effectiveness(ghost,water).
 normal_effectiveness(ghost,electric).
@@ -4249,322 +3123,197 @@ normal_effectiveness(ghost,fighting).
 normal_effectiveness(ghost,poison).
 normal_effectiveness(ghost,ground).
 normal_effectiveness(ghost,flying).
-super_effectiveness(ghost,psychic).
 normal_effectiveness(ghost,bug).
 normal_effectiveness(ghost,rock).
-super_effectiveness(ghost,ghost).
 normal_effectiveness(ghost,dragon).
-weakness(ghost,dark).
 normal_effectiveness(ghost,steel).
 normal_effectiveness(ghost,fairy).
-dano_zero(ghost,normal-fire).
-dano_zero(ghost, normal-water).
-dano_zero(ghost, normal-electric).
-dano_zero(ghost, normal-grass).
-dano_zero(ghost, normal-ice).
-dano_zero(ghost, normal-fighting).
-dano_zero(ghost, normal-poison).
-dano_zero(ghost, normal-ground).
-dano_zero(ghost, normal-flying).
-dano_zero(ghost, normal-psychic).
-dano_zero(ghost, normal-bug).
-dano_zero(ghost, normal-rock).
-dano_zero(ghost, normal-ghost).
-dano_zero(ghost, normal-dragon).
-dano_zero(ghost, normal-dark).
-dano_zero(ghost, normal-steel).
-dano_zero(ghost, normal-fairy).
-dano_zero(ghost, fire-normal).
-normal_effectiveness(ghost, fire-water).
-normal_effectiveness(ghost, fire-electric).
-normal_effectiveness(ghost, fire-grass).
-normal_effectiveness(ghost, fire-ice).
-normal_effectiveness(ghost, fire-fighting).
-normal_effectiveness(ghost, fire-poison).
-normal_effectiveness(ghost, fire-ground).
-normal_effectiveness(ghost, fire-flying).
-super_effectiveness(ghost, fire-psychic).
-normal_effectiveness(ghost, fire-bug).
-normal_effectiveness(ghost, fire-rock).
-super_effectiveness(ghost, fire-ghost).
-normal_effectiveness(ghost, fire-dragon).
-weakness(ghost, fire-dark).
-normal_effectiveness(ghost, fire-steel).
-normal_effectiveness(ghost, fire-fairy).
-dano_zero(ghost, water-normal).
-normal_effectiveness(ghost, water-fire).
-normal_effectiveness(ghost, water-electric).
-normal_effectiveness(ghost, water-grass).
-normal_effectiveness(ghost, water-ice).
-normal_effectiveness(ghost, water-fighting).
-normal_effectiveness(ghost, water-poison).
-normal_effectiveness(ghost, water-ground).
-normal_effectiveness(ghost, water-flying).
-super_effectiveness(ghost, water-psychic).
-normal_effectiveness(ghost, water-bug).
-normal_effectiveness(ghost, water-rock).
-super_effectiveness(ghost, water-ghost).
-normal_effectiveness(ghost, water-dragon).
-weakness(ghost, water-dark).
-normal_effectiveness(ghost, water-steel).
-normal_effectiveness(ghost, water-fairy).
-dano_zero(ghost, electric-normal).
-normal_effectiveness(ghost, electric-fire).
-normal_effectiveness(ghost, electric-water).
-normal_effectiveness(ghost, electric-grass).
-normal_effectiveness(ghost, electric-ice).
-normal_effectiveness(ghost, electric-fighting).
-normal_effectiveness(ghost, electric-poison).
-normal_effectiveness(ghost, electric-ground).
-normal_effectiveness(ghost, electric-flying).
-super_effectiveness(ghost, electric-psychic).
-normal_effectiveness(ghost, electric-bug).
-normal_effectiveness(ghost, electric-rock).
-super_effectiveness(ghost, electric-ghost).
-normal_effectiveness(ghost, electric-dragon).
-weakness(ghost, electric-dark).
-normal_effectiveness(ghost, electric-steel).
-normal_effectiveness(ghost, electric-fairy).
-dano_zero(ghost, grass-normal).
-normal_effectiveness(ghost, grass-fire).
-normal_effectiveness(ghost, grass-water).
-normal_effectiveness(ghost, grass-electric).
-normal_effectiveness(ghost, grass-ice).
-normal_effectiveness(ghost, grass-fighting).
-normal_effectiveness(ghost, grass-poison).
-normal_effectiveness(ghost, grass-ground).
-normal_effectiveness(ghost, grass-flying).
-super_effectiveness(ghost, grass-psychic).
-normal_effectiveness(ghost, grass-bug).
-normal_effectiveness(ghost, grass-rock).
-super_effectiveness(ghost, grass-ghost).
-normal_effectiveness(ghost, grass-dragon).
-weakness(ghost, grass-dark).
-normal_effectiveness(ghost, grass-steel).
-normal_effectiveness(ghost, grass-fairy).
-dano_zero(ghost, ice-normal).
-normal_effectiveness(ghost, ice-fire).
-normal_effectiveness(ghost, ice-water).
-normal_effectiveness(ghost, ice-electric).
-normal_effectiveness(ghost, ice-grass).
-normal_effectiveness(ghost, ice-fighting).
-normal_effectiveness(ghost, ice-poison).
-normal_effectiveness(ghost, ice-ground).
-normal_effectiveness(ghost, ice-flying).
-super_effectiveness(ghost, ice-psychic).
-normal_effectiveness(ghost, ice-bug).
-normal_effectiveness(ghost, ice-rock).
-super_effectiveness(ghost, ice-ghost).
-normal_effectiveness(ghost, ice-dragon).
-weakness(ghost, ice-dark).
-normal_effectiveness(ghost, ice-steel).
-normal_effectiveness(ghost, ice-fairy).
-dano_zero(ghost, fighting-normal).
-normal_effectiveness(ghost, fighting-fire).
-normal_effectiveness(ghost, fighting-water).
-normal_effectiveness(ghost, fighting-electric).
-normal_effectiveness(ghost, fighting-grass).
-normal_effectiveness(ghost, fighting-ice).
-normal_effectiveness(ghost, fighting-poison).
-normal_effectiveness(ghost, fighting-ground).
-normal_effectiveness(ghost, fighting-flying).
-super_effectiveness(ghost, fighting-psychic).
-normal_effectiveness(ghost, fighting-bug).
-normal_effectiveness(ghost, fighting-rock).
-super_effectiveness(ghost, fighting-ghost).
-normal_effectiveness(ghost, fighting-dragon).
-weakness(ghost, fighting-dark).
-normal_effectiveness(ghost, fighting-steel).
-normal_effectiveness(ghost, fighting-fairy).
-dano_zero(ghost, poison-normal).
-normal_effectiveness(ghost, poison-fire).
-normal_effectiveness(ghost, poison-water).
-normal_effectiveness(ghost, poison-electric).
-normal_effectiveness(ghost, poison-grass).
-normal_effectiveness(ghost, poison-ice).
-normal_effectiveness(ghost, poison-fighting).
-normal_effectiveness(ghost, poison-ground).
-normal_effectiveness(ghost, poison-flying).
-super_effectiveness(ghost, poison-psychic).
-normal_effectiveness(ghost, poison-bug).
-normal_effectiveness(ghost, poison-rock).
-super_effectiveness(ghost, poison-ghost).
-normal_effectiveness(ghost, poison-dragon).
-weakness(ghost, poison-dark).
-normal_effectiveness(ghost, poison-steel).
-normal_effectiveness(ghost, poison-fairy).
-dano_zero(ghost, ground-normal).
-normal_effectiveness(ghost, ground-fire).
-normal_effectiveness(ghost, ground-water).
-normal_effectiveness(ghost, ground-electric).
-normal_effectiveness(ghost, ground-grass).
-normal_effectiveness(ghost, ground-ice).
-normal_effectiveness(ghost, ground-fighting).
-normal_effectiveness(ghost, ground-poison).
-normal_effectiveness(ghost, ground-flying).
-super_effectiveness(ghost, ground-psychic).
-normal_effectiveness(ghost, ground-bug).
-normal_effectiveness(ghost, ground-rock).
-super_effectiveness(ghost, ground-ghost).
-normal_effectiveness(ghost, ground-dragon).
-weakness(ghost, ground-dark).
-normal_effectiveness(ghost, ground-steel).
-normal_effectiveness(ghost, ground-fairy).
-dano_zero(ghost, flying-normal).
-normal_effectiveness(ghost, flying-fire).
-normal_effectiveness(ghost, flying-water).
-normal_effectiveness(ghost, flying-electric).
-normal_effectiveness(ghost, flying-grass).
-normal_effectiveness(ghost, flying-ice).
-normal_effectiveness(ghost, flying-fighting).
-normal_effectiveness(ghost, flying-poison).
-normal_effectiveness(ghost, flying-ground).
-super_effectiveness(ghost, flying-psychic).
-normal_effectiveness(ghost, flying-bug).
-normal_effectiveness(ghost, flying-rock).
-super_effectiveness(ghost, flying-ghost).
-normal_effectiveness(ghost, flying-dragon).
-weakness(ghost, flying-dark).
-normal_effectiveness(ghost, flying-steel).
-normal_effectiveness(ghost, flying-fairy).
-dano_zero(ghost, psychic-normal).
-super_effectiveness(ghost, psychic-fire).
-super_effectiveness(ghost, psychic-water).
-super_effectiveness(ghost, psychic-electric).
-super_effectiveness(ghost, psychic-grass).
-super_effectiveness(ghost, psychic-ice).
-super_effectiveness(ghost, psychic-fighting).
-super_effectiveness(ghost, psychic-poison).
-super_effectiveness(ghost, psychic-ground).
-super_effectiveness(ghost, psychic-flying).
-super_effectiveness(ghost, psychic-bug).
-super_effectiveness(ghost, psychic-rock).
-super_vantagem(ghost, psychic-ghost).
-super_effectiveness(ghost, psychic-dragon).
-normal_effectiveness(ghost, psychic-dark).
-super_effectiveness(ghost, psychic-steel).
-super_effectiveness(ghost, psychic-fairy).
-dano_zero(ghost, bug-normal).
-normal_effectiveness(ghost, bug-fire).
-normal_effectiveness(ghost, bug-water).
-normal_effectiveness(ghost, bug-electric).
-normal_effectiveness(ghost, bug-grass).
-normal_effectiveness(ghost, bug-ice).
-normal_effectiveness(ghost, bug-fighting).
-normal_effectiveness(ghost, bug-poison).
-normal_effectiveness(ghost, bug-ground).
-normal_effectiveness(ghost, bug-flying).
-super_effectiveness(ghost, bug-psychic).
-normal_effectiveness(ghost, bug-rock).
-super_effectiveness(ghost, bug-ghost).
-normal_effectiveness(ghost, bug-dragon).
-weakness(ghost, bug-dark).
-normal_effectiveness(ghost, bug-steel).
-normal_effectiveness(ghost, bug-fairy).
-dano_zero(ghost, rock-normal).
-normal_effectiveness(ghost, rock-fire).
-normal_effectiveness(ghost, rock-water).
-normal_effectiveness(ghost, rock-electric).
-normal_effectiveness(ghost, rock-grass).
-normal_effectiveness(ghost, rock-ice).
-normal_effectiveness(ghost, rock-fighting).
-normal_effectiveness(ghost, rock-poison).
-normal_effectiveness(ghost, rock-ground).
-normal_effectiveness(ghost, rock-flying).
-super_effectiveness(ghost, rock-psychic).
-normal_effectiveness(ghost, rock-bug).
-super_effectiveness(ghost, rock-ghost).
-normal_effectiveness(ghost, rock-dragon).
-weakness(ghost, rock-dark).
-normal_effectiveness(ghost, rock-steel).
-normal_effectiveness(ghost, rock-fairy).
-dano_zero(ghost, ghost-normal).
-super_effectiveness(ghost, ghost-fire).
-super_effectiveness(ghost, ghost-water).
-super_effectiveness(ghost, ghost-electric).
-super_effectiveness(ghost, ghost-grass).
-super_effectiveness(ghost, ghost-ice).
-super_effectiveness(ghost, ghost-fighting).
-super_effectiveness(ghost, ghost-poison).
-super_effectiveness(ghost, ghost-ground).
-super_effectiveness(ghost, ghost-flying).
-super_vantagem(ghost, ghost-psychic).
-super_effectiveness(ghost, ghost-bug).
-super_effectiveness(ghost, ghost-rock).
-super_effectiveness(ghost, ghost-dragon).
-normal_effectiveness(ghost, ghost-dark).
-super_effectiveness(ghost, ghost-steel).
-super_effectiveness(ghost, ghost-fairy).
-dano_zero(ghost, dragon-normal).
-normal_effectiveness(ghost, dragon-fire).
-normal_effectiveness(ghost, dragon-water).
-normal_effectiveness(ghost, dragon-electric).
-normal_effectiveness(ghost, dragon-grass).
-normal_effectiveness(ghost, dragon-ice).
-normal_effectiveness(ghost, dragon-fighting).
-normal_effectiveness(ghost, dragon-poison).
-normal_effectiveness(ghost, dragon-ground).
-normal_effectiveness(ghost, dragon-flying).
-super_effectiveness(ghost, dragon-psychic).
-normal_effectiveness(ghost, dragon-bug).
-normal_effectiveness(ghost, dragon-rock).
-super_effectiveness(ghost, dragon-ghost).
-weakness(ghost, dragon-dark).
-normal_effectiveness(ghost, dragon-steel).
-normal_effectiveness(ghost, dragon-fairy).
-dano_zero(ghost, dark-normal).
-weakness(ghost, dark-fire).
-weakness(ghost, dark-water).
-weakness(ghost, dark-electric).
-weakness(ghost, dark-grass).
-weakness(ghost, dark-ice).
-weakness(ghost, dark-fighting).
-weakness(ghost, dark-poison).
-weakness(ghost, dark-ground).
-weakness(ghost, dark-flying).
-normal_effectiveness(ghost, dark-psychic).
-weakness(ghost, dark-bug).
-weakness(ghost, dark-rock).
-normal_effectiveness(ghost, dark-ghost).
-weakness(ghost, dark-dragon).
-weakness(ghost, dark-steel).
-weakness(ghost, dark-fairy).
-dano_zero(ghost, steel-normal).
-normal_effectiveness(ghost, steel-fire).
-normal_effectiveness(ghost, steel-water).
-normal_effectiveness(ghost, steel-electric).
-normal_effectiveness(ghost, steel-grass).
-normal_effectiveness(ghost, steel-ice).
-normal_effectiveness(ghost, steel-fighting).
-normal_effectiveness(ghost, steel-poison).
-normal_effectiveness(ghost, steel-ground).
-normal_effectiveness(ghost, steel-flying).
-super_effectiveness(ghost, steel-psychic).
-normal_effectiveness(ghost, steel-bug).
-normal_effectiveness(ghost, steel-rock).
-super_effectiveness(ghost, steel-ghost).
-normal_effectiveness(ghost, steel-dragon).
-weakness(ghost, steel-dark).
-normal_effectiveness(ghost, steel-fairy).
-dano_zero(ghost, fairy-normal).
-normal_effectiveness(ghost, fairy-fire).
-normal_effectiveness(ghost, fairy-water).
-normal_effectiveness(ghost, fairy-electric).
-normal_effectiveness(ghost, fairy-grass).
-normal_effectiveness(ghost, fairy-ice).
-normal_effectiveness(ghost, fairy-fighting).
-normal_effectiveness(ghost, fairy-poison).
-normal_effectiveness(ghost, fairy-ground).
-normal_effectiveness(ghost, fairy-flying).
-super_effectiveness(ghost, fairy-psychic).
-normal_effectiveness(ghost, fairy-bug).
-normal_effectiveness(ghost, fairy-rock).
-super_effectiveness(ghost, fairy-ghost).
-normal_effectiveness(ghost, fairy-dragon).
-weakness(ghost, fairy-dark).
-normal_effectiveness(ghost, fairy-steel).
-
-/* Effectiveness dragon */
+normal_effectiveness(ghost,fire-water).
+normal_effectiveness(ghost,fire-electric).
+normal_effectiveness(ghost,fire-grass).
+normal_effectiveness(ghost,fire-ice).
+normal_effectiveness(ghost,fire-fighting).
+normal_effectiveness(ghost,fire-poison).
+normal_effectiveness(ghost,fire-ground).
+normal_effectiveness(ghost,fire-flying).
+normal_effectiveness(ghost,fire-bug).
+normal_effectiveness(ghost,fire-rock).
+normal_effectiveness(ghost,fire-dragon).
+normal_effectiveness(ghost,fire-steel).
+normal_effectiveness(ghost,fire-fairy).
+normal_effectiveness(ghost,water-fire).
+normal_effectiveness(ghost,water-electric).
+normal_effectiveness(ghost,water-grass).
+normal_effectiveness(ghost,water-ice).
+normal_effectiveness(ghost,water-fighting).
+normal_effectiveness(ghost,water-poison).
+normal_effectiveness(ghost,water-ground).
+normal_effectiveness(ghost,water-flying).
+normal_effectiveness(ghost,water-bug).
+normal_effectiveness(ghost,water-rock).
+normal_effectiveness(ghost,water-dragon).
+normal_effectiveness(ghost,water-steel).
+normal_effectiveness(ghost,water-fairy).
+normal_effectiveness(ghost,electric-fire).
+normal_effectiveness(ghost,electric-water).
+normal_effectiveness(ghost,electric-grass).
+normal_effectiveness(ghost,electric-ice).
+normal_effectiveness(ghost,electric-fighting).
+normal_effectiveness(ghost,electric-poison).
+normal_effectiveness(ghost,electric-ground).
+normal_effectiveness(ghost,electric-flying).
+normal_effectiveness(ghost,electric-bug).
+normal_effectiveness(ghost,electric-rock).
+normal_effectiveness(ghost,electric-dragon).
+normal_effectiveness(ghost,electric-steel).
+normal_effectiveness(ghost,electric-fairy).
+normal_effectiveness(ghost,grass-fire).
+normal_effectiveness(ghost,grass-water).
+normal_effectiveness(ghost,grass-electric).
+normal_effectiveness(ghost,grass-ice).
+normal_effectiveness(ghost,grass-fighting).
+normal_effectiveness(ghost,grass-poison).
+normal_effectiveness(ghost,grass-ground).
+normal_effectiveness(ghost,grass-flying).
+normal_effectiveness(ghost,grass-bug).
+normal_effectiveness(ghost,grass-rock).
+normal_effectiveness(ghost,grass-dragon).
+normal_effectiveness(ghost,grass-steel).
+normal_effectiveness(ghost,grass-fairy).
+normal_effectiveness(ghost,ice-fire).
+normal_effectiveness(ghost,ice-water).
+normal_effectiveness(ghost,ice-electric).
+normal_effectiveness(ghost,ice-grass).
+normal_effectiveness(ghost,ice-fighting).
+normal_effectiveness(ghost,ice-poison).
+normal_effectiveness(ghost,ice-ground).
+normal_effectiveness(ghost,ice-flying).
+normal_effectiveness(ghost,ice-bug).
+normal_effectiveness(ghost,ice-rock).
+normal_effectiveness(ghost,ice-dragon).
+normal_effectiveness(ghost,ice-steel).
+normal_effectiveness(ghost,ice-fairy).
+normal_effectiveness(ghost,fighting-fire).
+normal_effectiveness(ghost,fighting-water).
+normal_effectiveness(ghost,fighting-electric).
+normal_effectiveness(ghost,fighting-grass).
+normal_effectiveness(ghost,fighting-ice).
+normal_effectiveness(ghost,fighting-poison).
+normal_effectiveness(ghost,fighting-ground).
+normal_effectiveness(ghost,fighting-flying).
+normal_effectiveness(ghost,fighting-bug).
+normal_effectiveness(ghost,fighting-rock).
+normal_effectiveness(ghost,fighting-dragon).
+normal_effectiveness(ghost,fighting-steel).
+normal_effectiveness(ghost,fighting-fairy).
+normal_effectiveness(ghost,poison-fire).
+normal_effectiveness(ghost,poison-water).
+normal_effectiveness(ghost,poison-electric).
+normal_effectiveness(ghost,poison-grass).
+normal_effectiveness(ghost,poison-ice).
+normal_effectiveness(ghost,poison-fighting).
+normal_effectiveness(ghost,poison-ground).
+normal_effectiveness(ghost,poison-flying).
+normal_effectiveness(ghost,poison-bug).
+normal_effectiveness(ghost,poison-rock).
+normal_effectiveness(ghost,poison-dragon).
+normal_effectiveness(ghost,poison-steel).
+normal_effectiveness(ghost,poison-fairy).
+normal_effectiveness(ghost,ground-fire).
+normal_effectiveness(ghost,ground-water).
+normal_effectiveness(ghost,ground-electric).
+normal_effectiveness(ghost,ground-grass).
+normal_effectiveness(ghost,ground-ice).
+normal_effectiveness(ghost,ground-fighting).
+normal_effectiveness(ghost,ground-poison).
+normal_effectiveness(ghost,ground-flying).
+normal_effectiveness(ghost,ground-bug).
+normal_effectiveness(ghost,ground-rock).
+normal_effectiveness(ghost,ground-dragon).
+normal_effectiveness(ghost,ground-steel).
+normal_effectiveness(ghost,ground-fairy).
+normal_effectiveness(ghost,flying-fire).
+normal_effectiveness(ghost,flying-water).
+normal_effectiveness(ghost,flying-electric).
+normal_effectiveness(ghost,flying-grass).
+normal_effectiveness(ghost,flying-ice).
+normal_effectiveness(ghost,flying-fighting).
+normal_effectiveness(ghost,flying-poison).
+normal_effectiveness(ghost,flying-ground).
+normal_effectiveness(ghost,flying-bug).
+normal_effectiveness(ghost,flying-rock).
+normal_effectiveness(ghost,flying-dragon).
+normal_effectiveness(ghost,flying-steel).
+normal_effectiveness(ghost,flying-fairy).
+normal_effectiveness(ghost,psychic-dark).
+normal_effectiveness(ghost,bug-fire).
+normal_effectiveness(ghost,bug-water).
+normal_effectiveness(ghost,bug-electric).
+normal_effectiveness(ghost,bug-grass).
+normal_effectiveness(ghost,bug-ice).
+normal_effectiveness(ghost,bug-fighting).
+normal_effectiveness(ghost,bug-poison).
+normal_effectiveness(ghost,bug-ground).
+normal_effectiveness(ghost,bug-flying).
+normal_effectiveness(ghost,bug-rock).
+normal_effectiveness(ghost,bug-dragon).
+normal_effectiveness(ghost,bug-steel).
+normal_effectiveness(ghost,bug-fairy).
+normal_effectiveness(ghost,rock-fire).
+normal_effectiveness(ghost,rock-water).
+normal_effectiveness(ghost,rock-electric).
+normal_effectiveness(ghost,rock-grass).
+normal_effectiveness(ghost,rock-ice).
+normal_effectiveness(ghost,rock-fighting).
+normal_effectiveness(ghost,rock-poison).
+normal_effectiveness(ghost,rock-ground).
+normal_effectiveness(ghost,rock-flying).
+normal_effectiveness(ghost,rock-bug).
+normal_effectiveness(ghost,rock-dragon).
+normal_effectiveness(ghost,rock-steel).
+normal_effectiveness(ghost,rock-fairy).
+normal_effectiveness(ghost,ghost-dark).
+normal_effectiveness(ghost,dragon-fire).
+normal_effectiveness(ghost,dragon-water).
+normal_effectiveness(ghost,dragon-electric).
+normal_effectiveness(ghost,dragon-grass).
+normal_effectiveness(ghost,dragon-ice).
+normal_effectiveness(ghost,dragon-fighting).
+normal_effectiveness(ghost,dragon-poison).
+normal_effectiveness(ghost,dragon-ground).
+normal_effectiveness(ghost,dragon-flying).
+normal_effectiveness(ghost,dragon-bug).
+normal_effectiveness(ghost,dragon-rock).
+normal_effectiveness(ghost,dragon-steel).
+normal_effectiveness(ghost,dragon-fairy).
+normal_effectiveness(ghost,dark-psychic).
+normal_effectiveness(ghost,dark-ghost).
+normal_effectiveness(ghost,steel-fire).
+normal_effectiveness(ghost,steel-water).
+normal_effectiveness(ghost,steel-electric).
+normal_effectiveness(ghost,steel-grass).
+normal_effectiveness(ghost,steel-ice).
+normal_effectiveness(ghost,steel-fighting).
+normal_effectiveness(ghost,steel-poison).
+normal_effectiveness(ghost,steel-ground).
+normal_effectiveness(ghost,steel-flying).
+normal_effectiveness(ghost,steel-bug).
+normal_effectiveness(ghost,steel-rock).
+normal_effectiveness(ghost,steel-dragon).
+normal_effectiveness(ghost,steel-fairy).
+normal_effectiveness(ghost,fairy-fire).
+normal_effectiveness(ghost,fairy-water).
+normal_effectiveness(ghost,fairy-electric).
+normal_effectiveness(ghost,fairy-grass).
+normal_effectiveness(ghost,fairy-ice).
+normal_effectiveness(ghost,fairy-fighting).
+normal_effectiveness(ghost,fairy-poison).
+normal_effectiveness(ghost,fairy-ground).
+normal_effectiveness(ghost,fairy-flying).
+normal_effectiveness(ghost,fairy-bug).
+normal_effectiveness(ghost,fairy-rock).
+normal_effectiveness(ghost,fairy-dragon).
+normal_effectiveness(ghost,fairy-steel).
 normal_effectiveness(dragon,normal).
 normal_effectiveness(dragon,fire).
 normal_effectiveness(dragon,water).
@@ -4579,1291 +3328,2511 @@ normal_effectiveness(dragon,psychic).
 normal_effectiveness(dragon,bug).
 normal_effectiveness(dragon,rock).
 normal_effectiveness(dragon,ghost).
-super_effectiveness(dragon,dragon).
 normal_effectiveness(dragon,dark).
-weakness(dragon,steel).
-dano_zero(dragon,fairy).
 normal_effectiveness(dragon,normal-fire).
-normal_effectiveness(dragon, normal-water).
-normal_effectiveness(dragon, normal-electric).
-normal_effectiveness(dragon, normal-grass).
-normal_effectiveness(dragon, normal-ice).
-normal_effectiveness(dragon, normal-fighting).
-normal_effectiveness(dragon, normal-poison).
-normal_effectiveness(dragon, normal-ground).
-normal_effectiveness(dragon, normal-flying).
-normal_effectiveness(dragon, normal-psychic).
-normal_effectiveness(dragon, normal-bug).
-normal_effectiveness(dragon, normal-rock).
-normal_effectiveness(dragon, normal-ghost).
-super_effectiveness(dragon, normal-dragon).
-normal_effectiveness(dragon, normal-dark).
-weakness(dragon, normal-steel).
-dano_zero(dragon, normal-fairy).
-normal_effectiveness(dragon, fire-normal).
-normal_effectiveness(dragon, fire-water).
-normal_effectiveness(dragon, fire-electric).
-normal_effectiveness(dragon, fire-grass).
-normal_effectiveness(dragon, fire-ice).
-normal_effectiveness(dragon, fire-fighting).
-normal_effectiveness(dragon, fire-poison).
-normal_effectiveness(dragon, fire-ground).
-normal_effectiveness(dragon, fire-flying).
-normal_effectiveness(dragon, fire-psychic).
-normal_effectiveness(dragon, fire-bug).
-normal_effectiveness(dragon, fire-rock).
-normal_effectiveness(dragon, fire-ghost).
-super_effectiveness(dragon, fire-dragon).
-normal_effectiveness(dragon, fire-dark).
-weakness(dragon, fire-steel).
-dano_zero(dragon, fire-fairy).
-normal_effectiveness(dragon, water-normal).
-normal_effectiveness(dragon, water-fire).
-normal_effectiveness(dragon, water-electric).
-normal_effectiveness(dragon, water-grass).
-normal_effectiveness(dragon, water-ice).
-normal_effectiveness(dragon, water-fighting).
-normal_effectiveness(dragon, water-poison).
-normal_effectiveness(dragon, water-ground).
-normal_effectiveness(dragon, water-flying).
-normal_effectiveness(dragon, water-psychic).
-normal_effectiveness(dragon, water-bug).
-normal_effectiveness(dragon, water-rock).
-normal_effectiveness(dragon, water-ghost).
-super_effectiveness(dragon, water-dragon).
-normal_effectiveness(dragon, water-dark).
-weakness(dragon, water-steel).
-dano_zero(dragon, water-fairy).
-normal_effectiveness(dragon, electric-normal).
-normal_effectiveness(dragon, electric-fire).
-normal_effectiveness(dragon, electric-water).
-normal_effectiveness(dragon, electric-grass).
-normal_effectiveness(dragon, electric-ice).
-normal_effectiveness(dragon, electric-fighting).
-normal_effectiveness(dragon, electric-poison).
-normal_effectiveness(dragon, electric-ground).
-normal_effectiveness(dragon, electric-flying).
-normal_effectiveness(dragon, electric-psychic).
-normal_effectiveness(dragon, electric-bug).
-normal_effectiveness(dragon, electric-rock).
-normal_effectiveness(dragon, electric-ghost).
-super_effectiveness(dragon, electric-dragon).
-normal_effectiveness(dragon, electric-dark).
-weakness(dragon, electric-steel).
-dano_zero(dragon, electric-fairy).
-normal_effectiveness(dragon, grass-normal).
-normal_effectiveness(dragon, grass-fire).
-normal_effectiveness(dragon, grass-water).
-normal_effectiveness(dragon, grass-electric).
-normal_effectiveness(dragon, grass-ice).
-normal_effectiveness(dragon, grass-fighting).
-normal_effectiveness(dragon, grass-poison).
-normal_effectiveness(dragon, grass-ground).
-normal_effectiveness(dragon, grass-flying).
-normal_effectiveness(dragon, grass-psychic).
-normal_effectiveness(dragon, grass-bug).
-normal_effectiveness(dragon, grass-rock).
-normal_effectiveness(dragon, grass-ghost).
-super_effectiveness(dragon, grass-dragon).
-normal_effectiveness(dragon, grass-dark).
-weakness(dragon, grass-steel).
-dano_zero(dragon, grass-fairy).
-normal_effectiveness(dragon, ice-normal).
-normal_effectiveness(dragon, ice-fire).
-normal_effectiveness(dragon, ice-water).
-normal_effectiveness(dragon, ice-electric).
-normal_effectiveness(dragon, ice-grass).
-normal_effectiveness(dragon, ice-fighting).
-normal_effectiveness(dragon, ice-poison).
-normal_effectiveness(dragon, ice-ground).
-normal_effectiveness(dragon, ice-flying).
-normal_effectiveness(dragon, ice-psychic).
-normal_effectiveness(dragon, ice-bug).
-normal_effectiveness(dragon, ice-rock).
-normal_effectiveness(dragon, ice-ghost).
-super_effectiveness(dragon, ice-dragon).
-normal_effectiveness(dragon, ice-dark).
-weakness(dragon, ice-steel).
-dano_zero(dragon, ice-fairy).
-normal_effectiveness(dragon, fighting-normal).
-normal_effectiveness(dragon, fighting-fire).
-normal_effectiveness(dragon, fighting-water).
-normal_effectiveness(dragon, fighting-electric).
-normal_effectiveness(dragon, fighting-grass).
-normal_effectiveness(dragon, fighting-ice).
-normal_effectiveness(dragon, fighting-poison).
-normal_effectiveness(dragon, fighting-ground).
-normal_effectiveness(dragon, fighting-flying).
-normal_effectiveness(dragon, fighting-psychic).
-normal_effectiveness(dragon, fighting-bug).
-normal_effectiveness(dragon, fighting-rock).
-normal_effectiveness(dragon, fighting-ghost).
-super_effectiveness(dragon, fighting-dragon).
-normal_effectiveness(dragon, fighting-dark).
-weakness(dragon, fighting-steel).
-dano_zero(dragon, fighting-fairy).
-normal_effectiveness(dragon, poison-normal).
-normal_effectiveness(dragon, poison-fire).
-normal_effectiveness(dragon, poison-water).
-normal_effectiveness(dragon, poison-electric).
-normal_effectiveness(dragon, poison-grass).
-normal_effectiveness(dragon, poison-ice).
-normal_effectiveness(dragon, poison-fighting).
-normal_effectiveness(dragon, poison-ground).
-normal_effectiveness(dragon, poison-flying).
-normal_effectiveness(dragon, poison-psychic).
-normal_effectiveness(dragon, poison-bug).
-normal_effectiveness(dragon, poison-rock).
-normal_effectiveness(dragon, poison-ghost).
-super_effectiveness(dragon, poison-dragon).
-normal_effectiveness(dragon, poison-dark).
-weakness(dragon, poison-steel).
-dano_zero(dragon, poison-fairy).
-normal_effectiveness(dragon, ground-normal).
-normal_effectiveness(dragon, ground-fire).
-normal_effectiveness(dragon, ground-water).
-normal_effectiveness(dragon, ground-electric).
-normal_effectiveness(dragon, ground-grass).
-normal_effectiveness(dragon, ground-ice).
-normal_effectiveness(dragon, ground-fighting).
-normal_effectiveness(dragon, ground-poison).
-normal_effectiveness(dragon, ground-flying).
-normal_effectiveness(dragon, ground-psychic).
-normal_effectiveness(dragon, ground-bug).
-normal_effectiveness(dragon, ground-rock).
-normal_effectiveness(dragon, ground-ghost).
-super_effectiveness(dragon, ground-dragon).
-normal_effectiveness(dragon, ground-dark).
-weakness(dragon, ground-steel).
-dano_zero(dragon, ground-fairy).
-normal_effectiveness(dragon, flying-normal).
-normal_effectiveness(dragon, flying-fire).
-normal_effectiveness(dragon, flying-water).
-normal_effectiveness(dragon, flying-electric).
-normal_effectiveness(dragon, flying-grass).
-normal_effectiveness(dragon, flying-ice).
-normal_effectiveness(dragon, flying-fighting).
-normal_effectiveness(dragon, flying-poison).
-normal_effectiveness(dragon, flying-ground).
-normal_effectiveness(dragon, flying-psychic).
-normal_effectiveness(dragon, flying-bug).
-normal_effectiveness(dragon, flying-rock).
-normal_effectiveness(dragon, flying-ghost).
-super_effectiveness(dragon, flying-dragon).
-normal_effectiveness(dragon, flying-dark).
-weakness(dragon, flying-steel).
-dano_zero(dragon, flying-fairy).
-normal_effectiveness(dragon, psychic-normal).
-normal_effectiveness(dragon, psychic-fire).
-normal_effectiveness(dragon, psychic-water).
-normal_effectiveness(dragon, psychic-electric).
-normal_effectiveness(dragon, psychic-grass).
-normal_effectiveness(dragon, psychic-ice).
-normal_effectiveness(dragon, psychic-fighting).
-normal_effectiveness(dragon, psychic-poison).
-normal_effectiveness(dragon, psychic-ground).
-normal_effectiveness(dragon, psychic-flying).
-normal_effectiveness(dragon, psychic-bug).
-normal_effectiveness(dragon, psychic-rock).
-normal_effectiveness(dragon, psychic-ghost).
-super_effectiveness(dragon, psychic-dragon).
-normal_effectiveness(dragon, psychic-dark).
-weakness(dragon, psychic-steel).
-dano_zero(dragon, psychic-fairy).
-normal_effectiveness(dragon, bug-normal).
-normal_effectiveness(dragon, bug-fire).
-normal_effectiveness(dragon, bug-water).
-normal_effectiveness(dragon, bug-electric).
-normal_effectiveness(dragon, bug-grass).
-normal_effectiveness(dragon, bug-ice).
-normal_effectiveness(dragon, bug-fighting).
-normal_effectiveness(dragon, bug-poison).
-normal_effectiveness(dragon, bug-ground).
-normal_effectiveness(dragon, bug-flying).
-normal_effectiveness(dragon, bug-psychic).
-normal_effectiveness(dragon, bug-rock).
-normal_effectiveness(dragon, bug-ghost).
-super_effectiveness(dragon, bug-dragon).
-normal_effectiveness(dragon, bug-dark).
-weakness(dragon, bug-steel).
-dano_zero(dragon, bug-fairy).
-normal_effectiveness(dragon, rock-normal).
-normal_effectiveness(dragon, rock-fire).
-normal_effectiveness(dragon, rock-water).
-normal_effectiveness(dragon, rock-electric).
-normal_effectiveness(dragon, rock-grass).
-normal_effectiveness(dragon, rock-ice).
-normal_effectiveness(dragon, rock-fighting).
-normal_effectiveness(dragon, rock-poison).
-normal_effectiveness(dragon, rock-ground).
-normal_effectiveness(dragon, rock-flying).
-normal_effectiveness(dragon, rock-psychic).
-normal_effectiveness(dragon, rock-bug).
-normal_effectiveness(dragon, rock-ghost).
-super_effectiveness(dragon, rock-dragon).
-normal_effectiveness(dragon, rock-dark).
-weakness(dragon, rock-steel).
-dano_zero(dragon, rock-fairy).
-normal_effectiveness(dragon, ghost-normal).
-normal_effectiveness(dragon, ghost-fire).
-normal_effectiveness(dragon, ghost-water).
-normal_effectiveness(dragon, ghost-electric).
-normal_effectiveness(dragon, ghost-grass).
-normal_effectiveness(dragon, ghost-ice).
-normal_effectiveness(dragon, ghost-fighting).
-normal_effectiveness(dragon, ghost-poison).
-normal_effectiveness(dragon, ghost-ground).
-normal_effectiveness(dragon, ghost-flying).
-normal_effectiveness(dragon, ghost-psychic).
-normal_effectiveness(dragon, ghost-bug).
-normal_effectiveness(dragon, ghost-rock).
-super_effectiveness(dragon, ghost-dragon).
-normal_effectiveness(dragon, ghost-dark).
-weakness(dragon, ghost-steel).
-dano_zero(dragon, ghost-fairy).
-super_effectiveness(dragon, dragon-normal).
-super_effectiveness(dragon, dragon-fire).
-super_effectiveness(dragon, dragon-water).
-super_effectiveness(dragon, dragon-electric).
-super_effectiveness(dragon, dragon-grass).
-super_effectiveness(dragon, dragon-ice).
-super_effectiveness(dragon, dragon-fighting).
-super_effectiveness(dragon, dragon-poison).
-super_effectiveness(dragon, dragon-ground).
-super_effectiveness(dragon, dragon-flying).
-super_effectiveness(dragon, dragon-psychic).
-super_effectiveness(dragon, dragon-bug).
-super_effectiveness(dragon, dragon-rock).
-super_effectiveness(dragon, dragon-ghost).
-super_effectiveness(dragon, dragon-dark).
-normal_effectiveness(dragon, dragon-steel).
-dano_zero(dragon, dragon-fairy).
-normal_effectiveness(dragon, dark-normal).
-normal_effectiveness(dragon, dark-fire).
-normal_effectiveness(dragon, dark-water).
-normal_effectiveness(dragon, dark-electric).
-normal_effectiveness(dragon, dark-grass).
-normal_effectiveness(dragon, dark-ice).
-normal_effectiveness(dragon, dark-fighting).
-normal_effectiveness(dragon, dark-poison).
-normal_effectiveness(dragon, dark-ground).
-normal_effectiveness(dragon, dark-flying).
-normal_effectiveness(dragon, dark-psychic).
-normal_effectiveness(dragon, dark-bug).
-normal_effectiveness(dragon, dark-rock).
-normal_effectiveness(dragon, dark-ghost).
-super_effectiveness(dragon, dark-dragon).
-weakness(dragon, dark-steel).
-dano_zero(dragon, dark-fairy).
-weakness(dragon, steel-normal).
-weakness(dragon, steel-fire).
-weakness(dragon, steel-water).
-weakness(dragon, steel-electric).
-weakness(dragon, steel-grass).
-weakness(dragon, steel-ice).
-weakness(dragon, steel-fighting).
-weakness(dragon, steel-poison).
-weakness(dragon, steel-ground).
-weakness(dragon, steel-flying).
-weakness(dragon, steel-psychic).
-weakness(dragon, steel-bug).
-weakness(dragon, steel-rock).
-weakness(dragon, steel-ghost).
-normal_effectiveness(dragon, steel-dragon).
-weakness(dragon, steel-dark).
-dano_zero(dragon, steel-fairy).
-dano_zero(dragon, fairy-normal).
-dano_zero(dragon, fairy-fire).
-dano_zero(dragon, fairy-water).
-dano_zero(dragon, fairy-electric).
-dano_zero(dragon, fairy-grass).
-dano_zero(dragon, fairy-ice).
-dano_zero(dragon, fairy-fighting).
-dano_zero(dragon, fairy-poison).
-dano_zero(dragon, fairy-ground).
-dano_zero(dragon, fairy-flying).
-dano_zero(dragon, fairy-psychic).
-dano_zero(dragon, fairy-bug).
-dano_zero(dragon, fairy-rock).
-dano_zero(dragon, fairy-ghost).
-dano_zero(dragon, fairy-dragon).
-dano_zero(dragon, fairy-dark).
-dano_zero(dragon, fairy-steel).
-
-/* Effectiveness dark */
+normal_effectiveness(dragon,normal-water).
+normal_effectiveness(dragon,normal-electric).
+normal_effectiveness(dragon,normal-grass).
+normal_effectiveness(dragon,normal-ice).
+normal_effectiveness(dragon,normal-fighting).
+normal_effectiveness(dragon,normal-poison).
+normal_effectiveness(dragon,normal-ground).
+normal_effectiveness(dragon,normal-flying).
+normal_effectiveness(dragon,normal-psychic).
+normal_effectiveness(dragon,normal-bug).
+normal_effectiveness(dragon,normal-rock).
+normal_effectiveness(dragon,normal-ghost).
+normal_effectiveness(dragon,normal-dark).
+normal_effectiveness(dragon,fire-normal).
+normal_effectiveness(dragon,fire-water).
+normal_effectiveness(dragon,fire-electric).
+normal_effectiveness(dragon,fire-grass).
+normal_effectiveness(dragon,fire-ice).
+normal_effectiveness(dragon,fire-fighting).
+normal_effectiveness(dragon,fire-poison).
+normal_effectiveness(dragon,fire-ground).
+normal_effectiveness(dragon,fire-flying).
+normal_effectiveness(dragon,fire-psychic).
+normal_effectiveness(dragon,fire-bug).
+normal_effectiveness(dragon,fire-rock).
+normal_effectiveness(dragon,fire-ghost).
+normal_effectiveness(dragon,fire-dark).
+normal_effectiveness(dragon,water-normal).
+normal_effectiveness(dragon,water-fire).
+normal_effectiveness(dragon,water-electric).
+normal_effectiveness(dragon,water-grass).
+normal_effectiveness(dragon,water-ice).
+normal_effectiveness(dragon,water-fighting).
+normal_effectiveness(dragon,water-poison).
+normal_effectiveness(dragon,water-ground).
+normal_effectiveness(dragon,water-flying).
+normal_effectiveness(dragon,water-psychic).
+normal_effectiveness(dragon,water-bug).
+normal_effectiveness(dragon,water-rock).
+normal_effectiveness(dragon,water-ghost).
+normal_effectiveness(dragon,water-dark).
+normal_effectiveness(dragon,electric-normal).
+normal_effectiveness(dragon,electric-fire).
+normal_effectiveness(dragon,electric-water).
+normal_effectiveness(dragon,electric-grass).
+normal_effectiveness(dragon,electric-ice).
+normal_effectiveness(dragon,electric-fighting).
+normal_effectiveness(dragon,electric-poison).
+normal_effectiveness(dragon,electric-ground).
+normal_effectiveness(dragon,electric-flying).
+normal_effectiveness(dragon,electric-psychic).
+normal_effectiveness(dragon,electric-bug).
+normal_effectiveness(dragon,electric-rock).
+normal_effectiveness(dragon,electric-ghost).
+normal_effectiveness(dragon,electric-dark).
+normal_effectiveness(dragon,grass-normal).
+normal_effectiveness(dragon,grass-fire).
+normal_effectiveness(dragon,grass-water).
+normal_effectiveness(dragon,grass-electric).
+normal_effectiveness(dragon,grass-ice).
+normal_effectiveness(dragon,grass-fighting).
+normal_effectiveness(dragon,grass-poison).
+normal_effectiveness(dragon,grass-ground).
+normal_effectiveness(dragon,grass-flying).
+normal_effectiveness(dragon,grass-psychic).
+normal_effectiveness(dragon,grass-bug).
+normal_effectiveness(dragon,grass-rock).
+normal_effectiveness(dragon,grass-ghost).
+normal_effectiveness(dragon,grass-dark).
+normal_effectiveness(dragon,ice-normal).
+normal_effectiveness(dragon,ice-fire).
+normal_effectiveness(dragon,ice-water).
+normal_effectiveness(dragon,ice-electric).
+normal_effectiveness(dragon,ice-grass).
+normal_effectiveness(dragon,ice-fighting).
+normal_effectiveness(dragon,ice-poison).
+normal_effectiveness(dragon,ice-ground).
+normal_effectiveness(dragon,ice-flying).
+normal_effectiveness(dragon,ice-psychic).
+normal_effectiveness(dragon,ice-bug).
+normal_effectiveness(dragon,ice-rock).
+normal_effectiveness(dragon,ice-ghost).
+normal_effectiveness(dragon,ice-dark).
+normal_effectiveness(dragon,fighting-normal).
+normal_effectiveness(dragon,fighting-fire).
+normal_effectiveness(dragon,fighting-water).
+normal_effectiveness(dragon,fighting-electric).
+normal_effectiveness(dragon,fighting-grass).
+normal_effectiveness(dragon,fighting-ice).
+normal_effectiveness(dragon,fighting-poison).
+normal_effectiveness(dragon,fighting-ground).
+normal_effectiveness(dragon,fighting-flying).
+normal_effectiveness(dragon,fighting-psychic).
+normal_effectiveness(dragon,fighting-bug).
+normal_effectiveness(dragon,fighting-rock).
+normal_effectiveness(dragon,fighting-ghost).
+normal_effectiveness(dragon,fighting-dark).
+normal_effectiveness(dragon,poison-normal).
+normal_effectiveness(dragon,poison-fire).
+normal_effectiveness(dragon,poison-water).
+normal_effectiveness(dragon,poison-electric).
+normal_effectiveness(dragon,poison-grass).
+normal_effectiveness(dragon,poison-ice).
+normal_effectiveness(dragon,poison-fighting).
+normal_effectiveness(dragon,poison-ground).
+normal_effectiveness(dragon,poison-flying).
+normal_effectiveness(dragon,poison-psychic).
+normal_effectiveness(dragon,poison-bug).
+normal_effectiveness(dragon,poison-rock).
+normal_effectiveness(dragon,poison-ghost).
+normal_effectiveness(dragon,poison-dark).
+normal_effectiveness(dragon,ground-normal).
+normal_effectiveness(dragon,ground-fire).
+normal_effectiveness(dragon,ground-water).
+normal_effectiveness(dragon,ground-electric).
+normal_effectiveness(dragon,ground-grass).
+normal_effectiveness(dragon,ground-ice).
+normal_effectiveness(dragon,ground-fighting).
+normal_effectiveness(dragon,ground-poison).
+normal_effectiveness(dragon,ground-flying).
+normal_effectiveness(dragon,ground-psychic).
+normal_effectiveness(dragon,ground-bug).
+normal_effectiveness(dragon,ground-rock).
+normal_effectiveness(dragon,ground-ghost).
+normal_effectiveness(dragon,ground-dark).
+normal_effectiveness(dragon,flying-normal).
+normal_effectiveness(dragon,flying-fire).
+normal_effectiveness(dragon,flying-water).
+normal_effectiveness(dragon,flying-electric).
+normal_effectiveness(dragon,flying-grass).
+normal_effectiveness(dragon,flying-ice).
+normal_effectiveness(dragon,flying-fighting).
+normal_effectiveness(dragon,flying-poison).
+normal_effectiveness(dragon,flying-ground).
+normal_effectiveness(dragon,flying-psychic).
+normal_effectiveness(dragon,flying-bug).
+normal_effectiveness(dragon,flying-rock).
+normal_effectiveness(dragon,flying-ghost).
+normal_effectiveness(dragon,flying-dark).
+normal_effectiveness(dragon,psychic-normal).
+normal_effectiveness(dragon,psychic-fire).
+normal_effectiveness(dragon,psychic-water).
+normal_effectiveness(dragon,psychic-electric).
+normal_effectiveness(dragon,psychic-grass).
+normal_effectiveness(dragon,psychic-ice).
+normal_effectiveness(dragon,psychic-fighting).
+normal_effectiveness(dragon,psychic-poison).
+normal_effectiveness(dragon,psychic-ground).
+normal_effectiveness(dragon,psychic-flying).
+normal_effectiveness(dragon,psychic-bug).
+normal_effectiveness(dragon,psychic-rock).
+normal_effectiveness(dragon,psychic-ghost).
+normal_effectiveness(dragon,psychic-dark).
+normal_effectiveness(dragon,bug-normal).
+normal_effectiveness(dragon,bug-fire).
+normal_effectiveness(dragon,bug-water).
+normal_effectiveness(dragon,bug-electric).
+normal_effectiveness(dragon,bug-grass).
+normal_effectiveness(dragon,bug-ice).
+normal_effectiveness(dragon,bug-fighting).
+normal_effectiveness(dragon,bug-poison).
+normal_effectiveness(dragon,bug-ground).
+normal_effectiveness(dragon,bug-flying).
+normal_effectiveness(dragon,bug-psychic).
+normal_effectiveness(dragon,bug-rock).
+normal_effectiveness(dragon,bug-ghost).
+normal_effectiveness(dragon,bug-dark).
+normal_effectiveness(dragon,rock-normal).
+normal_effectiveness(dragon,rock-fire).
+normal_effectiveness(dragon,rock-water).
+normal_effectiveness(dragon,rock-electric).
+normal_effectiveness(dragon,rock-grass).
+normal_effectiveness(dragon,rock-ice).
+normal_effectiveness(dragon,rock-fighting).
+normal_effectiveness(dragon,rock-poison).
+normal_effectiveness(dragon,rock-ground).
+normal_effectiveness(dragon,rock-flying).
+normal_effectiveness(dragon,rock-psychic).
+normal_effectiveness(dragon,rock-bug).
+normal_effectiveness(dragon,rock-ghost).
+normal_effectiveness(dragon,rock-dark).
+normal_effectiveness(dragon,ghost-normal).
+normal_effectiveness(dragon,ghost-fire).
+normal_effectiveness(dragon,ghost-water).
+normal_effectiveness(dragon,ghost-electric).
+normal_effectiveness(dragon,ghost-grass).
+normal_effectiveness(dragon,ghost-ice).
+normal_effectiveness(dragon,ghost-fighting).
+normal_effectiveness(dragon,ghost-poison).
+normal_effectiveness(dragon,ghost-ground).
+normal_effectiveness(dragon,ghost-flying).
+normal_effectiveness(dragon,ghost-psychic).
+normal_effectiveness(dragon,ghost-bug).
+normal_effectiveness(dragon,ghost-rock).
+normal_effectiveness(dragon,ghost-dark).
+normal_effectiveness(dragon,dragon-steel).
+normal_effectiveness(dragon,dark-normal).
+normal_effectiveness(dragon,dark-fire).
+normal_effectiveness(dragon,dark-water).
+normal_effectiveness(dragon,dark-electric).
+normal_effectiveness(dragon,dark-grass).
+normal_effectiveness(dragon,dark-ice).
+normal_effectiveness(dragon,dark-fighting).
+normal_effectiveness(dragon,dark-poison).
+normal_effectiveness(dragon,dark-ground).
+normal_effectiveness(dragon,dark-flying).
+normal_effectiveness(dragon,dark-psychic).
+normal_effectiveness(dragon,dark-bug).
+normal_effectiveness(dragon,dark-rock).
+normal_effectiveness(dragon,dark-ghost).
+normal_effectiveness(dragon,steel-dragon).
 normal_effectiveness(dark,normal).
 normal_effectiveness(dark,fire).
 normal_effectiveness(dark,water).
 normal_effectiveness(dark,electric).
 normal_effectiveness(dark,grass).
 normal_effectiveness(dark,ice).
-weakness(dark,fighting).
 normal_effectiveness(dark,poison).
 normal_effectiveness(dark,ground).
 normal_effectiveness(dark,flying).
-super_effectiveness(dark,psychic).
 normal_effectiveness(dark,bug).
 normal_effectiveness(dark,rock).
-super_effectiveness(dark,ghost).
 normal_effectiveness(dark,dragon).
-weakness(dark,dark).
 normal_effectiveness(dark,steel).
-weakness(dark,fairy).
 normal_effectiveness(dark,normal-fire).
-normal_effectiveness(dark, normal-water).
-normal_effectiveness(dark, normal-electric).
-normal_effectiveness(dark, normal-grass).
-normal_effectiveness(dark, normal-ice).
-weakness(dark, normal-fighting).
-normal_effectiveness(dark, normal-poison).
-normal_effectiveness(dark, normal-ground).
-normal_effectiveness(dark, normal-flying).
-super_effectiveness(dark, normal-psychic).
-normal_effectiveness(dark, normal-bug).
-normal_effectiveness(dark, normal-rock).
-super_effectiveness(dark, normal-ghost).
-normal_effectiveness(dark, normal-dragon).
-weakness(dark, normal-dark).
-normal_effectiveness(dark, normal-steel).
-weakness(dark, normal-fairy).
-normal_effectiveness(dark, fire-normal).
-normal_effectiveness(dark, fire-water).
-normal_effectiveness(dark, fire-electric).
-normal_effectiveness(dark, fire-grass).
-normal_effectiveness(dark, fire-ice).
-weakness(dark, fire-fighting).
-normal_effectiveness(dark, fire-poison).
-normal_effectiveness(dark, fire-ground).
-normal_effectiveness(dark, fire-flying).
-super_effectiveness(dark, fire-psychic).
-normal_effectiveness(dark, fire-bug).
-normal_effectiveness(dark, fire-rock).
-super_effectiveness(dark, fire-ghost).
-normal_effectiveness(dark, fire-dragon).
-weakness(dark, fire-dark).
-normal_effectiveness(dark, fire-steel).
-weakness(dark, fire-fairy).
-normal_effectiveness(dark, water-normal).
-normal_effectiveness(dark, water-fire).
-normal_effectiveness(dark, water-electric).
-normal_effectiveness(dark, water-grass).
-normal_effectiveness(dark, water-ice).
-weakness(dark, water-fighting).
-normal_effectiveness(dark, water-poison).
-normal_effectiveness(dark, water-ground).
-normal_effectiveness(dark, water-flying).
-super_effectiveness(dark, water-psychic).
-normal_effectiveness(dark, water-bug).
-normal_effectiveness(dark, water-rock).
-super_effectiveness(dark, water-ghost).
-normal_effectiveness(dark, water-dragon).
-weakness(dark, water-dark).
-normal_effectiveness(dark, water-steel).
-weakness(dark, water-fairy).
-normal_effectiveness(dark, electric-normal).
-normal_effectiveness(dark, electric-fire).
-normal_effectiveness(dark, electric-water).
-normal_effectiveness(dark, electric-grass).
-normal_effectiveness(dark, electric-ice).
-weakness(dark, electric-fighting).
-normal_effectiveness(dark, electric-poison).
-normal_effectiveness(dark, electric-ground).
-normal_effectiveness(dark, electric-flying).
-super_effectiveness(dark, electric-psychic).
-normal_effectiveness(dark, electric-bug).
-normal_effectiveness(dark, electric-rock).
-super_effectiveness(dark, electric-ghost).
-normal_effectiveness(dark, electric-dragon).
-weakness(dark, electric-dark).
-normal_effectiveness(dark, electric-steel).
-weakness(dark, electric-fairy).
-normal_effectiveness(dark, grass-normal).
-normal_effectiveness(dark, grass-fire).
-normal_effectiveness(dark, grass-water).
-normal_effectiveness(dark, grass-electric).
-normal_effectiveness(dark, grass-ice).
-weakness(dark, grass-fighting).
-normal_effectiveness(dark, grass-poison).
-normal_effectiveness(dark, grass-ground).
-normal_effectiveness(dark, grass-flying).
-super_effectiveness(dark, grass-psychic).
-normal_effectiveness(dark, grass-bug).
-normal_effectiveness(dark, grass-rock).
-super_effectiveness(dark, grass-ghost).
-normal_effectiveness(dark, grass-dragon).
-weakness(dark, grass-dark).
-normal_effectiveness(dark, grass-steel).
-weakness(dark, grass-fairy).
-normal_effectiveness(dark, ice-normal).
-normal_effectiveness(dark, ice-fire).
-normal_effectiveness(dark, ice-water).
-normal_effectiveness(dark, ice-electric).
-normal_effectiveness(dark, ice-grass).
-weakness(dark, ice-fighting).
-normal_effectiveness(dark, ice-poison).
-normal_effectiveness(dark, ice-ground).
-normal_effectiveness(dark, ice-flying).
-super_effectiveness(dark, ice-psychic).
-normal_effectiveness(dark, ice-bug).
-normal_effectiveness(dark, ice-rock).
-super_effectiveness(dark, ice-ghost).
-normal_effectiveness(dark, ice-dragon).
-weakness(dark, ice-dark).
-normal_effectiveness(dark, ice-steel).
-weakness(dark, ice-fairy).
-weakness(dark, fighting-normal).
-weakness(dark, fighting-fire).
-weakness(dark, fighting-water).
-weakness(dark, fighting-electric).
-weakness(dark, fighting-grass).
-weakness(dark, fighting-ice).
-weakness(dark, fighting-poison).
-weakness(dark, fighting-ground).
-weakness(dark, fighting-flying).
-normal_effectiveness(dark, fighting-psychic).
-weakness(dark, fighting-bug).
-weakness(dark, fighting-rock).
-normal_effectiveness(dark, fighting-ghost).
-weakness(dark, fighting-dragon).
-super_weakness(dark, fighting-dark).
-weakness(dark, fighting-steel).
-super_weakness(dark, fighting-fairy).
-normal_effectiveness(dark, poison-normal).
-normal_effectiveness(dark, poison-fire).
-normal_effectiveness(dark, poison-water).
-normal_effectiveness(dark, poison-electric).
-normal_effectiveness(dark, poison-grass).
-normal_effectiveness(dark, poison-ice).
-weakness(dark, poison-fighting).
-normal_effectiveness(dark, poison-ground).
-normal_effectiveness(dark, poison-flying).
-super_effectiveness(dark, poison-psychic).
-normal_effectiveness(dark, poison-bug).
-normal_effectiveness(dark, poison-rock).
-super_effectiveness(dark, poison-ghost).
-normal_effectiveness(dark, poison-dragon).
-weakness(dark, poison-dark).
-normal_effectiveness(dark, poison-steel).
-weakness(dark, poison-fairy).
-normal_effectiveness(dark, ground-normal).
-normal_effectiveness(dark, ground-fire).
-normal_effectiveness(dark, ground-water).
-normal_effectiveness(dark, ground-electric).
-normal_effectiveness(dark, ground-grass).
-normal_effectiveness(dark, ground-ice).
-weakness(dark, ground-fighting).
-normal_effectiveness(dark, ground-poison).
-normal_effectiveness(dark, ground-flying).
-super_effectiveness(dark, ground-psychic).
-normal_effectiveness(dark, ground-bug).
-normal_effectiveness(dark, ground-rock).
-super_effectiveness(dark, ground-ghost).
-normal_effectiveness(dark, ground-dragon).
-weakness(dark, ground-dark).
-normal_effectiveness(dark, ground-steel).
-weakness(dark, ground-fairy).
-normal_effectiveness(dark, flying-normal).
-normal_effectiveness(dark, flying-fire).
-normal_effectiveness(dark, flying-water).
-normal_effectiveness(dark, flying-electric).
-normal_effectiveness(dark, flying-grass).
-normal_effectiveness(dark, flying-ice).
-weakness(dark, flying-fighting).
-normal_effectiveness(dark, flying-poison).
-normal_effectiveness(dark, flying-ground).
-super_effectiveness(dark, flying-psychic).
-normal_effectiveness(dark, flying-bug).
-normal_effectiveness(dark, flying-rock).
-super_effectiveness(dark, flying-ghost).
-normal_effectiveness(dark, flying-dragon).
-weakness(dark, flying-dark).
-normal_effectiveness(dark, flying-steel).
-weakness(dark, flying-fairy).
-super_effectiveness(dark, psychic-normal).
-super_effectiveness(dark, psychic-fire).
-super_effectiveness(dark, psychic-water).
-super_effectiveness(dark, psychic-electric).
-super_effectiveness(dark, psychic-grass).
-super_effectiveness(dark, psychic-ice).
-normal_effectiveness(dark, psychic-fighting).
-super_effectiveness(dark, psychic-poison).
-super_effectiveness(dark, psychic-ground).
-super_effectiveness(dark, psychic-flying).
-super_effectiveness(dark, psychic-bug).
-super_effectiveness(dark, psychic-rock).
-super_vantagem(dark, psychic-ghost).
-super_effectiveness(dark, psychic-dragon).
-normal_effectiveness(dark, psychic-dark).
-super_effectiveness(dark, psychic-steel).
-normal_effectiveness(dark, psychic-fairy).
-normal_effectiveness(dark, bug-normal).
-normal_effectiveness(dark, bug-fire).
-normal_effectiveness(dark, bug-water).
-normal_effectiveness(dark, bug-electric).
-normal_effectiveness(dark, bug-grass).
-normal_effectiveness(dark, bug-ice).
-weakness(dark, bug-fighting).
-normal_effectiveness(dark, bug-poison).
-normal_effectiveness(dark, bug-ground).
-normal_effectiveness(dark, bug-flying).
-super_effectiveness(dark, bug-psychic).
-normal_effectiveness(dark, bug-rock).
-super_effectiveness(dark, bug-ghost).
-normal_effectiveness(dark, bug-dragon).
-weakness(dark, bug-dark).
-normal_effectiveness(dark, bug-steel).
-weakness(dark, bug-fairy).
-normal_effectiveness(dark, rock-normal).
-normal_effectiveness(dark, rock-fire).
-normal_effectiveness(dark, rock-water).
-normal_effectiveness(dark, rock-electric).
-normal_effectiveness(dark, rock-grass).
-normal_effectiveness(dark, rock-ice).
-weakness(dark, rock-fighting).
-normal_effectiveness(dark, rock-poison).
-normal_effectiveness(dark, rock-ground).
-normal_effectiveness(dark, rock-flying).
-super_effectiveness(dark, rock-psychic).
-normal_effectiveness(dark, rock-bug).
-super_effectiveness(dark, rock-ghost).
-normal_effectiveness(dark, rock-dragon).
-weakness(dark, rock-dark).
-normal_effectiveness(dark, rock-steel).
-weakness(dark, rock-fairy).
-super_effectiveness(dark, ghost-normal).
-super_effectiveness(dark, ghost-fire).
-super_effectiveness(dark, ghost-water).
-super_effectiveness(dark, ghost-electric).
-super_effectiveness(dark, ghost-grass).
-super_effectiveness(dark, ghost-ice).
-normal_effectiveness(dark, ghost-fighting).
-super_effectiveness(dark, ghost-poison).
-super_effectiveness(dark, ghost-ground).
-super_effectiveness(dark, ghost-flying).
-super_vantagem(dark, ghost-psychic).
-super_effectiveness(dark, ghost-bug).
-super_effectiveness(dark, ghost-rock).
-super_effectiveness(dark, ghost-dragon).
-normal_effectiveness(dark, ghost-dark).
-super_effectiveness(dark, ghost-steel).
-normal_effectiveness(dark, ghost-fairy).
-normal_effectiveness(dark, dragon-normal).
-normal_effectiveness(dark, dragon-fire).
-normal_effectiveness(dark, dragon-water).
-normal_effectiveness(dark, dragon-electric).
-normal_effectiveness(dark, dragon-grass).
-normal_effectiveness(dark, dragon-ice).
-weakness(dark, dragon-fighting).
-normal_effectiveness(dark, dragon-poison).
-normal_effectiveness(dark, dragon-ground).
-normal_effectiveness(dark, dragon-flying).
-super_effectiveness(dark, dragon-psychic).
-normal_effectiveness(dark, dragon-bug).
-normal_effectiveness(dark, dragon-rock).
-super_effectiveness(dark, dragon-ghost).
-weakness(dark, dragon-dark).
-normal_effectiveness(dark, dragon-steel).
-weakness(dark, dragon-fairy).
-weakness(dark, dark-normal).
-weakness(dark, dark-fire).
-weakness(dark, dark-water).
-weakness(dark, dark-electric).
-weakness(dark, dark-grass).
-weakness(dark, dark-ice).
-super_weakness(dark, dark-fighting).
-weakness(dark, dark-poison).
-weakness(dark, dark-ground).
-weakness(dark, dark-flying).
-normal_effectiveness(dark, dark-psychic).
-weakness(dark, dark-bug).
-weakness(dark, dark-rock).
-normal_effectiveness(dark, dark-ghost).
-weakness(dark, dark-dragon).
-weakness(dark, dark-steel).
-super_weakness(dark, dark-fairy).
-normal_effectiveness(dark, steel-normal).
-normal_effectiveness(dark, steel-fire).
-normal_effectiveness(dark, steel-water).
-normal_effectiveness(dark, steel-electric).
-normal_effectiveness(dark, steel-grass).
-normal_effectiveness(dark, steel-ice).
-weakness(dark, steel-fighting).
-normal_effectiveness(dark, steel-poison).
-normal_effectiveness(dark, steel-ground).
-normal_effectiveness(dark, steel-flying).
-super_effectiveness(dark, steel-psychic).
-normal_effectiveness(dark, steel-bug).
-normal_effectiveness(dark, steel-rock).
-super_effectiveness(dark, steel-ghost).
-normal_effectiveness(dark, steel-dragon).
-weakness(dark, steel-dark).
-weakness(dark, steel-fairy).
-weakness(dark, fairy-normal).
-weakness(dark, fairy-fire).
-weakness(dark, fairy-water).
-weakness(dark, fairy-electric).
-weakness(dark, fairy-grass).
-weakness(dark, fairy-ice).
-super_weakness(dark, fairy-fighting).
-weakness(dark, fairy-poison).
-weakness(dark, fairy-ground).
-weakness(dark, fairy-flying).
-normal_effectiveness(dark, fairy-psychic).
-weakness(dark, fairy-bug).
-weakness(dark, fairy-rock).
-normal_effectiveness(dark, fairy-ghost).
-weakness(dark, fairy-dragon).
-super_weakness(dark, fairy-dark).
-weakness(dark, fairy-steel).
-
-/* Effectiveness steel */
+normal_effectiveness(dark,normal-water).
+normal_effectiveness(dark,normal-electric).
+normal_effectiveness(dark,normal-grass).
+normal_effectiveness(dark,normal-ice).
+normal_effectiveness(dark,normal-poison).
+normal_effectiveness(dark,normal-ground).
+normal_effectiveness(dark,normal-flying).
+normal_effectiveness(dark,normal-bug).
+normal_effectiveness(dark,normal-rock).
+normal_effectiveness(dark,normal-dragon).
+normal_effectiveness(dark,normal-steel).
+normal_effectiveness(dark,fire-normal).
+normal_effectiveness(dark,fire-water).
+normal_effectiveness(dark,fire-electric).
+normal_effectiveness(dark,fire-grass).
+normal_effectiveness(dark,fire-ice).
+normal_effectiveness(dark,fire-poison).
+normal_effectiveness(dark,fire-ground).
+normal_effectiveness(dark,fire-flying).
+normal_effectiveness(dark,fire-bug).
+normal_effectiveness(dark,fire-rock).
+normal_effectiveness(dark,fire-dragon).
+normal_effectiveness(dark,fire-steel).
+normal_effectiveness(dark,water-normal).
+normal_effectiveness(dark,water-fire).
+normal_effectiveness(dark,water-electric).
+normal_effectiveness(dark,water-grass).
+normal_effectiveness(dark,water-ice).
+normal_effectiveness(dark,water-poison).
+normal_effectiveness(dark,water-ground).
+normal_effectiveness(dark,water-flying).
+normal_effectiveness(dark,water-bug).
+normal_effectiveness(dark,water-rock).
+normal_effectiveness(dark,water-dragon).
+normal_effectiveness(dark,water-steel).
+normal_effectiveness(dark,electric-normal).
+normal_effectiveness(dark,electric-fire).
+normal_effectiveness(dark,electric-water).
+normal_effectiveness(dark,electric-grass).
+normal_effectiveness(dark,electric-ice).
+normal_effectiveness(dark,electric-poison).
+normal_effectiveness(dark,electric-ground).
+normal_effectiveness(dark,electric-flying).
+normal_effectiveness(dark,electric-bug).
+normal_effectiveness(dark,electric-rock).
+normal_effectiveness(dark,electric-dragon).
+normal_effectiveness(dark,electric-steel).
+normal_effectiveness(dark,grass-normal).
+normal_effectiveness(dark,grass-fire).
+normal_effectiveness(dark,grass-water).
+normal_effectiveness(dark,grass-electric).
+normal_effectiveness(dark,grass-ice).
+normal_effectiveness(dark,grass-poison).
+normal_effectiveness(dark,grass-ground).
+normal_effectiveness(dark,grass-flying).
+normal_effectiveness(dark,grass-bug).
+normal_effectiveness(dark,grass-rock).
+normal_effectiveness(dark,grass-dragon).
+normal_effectiveness(dark,grass-steel).
+normal_effectiveness(dark,ice-normal).
+normal_effectiveness(dark,ice-fire).
+normal_effectiveness(dark,ice-water).
+normal_effectiveness(dark,ice-electric).
+normal_effectiveness(dark,ice-grass).
+normal_effectiveness(dark,ice-poison).
+normal_effectiveness(dark,ice-ground).
+normal_effectiveness(dark,ice-flying).
+normal_effectiveness(dark,ice-bug).
+normal_effectiveness(dark,ice-rock).
+normal_effectiveness(dark,ice-dragon).
+normal_effectiveness(dark,ice-steel).
+normal_effectiveness(dark,fighting-psychic).
+normal_effectiveness(dark,fighting-ghost).
+normal_effectiveness(dark,poison-normal).
+normal_effectiveness(dark,poison-fire).
+normal_effectiveness(dark,poison-water).
+normal_effectiveness(dark,poison-electric).
+normal_effectiveness(dark,poison-grass).
+normal_effectiveness(dark,poison-ice).
+normal_effectiveness(dark,poison-ground).
+normal_effectiveness(dark,poison-flying).
+normal_effectiveness(dark,poison-bug).
+normal_effectiveness(dark,poison-rock).
+normal_effectiveness(dark,poison-dragon).
+normal_effectiveness(dark,poison-steel).
+normal_effectiveness(dark,ground-normal).
+normal_effectiveness(dark,ground-fire).
+normal_effectiveness(dark,ground-water).
+normal_effectiveness(dark,ground-electric).
+normal_effectiveness(dark,ground-grass).
+normal_effectiveness(dark,ground-ice).
+normal_effectiveness(dark,ground-poison).
+normal_effectiveness(dark,ground-flying).
+normal_effectiveness(dark,ground-bug).
+normal_effectiveness(dark,ground-rock).
+normal_effectiveness(dark,ground-dragon).
+normal_effectiveness(dark,ground-steel).
+normal_effectiveness(dark,flying-normal).
+normal_effectiveness(dark,flying-fire).
+normal_effectiveness(dark,flying-water).
+normal_effectiveness(dark,flying-electric).
+normal_effectiveness(dark,flying-grass).
+normal_effectiveness(dark,flying-ice).
+normal_effectiveness(dark,flying-poison).
+normal_effectiveness(dark,flying-ground).
+normal_effectiveness(dark,flying-bug).
+normal_effectiveness(dark,flying-rock).
+normal_effectiveness(dark,flying-dragon).
+normal_effectiveness(dark,flying-steel).
+normal_effectiveness(dark,psychic-fighting).
+normal_effectiveness(dark,psychic-dark).
+normal_effectiveness(dark,psychic-fairy).
+normal_effectiveness(dark,bug-normal).
+normal_effectiveness(dark,bug-fire).
+normal_effectiveness(dark,bug-water).
+normal_effectiveness(dark,bug-electric).
+normal_effectiveness(dark,bug-grass).
+normal_effectiveness(dark,bug-ice).
+normal_effectiveness(dark,bug-poison).
+normal_effectiveness(dark,bug-ground).
+normal_effectiveness(dark,bug-flying).
+normal_effectiveness(dark,bug-rock).
+normal_effectiveness(dark,bug-dragon).
+normal_effectiveness(dark,bug-steel).
+normal_effectiveness(dark,rock-normal).
+normal_effectiveness(dark,rock-fire).
+normal_effectiveness(dark,rock-water).
+normal_effectiveness(dark,rock-electric).
+normal_effectiveness(dark,rock-grass).
+normal_effectiveness(dark,rock-ice).
+normal_effectiveness(dark,rock-poison).
+normal_effectiveness(dark,rock-ground).
+normal_effectiveness(dark,rock-flying).
+normal_effectiveness(dark,rock-bug).
+normal_effectiveness(dark,rock-dragon).
+normal_effectiveness(dark,rock-steel).
+normal_effectiveness(dark,ghost-fighting).
+normal_effectiveness(dark,ghost-dark).
+normal_effectiveness(dark,ghost-fairy).
+normal_effectiveness(dark,dragon-normal).
+normal_effectiveness(dark,dragon-fire).
+normal_effectiveness(dark,dragon-water).
+normal_effectiveness(dark,dragon-electric).
+normal_effectiveness(dark,dragon-grass).
+normal_effectiveness(dark,dragon-ice).
+normal_effectiveness(dark,dragon-poison).
+normal_effectiveness(dark,dragon-ground).
+normal_effectiveness(dark,dragon-flying).
+normal_effectiveness(dark,dragon-bug).
+normal_effectiveness(dark,dragon-rock).
+normal_effectiveness(dark,dragon-steel).
+normal_effectiveness(dark,dark-psychic).
+normal_effectiveness(dark,dark-ghost).
+normal_effectiveness(dark,steel-normal).
+normal_effectiveness(dark,steel-fire).
+normal_effectiveness(dark,steel-water).
+normal_effectiveness(dark,steel-electric).
+normal_effectiveness(dark,steel-grass).
+normal_effectiveness(dark,steel-ice).
+normal_effectiveness(dark,steel-poison).
+normal_effectiveness(dark,steel-ground).
+normal_effectiveness(dark,steel-flying).
+normal_effectiveness(dark,steel-bug).
+normal_effectiveness(dark,steel-rock).
+normal_effectiveness(dark,steel-dragon).
+normal_effectiveness(dark,fairy-psychic).
+normal_effectiveness(dark,fairy-ghost).
 normal_effectiveness(steel,normal).
-weakness(steel,fire).
-weakness(steel,water).
-weakness(steel,electric).
 normal_effectiveness(steel,grass).
-super_effectiveness(steel,ice).
 normal_effectiveness(steel,fighting).
 normal_effectiveness(steel,poison).
 normal_effectiveness(steel,ground).
 normal_effectiveness(steel,flying).
 normal_effectiveness(steel,psychic).
 normal_effectiveness(steel,bug).
-super_effectiveness(steel,rock).
 normal_effectiveness(steel,ghost).
 normal_effectiveness(steel,dragon).
 normal_effectiveness(steel,dark).
-weakness(steel,steel).
-super_effectiveness(steel,fairy).
-weakness(steel,normal-fire).
-weakness(steel, normal-water).
-weakness(steel, normal-electric).
-normal_effectiveness(steel, normal-grass).
-super_effectiveness(steel, normal-ice).
-normal_effectiveness(steel, normal-fighting).
-normal_effectiveness(steel, normal-poison).
-normal_effectiveness(steel, normal-ground).
-normal_effectiveness(steel, normal-flying).
-normal_effectiveness(steel, normal-psychic).
-normal_effectiveness(steel, normal-bug).
-super_effectiveness(steel, normal-rock).
-normal_effectiveness(steel, normal-ghost).
-normal_effectiveness(steel, normal-dragon).
-normal_effectiveness(steel, normal-dark).
-weakness(steel, normal-steel).
-super_effectiveness(steel, normal-fairy).
-weakness(steel, fire-normal).
-super_weakness(steel, fire-water).
-super_weakness(steel, fire-electric).
-weakness(steel, fire-grass).
-normal_effectiveness(steel, fire-ice).
-weakness(steel, fire-fighting).
-weakness(steel, fire-poison).
-weakness(steel, fire-ground).
-weakness(steel, fire-flying).
-weakness(steel, fire-psychic).
-weakness(steel, fire-bug).
-normal_effectiveness(steel, fire-rock).
-weakness(steel, fire-ghost).
-weakness(steel, fire-dragon).
-weakness(steel, fire-dark).
-super_weakness(steel, fire-steel).
-normal_effectiveness(steel, fire-fairy).
-weakness(steel, water-normal).
-super_weakness(steel, water-fire).
-super_weakness(steel, water-electric).
-weakness(steel, water-grass).
-normal_effectiveness(steel, water-ice).
-weakness(steel, water-fighting).
-normal_effectiveness(steel, water-poison).
-weakness(steel, water-ground).
-weakness(steel, water-flying).
-weakness(steel, water-psychic).
-normal_effectiveness(steel, water-bug).
-normal_effectiveness(steel, water-rock).
-weakness(steel, water-ghost).
-weakness(steel, water-dragon).
-weakness(steel, water-dark).
-super_weakness(steel, water-steel).
-normal_effectiveness(steel, water-fairy).
-weakness(steel, electric-normal).
-super_weakness(steel, electric-fire).
-super_weakness(steel, electric-water).
-weakness(steel, electric-grass).
-normal_effectiveness(steel, electric-ice).
-weakness(steel, electric-fighting).
-normal_effectiveness(steel, electric-poison).
-weakness(steel, electric-ground).
-weakness(steel, electric-flying).
-weakness(steel, electric-psychic).
-weakness(steel, electric-bug).
-normal_effectiveness(steel, electric-rock).
-weakness(steel, electric-ghost).
-weakness(steel, electric-dragon).
-weakness(steel, electric-dark).
-super_weakness(steel, electric-steel).
-normal_effectiveness(steel, electric-fairy).
-normal_effectiveness(steel, grass-normal).
-weakness(steel, grass-fire).
-weakness(steel, grass-water).
-weakness(steel, grass-electric).
-super_effectiveness(steel, grass-ice).
-normal_effectiveness(steel, grass-fighting).
-normal_effectiveness(steel, grass-poison).
-normal_effectiveness(steel, grass-ground).
-normal_effectiveness(steel, grass-flying).
-normal_effectiveness(steel, grass-psychic).
-normal_effectiveness(steel, grass-bug).
-super_effectiveness(steel, grass-rock).
-normal_effectiveness(steel, grass-ghost).
-normal_effectiveness(steel, grass-dragon).
-normal_effectiveness(steel, grass-dark).
-weakness(steel, grass-steel).
-super_effectiveness(steel, grass-fairy).
-super_effectiveness(steel, ice-normal).
-normal_effectiveness(steel, ice-fire).
-normal_effectiveness(steel, ice-water).
-normal_effectiveness(steel, ice-electric).
-super_effectiveness(steel, ice-grass).
-super_effectiveness(steel, ice-fighting).
-super_effectiveness(steel, ice-poison).
-super_effectiveness(steel, ice-ground).
-super_effectiveness(steel, ice-flying).
-super_effectiveness(steel, ice-psychic).
-super_effectiveness(steel, ice-bug).
-super_vantagem(steel, ice-rock).
-super_effectiveness(steel, ice-ghost).
-super_effectiveness(steel, ice-dragon).
-super_effectiveness(steel, ice-dark).
-normal_effectiveness(steel, ice-steel).
-super_vantagem(steel, ice-fairy).
-normal_effectiveness(steel, fighting-normal).
-weakness(steel, fighting-fire).
-weakness(steel, fighting-water).
-weakness(steel, fighting-electric).
-normal_effectiveness(steel, fighting-grass).
-super_effectiveness(steel, fighting-ice).
-super_effectiveness(steel, fighting-poison).
-normal_effectiveness(steel, fighting-ground).
-normal_effectiveness(steel, fighting-flying).
-normal_effectiveness(steel, fighting-psychic).
-normal_effectiveness(steel, fighting-bug).
-super_effectiveness(steel, fighting-rock).
-normal_effectiveness(steel, fighting-ghost).
-normal_effectiveness(steel, fighting-dragon).
-normal_effectiveness(steel, fighting-dark).
-weakness(steel, fighting-steel).
-super_effectiveness(steel, fighting-fairy).
-normal_effectiveness(steel, poison-normal).
-weakness(steel, poison-fire).
-normal_effectiveness(steel, poison-water).
-normal_effectiveness(steel, poison-electric).
-normal_effectiveness(steel, poison-grass).
-super_effectiveness(steel, poison-ice).
-super_effectiveness(steel, poison-fighting).
-normal_effectiveness(steel, poison-ground).
-normal_effectiveness(steel, poison-flying).
-normal_effectiveness(steel, poison-psychic).
-normal_effectiveness(steel, poison-bug).
-super_effectiveness(steel, poison-rock).
-normal_effectiveness(steel, poison-ghost).
-normal_effectiveness(steel, poison-dragon).
-normal_effectiveness(steel, poison-dark).
-weakness(steel, poison-steel).
-super_effectiveness(steel, poison-fairy).
-normal_effectiveness(steel, ground-normal).
-weakness(steel, ground-fire).
-weakness(steel, ground-water).
-weakness(steel, ground-electric).
-normal_effectiveness(steel, ground-grass).
-super_effectiveness(steel, ground-ice).
-normal_effectiveness(steel, ground-fighting).
-normal_effectiveness(steel, ground-poison).
-normal_effectiveness(steel, ground-flying).
-normal_effectiveness(steel, ground-psychic).
-normal_effectiveness(steel, ground-bug).
-super_effectiveness(steel, ground-rock).
-normal_effectiveness(steel, ground-ghost).
-normal_effectiveness(steel, ground-dragon).
-normal_effectiveness(steel, ground-dark).
-weakness(steel, ground-steel).
-super_effectiveness(steel, ground-fairy).
-normal_effectiveness(steel, flying-normal).
-weakness(steel, flying-fire).
-weakness(steel, flying-water).
-weakness(steel, flying-electric).
-normal_effectiveness(steel, flying-grass).
-super_effectiveness(steel, flying-ice).
-normal_effectiveness(steel, flying-fighting).
-normal_effectiveness(steel, flying-poison).
-normal_effectiveness(steel, flying-ground).
-normal_effectiveness(steel, flying-psychic).
-normal_effectiveness(steel, flying-bug).
-super_effectiveness(steel, flying-rock).
-normal_effectiveness(steel, flying-ghost).
-normal_effectiveness(steel, flying-dragon).
-normal_effectiveness(steel, flying-dark).
-weakness(steel, flying-steel).
-super_effectiveness(steel, flying-fairy).
-normal_effectiveness(steel, psychic-normal).
-weakness(steel, psychic-fire).
-weakness(steel, psychic-water).
-weakness(steel, psychic-electric).
-normal_effectiveness(steel, psychic-grass).
-super_effectiveness(steel, psychic-ice).
-normal_effectiveness(steel, psychic-fighting).
-normal_effectiveness(steel, psychic-poison).
-normal_effectiveness(steel, psychic-ground).
-normal_effectiveness(steel, psychic-flying).
-normal_effectiveness(steel, psychic-bug).
-super_effectiveness(steel, psychic-rock).
-normal_effectiveness(steel, psychic-ghost).
-normal_effectiveness(steel, psychic-dragon).
-normal_effectiveness(steel, psychic-dark).
-weakness(steel, psychic-steel).
-super_effectiveness(steel, psychic-fairy).
-normal_effectiveness(steel, bug-normal).
-weakness(steel, bug-fire).
-normal_effectiveness(steel, bug-water).
-weakness(steel, bug-electric).
-normal_effectiveness(steel, bug-grass).
-super_effectiveness(steel, bug-ice).
-normal_effectiveness(steel, bug-fighting).
-normal_effectiveness(steel, bug-poison).
-normal_effectiveness(steel, bug-ground).
-normal_effectiveness(steel, bug-flying).
-normal_effectiveness(steel, bug-psychic).
-super_effectiveness(steel, bug-rock).
-normal_effectiveness(steel, bug-ghost).
-normal_effectiveness(steel, bug-dragon).
-normal_effectiveness(steel, bug-dark).
-weakness(steel, bug-steel).
-super_effectiveness(steel, bug-fairy).
-super_effectiveness(steel, rock-normal).
-normal_effectiveness(steel, rock-fire).
-normal_effectiveness(steel, rock-water).
-normal_effectiveness(steel, rock-electric).
-super_effectiveness(steel, rock-grass).
-super_vantagem(steel, rock-ice).
-super_effectiveness(steel, rock-fighting).
-super_effectiveness(steel, rock-poison).
-super_effectiveness(steel, rock-ground).
-super_effectiveness(steel, rock-flying).
-super_effectiveness(steel, rock-psychic).
-super_effectiveness(steel, rock-bug).
-super_effectiveness(steel, rock-ghost).
-super_effectiveness(steel, rock-dragon).
-super_effectiveness(steel, rock-dark).
-normal_effectiveness(steel, rock-steel).
-super_vantagem(steel, rock-fairy).
-normal_effectiveness(steel, ghost-normal).
-weakness(steel, ghost-fire).
-weakness(steel, ghost-water).
-weakness(steel, ghost-electric).
-normal_effectiveness(steel, ghost-grass).
-super_effectiveness(steel, ghost-ice).
-normal_effectiveness(steel, ghost-fighting).
-normal_effectiveness(steel, ghost-poison).
-normal_effectiveness(steel, ghost-ground).
-normal_effectiveness(steel, ghost-flying).
-normal_effectiveness(steel, ghost-psychic).
-normal_effectiveness(steel, ghost-bug).
-super_effectiveness(steel, ghost-rock).
-normal_effectiveness(steel, ghost-dragon).
-normal_effectiveness(steel, ghost-dark).
-weakness(steel, ghost-steel).
-super_effectiveness(steel, ghost-fairy).
-normal_effectiveness(steel, dragon-normal).
-weakness(steel, dragon-fire).
-weakness(steel, dragon-water).
-weakness(steel, dragon-electric).
-normal_effectiveness(steel, dragon-grass).
-super_effectiveness(steel, dragon-ice).
-normal_effectiveness(steel, dragon-fighting).
-normal_effectiveness(steel, dragon-poison).
-normal_effectiveness(steel, dragon-ground).
-normal_effectiveness(steel, dragon-flying).
-normal_effectiveness(steel, dragon-psychic).
-normal_effectiveness(steel, dragon-bug).
-super_effectiveness(steel, dragon-rock).
-normal_effectiveness(steel, dragon-ghost).
-normal_effectiveness(steel, dragon-dark).
-weakness(steel, dragon-steel).
-super_effectiveness(steel, dragon-fairy).
-normal_effectiveness(steel, dark-normal).
-weakness(steel, dark-fire).
-weakness(steel, dark-water).
-weakness(steel, dark-electric).
-normal_effectiveness(steel, dark-grass).
-super_effectiveness(steel, dark-ice).
-normal_effectiveness(steel, dark-fighting).
-normal_effectiveness(steel, dark-poison).
-normal_effectiveness(steel, dark-ground).
-normal_effectiveness(steel, dark-flying).
-normal_effectiveness(steel, dark-psychic).
-normal_effectiveness(steel, dark-bug).
-super_effectiveness(steel, dark-rock).
-normal_effectiveness(steel, dark-ghost).
-normal_effectiveness(steel, dark-dragon).
-weakness(steel, dark-steel).
-super_effectiveness(steel, dark-fairy).
-weakness(steel, steel-normal).
-super_weakness(steel, steel-fire).
-super_weakness(steel, steel-water).
-super_weakness(steel, steel-electric).
-weakness(steel, steel-grass).
-normal_effectiveness(steel, steel-ice).
-weakness(steel, steel-fighting).
-weakness(steel, steel-poison).
-weakness(steel, steel-ground).
-weakness(steel, steel-flying).
-weakness(steel, steel-psychic).
-weakness(steel, steel-bug).
-normal_effectiveness(steel, steel-rock).
-weakness(steel, steel-ghost).
-weakness(steel, steel-dragon).
-weakness(steel, steel-dark).
-normal_effectiveness(steel, steel-fairy).
-super_effectiveness(steel, fairy-normal).
-normal_effectiveness(steel, fairy-fire).
-normal_effectiveness(steel, fairy-water).
-normal_effectiveness(steel, fairy-electric).
-super_effectiveness(steel, fairy-grass).
-super_vantagem(steel, fairy-ice).
-super_effectiveness(steel, fairy-fighting).
-super_effectiveness(steel, fairy-poison).
-super_effectiveness(steel, fairy-ground).
-super_effectiveness(steel, fairy-flying).
-super_effectiveness(steel, fairy-psychic).
-super_effectiveness(steel, fairy-bug).
-super_vantagem(steel, fairy-rock).
-super_effectiveness(steel, fairy-ghost).
-super_effectiveness(steel, fairy-dragon).
-super_effectiveness(steel, fairy-dark).
-normal_effectiveness(steel, fairy-steel).
-
-/* Effectiveness fairy */
+normal_effectiveness(steel,normal-grass).
+normal_effectiveness(steel,normal-fighting).
+normal_effectiveness(steel,normal-poison).
+normal_effectiveness(steel,normal-ground).
+normal_effectiveness(steel,normal-flying).
+normal_effectiveness(steel,normal-psychic).
+normal_effectiveness(steel,normal-bug).
+normal_effectiveness(steel,normal-ghost).
+normal_effectiveness(steel,normal-dragon).
+normal_effectiveness(steel,normal-dark).
+normal_effectiveness(steel,fire-ice).
+normal_effectiveness(steel,fire-rock).
+normal_effectiveness(steel,fire-fairy).
+normal_effectiveness(steel,water-ice).
+normal_effectiveness(steel,water-poison).
+normal_effectiveness(steel,water-bug).
+normal_effectiveness(steel,water-rock).
+normal_effectiveness(steel,water-fairy).
+normal_effectiveness(steel,electric-ice).
+normal_effectiveness(steel,electric-poison).
+normal_effectiveness(steel,electric-rock).
+normal_effectiveness(steel,electric-fairy).
+normal_effectiveness(steel,grass-normal).
+normal_effectiveness(steel,grass-fighting).
+normal_effectiveness(steel,grass-poison).
+normal_effectiveness(steel,grass-ground).
+normal_effectiveness(steel,grass-flying).
+normal_effectiveness(steel,grass-psychic).
+normal_effectiveness(steel,grass-bug).
+normal_effectiveness(steel,grass-ghost).
+normal_effectiveness(steel,grass-dragon).
+normal_effectiveness(steel,grass-dark).
+normal_effectiveness(steel,ice-fire).
+normal_effectiveness(steel,ice-water).
+normal_effectiveness(steel,ice-electric).
+normal_effectiveness(steel,ice-steel).
+normal_effectiveness(steel,fighting-normal).
+normal_effectiveness(steel,fighting-grass).
+normal_effectiveness(steel,fighting-ground).
+normal_effectiveness(steel,fighting-flying).
+normal_effectiveness(steel,fighting-psychic).
+normal_effectiveness(steel,fighting-bug).
+normal_effectiveness(steel,fighting-ghost).
+normal_effectiveness(steel,fighting-dragon).
+normal_effectiveness(steel,fighting-dark).
+normal_effectiveness(steel,poison-normal).
+normal_effectiveness(steel,poison-water).
+normal_effectiveness(steel,poison-electric).
+normal_effectiveness(steel,poison-grass).
+normal_effectiveness(steel,poison-ground).
+normal_effectiveness(steel,poison-flying).
+normal_effectiveness(steel,poison-psychic).
+normal_effectiveness(steel,poison-bug).
+normal_effectiveness(steel,poison-ghost).
+normal_effectiveness(steel,poison-dragon).
+normal_effectiveness(steel,poison-dark).
+normal_effectiveness(steel,ground-normal).
+normal_effectiveness(steel,ground-grass).
+normal_effectiveness(steel,ground-fighting).
+normal_effectiveness(steel,ground-poison).
+normal_effectiveness(steel,ground-flying).
+normal_effectiveness(steel,ground-psychic).
+normal_effectiveness(steel,ground-bug).
+normal_effectiveness(steel,ground-ghost).
+normal_effectiveness(steel,ground-dragon).
+normal_effectiveness(steel,ground-dark).
+normal_effectiveness(steel,flying-normal).
+normal_effectiveness(steel,flying-grass).
+normal_effectiveness(steel,flying-fighting).
+normal_effectiveness(steel,flying-poison).
+normal_effectiveness(steel,flying-ground).
+normal_effectiveness(steel,flying-psychic).
+normal_effectiveness(steel,flying-bug).
+normal_effectiveness(steel,flying-ghost).
+normal_effectiveness(steel,flying-dragon).
+normal_effectiveness(steel,flying-dark).
+normal_effectiveness(steel,psychic-normal).
+normal_effectiveness(steel,psychic-grass).
+normal_effectiveness(steel,psychic-fighting).
+normal_effectiveness(steel,psychic-poison).
+normal_effectiveness(steel,psychic-ground).
+normal_effectiveness(steel,psychic-flying).
+normal_effectiveness(steel,psychic-bug).
+normal_effectiveness(steel,psychic-ghost).
+normal_effectiveness(steel,psychic-dragon).
+normal_effectiveness(steel,psychic-dark).
+normal_effectiveness(steel,bug-normal).
+normal_effectiveness(steel,bug-water).
+normal_effectiveness(steel,bug-grass).
+normal_effectiveness(steel,bug-fighting).
+normal_effectiveness(steel,bug-poison).
+normal_effectiveness(steel,bug-ground).
+normal_effectiveness(steel,bug-flying).
+normal_effectiveness(steel,bug-psychic).
+normal_effectiveness(steel,bug-ghost).
+normal_effectiveness(steel,bug-dragon).
+normal_effectiveness(steel,bug-dark).
+normal_effectiveness(steel,rock-fire).
+normal_effectiveness(steel,rock-water).
+normal_effectiveness(steel,rock-electric).
+normal_effectiveness(steel,rock-steel).
+normal_effectiveness(steel,ghost-normal).
+normal_effectiveness(steel,ghost-grass).
+normal_effectiveness(steel,ghost-fighting).
+normal_effectiveness(steel,ghost-poison).
+normal_effectiveness(steel,ghost-ground).
+normal_effectiveness(steel,ghost-flying).
+normal_effectiveness(steel,ghost-psychic).
+normal_effectiveness(steel,ghost-bug).
+normal_effectiveness(steel,ghost-dragon).
+normal_effectiveness(steel,ghost-dark).
+normal_effectiveness(steel,dragon-normal).
+normal_effectiveness(steel,dragon-grass).
+normal_effectiveness(steel,dragon-fighting).
+normal_effectiveness(steel,dragon-poison).
+normal_effectiveness(steel,dragon-ground).
+normal_effectiveness(steel,dragon-flying).
+normal_effectiveness(steel,dragon-psychic).
+normal_effectiveness(steel,dragon-bug).
+normal_effectiveness(steel,dragon-ghost).
+normal_effectiveness(steel,dragon-dark).
+normal_effectiveness(steel,dark-normal).
+normal_effectiveness(steel,dark-grass).
+normal_effectiveness(steel,dark-fighting).
+normal_effectiveness(steel,dark-poison).
+normal_effectiveness(steel,dark-ground).
+normal_effectiveness(steel,dark-flying).
+normal_effectiveness(steel,dark-psychic).
+normal_effectiveness(steel,dark-bug).
+normal_effectiveness(steel,dark-ghost).
+normal_effectiveness(steel,dark-dragon).
+normal_effectiveness(steel,steel-ice).
+normal_effectiveness(steel,steel-rock).
+normal_effectiveness(steel,steel-fairy).
+normal_effectiveness(steel,fairy-fire).
+normal_effectiveness(steel,fairy-water).
+normal_effectiveness(steel,fairy-electric).
+normal_effectiveness(steel,fairy-steel).
 normal_effectiveness(fairy,normal).
-weakness(fairy,fire).
 normal_effectiveness(fairy,water).
 normal_effectiveness(fairy,electric).
 normal_effectiveness(fairy,grass).
 normal_effectiveness(fairy,ice).
-super_effectiveness(fairy,fighting).
-weakness(fairy,poison).
 normal_effectiveness(fairy,ground).
 normal_effectiveness(fairy,flying).
 normal_effectiveness(fairy,psychic).
 normal_effectiveness(fairy,bug).
 normal_effectiveness(fairy,rock).
 normal_effectiveness(fairy,ghost).
-super_effectiveness(fairy,dragon).
-super_effectiveness(fairy,dark).
-weakness(fairy,steel).
 normal_effectiveness(fairy,fairy).
+normal_effectiveness(fairy,normal-water).
+normal_effectiveness(fairy,normal-electric).
+normal_effectiveness(fairy,normal-grass).
+normal_effectiveness(fairy,normal-poison).
+normal_effectiveness(fairy,normal-ground).
+normal_effectiveness(fairy,normal-flying).
+normal_effectiveness(fairy,normal-psychic).
+normal_effectiveness(fairy,normal-bug).
+normal_effectiveness(fairy,normal-rock).
+normal_effectiveness(fairy,normal-ghost).
+normal_effectiveness(fairy,normal-fairy).
+normal_effectiveness(fairy,fire-fighting).
+normal_effectiveness(fairy,fire-dragon).
+normal_effectiveness(fairy,fire-dark).
+normal_effectiveness(fairy,water-normal).
+normal_effectiveness(fairy,water-electric).
+normal_effectiveness(fairy,water-grass).
+normal_effectiveness(fairy,water-ice).
+normal_effectiveness(fairy,water-ground).
+normal_effectiveness(fairy,water-flying).
+normal_effectiveness(fairy,water-psychic).
+normal_effectiveness(fairy,water-bug).
+normal_effectiveness(fairy,water-rock).
+normal_effectiveness(fairy,water-ghost).
+normal_effectiveness(fairy,water-fairy).
+normal_effectiveness(fairy,electric-normal).
+normal_effectiveness(fairy,electric-water).
+normal_effectiveness(fairy,electric-grass).
+normal_effectiveness(fairy,electric-ice).
+normal_effectiveness(fairy,electric-ground).
+normal_effectiveness(fairy,electric-flying).
+normal_effectiveness(fairy,electric-psychic).
+normal_effectiveness(fairy,electric-bug).
+normal_effectiveness(fairy,electric-rock).
+normal_effectiveness(fairy,electric-ghost).
+normal_effectiveness(fairy,electric-fairy).
+normal_effectiveness(fairy,grass-normal).
+normal_effectiveness(fairy,grass-water).
+normal_effectiveness(fairy,grass-electric).
+normal_effectiveness(fairy,grass-ice).
+normal_effectiveness(fairy,grass-ground).
+normal_effectiveness(fairy,grass-flying).
+normal_effectiveness(fairy,grass-psychic).
+normal_effectiveness(fairy,grass-bug).
+normal_effectiveness(fairy,grass-rock).
+normal_effectiveness(fairy,grass-ghost).
+normal_effectiveness(fairy,grass-fairy).
+normal_effectiveness(fairy,ice-normal).
+normal_effectiveness(fairy,ice-water).
+normal_effectiveness(fairy,ice-electric).
+normal_effectiveness(fairy,ice-grass).
+normal_effectiveness(fairy,ice-ground).
+normal_effectiveness(fairy,ice-flying).
+normal_effectiveness(fairy,ice-psychic).
+normal_effectiveness(fairy,ice-bug).
+normal_effectiveness(fairy,ice-rock).
+normal_effectiveness(fairy,ice-ghost).
+normal_effectiveness(fairy,ice-fairy).
+normal_effectiveness(fairy,fighting-fire).
+normal_effectiveness(fairy,fighting-poison).
+normal_effectiveness(fairy,fighting-steel).
+normal_effectiveness(fairy,poison-fighting).
+normal_effectiveness(fairy,poison-dragon).
+normal_effectiveness(fairy,poison-dark).
+normal_effectiveness(fairy,ground-normal).
+normal_effectiveness(fairy,ground-water).
+normal_effectiveness(fairy,ground-electric).
+normal_effectiveness(fairy,ground-grass).
+normal_effectiveness(fairy,ground-ice).
+normal_effectiveness(fairy,ground-flying).
+normal_effectiveness(fairy,ground-psychic).
+normal_effectiveness(fairy,ground-bug).
+normal_effectiveness(fairy,ground-rock).
+normal_effectiveness(fairy,ground-ghost).
+normal_effectiveness(fairy,ground-fairy).
+normal_effectiveness(fairy,flying-normal).
+normal_effectiveness(fairy,flying-water).
+normal_effectiveness(fairy,flying-electric).
+normal_effectiveness(fairy,flying-grass).
+normal_effectiveness(fairy,flying-ice).
+normal_effectiveness(fairy,flying-ground).
+normal_effectiveness(fairy,flying-psychic).
+normal_effectiveness(fairy,flying-bug).
+normal_effectiveness(fairy,flying-rock).
+normal_effectiveness(fairy,flying-ghost).
+normal_effectiveness(fairy,flying-fairy).
+normal_effectiveness(fairy,psychic-normal).
+normal_effectiveness(fairy,psychic-water).
+normal_effectiveness(fairy,psychic-electric).
+normal_effectiveness(fairy,psychic-grass).
+normal_effectiveness(fairy,psychic-ice).
+normal_effectiveness(fairy,psychic-ground).
+normal_effectiveness(fairy,psychic-flying).
+normal_effectiveness(fairy,psychic-bug).
+normal_effectiveness(fairy,psychic-rock).
+normal_effectiveness(fairy,psychic-ghost).
+normal_effectiveness(fairy,psychic-fairy).
+normal_effectiveness(fairy,bug-normal).
+normal_effectiveness(fairy,bug-water).
+normal_effectiveness(fairy,bug-electric).
+normal_effectiveness(fairy,bug-grass).
+normal_effectiveness(fairy,bug-ice).
+normal_effectiveness(fairy,bug-ground).
+normal_effectiveness(fairy,bug-flying).
+normal_effectiveness(fairy,bug-psychic).
+normal_effectiveness(fairy,bug-rock).
+normal_effectiveness(fairy,bug-ghost).
+normal_effectiveness(fairy,bug-fairy).
+normal_effectiveness(fairy,rock-normal).
+normal_effectiveness(fairy,rock-water).
+normal_effectiveness(fairy,rock-electric).
+normal_effectiveness(fairy,rock-grass).
+normal_effectiveness(fairy,rock-ice).
+normal_effectiveness(fairy,rock-ground).
+normal_effectiveness(fairy,rock-flying).
+normal_effectiveness(fairy,rock-psychic).
+normal_effectiveness(fairy,rock-bug).
+normal_effectiveness(fairy,rock-ghost).
+normal_effectiveness(fairy,rock-fairy).
+normal_effectiveness(fairy,ghost-normal).
+normal_effectiveness(fairy,ghost-water).
+normal_effectiveness(fairy,ghost-electric).
+normal_effectiveness(fairy,ghost-grass).
+normal_effectiveness(fairy,ghost-ice).
+normal_effectiveness(fairy,ghost-ground).
+normal_effectiveness(fairy,ghost-flying).
+normal_effectiveness(fairy,ghost-psychic).
+normal_effectiveness(fairy,ghost-bug).
+normal_effectiveness(fairy,ghost-rock).
+normal_effectiveness(fairy,ghost-fairy).
+normal_effectiveness(fairy,dragon-fire).
+normal_effectiveness(fairy,dragon-poison).
+normal_effectiveness(fairy,dragon-steel).
+normal_effectiveness(fairy,dark-fire).
+normal_effectiveness(fairy,dark-poison).
+normal_effectiveness(fairy,dark-steel).
+normal_effectiveness(fairy,steel-fighting).
+normal_effectiveness(fairy,steel-dragon).
+normal_effectiveness(fairy,steel-dark).
+normal_effectiveness(fairy,fairy-normal).
+normal_effectiveness(fairy,fairy-water).
+normal_effectiveness(fairy,fairy-electric).
+normal_effectiveness(fairy,fairy-grass).
+normal_effectiveness(fairy,fairy-ice).
+normal_effectiveness(fairy,fairy-ground).
+normal_effectiveness(fairy,fairy-flying).
+normal_effectiveness(fairy,fairy-psychic).
+normal_effectiveness(fairy,fairy-bug).
+normal_effectiveness(fairy,fairy-rock).
+normal_effectiveness(fairy,fairy-ghost).
+
+zero_effectiveness(normal,ghost).
+zero_effectiveness(normal,normal-ghost).
+zero_effectiveness(normal,fire-ghost).
+zero_effectiveness(normal,water-ghost).
+zero_effectiveness(normal,electric-ghost).
+zero_effectiveness(normal,grass-ghost).
+zero_effectiveness(normal,ice-ghost).
+zero_effectiveness(normal,fighting-ghost).
+zero_effectiveness(normal,poison-ghost).
+zero_effectiveness(normal,ground-ghost).
+zero_effectiveness(normal,flying-ghost).
+zero_effectiveness(normal,psychic-ghost).
+zero_effectiveness(normal,bug-ghost).
+zero_effectiveness(normal,rock-ghost).
+zero_effectiveness(normal,ghost-normal).
+zero_effectiveness(normal,ghost-fire).
+zero_effectiveness(normal,ghost-water).
+zero_effectiveness(normal,ghost-electric).
+zero_effectiveness(normal,ghost-grass).
+zero_effectiveness(normal,ghost-ice).
+zero_effectiveness(normal,ghost-fighting).
+zero_effectiveness(normal,ghost-poison).
+zero_effectiveness(normal,ghost-ground).
+zero_effectiveness(normal,ghost-flying).
+zero_effectiveness(normal,ghost-psychic).
+zero_effectiveness(normal,ghost-bug).
+zero_effectiveness(normal,ghost-rock).
+zero_effectiveness(normal,ghost-dragon).
+zero_effectiveness(normal,ghost-dark).
+zero_effectiveness(normal,ghost-steel).
+zero_effectiveness(normal,ghost-fairy).
+zero_effectiveness(normal,dragon-ghost).
+zero_effectiveness(normal,dark-ghost).
+zero_effectiveness(normal,steel-ghost).
+zero_effectiveness(normal,fairy-ghost).
+zero_effectiveness(electric,ground).
+zero_effectiveness(electric,normal-ground).
+zero_effectiveness(electric,fire-ground).
+zero_effectiveness(electric,water-ground).
+zero_effectiveness(electric,electric-ground).
+zero_effectiveness(electric,grass-ground).
+zero_effectiveness(electric,ice-ground).
+zero_effectiveness(electric,fighting-ground).
+zero_effectiveness(electric,poison-ground).
+zero_effectiveness(electric,ground-normal).
+zero_effectiveness(electric,ground-fire).
+zero_effectiveness(electric,ground-water).
+zero_effectiveness(electric,ground-electric).
+zero_effectiveness(electric,ground-grass).
+zero_effectiveness(electric,ground-ice).
+zero_effectiveness(electric,ground-fighting).
+zero_effectiveness(electric,ground-poison).
+zero_effectiveness(electric,ground-flying).
+zero_effectiveness(electric,ground-psychic).
+zero_effectiveness(electric,ground-bug).
+zero_effectiveness(electric,ground-rock).
+zero_effectiveness(electric,ground-ghost).
+zero_effectiveness(electric,ground-dragon).
+zero_effectiveness(electric,ground-dark).
+zero_effectiveness(electric,ground-steel).
+zero_effectiveness(electric,ground-fairy).
+zero_effectiveness(electric,flying-ground).
+zero_effectiveness(electric,psychic-ground).
+zero_effectiveness(electric,bug-ground).
+zero_effectiveness(electric,rock-ground).
+zero_effectiveness(electric,ghost-ground).
+zero_effectiveness(electric,dragon-ground).
+zero_effectiveness(electric,dark-ground).
+zero_effectiveness(electric,steel-ground).
+zero_effectiveness(electric,fairy-ground).
+zero_effectiveness(fighting,ghost).
+zero_effectiveness(fighting,normal-ghost).
+zero_effectiveness(fighting,fire-ghost).
+zero_effectiveness(fighting,water-ghost).
+zero_effectiveness(fighting,electric-ghost).
+zero_effectiveness(fighting,grass-ghost).
+zero_effectiveness(fighting,ice-ghost).
+zero_effectiveness(fighting,fighting-ghost).
+zero_effectiveness(fighting,poison-ghost).
+zero_effectiveness(fighting,ground-ghost).
+zero_effectiveness(fighting,flying-ghost).
+zero_effectiveness(fighting,psychic-ghost).
+zero_effectiveness(fighting,bug-ghost).
+zero_effectiveness(fighting,rock-ghost).
+zero_effectiveness(fighting,ghost-normal).
+zero_effectiveness(fighting,ghost-fire).
+zero_effectiveness(fighting,ghost-water).
+zero_effectiveness(fighting,ghost-electric).
+zero_effectiveness(fighting,ghost-grass).
+zero_effectiveness(fighting,ghost-ice).
+zero_effectiveness(fighting,ghost-fighting).
+zero_effectiveness(fighting,ghost-poison).
+zero_effectiveness(fighting,ghost-ground).
+zero_effectiveness(fighting,ghost-flying).
+zero_effectiveness(fighting,ghost-psychic).
+zero_effectiveness(fighting,ghost-bug).
+zero_effectiveness(fighting,ghost-rock).
+zero_effectiveness(fighting,ghost-dragon).
+zero_effectiveness(fighting,ghost-dark).
+zero_effectiveness(fighting,ghost-steel).
+zero_effectiveness(fighting,ghost-fairy).
+zero_effectiveness(fighting,dragon-ghost).
+zero_effectiveness(fighting,dark-ghost).
+zero_effectiveness(fighting,steel-ghost).
+zero_effectiveness(fighting,fairy-ghost).
+zero_effectiveness(poison,steel).
+zero_effectiveness(poison,normal-steel).
+zero_effectiveness(poison,fire-steel).
+zero_effectiveness(poison,water-steel).
+zero_effectiveness(poison,electric-steel).
+zero_effectiveness(poison,grass-steel).
+zero_effectiveness(poison,ice-steel).
+zero_effectiveness(poison,fighting-steel).
+zero_effectiveness(poison,poison-steel).
+zero_effectiveness(poison,ground-steel).
+zero_effectiveness(poison,flying-steel).
+zero_effectiveness(poison,psychic-steel).
+zero_effectiveness(poison,bug-steel).
+zero_effectiveness(poison,rock-steel).
+zero_effectiveness(poison,ghost-steel).
+zero_effectiveness(poison,dragon-steel).
+zero_effectiveness(poison,dark-steel).
+zero_effectiveness(poison,steel-normal).
+zero_effectiveness(poison,steel-fire).
+zero_effectiveness(poison,steel-water).
+zero_effectiveness(poison,steel-electric).
+zero_effectiveness(poison,steel-grass).
+zero_effectiveness(poison,steel-ice).
+zero_effectiveness(poison,steel-fighting).
+zero_effectiveness(poison,steel-poison).
+zero_effectiveness(poison,steel-ground).
+zero_effectiveness(poison,steel-flying).
+zero_effectiveness(poison,steel-psychic).
+zero_effectiveness(poison,steel-bug).
+zero_effectiveness(poison,steel-rock).
+zero_effectiveness(poison,steel-ghost).
+zero_effectiveness(poison,steel-dragon).
+zero_effectiveness(poison,steel-dark).
+zero_effectiveness(poison,steel-fairy).
+zero_effectiveness(poison,fairy-steel).
+zero_effectiveness(ground,flying).
+zero_effectiveness(ground,normal-flying).
+zero_effectiveness(ground,fire-flying).
+zero_effectiveness(ground,water-flying).
+zero_effectiveness(ground,electric-flying).
+zero_effectiveness(ground,grass-flying).
+zero_effectiveness(ground,ice-flying).
+zero_effectiveness(ground,fighting-flying).
+zero_effectiveness(ground,poison-flying).
+zero_effectiveness(ground,ground-flying).
+zero_effectiveness(ground,flying-normal).
+zero_effectiveness(ground,flying-fire).
+zero_effectiveness(ground,flying-water).
+zero_effectiveness(ground,flying-electric).
+zero_effectiveness(ground,flying-grass).
+zero_effectiveness(ground,flying-ice).
+zero_effectiveness(ground,flying-fighting).
+zero_effectiveness(ground,flying-poison).
+zero_effectiveness(ground,flying-ground).
+zero_effectiveness(ground,flying-psychic).
+zero_effectiveness(ground,flying-bug).
+zero_effectiveness(ground,flying-rock).
+zero_effectiveness(ground,flying-ghost).
+zero_effectiveness(ground,flying-dragon).
+zero_effectiveness(ground,flying-dark).
+zero_effectiveness(ground,flying-steel).
+zero_effectiveness(ground,flying-fairy).
+zero_effectiveness(ground,psychic-flying).
+zero_effectiveness(ground,bug-flying).
+zero_effectiveness(ground,rock-flying).
+zero_effectiveness(ground,ghost-flying).
+zero_effectiveness(ground,dragon-flying).
+zero_effectiveness(ground,dark-flying).
+zero_effectiveness(ground,steel-flying).
+zero_effectiveness(ground,fairy-flying).
+zero_effectiveness(psychic,dark).
+zero_effectiveness(psychic,normal-dark).
+zero_effectiveness(psychic,fire-dark).
+zero_effectiveness(psychic,water-dark).
+zero_effectiveness(psychic,electric-dark).
+zero_effectiveness(psychic,grass-dark).
+zero_effectiveness(psychic,ice-dark).
+zero_effectiveness(psychic,fighting-dark).
+zero_effectiveness(psychic,poison-dark).
+zero_effectiveness(psychic,ground-dark).
+zero_effectiveness(psychic,flying-dark).
+zero_effectiveness(psychic,psychic-dark).
+zero_effectiveness(psychic,bug-dark).
+zero_effectiveness(psychic,rock-dark).
+zero_effectiveness(psychic,ghost-dark).
+zero_effectiveness(psychic,dragon-dark).
+zero_effectiveness(psychic,dark-normal).
+zero_effectiveness(psychic,dark-fire).
+zero_effectiveness(psychic,dark-water).
+zero_effectiveness(psychic,dark-electric).
+zero_effectiveness(psychic,dark-grass).
+zero_effectiveness(psychic,dark-ice).
+zero_effectiveness(psychic,dark-fighting).
+zero_effectiveness(psychic,dark-poison).
+zero_effectiveness(psychic,dark-ground).
+zero_effectiveness(psychic,dark-flying).
+zero_effectiveness(psychic,dark-psychic).
+zero_effectiveness(psychic,dark-bug).
+zero_effectiveness(psychic,dark-rock).
+zero_effectiveness(psychic,dark-ghost).
+zero_effectiveness(psychic,dark-dragon).
+zero_effectiveness(psychic,dark-steel).
+zero_effectiveness(psychic,dark-fairy).
+zero_effectiveness(psychic,steel-dark).
+zero_effectiveness(psychic,fairy-dark).
+zero_effectiveness(ghost,normal).
+zero_effectiveness(ghost,normal-fire).
+zero_effectiveness(ghost,normal-water).
+zero_effectiveness(ghost,normal-electric).
+zero_effectiveness(ghost,normal-grass).
+zero_effectiveness(ghost,normal-ice).
+zero_effectiveness(ghost,normal-fighting).
+zero_effectiveness(ghost,normal-poison).
+zero_effectiveness(ghost,normal-ground).
+zero_effectiveness(ghost,normal-flying).
+zero_effectiveness(ghost,normal-psychic).
+zero_effectiveness(ghost,normal-bug).
+zero_effectiveness(ghost,normal-rock).
+zero_effectiveness(ghost,normal-ghost).
+zero_effectiveness(ghost,normal-dragon).
+zero_effectiveness(ghost,normal-dark).
+zero_effectiveness(ghost,normal-steel).
+zero_effectiveness(ghost,normal-fairy).
+zero_effectiveness(ghost,fire-normal).
+zero_effectiveness(ghost,water-normal).
+zero_effectiveness(ghost,electric-normal).
+zero_effectiveness(ghost,grass-normal).
+zero_effectiveness(ghost,ice-normal).
+zero_effectiveness(ghost,fighting-normal).
+zero_effectiveness(ghost,poison-normal).
+zero_effectiveness(ghost,ground-normal).
+zero_effectiveness(ghost,flying-normal).
+zero_effectiveness(ghost,psychic-normal).
+zero_effectiveness(ghost,bug-normal).
+zero_effectiveness(ghost,rock-normal).
+zero_effectiveness(ghost,ghost-normal).
+zero_effectiveness(ghost,dragon-normal).
+zero_effectiveness(ghost,dark-normal).
+zero_effectiveness(ghost,steel-normal).
+zero_effectiveness(ghost,fairy-normal).
+zero_effectiveness(dragon,fairy).
+zero_effectiveness(dragon,normal-fairy).
+zero_effectiveness(dragon,fire-fairy).
+zero_effectiveness(dragon,water-fairy).
+zero_effectiveness(dragon,electric-fairy).
+zero_effectiveness(dragon,grass-fairy).
+zero_effectiveness(dragon,ice-fairy).
+zero_effectiveness(dragon,fighting-fairy).
+zero_effectiveness(dragon,poison-fairy).
+zero_effectiveness(dragon,ground-fairy).
+zero_effectiveness(dragon,flying-fairy).
+zero_effectiveness(dragon,psychic-fairy).
+zero_effectiveness(dragon,bug-fairy).
+zero_effectiveness(dragon,rock-fairy).
+zero_effectiveness(dragon,ghost-fairy).
+zero_effectiveness(dragon,dragon-fairy).
+zero_effectiveness(dragon,dark-fairy).
+zero_effectiveness(dragon,steel-fairy).
+zero_effectiveness(dragon,fairy-normal).
+zero_effectiveness(dragon,fairy-fire).
+zero_effectiveness(dragon,fairy-water).
+zero_effectiveness(dragon,fairy-electric).
+zero_effectiveness(dragon,fairy-grass).
+zero_effectiveness(dragon,fairy-ice).
+zero_effectiveness(dragon,fairy-fighting).
+zero_effectiveness(dragon,fairy-poison).
+zero_effectiveness(dragon,fairy-ground).
+zero_effectiveness(dragon,fairy-flying).
+zero_effectiveness(dragon,fairy-psychic).
+zero_effectiveness(dragon,fairy-bug).
+zero_effectiveness(dragon,fairy-rock).
+zero_effectiveness(dragon,fairy-ghost).
+zero_effectiveness(dragon,fairy-dragon).
+zero_effectiveness(dragon,fairy-dark).
+zero_effectiveness(dragon,fairy-steel).
+
+weakness(normal,rock).
+weakness(normal,steel).
+weakness(normal,normal-rock).
+weakness(normal,normal-steel).
+weakness(normal,fire-rock).
+weakness(normal,fire-steel).
+weakness(normal,water-rock).
+weakness(normal,water-steel).
+weakness(normal,electric-rock).
+weakness(normal,electric-steel).
+weakness(normal,grass-rock).
+weakness(normal,grass-steel).
+weakness(normal,ice-rock).
+weakness(normal,ice-steel).
+weakness(normal,fighting-rock).
+weakness(normal,fighting-steel).
+weakness(normal,poison-rock).
+weakness(normal,poison-steel).
+weakness(normal,ground-rock).
+weakness(normal,ground-steel).
+weakness(normal,flying-rock).
+weakness(normal,flying-steel).
+weakness(normal,psychic-rock).
+weakness(normal,psychic-steel).
+weakness(normal,bug-rock).
+weakness(normal,bug-steel).
+weakness(normal,rock-normal).
+weakness(normal,rock-fire).
+weakness(normal,rock-water).
+weakness(normal,rock-electric).
+weakness(normal,rock-grass).
+weakness(normal,rock-ice).
+weakness(normal,rock-fighting).
+weakness(normal,rock-poison).
+weakness(normal,rock-ground).
+weakness(normal,rock-flying).
+weakness(normal,rock-psychic).
+weakness(normal,rock-bug).
+weakness(normal,rock-dragon).
+weakness(normal,rock-dark).
+weakness(normal,rock-fairy).
+weakness(normal,dragon-rock).
+weakness(normal,dragon-steel).
+weakness(normal,dark-rock).
+weakness(normal,dark-steel).
+weakness(normal,steel-normal).
+weakness(normal,steel-fire).
+weakness(normal,steel-water).
+weakness(normal,steel-electric).
+weakness(normal,steel-grass).
+weakness(normal,steel-ice).
+weakness(normal,steel-fighting).
+weakness(normal,steel-poison).
+weakness(normal,steel-ground).
+weakness(normal,steel-flying).
+weakness(normal,steel-psychic).
+weakness(normal,steel-bug).
+weakness(normal,steel-dragon).
+weakness(normal,steel-dark).
+weakness(normal,steel-fairy).
+weakness(normal,fairy-rock).
+weakness(normal,fairy-steel).
+weakness(fire,fire).
+weakness(fire,water).
+weakness(fire,rock).
+weakness(fire,dragon).
+weakness(fire,normal-fire).
+weakness(fire,normal-water).
+weakness(fire,normal-rock).
+weakness(fire,normal-dragon).
+weakness(fire,fire-normal).
+weakness(fire,fire-electric).
+weakness(fire,fire-fighting).
+weakness(fire,fire-poison).
+weakness(fire,fire-ground).
+weakness(fire,fire-flying).
+weakness(fire,fire-psychic).
+weakness(fire,fire-ghost).
+weakness(fire,fire-dark).
+weakness(fire,fire-fairy).
+weakness(fire,water-normal).
+weakness(fire,water-electric).
+weakness(fire,water-fighting).
+weakness(fire,water-poison).
+weakness(fire,water-ground).
+weakness(fire,water-flying).
+weakness(fire,water-psychic).
+weakness(fire,water-ghost).
+weakness(fire,water-dark).
+weakness(fire,water-fairy).
+weakness(fire,electric-fire).
+weakness(fire,electric-water).
+weakness(fire,electric-rock).
+weakness(fire,electric-dragon).
+weakness(fire,fighting-fire).
+weakness(fire,fighting-water).
+weakness(fire,fighting-rock).
+weakness(fire,fighting-dragon).
+weakness(fire,poison-fire).
+weakness(fire,poison-water).
+weakness(fire,poison-rock).
+weakness(fire,poison-dragon).
+weakness(fire,ground-fire).
+weakness(fire,ground-water).
+weakness(fire,ground-rock).
+weakness(fire,ground-dragon).
+weakness(fire,flying-fire).
+weakness(fire,flying-water).
+weakness(fire,flying-rock).
+weakness(fire,flying-dragon).
+weakness(fire,psychic-fire).
+weakness(fire,psychic-water).
+weakness(fire,psychic-rock).
+weakness(fire,psychic-dragon).
+weakness(fire,rock-normal).
+weakness(fire,rock-electric).
+weakness(fire,rock-fighting).
+weakness(fire,rock-poison).
+weakness(fire,rock-ground).
+weakness(fire,rock-flying).
+weakness(fire,rock-psychic).
+weakness(fire,rock-ghost).
+weakness(fire,rock-dark).
+weakness(fire,rock-fairy).
+weakness(fire,ghost-fire).
+weakness(fire,ghost-water).
+weakness(fire,ghost-rock).
+weakness(fire,ghost-dragon).
+weakness(fire,dragon-normal).
+weakness(fire,dragon-electric).
+weakness(fire,dragon-fighting).
+weakness(fire,dragon-poison).
+weakness(fire,dragon-ground).
+weakness(fire,dragon-flying).
+weakness(fire,dragon-psychic).
+weakness(fire,dragon-ghost).
+weakness(fire,dragon-dark).
+weakness(fire,dragon-fairy).
+weakness(fire,dark-fire).
+weakness(fire,dark-water).
+weakness(fire,dark-rock).
+weakness(fire,dark-dragon).
+weakness(fire,fairy-fire).
+weakness(fire,fairy-water).
+weakness(fire,fairy-rock).
+weakness(fire,fairy-dragon).
+weakness(water,water).
+weakness(water,grass).
+weakness(water,dragon).
+weakness(water,normal-water).
+weakness(water,normal-grass).
+weakness(water,normal-dragon).
+weakness(water,water-normal).
+weakness(water,water-electric).
+weakness(water,water-ice).
+weakness(water,water-fighting).
+weakness(water,water-poison).
+weakness(water,water-flying).
+weakness(water,water-psychic).
+weakness(water,water-bug).
+weakness(water,water-ghost).
+weakness(water,water-dark).
+weakness(water,water-steel).
+weakness(water,water-fairy).
+weakness(water,electric-water).
+weakness(water,electric-grass).
+weakness(water,electric-dragon).
+weakness(water,grass-normal).
+weakness(water,grass-electric).
+weakness(water,grass-ice).
+weakness(water,grass-fighting).
+weakness(water,grass-poison).
+weakness(water,grass-flying).
+weakness(water,grass-psychic).
+weakness(water,grass-bug).
+weakness(water,grass-ghost).
+weakness(water,grass-dark).
+weakness(water,grass-steel).
+weakness(water,grass-fairy).
+weakness(water,ice-water).
+weakness(water,ice-grass).
+weakness(water,ice-dragon).
+weakness(water,fighting-water).
+weakness(water,fighting-grass).
+weakness(water,fighting-dragon).
+weakness(water,poison-water).
+weakness(water,poison-grass).
+weakness(water,poison-dragon).
+weakness(water,flying-water).
+weakness(water,flying-grass).
+weakness(water,flying-dragon).
+weakness(water,psychic-water).
+weakness(water,psychic-grass).
+weakness(water,psychic-dragon).
+weakness(water,bug-water).
+weakness(water,bug-grass).
+weakness(water,bug-dragon).
+weakness(water,ghost-water).
+weakness(water,ghost-grass).
+weakness(water,ghost-dragon).
+weakness(water,dragon-normal).
+weakness(water,dragon-electric).
+weakness(water,dragon-ice).
+weakness(water,dragon-fighting).
+weakness(water,dragon-poison).
+weakness(water,dragon-flying).
+weakness(water,dragon-psychic).
+weakness(water,dragon-bug).
+weakness(water,dragon-ghost).
+weakness(water,dragon-dark).
+weakness(water,dragon-steel).
+weakness(water,dragon-fairy).
+weakness(water,dark-water).
+weakness(water,dark-grass).
+weakness(water,dark-dragon).
+weakness(water,steel-water).
+weakness(water,steel-grass).
+weakness(water,steel-dragon).
+weakness(water,fairy-water).
+weakness(water,fairy-grass).
+weakness(water,fairy-dragon).
+weakness(electric,electric).
+weakness(electric,grass).
+weakness(electric,dragon).
+weakness(electric,normal-electric).
+weakness(electric,normal-grass).
+weakness(electric,normal-dragon).
+weakness(electric,fire-electric).
+weakness(electric,fire-grass).
+weakness(electric,fire-dragon).
+weakness(electric,electric-normal).
+weakness(electric,electric-fire).
+weakness(electric,electric-ice).
+weakness(electric,electric-fighting).
+weakness(electric,electric-poison).
+weakness(electric,electric-psychic).
+weakness(electric,electric-bug).
+weakness(electric,electric-rock).
+weakness(electric,electric-ghost).
+weakness(electric,electric-dark).
+weakness(electric,electric-steel).
+weakness(electric,electric-fairy).
+weakness(electric,grass-normal).
+weakness(electric,grass-fire).
+weakness(electric,grass-ice).
+weakness(electric,grass-fighting).
+weakness(electric,grass-poison).
+weakness(electric,grass-psychic).
+weakness(electric,grass-bug).
+weakness(electric,grass-rock).
+weakness(electric,grass-ghost).
+weakness(electric,grass-dark).
+weakness(electric,grass-steel).
+weakness(electric,grass-fairy).
+weakness(electric,ice-electric).
+weakness(electric,ice-grass).
+weakness(electric,ice-dragon).
+weakness(electric,fighting-electric).
+weakness(electric,fighting-grass).
+weakness(electric,fighting-dragon).
+weakness(electric,poison-electric).
+weakness(electric,poison-grass).
+weakness(electric,poison-dragon).
+weakness(electric,psychic-electric).
+weakness(electric,psychic-grass).
+weakness(electric,psychic-dragon).
+weakness(electric,bug-electric).
+weakness(electric,bug-grass).
+weakness(electric,bug-dragon).
+weakness(electric,rock-electric).
+weakness(electric,rock-grass).
+weakness(electric,rock-dragon).
+weakness(electric,ghost-electric).
+weakness(electric,ghost-grass).
+weakness(electric,ghost-dragon).
+weakness(electric,dragon-normal).
+weakness(electric,dragon-fire).
+weakness(electric,dragon-ice).
+weakness(electric,dragon-fighting).
+weakness(electric,dragon-poison).
+weakness(electric,dragon-psychic).
+weakness(electric,dragon-bug).
+weakness(electric,dragon-rock).
+weakness(electric,dragon-ghost).
+weakness(electric,dragon-dark).
+weakness(electric,dragon-steel).
+weakness(electric,dragon-fairy).
+weakness(electric,dark-electric).
+weakness(electric,dark-grass).
+weakness(electric,dark-dragon).
+weakness(electric,steel-electric).
+weakness(electric,steel-grass).
+weakness(electric,steel-dragon).
+weakness(electric,fairy-electric).
+weakness(electric,fairy-grass).
+weakness(electric,fairy-dragon).
+weakness(grass,fire).
+weakness(grass,grass).
+weakness(grass,poison).
+weakness(grass,flying).
+weakness(grass,bug).
+weakness(grass,dragon).
+weakness(grass,steel).
+weakness(grass,normal-fire).
+weakness(grass,normal-grass).
+weakness(grass,normal-poison).
+weakness(grass,normal-flying).
+weakness(grass,normal-bug).
+weakness(grass,normal-dragon).
+weakness(grass,normal-steel).
+weakness(grass,fire-normal).
+weakness(grass,fire-electric).
+weakness(grass,fire-ice).
+weakness(grass,fire-fighting).
+weakness(grass,fire-psychic).
+weakness(grass,fire-ghost).
+weakness(grass,fire-dark).
+weakness(grass,fire-fairy).
+weakness(grass,electric-fire).
+weakness(grass,electric-grass).
+weakness(grass,electric-poison).
+weakness(grass,electric-flying).
+weakness(grass,electric-bug).
+weakness(grass,electric-dragon).
+weakness(grass,electric-steel).
+weakness(grass,grass-normal).
+weakness(grass,grass-electric).
+weakness(grass,grass-ice).
+weakness(grass,grass-fighting).
+weakness(grass,grass-psychic).
+weakness(grass,grass-ghost).
+weakness(grass,grass-dark).
+weakness(grass,grass-fairy).
+weakness(grass,ice-fire).
+weakness(grass,ice-grass).
+weakness(grass,ice-poison).
+weakness(grass,ice-flying).
+weakness(grass,ice-bug).
+weakness(grass,ice-dragon).
+weakness(grass,ice-steel).
+weakness(grass,fighting-fire).
+weakness(grass,fighting-grass).
+weakness(grass,fighting-poison).
+weakness(grass,fighting-flying).
+weakness(grass,fighting-bug).
+weakness(grass,fighting-dragon).
+weakness(grass,fighting-steel).
+weakness(grass,poison-normal).
+weakness(grass,poison-electric).
+weakness(grass,poison-ice).
+weakness(grass,poison-fighting).
+weakness(grass,poison-psychic).
+weakness(grass,poison-ghost).
+weakness(grass,poison-dark).
+weakness(grass,poison-fairy).
+weakness(grass,flying-normal).
+weakness(grass,flying-electric).
+weakness(grass,flying-ice).
+weakness(grass,flying-fighting).
+weakness(grass,flying-psychic).
+weakness(grass,flying-ghost).
+weakness(grass,flying-dark).
+weakness(grass,flying-fairy).
+weakness(grass,psychic-fire).
+weakness(grass,psychic-grass).
+weakness(grass,psychic-poison).
+weakness(grass,psychic-flying).
+weakness(grass,psychic-bug).
+weakness(grass,psychic-dragon).
+weakness(grass,psychic-steel).
+weakness(grass,bug-normal).
+weakness(grass,bug-electric).
+weakness(grass,bug-ice).
+weakness(grass,bug-fighting).
+weakness(grass,bug-psychic).
+weakness(grass,bug-ghost).
+weakness(grass,bug-dark).
+weakness(grass,bug-fairy).
+weakness(grass,ghost-fire).
+weakness(grass,ghost-grass).
+weakness(grass,ghost-poison).
+weakness(grass,ghost-flying).
+weakness(grass,ghost-bug).
+weakness(grass,ghost-dragon).
+weakness(grass,ghost-steel).
+weakness(grass,dragon-normal).
+weakness(grass,dragon-electric).
+weakness(grass,dragon-ice).
+weakness(grass,dragon-fighting).
+weakness(grass,dragon-psychic).
+weakness(grass,dragon-ghost).
+weakness(grass,dragon-dark).
+weakness(grass,dragon-fairy).
+weakness(grass,dark-fire).
+weakness(grass,dark-grass).
+weakness(grass,dark-poison).
+weakness(grass,dark-flying).
+weakness(grass,dark-bug).
+weakness(grass,dark-dragon).
+weakness(grass,dark-steel).
+weakness(grass,steel-normal).
+weakness(grass,steel-electric).
+weakness(grass,steel-ice).
+weakness(grass,steel-fighting).
+weakness(grass,steel-psychic).
+weakness(grass,steel-ghost).
+weakness(grass,steel-dark).
+weakness(grass,steel-fairy).
+weakness(grass,fairy-fire).
+weakness(grass,fairy-grass).
+weakness(grass,fairy-poison).
+weakness(grass,fairy-flying).
+weakness(grass,fairy-bug).
+weakness(grass,fairy-dragon).
+weakness(grass,fairy-steel).
+weakness(ice,fire).
+weakness(ice,water).
+weakness(ice,ice).
+weakness(ice,steel).
+weakness(ice,normal-fire).
+weakness(ice,normal-water).
+weakness(ice,normal-ice).
+weakness(ice,normal-steel).
+weakness(ice,fire-normal).
+weakness(ice,fire-electric).
+weakness(ice,fire-fighting).
+weakness(ice,fire-poison).
+weakness(ice,fire-psychic).
+weakness(ice,fire-bug).
+weakness(ice,fire-rock).
+weakness(ice,fire-ghost).
+weakness(ice,fire-dark).
+weakness(ice,fire-fairy).
+weakness(ice,water-normal).
+weakness(ice,water-electric).
+weakness(ice,water-fighting).
+weakness(ice,water-poison).
+weakness(ice,water-psychic).
+weakness(ice,water-bug).
+weakness(ice,water-rock).
+weakness(ice,water-ghost).
+weakness(ice,water-dark).
+weakness(ice,water-fairy).
+weakness(ice,electric-fire).
+weakness(ice,electric-water).
+weakness(ice,electric-ice).
+weakness(ice,electric-steel).
+weakness(ice,ice-normal).
+weakness(ice,ice-fire).
+weakness(ice,ice-electric).
+weakness(ice,ice-fighting).
+weakness(ice,ice-poison).
+weakness(ice,ice-psychic).
+weakness(ice,ice-bug).
+weakness(ice,ice-rock).
+weakness(ice,ice-ghost).
+weakness(ice,ice-dark).
+weakness(ice,ice-fairy).
+weakness(ice,fighting-fire).
+weakness(ice,fighting-water).
+weakness(ice,fighting-ice).
+weakness(ice,fighting-poison).
+weakness(ice,fighting-steel).
+weakness(ice,poison-fire).
+weakness(ice,poison-water).
+weakness(ice,poison-ice).
+weakness(ice,poison-fighting).
+weakness(ice,poison-steel).
+weakness(ice,psychic-fire).
+weakness(ice,psychic-water).
+weakness(ice,psychic-ice).
+weakness(ice,psychic-steel).
+weakness(ice,bug-fire).
+weakness(ice,bug-water).
+weakness(ice,bug-ice).
+weakness(ice,bug-steel).
+weakness(ice,rock-fire).
+weakness(ice,rock-water).
+weakness(ice,rock-ice).
+weakness(ice,rock-steel).
+weakness(ice,ghost-fire).
+weakness(ice,ghost-water).
+weakness(ice,ghost-ice).
+weakness(ice,ghost-steel).
+weakness(ice,dark-fire).
+weakness(ice,dark-water).
+weakness(ice,dark-ice).
+weakness(ice,dark-steel).
+weakness(ice,steel-normal).
+weakness(ice,steel-electric).
+weakness(ice,steel-fighting).
+weakness(ice,steel-poison).
+weakness(ice,steel-psychic).
+weakness(ice,steel-bug).
+weakness(ice,steel-rock).
+weakness(ice,steel-ghost).
+weakness(ice,steel-dark).
+weakness(ice,steel-fairy).
+weakness(ice,fairy-fire).
+weakness(ice,fairy-water).
+weakness(ice,fairy-ice).
+weakness(ice,fairy-steel).
+weakness(fighting,poison).
+weakness(fighting,flying).
+weakness(fighting,psychic).
+weakness(fighting,bug).
+weakness(fighting,fairy).
+weakness(fighting,fire-poison).
+weakness(fighting,fire-flying).
+weakness(fighting,fire-psychic).
+weakness(fighting,fire-bug).
+weakness(fighting,fire-fairy).
+weakness(fighting,water-poison).
+weakness(fighting,water-flying).
+weakness(fighting,water-psychic).
+weakness(fighting,water-bug).
+weakness(fighting,water-fairy).
+weakness(fighting,electric-poison).
+weakness(fighting,electric-flying).
+weakness(fighting,electric-psychic).
+weakness(fighting,electric-bug).
+weakness(fighting,electric-fairy).
+weakness(fighting,grass-poison).
+weakness(fighting,grass-flying).
+weakness(fighting,grass-psychic).
+weakness(fighting,grass-bug).
+weakness(fighting,grass-fairy).
+weakness(fighting,fighting-flying).
+weakness(fighting,fighting-psychic).
+weakness(fighting,fighting-bug).
+weakness(fighting,fighting-fairy).
+weakness(fighting,poison-fire).
+weakness(fighting,poison-water).
+weakness(fighting,poison-electric).
+weakness(fighting,poison-grass).
+weakness(fighting,poison-ground).
+weakness(fighting,poison-dragon).
+weakness(fighting,ground-poison).
+weakness(fighting,ground-flying).
+weakness(fighting,ground-psychic).
+weakness(fighting,ground-bug).
+weakness(fighting,ground-fairy).
+weakness(fighting,flying-fire).
+weakness(fighting,flying-water).
+weakness(fighting,flying-electric).
+weakness(fighting,flying-grass).
+weakness(fighting,flying-fighting).
+weakness(fighting,flying-ground).
+weakness(fighting,flying-dragon).
+weakness(fighting,psychic-fire).
+weakness(fighting,psychic-water).
+weakness(fighting,psychic-electric).
+weakness(fighting,psychic-grass).
+weakness(fighting,psychic-fighting).
+weakness(fighting,psychic-ground).
+weakness(fighting,psychic-dragon).
+weakness(fighting,bug-fire).
+weakness(fighting,bug-water).
+weakness(fighting,bug-electric).
+weakness(fighting,bug-grass).
+weakness(fighting,bug-fighting).
+weakness(fighting,bug-ground).
+weakness(fighting,bug-dragon).
+weakness(fighting,dragon-poison).
+weakness(fighting,dragon-flying).
+weakness(fighting,dragon-psychic).
+weakness(fighting,dragon-bug).
+weakness(fighting,dragon-fairy).
+weakness(fighting,fairy-fire).
+weakness(fighting,fairy-water).
+weakness(fighting,fairy-electric).
+weakness(fighting,fairy-grass).
+weakness(fighting,fairy-fighting).
+weakness(fighting,fairy-ground).
+weakness(fighting,fairy-dragon).
+weakness(poison,poison).
+weakness(poison,ground).
+weakness(poison,rock).
+weakness(poison,ghost).
+weakness(poison,normal-poison).
+weakness(poison,normal-ground).
+weakness(poison,normal-rock).
+weakness(poison,normal-ghost).
+weakness(poison,fire-poison).
+weakness(poison,fire-ground).
+weakness(poison,fire-rock).
+weakness(poison,fire-ghost).
+weakness(poison,water-poison).
+weakness(poison,water-ground).
+weakness(poison,water-rock).
+weakness(poison,water-ghost).
+weakness(poison,electric-poison).
+weakness(poison,electric-ground).
+weakness(poison,electric-rock).
+weakness(poison,electric-ghost).
+weakness(poison,ice-poison).
+weakness(poison,ice-ground).
+weakness(poison,ice-rock).
+weakness(poison,ice-ghost).
+weakness(poison,fighting-poison).
+weakness(poison,fighting-ground).
+weakness(poison,fighting-rock).
+weakness(poison,fighting-ghost).
+weakness(poison,poison-normal).
+weakness(poison,poison-fire).
+weakness(poison,poison-water).
+weakness(poison,poison-electric).
+weakness(poison,poison-ice).
+weakness(poison,poison-fighting).
+weakness(poison,poison-flying).
+weakness(poison,poison-psychic).
+weakness(poison,poison-bug).
+weakness(poison,poison-dragon).
+weakness(poison,poison-dark).
+weakness(poison,ground-normal).
+weakness(poison,ground-fire).
+weakness(poison,ground-water).
+weakness(poison,ground-electric).
+weakness(poison,ground-ice).
+weakness(poison,ground-fighting).
+weakness(poison,ground-flying).
+weakness(poison,ground-psychic).
+weakness(poison,ground-bug).
+weakness(poison,ground-dragon).
+weakness(poison,ground-dark).
+weakness(poison,flying-poison).
+weakness(poison,flying-ground).
+weakness(poison,flying-rock).
+weakness(poison,flying-ghost).
+weakness(poison,psychic-poison).
+weakness(poison,psychic-ground).
+weakness(poison,psychic-rock).
+weakness(poison,psychic-ghost).
+weakness(poison,bug-poison).
+weakness(poison,bug-ground).
+weakness(poison,bug-rock).
+weakness(poison,bug-ghost).
+weakness(poison,rock-normal).
+weakness(poison,rock-fire).
+weakness(poison,rock-water).
+weakness(poison,rock-electric).
+weakness(poison,rock-ice).
+weakness(poison,rock-fighting).
+weakness(poison,rock-flying).
+weakness(poison,rock-psychic).
+weakness(poison,rock-bug).
+weakness(poison,rock-dragon).
+weakness(poison,rock-dark).
+weakness(poison,ghost-normal).
+weakness(poison,ghost-fire).
+weakness(poison,ghost-water).
+weakness(poison,ghost-electric).
+weakness(poison,ghost-ice).
+weakness(poison,ghost-fighting).
+weakness(poison,ghost-flying).
+weakness(poison,ghost-psychic).
+weakness(poison,ghost-bug).
+weakness(poison,ghost-dragon).
+weakness(poison,ghost-dark).
+weakness(poison,dragon-poison).
+weakness(poison,dragon-ground).
+weakness(poison,dragon-rock).
+weakness(poison,dragon-ghost).
+weakness(poison,dark-poison).
+weakness(poison,dark-ground).
+weakness(poison,dark-rock).
+weakness(poison,dark-ghost).
+weakness(ground,grass).
+weakness(ground,bug).
+weakness(ground,normal-grass).
+weakness(ground,normal-bug).
+weakness(ground,water-grass).
+weakness(ground,water-bug).
+weakness(ground,grass-normal).
+weakness(ground,grass-water).
+weakness(ground,grass-ice).
+weakness(ground,grass-fighting).
+weakness(ground,grass-ground).
+weakness(ground,grass-psychic).
+weakness(ground,grass-ghost).
+weakness(ground,grass-dragon).
+weakness(ground,grass-dark).
+weakness(ground,grass-fairy).
+weakness(ground,ice-grass).
+weakness(ground,ice-bug).
+weakness(ground,fighting-grass).
+weakness(ground,fighting-bug).
+weakness(ground,ground-grass).
+weakness(ground,ground-bug).
+weakness(ground,psychic-grass).
+weakness(ground,psychic-bug).
+weakness(ground,bug-normal).
+weakness(ground,bug-water).
+weakness(ground,bug-ice).
+weakness(ground,bug-fighting).
+weakness(ground,bug-ground).
+weakness(ground,bug-psychic).
+weakness(ground,bug-ghost).
+weakness(ground,bug-dragon).
+weakness(ground,bug-dark).
+weakness(ground,bug-fairy).
+weakness(ground,ghost-grass).
+weakness(ground,ghost-bug).
+weakness(ground,dragon-grass).
+weakness(ground,dragon-bug).
+weakness(ground,dark-grass).
+weakness(ground,dark-bug).
+weakness(ground,fairy-grass).
+weakness(ground,fairy-bug).
+weakness(flying,electric).
+weakness(flying,rock).
+weakness(flying,steel).
+weakness(flying,normal-electric).
+weakness(flying,normal-rock).
+weakness(flying,normal-steel).
+weakness(flying,fire-electric).
+weakness(flying,fire-rock).
+weakness(flying,fire-steel).
+weakness(flying,water-electric).
+weakness(flying,water-rock).
+weakness(flying,water-steel).
+weakness(flying,electric-normal).
+weakness(flying,electric-fire).
+weakness(flying,electric-water).
+weakness(flying,electric-ice).
+weakness(flying,electric-poison).
+weakness(flying,electric-ground).
+weakness(flying,electric-flying).
+weakness(flying,electric-psychic).
+weakness(flying,electric-ghost).
+weakness(flying,electric-dragon).
+weakness(flying,electric-dark).
+weakness(flying,electric-fairy).
+weakness(flying,ice-electric).
+weakness(flying,ice-rock).
+weakness(flying,ice-steel).
+weakness(flying,poison-electric).
+weakness(flying,poison-rock).
+weakness(flying,poison-steel).
+weakness(flying,ground-electric).
+weakness(flying,ground-rock).
+weakness(flying,ground-steel).
+weakness(flying,flying-electric).
+weakness(flying,flying-rock).
+weakness(flying,flying-steel).
+weakness(flying,psychic-electric).
+weakness(flying,psychic-rock).
+weakness(flying,psychic-steel).
+weakness(flying,rock-normal).
+weakness(flying,rock-fire).
+weakness(flying,rock-water).
+weakness(flying,rock-ice).
+weakness(flying,rock-poison).
+weakness(flying,rock-ground).
+weakness(flying,rock-flying).
+weakness(flying,rock-psychic).
+weakness(flying,rock-ghost).
+weakness(flying,rock-dragon).
+weakness(flying,rock-dark).
+weakness(flying,rock-fairy).
+weakness(flying,ghost-electric).
+weakness(flying,ghost-rock).
+weakness(flying,ghost-steel).
+weakness(flying,dragon-electric).
+weakness(flying,dragon-rock).
+weakness(flying,dragon-steel).
+weakness(flying,dark-electric).
+weakness(flying,dark-rock).
+weakness(flying,dark-steel).
+weakness(flying,steel-normal).
+weakness(flying,steel-fire).
+weakness(flying,steel-water).
+weakness(flying,steel-ice).
+weakness(flying,steel-poison).
+weakness(flying,steel-ground).
+weakness(flying,steel-flying).
+weakness(flying,steel-psychic).
+weakness(flying,steel-ghost).
+weakness(flying,steel-dragon).
+weakness(flying,steel-dark).
+weakness(flying,steel-fairy).
+weakness(flying,fairy-electric).
+weakness(flying,fairy-rock).
+weakness(flying,fairy-steel).
+weakness(psychic,psychic).
+weakness(psychic,steel).
+weakness(psychic,normal-psychic).
+weakness(psychic,normal-steel).
+weakness(psychic,fire-psychic).
+weakness(psychic,fire-steel).
+weakness(psychic,water-psychic).
+weakness(psychic,water-steel).
+weakness(psychic,electric-psychic).
+weakness(psychic,electric-steel).
+weakness(psychic,grass-psychic).
+weakness(psychic,grass-steel).
+weakness(psychic,ice-psychic).
+weakness(psychic,ice-steel).
+weakness(psychic,ground-psychic).
+weakness(psychic,ground-steel).
+weakness(psychic,flying-psychic).
+weakness(psychic,flying-steel).
+weakness(psychic,psychic-normal).
+weakness(psychic,psychic-fire).
+weakness(psychic,psychic-water).
+weakness(psychic,psychic-electric).
+weakness(psychic,psychic-grass).
+weakness(psychic,psychic-ice).
+weakness(psychic,psychic-ground).
+weakness(psychic,psychic-flying).
+weakness(psychic,psychic-bug).
+weakness(psychic,psychic-rock).
+weakness(psychic,psychic-ghost).
+weakness(psychic,psychic-dragon).
+weakness(psychic,psychic-fairy).
+weakness(psychic,bug-psychic).
+weakness(psychic,bug-steel).
+weakness(psychic,rock-psychic).
+weakness(psychic,rock-steel).
+weakness(psychic,ghost-psychic).
+weakness(psychic,ghost-steel).
+weakness(psychic,dragon-psychic).
+weakness(psychic,dragon-steel).
+weakness(psychic,steel-normal).
+weakness(psychic,steel-fire).
+weakness(psychic,steel-water).
+weakness(psychic,steel-electric).
+weakness(psychic,steel-grass).
+weakness(psychic,steel-ice).
+weakness(psychic,steel-ground).
+weakness(psychic,steel-flying).
+weakness(psychic,steel-bug).
+weakness(psychic,steel-rock).
+weakness(psychic,steel-ghost).
+weakness(psychic,steel-dragon).
+weakness(psychic,steel-fairy).
+weakness(psychic,fairy-psychic).
+weakness(psychic,fairy-steel).
+weakness(bug,fire).
+weakness(bug,fighting).
+weakness(bug,poison).
+weakness(bug,flying).
+weakness(bug,ghost).
+weakness(bug,steel).
+weakness(bug,fairy).
+weakness(bug,normal-fire).
+weakness(bug,normal-fighting).
+weakness(bug,normal-poison).
+weakness(bug,normal-flying).
+weakness(bug,normal-ghost).
+weakness(bug,normal-steel).
+weakness(bug,normal-fairy).
+weakness(bug,fire-normal).
+weakness(bug,fire-water).
+weakness(bug,fire-electric).
+weakness(bug,fire-ice).
+weakness(bug,fire-ground).
+weakness(bug,fire-bug).
+weakness(bug,fire-rock).
+weakness(bug,fire-dragon).
+weakness(bug,water-fire).
+weakness(bug,water-fighting).
+weakness(bug,water-poison).
+weakness(bug,water-flying).
+weakness(bug,water-ghost).
+weakness(bug,water-steel).
+weakness(bug,water-fairy).
+weakness(bug,electric-fire).
+weakness(bug,electric-fighting).
+weakness(bug,electric-poison).
+weakness(bug,electric-flying).
+weakness(bug,electric-ghost).
+weakness(bug,electric-steel).
+weakness(bug,electric-fairy).
+weakness(bug,ice-fire).
+weakness(bug,ice-fighting).
+weakness(bug,ice-poison).
+weakness(bug,ice-flying).
+weakness(bug,ice-ghost).
+weakness(bug,ice-steel).
+weakness(bug,ice-fairy).
+weakness(bug,fighting-normal).
+weakness(bug,fighting-water).
+weakness(bug,fighting-electric).
+weakness(bug,fighting-ice).
+weakness(bug,fighting-poison).
+weakness(bug,fighting-ground).
+weakness(bug,fighting-bug).
+weakness(bug,fighting-rock).
+weakness(bug,fighting-dragon).
+weakness(bug,poison-normal).
+weakness(bug,poison-water).
+weakness(bug,poison-electric).
+weakness(bug,poison-ice).
+weakness(bug,poison-fighting).
+weakness(bug,poison-ground).
+weakness(bug,poison-bug).
+weakness(bug,poison-rock).
+weakness(bug,poison-dragon).
+weakness(bug,ground-fire).
+weakness(bug,ground-fighting).
+weakness(bug,ground-poison).
+weakness(bug,ground-flying).
+weakness(bug,ground-ghost).
+weakness(bug,ground-steel).
+weakness(bug,ground-fairy).
+weakness(bug,flying-normal).
+weakness(bug,flying-water).
+weakness(bug,flying-electric).
+weakness(bug,flying-ice).
+weakness(bug,flying-ground).
+weakness(bug,flying-bug).
+weakness(bug,flying-rock).
+weakness(bug,flying-dragon).
+weakness(bug,bug-fire).
+weakness(bug,bug-fighting).
+weakness(bug,bug-poison).
+weakness(bug,bug-flying).
+weakness(bug,bug-ghost).
+weakness(bug,bug-steel).
+weakness(bug,bug-fairy).
+weakness(bug,rock-fire).
+weakness(bug,rock-fighting).
+weakness(bug,rock-poison).
+weakness(bug,rock-flying).
+weakness(bug,rock-ghost).
+weakness(bug,rock-steel).
+weakness(bug,rock-fairy).
+weakness(bug,ghost-normal).
+weakness(bug,ghost-water).
+weakness(bug,ghost-electric).
+weakness(bug,ghost-ice).
+weakness(bug,ghost-ground).
+weakness(bug,ghost-bug).
+weakness(bug,ghost-rock).
+weakness(bug,ghost-dragon).
+weakness(bug,ghost-fairy).
+weakness(bug,dragon-fire).
+weakness(bug,dragon-fighting).
+weakness(bug,dragon-poison).
+weakness(bug,dragon-flying).
+weakness(bug,dragon-ghost).
+weakness(bug,dragon-steel).
+weakness(bug,dragon-fairy).
+weakness(bug,steel-normal).
+weakness(bug,steel-water).
+weakness(bug,steel-electric).
+weakness(bug,steel-ice).
+weakness(bug,steel-ground).
+weakness(bug,steel-bug).
+weakness(bug,steel-rock).
+weakness(bug,steel-dragon).
+weakness(bug,fairy-normal).
+weakness(bug,fairy-water).
+weakness(bug,fairy-electric).
+weakness(bug,fairy-ice).
+weakness(bug,fairy-ground).
+weakness(bug,fairy-bug).
+weakness(bug,fairy-rock).
+weakness(bug,fairy-ghost).
+weakness(bug,fairy-dragon).
+weakness(rock,fighting).
+weakness(rock,ground).
+weakness(rock,steel).
+weakness(rock,normal-fighting).
+weakness(rock,normal-ground).
+weakness(rock,normal-steel).
+weakness(rock,water-fighting).
+weakness(rock,water-ground).
+weakness(rock,water-steel).
+weakness(rock,electric-fighting).
+weakness(rock,electric-ground).
+weakness(rock,electric-steel).
+weakness(rock,grass-fighting).
+weakness(rock,grass-ground).
+weakness(rock,grass-steel).
+weakness(rock,fighting-normal).
+weakness(rock,fighting-water).
+weakness(rock,fighting-electric).
+weakness(rock,fighting-grass).
+weakness(rock,fighting-psychic).
+weakness(rock,fighting-rock).
+weakness(rock,fighting-ghost).
+weakness(rock,fighting-dragon).
+weakness(rock,fighting-dark).
+weakness(rock,fighting-fairy).
+weakness(rock,poison-ground).
+weakness(rock,poison-steel).
+weakness(rock,ground-normal).
+weakness(rock,ground-water).
+weakness(rock,ground-electric).
+weakness(rock,ground-grass).
+weakness(rock,ground-poison).
+weakness(rock,ground-psychic).
+weakness(rock,ground-rock).
+weakness(rock,ground-ghost).
+weakness(rock,ground-dragon).
+weakness(rock,ground-dark).
+weakness(rock,ground-fairy).
+weakness(rock,psychic-fighting).
+weakness(rock,psychic-ground).
+weakness(rock,psychic-steel).
+weakness(rock,rock-fighting).
+weakness(rock,rock-ground).
+weakness(rock,rock-steel).
+weakness(rock,ghost-fighting).
+weakness(rock,ghost-ground).
+weakness(rock,ghost-steel).
+weakness(rock,dragon-fighting).
+weakness(rock,dragon-ground).
+weakness(rock,dragon-steel).
+weakness(rock,dark-fighting).
+weakness(rock,dark-ground).
+weakness(rock,dark-steel).
+weakness(rock,steel-normal).
+weakness(rock,steel-water).
+weakness(rock,steel-electric).
+weakness(rock,steel-grass).
+weakness(rock,steel-poison).
+weakness(rock,steel-psychic).
+weakness(rock,steel-rock).
+weakness(rock,steel-ghost).
+weakness(rock,steel-dragon).
+weakness(rock,steel-dark).
+weakness(rock,steel-fairy).
+weakness(rock,fairy-fighting).
+weakness(rock,fairy-ground).
+weakness(rock,fairy-steel).
+weakness(ghost,dark).
+weakness(ghost,fire-dark).
+weakness(ghost,water-dark).
+weakness(ghost,electric-dark).
+weakness(ghost,grass-dark).
+weakness(ghost,ice-dark).
+weakness(ghost,fighting-dark).
+weakness(ghost,poison-dark).
+weakness(ghost,ground-dark).
+weakness(ghost,flying-dark).
+weakness(ghost,bug-dark).
+weakness(ghost,rock-dark).
+weakness(ghost,dragon-dark).
+weakness(ghost,dark-fire).
+weakness(ghost,dark-water).
+weakness(ghost,dark-electric).
+weakness(ghost,dark-grass).
+weakness(ghost,dark-ice).
+weakness(ghost,dark-fighting).
+weakness(ghost,dark-poison).
+weakness(ghost,dark-ground).
+weakness(ghost,dark-flying).
+weakness(ghost,dark-bug).
+weakness(ghost,dark-rock).
+weakness(ghost,dark-dragon).
+weakness(ghost,dark-steel).
+weakness(ghost,dark-fairy).
+weakness(ghost,steel-dark).
+weakness(ghost,fairy-dark).
+weakness(dragon,steel).
+weakness(dragon,normal-steel).
+weakness(dragon,fire-steel).
+weakness(dragon,water-steel).
+weakness(dragon,electric-steel).
+weakness(dragon,grass-steel).
+weakness(dragon,ice-steel).
+weakness(dragon,fighting-steel).
+weakness(dragon,poison-steel).
+weakness(dragon,ground-steel).
+weakness(dragon,flying-steel).
+weakness(dragon,psychic-steel).
+weakness(dragon,bug-steel).
+weakness(dragon,rock-steel).
+weakness(dragon,ghost-steel).
+weakness(dragon,dark-steel).
+weakness(dragon,steel-normal).
+weakness(dragon,steel-fire).
+weakness(dragon,steel-water).
+weakness(dragon,steel-electric).
+weakness(dragon,steel-grass).
+weakness(dragon,steel-ice).
+weakness(dragon,steel-fighting).
+weakness(dragon,steel-poison).
+weakness(dragon,steel-ground).
+weakness(dragon,steel-flying).
+weakness(dragon,steel-psychic).
+weakness(dragon,steel-bug).
+weakness(dragon,steel-rock).
+weakness(dragon,steel-ghost).
+weakness(dragon,steel-dark).
+weakness(dark,fighting).
+weakness(dark,dark).
+weakness(dark,fairy).
+weakness(dark,normal-fighting).
+weakness(dark,normal-dark).
+weakness(dark,normal-fairy).
+weakness(dark,fire-fighting).
+weakness(dark,fire-dark).
+weakness(dark,fire-fairy).
+weakness(dark,water-fighting).
+weakness(dark,water-dark).
+weakness(dark,water-fairy).
+weakness(dark,electric-fighting).
+weakness(dark,electric-dark).
+weakness(dark,electric-fairy).
+weakness(dark,grass-fighting).
+weakness(dark,grass-dark).
+weakness(dark,grass-fairy).
+weakness(dark,ice-fighting).
+weakness(dark,ice-dark).
+weakness(dark,ice-fairy).
+weakness(dark,fighting-normal).
+weakness(dark,fighting-fire).
+weakness(dark,fighting-water).
+weakness(dark,fighting-electric).
+weakness(dark,fighting-grass).
+weakness(dark,fighting-ice).
+weakness(dark,fighting-poison).
+weakness(dark,fighting-ground).
+weakness(dark,fighting-flying).
+weakness(dark,fighting-bug).
+weakness(dark,fighting-rock).
+weakness(dark,fighting-dragon).
+weakness(dark,fighting-steel).
+weakness(dark,poison-fighting).
+weakness(dark,poison-dark).
+weakness(dark,poison-fairy).
+weakness(dark,ground-fighting).
+weakness(dark,ground-dark).
+weakness(dark,ground-fairy).
+weakness(dark,flying-fighting).
+weakness(dark,flying-dark).
+weakness(dark,flying-fairy).
+weakness(dark,bug-fighting).
+weakness(dark,bug-dark).
+weakness(dark,bug-fairy).
+weakness(dark,rock-fighting).
+weakness(dark,rock-dark).
+weakness(dark,rock-fairy).
+weakness(dark,dragon-fighting).
+weakness(dark,dragon-dark).
+weakness(dark,dragon-fairy).
+weakness(dark,dark-normal).
+weakness(dark,dark-fire).
+weakness(dark,dark-water).
+weakness(dark,dark-electric).
+weakness(dark,dark-grass).
+weakness(dark,dark-ice).
+weakness(dark,dark-poison).
+weakness(dark,dark-ground).
+weakness(dark,dark-flying).
+weakness(dark,dark-bug).
+weakness(dark,dark-rock).
+weakness(dark,dark-dragon).
+weakness(dark,dark-steel).
+weakness(dark,steel-fighting).
+weakness(dark,steel-dark).
+weakness(dark,steel-fairy).
+weakness(dark,fairy-normal).
+weakness(dark,fairy-fire).
+weakness(dark,fairy-water).
+weakness(dark,fairy-electric).
+weakness(dark,fairy-grass).
+weakness(dark,fairy-ice).
+weakness(dark,fairy-poison).
+weakness(dark,fairy-ground).
+weakness(dark,fairy-flying).
+weakness(dark,fairy-bug).
+weakness(dark,fairy-rock).
+weakness(dark,fairy-dragon).
+weakness(dark,fairy-steel).
+weakness(steel,fire).
+weakness(steel,water).
+weakness(steel,electric).
+weakness(steel,steel).
+weakness(steel,normal-fire).
+weakness(steel,normal-water).
+weakness(steel,normal-electric).
+weakness(steel,normal-steel).
+weakness(steel,fire-normal).
+weakness(steel,fire-grass).
+weakness(steel,fire-fighting).
+weakness(steel,fire-poison).
+weakness(steel,fire-ground).
+weakness(steel,fire-flying).
+weakness(steel,fire-psychic).
+weakness(steel,fire-bug).
+weakness(steel,fire-ghost).
+weakness(steel,fire-dragon).
+weakness(steel,fire-dark).
+weakness(steel,water-normal).
+weakness(steel,water-grass).
+weakness(steel,water-fighting).
+weakness(steel,water-ground).
+weakness(steel,water-flying).
+weakness(steel,water-psychic).
+weakness(steel,water-ghost).
+weakness(steel,water-dragon).
+weakness(steel,water-dark).
+weakness(steel,electric-normal).
+weakness(steel,electric-grass).
+weakness(steel,electric-fighting).
+weakness(steel,electric-ground).
+weakness(steel,electric-flying).
+weakness(steel,electric-psychic).
+weakness(steel,electric-bug).
+weakness(steel,electric-ghost).
+weakness(steel,electric-dragon).
+weakness(steel,electric-dark).
+weakness(steel,grass-fire).
+weakness(steel,grass-water).
+weakness(steel,grass-electric).
+weakness(steel,grass-steel).
+weakness(steel,fighting-fire).
+weakness(steel,fighting-water).
+weakness(steel,fighting-electric).
+weakness(steel,fighting-steel).
+weakness(steel,poison-fire).
+weakness(steel,poison-steel).
+weakness(steel,ground-fire).
+weakness(steel,ground-water).
+weakness(steel,ground-electric).
+weakness(steel,ground-steel).
+weakness(steel,flying-fire).
+weakness(steel,flying-water).
+weakness(steel,flying-electric).
+weakness(steel,flying-steel).
+weakness(steel,psychic-fire).
+weakness(steel,psychic-water).
+weakness(steel,psychic-electric).
+weakness(steel,psychic-steel).
+weakness(steel,bug-fire).
+weakness(steel,bug-electric).
+weakness(steel,bug-steel).
+weakness(steel,ghost-fire).
+weakness(steel,ghost-water).
+weakness(steel,ghost-electric).
+weakness(steel,ghost-steel).
+weakness(steel,dragon-fire).
+weakness(steel,dragon-water).
+weakness(steel,dragon-electric).
+weakness(steel,dragon-steel).
+weakness(steel,dark-fire).
+weakness(steel,dark-water).
+weakness(steel,dark-electric).
+weakness(steel,dark-steel).
+weakness(steel,steel-normal).
+weakness(steel,steel-grass).
+weakness(steel,steel-fighting).
+weakness(steel,steel-poison).
+weakness(steel,steel-ground).
+weakness(steel,steel-flying).
+weakness(steel,steel-psychic).
+weakness(steel,steel-bug).
+weakness(steel,steel-ghost).
+weakness(steel,steel-dragon).
+weakness(steel,steel-dark).
+weakness(fairy,fire).
+weakness(fairy,poison).
+weakness(fairy,steel).
 weakness(fairy,normal-fire).
-normal_effectiveness(fairy, normal-water).
-normal_effectiveness(fairy, normal-electric).
-normal_effectiveness(fairy, normal-grass).
-super_effectiveness(fairy, normal-ice).
-weakness(fairy, normal-fighting).
-normal_effectiveness(fairy, normal-poison).
-normal_effectiveness(fairy, normal-ground).
-normal_effectiveness(fairy, normal-flying).
-normal_effectiveness(fairy, normal-psychic).
-normal_effectiveness(fairy, normal-bug).
-normal_effectiveness(fairy, normal-rock).
-normal_effectiveness(fairy, normal-ghost).
-super_effectiveness(fairy, normal-dragon).
-super_effectiveness(fairy, normal-dark).
-weakness(fairy, normal-steel).
-normal_effectiveness(fairy, normal-fairy).
-weakness(fairy, fire-normal).
-weakness(fairy, fire-water).
-weakness(fairy, fire-electric).
-weakness(fairy, fire-grass).
-weakness(fairy, fire-ice).
-normal_effectiveness(fairy, fire-fighting).
-super_weakness(fairy, fire-poison).
-weakness(fairy, fire-ground).
-weakness(fairy, fire-flying).
-weakness(fairy, fire-psychic).
-weakness(fairy, fire-bug).
-weakness(fairy, fire-rock).
-weakness(fairy, fire-ghost).
-normal_effectiveness(fairy, fire-dragon).
-normal_effectiveness(fairy, fire-dark).
-super_weakness(fairy, fire-steel).
-weakness(fairy, fire-fairy).
-normal_effectiveness(fairy, water-normal).
-weakness(fairy, water-fire).
-normal_effectiveness(fairy, water-electric).
-normal_effectiveness(fairy, water-grass).
-normal_effectiveness(fairy, water-ice).
-super_effectiveness(fairy, water-fighting).
-weakness(fairy, water-poison).
-normal_effectiveness(fairy, water-ground).
-normal_effectiveness(fairy, water-flying).
-normal_effectiveness(fairy, water-psychic).
-normal_effectiveness(fairy, water-bug).
-normal_effectiveness(fairy, water-rock).
-normal_effectiveness(fairy, water-ghost).
-super_effectiveness(fairy, water-dragon).
-super_effectiveness(fairy, water-dark).
-weakness(fairy, water-steel).
-normal_effectiveness(fairy, water-fairy).
-normal_effectiveness(fairy, electric-normal).
-weakness(fairy, electric-fire).
-normal_effectiveness(fairy, electric-water).
-normal_effectiveness(fairy, electric-grass).
-normal_effectiveness(fairy, electric-ice).
-super_effectiveness(fairy, electric-fighting).
-weakness(fairy, electric-poison).
-normal_effectiveness(fairy, electric-ground).
-normal_effectiveness(fairy, electric-flying).
-normal_effectiveness(fairy, electric-psychic).
-normal_effectiveness(fairy, electric-bug).
-normal_effectiveness(fairy, electric-rock).
-normal_effectiveness(fairy, electric-ghost).
-super_effectiveness(fairy, electric-dragon).
-super_effectiveness(fairy, electric-dark).
-weakness(fairy, electric-steel).
-normal_effectiveness(fairy, electric-fairy).
-normal_effectiveness(fairy, grass-normal).
-weakness(fairy, grass-fire).
-normal_effectiveness(fairy, grass-water).
-normal_effectiveness(fairy, grass-electric).
-normal_effectiveness(fairy, grass-ice).
-super_effectiveness(fairy, grass-fighting).
-weakness(fairy, grass-poison).
-normal_effectiveness(fairy, grass-ground).
-normal_effectiveness(fairy, grass-flying).
-normal_effectiveness(fairy, grass-psychic).
-normal_effectiveness(fairy, grass-bug).
-normal_effectiveness(fairy, grass-rock).
-normal_effectiveness(fairy, grass-ghost).
-super_effectiveness(fairy, grass-dragon).
-super_effectiveness(fairy, grass-dark).
-weakness(fairy, grass-steel).
-normal_effectiveness(fairy, grass-fairy).
-normal_effectiveness(fairy, ice-normal).
-weakness(fairy, ice-fire).
-normal_effectiveness(fairy, ice-water).
-normal_effectiveness(fairy, ice-electric).
-normal_effectiveness(fairy, ice-grass).
-super_effectiveness(fairy, ice-fighting).
-weakness(fairy, ice-poison).
-normal_effectiveness(fairy, ice-ground).
-normal_effectiveness(fairy, ice-flying).
-normal_effectiveness(fairy, ice-psychic).
-normal_effectiveness(fairy, ice-bug).
-normal_effectiveness(fairy, ice-rock).
-normal_effectiveness(fairy, ice-ghost).
-super_effectiveness(fairy, ice-dragon).
-super_effectiveness(fairy, ice-dark).
-weakness(fairy, ice-steel).
-normal_effectiveness(fairy, ice-fairy).
-super_effectiveness(fairy, fighting-normal).
-normal_effectiveness(fairy, fighting-fire).
-super_effectiveness(fairy, fighting-water).
-super_effectiveness(fairy, fighting-electric).
-super_effectiveness(fairy, fighting-grass).
-super_effectiveness(fairy, fighting-ice).
-normal_effectiveness(fairy, fighting-poison).
-super_effectiveness(fairy, fighting-ground).
-super_effectiveness(fairy, fighting-flying).
-super_effectiveness(fairy, fighting-psychic).
-super_effectiveness(fairy, fighting-bug).
-super_effectiveness(fairy, fighting-rock).
-super_effectiveness(fairy, fighting-ghost).
-super_vantagem(fairy, fighting-dragon).
-super_vantagem(fairy, fighting-dark).
-normal_effectiveness(fairy, fighting-steel).
-super_effectiveness(fairy, fighting-fairy).
-weakness(fairy, poison-normal).
-super_weakness(fairy, poison-fire).
-weakness(fairy, poison-water).
-weakness(fairy, poison-electric).
-weakness(fairy, poison-grass).
-weakness(fairy, poison-ice).
-normal_effectiveness(fairy, poison-fighting).
-weakness(fairy, poison-ground).
-weakness(fairy, poison-flying).
-weakness(fairy, poison-psychic).
-weakness(fairy, poison-bug).
-weakness(fairy, poison-rock).
-weakness(fairy, poison-ghost).
-normal_effectiveness(fairy, poison-dragon).
-normal_effectiveness(fairy, poison-dark).
-super_weakness(fairy, poison-steel).
-weakness(fairy, poison-fairy).
-normal_effectiveness(fairy, ground-normal).
-weakness(fairy, ground-fire).
-normal_effectiveness(fairy, ground-water).
-normal_effectiveness(fairy, ground-electric).
-normal_effectiveness(fairy, ground-grass).
-normal_effectiveness(fairy, ground-ice).
-super_effectiveness(fairy, ground-fighting).
-weakness(fairy, ground-poison).
-normal_effectiveness(fairy, ground-flying).
-normal_effectiveness(fairy, ground-psychic).
-normal_effectiveness(fairy, ground-bug).
-normal_effectiveness(fairy, ground-rock).
-normal_effectiveness(fairy, ground-ghost).
-super_effectiveness(fairy, ground-dragon).
-super_effectiveness(fairy, ground-dark).
-weakness(fairy, ground-steel).
-normal_effectiveness(fairy, ground-fairy).
-normal_effectiveness(fairy, flying-normal).
-weakness(fairy, flying-fire).
-normal_effectiveness(fairy, flying-water).
-normal_effectiveness(fairy, flying-electric).
-normal_effectiveness(fairy, flying-grass).
-normal_effectiveness(fairy, flying-ice).
-super_effectiveness(fairy, flying-fighting).
-weakness(fairy, flying-poison).
-normal_effectiveness(fairy, flying-ground).
-normal_effectiveness(fairy, flying-psychic).
-normal_effectiveness(fairy, flying-bug).
-normal_effectiveness(fairy, flying-rock).
-normal_effectiveness(fairy, flying-ghost).
-super_effectiveness(fairy, flying-dragon).
-super_effectiveness(fairy, flying-dark).
-weakness(fairy, flying-steel).
-normal_effectiveness(fairy, flying-fairy).
-normal_effectiveness(fairy, psychic-normal).
-weakness(fairy, psychic-fire).
-normal_effectiveness(fairy, psychic-water).
-normal_effectiveness(fairy, psychic-electric).
-normal_effectiveness(fairy, psychic-grass).
-normal_effectiveness(fairy, psychic-ice).
-super_effectiveness(fairy, psychic-fighting).
-weakness(fairy, psychic-poison).
-normal_effectiveness(fairy, psychic-ground).
-normal_effectiveness(fairy, psychic-flying).
-normal_effectiveness(fairy, psychic-bug).
-normal_effectiveness(fairy, psychic-rock).
-normal_effectiveness(fairy, psychic-ghost).
-super_effectiveness(fairy, psychic-dragon).
-super_effectiveness(fairy, psychic-dark).
-weakness(fairy, psychic-steel).
-normal_effectiveness(fairy, psychic-fairy).
-normal_effectiveness(fairy, bug-normal).
-weakness(fairy, bug-fire).
-normal_effectiveness(fairy, bug-water).
-normal_effectiveness(fairy, bug-electric).
-normal_effectiveness(fairy, bug-grass).
-normal_effectiveness(fairy, bug-ice).
-super_effectiveness(fairy, bug-fighting).
-weakness(fairy, bug-poison).
-normal_effectiveness(fairy, bug-ground).
-normal_effectiveness(fairy, bug-flying).
-normal_effectiveness(fairy, bug-psychic).
-normal_effectiveness(fairy, bug-rock).
-normal_effectiveness(fairy, bug-ghost).
-super_effectiveness(fairy, bug-dragon).
-super_effectiveness(fairy, bug-dark).
-weakness(fairy, bug-steel).
-normal_effectiveness(fairy, bug-fairy).
-normal_effectiveness(fairy, rock-normal).
-weakness(fairy, rock-fire).
-normal_effectiveness(fairy, rock-water).
-normal_effectiveness(fairy, rock-electric).
-normal_effectiveness(fairy, rock-grass).
-normal_effectiveness(fairy, rock-ice).
-super_effectiveness(fairy, rock-fighting).
-weakness(fairy, rock-poison).
-normal_effectiveness(fairy, rock-ground).
-normal_effectiveness(fairy, rock-flying).
-normal_effectiveness(fairy, rock-psychic).
-normal_effectiveness(fairy, rock-bug).
-normal_effectiveness(fairy, rock-ghost).
-super_effectiveness(fairy, rock-dragon).
-super_effectiveness(fairy, rock-dark).
-weakness(fairy, rock-steel).
-normal_effectiveness(fairy, rock-fairy).
-normal_effectiveness(fairy, ghost-normal).
-weakness(fairy, ghost-fire).
-normal_effectiveness(fairy, ghost-water).
-normal_effectiveness(fairy, ghost-electric).
-normal_effectiveness(fairy, ghost-grass).
-normal_effectiveness(fairy, ghost-ice).
-super_effectiveness(fairy, ghost-fighting).
-weakness(fairy, ghost-poison).
-normal_effectiveness(fairy, ghost-ground).
-normal_effectiveness(fairy, ghost-flying).
-normal_effectiveness(fairy, ghost-psychic).
-normal_effectiveness(fairy, ghost-bug).
-normal_effectiveness(fairy, ghost-rock).
-super_effectiveness(fairy, ghost-dragon).
-super_effectiveness(fairy, ghost-dark).
-weakness(fairy, ghost-steel).
-normal_effectiveness(fairy, ghost-fairy).
-super_effectiveness(fairy, dragon-normal).
-normal_effectiveness(fairy, dragon-fire).
-super_effectiveness(fairy, dragon-water).
-super_effectiveness(fairy, dragon-electric).
-super_effectiveness(fairy, dragon-grass).
-super_effectiveness(fairy, dragon-ice).
-super_vantagem(fairy, dragon-fighting).
-normal_effectiveness(fairy, dragon-poison).
-super_effectiveness(fairy, dragon-ground).
-super_effectiveness(fairy, dragon-flying).
-super_effectiveness(fairy, dragon-psychic).
-super_effectiveness(fairy, dragon-bug).
-super_effectiveness(fairy, dragon-rock).
-super_effectiveness(fairy, dragon-ghost).
-super_vantagem(fairy, dragon-dark).
-normal_effectiveness(fairy, dragon-steel).
-super_effectiveness(fairy, dragon-fairy).
-super_effectiveness(fairy, dark-normal).
-normal_effectiveness(fairy, dark-fire).
-super_effectiveness(fairy, dark-water).
-super_effectiveness(fairy, dark-electric).
-super_effectiveness(fairy, dark-grass).
-super_effectiveness(fairy, dark-ice).
-super_vantagem(fairy, dark-fighting).
-normal_effectiveness(fairy, dark-poison).
-super_effectiveness(fairy, dark-ground).
-super_effectiveness(fairy, dark-flying).
-super_effectiveness(fairy, dark-psychic).
-super_effectiveness(fairy, dark-bug).
-super_effectiveness(fairy, dark-rock).
-super_effectiveness(fairy, dark-ghost).
-super_vantagem(fairy, dark-dragon).
-normal_effectiveness(fairy, dark-steel).
-super_effectiveness(fairy, dark-fairy).
-weakness(fairy, steel-normal).
-super_weakness(fairy, steel-fire).
-weakness(fairy, steel-water).
-weakness(fairy, steel-electric).
-weakness(fairy, steel-grass).
-weakness(fairy, steel-ice).
-normal_effectiveness(fairy, steel-fighting).
-super_weakness(fairy, steel-poison).
-weakness(fairy, steel-ground).
-weakness(fairy, steel-flying).
-weakness(fairy, steel-psychic).
-weakness(fairy, steel-bug).
-weakness(fairy, steel-rock).
-weakness(fairy, steel-ghost).
-normal_effectiveness(fairy, steel-dragon).
-normal_effectiveness(fairy, steel-dark).
-weakness(fairy, steel-fairy).
-normal_effectiveness(fairy, fairy-normal).
-weakness(fairy, fairy-fire).
-normal_effectiveness(fairy, fairy-water).
-normal_effectiveness(fairy, fairy-electric).
-normal_effectiveness(fairy, fairy-grass).
-normal_effectiveness(fairy, fairy-ice).
-super_effectiveness(fairy, fairy-fighting).
-weakness(fairy, fairy-poison).
-normal_effectiveness(fairy, fairy-ground).
-normal_effectiveness(fairy, fairy-flying).
-normal_effectiveness(fairy, fairy-psychic).
-normal_effectiveness(fairy, fairy-bug).
-normal_effectiveness(fairy, fairy-rock).
-normal_effectiveness(fairy, fairy-ghost).
-super_effectiveness(fairy, fairy-dragon).
-super_effectiveness(fairy, fairy-dark).
-weakness(fairy, fairy-steel).
+weakness(fairy,normal-fighting).
+weakness(fairy,normal-steel).
+weakness(fairy,fire-normal).
+weakness(fairy,fire-water).
+weakness(fairy,fire-electric).
+weakness(fairy,fire-grass).
+weakness(fairy,fire-ice).
+weakness(fairy,fire-ground).
+weakness(fairy,fire-flying).
+weakness(fairy,fire-psychic).
+weakness(fairy,fire-bug).
+weakness(fairy,fire-rock).
+weakness(fairy,fire-ghost).
+weakness(fairy,fire-fairy).
+weakness(fairy,water-fire).
+weakness(fairy,water-poison).
+weakness(fairy,water-steel).
+weakness(fairy,electric-fire).
+weakness(fairy,electric-poison).
+weakness(fairy,electric-steel).
+weakness(fairy,grass-fire).
+weakness(fairy,grass-poison).
+weakness(fairy,grass-steel).
+weakness(fairy,ice-fire).
+weakness(fairy,ice-poison).
+weakness(fairy,ice-steel).
+weakness(fairy,poison-normal).
+weakness(fairy,poison-water).
+weakness(fairy,poison-electric).
+weakness(fairy,poison-grass).
+weakness(fairy,poison-ice).
+weakness(fairy,poison-ground).
+weakness(fairy,poison-flying).
+weakness(fairy,poison-psychic).
+weakness(fairy,poison-bug).
+weakness(fairy,poison-rock).
+weakness(fairy,poison-ghost).
+weakness(fairy,poison-fairy).
+weakness(fairy,ground-fire).
+weakness(fairy,ground-poison).
+weakness(fairy,ground-steel).
+weakness(fairy,flying-fire).
+weakness(fairy,flying-poison).
+weakness(fairy,flying-steel).
+weakness(fairy,psychic-fire).
+weakness(fairy,psychic-poison).
+weakness(fairy,psychic-steel).
+weakness(fairy,bug-fire).
+weakness(fairy,bug-poison).
+weakness(fairy,bug-steel).
+weakness(fairy,rock-fire).
+weakness(fairy,rock-poison).
+weakness(fairy,rock-steel).
+weakness(fairy,ghost-fire).
+weakness(fairy,ghost-poison).
+weakness(fairy,ghost-steel).
+weakness(fairy,steel-normal).
+weakness(fairy,steel-water).
+weakness(fairy,steel-electric).
+weakness(fairy,steel-grass).
+weakness(fairy,steel-ice).
+weakness(fairy,steel-ground).
+weakness(fairy,steel-flying).
+weakness(fairy,steel-psychic).
+weakness(fairy,steel-bug).
+weakness(fairy,steel-rock).
+weakness(fairy,steel-ghost).
+weakness(fairy,steel-fairy).
+weakness(fairy,fairy-fire).
+weakness(fairy,fairy-poison).
+weakness(fairy,fairy-steel).
+
+super_weakness(normal,rock-steel).
+super_weakness(normal,steel-rock).
+super_weakness(fire,fire-water).
+super_weakness(fire,fire-rock).
+super_weakness(fire,fire-dragon).
+super_weakness(fire,water-fire).
+super_weakness(fire,water-rock).
+super_weakness(fire,water-dragon).
+super_weakness(fire,rock-fire).
+super_weakness(fire,rock-water).
+super_weakness(fire,rock-dragon).
+super_weakness(fire,dragon-fire).
+super_weakness(fire,dragon-water).
+super_weakness(fire,dragon-rock).
+super_weakness(water,water-grass).
+super_weakness(water,water-dragon).
+super_weakness(water,grass-water).
+super_weakness(water,grass-dragon).
+super_weakness(water,dragon-water).
+super_weakness(water,dragon-grass).
+super_weakness(electric,electric-grass).
+super_weakness(electric,electric-dragon).
+super_weakness(electric,grass-electric).
+super_weakness(electric,grass-dragon).
+super_weakness(electric,dragon-electric).
+super_weakness(electric,dragon-grass).
+super_weakness(grass,fire-grass).
+super_weakness(grass,fire-poison).
+super_weakness(grass,fire-flying).
+super_weakness(grass,fire-bug).
+super_weakness(grass,fire-dragon).
+super_weakness(grass,fire-steel).
+super_weakness(grass,grass-fire).
+super_weakness(grass,grass-poison).
+super_weakness(grass,grass-flying).
+super_weakness(grass,grass-bug).
+super_weakness(grass,grass-dragon).
+super_weakness(grass,grass-steel).
+super_weakness(grass,poison-fire).
+super_weakness(grass,poison-grass).
+super_weakness(grass,poison-flying).
+super_weakness(grass,poison-bug).
+super_weakness(grass,poison-dragon).
+super_weakness(grass,poison-steel).
+super_weakness(grass,flying-fire).
+super_weakness(grass,flying-grass).
+super_weakness(grass,flying-poison).
+super_weakness(grass,flying-bug).
+super_weakness(grass,flying-dragon).
+super_weakness(grass,flying-steel).
+super_weakness(grass,bug-fire).
+super_weakness(grass,bug-grass).
+super_weakness(grass,bug-poison).
+super_weakness(grass,bug-flying).
+super_weakness(grass,bug-dragon).
+super_weakness(grass,bug-steel).
+super_weakness(grass,dragon-fire).
+super_weakness(grass,dragon-grass).
+super_weakness(grass,dragon-poison).
+super_weakness(grass,dragon-flying).
+super_weakness(grass,dragon-bug).
+super_weakness(grass,dragon-steel).
+super_weakness(grass,steel-fire).
+super_weakness(grass,steel-grass).
+super_weakness(grass,steel-poison).
+super_weakness(grass,steel-flying).
+super_weakness(grass,steel-bug).
+super_weakness(grass,steel-dragon).
+super_weakness(ice,fire-water).
+super_weakness(ice,fire-ice).
+super_weakness(ice,fire-steel).
+super_weakness(ice,water-fire).
+super_weakness(ice,water-ice).
+super_weakness(ice,water-steel).
+super_weakness(ice,ice-water).
+super_weakness(ice,ice-steel).
+super_weakness(ice,steel-fire).
+super_weakness(ice,steel-water).
+super_weakness(ice,steel-ice).
+super_weakness(fighting,poison-flying).
+super_weakness(fighting,poison-psychic).
+super_weakness(fighting,poison-bug).
+super_weakness(fighting,poison-fairy).
+super_weakness(fighting,flying-poison).
+super_weakness(fighting,flying-psychic).
+super_weakness(fighting,flying-bug).
+super_weakness(fighting,flying-fairy).
+super_weakness(fighting,psychic-poison).
+super_weakness(fighting,psychic-flying).
+super_weakness(fighting,psychic-bug).
+super_weakness(fighting,psychic-fairy).
+super_weakness(fighting,bug-poison).
+super_weakness(fighting,bug-flying).
+super_weakness(fighting,bug-psychic).
+super_weakness(fighting,bug-fairy).
+super_weakness(fighting,fairy-poison).
+super_weakness(fighting,fairy-flying).
+super_weakness(fighting,fairy-psychic).
+super_weakness(fighting,fairy-bug).
+super_weakness(poison,poison-ground).
+super_weakness(poison,poison-rock).
+super_weakness(poison,poison-ghost).
+super_weakness(poison,ground-poison).
+super_weakness(poison,ground-rock).
+super_weakness(poison,ground-ghost).
+super_weakness(poison,rock-poison).
+super_weakness(poison,rock-ground).
+super_weakness(poison,rock-ghost).
+super_weakness(poison,ghost-poison).
+super_weakness(poison,ghost-ground).
+super_weakness(poison,ghost-rock).
+super_weakness(ground,grass-bug).
+super_weakness(ground,bug-grass).
+super_weakness(flying,electric-rock).
+super_weakness(flying,electric-steel).
+super_weakness(flying,rock-electric).
+super_weakness(flying,rock-steel).
+super_weakness(flying,steel-electric).
+super_weakness(flying,steel-rock).
+super_weakness(psychic,psychic-steel).
+super_weakness(psychic,steel-psychic).
+super_weakness(bug,fire-fighting).
+super_weakness(bug,fire-poison).
+super_weakness(bug,fire-flying).
+super_weakness(bug,fire-ghost).
+super_weakness(bug,fire-steel).
+super_weakness(bug,fire-fairy).
+super_weakness(bug,fighting-fire).
+super_weakness(bug,fighting-flying).
+super_weakness(bug,fighting-ghost).
+super_weakness(bug,fighting-steel).
+super_weakness(bug,fighting-fairy).
+super_weakness(bug,poison-fire).
+super_weakness(bug,poison-flying).
+super_weakness(bug,poison-ghost).
+super_weakness(bug,poison-steel).
+super_weakness(bug,poison-fairy).
+super_weakness(bug,flying-fire).
+super_weakness(bug,flying-fighting).
+super_weakness(bug,flying-poison).
+super_weakness(bug,flying-ghost).
+super_weakness(bug,flying-steel).
+super_weakness(bug,flying-fairy).
+super_weakness(bug,ghost-fire).
+super_weakness(bug,ghost-fighting).
+super_weakness(bug,ghost-poison).
+super_weakness(bug,ghost-flying).
+super_weakness(bug,ghost-steel).
+super_weakness(bug,steel-fire).
+super_weakness(bug,steel-fighting).
+super_weakness(bug,steel-poison).
+super_weakness(bug,steel-flying).
+super_weakness(bug,steel-ghost).
+super_weakness(bug,steel-fairy).
+super_weakness(bug,fairy-fire).
+super_weakness(bug,fairy-fighting).
+super_weakness(bug,fairy-poison).
+super_weakness(bug,fairy-flying).
+super_weakness(bug,fairy-steel).
+super_weakness(rock,fighting-ground).
+super_weakness(rock,fighting-steel).
+super_weakness(rock,ground-fighting).
+super_weakness(rock,ground-steel).
+super_weakness(rock,steel-fighting).
+super_weakness(rock,steel-ground).
+super_weakness(dark,fighting-dark).
+super_weakness(dark,fighting-fairy).
+super_weakness(dark,dark-fighting).
+super_weakness(dark,dark-fairy).
+super_weakness(dark,fairy-fighting).
+super_weakness(dark,fairy-dark).
+super_weakness(steel,fire-water).
+super_weakness(steel,fire-electric).
+super_weakness(steel,fire-steel).
+super_weakness(steel,water-fire).
+super_weakness(steel,water-electric).
+super_weakness(steel,water-steel).
+super_weakness(steel,electric-fire).
+super_weakness(steel,electric-water).
+super_weakness(steel,electric-steel).
+super_weakness(steel,steel-fire).
+super_weakness(steel,steel-water).
+super_weakness(steel,steel-electric).
+super_weakness(fairy,fire-poison).
+super_weakness(fairy,fire-steel).
+super_weakness(fairy,poison-fire).
+super_weakness(fairy,poison-steel).
+super_weakness(fairy,steel-fire).
+super_weakness(fairy,steel-poison).
+
