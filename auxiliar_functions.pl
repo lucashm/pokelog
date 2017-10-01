@@ -29,16 +29,12 @@ singleEnemyPosition() :-
     nth1(Z, Lista, ChosenOne), %getting one element in the list | Element = Z = Random Pokemon
     assert(enemyPokemon(ChosenOne, position(X,Y))). %asserting enemyPokemon in the map
 
-scanEnemies() :-
+scanEnemies(Xp,Yp) :-
     findall((Pokemon, Position), enemyPokemon(Pokemon, Position), Enemies),
-    foreach(membro((Pokemon, position(X,Y)), Enemies), checkEnemyProximity(X,Y)).
+    foreach(membro((Pokemon, position(X,Y)), Enemies), getEnemiesNearby(Pokemon, X,Y,Xp,Yp)).
 
-
-checkEnemyProximity(X,Y) :-
-    %TODO: Implement here the distance comparison
-    write('X = '), write(X),
-    nl,
-    write('Y = '), write(Y),
-    nl.
-    %nth1(1, Position, Z),
-    %write(Z).
+getEnemiesNearby(Pokemon, X,Y,Xp,Yp) :-
+    %That is the distance between the player(Xp,Yp) and the EnemyPokemon(X, Y):
+    D is sqrt(  ( Xp - X )*( Xp - X ) + ( Yp - Y )*( Yp - Y )  ),
+    write(D), nl,
+    ifThenElse( D < 500 ,write("Esse tá perto"), write("Esse tá longe")). %The player's range is 500
