@@ -46,7 +46,7 @@ option(1) :-
 
 option(2) :-
     findall(X, ownedPokemon(X), L),
-    write(L),
+    foreach(membro(pokemon(V1, V2, V3, V4, V5, V6, V7, V8, V9), L), printPokemon(V1, V2, V3, V4, V5, V6, V7, V8, V9)),
     nl, nl,
     menu().
 
@@ -69,6 +69,8 @@ choosePokemon() :-
         nl,
         read(Pokemon),
         checkpokemon(Pokemon).
+
+printPokemon() :-
 
 retry() :-
         write('Pokemon inválido!! Digite o nome do seu pokemon corretamente'),
