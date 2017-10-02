@@ -71,7 +71,7 @@ choosePokemon() :-
         read(Pokemon),
         checkpokemon(Pokemon).
 
-printPokemon() :-
+printPokemon(V1, V2, V3, V4, V5, V6, V7, V8, V9) :-
     write('O Pokemon '),
     write(V2),
     write(' tem o código '),
