@@ -1,6 +1,7 @@
 membro(X,[X|_]).
 membro(X,[_|Y]):- membro(X,Y).
 
+
 getpokemonlist(L) :- findall(X, pokemon(_,X, _, _, _, _, _, _, _), L).
 
 ispokemon(X):-

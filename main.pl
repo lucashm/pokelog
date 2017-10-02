@@ -70,8 +70,14 @@ option(5) :-
     nl,
     printNearPokemons(),
     findall(X, ownedPokemon(X), List),
-		getListOfPokemons(List),
+    ifThenElse(nth0(0, List, _), getListOfPokemons(List), warningMessage()),
     menu().
+
+warningMessage() :-
+  nl,
+  write('Você precisa cadastrar pokemons!!'), nl, nl,
+  menu().
+
 
 choosePokemon() :-
         write('Que pokemon você tem?'),
