@@ -57,9 +57,9 @@ option(3) :-
 
 option(4) :-
     findall((X,Y), player(X,Y), L),
-    write(L),
     foreach(membro((_,position(X,Y)), L), scanEnemies(X,Y)),
-    nl, nl,
+    nl,
+    printNearPokemons(),
     findall(X, ownedPokemon(X), List),
 		getListOfPokemons(List),
     menu().

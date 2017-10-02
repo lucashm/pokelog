@@ -36,8 +36,11 @@ scanEnemies(Xp,Yp) :-
 getEnemiesNearby(Pokemon, X,Y,Xp,Yp) :-
     %That is the distance between the player(Xp,Yp) and the EnemyPokemon(X, Y):
     D is sqrt(  ( Xp - X )*( Xp - X ) + ( Yp - Y )*( Yp - Y )  ),
-    write("Pokemon encontrado em: "),
-    write(D),
+
     ifThenElse( D < 500, %The player's range is 500
-              ( assert( nearbyEnemy( Pokemon, position(X,Y) ) ), write("<- Este está perto"), nl ),  % <-- if the enemy is close
-              ( write("<- Este está longe"), nl ) ).  % <-- if the enemy is far
+               assert( nearbyEnemy( Pokemon, position(X,Y) ) ) ,  % <-- if the enemy is close
+               true  ).  % <-- does nothing if the enemy is far
+
+printNearPokemons() :-
+    findall(PokemonName,nearbyEnemy(pokemon(_, PokemonName, _, _, _, _, _, _, _),_),ListOfNearbyNemeies),
+    foreach(membro(PokemonName, ListOfNearbyNemeies), (  write("Um "), write(PokemonName), write( " encontrado por perto."), nl ) ).
