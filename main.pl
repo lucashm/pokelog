@@ -71,6 +71,33 @@ choosePokemon() :-
         checkpokemon(Pokemon).
 
 printPokemon() :-
+    write('O Pokemon '),
+    write(V2),
+    write(' tem o código '),
+    write(V1),
+    write(' e as seguintes qualidades: '),
+    nl,
+    write('X: '),
+    write(V3),
+    nl,
+    write('X: '),
+    write(V4),
+    nl,
+    write('X: '),
+    write(V5),
+    nl,
+    write('X: '),
+    write(V6),
+    nl,
+    write('X: '),
+    write(V7),
+    nl,
+    write('X: '),
+    write(V8),
+    nl,
+    write('X: '),
+    write(V9),
+    nl.
 
 retry() :-
         write('Pokemon inválido!! Digite o nome do seu pokemon corretamente'),
