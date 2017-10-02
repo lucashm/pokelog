@@ -22,6 +22,8 @@ play() :-
         read(Name),
         setPlayer(Name),
         nl,
+        findall((X,Y), player(X,Y), L),
+        foreach(membro((_,position(X,Y)), L), scanEnemies(X,Y)),
         menu().
 
 menu() :-
@@ -56,8 +58,6 @@ option(3) :-
     menu().
 
 option(4) :-
-    findall((X,Y), player(X,Y), L),
-    foreach(membro((_,position(X,Y)), L), scanEnemies(X,Y)),
     nl,
     printNearPokemons(),
     findall(X, ownedPokemon(X), List),
