@@ -16,6 +16,7 @@ ownedPokemon([]) :-
 
 play() :-
         clearBase(enemyPokemon(_)),
+        clearBase(ownedPokemon(_)),
         setEnemiesPosition(),
         write('Digite o seu nome:'),
         nl,
@@ -84,6 +85,7 @@ choosePokemon() :-
         nl,
         read(Pokemon),
         checkpokemon(Pokemon).
+
 
 retry() :-
         write('Pokemon inválido!! Digite o nome do seu pokemon corretamente'),
