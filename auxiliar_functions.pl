@@ -32,7 +32,7 @@ setPlayer(Name) :-
 
 setEnemiesPosition() :-
     clearBase(enemyPokemon(_, _)), %cleaning enemies setted before
-    foreach(between(1,40,_), singleEnemyPosition()).
+    foreach(between(1,100,_), singleEnemyPosition()).
 
 
 singleEnemyPosition() :-
