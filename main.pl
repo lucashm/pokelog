@@ -35,7 +35,9 @@ menu() :-
   nl,
   write('3- Verificar minha posição no mapa'),
   nl,
-  write('4- Procurar inimigos por perto'),
+  write('4- Mover-me no mapa'),
+  nl,
+  write('5- Procurar inimigos por perto'),
   nl,
   read(Choice),
   option(Choice).
@@ -52,12 +54,19 @@ option(2) :-
 
 option(3) :-
     findall((X,Y), player(X,Y), L),
-    nl, write('sua Posição é: '),
+    nl, write('Sua posição é: '),
     write(L),
     nl, nl,
     menu().
 
 option(4) :-
+    findall(player(X,Y), player(X, Y), L),
+    nth1(1, L, ChosenOne),
+    write('Sua posição atual é: '),
+    write(ChosenOne), nl, nl,
+    moveMenu(ChosenOne).
+
+option(5) :-
     nl,
     printNearPokemons(),
     findall(X, ownedPokemon(X), List),
@@ -95,3 +104,36 @@ clearBase1(Pokemon):- retract(Pokemon).
 clearBase1(_).
 
 tipo_de_ataque(pikachu, raio). %exemplo
+
+moveMenu(player(Name, position(X,Y))) :-
+  write('Mover 50 posicoes para onde?'), nl,
+  write('1- Para cima'), nl,
+  write('2- Para baixo'), nl,
+  write('3- Para esquerda'), nl,
+  write('4- Para direita'), nl,
+  read(Choice),
+  movePlayer(Name, position(X,Y), Choice).
+
+movePlayer(Name, position(X,Y), 1) :-
+  retract(player(Name, position(X,Y))),
+  NewY is Y +50,
+  assert( player(Name, position(X, NewY))),
+  menu().
+
+movePlayer(Name, position(X,Y), 2) :-
+  retract(player(Name, position(X,Y))),
+  NewY is Y -50,
+  assert( player(Name, position(X, NewY))),
+  menu().
+
+movePlayer(Name, position(X,Y), 3) :-
+  retract(player(Name, position(X,Y))),
+  NewX is X -50,
+  assert( player(Name, position(NewX, Y))),
+  menu().
+
+movePlayer(Name, position(X,Y), 4) :-
+  retract(player(Name, position(X,Y))),
+  NewX is X +50,
+  assert( player(Name, position(NewX, Y))),
+  menu().
