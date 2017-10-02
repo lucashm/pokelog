@@ -8,6 +8,7 @@
 :- [pokemons].
 :- use_module(library(lists)).
 :- [effectiveness_by_type].
+:- [pokemons_evolutions].
 :- [show_advantages].
 :- [attack_types].
 
@@ -17,6 +18,7 @@ ownedPokemon([]) :-
 play() :-
         clearBase(enemyPokemon(_)),
         clearBase(ownedPokemon(_)),
+        clearBase(player(_, _)),
         setEnemiesPosition(),
         write('Digite o seu nome:'),
         nl,
@@ -103,13 +105,6 @@ setpokemon(Pokemon) :-
         assert(ownedPokemon(ChosenOne)), %set this element to be in the list of owned pokemons
         menu(). %reopens menu
 
-
-%TODO:fix the singletons on clearBase and clearBase1
-clearBase(Pokemon):- clearBase1(Pokemon), fail.
-clearBase(_).
-
-clearBase1(Pokemon):- retract(Pokemon).
-clearBase1(_).
 
 tipo_de_ataque(pikachu, raio). %exemplo
 

@@ -1,6 +1,8 @@
 membro(X,[X|_]).
 membro(X,[_|Y]):- membro(X,Y).
 
+clearBase(Base):- retract(Base), fail.
+clearBase(_).
 
 getpokemonlist(L) :- findall(X, pokemon(_,X, _, _, _, _, _, _, _), L).
 
@@ -13,9 +15,10 @@ ifThenElse(X,Y,_):- X,!,Y.
 ifThenElse(_,_,Z):- Z.
 
 printPokemon(Id, Name, Hp, Attack, Def, SpA, SpD, Spe, Total) :-
-  nl, nl,
+  nl, nl, type(pokemon(Name), PokemonType),
   write(Name), write('- id:'), write(Id), nl,
   write('-------STATUS-------'), nl,
+  write('Tipo: '), write(PokemonType), nl,
   write('HP: '), write(Hp), nl,
   write('Attack: '), write(Attack), nl,
   write('Defense: '), write(Def), nl,
@@ -23,6 +26,8 @@ printPokemon(Id, Name, Hp, Attack, Def, SpA, SpD, Spe, Total) :-
   write('SpD: '), write(SpD), nl,
   write('Spe: '), write(Spe), nl,
   write('Total:'), write(Total), nl,
+  write('Evoluido de: '), ifThenElse(evolve_from(Name, Base), write(Base), write('Esta é a forma Base!')), nl,
+  write('Evolução: '), ifThenElse(evolve_from(Evolution, Name), write(Evolution), write('Não há!')), nl,
   write('--------------------'), nl, nl.
 
 setPlayer(Name) :-
