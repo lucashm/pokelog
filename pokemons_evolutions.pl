@@ -16,9 +16,8 @@ evolve_from(arbok,ekans).
 evolve_from(pikachu,pichu).
 evolve_from(raichu,pikachu).
 evolve_from(sandslash,sandshrew).
-evolve_from(nidorina,nidoran (♀)).
+evolve_from(nidorina,nidoran).
 evolve_from(nidoqueen,nidorina).
-evolve_from(nidorino,nidoran (♂)).
 evolve_from(nidoking,nidorino).
 evolve_from(clefairy,cleffa).
 evolve_from(clefable,clefairy).
@@ -68,7 +67,7 @@ evolve_from(chansey,happiny).
 evolve_from(seadra,horsea).
 evolve_from(seaking,goldeen).
 evolve_from(starmie,staryu).
-evolve_from(mr. mime,mime jr.).
+evolve_from(mr-mime, mime-jr).
 evolve_from(jynx,smoochum).
 evolve_from(gyarados,magikarp).
 evolve_from(vaporeon,eevee).
@@ -201,9 +200,7 @@ evolve_from(luxray,luxio).
 evolve_from(roserade,roselia).
 evolve_from(rampardos,cranidos).
 evolve_from(bastiodon,shiledon).
-evolve_from(wormadam (p),burmy).
-evolve_from(wormadam (s),burmy).
-evolve_from(wormadam (t),burmy).
+evolve_from(wormadam,burmy).
 evolve_from(mothim,burmy).
 evolve_from(vespiquen,combee).
 evolve_from(floatzel,buizel).
