@@ -28,8 +28,14 @@ printPokemon(Id, Name, Hp, Attack, Def, SpA, SpD, Spe, Total) :-
   write('Spe: '), write(Spe), nl,
   write('Total:'), write(Total), nl,
   write('Evoluido de: '), ifThenElse(evolve_from(Name, Base), write(Base), write('Esta é a forma Base!')), nl,
-  write('Evolução: '), ifThenElse(evolve_from(Evolution, Name), write(Evolution), write('Não há!')), nl,
+  printEvolutions(Name),
   write('--------------------'), nl, nl.
+
+
+printEvolutions(Name) :-
+  findall(Evolution, evolve_from(Evolution, Name), L),
+  write('Evolução: '), ifThenElse(evolve_from(Evolution, Name), write(L), write('Não há!')), nl, fail.
+printEvolutions(_).
 
 setPlayer(Name) :-
     random_between(0,1000, X),
