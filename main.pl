@@ -16,6 +16,7 @@ ownedPokemon([]) :-
 
 play() :-
         clearBase(enemyPokemon(_)),
+        clearBase(ownedPokemon(_)),
         setEnemiesPosition(),
         write('Digite o seu nome:'),
         nl,
