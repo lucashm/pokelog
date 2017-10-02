@@ -25,11 +25,10 @@ play() :-
         read(Name),
         setPlayer(Name),
         nl,
-        findall((X,Y), player(X,Y), L),
-        foreach(membro((_,position(X,Y)), L), scanEnemies(X,Y)),
         menu().
 
 menu() :-
+  clearBase(nearbyEnemy(_, _)),
   write('Digite a opção desejada:'),
   nl,
   write('1- Cadastrar um pokemon'),
@@ -71,6 +70,8 @@ option(4) :-
 
 option(5) :-
     nl,
+    findall((X,Y), player(X,Y), L),
+    foreach(membro((_,position(X,Y)), L), scanEnemies(X,Y)),
     printNearPokemons(),
     findall(X, ownedPokemon(X), List),
     ifThenElse(nth0(0, List, _), getListOfPokemons(List), warningMessage()),

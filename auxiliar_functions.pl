@@ -3,6 +3,7 @@ membro(X,[_|Y]):- membro(X,Y).
 
 clearBase(Base):- retract(Base), fail.
 clearBase(_).
+clearBase(_, _).
 
 getpokemonlist(L) :- findall(X, pokemon(_,X, _, _, _, _, _, _, _), L).
 
