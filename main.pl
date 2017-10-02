@@ -47,8 +47,8 @@ option(1) :-
     choosePokemon().
 
 option(2) :-
-    findall((Id, Name, Hp, Attack, Def, SpA, SpD, Spe, Total), ownedPokemon(pokemon(Id, Name, Hp, Attack, Def, SpA, SpD, Spe, Total)), Lista),
-    foreach(membro((Id, Name, Hp, Attack, Def, SpA, SpD, Spe, Total), Lista), printPokemon(Id, Name, Hp, Attack, Def, SpA, SpD, Spe, Total)),
+    findall(X, ownedPokemon(X), Lista),
+    foreach(membro(pokemon(Id, Name, Hp, Attack, Def, SpA, SpD, Spe, Total), Lista), printPokemon(Id, Name, Hp, Attack, Def, SpA, SpD, Spe, Total)),
     nl, nl,
     menu().
 
